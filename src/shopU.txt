@@ -1,0 +1,102 @@
+# shopU
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 1
+cla
+clr
+gs'stat'
+gs'time'
+'<center><H4>УНИВЕРСАЛЬНЫЙ МАГАЗИН</H4></center>'
+'<center><img src="pic\pic\shop2.jpg" ></center>'
+'Время работы с9 до 20'
+
+
+     act 'Уйти.':
+     GOTO $locMag, $metkaMag
+     end
+     
+     if hour>=9 and hour<=20:
+         act 'Идти в магазин.':gt'shopU','1'
+     end
+end
+
+if $ARGS[0]='1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 5
+cla
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+'<center><B>УНИВЕРСАЛЬНЫЙ МАГАЗИН</B></center>'
+'<center><img src="pic\pic\shop3.jpg" ></center>'
+'Мыло - 50 руб'
+'Моющее средство для посуды - 250 руб'
+'5ть тарелок - 500 руб'
+'Шампунь - 200 руб'
+'Бритвенный станок - 300руб'
+     if money>= 50:
+         act 'Купить мыло 50 руб':
+         cla
+         *clr
+         set money = money - 50
+         set milo = milo + 10
+         '<center><img src="pic\pic\kassa.jpg" ></center>'
+         'Вы заплатили в кассу и забрали покупку.'
+         act 'Отойти от прилавка':GOTO $loc, $metka
+         end
+     end
+     if money>= 250:
+         act 'Купить моющее средство для посуды 250 руб':
+         cla
+         *clr
+         set money = money - 250
+         set fairy = fairy + 20
+         '<center><img src="pic\pic\kassa.jpg" ></center>'
+         'Вы заплатили в кассу и забрали покупку.'
+         act 'Отойти от прилавка':GOTO $loc, $metka
+         end
+     end
+     if money>= 500:
+         act 'Купить набор тарелок 500 руб':
+         cla
+         *clr
+         set money = money - 500
+         set tarelka = tarelka + 5
+         '<center><img src="pic\pic\kassa.jpg" ></center>'
+         'Вы заплатили в кассу и забрали покупку.'
+         act 'Отойти от прилавка':GOTO $loc, $metka
+         end
+     end
+     if money>= 200:
+         act 'Купить шампунь 200 руб':
+         cla
+         *clr
+         set money = money - 500
+         set shampoo = shampoo + 20
+         '<center><img src="pic\pic\kassa.jpg" ></center>'
+         'Вы заплатили в кассу и забрали покупку.'
+         act 'Отойти от прилавка':GOTO $loc, $metka
+         end
+     end
+     if money>= 300:
+         act 'Купить бритвенный станок 300 руб':
+         cla
+         *clr
+         set money = money - 500
+         set stanok = stanok + 20
+         '<center><img src="pic\pic\kassa.jpg" ></center>'
+         'Вы заплатили в кассу и забрали покупку.'
+         act 'Отойти от прилавка':GOTO $loc, $metka
+         end
+     end
+
+
+
+
+act 'Выйти из магазина':gt'shopU','start'
+end
+--- shopU ---------------------------------
+

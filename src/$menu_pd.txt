@@ -1,0 +1,16 @@
+# $menu_pd
+if $selobj='Персонаж':
+         if pol >= 1 and world=0:
+             if pirsing = 0 and tattoo = 0:menu '$menu_fembody'
+             if pirsing > 0 and tattoo = 0:menu '$menu_fembodyB'
+             if pirsing = 0 and tattoo > 0:menu '$menu_fembodyA'
+             if pirsing > 0 and tattoo > 0:menu '$menu_fembodyC'
+         end
+     if pol = 0 or world=1:
+     menu '$menu_manbody'
+     end
+end
+
+unselect
+--- $menu_pd ---------------------------------
+

@@ -1,0 +1,13 @@
+# defenceGV
+!Магия
+!защита от гравитации противника
+
+!damageG
+!damageGV
+
+if defenceGV=0:
+healthv=healthv-damageg
+'<font color=green><<$tipuronaGV>> нанес противнику <B><<damageg>></B> едениц урона</font>'
+end
+--- defenceGV ---------------------------------
+

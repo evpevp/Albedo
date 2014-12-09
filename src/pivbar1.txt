@@ -1,0 +1,123 @@
+# pivbar1
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 1
+cla
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+	 if music_on=0:
+		 inited = 1
+		 music_on=1
+		 volume = 100
+		 $music_theme = 'pivbar'
+		 gs 'init_music'
+	 end
+'<center><H4>ПИВНОЙ БАР</H4></center>'
+'<center><img src="pic\pic\pivbar.jpg" ></center>'
+'Вы можете сесть за <a href="exec:GT ''pivbar1'',''stol''">стол</a> или подойти к <a href="exec:GT ''pivbar1'',''barman''">бармену</a>'
+
+
+     act 'Уйти из пивбара.':
+     beer=0
+     music_on=0
+     GOTO $locMag, $metkaMag
+     end
+end
+
+if $ARGS[0]='barman':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 1
+cla
+clr
+gs'stat'
+'<center><H4>Бармен</H4></center>'
+'<center><img src="pic\pic\pivbar1.jpg" ></center>'
+'100 рублей стоит кружка <a href="exec:GS ''pivbar1'',''pivo''">пива</a>.'
+
+
+act 'Отойти от барной стойки.':gt'pivbar1','start'
+	 act 'Сесть за стойку.':
+	 cla
+	 'Вы сели на высокий стул не по далеку от бармена.'
+	 act 'Встать из за стойки.':gt'pivbar1','barman'
+	     if beer > 0:
+			 act 'Потягивать пиво.':
+			 cla
+			 beer=beer-1
+			 minut=minut+15
+			 golod=golod+3
+			 manna=manna+10
+			 wipo=wipo+10
+			 alko=alko+3
+			 horny=horny+10
+			 'Вы не спеша потягиваете прохладное пиво из кружки, минут за пятнадцать вы опустошили кружку пива.'
+			 act 'Поставить пустую кружку.':gt'pivbar1','barman'
+			 end 
+		 end
+     end
+end
+
+if $ARGS[0]='pivo':
+     if money < 100:
+     'У вас не хватает денег на пиво'
+     end
+     if money >= 100:
+     money=money-100
+     beer=beer+1
+     'Бармен взял деньги и подал вам пиво.'
+     end
+end
+
+if $ARGS[0]='stol':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 1
+cla
+clr
+gs'stat'
+'<center><H4>Столик</H4></center>'
+'<center><img src="pic\pic\pivbar2.jpg" ></center>'
+'Грубый деревянный стол, правда хорошо отшлифованный и покрытый слоем бесцветного лака.'
+	 if beer > 0:
+	 'На столе стоит <<beer>>шт пива.'
+         act 'Потягивать пиво.':
+         cla
+         beer=beer-1
+         minut=minut+15
+         golod=golod+3
+         manna=manna+10
+		 wipo=wipo+10
+		 alko=alko+3
+		 horny=horny+10
+         'Вы не спеша потягиваете прохладное пиво из кружки, минут за пятнадцать вы опустошили кружку пива.'
+         act 'Поставить пустую кружку.':gt'pivbar1','stol'
+         end 
+	 end
+
+act 'Встать из за стола.':gt'pivbar1','start'
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- pivbar1 ---------------------------------
+

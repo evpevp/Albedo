@@ -1,0 +1,272 @@
+# irinaevent
+!Ивент на озере
+if $ARGS[0]='lake':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+horny=horny+100
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_1.jpg" ></center>'
+'Вы поздоровались и приятно поговорили.'
+'Один только вид Ирины заставил ваш член напрячься в штанах. Она это заметила и призывно повела бровью.'
+	act 'Лапать Ирину':gt'irinaevent','lake1'
+end
+
+if $ARGS[0]='lake1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_10.gif" ></center>'
+'Вы стали целоваться, лапая великолепную грудь Ирины.'
+	act 'Дальше..':gt'irinaevent','lake2'
+end
+
+if $ARGS[0]='lake2':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\Irina_park13.gif" ></center>'
+'Ирина присела, стянула с вас штаны и не теряя времени погрузила ваш, уже изрядно напрягшийся член, в свой страстный ротик.'
+	act 'Секс':gt'irinaevent','lake3'
+end
+
+if $ARGS[0]='lake3':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_1.gif" ></center>'
+'Затем вы развернули Ирину и махом вошли в её уже истекающую соками киску.'
+'Она стала постанывать, явно наслаждаясь движениями вашего члена и попросила чтобы вы трахали её сильнее.'
+	act 'Трахать сильнее':gt'irinaevent','lake4'
+end
+
+if $ARGS[0]='lake4':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_8.gif" ></center>'
+'Вы страстно трахали Ирину, наращивая темп.'
+	act 'Дальше..':gt'irinaevent','lake5'
+end
+
+if $ARGS[0]='lake5':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_2.gif" ></center>'
+'Затем вы притянули её к себе и вогнали поглубже. Ирина издала протяжный стон и стала кончать.'
+	act 'Сменить позу':gt'irinaevent','lake6'
+end
+
+if $ARGS[0]='lake6':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_11.gif" ></center>'
+'Ира немного обмякла, вы положили её на капот машины и снова вошли в её сочащуюся киску, сжимающуюся время от времени от новых оргазмов.'
+	act 'Трахать на весу':gt'irinaevent','lake7'
+	act 'Посадить на себя':gt'irinaevent','lake8'
+end
+
+if $ARGS[0]='lake7':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\irina\park\irina_park_3.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\park\irina_park_7.gif" ></center>'
+'Чувствуя, что вы тоже скоро финишируете, вы притянули Ирину к себе и стали трахать её на весу.'
+	act 'Кончить':gt'irinaevent','lake9'
+end
+
+if $ARGS[0]='lake8':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_4.gif" ></center>'
+'Немного подустав, вы решили предоставить инициативу Ирине. Она положила вас на сидение автомобиля, села верхом и стала насаживаться на всю длину вашего пылающего члена.'
+	act 'Кончить':gt'irinaevent','lake9'
+end
+   
+if $ARGS[0]='lake9':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_12.gif" ></center>'
+'После короткого минета вы кончили прямо в рот Ирине'
+	act 'Дальше':gt'irinaevent','lake10'
+end
+      
+if $ARGS[0]='lake10':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+sweat=sweat+5
+horny=0
+manna=manna+25
+wipo=wipo+25
+sexm=sexm+1
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\park\irina_park_2.jpg" ></center>'
+'Ирина поблагодарила вас за отпадный секс. Вы пообещали, что позвоните ей на неделе и ушли.'
+	act 'Уйти':gt'lake','start'
+end    
+                                                                                             
+     
+                                                                                              
+	!Ивент в поликлинике   
+if $ARGS[0]='poli':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+horny=horny+100
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\poli\poli_irina.jpg" ></center>'
+'Вам стало интересно и вы надели белый халатик и пошли. На проходной вас пропустили, ничего не спросив. Когда вы вошли в нужный кабинет, то увидели перед собой Ирину..'
+'Ирина: -Ну, здравствуй!) А я увидела тебя из окна и решила, что ты мне можешь помочь кое-с-чем.'
+'Вы: -Привет! Для тебя всё что угодно, дорогая.'
+'Ирина: -Я подрабатываю здесь иногда по вечерам, но сегодня я просто дежурная.. и мне здесь невероятно скучно.'
+'Вы: -Хм.. я думаю вполне могу тебя развлечь..'
+	 act 'Развлекать Ирину':gt'irinaevent','poli1'
+end    
+
+if $ARGS[0]='poli1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\poli\irina_nurse_9.gif" ></center>'
+'Вы подошли к Ире и стали целовать её в засос. Как всегда Ирина была безумно возбуждающа и в штанах у вас зашевелилось.'
+	 act 'Дать в рот':gt'irinaevent','poli2'
+	 act 'Всунуть между грудей':gt'irinaevent','politity'
+end    
+
+if $ARGS[0]='politity':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\poli\irina_nurse_1.gif" ></center>'
+'Лапая Иринину грудь вам захотелось почувствовать их своим членом. Вы посадили её уперев головой в кушетку, вставили между сисек, плюнув туда для лучшего скольжения, и стали двигаться.'
+'Ирина сжала их с боков обжимая ваш член, и когда он достигал её рта лизала его кончиком языка.'
+	 act 'Секс':gt'irinaevent','poli3'
+end 
+
+if $ARGS[0]='poli2':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\poli\irina_nurse_10.gif" ></center>'
+'Ирина быстро раздела вас и присев стала доводить ваш член до готовности энергично скользя по нему губами.'
+	 act 'Секс':gt'irinaevent','poli3'
+end 
+
+if $ARGS[0]='poli3':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\irina\poli\irina_nurse_4.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\poli\irina_nurse_3.gif" ></center>'
+'Ваш член быстро стал твёрдым как камень и вы, не теряя времени, развернули Ирину к стене и стали трахать её раком периодически шлёпая по её похотливой заднице.'
+'Ирина старалась громко не стонать, чтобы не привлечь внимание.. но от вашего темпа у неё это не очень получалось.'
+	 act 'Положить на кушетку':gt'irinaevent','poli4'
+end 
+
+if $ARGS[0]='poli4':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\poli\irina_nurse_2.gif" ></center>'
+'Затем вы положили Ирину на кушетку и не сбавляя темпа продолжили вгонять в неё свой, уже возбуждённый до предела, член.'
+'Ирина уже не могла сдерживать свои сладострастные стоны, а через пару минут кончила.'
+	 act 'Сменить позу':gt'irinaevent','poli5'
+end 
+
+if $ARGS[0]='poli5':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+picrand=RAND(0,2)
+if picrand=0:'<center><img src="pic\fam\irina\poli\irina_nurse_8.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\poli\irina_nurse_6.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\poli\irina_nurse_7.gif" ></center>'
+'Вы легли на кушетку, положили на себя Ирину и всё таже не сбавляя темпа продолжили трахать.'
+'Ирина уже не просила трахать её сильнее и глубже, а лишь тихо постанывала от удовольствия.'
+	 act 'Дать в рот':gt'irinaevent','poli6'
+end 
+
+if $ARGS[0]='poli6':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\poli\irina_nurse_12.gif" ></center>'
+'Затем вы сняли с себя Ирину и она начала у вас отсасывать..'
+'Как вдруг в коридоре кто-то позвал Иру, и стал приближаться к кабинету.'
+	 act 'Кончить':gt'irinaevent','poli7'
+end 
+
+if $ARGS[0]='poli7':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+manna=manna+25
+wipo=wipo+25
+sexm=sexm+1
+sweat=sweat+5
+horny=0
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\poli\irina_nurse_11.gif" ></center>'
+'Ирина быстро закрыла двери, а вы не теряя времени поставили её на колени и стали кончать целясь Ирине в рот.'
+	 act 'Одеться и уйти':gt'irinaevent','poli8'
+end
+
+if $ARGS[0]='poli8':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 10
+clr
+gs'stat'
+'<center><img src="pic\fam\irina\poli\poli_vihod.jpg" ></center>'
+'Вы успели одеться и выйти до того как старшая медсестра, звавшая Ирину, вошла в кабинет.'
+'Вы сказали ей, что она сейчас будет и пошли к выходу.'
+'Выходя длинными коридорами вы поняли, что это какая-то закрытая часть больницы и просто так сюда не пускают. Рассмотрев бейджик на халате, вы не заметили ничего особенного кроме какой-то странной эмблемы в углу. На проходной вас попросили сдать халат обратно.'
+	 act 'Выйти':gt'street','start'
+end  
+                                                                                              
+--- irinaevent ---------------------------------
+

@@ -1,0 +1,98 @@
+# fishW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+'<center><H4>Рыбацкая деревня</H4></center>'
+'<center><img src="pic/Evedon/fishvillage.jpg" ></center>'
+'Небольшое поселение, плотно сбитых в кучу домиков, из которого можно войти в город, либо пройти к рыбацкому пирсу. С юга к деревне подступает городское кладбище Эведона.'
+clr
+gs'stat'
+gs'time'
+
+if DemonMorf>=10:
+ atkrand=RAND(0,100)
+     if atkrand>=90:
+	 pogonarand=RAND(5,10)
+	 *clr
+     '<center><img src="pic/EvedonMonsters/guards.jpg"></center>'
+	 'Разгуливать в облике демона опасно, стража вас обнаружила и атаковала.'
+		 act 'Убегать.':
+		 minut=minut+1
+		 crime=1
+		 gt'runW'
+		 end
+     exit
+     end
+end
+
+!!!дома
+'Крупное здание <a href="exec: gt''fiMotel''">Постоялый двор "Сон рыбака"</a> с хлевом для осликов и амбаром с фуражом и провиантом.'
+'От <a href="exec: gt''FishFacktory''">рыбозавода</a> несет тухлой рыбой'
+if fishhouse>0:'<a href="exec: gt''Fishhouse''"><font color=green><B>Ваш добротный, двух этажный дом</B></font></a>'
+'<a href="exec: gt''FishKlerus''">Торговая лавка Клеруса</a>'
+'<a href="exec: gt''FishBookStore''">Лавка книжника</a>'
+
+!!!
+
+
+if hour >= 6 and hour<=21:
+piprand=RAND(0,100)
+     if piprand < 50:
+     'На улице никого нет.'
+     end
+     if piprand >= 50:
+     manpip=RAND(0,1)
+         if manpip=0:manpip=7
+         if manpip=1:manpip=1
+     gs'pippleW'
+     'По улице идет ((<<$pipl>>|pipaktW|minut=minut+1))'
+     end
+     
+     act 'Идти в город Эведон (1 час)':
+	 minut=minut+60
+	 gt'slumsW'
+	 end
+     
+end
+
+	 act 'Идти на север, к рыбацкому пирсу (15 минут)':
+	 minut=minut+15
+	 gt'fishpirce'
+	 end
+
+	 act 'Идти на юг, к кладбищу (15 минут)':
+	 minut=minut+15
+	 gt'graveyard'
+	 end
+	 
+	 act 'Выйти на Эведонский тракт (1 час)':
+	 minut=minut+60
+	 roadMark=1
+	 gt'roadW'
+	 end
+
+
+     act 'Ждать':
+     cla
+     waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
+         end
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
+         end
+     act 'Посмотреть на часы':gt curloc
+     end
+     
+     
+     if V_Roziske>0 and V_RoziskeDay!day:
+     randroz=RAND(0,100)
+         if randroz>=95:gt'Rozisk'
+     end
+--- fishW ---------------------------------
+

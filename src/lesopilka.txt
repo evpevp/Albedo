@@ -1,0 +1,114 @@
+# lesopilka
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaFuck = $ARGS[0]
+$locFuck = $CURLOC
+'<center><H4>Лесопилка</H4></center>'
+'<center><img src="pic/Evedon/lesopilka.jpg" ></center>'
+'Около не глубокой но быстрой речушке построена лесопилка.'
+if hour>7 and hour<20:
+'На лесопилке кипит работа, здоровые парни лесорубы валят деревья, перетаскивают и пилят бревна. За кипучей деятельностью строго следит <a href="exec: gt ''lesopilkaboss'' ">смотритель лесопилки</a>.'
+     if stavrosQW>0:'Вы видите как <a href="exec: minut=minut+5 & gt ''stavros'' ">Ставрос</a> обнаженный по пояс пилит бревно поигрывая мускулами.'
+end
+clr
+gs'stat'
+gs'time'
+'Объявления для фермеров.
+Вы можете купить бревна как со своей доставкой, так и с нашей доставкой.
+Бревно без доставки стоят 10 гем.
+С доставкой 20 гем 1 бревно.'
+
+     if missionData=9:
+         act 'Отдать письмо':
+         cla
+         *clr
+         missionData=0
+         kredit=kredit+100
+         missionC+=1
+         '<center><img src="pic/Photo/License.jpg" ></center>'
+         'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
+         act 'Уйти':gt $CURLOC
+         end
+     end
+     
+     if lesopwork=1 and hour>7 and hour<20 and farmstam>0:
+         act 'Работать на лесопилке 1 час':
+         cla
+         *clr
+         minut+=60
+         gem+=15
+         sweat+=1
+         farmstam-=1
+         lesotalon+=1
+         lesworkTimes+=1
+         exp+=RAND(50,100)
+         'Вы в течение часа вкалывали как проклятый на лесопилке таская бревна и пиля их на чураки. За это вы получили 10 гем.'
+         act 'Уйти':gt $CURLOC
+         end
+     end
+     
+     if lesopwork=2 and hour>7 and hour<20 and farmstam>0:
+         act 'Плотничать на лесопилке 1 час':
+         cla
+         *clr
+         minut+=60
+         gem+=25
+         sweat+=1
+         farmstam-=1
+         lesotalon+=1
+         lesworkTimes+=1
+         plotnikskill+=RAND(1,2)
+         exp+=RAND(70,130)
+         'Вы в течение часа плотничали строгая из дерева заказанную мебель и прочую мелочевку. За это вы получили 20 гем.'
+         act 'Уйти':gt $CURLOC
+         end
+     end
+
+
+	 act 'Уйти (30 мин)':
+	 minut=minut+30
+	 gt'forestW'
+	 end
+
+if farmland=1:
+
+     if gem>=20:
+         act 'Купить бревна с доставкой':
+         cla
+         *clr
+         minut+=15
+         tempshop = input ("Сколько вы хотите купить бревен?")
+             if tempshop*20 > gem or tempshop<0:
+             msg'У вас недостаточно гемов.'
+			 end
+         gem=gem-tempshop*20
+		 brevno=brevno+tempshop	      		 
+		 msg'Вы купили <<tempshop>> бревен, которые немедленно доставили вам на ферму.'
+         gt $CURLOC
+         end
+     end
+     
+     
+     if gem>=10 and oslik>0:
+         act 'Купить бревна без доставки':
+         cla
+         *clr
+         minut+=60
+         tempshop = input ("Сколько вы хотите купить бревен?")
+             if tempshop*10 > gem or tempshop<0:
+             'У вас недостаточно гемов.'
+			 end
+         gem=gem-tempshop*10
+		 brevno=brevno+tempshop	      		 
+		 'Вы купили <<tempshop>> бревен, которые погрузили на ослика и отправились на свою ферму.'
+         act 'Идти на ферму':gt 'farmMY'
+         end
+     end
+
+
+end
+--- lesopilka ---------------------------------
+

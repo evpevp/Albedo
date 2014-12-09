@@ -1,0 +1,169 @@
+# mirrW
+$metka = $ARGS[0]
+$loc = $CURLOC
+clr
+gs'stat'
+'<center><H4>Зеркало</H4></center>'
+if DemonMorf>=10:'<center><img src="pic/EvedonFace/DemonMorf2.jpg" ></center>'
+if DemonMorf>=5 and DemonMorf<10:'<center><img src="pic/EvedonFace/DemonMorf.jpg" ></center>'
+if DemonMorf<5:
+	 if face < 20:
+		 if hcol = 0:'<center><img src="pic/EvedonFace/man.jpg" ></center>'
+		 if hcol = 1:'<center><img src="pic/EvedonFace/man1.jpg" ></center>'
+		 if hcol = 2:'<center><img src="pic/EvedonFace/man2.jpg" ></center>'
+		 if hcol = 3:'<center><img src="pic/EvedonFace/man3.jpg" ></center>'
+		 if hcol = 4:'<center><img src="pic/EvedonFace/man4.jpg" ></center>'
+	 end
+	 if face >= 20 and face<40:
+		 if hcol = 0:'<center><img src="pic/EvedonFace/boy.jpg" ></center>'
+		 if hcol = 1:'<center><img src="pic/EvedonFace/boy1.jpg" ></center>'
+		 if hcol = 2:'<center><img src="pic/EvedonFace/boy2.jpg" ></center>'
+		 if hcol = 3:'<center><img src="pic/EvedonFace/boy3.jpg" ></center>'
+		 if hcol = 4:'<center><img src="pic/EvedonFace/boy3.jpg" ></center>'
+	 end
+	 if face >= 40:
+		 if hcol = 0:
+			 if hlong<30:'<center><img src="pic/EvedonFace/gBlack.jpg" ></center>'
+			 if hlong>=30 and hlong<60:'<center><img src="pic/EvedonFace/gBlack1.jpg" ></center>'
+			 if hlong>=60 and hlong<90:'<center><img src="pic/EvedonFace/gBlack2.jpg" ></center>'
+			 if hlong>=90:'<center><img src="pic/EvedonFace/gBlack3.jpg" ></center>'
+		 end
+		 if hcol = 1:
+			 if hlong<30:'<center><img src="pic/EvedonFace/gBrown.jpg" ></center>'
+			 if hlong>=30 and hlong<60:'<center><img src="pic/EvedonFace/gBrown1.jpg" ></center>'
+			 if hlong>=60 and hlong<90:'<center><img src="pic/EvedonFace/gBrown2.jpg" ></center>'
+			 if hlong>=90:'<center><img src="pic/EvedonFace/gBrown3.jpg" ></center>'
+		 end
+		 if hcol = 2:
+			 if hlong<30:'<center><img src="pic/EvedonFace/gRed.jpg" ></center>'
+			 if hlong>=30 and hlong<60:'<center><img src="pic/EvedonFace/gRed1.jpg" ></center>'
+			 if hlong>=60 and hlong<90:'<center><img src="pic/EvedonFace/gRed2.jpg" ></center>'
+			 if hlong>=90:'<center><img src="pic/EvedonFace/gRed3.jpg" ></center>'
+		 end
+		 if hcol = 3:
+			 if hlong<30:'<center><img src="pic/EvedonFace/gBlond.jpg" ></center>'
+			 if hlong>=30 and hlong<60:'<center><img src="pic/EvedonFace/gBlond1.jpg" ></center>'
+			 if hlong>=60 and hlong<90:'<center><img src="pic/EvedonFace/gBlond2.jpg" ></center>'
+			 if hlong>=90:'<center><img src="pic/EvedonFace/gBlond3.jpg" ></center>'
+		 end
+
+	 end
+ end
+'<<$hair>> <<$lip>> <<$skin>> <<$glaza>> <<$mop>>'
+*nl
+if makekit>0:'У вас <<makekit>> штук макияжных красок.'
+if nospIgla>0:'<<nospIgla>> упаковок швейных игл, для зачарования 1 упаковки нужно 500 манны'
+if nospIgla>0 and manna>=500:
+     act 'Зачаровывать иглы 1 час.':
+     cla
+     *clr
+     minut=minut+60
+     nospIgla=nospIgla-1
+     spIgla=spIgla+1
+     manna=manna-500
+     'Вы медитировали над иглами, напитывая их магической энергией. Через час, наконец, ритуал был закончен и вы получили новую пачку боевых игл Каллена.'
+     act 'Посмотреть результат':gt'mirrW'
+     end
+end
+
+if hapri = 0:
+!'Ваши волосы спутанные.'
+     act 'Причесаться 15 мин.':
+     cla
+     *clr
+     minut=minut+15
+     hapri=1
+     'Вы расчесали свои волосы.'
+     act 'Посмотреть результат':gt'mirrW'
+     end
+end
+
+if mop=0 and makekit>0:
+     act 'Нанести макияж 15 мин.':
+     cla
+     *clr
+     minut=minut+15
+     'Вы достали косметику и приготовились нанести макияж.'
+         act 'Легкий макияж.':
+		 cla
+		 *clr
+         mop=1
+         makekit=makekit-1
+         'Вы нанесли легкий макияж.'
+         act 'Посмотреть результат':gt'mirrW'
+         end
+         
+         act 'Нормальный макияж.':
+		 cla
+		 *clr
+         mop=2
+         makekit=makekit-2
+         'Вы нанесли нормальный макияж.'
+         act 'Посмотреть результат':gt'mirrW'
+         end
+         
+         act 'Шлюховатый макияж.':
+		 cla
+		 *clr
+         mop=3
+         makekit=makekit-3
+         'Вы нанесли толстый слой макияжа. Теперь вы похожи на шлюху.'
+         act 'Посмотреть результат':gt'mirrW'
+         end
+     end
+
+end
+
+if mop<0:
+'Ваш макияж потек.'
+     act 'Смыть макияж 15 мин.':
+     cla
+     *clr
+     minut=minut+15
+     mop=0
+     'Вы смыли макияж.'
+     act 'Посмотреть результат':gt'mirrW'
+     end
+end
+
+if blackAmulet=0 and blackAmuletQW=1:
+     if demonSoul>=12 and klikdemon>=12 and bloodemon>=1 and silk>=1:
+         act 'Изготовить амулет черной книги 15 мин.':
+		 cla
+		 *clr
+		 minut=minut+15
+		 demonSoul-=12
+		 klikdemon-=12
+		 bloodemon-=1
+		 silk-=1
+		 blackAmulet=1
+		 'Вы изготовили амулет из клыков демона и черных гемов, нанизанных на паучью нить, пропитанную кровью демона.'
+		 act '.....':gt'mirrW'
+		 end
+     
+     end
+end
+
+if blackAmulet=1 and blackAmuletQW=2 and blackBuben=0:
+     if letherdemon>=6 and bloodemon>=1 and silk>=1:
+         act 'Изготовить амулет черной книги 15 мин.':
+		 cla
+		 *clr
+		 minut=minut+15
+		 letherdemon-=6
+		 bloodemon-=1
+		 silk-=1
+		 blackBuben=1
+		 'Вы изготовили бубен, сшитый из 6ти кусков кожи демона при помощи нити, изготовленной из паучьего шелка, пропитанного кровью демонов.'
+		 act '.....':gt'mirrW'
+		 end
+     
+     end
+end
+
+act 'Убрать зеркало':GOTO $locBed, $metkaBed
+
+
+
+--- mirrW ---------------------------------
+

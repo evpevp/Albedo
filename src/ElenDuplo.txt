@@ -1,0 +1,150 @@
+# ElenDuplo
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+'<center><img src="pic/EvedonNarod/elenduplo.jpg" ></center>'
+!проститутка Элен Дупло
+	 if hour>=8 and hour<12:
+	 !в трактире
+	 'Элен выглядит помятой и несвежей, она тусклым взглядом осматривает вас и молчит.'
+	 else
+	 !на улице
+		 if femin>200:
+		 'Эй товарка. Ты какими судьбами? На пару со мной работать хочешь?'
+		 end
+		 if femin<=200:
+		 'Эй красавчик, хочешь развлечься?'
+			 act 'Развлечься?':gt'ElenDuplo','0'
+		 end
+	 end
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+	 
+
+end
+
+if $ARGS[0]='0':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+!проститутка Элен Дупло
+'<center><img src="pic/EvedonNarod/elenduplo.jpg" ></center>'
+'Я могу помочь тебе сбросить пар рукой за 25 гемов, обслужить ртом за 50 гемов, трах за 100 гем.'
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+	 
+	 if penis>0:
+		 if gem>=25:
+			 act 'Рукой':gt'ElenDuplo','1'
+		 end
+		 
+		 if gem>=50:
+			 act 'Минет':gt'ElenDuplo','2'
+		 end
+		 
+		 if gem>=100:
+			 act 'Секс':gt'ElenDuplo','3'
+		 end
+	 else
+	 'Эмм, у меня нет члена, может полижешь? Элен отрицательно покачала головой. "Я женщин не обслуживаю."'
+	 end
+
+end
+
+if $ARGS[0]='1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+gem-=25
+if ElenDuploSex=0:ElenDuploSex=1&girl+=1
+sexm+=1
+horny=0
+'<center><img src="pic/EvedonKD/hand.jpg" ></center>'
+'Вы зашли в переулок и Элен сев на корточки перед вами и достав ваш член начала его надрачивать рукой, вскоре вы кончили ей в ладони.'
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+
+end
+
+if $ARGS[0]='2':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+gem-=50
+if ElenDuploSex=0:ElenDuploSex=1&girl+=1
+sexm+=1
+horny=0
+manna+=500
+'<center><img src="pic/EvedonKD/blow.jpg" ></center>'
+'Вы зашли в переулок и Элен сев на корточки перед вами, достала ваш член и обхватив своими горячими губами начала его отсасывать. Вскоре вы кончили ей в рот, Элен продолжила сосать проглатывая вашу сперму пока наконец ваш член не стал абсолютно чистым.'
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+
+end
+
+if $ARGS[0]='3':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+gem-=100
+if ElenDuploSex=0:ElenDuploSex=1&girl+=1
+sexm+=1
+horny=0
+manna+=500
+wipo+=500
+'<center><img src="pic/EvedonKD/sex.jpg" ></center>'
+'Вы зашли в переулок и Элен показала вам матрас куда лечь, вы легли на него и она сняв юбку и достав ваш член уселась на вас введя в себя ваш <<penis>> сантиметровый член. Она начала прыгать и елозить на вас и вскоре вы не выдержали и кончили.'
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- ElenDuplo ---------------------------------
+

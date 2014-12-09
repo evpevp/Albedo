@@ -1,0 +1,414 @@
+# inna
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center>Ваша дочь Инна</center>'
+picrand=RAND(0,4)
+if picrand=0:'<center><img src="pic\fam\inna.jpg" ></center>'
+if picrand=1:'<center><img src="pic\fam\inna1.jpg" ></center>'
+if picrand=2:'<center><img src="pic\fam\inna2.jpg" ></center>'
+if picrand=3:'<center><img src="pic\fam\inna3.jpg" ></center>'
+if picrand=4:'<center><img src="pic\fam\inna4.jpg" ></center>'
+clr
+gs'stat'
+
+'Инна симпатичная молодая девушка учащаяся в институте.'
+
+
+act 'Отойти':GOTO $locM, $metkaM
+
+if innaQW = 0 and innaday!day:
+cla
+'Пап, дай денег. Хотя бы тысяч десять.'
+     if money >= 10000:
+         act 'На деньги':
+         cla
+		 innaQW = 1
+         innaday = day
+         money=money-10000
+         'Вы дали денег дочери и она радостно подпрыгнув чмокнула вас в щеку, спасибо папочка.'
+         act 'Отойти':GOTO $locM, $metkaM
+         end
+     end
+     act 'Кругом одни живоглоты, отстань':GOTO $locM, $metkaM
+end
+
+if innaQW >= 1 and innaQW <= 15 and innaday ! day:
+cla
+'Пап, дай денег. Хотя бы тысяч десять.'
+     if money >= 10000:
+         act 'На деньги':
+         cla
+         innaQW = innaQW + 1
+         innaday = day
+         money=money-10000
+         'Вы дали денег дочери и она радостно подпрыгнув чмокнула вас в щеку, спасибо папочка.'
+         act 'Отойти':GOTO $locM, $metkaM
+         end
+     end
+     act 'Кругом одни живоглоты, отстань':GOTO $locM, $metkaM
+end
+
+if innaQW > 15 and innaQW <= 30 and innaday ! day:
+cla
+'Папуль, ты у меня такой хороший, дай денег. Хотя бы тысяч двадцать.'
+     if money >= 20000:
+         act 'На деньги':
+         cla
+         innaQW = innaQW + 1
+         innaday = day
+         money=money-20000
+         'Вы дали денег дочери и она радостно подпрыгнув чмокнула вас в щеку, спасибо папочка.'
+         act 'Отойти':GOTO $locM, $metkaM
+         end
+     end
+     act 'Кругом одни живоглоты, отстань':GOTO $locM, $metkaM
+end
+
+
+if innaQW > 30 and innaQW < 100 and innaday ! day:
+	 cla
+	 'Папуль, купи мне красный ферарри, всего 12 милионов уйдет с твоего счета, я для тебя все что хочешь сделаю, честно, честно.'
+     if bankfond >= 12000000 and horny>=30 and hour>=18 and hour<=20:
+         act 'Это можно...':
+			 cla
+			 *clr
+			 innaQW = 100
+			 bankfond=bankfond-12000000
+			 '...особенно если у нас с тобой будет маааленький секрет (наклонившись к дочке вы шепчете ей о своих желаниях). Инна выслушав вас...покорно закрыла дверь и стала освобождать своё тело от одежды.'
+			 '<center><img src="pic\fam\s1dota.jpg" ></center>'
+			 'Вы поедаете глазами нежное тело своей дочери. Потом указываете ей на кровать и раздвигаете ей ноги'
+			 act '...':
+				 cla
+				 *clr
+				 if innavirgin!1:
+					 '<center><img src="pic\fam\DPdota.jpg" ></center>'
+					 'Слегка раздвинув половые губки - вашему взору предстает нежнорозовая киска вашей дочки, с еще целой девственной плевой.'
+				 end
+				 if innavirgin=1:
+					 '<center><img src="pic\fam\NoDPdota.jpg" ></center>'
+					 'Слегка раздвинув половые губки - вашему взору предстает нежнорозовая киска вашей дочки.'
+				 end
+				 act 'Поласкать киску дочки':
+					 cla
+					 *clr
+					 '<center><img src="pic\fam\s2dota.jpg" ></center>'
+					 'Вы принимаетесь ласкать языком киску дочери обходя каждый миллиметр и не забывая о клиторе'
+					 act 'Войти в киску':
+						 cla
+						 *clr
+						 '<center><img src="pic\fam\s4dota.jpg" ></center>'
+						 if innavirgin!1:'Вы аккуртано вводите свой член во влажное влагалище Инны и начинаете неторопливые движения, чувствуя как тонкая пленочка внутри вашей дочки лопается. Из уст Инны слышатся стоны...в них смешались боль и удовольствие.'
+						 if innavirgin=1:'Вы аккуртано вводите свой член во влажное влагалище Инны и начинаете неторопливые движения. Из уст Инны слышатся стоны удовольствия.'
+						 act '...':
+							 cla
+							 *clr
+							 '<center><img src="pic\fam\s5dota.jpg" ></center>'
+							 'Не в силах больше терпеть вы вынимаете свой член из киски Инны и извергаете своё семя на попку дочки'
+							 set minut = minut + 45
+							 innavag=1
+							 InnaOrgasmCounter=0
+							 InnaOrgasmQW=rand(10,21)
+							 sexm=sexm+1
+							 manna=manna+25
+                             wipo=wipo+25
+							 horny=0
+							 innaday = day
+							 InnaLastFuckDay=day
+							 act 'Одеться и уйти':GOTO $locM, $metkaM
+						 end
+					 end
+				 end
+				 act 'Грубо насадить на член':
+					 if innavirgin!1:
+						 cla
+						 *clr
+						 '<center><img src="pic\fam\s3dota.jpg" ></center>'
+						 'Без церемоний вы насаживаете дочь на свой агрегат и начинаете агрессивно дрючить её. Из киски Инны капает кровь, а из уст вырываются стоны от боли, но она терпит. Ради машины и денег она видимо готова стерпеть и не такое...вся в мать'
+						 act '...':
+							 cla
+							 *clr
+							 picrand=RAND(0,1)
+							 if picrand=0:'<center><img src="pic\fam\s6dota.jpg" ></center>'
+							 if picrand=1:'<center><img src="pic\fam\s61dota.jpg" ></center>'
+							 'Не в силах больше терпеть вы извергаете своё семя в киску дочки'
+							 sexm=sexm+1
+							 manna=manna+25
+                             wipo=wipo+25
+							 innavag=1
+							 set minut = minut + 30
+							 horny=0
+							 innaday = day
+							 InnaLastFuckDay=day
+							 act 'Одеться и уйти':GOTO $locM, $metkaM
+						 end
+					 end
+					 if innavirgin=1:
+						 cla
+						 *clr
+						 '<center><img src="pic\fam\s3dota.jpg" ></center>'
+						 'Без церемоний вы насаживаете дочь на свой агрегат и начинаете агрессивно дрючить её. Из уст Инны вырываются стоны боли, но она терпит. Ради машины и денег она видимо готова стерпеть и не такое...вся в мать'
+						 act '...':
+							 cla
+							 *clr
+							 picrand=RAND(0,1)
+							 if picrand=0:'<center><img src="pic\fam\s6dota.jpg" ></center>'
+							 if picrand=1:'<center><img src="pic\fam\s61dota.jpg" ></center>'
+							 'Не в силах больше терпеть вы извергаете своё семя в киску дочки'
+							 sexm=sexm+1
+							 manna=manna+25
+                             wipo=wipo+25
+							 innavag=1
+							 set minut = minut + 30
+							 horny=0
+							 innaday = day
+							 InnaLastFuckDay=day
+							 act 'Одеться и уйти':GOTO $locM, $metkaM
+							 act 'Дать облизать член':
+								 cla
+								 *clr
+								 picrand=RAND(0,1)
+								 if picrand=0:'<center><img src="pic\fam\innaS1m.jpg" ></center>'
+								 if picrand=1:'<center><img src="pic\fam\innaS2m.jpg" ></center>'
+								 set minut = minut + 10
+								 'Вы: А теперь как следут оближи его'
+								 'Инна: Ну он же грязный...весь в сперме'
+								 'Вы: Ты тоже не очень "чистая", не строй из себя целочку!'
+								 'Инна опускается на колени и покорно начинает "чистить" ротиком ваш член'
+								 InnaLastFuckDay=day
+								 act 'Одеться и уйти':GOTO $locM, $metkaM
+							 end	 
+						 end
+					 end
+				 end
+			 end
+         end
+     end
+     if bankfond >= 12000000:
+		 act 'Конечно доченька, вся для тебя':
+		 cla
+		 innaQW = 100
+         innaday = day
+         innavag=0
+         bankfond=bankfond-12000000
+         act 'Уйти':GOTO $locM, $metkaM
+		 end
+		 if bankfond >= 12000000 and hour <18 or hour>21:
+			 act 'Поговорим об этом в любой день с 6 до 8 вечера. Когда никого не будет дома':GOTO $locM, $metkaM
+		 end
+     end
+     act 'Кругом одни живоглоты, отстань':
+		 innaday = day
+		 GOTO $locM, $metkaM
+	 end
+     
+end
+
+if innaQW > 1 and innaQW <= 100 and innaday = day:
+	 cla
+	 *clr
+	 horny=horny+10
+	 picrand=RAND(0,6)
+	 if picrand=0:'<center><img src="pic\fam\dota.jpg" ></center>'
+	 if picrand=1:'<center><img src="pic\fam\dota1.jpg" ></center>'
+	 if picrand=2:'<center><img src="pic\fam\dota2.jpg" ></center>'
+	 if picrand=3:'<center><img src="pic\fam\dota3.jpg" ></center>'
+	 if picrand=4:'<center><img src="pic\fam\dota4.jpg" ></center>'
+	 if picrand=5:'<center><img src="pic\fam\dota5.jpg" ></center>'
+	 if picrand=6:'<center><img src="pic\fam\dota6.jpg" ></center>'
+	 'Гляди пап какие я себе моднявые вещички прикупила!'
+	 act 'Симпатично':
+		 cla
+		 'А ты папуль ткань пощупай, какая.'
+		 act 'Пожалуй я воздержусь':GOTO $locM, $metkaM
+		 act 'Пощупать':
+			 cla
+			 *clr
+			 horny=horny+30
+			 '<center><img src="pic\fam\innaT.jpg" ></center>'
+			 'Инна встала рачком на диване и выставила свою аппетитную, округлую попку, вы пощупали ткань и за одно ее мягкую теплую попку.'
+			 act 'Мне нравится':GOTO $locM, $metkaM
+		 end
+	 end
+	 act 'Бестыдница':GOTO $locM, $metkaM
+end
+
+
+
+if innaQW = 100 and innaday ! day:
+	 innaday=day
+	 if innavag=0: 
+		 'Папуль, огромное тебе спасибо за ферарри. Класная машина.'
+		 act 'Всё для моей умницы!':
+			 cla
+			 'Инна: а ты купишь своей умнице квартиру? Всего-то 6 миллионов.'
+			 act 'Я подумаю. Выйти':GOTO $locM, $metkaM
+			 if bankfond >=6000000:
+				 act 'Ладно, я сейчас же перечислю деньги.':
+					 cla
+					 bankfond=bankfond-6000000
+					 innaQW=200
+					 act 'Уйти':GOTO $locM, $metkaM
+				 end
+			 end
+		 end
+	 end
+	 if innavag=1: 
+		 'Папуль, огромное тебе спасибо за ферарри. Класная машина. Я хочу тебя отблагодарить по особому (Инна закрывает дверь). И опускается перед вами на колени протягивая руки к вашей ширинке.'
+		 act 'В другой раз':GOTO $locM, $metkaM		
+		 act 'Позволить прожолжить..':
+			 cla
+			 *clr
+			 horny=0
+			 set sexm=sexm+1
+			 manna=manna+25
+             wipo=wipo+25
+			 set minut = minut + 15
+			 InnaLastFuckDay=day
+			 '<center><img src="pic\fam\Bdota.jpg" ></center>'
+			 'Вы предоставили дочке свой член и она незамедлительно взяла его в рот. Опасаясь, что вас могут застукать - вы, не сдерживая себя, быстро кончили ей в ротик.'
+			 act 'Спасибо...мне пора идти':GOTO $locM, $metkaM
+			 act 'Я хочу большего':
+				 cla
+				 'Вы начали говорить, что хотите большего. Инна заулыбалась. Папуль, я бы с радостью, но не можем же мы это делать тут. Купи мне квартиру. Может наскребешь на счету 6 миллиончиков.'
+				 act 'Я подумаю. Выйти':GOTO $locM, $metkaM
+				 if bankfond >= 6000000:
+					 act 'Ладно, я сейчас же перечислю деньги.':
+					 bankfond=bankfond-6000000
+					 innaQW=200
+					 InnaLastFuckDay=day
+					 GOTO $locM, $metkaM
+					 end
+				 end
+			 end
+		 end
+	 end
+end
+
+
+
+if innaQW=200 and (innaMinDay=day or hour>8):
+	 cla
+	 *clr
+	 horny=horny+10
+	 picrand=RAND(0,6)
+	 if picrand=0:'<center><img src="pic\fam\dota.jpg" ></center>'
+	 if picrand=1:'<center><img src="pic\fam\dota1.jpg" ></center>'
+	 if picrand=2:'<center><img src="pic\fam\dota2.jpg" ></center>'
+	 if picrand=3:'<center><img src="pic\fam\dota3.jpg" ></center>'
+	 if picrand=4:'<center><img src="pic\fam\dota4.jpg" ></center>'
+	 if picrand=5:'<center><img src="pic\fam\dota5.jpg" ></center>'
+	 if picrand=6:'<center><img src="pic\fam\dota6.jpg" ></center>'
+	 'Гляди пап какие я себе моднявые вещички прикупила!'
+	 act 'Симпатично':
+		 cla
+		 'А ты папуль ткань пощупай, какая.'
+		 act 'Пожалуй я воздержусь':gt 'InnaKor'
+		 if InnaAS=>1 and innavag>=1 and horny>=40 and InnaFuckDesireDay!day: act 'Давай я лучше пощупаю твои дырочки своим членом, а?':gt 'innasex','FullSex'
+		 act 'Пощупать':
+			 cla
+			 *clr
+			 horny=horny+30
+		  	 '<center><img src="pic\fam\innaT.jpg" ></center>'
+			 'Инна встала рачком на диване и выставила свою аппетитную, округлую попку, вы пощупали ткань и за одно ее мягкую теплую попку.'
+			 if innaday=day:
+			 	 act '...':
+					 cla
+					 'Кста, пап, дай денег. Хотя бы тысяч десять.'
+					 if money >= 10000:
+						 act 'На деньги':
+							 cla
+							 money=money-10000
+							 'Вы дали денег дочери и она радостно подпрыгнув чмокнула вас в щеку, спасибо папочка.'
+							 act 'Бестыдница':gt 'InnaKor'
+						 end
+					 end
+					 act 'Да сколько можно? Отстань!':gt 'InnaKor'
+				 end
+			 end
+			 if innaday!day and week!6 and week!5:
+				 innaday=day
+				 act 'Мне нравится!':GOTO $locM, $metkaM
+			 end
+			 if innaday!day and (week=6 or week=5):
+				  act '...':
+					 cla
+					 *clr
+					 picrand=RAND(0,4)
+					 innaday=day
+					 if picrand=0:'<center><img src="pic\fam\inna.jpg" ></center>'
+					 if picrand=1:'<center><img src="pic\fam\inna1.jpg" ></center>'
+					 if picrand=2:'<center><img src="pic\fam\inna2.jpg" ></center>'
+					 if picrand=3:'<center><img src="pic\fam\inna3.jpg" ></center>'
+					 if picrand=4:'<center><img src="pic\fam\inna4.jpg" ></center>'
+					 'Папуля, я совсем забыла, у меня завтра гулянка с друзьями - мне срочно надо еще 60 тысяч. Дай, а?'
+					 act 'Я по твоему деньги рисую? Нет!':gt 'InnaKor'
+					 if money>=60000:
+						 act 'Конечно, доча, держи':
+						 cla
+						 money=money-60000
+						 act 'Уйти': gt 'InnaKor'
+						 end
+					 end
+					 if money>=60000 and horny>=20 and innavag>=1:
+						 act 'Я могу тебе их дать...но...':
+							 cla
+							 *clr
+							 if InnaAS=0:'...с условием, что я побываю в одной из твоих щелок, в которой не был прежде!'
+							 if InnaAS>0:'...готовь свою попку Инка, папка хочет позабавиться!'
+							 'Инна: хорошо, я поняла...дай мне 20 минут на подготовку'
+							 sexm=sexm+1
+							 set minut = minut+20
+							 'Инна ушла в ванну и закрыла дверь. Вы тем временем разделись.'
+							 '<center><img src="pic\fam\DA1.jpg" ></center>'
+							 'Вернувшись - Инна стала на колени и довела ваш член своим ротиком до каменного стояка'
+							 act '...':
+								 cla
+								 *clr
+								 '<center><img src="pic\fam\DA2.jpg" ></center>'
+								 'Уложив дочку на диван и раздвинув ей ноги вы вошли в ёё очень укзую попку. Вы движетесь медленно..наслаждаясь каждым пройденым миллиметров в попке дочки. '
+								 act '...':
+									 cla
+									 *clr
+									 '<center><img src="pic\fam\DA3.jpg" ></center>'
+									 'Решив нарастить темп - вы меняете позу, усадив Инну на свой член. С каждой минутой вы движетесь всё быстрее и быстрее. Инна закусывает губу от боли, но молчит. Возможно, ей нравится боль во время секса? Надо будет вернуться к этой теме в другой раз.'
+									 act '...':
+										 cla
+										 *clr
+										 '<center><img src="pic\fam\DA4.jpg" ></center>'
+										 'Чувствуя приблежающийся оргазм - вы резко разворачиваете Инну на своём мужском органе спиной к себе и наращиваете темп до разумного максимума. На этот раз из уст Инны слышны стоны.'
+										 act '...':
+											 cla
+											 *clr
+											 '<center><img src="pic\fam\DAC.jpg" ></center>'
+											 'Достигнув пика наслаждения - вы отправляете поток спермы Инне прямо в попку.'
+											 set minut = minut+25
+											 set sweat= +2
+											 InnaAS=1
+											 manna=manna+25
+                                             wipo=wipo+25
+											 horny=0
+											 CheckInnaShower=1
+											 InnaLastFuckDay=day
+											 act 'Уйти': gt 'InnaKor'
+										 end
+									 end
+								 end
+							 end
+						 end
+					 end
+				 end
+			 end  
+		 end
+	 end
+	 act 'Бестыдница':gt 'InnaKor'
+end
+
+
+
+
+
+
+
+--- inna ---------------------------------
+

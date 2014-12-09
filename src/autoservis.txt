@@ -1,0 +1,106 @@
+# autoservis
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><B>Автосервис</B></center>'
+'<center><img src="pic\pic\autoservis.jpg" ></center>'
+'Часы работы автосервиса с 9 до 20, выходной воскресенье.'
+if car > 0 and cardrive = 7:
+set cardrive = 7
+'Около автосервиса стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+end
+
+     if hour >= 9 and hour <= 20 and week < 7:
+     act 'Зайти в автосервис':gt'autoservis','manager'
+     end
+act 'Уйти':gt 'nord'
+end
+
+
+
+
+if $ARGS[0]='manager':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+clr
+gs'stat'
+gs'avtonorm'
+'<center><B>Автосервис</B></center>'
+'<center><img src="pic\pic\autoservis1.jpg" ></center>'
+
+if cardrive = 7:
+     if wrek = 0:
+         if teh >= tehcar*75/100:'Мастер осмотрел вашу машину и сказал, что она не нуждается ни в ремонте, ни в тех обслуживании.'
+         if teh < tehcar*75/100:
+         'Мастер осмотрел вашу машину и сказал, что стоимость работ <<normrem>>.'
+             if money >= normrem:
+                 act 'Оплатить и отремонтировать':
+                 cla
+                 *clr
+                 set money = money - normrem
+                 set minut = minut + 60
+                 set teh = tehcar
+                 wrek=0
+                 '<center><img src="pic\pic\autoservis2.jpg" ></center>'
+                 'Вы просидели целый час в комнате отдыха? делая вид что смотрите телевизор, наконец машину починили и вы заплатили в кассу <<normrem>> рублей'
+                 act 'Уйти':gt'autoservis','manager'
+                 end
+             
+             end
+         end
+     end
+     if wrek = 1:
+     'Мастер присвиснул глядя на ваш аппарат и сказал, что стоимость работ <<normrem>>.'
+         if money >= normrem:
+             act 'Оплатить и отремонтировать':
+             cla
+             *clr
+             set money = money - normrem
+             set minut = minut + 60
+             set tehcar = tehcar/2
+             set teh = tehcar
+             wrek=0
+             '<center><img src="pic\pic\autoservis2.jpg" ></center>'
+             'Вы просидели целый час в комнате отдыха? делая вид что смотрите телевизор, наконец машину починили и вы заплатили в кассу <<normrem>> рублей'
+             'Мастер перед тем как отдать ключи вам сказал, чтобы вы постарались не доводить машину до такого состояния.'
+             act 'Уйти':gt'autoservis','manager'
+             end
+             
+         end
+     end
+end
+if cardrive ! 7 and pol>0:'Мастер усмехнулся и сказал "Девушка, мне нужно машину посмотреть, чтобы хоть что-то вам сказать. Пригоняйте ее к автосервису, поглядим."'
+if cardrive ! 7 and pol=0:'Мастер усмехнулся и сказал "Мне нужно машину посмотреть, чтобы хоть что-то вам сказать. Пригоняйте ее к автосервису, поглядим."'
+
+if wrek = 1 and cardrive ! 7 and car > 0:
+'В автосервисе действует услуга эвакуации поврежденных автомобилей до автосервиса, стоимость 2500'
+     if money >= 2500:
+         act 'Оплатить доставку авто 2500руб (1 час)':
+         cla
+         *clr
+         set money = money - 2500
+         set cardrive = 7
+         set minut = minut + 60
+         '<center><img src="pic\pic\autoservis2.jpg" ></center>'
+         'Вы просидели целый час в автосервисе, ожидая когда же привезут ваш автомобиль. Наконец время прошло и ваш автомобиль был доставлен к воротам автосервиса.'
+         act 'Уйти':gt'autoservis','manager'
+         end
+     
+     end
+end
+
+act 'Уйти':gt'autoservis','start'
+end
+--- autoservis ---------------------------------
+

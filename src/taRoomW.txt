@@ -1,0 +1,54 @@
+# taRoomW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+mag = 1
+'<center><H4>Съемная комната</H4></center>'
+'<center><img src="pic/Evedon/taroom.jpg" ></center>'
+'Небольшая комната, но уютная и в ней есть все необходимое.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+
+if roomWT>0:
+'У вас оплачено <<roomWT>> дней'
+act 'Закрыть входную дверь':gt'taRoomW1'
+end
+
+
+	 if gem>=5:
+		 act 'Оплатить комнату 5 гемов сутки':
+		 cla
+		 minut=minut+15
+		 roomWgem = input ("Сколько суток вы хотите оплатить? (5 гемов 1 сутки)")
+			 if roomWgem*5 > gem:
+			 'У вас недостаточно гемов.'
+			 end
+			 if roomWgem*5 <= gem:
+			 gem=gem-roomWgem*5
+			 roomWT=roomWT+roomWgem
+			 'У вас оплачено <<roomWT>> дней'
+			 end 
+		 act 'Отойти':gt'taRoomW'
+		 end
+	 end
+
+
+if slot>0:
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'teladareW'
+	 end
+end
+--- taRoomW ---------------------------------
+

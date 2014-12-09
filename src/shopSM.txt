@@ -1,0 +1,55 @@
+# shopSM
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 1
+cla
+clr
+gs'stat'
+gs'time'
+'<center><H4>МАГАЗИН БЫТОВОЙ ТЕХНИКИ</H4></center>'
+'<center><img src="pic\pic\shop.jpg" ></center>'
+'Время работы с9 до 20'
+
+
+     act 'Уйти.':
+     GOTO $locMag, $metkaMag
+     end
+     
+     if hour>=9 and hour<=20:
+         act 'Идти в магазин.':gt'shopSM','1'
+     end
+end
+
+if $ARGS[0]='1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 5
+cla
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+'<center><B>МАГАЗИН БЫТОВОЙ ТЕХНИКИ</B></center>'
+'<center><img src="pic\pic\shop1.jpg" ></center>'
+'Телевизор - 5 тыр'
+
+     if TV < 1 and money >= 5000:
+         act 'Купить телевизор 5тыр':
+         cla
+         *clr
+         set money = money - 5000
+         set TV = 1
+         '<center><img src="pic\pic\kassa.jpg" ></center>'
+         'Вы заплатили в кассу и купили телевизор.'
+         act 'Отойти от прилавка':GOTO $loc, $metka
+         end
+     
+     end
+
+
+
+act 'Выйти из магазина':gt'shopSM','start'
+end
+--- shopSM ---------------------------------
+

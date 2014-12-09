@@ -1,0 +1,18 @@
+# Berty
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+!Берти формастая танцовщица
+'Берти послала вам воздушный поцелуй.'
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+
+end
+--- Berty ---------------------------------
+

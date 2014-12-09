@@ -1,0 +1,255 @@
+# kungfugym2
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><H4>Зал КунФу</H4></center>'
+'<center><img src="pic/pic/kungfugym1.jpg" ></center>'
+'.'
+if kfspar = 1:kfspar=0&money=kfmoney
+clr
+gs'stat'
+
+act 'ВЫЙТИ':
+minut=minut+5
+gt'kungfugym'
+end
+
+if kfday ! day:
+     if lvl < 10:
+		 act 'Заниматся 2 часа с младшей группой':
+		 cla
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(lvl,lvl*2)
+		 'Вы занимались базовыми упражнениями с младшей группой.'
+		 act 'Уйти':gt'kungfugym'
+		 end
+     end
+     
+     if lvl >= 10:
+		 act 'Заниматся 2 часа с общей группой':
+		 cla
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(lvl+5,(lvl+5)*2)
+		 'Вы занимались базовыми упражнениями с общей группой.'
+		 act 'Уйти':gt'kungfugym'
+		 end
+     end
+     
+     act 'Сразиться с начинающим учеником':
+     cla
+     $nameV='Ученик'
+     kfspar=1
+	 kfmoney=money
+	 kfday = day
+	 minut = minut + 120
+	 exp=exp+RAND(lvl,lvl*2)
+	 gs'genkf'
+     act 'Дратся':gt'before'
+     end
+     
+     if lvl >= 15:
+		 act 'Сразиться с младшим учеником (уровень 20)':
+		 cla
+			 kfspar=1
+			 kfmoney=money
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(lvl,lvl*2)
+		 $nameV='Младший ученик Чань'
+		 lvlv=20
+		 strenV=10
+		 speedV=40
+		 agilV=40
+		 vitalV=20
+		 intelv=40
+		 willv=10
+		 program=2
+		 healthV=vitalV*10
+		 mannaV=intelV*10
+		 wipoV=willV*10
+		 'Младший ученик Чань вышел в центр зала, готовясь к бою с вами.'
+		 act 'Дратся':gt'before'
+		 end
+     end
+     
+     if lvl >= 20:
+		 act 'Сразиться с учеником (уровень 25)':
+		 cla
+			 kfspar=1
+			 kfmoney=money
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(lvl,lvl*2)
+		 $nameV='Ученик Линь'
+		 lvlv=25
+		 strenV=10
+		 speedV=40
+		 agilV=40
+		 vitalV=20
+		 intelv=65
+		 willv=10
+		 program=3
+		 healthV=vitalV*10
+		 mannaV=intelV*10
+		 wipoV=willV*10
+		 'Ученик Линь вышел в центр зала, готовясь к бою с вами.'
+		 act 'Дратся':gt'before'
+		 end
+     end
+     
+     if lvl >= 25:
+		 act 'Сразиться со старшим учеником (уровень 30)':
+		 cla
+			 kfspar=1
+			 kfmoney=money
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(lvl,lvl*2)
+		 $nameV='Ученик Ли'
+		 lvlv=30
+		 strenV=10
+		 speedV=40
+		 agilV=40
+		 vitalV=35
+		 intelv=75
+		 willv=10
+		 program=4
+		 healthV=vitalV*10
+		 mannaV=intelV*10
+		 wipoV=willV*10
+		 'Ученик Ли вышел в центр зала, готовясь к бою с вами.'
+		 act 'Дратся':gt'before'
+		 end
+     end
+     
+     if lvl >= 60:
+		 act 'Сразиться с помощником мастера Чоу Тонгом (уровень 100)':
+		 cla
+			 kfspar=1
+			 kfmoney=money
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(lvl,lvl*2)
+		 $nameV='Мастер Тонг'
+		 lvlv=100
+		 strenV=1000
+		 speedV=100
+		 agilV=100
+		 vitalV=600
+		 intelv=100
+		 willv=10
+		 program=4
+		 healthV=vitalV*10
+		 mannaV=intelV*10
+		 wipoV=willV*10
+		 'Ученик Ли вышел в центр зала, готовясь к бою с вами.'
+		 act 'Дратся':gt'before'
+		 end
+     end
+     
+     if lvl >= 80:
+		 act 'Сразиться с Мастером Чоу (уровень 250)':
+		 cla
+			 kfspar=1
+			 kfmoney=money
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(lvl,lvl*2)
+		 $nameV='Мастером Чоу'
+		 lvlv=250
+		 strenV=1000
+		 speedV=200
+		 agilV=200
+		 vitalV=1000
+		 intelv=250
+		 willv=100
+		 program=4
+		 healthV=vitalV*10
+		 mannaV=intelV*10
+		 wipoV=willV*10
+		 'Мастер Чоу вышел в центр зала, готовясь к бою с вами.'
+		 act 'Дратся':gt'before'
+		 end
+     end
+     
+     if tigerStile < 100 and money>=5000 and lvl >= 20:
+         act 'Изучать с Мастером стиль тигра (5 тыр)':
+		 cla
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(15,20)
+		 tigerStile=tigerStile+RAND(5,10)
+		 if tigerStile>100:tigerStile=100
+		 'Мастер Чоу обучал вас стилю тигра и вы усвоили его на <<tigerStile>>%.'
+		 'Это ярко атакующий стиль, позволяющий за счет энергии Ци (манне) увеличивать скорость и силу атак на некоторое время.'
+		 act 'Уйти':gt'kungfugym'
+		 end
+     end
+     
+     if tigerStile = 100 and money>=5000 and tigerClaw < 100:
+         act 'Изучать с Мастером коготь тигра (5 тыр)':
+		 cla
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(15,20)
+		 tigerClaw=tigerClaw+RAND(5,10)
+		 if tigerClaw>100:tigerClaw=100
+		 'Мастер Чоу обучал вас когтю тигра и вы усвоили его на <<tigerClaw>>%.'
+		 'Этот прием за счет энергии Ци (манне) способен парализовать противника на некоторое время.'
+		 act 'Уйти':gt'kungfugym'
+		 end
+     end
+     
+     if tigerStile = 100 and money>=5000 and tigerClaw = 100 and tigerFury < 100:
+         act 'Изучать с Мастером ярость тигра (5 тыр)':
+		 cla
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(15,20)
+		 tigerFury=tigerFury+RAND(15,25)
+		 if tigerFury>100:tigerFury=100
+		 'Мастер Чоу обучал вас ярости тигра и вы усвоили его на <<tigerFury>>%.'
+		 'Владеющий этим приемом за счет энергии Ци (манне) способен нанести серию ударов.'
+		 act 'Уйти':gt'kungfugym'
+		 end
+     end
+     
+     if tigerStile = 100 and money>=5000 and tigerClaw = 100 and tigerFury = 100 and tigerWill < 100:
+         act 'Изучать с Мастером волю тигра (5 тыр)':
+		 cla
+		 kfday = day
+		 minut = minut + 120
+		 exp=exp+RAND(15,20)
+		 tigerWill=tigerWill+RAND(15,25)
+		 if tigerWill>100:tigerWill=100
+		 'Мастер Чоу обучал вас воле тигра и вы усвоили его на <<tigerWill>>%.'
+		 'Владеющий этим приемом усилием воли способен восстанавливать здоровье и энергию Ци (манну) в бою.'
+		 act 'Уйти':gt'kungfugym'
+		 end
+     end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- kungfugym2 ---------------------------------
+

@@ -1,0 +1,51 @@
+# levelRise
+'Уровень <<lvl>>'
+'Опыт <<exp>>'
+'Очки повышения навыков <<sp>>'
+'Сила <<stren>>'
+'Скорость <<speed>>'
+'Ловкость <<agil>>'
+'Стойкость <<vital>>'
+'Интелект <<intel>>'
+'Воля <<will>>'
+'Здоровье <<health>>'
+'Манна <<manna>>'
+'Сила воли <<wipo>>'
+
+act 'ВЫЙТИ':GOTO $loc, $metka
+
+if sp >0:
+     act 'Повысить силу':
+     stren=stren+1
+     sp=sp-1
+     gt'levelRise'
+     end
+     act 'Повысить скорость':
+     speed=speed+1
+     sp=sp-1
+     gt'levelRise'
+     end
+     act 'Повысить ловкость':
+     agil=agil+1
+     sp=sp-1
+     gt'levelRise'
+     end
+     act 'Повысить стойкость':
+     vital=vital+1
+     sp=sp-1
+     gt'levelRise'
+     end
+     act 'Повысить интелект':
+     intel=intel+1
+     sp=sp-1
+     gt'levelRise'
+     end
+     act 'Повысить волю':
+     will=will+1
+     sp=sp-1
+     gt'levelRise'
+     end
+
+end
+--- levelRise ---------------------------------
+

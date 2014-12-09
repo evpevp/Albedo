@@ -1,0 +1,16 @@
+# ввод
+if $usrtxt='деньги':
+set money = money + 1000
+clr
+gs'stat'
+cmdclear
+end
+
+if $usrtxt='много денег':
+set money = money + 100000
+clr
+gs'stat'
+cmdclear
+end
+--- ввод ---------------------------------
+

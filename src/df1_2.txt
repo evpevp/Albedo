@@ -1,0 +1,41 @@
+# df1_2
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Риаллон</H4></center>'
+'<center><img src="pic/Evedon/df12.jpg" ></center>'
+'Эльфийская ((деревушка|rialonW|minut=minut+5)) спрятанная в лесу.'
+clr
+gs'stat'
+gs'time'
+
+'<center>((Север|df0_2|minut=minut+30))</center>'
+'<center>((Запад|df1_1|minut=minut+30))-+-((Восток|df1_3|minut=minut+30))</center>'
+'<center>((Юг|df2_2|minut=minut+30))</center>'
+!!!дома
+*nl
+!'Эльфы не дружелюбно вас встречают и рекомендуют уходить отсюда как можно быстрей.'
+
+!!!
+''
+if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
+
+
+
+     act 'Ждать':
+     cla
+     waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
+         end
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
+         end
+     act 'Посмотреть на часы':gt curloc
+     end
+--- df1_2 ---------------------------------
+

@@ -1,0 +1,281 @@
+# karavanersW
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+'<center><img src="pic/EvedonNarod/karavanchiki1.jpg"></center>'
+set minut = minut + 15
+alko=alko+10
+horny=horny+10
+clr
+gs'stat'
+karavday=day
+'Караванщики налили вам виски. И сели вокруг вас. Вы выпили с ними. Один из караванщиков пододвинулся к вам поближе.'
+'(Караванщик) - Эй малышка. Я так соскучился без женщин в этой чертовой пустыне. Может развлечемся? Не за бесплатно конечно, 100 новеньких, блестящих гемов.'
+'Караванщик достал кошелек и раскрыв его показал сверкающие самоцветы.'
+     if whore<10:
+		 act 'Я не шлюха! Уйти в гневе!':
+		 karand=RAND(0,3)
+			 if karand<3:gt'tabarW'
+			 if karand=3:gt'karavanersW','rost'
+		 end
+     end
+     
+     act 'Хмм, ну ладно, давай гемы!':
+     cla
+     gem=gem+100
+     'Вы взяли тугой кошель с гемами от караванщика.'
+     act 'Спрятать гемы':gt'karavanersW','yes'
+     end
+     
+     if whore>=10:
+		 act 'Мальчики, за гемы я вся ваша, но сотня это как-то мало.':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonNarod/karavanchiki1.jpg"></center>'
+		 'Один из караванщиков встал и обнял вас хватая за задницу "Я думаю такая шлюха как ты могла бы обслужить и всех нас сразу. Например за 1000 гемов."'
+		     act 'Согласиться на групповуху':
+			 whore=whore+5
+			 gem=gem+1000
+			 gt'karavanersW','gang'
+			 end
+             
+             act 'Нет, вас слишком много, я пожалуй пойду с одним':
+			 cla
+			 gem=gem+100
+			 'Вы взяли тугой кошель с гемами от караванщика.'
+			 act 'Спрятать гемы':gt'karavanersW','yes'
+			 end
+             
+		 end
+     end
+end
+
+
+if $ARGS[0]='rost':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+'<center><img src="pic/EvedonNarod/karavanchiki1.jpg"></center>'
+set minut = minut + 15
+clr
+gs'stat'
+'(Караванщик) - Подожди малышка. Даю двести гемов, это последнее предложение!'
+
+     act 'Я же сказала, я не шлюха! Уйти в гневе!':gt'tabarW'
+     
+     act 'Хмм, ну ладно, давай гемы!':
+     cla
+     gem=gem+200
+     'Вы взяли тугой кошель с гемами от караванщика.'
+     act 'Спрятать гемы':gt'karavanersW','yes'
+     end
+end
+
+if $ARGS[0]='yes':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+minut = minut + 15
+whore=whore+1
+clr
+gs'stat'
+'Караванщик встал и взял вас за руку.'
+destrand=RAND(0,2)
+     if destrand=0:
+     'Другие караванщики остановили своего приятеля. Эй шлюха, а нас обслужить? Даем тысячу гемов и ты обслуживаешь нас всех сразу.'
+         act 'Согласиться на групповуху':
+         whore=whore+5
+         gem=gem+1000
+         gt'karavanersW','gang'
+         end
+     act 'Отказаться и уйти с караванщиком':gt'karavanersW','sex'
+     end
+     if destrand>0:
+     'Вы вышли на улицу и дошли до дома который арендовали караванщики. Он завел вас в комнату.'
+     act '......':gt'karavanersW','sex'
+     end
+end
+
+if $ARGS[0]='sex':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 15
+horny=horny+tit
+clr
+gs'stat'
+'<center><img src="pic/EvedonTA/karsex.jpg" ></center>'
+'Вы и мужчина разделись и он начал ласкать вашу грудь, а вы его член.'
+'Караванщик положил вам руку на голову и слегка надавил'
+     act 'Опуститься на колени':
+     cla
+     *clr
+     bj=bj+1
+     guy=guy+1
+     if mop>0:mop=-1
+     '<center><img src="pic/EvedonTA/karsex5.jpg" ></center>'
+     'Вы встали на колени перед мужчиной и взяли между губ его теплую головку, начав ее сосать. Мужчина положил руку вам на голову и начала трахать вас в рот.'
+     'Наконец он вынул член из вашего рта.'
+         act 'Дальше':
+         cla
+         *clr
+         set minut = minut + 15
+         tiprand=RAND(0,2)
+             if tiprand=0:
+             anal=anal+1
+             anus=anus+3
+             '<center><img src="pic/EvedonTA/karsex1.jpg" ></center>'
+             'Караванщик положил вас на спину и ввел вам свой член в зад. Вы застонали, но он не обращая внимания на вас начал вас трахать в попу.'
+             gs'analslut'
+             cumanus=cumanus+1
+             'Наконец он кончил вам в зад, наполнив его спермой.'
+             end
+             if tiprand=1:
+             vag=vag+3
+             sex=sex+1
+             '<center><img src="pic/EvedonTA/karsex2.jpg" ></center>'
+             'Караванщик наклонил вас и ввел вам свой член во влагалище, он трахал вас грубо и яростно, ударяя каждым движением в матку.'
+             gs'femorg'
+             'Наконец он закряхтел и кончил вам в киску'
+             cumpussy=cumpussy+1
+             end
+             if tiprand=2:
+             vag=vag+3
+             sex=sex+1
+             '<center><img src="pic/EvedonTA/karsex4.jpg" ></center>'
+             'Караванщик лег и посадил вас сверху на свой член. Вы сели на его твердый член киской и начали прыгать на нем.'
+             gs'femorg'
+             'Наконец он закряхтел и кончил вам в киску'
+             cumpussy=cumpussy+1
+             end
+         'Караванщик достал свой член перемазанный спермой из вашего тела и схватив вас за волосы подтянул ваше лицо к своему члену.'
+             act 'Почистить язычком':
+             cla
+             *clr
+             set minut = minut + 15
+             cumlip=cumlip+1
+             '<center><img src="pic/EvedonTA/karsex3.jpg" ></center>'
+             'Вы взяли начинающий ложится член в рот и стали слизывать сперму.'
+             gs'cumslut'
+             'Член окончательно упал в вашем ротике. Караванщик вынул его и хлопнув вам по попе ладонью сказал вам идти.'
+             act 'Уйти':gt'teladareW'
+             end
+         end
+     end
+end
+
+if $ARGS[0]='gang':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 15
+clr
+gs'stat'
+horny=horny+(whore*2)
+picrand=RAND(0,21)
+gangguy=RAND(4,8)
+guy=guy+gangguy
+sex=sex+gangguy
+bj=bj+gangguy
+vag=vag+gangguy
+anus=anus+gangguy
+anal=anal+gangguy
+gang=gang+1
+if picrand=0:'<center><img src="pic/EvedonTA/gang.jpg" ></center>'
+if picrand=1:'<center><img src="pic/EvedonTA/gang1.jpg" ></center>'
+if picrand=2:'<center><img src="pic/EvedonTA/gang2.jpg" ></center>'
+if picrand=3:'<center><img src="pic/EvedonTA/gang3.jpg" ></center>'
+if picrand=4:'<center><img src="pic/EvedonTA/gang4.jpg" ></center>'
+if picrand=5:'<center><img src="pic/EvedonTA/gang5.jpg" ></center>'
+if picrand=6:'<center><img src="pic/EvedonTA/gang6.jpg" ></center>'
+if picrand=7:'<center><img src="pic/EvedonTA/gang7.jpg" ></center>'
+if picrand=9:'<center><img src="pic/EvedonTA/gang9.jpg" ></center>'
+if picrand=10:'<center><img src="pic/EvedonTA/gang10.jpg" ></center>'
+if picrand=11:'<center><img src="pic/EvedonTA/gang11.jpg" ></center>'
+if picrand=12:'<center><img src="pic/EvedonTA/gang12.jpg" ></center>'
+if picrand=13:'<center><img src="pic/EvedonTA/gang13.jpg" ></center>'
+if picrand=14:'<center><img src="pic/EvedonTA/gang14.jpg" ></center>'
+if picrand=15:'<center><img src="pic/EvedonTA/gang15.jpg" ></center>'
+if picrand=16:'<center><img src="pic/EvedonTA/gang16.jpg" ></center>'
+if picrand=17:'<center><img src="pic/EvedonTA/gang17.jpg" ></center>'
+if picrand=18:'<center><img src="pic/EvedonTA/gang18.jpg" ></center>'
+if picrand=19:'<center><img src="pic/EvedonTA/gang19.jpg" ></center>'
+if picrand=20:'<center><img src="pic/EvedonTA/gang20.jpg" ></center>'
+if picrand=21:'<center><img src="pic/EvedonTA/gang21.jpg" ></center>'
+'<<gangguy>> мужиков раздели вас и начали трахать во все дыры, нескончаемая череда членов во рту, киске и попке сменяли друг друга без остановки.'
+gs'femorg'
+gs'cumslut'
+gs'analslut'
+cumlip=cumlip+1
+cumface=cumface+1
+cumbelly=cumbelly+1
+cumpussy=cumpussy+1
+cumass=cumass+1
+cumanus=cumanus+1
+'Наконец мужики по очереди начали кончать на вас, в рот, на лицо, в дырочки, на тело. Но они не успокоились и достав грифель начали писать на вас похабные слова.'
+     act '.....':
+     cla
+     *clr
+     clr
+     gs'stat'
+     SUB=SUB+1
+     body_writing=body_writing+1
+     picrand=RAND(0,4)
+         if picrand=0:'<center><img src="pic/EvedonTA/aftergang.jpg" ></center>'
+		 if picrand=1:'<center><img src="pic/EvedonTA/aftergang2.jpg" ></center>'
+		 if picrand=2:'<center><img src="pic/EvedonTA/aftergang3.jpg" ></center>'
+		 if picrand=3:'<center><img src="pic/EvedonTA/aftergang4.jpg" ></center>'
+		 if picrand=4:'<center><img src="pic/EvedonTA/aftergang5.jpg" ></center>'
+	 'Развлекающиеся мужики исписали ваше тело разными похабными словами. После чего они в таком виде выкинули вас на улицу.'
+     act 'Уйти':gt'teladareW'
+     end
+end
+
+
+if $ARGS[0]='table':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+minut = minut + 15
+whore=whore+10
+!отвечает за то что все знают что гг сосала у караванщиков под столом
+UTwhore=UTwhore+1
+SUB=SUB+1
+clr
+gs'stat'
+'Вы наклонились и встав на четвереньки поползли под стол, краснея от взоров посетителей направленных на вас.'
+'Под столом вы взяли себе кошелек с гемами и обнаружили четыре стоячих узловатых члена, которые вам предстояло обслужить.'
+	 act 'Работать ртом':
+	 cla
+	 *clr
+	 set minut = minut + 15
+	 cumlip=cumlip+4
+	 swallow=swallow+4
+	 bj=bj+4
+	 guy=guy+4
+	 horny=horny+SUB
+	 under_table=under_table+4
+     gang=gang+1
+	 '<center><img src="pic/EvedonTA/deskLow.jpg" ></center>'
+	 'Деньги надо отрабатывать и вы приступили к работе. Лаская губками и язычком, соленые потные члены вы думали о том как же низко вы пали, теперь все знают, что вы самая настоящая хуесоска и опущенная шлюха. Наконец член выстрелил спермой вам в рот, вы не теряя времени проглотили сперму и приступили к обслуживанию следующего члена.'
+	 gs'cumslut'
+	 'Постепенно вы опустошили все четыре члена и вылезли из-под стола, глаза всех посетителей трактира были устремлены к вам.'
+	 act 'Уйти':gt'teladareW'
+	 end
+end
+
+
+
+
+
+
+
+--- karavanersW ---------------------------------
+

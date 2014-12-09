@@ -1,0 +1,25 @@
+# Innabedroom
+*clr
+minut=minut+1
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+showinput 0
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><H4>Спальня Инны</H4></center>'
+'<center><img src="pic\room\InnaBedroom.jpg" ></center>'
+clr
+gs'stat'
+
+if hour <= 8 and innaQW>= 200 and innavag=1 and innaMinDay!day and horny>=0:
+	 gt 'innasex','sleep'
+else
+	 if hour <= 8 and innaQW>= 200:'В своей кровати спит ваша дочь ((Инна|inna)).'
+end
+
+act 'Коридор':gt'InnaKor'
+--- Innabedroom ---------------------------------
+

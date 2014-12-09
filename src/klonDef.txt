@@ -1,0 +1,35 @@
+# klonDef
+	 if notHere>0 and sonarv=0:
+         if damagev>0 or damageTV>0 or damageWV>0 or damageHV>0 or damageMV>0:
+		 damageV=0
+		 damageTV=0
+		 damageWV=0
+		 damageHV=0
+		 damageMV=0
+		 PerepadV=0
+		 mannaStumpV=0
+		 '<font color=green><<$nameV>> не видит вас.</font>'
+	     end
+	 end
+	 
+	 if klon>0 and sonarv=0:
+         if damagev>0 or damageTV>0 or damageWV>0 or damageHV>0 or damageMV>0:
+		 klon=klon-1
+		 notHere=notHere+1
+		 '<font color=green><<$nameV>> попал в ваш иллюзорный клон и ваш клон растворился.</font>'
+			 if shokdamV>0:
+			 notHere=0
+			 '<font color=red>Электроудар противника не позволил вам удачно спрятатся.</font>'
+			 else
+			 damageV=0
+			 damageTV=0
+			 damageWV=0
+			 damageHV=0
+			 damageMV=0
+			 PerepadV=0
+			 mannaStumpV=0
+			 end 
+	     end
+	 end
+--- klonDef ---------------------------------
+

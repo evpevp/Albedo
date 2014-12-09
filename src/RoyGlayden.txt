@@ -1,0 +1,50 @@
+# RoyGlayden
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><H4>Рой Глайден</H4></center>'
+'<center><img src="pic/EvedonNarod/RoyGlayden.jpg" ></center>'
+'Шериф шахтерской деревни. Суровый мужчина в доспехах смотрит единственным глазом с изуродованного лица.'
+clr
+gs'stat'
+
+
+act 'Уйти':gt $locFight,$metkaFight
+
+if toiletJerkQW=2:
+     act 'Спросить могут ли у него поселится приезжие':
+	 cla
+	 minut+=15
+	 gs'stat'
+	 'Вот еще. Шериф не должен жить вместе с приезжими, мало ли что у них на уме. Да и не нравятся они мне.'
+	 act 'Уйти':gt $locFight,$metkaFight
+	 end
+end
+
+act 'Болтать':
+cla
+minut+=15
+gs'stat'
+     if StefanQW>=1:
+     'Привет <<$name>>.'
+     else
+     	 if femin>200:
+		 'Привет путница, откуда путь держишь?'
+		 end
+		 if femin<=200:
+		 'Привет путник, откуда путь держишь?'
+		 end
+     end
+     ''
+act 'Уйти':gt $locFight,$metkaFight
+
+     act 'Спросить про его травму':
+	 cla
+	 minut+=15
+	 gs'stat'
+	 'Я состоял в ордене палладинов, однажды сражался с демоном и он мне шлем раскалил до красна, пока я шлем снимал сжог половину лица.'
+	 act 'Уйти':gt $locFight,$metkaFight
+	 end
+end
+--- RoyGlayden ---------------------------------
+

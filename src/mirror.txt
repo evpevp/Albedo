@@ -1,0 +1,31 @@
+# mirror
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><H4>Зеркало</H4></center>'
+if pol = 0:
+	 if berd <= 0:'<center><img src="pic\body\face.jpg" ></center>'
+	 if berd > 0 and berd < 5:'<center><img src="pic\body\face2.jpg" ></center>'
+	 if berd >= 5:'<center><img src="pic\body\face3.jpg" ></center>'
+'В зеркале вы видите <<$berd>>'
+end
+
+
+if hapri > 0:'У вас аккуратная прическа.'
+if hapri = 0:
+'Ваши волосы растрепанные.'
+     act 'Причесатся 15 мин':
+     cla
+     *clr
+     minut=minut+15
+     hapri=1
+     'Вы причесались, глядя в зеркало.'
+     act 'Положить расческу':gt'mirror'
+     end
+end
+
+
+
+
+act 'Отойти от зеркала':GOTO $locM, $metkaM
+--- mirror ---------------------------------
+

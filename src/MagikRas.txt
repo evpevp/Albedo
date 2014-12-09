@@ -1,0 +1,64 @@
+# MagikRas
+
+!if lvl*10<=exp:exp=exp-lvl*10&lvl=lvl+1&sp=sp+5&'У ВАС ПОВЫСИЛСЯ УРОВЕНЬ'
+!orgSt оргазмы только для статистики
+
+if orgasm>0 and magika>0:
+orgSt=orgSt+orgasm
+vag=vag+orgasm*2
+magikExp=magikExp+orgasm
+orgExp=0
+orgasm=0
+end
+
+
+!'if orgasm>orgExp:
+:looporg
+orgExp=orgExp+1
+     if orgasm>orgExp:JUMP'looporg'
+!orgExp опыт магичности полученный с оргазмов
+magikExp=magikExp+orgExp
+orgExp=0
+end
+
+if orgExp*10<=OMExp:
+magikExp=magikExp+orgExp
+orgExp=0
+end'
+
+
+if magikExp<0:magikExp=0
+
+if AltotronAmulet=0:vidageMag=10+((70-vidage)/2)
+if AltotronAmulet=1:vidageMag=1000
+
+if world=1 and magika<=vidageMag:
+	 if magika*10<=magikExp:
+	 magika=magika+1
+	 magikExp=magikExp-magika*10
+	 manna=intel*10+intel*magika
+	 if magikExp<0:magikExp=0
+	 'У ВАС ПОВЫСИЛАСЬ МАГИЧНОСТЬ'
+	 
+	 end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- MagikRas ---------------------------------
+

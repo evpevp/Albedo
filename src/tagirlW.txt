@@ -1,0 +1,107 @@
+# tagirlW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Трактирщица</H4></center>'
+'<center><img src="pic/Evedon/tagirl.jpg" ></center>'
+if slot!11:
+'Что изволите?'
+'Комната 10 гемов в сутки.'
+'Еда 3 гема.'
+'Пиво 2 гема.'
+'Виски 5 гемов.'
+end
+if slot=11:'Это не притон для нищих, а приличное заведение! Уходи отсюда, а то всех клиентов мне распугаешь!'
+clr
+gs'stat'
+
+act 'Отойти от стойки':gt'tavernW'
+
+
+if slot!11:
+	if gem>=3:
+		 act 'Еды':
+		 cla
+		 *clr
+		 minut=minut+15
+		 gem=gem-3
+		 gs'eda'
+		 'Трактирщица достала вам тарелку до верху наполненную едой.'
+		 gs'eat'
+		 act 'Отойти от стойки':gt'tavernW'
+		 end
+	end
+
+	if gem>=2:
+		 act 'Пива':
+		 cla
+		 minut=minut+15
+		 gem=gem-2
+		 fat=fat+1
+		 alko=alko+2
+		 golod=golod+3
+		 manna=manna+10
+		 wipo=wipo+10
+		 horny=horny+5
+         *clr
+         '<center><img src="pic/EvedonOd/beer.jpg"></center>'
+		 'Трактирщица достала вам кружку наполненную пенящимся пивом и вы быстренько ее выпили.'
+		 act 'Отойти от стойки':gt'tavernW'
+		 end
+	end
+
+	if gem>=5:
+		 act 'Виски':
+		 cla
+		 minut=minut+15
+		 gem=gem-5
+		 alko=alko+5
+		 manna=manna+20
+		 wipo=wipo+20
+		 horny=horny+10
+	      *clr
+         '<center><img src="pic/EvedonOd/wiskey.jpg"></center>'
+		 'Трактирщица достала вам стакан наполненный вонючим пойлом, вы залпом его выпили.'
+		 act 'Отойти от стойки':gt'tavernW'
+		 end
+	end
+
+	if gem>=10:
+		 act 'Оплатить комнату':
+		 cla
+		 minut=minut+15
+		 roomWgem = input ("Сколько суток вы хотите оплатить? (10 гемов 1 сутки)")
+			 if roomWgem*10 > gem:
+			 'У вас недостаточно гемов.'
+			 end
+			 if roomWgem*10 <= gem:
+			 gem=gem-roomWgem*10
+			 roomW=roomW+roomWgem
+			 'У вас оплачено <<roomW>> дней'
+			 end 
+		 act 'Отойти от стойки':gt'tavernW'
+		 end
+	end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- tagirlW ---------------------------------
+

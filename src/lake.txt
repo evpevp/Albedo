@@ -1,0 +1,79 @@
+# lake
+cla
+*clr
+if lakeonce = 0:set lakeonce = 1&set minut = minut + 60
+'<center><B><font color=maroon>Озеро</font></B></center>'
+'<center><img src="pic/pic/lake.jpg" ></center>'
+clr
+gs'stat'
+gs'time'
+
+
+if car > 0 and cardrive = 4:
+set cardrive = 4
+'У озера стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+end
+
+if ofirinaQW >= 2 and week=7 and hour >= 10 and hour < 15 and horny>=1:
+	 '<b>Возле озера вы увидели Ирину моющую свою старенькую машину оставшуюся от родителей.</b>'
+		picrand=RAND(0,1)
+		if picrand=0:'<center><img src="pic\fam\irina\park\irina_park_5.gif" ></center>'
+		if picrand=1:'<center><img src="pic\fam\irina\park\irina_park_9.gif" ></center>'
+     act '<b>Подойти к Ирине</b>':gt'irinaevent','lake'       
+end   
+      
+     
+     'Вы можете позагарать или искупаться.'
+         act 'Купаться 1 час':
+         cla
+         *clr
+         set cumpussy = 0
+		 set cumbelly = 0
+		 set cumass = 0
+		 set cumlip = 0
+		 set cumface = 0
+		 set cumfrot = 0
+         set minut = minut + 60
+         set sweat = -3
+         set manna = manna + 5
+         set willpower = willpower + 5
+         if stren < 30:set stren = stren + 1
+         
+         
+         !НИМФА ОЗЕРА!
+		 fairymeet=RAND(0,15)
+		 if fairymeet!7 or nark!1:
+			 'Вы искупнулись в озере, вода освежает и бодрит.'
+			 act 'Выйти из воды':gt'lake','start'
+		 end
+         if nark=1 and pol=0 and fairymeet=7 and FNtr!1:
+			gt 'nimfs','LakeNimfa'			 
+		 end 
+		 if nark=1 and pol=0 and fairymeet=7 and FNtr=1:
+			gt 'nimfs','LakeNimfaFight'			 
+		 end 
+		 !НИМФА ОЗЕРА!
+	
+
+         end
+     if hour >= 6 and hour <= 19:    
+         act 'Загарать 1 час':
+         cla
+         *clr
+         set minut = minut + 60
+         set sweat = sweat + 1
+         set manna = manna + 5
+             act 'Встать с пляжа':gt'lake','start'
+         end
+     end    
+     end
+
+     act 'ВЫЙТИ':
+     cla
+     set lakeonce = 0
+     set minut = minut + 60
+     gt'street'
+     end
+
+--- lake ---------------------------------
+

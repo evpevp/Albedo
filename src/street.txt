@@ -1,0 +1,146 @@
+# street
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>СПАЛЬНЫЙ РАЙОН</H4></center>'
+'<center><img src="pic/pic/street.jpg" ></center>'
+clr
+gs'stat'
+gs'time'
+
+
+
+
+if car > 0 and cardrive = 1:
+set cardrive = 1
+'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+end
+
+if kvartira = 1:
+
+set $kvartira = 'В пяти минутах ходьбы находится ваша ((квартира|koridor|minut=minut+5))'
+end
+if kvartira = 0:
+set $kvartira = ''
+end
+!Нимфа тьмы
+fairymeet=RAND(0,15)
+if fairymeet=7 and nark=1: '((На пустыре|wasteland)), что поблизости с парком, что-то происходит...'
+!Колдун
+if fairymeet!7 and nark=1 and FNfail=1 and DNvictory=1 and week=1 and WarlockDeal!1 and WarlockMeetDay!day: 'Неведомая сила манит вас на <a href="exec:GT ''wasteland'',''WarlockStart''">пустырь</a>...'
+!Дом 
+if FNtr=1: 'Небольшой <a href="exec:GT ''HouseKor'',''start''">дом</a> подаренный колдуном'
+
+'<<$kvartira>>'
+'<a href="exec:GT ''metro'',''start''">Метро</a>.'
+'В 15 минутах ходьбы расположен уютный ((пивной бар|pivbar|minut=minut+15))'
+if brak > 2 or NoHaritonov>0:'<a href="exec:GT ''gastronom'',''start''">Гастроном</a>.'
+if brak > 2 or NoHaritonov>0:'<a href="exec:GT ''shopSM'',''start''">Магазин бытовой техники</a>.'
+if brak > 2 or NoHaritonov>0:'<a href="exec:GT ''shopU'',''start''">Универсальный магазин</a>.'
+if gopRespect=0:'<a href="exec:GT ''kafe'',''start''">Кафе</a>.'
+if gopRespect>0:'Возле <a href="exec:GT ''kafe'',''start''">Кафе</a> о чем то трут местные <a href="exec:GT ''gopnikiLok'',''start''">гопники</a>.'
+'Большой <a href="exec:GT ''park'',''start''">парк</a> расположен в 30 минутах ходьбы.'
+'Единственное <a href="exec:GT ''lake''">озеро</a> в городе находится около окраины города в часе ходьбы.'
+'Круглосуточная <a href="exec:GT ''aptek''">Аптека</a>.'
+'<a href="exec:GT ''sauna'',''start''">Сауна</a>.'
+'Бабушки стайками идут к <a href="exec:GT ''poli'',''start''">Поликлиннике</a>'
+if brak > 2:'<a href="exec:GT ''rinok'',''start''">Рынок</a>.'
+'<a href="exec:GT ''kungfugym''">Зал кунфу</a>.'
+'<a href="exec:GT ''vorPochta''">Почта</a>'
+if kachalka>0:'<a href="exec:GT ''kachalka''">Качалка</a>.'
+
+     act 'Ждать':
+     cla
+     waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
+         end
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
+         end
+     act 'Посмотреть на часы':gt curloc
+     end
+     
+     
+     act 'Ехать на такси':
+     cla
+     *clr
+     '<center><img src="pic/pic/taxi1.jpg" ></center>'
+     'Вы поймали проезжавшую мимо таксишку.'
+     set minut = minut + 15
+         act 'В центр 250 руб':
+		 cla
+		 *clr
+         'Вы сели в такси и за 15 минут доехали до центра города'
+			 if money >= 250:
+			 set money = money - 250
+			 'Заплатили таксисту 250 рублей и вышли из машины.'
+			 act 'Уйти':gt 'down'
+			 exit
+			 end
+			 
+			 if money < 250 and pol=0:
+			 'Таксист разозлился и развернул машину обратно выгрузив вас там откуда взял.'
+			 act 'Уйти':gt 'street'
+			 exit
+			 end
+         end
+         
+         act 'В северный район 250 руб':
+		 cla
+		 *clr
+         'Вы сели в такси и за 15 минут доехали до северного района'
+			 if money >= 250:
+			 set money = money - 250
+			 'Заплатили таксисту 250 рублей и вышли из машины.'
+			 act 'Уйти':gt 'nord'
+			 exit
+			 end
+			 
+			 if money < 250 and pol=0:
+			 'Таксист разозлился и развернул машину обратно выгрузав вас там откуда взял.'
+			 act 'Уйти':gt 'street'
+			 exit
+			 end
+         end
+     end
+     
+     act 'Идти в центр 3 часа':
+     cla
+     minut=minut+180
+     sweat=sweat+2
+     gt'down'
+     end
+     
+     
+     if pol=0 and money>= 10000:
+     goprand=RAND(0,100)
+         if goprand>=90 and gopRespect=0:
+         cla
+         *clr
+         '<center><img src="pic/pic/gop.jpg" ></center>'
+         'Слыш, дядя. Есть чо? А если найду?'
+         gs'gengop'
+         act 'Дратся':gt'before'
+             if mast>=6:
+                 act 'Базарить с гопником':
+                 cla
+                 gopRespect=1
+                 'Вы побазарили с гопником и он признал что был не прав. Извинился и ушел.'
+                 act 'Уйти':gt $CURLOC
+                 end
+             end
+         end
+         
+     end
+     
+     
+     
+     
+     
+--- street ---------------------------------
+

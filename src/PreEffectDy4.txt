@@ -1,0 +1,59 @@
+# PreEffectDy4
+$obnulDamS={
+ if damage>0:
+ damage=0
+ shokdam=0
+ waterdam=0
+ '<font color=red>Ваши физические атаки не действуют.</font>'
+ end
+ if damageT>0:
+ damageT=0
+ '<font color=red>Ваши температурные атаки не действуют.</font>'
+ end
+ if damageW>0:
+ damageW=0
+ Perepad=0
+ soundMag=0
+ gribspore=0
+ '<font color=red>Ваши воздушные атаки не действуют.</font>'
+ end
+ if damageH>0:
+ damageH=0
+ '<font color=red>Ваши ментальные атаки не действуют.</font>'
+ end
+ if damageM>0:
+ damageM=0
+ mannaStump=0
+ '<font color=red>Ваши атаки на магию не действуют.</font>'
+ end
+}
+$obnulDamSV={
+ if damageV>0:
+ damageV=0
+ shokdamV=0
+ waterdamV=0
+ '<font color=green>Физические атаки соперника не действуют.</font>'
+ end
+ if damageTV>0:
+ damageTV=0
+ '<font color=green>Температурные атаки соперника не действуют.</font>'
+ end
+ if damageWV>0:
+ damageWV=0
+ PerepadV=0
+ soundMagV=0
+ gribsporev=0
+ '<font color=green>Воздушные атаки соперника не действуют.</font>'
+ end
+ if damageHV>0:
+ damageHV=0
+ '<font color=green>Психические атаки соперника не действуют.</font>'
+ end
+ if damageMV>0:
+ damageMV=0
+ mannaStumpV=0
+ '<font color=green>Атаки на магию соперника не действуют.</font>'
+ end
+}
+--- PreEffectDy4 ---------------------------------
+

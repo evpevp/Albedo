@@ -1,0 +1,103 @@
+# defenceV
+!Магия
+!Физ защита противника кинетическая энергия
+
+gs'PreEffect'
+
+if sandstormv>0 and waterdam>0:
+sandstormv=sandstormv/2
+'<font color=green>Ваше водное заклинание подавляет песчаный шторм противника</font>'
+end
+
+if tumanv>0 and waterdam>0:
+tumanv=tumanv+3
+'<font color=red>Ваше водное заклинание усиливает туман противника</font>'
+end
+
+if defenceTV>0 and waterdam>0:
+defenceTV=defenceTV/2
+'<font color=green>Ваше водное заклинание ослабляет температурную защиту противника</font>'
+end
+
+!if conterBat>0:gs'conterBat'
+if conterBatV>0:gs'conterBatV'
+
+if zerkalov>0:
+zeratk=RAND(0,zerkalov)
+     if zeratk=0 or sonar>0:
+     zerkalov=0
+     '<font color=green>Вы попали в настоящего противника а не в его отражения и зеркала рассыпались</font>'
+     end
+     if zeratk>0 and sonar=0:
+     zerkalov=zerkalov-1
+     damage=0
+     '<font color=green>Вы попали в зеркало и оно рассыпалось</font>'
+     end
+end
+
+if levitationV>0:gs'LevitationV'
+gs'UndegraunATkV'
+
+if barierV>0 and damage>0:
+damage=damage-((damage*barierV)/100)
+'<font color=red>Барьер противника снизил урон на <B><<barierV>></B>%</font>'
+barierV=barierV-1
+end
+
+	 if gostbodyv>0:
+	 damage=0
+	 gostbodyv-=1
+	 '<font color=red><<$namev>> пропустил удар через свое тело</font>'
+	 end
+
+if defencev<=0 and damage>0:
+gs'klonDefV'
+dynamic $rascheturonav
+'<font color=green>Вы нанесли <B><<damage>></B> едениц урона противнику</font>'
+damage=0
+     if shokdam>0 and damage>0:
+     wipov=wipov-shokdam
+     '<font color=green>Электроудар нанес воле противника <B><<shokdam>></B> едениц урона</font>'
+     shokdam=0
+     end
+     if waterdam>0 and damage>0:
+     mannaV=mannaV-waterdam
+     '<font color=green>Удар воды нанес манне противника <B><<waterdam>></B> едениц урона</font>'
+     waterdam=0
+     end
+end
+
+
+if defencev>0 and damage>0:
+	 if defencev>damage:
+	 defencev=defencev-damage
+	 '<font color=green>Вы нанесли <B><<damage>></B> едениц урона защите противника</font>'
+	 damage=0
+	 end
+	 if defencev<=damage:
+	 damage=damage-defencev
+	 gs'klonDefV'
+	     if damage>0:
+		 dynamic $rascheturonav
+		 defencev=0
+		 '<font color=green>ЗАЩИТА ПРОТИВНИКА УНИЧТОЖЕНА</font>'
+		 '<font color=green>Вы нанесли <B><<damage>></B> едениц урона</font>'
+			 if shokdam>0 and damage>0:
+			 wipov=wipov-shokdam
+			 '<font color=green>Электроудар нанес воле противника <B><<shokdam>></B> едениц урона</font>'
+			 shokdam=0
+			 end
+			 if waterdam>0 and damage>0:
+			 mannaV=mannaV-waterdam
+			 '<font color=green>Удар воды нанес воле противника <B><<waterdam>></B> едениц урона</font>'
+			 waterdam=0
+			 end
+		 damage=0
+		 end
+	 end
+end
+
+waterdam=0
+shokdam=0
+--- defenceV ---------------------------------
+

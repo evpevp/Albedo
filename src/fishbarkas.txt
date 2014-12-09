@@ -1,0 +1,167 @@
+# fishbarkas
+*clr
+gs'stat'
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+
+$riparus={
+if barkasparusmark=1:
+barkasparus+=1
+end
+}
+
+
+
+if seamile<5:
+	 if seaPar=20:
+	 $numberofsea='Неподалеку от Рыбацкой деревни. До берега <<seamile>> миль'
+	 elseif seaPar=10:
+	 $numberofsea='Неподалеку от Эведона. До берега <<seamile>> миль'
+	 else
+     $numberofsea=''
+	 end
+else
+$numberofsea=''
+end
+
+if ribset<5:$ribset='Хорошая'
+if ribset>=5 and ribset<10:$ribset='Нормальная'
+if ribset>=10 and ribset<15:$ribset='Изношенная'
+if ribset>=15 and ribset<20:$ribset='Дырявая'
+if ribset>=20 and ribset<30:$ribset='Рваная в клочья'
+if ribset>=30:ribsetmark=0
+
+
+if barkasparus<50:$parusa='Хорошие паруса'&boatspeed=30
+if barkasparus>=50 and barkasparus<100:$parusa='Нормальные паруса'&boatspeed=60
+if barkasparus>=100 and barkasparus<200:$parusa='Изношенные паруса'&boatspeed=90
+if barkasparus>=200 and barkasparus<500:$parusa='Дырявые паруса'&boatspeed=120
+if barkasparus>=500 and barkasparus<1250:$parusa='Рваные в клочья паруса'&boatspeed=150
+if barkasparus>=1250:barkasparusmark=0
+if barkasparusmark=0:boatspeed=200
+
+'<center><H4>Рыболовецкий баркас <<$barkasname>></H4></center>'
+'<center><img src="pic/Evedon/barkas.jpg" ></center>'
+'Рыболовецкий баркас, могущий ходить под парусами или мачтой.'
+clr
+gs'stat'
+gs'time'
+''
+if boatmark>0:'Ваш баркас стоит у причала.'
+if boatmark=0:'Ваш баркас в море <<$numberofsea>>.'
+if seaPar=0:'На востоке возвышаются скалы, к которым никак не подойти.'
+if sextant>0 and boatmark=0:'Выши координаты <<seaPar>> параллель и <<seamile>> меридиан'
+if ribsetmark=1:'<<$ribset>> рыболовецкая сеть'
+if barkasparusmark=0 and boatmark=0:'Паруса нет, придется идти на веслах'
+if barkasparusmark=0 and boatmark>0:'Паруса нет'
+if barkasparusmark=1:'<<$parusa>>'
+if ribabarkas<500:
+$barkasperegruz=''
+elseif ribabarkas>=500 and ribabarkas<1100:
+$barkasperegruz='Баркас тяжело нагружен.'
+else
+$barkasperegruz='Баркас идет с перегрузом.'
+end
+
+'Порт рыбацкой деревни находится на 20 паралели, 1 меридиан'
+'Порт Эведона находится на 10 паралели, 1 меридиан'
+'Порт Мондюваля находится на 0 паралели, 25 меридиан'
+
+if ribabarkas>0:'На баркасе <<ribabarkas>> кг рыбы. <<$barkasperegruz>>'
+'На лавке можно <a href="exec:GT ''bed''">спать</a>, под ней <a href="exec:GT ''lokerW''">сундук для вещей</a>.'
+!!!дома
+''
+
+!!!
+
+if boatmark=0:
+'<center><a href="exec: dynamic $riparus & minut+=boatspeed & seamile+=1 & gt $curloc ">Север</a></center>'
+if seaPar>0:'<center><a href="exec: dynamic $riparus & minut+=boatspeed & seaPar-=1 & gt $curloc ">Запад</a>-+-<a href="exec: dynamic $riparus & minut+=boatspeed & seaPar+=1 & gt $curloc ">Восток</a></center>'
+if seaPar=0:'<center>Запад-+-<a href="exec: dynamic $riparus & minut+=boatspeed & seaPar+=1 & gt $curloc ">Восток</a></center>'
+if seamile>1:'<center><a href="exec: dynamic $riparus & minut+=boatspeed & seamile-=1 & gt $curloc ">Юг</a></center>'
+
+     if seamile=1:
+		 if seaPar=10:
+			 act 'Причалить к порту Эведона':
+			 minut=minut+15
+			 seamile=0
+			 boatmark=1
+			 gt $curloc
+			 end
+		 elseif seaPar=20:
+			 act 'Причалить к рыбацкой деревне':
+			 minut=minut+15
+			 seamile=0
+			 boatmark=2
+			 gt $curloc
+			 end
+		 end
+	 end
+	 
+	 if seaPar=0 and seamile=25:
+	 'Между скал виднеется город Мондюваль'
+		 act 'Причалить к Мондювалю':
+		 minut=minut+15
+		 seamile=25
+		 boatmark=3
+		 gt $curloc
+		 end
+	 end
+	 
+	 
+	 
+	 
+	 
+	 if seamile>1 and ribsetmark=1 and ribabarkas<1100:
+	 	 act 'Забросить сеть':
+	 	 cls
+		 minut=minut+15
+		 ribset+=1
+		 gipribrand=RAND(seamile*5,seamile*10)
+		 lovrib=gipribrand-ribset
+		 if lovrib<0:lovrib=0
+		 ribabarkas+=lovrib
+		 exp+=RAND(lvl/10,lvl/5)
+		 'Вытащив сеть, вы поймали <<lovrib>> кг рыбы.'
+		 act '.....':gt $curloc
+		 end
+	 end
+
+
+end
+
+
+
+
+if boatmark>0:
+''
+	 act 'Сойти на берег':
+     minut=minut+5
+     if boatmark=1:gt'portW'
+     if boatmark=2:gt'fishpirce'
+     if boatmark=3:gt'monduval'
+     end
+     
+     act 'Выйти в море':
+     if boatmark=1:seaPar=10&seamile=1
+     if boatmark=2:seaPar=20&seamile=1
+     if boatmark=3:seamile=25&seaPar=0
+     boatmark=0
+     minut=minut+15
+     gt $curloc
+     end
+end
+
+
+
+
+
+
+--- fishbarkas ---------------------------------
+

@@ -1,0 +1,67 @@
+# punchV1
+if $ARGS[0]='start':
+set stamina = stamina - 1
+set staminaV = staminaV - 3
+set speedKoef = speedV*25/100
+set agilKoef = agil*25/100
+set initKoef = init*10
+set initKoefV = initV*10
+     if init = 0:
+     set baseAgil = 0
+     end
+     if init > 0:
+     set baseAgil = agil*initKoef/100
+     end
+     if initV = 0:
+     set baseSpeed = 0
+     end
+     if initV > 0:
+     set baseSpeed = speedV*initKoefV/100
+     end
+set pop = speedV + punchV + RAND (100,200)
+set popad = RAND ((pop-baseSpeed)- speedKoef,(pop-baseSpeed)+ speedKoef)
+set def = agil + defence + RAND (100,200)
+set uvorot = RAND ((def-baseAgil)- agilKoef,(def-baseAgil)+ agilKoef)
+     if popad >= uvorot+ (uvorot*25/100):
+     '<B><font color=red>МОЩНОЕ ПОПАДАНИЕ</font></B>'
+     gs'punchV1','krit'
+     end
+     if popad < uvorot+ (uvorot*25/100) and popad >= uvorot:
+     '<B><font color=red>ПОПАДАНИЕ</font></B>'
+     gs'punchV1','udar'
+     end 
+     if popad < uvorot:
+     set staminaV = staminaV - 3
+     '<B><font color=green>ПРОМАХ</font></B>'
+     end 
+end
+
+if $ARGS[0]='krit':
+pointV = pointV + 1
+set punchKoef = punchV - 30
+if punchKoef < 10:set punchKoef = 10
+set powerPunch = strenV*punchKoef/100
+
+set stamina = stamina - powerPunch
+!'выносливость <<powerPunch>>'
+!'челюсть <<powerPunch*50/100>>'
+end
+
+if $ARGS[0]='udar':
+pointV = pointV + 1
+set punchKoef = punchV - 50
+if punchKoef < 5:set punchKoef = 5
+set powerPunch = strenV*punchKoef/100
+
+set stamina = stamina - (powerPunch*50/100)
+!'выносливость <<powerPunch*60/100>>'
+!'челюсть <<powerPunch>>'
+end
+
+
+
+
+
+
+--- punchV1 ---------------------------------
+

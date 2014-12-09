@@ -1,0 +1,908 @@
+# nimfs
+if $ARGS[0]='Narik':
+ 'Во время прогулки вы замечаете странного шатающегося человека. Вы решаете подойти к нему и спросить как он себя чувствует.'
+ 'Подойдя ближе к человеку, вы понимаете, что перед вами обдолбыш, который курит что-то не похожее на табак'
+ '<center><img src="pic\forestevent\rastaman.jpg" ></center>'
+ 'Растаман: Ты тоже видишь нимф?'
+ 'Вы: Нимф?'
+ 'Растаман: А ну да...у тебя ж нету ЭТОГО'
+ 'Вы: Чего "этого"?'
+ 'Растаман: Этого...с Тибета...всего 500 рублей...ты станешь лучше себя чувствовать и возможно увидишь нимф'
+	 act 'Ясно все с тобой...Давай досвиданья':gt'park','start'
+	 
+	 act 'Хе..ну давай ЭТО...посмотрим что ЭТО такое':
+	 cla
+	 *clr
+	 money=money-500
+	 set minut = minut + 15
+	 nark=1
+	 '<center><img src="pic\forestevent\spin.jpg" ></center>'
+	 'Вы сделали затяжку и перед глазами все поплыло'
+		 act '...':
+		 cla
+		 *clr
+		 '<center><img src="pic\pic\park.jpg" ></center>'
+		 'Когда вы пришли в себя, растамана уже не было'
+			 act 'Завершить прогулку':gt'park','start' 
+		 end
+	 end
+end
+
+if $ARGS[0]='LakeNimfaFight':
+ cla
+ *clr
+ '<center><img src="pic\forestevent\LakeNimf\LNfight.jpg" ></center>'
+ 'На берегу вас встретила нимфа озера! Она явно настроена враждебно!'
+ 'Нимфа озера: Я отомщу за свою подругу! За Линель!'
+ $metkaFight = 'LNfightend'
+ $locFight = 'nimfs'
+ $nameV='Нимфа озера'
+ lvlv=lvl
+ strenV=stren
+ speedV=speed
+ agilV=agil
+ vitalV=vital
+ intelv=intel
+ willv=will
+ program=1
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*magika
+ wipoV=willV*10
+	 act 'Защищаться':gs'before'
+end
+
+if $ARGS[0]='LNfightend':
+ cla
+ *clr
+	 if health>10:
+	 '<center><img src="pic\forestevent\LakeNimf\LNfightLOOSE.jpg" ></center>'
+	 'Нимфа озера: Пощааады! Я сдаюсь! Я сделаю все, что ты скажешь. Только не убивай.'
+		 if horny>=30:
+			 'Вы: Готовь пизду! Сейчас будешь отдуваться за свою наглость!'
+			 act 'Секс': gt 'LNsex','start'
+		 end
+		 if horny<30:
+			 'Вы: Будешь натурой платить за свою наглость. Пробуди во мне жаркое желание трахнуть тебя или я тебя прибью...'
+			 act '...': gt 'LNsex','Lstrip'
+		 end
+	 end
+	 
+	 if health<=10:
+	 cla
+	 *clr
+	 '<center><img src="pic\forestevent\LakeNimf\LNfightWIN.jpg" ></center>'
+	 'Нимфа озера: Гад, сейчас ты за все заплатишь!'
+		 act '...':
+		 cla
+		 *clr
+		 '<center><img src="pic\forestevent\spin.jpg" ></center>'
+		 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
+		 set minut = minut + 240
+		 vital=vital-1
+		 agil=agil-1
+		 stren=stren-1
+		 intel=intel-1
+		 will=will-1
+		 speed=speed-1
+			 act '...': gt 'street'
+		 end
+	 end
+end
+
+
+if $ARGS[0]='LakeNimfa':
+ cla
+ *clr
+ 'Подойдя к воде вы вдруг резко остановились. У воды блуждало странное существо!'
+ picrand=RAND(0,2)
+	 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+	 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+	 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+	 'Подобных существ вы видели на иллюстрациях в детских сказках...только на них всегда было больше одежды'
+	 act 'Галлюцинация...долбанная дурь!  Развернуться и уйти...':gt'lake','start'
+	 
+	 act 'Обратиться к существу':
+	 cla
+	 *clr
+	 picrand=RAND(0,2)
+	 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+	 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+	 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+	 'Вы: кто ты?'
+	 'Некая особа: Я? Я нимфа озера! И мне очень одиноко...'
+		 act 'Ага...нимфа...всё я точно сваливаю.':gt'lake','start'
+		 
+		 act 'Продолжить диалог':
+		 cla
+		 *clr
+		 picrand=RAND(0,2)
+		 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+		 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+		 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+			 'Вы: Могу ли я тебя развлечь, нимфочка?'
+			 'Нимфа: Возможно...Поиграем в загадки? Отгадаешь три мои загадки-получишь награду, не отгадаешь хоть одну - я что-то у тебя заберу.'
+			 act 'Загадки? Что же я курнул...пойду-ка я лучше отсюда.':gt'lake','start'
+			 
+			 act 'Загадки? Давай!!! Надеюсь награда будет хорошей.':
+			 cla
+			 *clr
+			 sumA=0
+			 picrand=RAND(0,2)
+			 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+			 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+			 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+			 num1=RAND(1,15)
+				 if num1!15 and num1!1: num2=RAND(num1+1,15)
+				 if num1=15: num2=RAND(1,14) 
+				 if num1=1: num2=RAND(2,15) 
+			 num3=15-num1
+				 if num3=num2: num3=num+1
+				 
+				 if num1=1 or num2=1 or num3=1:
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Стоит баба на полу, приоткрыв свою дыру. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,3)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ПЕЧ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=2 or num2=2 or num3=2: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Между ног болтается, на "Х" начинается?. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,5)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ХВОСТ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=3 or num2=3 or num3=3: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Встанет, до небу достанет. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,6)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'РАДУГА'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=4 or num2=4 or num3=4: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Беру двумя руками, сую между ногами, пять минут потею, а потом балдею. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,9)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ВЕЛОСИПЕД'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=5 or num2=5 or num3=5: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Без рук, без ног на бабу скок! Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,9)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'КОРОМЫСЛО'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=6 or num2=6 or num3=6:
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Туда - сюда - обратно, тебе и мне приятно. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,5)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'КАЧЕЛ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=7 or num2=7 or num3=7: 
+				  cla
+				 *clr
+				 'Нимфа: Моя загадка - Туда идет сухой и сильный, обратно мокрый и бессильный. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,4)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ТАБА'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=8 or num2=8 or num3=8:
+				 cla
+				 *clr 
+				 'Нимфа: Моя загадка - У какого молодца капля капает с конца? Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,7)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'САМОВАР'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=9 or num2=9 or num3=9:
+				 cla
+				 *clr 
+				 'Нимфа: Моя загадка - Лежит загадчик, всем в задницу заглядчик. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,5)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ПОРОГ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=10 or num2=10 or num3=10: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Без кости вставает, и одеяло вздымает! Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,5)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ТЕСТО'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=11 or num2=11 or num3=11: 
+				 cla
+				 *clr
+				 'Нимфа: Что это за загадка: - Под яйцами гладко? Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,8)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'СКОВОРОД'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=12 or num2=12 or num3=12: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Пониже пупа, повыше колена, висит как полено. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,5)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'САБЛЯ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=13 or num2=13 or num3=13:
+				 cla
+				 *clr 
+				 'Нимфа: Моя загадка - Черные штаны, белая окладка - что в штанах, то и сладко. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,6)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'КОНФЕТ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=14 or num2=14 or num3=14: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Выше колена, пониже пупка, дырка такая, что влезет рука. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,6)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'КАРМАН'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=15 or num2=15 or num3=15: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - С луком, с яйцами, но не пирожок? Что это? (ответ состоит из 2х слов)'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\LakeNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,9)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'РОБИН ГУД'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 act '...':
+					 if sumA!3:
+					 cla
+					 *clr
+					 '<center><img src="pic\forestevent\LakeNimf\LakeNimfaLoose.jpg" ></center>'
+					 'Увы...ты отгадал не все загадки...ты дашь мне кое-что...'
+						 act '...':
+						 ver=RAND(0,1)
+							 if ver=0:
+							 cla
+							 *clr 
+							 act '...':gt'dk','start'
+							 '<center><img src="pic\forestevent\spin.jpg" ></center>'
+							 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
+							 health=5
+							 nark=0
+							 set minut = minut + 240
+							 end
+							 if ver=1:
+							 cla
+							 *clr
+							 act '...':gt'sexshop','start'
+							 '<center><img src="pic\forestevent\spin.jpg" ></center>'
+							 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
+							 money=0
+							 nark=0
+							 set minut = minut + 240
+							 end
+						 end
+					 end
+					 
+					 if sumA = 3:
+						 cla
+						 *clr
+						 '<center><img src="pic\forestevent\LakeNimf\LakeNimfaVictory.jpg" ></center>'
+						 'Поздравляю! Ты отгадал все загадки верно! Ты можешь выбрать себе награду: я могу сделать тебя богаче или разделить с тобой ложе'
+						 'Вы: Секс с нимфой? Эмм...я наверное лучше воз...'
+						 'Нимфа: Не спеши с ответом. Знай, что любовь нимфы озера подарит тебе не только платоническое удовольствие, но и даст тебе внутренние силы!'
+						 'Так каков будет твой ответ?'
+						 
+						 act 'Деньги':
+							 cla
+							 *clr
+							 '<center><img src="pic\forestevent\money.jpg" ></center>'
+							 'Нимфа: Как пожелаешь.'
+							 money=money+100000
+							 'Вы чувствуете как свободного пространства в вашем кармане стало меньше.'
+							 set minut = minut + 60
+							 nark=0
+							 act '...':gt'lake','start'
+						 end
+						 
+						 act 'Я бы с радостью разделил бы с тобой ложе, но желания особого нет, я словно сам не свой!':
+							 NLcock=0
+							 NLpussy=0
+							 LOmassage=0
+							 gt 'LNsex','Lstrip'
+						 end
+						 
+						 if horny>=30:
+							 act 'Я хочу тебя сказачное создание...':
+							 NLcock=0
+							 NLpussy=0
+							 LOmassage=0
+							 gt 'LNsex','start'
+							 end
+						 end
+					 end
+				 end 
+			 end
+		 end
+	 end
+end
+
+if $ARGS[0]='ParkNimfa':
+ cla
+ *clr
+ 'Гуляя по лесопарку вы вдруг резко оцепенели. Перед вами возник некий образ'
+ picrand=RAND(0,2)
+ if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+ if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+ if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+ 'Подобных существ вы видели на иллюстрациях в детских сказках...только одежды на них было всегда поболее...'
+     act 'Галлюцинация...долбанная дурь!  Развернуться и уйти...':gt'park','start'
+   
+	 act 'Обратиться к существу':
+	 cla
+	 *clr
+	 picrand=RAND(0,2)
+	 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+	 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+	 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+	 'Вы: кто ты?'
+	 'Некая особа: Я? Я древесная нимфа! И я скучаю...'
+		 act 'Ага...нимфа...всё я точно сваливаю.':gt'park','start'
+		 
+		 act 'Продолжить диалог':
+		 cla
+		 *clr
+		 picrand=RAND(0,2)
+		 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+		 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+		 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+		 'Вы: Могу ли я тебя развлечь, нимфочка?'
+		 'Нимфа: Возможно...Поиграем в загадки? Отгадаешь три мои загадки-получишь награду, не отгадаешь хоть одну - я что-то у тебя заберу.'
+			 act 'Загадки? Что же я курнул...пойду-ка я лучше отсюда.':gt'park','start'
+			 
+			 act 'Загадки? Давай!!! Надеюсь награда будет хорошей.':
+			 cla
+			 *clr
+			 sumA=0
+			 picrand=RAND(0,2)
+			 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+			 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+			 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+			 num1=RAND(1,15)
+				 if num1!15 and num1!1: num2=RAND(num1+1,15)
+				 if num1=15: num2=RAND(1,14) 
+				 if num1=1: num2=RAND(2,15) 
+			 num3=15-num1
+				 if num3=num2: num3=num+1
+				 
+				 if num1=1 or num2=1 or num3=1:
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Чтобы спереди погладить, нужно сзади полизать. Что это? (ответ состоит из 2х слов)'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,14)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ПОЧТОВАЯ МАРКА'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=2 or num2=2 or num3=2: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Кругом волоса, посредине колбаса. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,7)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'КУКУРУЗ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=3 or num2=3 or num3=3: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Сверху черно внутри красно, как засунешь так прекрасно. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,5)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ГАЛОШ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=4 or num2=4 or num3=4: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Волос на волос, тело на тело и начинается темное дело. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,3)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ВЕК'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=5 or num2=5 or num3=5: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - То холодный - то горячий, то висячий - то стоячий. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,3)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ДУШ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+					 
+				 if num1=6 or num2=6 or num3=6:
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Туда - сюда - обратно, тебе и мне приятно. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,5)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'КАЧЕЛ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=7 or num2=7 or num3=7: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Что ты смотришь на меня? Раздевайся я твоя! Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,6)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'КРОВАТ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+					 
+				 if num1=8 or num2=8 or num3=8:
+				 cla
+				 *clr 
+				 'Нимфа: Моя загадка - Волосатая головка за щеку заходит ловко. Что это? (ответ состоит из 2х слов)'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,12)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ЗУБНАЯ ЩЕТКА'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=9 or num2=9 or num3=9:
+				 cla
+				 *clr 
+				 'Нимфа: Моя загадка - Мы - ребята удалые лазим в щели половые! Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,7)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ТАРАКАН'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 if num1=10 or num2=10 or num3=10: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Лежит на спине - никому не нужна. Прислони к стене - пригодится она! Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,7)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ЛЕСТНИЦ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+					 
+				 if num1=11 or num2=11 or num3=11: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - В темной комнате, на белой простыне 2 часа удовольствия. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,4)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'КИНО'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=12 or num2=12 or num3=12: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Ты помни его немножко, станет твердым как картошка. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,3)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'СНЕ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=13 or num2=13 or num3=13:
+				 cla
+				 *clr 
+				 'Нимфа: Моя загадка - Возьму его в руки, Сожму его крепко - Он станет упругим и твердым, как репка. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,3)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'СНЕ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=14 or num2=14 or num3=14: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Красная головка в дырку лезет ловко. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,5)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ДЯТЕЛ'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 if num1=15 or num2=15 or num3=15: 
+				 cla
+				 *clr
+				 'Нимфа: Моя загадка - Сзади подошёл,сунул и пошёл. Что это?'
+				 picrand=RAND(0,2)
+				 if picrand=0:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen1.jpg" ></center>'
+				 if picrand=1:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen2.jpg" ></center>'
+				 if picrand=2:'<center><img src="pic\forestevent\ForestNimf\ForestNimfaGen3.jpg" ></center>'
+				 $answer = input ("Ваш ответ")
+				 $answer=MID ($answer,1,3)
+				 $answer=TRIM($answer)
+				 $answer=UCASE($answer)
+				 $rightanswer = 'ТАП'
+					 if $answer = $rightanswer:
+						 sumA=sumA+1
+					 end
+				 end
+				 
+				 act '...':
+					 if sumA!3:
+					 cla
+					 *clr
+					 '<center><img src="pic\forestevent\ForestNimf\ForestNimfaLoose.jpg" ></center>'
+					 'Увы...ты отгадал не все загадки...ты дашь мне кое-что...'
+					 FNfail=1
+					 
+						 act '...':
+						 ver=RAND(0,1)
+							 if ver=0:
+								 cla
+								 *clr 
+								 act '...':gt'smu','start'
+								 '<center><img src="pic\forestevent\spin.jpg" ></center>'
+								 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
+								 health=5
+								 nark=0
+								 set minut = minut + 240
+							 end
+							 if ver=1:
+								 cla
+								 *clr
+								 act '...':gt'metro','start'
+								 '<center><img src="pic\forestevent\spin.jpg" ></center>'
+								 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
+								 money=0
+								 nark=0
+								 set minut = minut + 240
+							 end
+						 end
+					 end
+					 
+					 if sumA = 3:
+					 cla
+					 *clr
+					 '<center><img src="pic\forestevent\ForestNimf\ForestNimfaVictory.jpg" ></center>'
+					 'Поздравляю! Ты отгадал все загадки верно! Ты можешь выбрать себе награду: я могу сделать тебя богаче или разделить с тобой ложе'
+					 'Вы: Секс с нимфой? Эмм...я наверное лучше воз...'
+					 'Нимфа: Не спеши с ответом. Знай, что любовь лесной нимфы подарит тебе не только платоническое удовольствие, но и изменит тебя! Ты станешь сильнее, ловчее и выносливей'
+					 'Так каков будет твой ответ?'
+					 act 'Деньги!':
+						 cla
+						 *clr
+						 '<center><img src="pic\forestevent\money.jpg" ></center>'
+						 'Нимфа: Как пожелаешь.'
+						 money=money+100000
+						 'Вы чувствуете как свободного пространства в вашем кармане стало меньше.'
+						 set minut = minut + 60
+						 nark=0
+						 act '...':gt'park','start'
+					 end
+						 
+						 act 'Я бы с радостью разделил бы с тобой ложе, но запала сейчас нет вообще...':
+						 NFcock=0
+						 NFpussy=0
+						 FOmassage=0
+						 gt 'FNsex','Fstrip'
+						 end
+						 
+						 if horny >=30: 
+							 act 'Я хочу тебя сказочное создание!':
+							 cla
+							 *clr
+							 NFcock=0
+							 NFpussy=0
+							 FOmassage=0
+							 gt 'FNsex','start'
+							 end
+						 end
+						 
+						 if WarlockDeal=1:
+							 act 'Направить камень силы на нимфу':
+								 cla
+								 *clr
+								 NimfaStone=1
+								 'Вы произносите Arizhar horriz arem harsan и яркая вспышка ослепляет вас.'
+								 '<center><img src="pic\Linel\blast.jpg" ></center>'
+								 DELOBJ 'Камень силы'
+								 ADDOBJ 'Камень c силой лесной нимфы'
+								 
+								 act '...':
+									 cla
+									 *clr
+									 '<center><img src="pic\Linel\Lstart1.jpg" ></center>'
+									 'Когда ваше зрение пришло в норму, вы увидели перед собой лесную нимфу, но уже в человеческом обличии.'
+									 'Вы: Сработало!'
+									 'Бывшая нимфа: Ааа!!! Что произошло??'
+									 msg 'В спальном районе у вас теперь есть дом. На счету в банке стало больше денег.'
+									 FNtr=1
+									 bankfond=bankfond+2000000
+									 
+									 act '...': 
+										 cla
+										 *clr
+										 '<center><img src="pic\Linel\Lstart2.jpg" ></center>'
+										 'Вы: Поздравляю! (Ехидным голосом) Теперь ты официально моя собственность!'
+										 'Бывшая нимфа: ЧТО?? Ты в своём уме говорить мне такое? Сейчас ты заплатишь...а..ой..'
+										 'Кажется только что до нимфы дошло ЧТО на самом деле произошло. Несколько минут вы сидели молча, наблюдая затем как менялось её выражение лица.'
+										 'Бывшая нимфа: Что же ты наделал...'
+										 'Вы: А ты что сделала, когда я твои дурацкие загадки не отгадал?'
+										 'Бывшая нимфа замолчала.'
+										 '(спустя немного времени) Вы: И так дорогуша как ты понимаешь - ты не в завидном положении. Ты теперь человек. В человеческом мире ты  НИКТО. Хочешь выжить - слушайся меня во всем беспрекословно!'
+										 'Бывшая нимфа: (неохотно и тоскливо) Я в твоей власти.'
+										 'Вы: Вот и славно. Как твоё имя?'
+										 'Бывшая нимфа: Линель.'
+										 'Вы: Красивое. Меня зовут Игорь. Пойдем со мной, мне надо многое тебе рассказать о моём мире и по дороге прикупим тебе вещей.'
+										 'После этих слов вы с Линель уходите.'
+										 set minut = minut + 240
+										 act 'Идти в дом': gt 'HouseKor'
+									 end
+								 end
+							 end
+						 end
+					 end
+				 end
+			 end 
+		 end 
+	 end 
+ end
+--- nimfs ---------------------------------
+

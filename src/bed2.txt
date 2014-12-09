@@ -1,0 +1,80 @@
+# bed2
+!gs'clonil'
+!gs'WeapNill'
+!gs'ShildNill'
+!gs'clostar'
+NowSleep=1
+if vampireMorf>=1:vampirePower=vampireMorf*10
+if vapulabain=1:vapulabainpunch=0
+if pol > 0 and world=0:'<center><img src="pic\pics\son.jpg" ></center>'
+if analplugIN = 1:set analplugIN = 0&'Перед сном вы вынули анальную пробку.'
+if mop!0:set mop = -1&'Косметика размазалась по лицу, вы подумали, что вредно для внешности спать с косметикой, кожа стареет быстрее от этого.'
+set health = health + 5
+manna=manna-5
+set sweat=sweat+1
+!set hapri = 0
+set slep = RAND (0,1)
+if slep = 0:set $slep = 'ничего не снится'
+if slep = 1:set $slep = 'ничего не снится'
+'Вы спите и вам <<$slep>>.'
+     if cursedExp>=100 and OrotimaruFinalOnce=0:gt'sonorotimaru'
+:loopson
+
+set minut = minut + 1
+set stime = stime + 1
+if stime = 60:set stime = 0&set son = son + 3
+clr
+gs'stat'
+if hour = timer and minut = timerM and budilnikOn = 1:
+if srok = 0:'Звенит будильник'
+if srok > 0:'Звучит команда подъем'
+set manna = manna - 10
+     act 'Встать с кровати':
+     NowSleep=0
+     gs'clonil'
+	 gs'WeapNill'
+	 gs'ShildNill'
+	 gs'clostar'
+	 farmstam=stren/10
+	 set hapri = 0
+         if world=0 and sizo>0:GOTO $locBed, $metkaBed
+         if world=0 and sizo=0:gt'loker'
+         if world=1:gt'lokerW'
+     end
+     
+     if sizo=0:
+         act 'Встать с кровати и привести себя в порядок 15мин':
+         NowSleep=0
+         minut=minut+15
+         farmstam=stren/10
+		 GOTO $locBed, $metkaBed
+		 end
+     end
+elseif son > 23:
+'Вы выспались'
+     act 'Встать с кровати':
+     NowSleep=0
+     gs'clonil'
+	 gs'WeapNill'
+	 gs'ShildNill'
+	 gs'clostar'
+	 set hapri = 0
+	 farmstam=stren/10
+         if world=0 and sizo>0:GOTO $locBed, $metkaBed
+         if world=0 and sizo=0:gt'loker'
+         if world=1:gt'lokerW'
+     end
+     
+     if sizo=0:
+         act 'Встать с кровати и привести себя в порядок 15мин':
+         NowSleep=0
+         minut=minut+15
+         farmstam=stren/10
+		 GOTO $locBed, $metkaBed
+		 end
+     end
+else
+jump 'loopson'
+end
+--- bed2 ---------------------------------
+

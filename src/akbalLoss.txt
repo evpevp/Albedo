@@ -1,0 +1,60 @@
+# akbalLoss
+monster=0
+'<<$namev>> победил вас.'
+
+act 'Далее':
+cla
+*clr
+!horny=0
+SUB=SUB+1
+minut=minut+60
+monst=monst+1
+skverna=skverna+5
+if akbalSex=0:akbalSex=1&monster=monster+1
+'<center><img src="pic/EvedonTA/sandemon.jpg" ></center>'
+
+	 if vagina>0:
+	 sex=sex+1
+	 '<<$namev>> поставил вас на четвереньки и стал заталкивать свой член вам во влагалище. Вы застонали от боли, когда он вошел в вас. Демон начал трахать вашу киску, болезненно растягивая ее. Наконец вы почувствовали как струя горячей спермы ударила вам в матку, наполняя ее.'
+	 gs'femorg'
+	 vag=vag+10
+	 cumpussy=cumpussy+1
+	 if fertileVag=0:fertileVag=60&FertVagMark=1&'Вы поняли, что беременны от демона.'
+	 end
+	 
+	 if vagina=0:
+	 anal=anal+1
+	 '<<$namev>> поставил вас на четвереньки и стал заталкивать свой член вам в попу. Вы застонали от боли, когда он вошел в вас. Демон начал трахать вашу попку, болезненно растягивая ее. Наконец вы почувствовали как струя горячей спермы ударила вам в зад, наполняя ее.'
+	 gs'analslut'
+	 anus=anus+10
+	 cumanus=cumanus+1
+	 ass=ass+RAND(5,10)
+	 end
+
+     chanrand=RAND(0,7)
+		 if chanrand = 0:
+		 leg=leg+RAND(5,10)
+		 end
+		 if chanrand = 1:
+		 thight=thight+RAND(5,10)
+		 end
+		 if chanrand = 2:
+		 ass=ass+RAND(5,10)
+		 end
+		 if chanrand = 3:
+		 brist=brist+RAND(5,10)
+		 end
+		 if chanrand = 4:
+		 hand=hand+RAND(5,10)
+		 end
+		 if chanrand = 5:
+		 face=face+RAND(5,10)
+		 end
+		 if chanrand = 6:
+		 tit=tit+RAND(5,10)
+		 end
+
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+end
+--- akbalLoss ---------------------------------
+

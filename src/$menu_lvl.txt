@@ -1,0 +1,13 @@
+# $menu_lvl
+if $selobj='Меню боевки':
+     if sp <=0:
+     pl'У вас нет очков повышения'
+     end
+     if sp>0:
+     gt'levelRise'
+     end
+end
+
+unselect
+--- $menu_lvl ---------------------------------
+

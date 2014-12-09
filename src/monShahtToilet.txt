@@ -1,0 +1,63 @@
+# monShahtToilet
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+mag = 1
+'<center><H4>Туалет для шахтеров</H4></center>'
+!'<center><img src="Evedon\mdShop.jpg" ></center>'
+'Вонючий и не ухоженный туалет.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+
+
+
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'monShaht'
+	 end
+	 
+	 if toiletJerkQW=4 and toiletBook=0:
+	 'Зайдя в кабинку вы обнаружили там книгу.'
+	 	 act 'Открыть книгу':
+		 cls
+		 minut=minut+15
+		 horny+=50
+		 gs'stat'
+		 '<center><img src="pic\EvedonEroBook\Dbook.jpg" ></center>'
+		 'Открыв книгу вы увидели совершенно не пристойную гравюру. Как блондинка в короне сосет толстый член. Не произвольно вы почувствовали как еще сильнее возбудились.'
+		 act 'Отшвырнуть книгу':gt $curloc
+		 act 'Взять книгу':toiletBook=1&gt $curloc
+		 end
+	 end
+	 
+if horny>50:
+	 act 'Дрочить':
+	 cls
+	 minut=minut+15
+	 horny=0
+	 jerk+=1
+	 gs'stat'
+	     if penis>0:
+	     if toiletJerkQW=0:toiletJerkQW=1
+	     '<center><img src="pic\EvedonMas\toilet.jpg" ></center>'
+	     'Сев на унитаз вы достали член и начали его дрочить. Через некоторое время вас охватил оргазм и вы кончили.'
+	     else
+	     '<center><img src="pic\EvedonMas\toilet1.jpg" ></center>'
+	     'Сев на унитаз вы обнажили киску и начали тереть клитор, через некоторое время вас охватил оргазм и вы кончили.'
+	     end
+	 act 'Выйти из кабинки':gt $curloc
+	 end
+
+end
+--- monShahtToilet ---------------------------------
+

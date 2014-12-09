@@ -1,0 +1,28 @@
+# frendBhome
+
+
+if frendBday!day:
+frendBday=day
+frendB+=1
+'Навстречу вам выходит <<$namefrendB>>'
+'<<$frencloB>> <<$fempropB>> <<$faceB>>'
+
+
+act 'Уйти (5 мин)':minut=minut+5&gt'townW'
+     if bpol=0:
+     
+     end
+     if bpol=1:
+     
+     end
+exit
+end
+
+if frendBday=day:
+'На двери замок и никого нет дома'
+
+act 'Уйти (5 мин)':minut=minut+5&gt'townW'
+exit
+end
+--- frendBhome ---------------------------------
+

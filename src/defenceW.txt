@@ -1,0 +1,153 @@
+# defenceW
+!магия
+!защита от изменений воздуха игрока, вакуум, давление, электричество
+
+!damageW
+!damageWV
+     if priziv>0:
+         if PdefenceW>0:
+             if PdefenceW>=damageWv:
+             PdefenceW-=damageWv
+             damageWv=0
+             '<font color=#cd00cd><<$pname>> остановил воздушную атаку противника своей защитой</font>'
+             end
+             if PdefenceW<damageWv and damageWv>0:
+             damageWv-=PdefenceW
+             PdefenceW=0
+             Phealth-=damageWv
+             '<font color=#cd00cd><<$namev>> уничтожил воздушную защиту вашего помощника и нанес урон его здоровью <<damageWv>></font>'
+             damageWv=0
+             end
+         end
+         if PdefenceW<=0 and damageWv>0:
+         Phealth-=damageWv
+         '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damageWv>></font>'
+         damageWv=0
+         end
+         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         dynamic $prizivNill
+         end
+     end
+     
+gs'PreEffect'
+
+if tuman>0:
+	 if tuman>damagetwv:
+	 tuman=tuman-damagewv
+	 '<font color=red>Ваш туман выдержал и поглотил воздушный удар</font>'
+	 damagewv=0
+	 end
+	 if tuman<=damagewv:
+	 damagewv=damagewv-tuman
+	 tuman=0
+	 '<font color=red>ВАШ ТУМАН УНИЧТОЖЕН</font>'
+	 end
+end
+
+if conterBat>0:gs'conterBat'
+!if conterBatV>0:gs'conterBatV'
+
+if zerkalo>0:
+zeratk=RAND(0,zerkalo/2)
+     if zeratk=0 or sonarv>0:
+     zerkalo=0
+     '<font color=red><<$nameV>> попал в вас, а не в ваши отражения и зеркала рассыпались</font>'
+     end
+     if zeratk>0 and sonarv=0:
+     zerkalo=zerkalo-1
+     damagewv=0
+     '<font color=red><<$nameV>> попал в зеркало и оно рассыпалось</font>'
+     end
+end
+
+if levitation>0:gs'Levitation'
+
+if barier>0 and damageWV>0:
+damageWV=damageWV-((damageWV*barier)/100)
+'<font color=green>Ваш барьер снизил воздушный урон на <B><<barier>></B>%</font>'
+barier=barier-1
+end
+
+	 if gostbody>0:
+	 damageWV=0
+	 gostbody-=1
+	 '<font color=green>Удар противника прошел через ваше тело, не причинив вам никакого ущерба.</font>'
+	 end
+
+if defenceW<=0 and damagewv>0:
+gs'klonDef'
+
+dynamic $rascheturonaW
+'<font color=red><<$tipuronaW>> нанес вам <B><<damagewv>></B> едениц урона</font>'
+     if PerepadV>0 and damagewv>0:
+     PerepadV=0
+     bloodV=bloodV+(damageWV/100)
+     '<font color=red><<$tipuronaW>> вызвал у вас кровотечение</font>'
+     end
+     
+     if Vibrov>0 and damageWv>0:
+     Vibrov=0
+     if VibroTravma=0:VibroTravma=1
+     '<font color=green><<$tipuronaW>> вызвал у вас разрыв внутренних органов</font>'
+     end
+     
+     if soundMagV>0 and damagewv>0:
+     manna=manna-soundMagV
+     wipo=wipo-soundMagV
+     soundMagV=0
+     '<font color=red><<$tipuronaW>> ударил по вашей манне и воле</font>'
+     end
+     
+	 if gribsporev>0 and damagewv>0:
+	 gribsporev=0
+	 '<font color=red>Вы вдохнули грибные споры.</font>'
+	 gribspordead+=1
+	 end
+!damageWV=0
+end
+
+
+if defencew>0 and damagewv>0:
+	 if defencew>damagetwv:
+	 defencew=defencew-damagewv
+	 '<font color=red>Вашей ВОЗДУШНОЙ защите нанесено <B><<damagewv>></B> едениц урона</font>'
+	 damagewv=0
+	 end
+	 if defencew<=damagewv:
+	 damagewv=damagewv-defencew
+	 gs'klonDef'
+	     if damagewv>0:
+		 dynamic $rascheturonaW
+		 defencew=0
+		 '<font color=red>ВАША ВОЗДУШНАЯ ЗАЩИТА УНИЧТОЖЕНА</font>'
+		 '<font color=red>Вам нанесли <B><<damagewv>></B> едениц урона</font>'
+		     if PerepadV>0 and damagewv>0:
+			 PerepadV=0
+			 bloodV=bloodV+(damageWV/4)
+			 '<font color=red><<$tipuronaW>> вызвал у вас кровотечение</font>'
+			 end
+			 if soundMagV>0 and damagewv>0:
+			 manna=manna-soundMagV
+			 wipo=wipo-soundMagV
+			 soundMagV=0
+			 '<font color=red><<$tipuronaW>> ударил по вашей манне и воле</font>'
+			 end
+			 if Vibrov>0 and damageWv>0:
+			 Vibrov=0
+			 if VibroTravma=0:VibroTravma=1
+			 '<font color=green><<$tipuronaW>> вызвал у вас разрыв внутренних органов</font>'
+			 end
+			 if gribsporev>0 and damagewv>0:
+			 gribsporev=0
+			 '<font color=red>Вы вдохнули грибные споры.</font>'
+			 gribspordead+=1
+			 end
+		 damagewv=0
+	     end
+	 end
+end
+
+VibroV=0
+soundMagV=0
+--- defenceW ---------------------------------
+

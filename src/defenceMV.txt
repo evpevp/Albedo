@@ -1,0 +1,39 @@
+# defenceMV
+!Магия
+!защита от воздействий на манну противника
+
+!damageM
+!damageMV
+
+gs'PreEffect'
+
+if zerkalov>0:zerkalov=0&'<B><font color=green>Зеркала противника разлетаются.</font></B>'
+if fintv>0:fintv=0&'<B><font color=green>Противнику невозможно применить смещение.</font></B>'
+
+!if conterBat>0:gs'conterBat'
+if conterBatV>0:gs'conterBatV'
+
+if levitationV>0:gs'LevitationV'
+
+	 if gostbodyv>0:
+	 damageM=0
+	 gostbodyv-=1
+	 '<font color=red><<$namev>> пропустил удар через свое тело</font>'
+	 end
+
+if defenceMV=0:
+gs'klonDefV'
+     if damageM>0:
+ 	 dynamic $rascheturonaMV
+	 '<font color=green>Вы нанесли <B><<damageM>></B> едениц урона магии противнику</font>'
+	 	 if mannaStump>0 and damageM>0:
+	     mannaStump=0
+	     stunv=2
+	     mannav=mannav-(mannav*20/100)
+	     '<font color=green>Печать обездвиживает врага и сжигает 20% манны</font>'
+	     end
+	 damageM=0
+     end
+end
+--- defenceMV ---------------------------------
+

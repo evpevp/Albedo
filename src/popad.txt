@@ -1,0 +1,159 @@
+# popad
+!расчет попаданий
+
+gs'PreEffect'
+
+if tumanv>0 and Vizor=0:
+tumanv=tumanv-1
+'<B><font color=red>ВЫ НЕ ВИДИТЕ ПРОТИВНИКА В ТУМАНЕ</font></B>'
+end
+
+if sandstormv>0 and Vizor=0:
+sandstormv=sandstormv-1
+'<B><font color=red>ВЫ НЕ ВИДИТЕ ПРОТИВНИКА СКВОЗЬ ПЕСЧАНУЮ БУРЮ</font></B>'
+end
+
+if levitationV>0:
+'<B><font color=red>ПРОТИВНИК ВНЕ ЗОНЫ АТАКИ</font></B>'
+end
+
+if levitationV<=0 and tumanv<=0 and sandstormv<=0 or Vizor>0 and levitationV<=0:
+	 if tipatk=1:
+	 !простой тип атаки уворот возможен
+	 !удар рукой
+	 tipatk=0
+	 koefspeed=speed*20/100
+	 koefagil=agilV*20/100
+	 pop=RAND(speed-koefspeed,speed+koefspeed)
+	 uvo=RAND((agilV-KarV)-koefagil,(agilV-KarV)+koefagil)
+	 !*nl
+	 !'<font color=green>Вы бьете кулаком</font>'
+	 rarand=RAND(0,6)
+     
+		 if stunv = 0:
+			 if rarand ! 0 and rarand ! 5 and rarand ! 6:
+				 if pop>=uvo+(uvo*20/100):
+				 udar=2
+					 if fintv = 0 or Vizor>0:'<B><font color=green>КРИТИЧЕСКОЕ ПОПАДАНИЕ</font></B>'
+					 if fintv > 0 and Vizor=0:fintv=fintv-1&udar=0&'<B><font color=red><<$namev>> применил обманный финт и увернулся от удара.</font></B>'
+				 end
+				 if pop>=uvo and pop<uvo+(uvo*20/100):
+				 udar=1
+					 if fintv = 0 or Vizor>0:'<B><font color=green>ПОПАДАНИЕ</font></B>'
+					 if fintv > 0 and Vizor=0:fintv=fintv-1&udar=0&'<B><font color=red><<$namev>> применил обманный финт и увернулся от удара.</font></B>'
+				 end
+				 if pop<uvo:
+				 udar=0
+				 '<B><font color=red>ПРОМАХ</font></B>'
+				 end
+			 
+			 end
+			 if rarand = 0:
+			 udar=0
+			 '<B><font color=red>ПРОМАХ</font></B>'
+			 end 
+			 
+			 if rarand = 5:
+			 udar=1
+				 if fintv = 0 or Vizor>0:'<B><font color=green>ПОПАДАНИЕ</font></B>'
+				 if fintv > 0 and Vizor=0:fintv=fintv-1&udar=0&'<B><font color=red><<$namev>> применил обманный финт и увернулся от удара.</font></B>'
+			 end 
+			 
+			 if rarand = 6:
+			 udar=2
+				 if fintv = 0 or Vizor>0:'<B><font color=green>КРИТИЧЕСКОЕ ПОПАДАНИЕ</font></B>'
+				 if fintv > 0 and Vizor=0:fintv=fintv-1&udar=0&'<B><font color=red><<$namev>> применил обманный финт и увернулся от удара.</font></B>'
+			 end 
+		 end
+		 if stunv>0:
+		 udar=2
+		 '<B><font color=green>КРИТИЧЕСКОЕ ПОПАДАНИЕ</font></B>'
+		 end
+		 
+		 if udar=2:
+		 damage=damage*2
+		 
+		 !'<font color=green>Вы нанесли урон <B><<damage>></B> едениц</font>'
+			 if stunMark=1 and bronikv=0 and ironskinV=0 and zerkaloV<=0 and defenceV<=0:stunV=RAND(1,2)
+		 gs'damage'
+		 end
+		 if udar=1:
+		 !gs'damage'
+		 !'<font color=green>Вы нанесли урон <B><<damage>></B> едениц</font>'
+			 if stunMark=1 and bronikv=0 and ironskinV=0 and zerkaloV<=0 and defenceV<=0:stunV=RAND(2,3)
+		 gs'damage'
+		 end
+     
+	 end
+     
+	 if tipatk=2:
+	 !простой тип атаки уворот возможен
+	 !удар ногой
+	 tipatk=0
+	 koefspeed=speed*40/100
+	 koefagil=agilV*20/100
+	 pop=RAND(speed-koefspeed,speed)
+	 uvo=RAND(agilV-koefagil,agilV+koefagil)
+	 *nl
+	 '<font color=green>Вы пинаете ногой</font>'
+	 rarand=RAND(0,6)
+     
+		 if stunv = 0:
+			 if rarand ! 0 and rarand ! 5 and rarand ! 6:
+				 if pop>=uvo+(uvo*20/100):
+				 udar=2
+					 if fintv = 0:'<B><font color=green>КРИТИЧЕСКОЕ ПОПАДАНИЕ</font></B>'
+					 if fintv > 0:fintv=fintv-1&udar=0&'<B><font color=red><<$namev>> применил обманный финт и увернулся от удара.</font></B>'
+				 end
+				 if pop>=uvo and pop<uvo+(uvo*20/100):
+				 udar=1
+					 if fintv = 0:'<B><font color=green>ПОПАДАНИЕ</font></B>'
+					 if fintv > 0:fintv=fintv-1&udar=0&'<B><font color=red><<$namev>> применил обманный финт и увернулся от удара.</font></B>'
+				 end
+				 if pop<uvo:
+				 udar=0
+				 '<B><font color=red>ПРОМАХ</font></B>'
+				 end
+			 end
+			 
+			 if rarand = 0:
+			 udar=0
+			 '<B><font color=red>ПРОМАХ</font></B>'
+			 end 
+			 
+			 if rarand = 5:
+			 udar=1
+				 if fintv = 0:'<B><font color=green>ПОПАДАНИЕ</font></B>'
+				 if fintv > 0:fintv=fintv-1&udar=0&'<B><font color=red><<$namev>> применил обманный финт и увернулся от удара.</font></B>'
+			 end 
+			 
+			 if rarand = 6:
+			 udar=2
+				 if fintv = 0:'<B><font color=green>КРИТИЧЕСКОЕ ПОПАДАНИЕ</font></B>'
+				 if fintv > 0:fintv=fintv-1&udar=0&'<B><font color=red><<$namev>> применил обманный финт и увернулся от удара.</font></B>'
+			 end 
+		 end
+		 
+		 if stunv>0:
+		 udar=2
+		 '<B><font color=green>КРИТИЧЕСКОЕ ПОПАДАНИЕ</font></B>'
+		 end
+     
+		 if udar=2:
+		 damage=damage*2
+		 gs'damage'
+		 !'<font color=green>Вы нанесли урон <B><<damage>></B> едениц</font>'
+		 end
+		 if udar=1:
+		 gs'damage'
+		 !'<font color=green>Вы нанесли урон <B><<damage>></B> едениц</font>'
+		 end
+     
+	 end
+
+end
+
+
+
+--- popad ---------------------------------
+

@@ -1,0 +1,29 @@
+# robotW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Кабина управления роботом</H4></center>'
+'<center><img src="pic/Evedon/robot.jpg" ></center>'
+'Топливо - 0 литров.'
+'1й блок аккумуляторов - РАЗРЯЖЕН'
+'2й блок аккумуляторов - РАЗРЯЖЕН'
+'Аварийный блок аккумуляторов - РАЗРЯЖЕН'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+!'За стойкой стоит скучает <a href="exec:GT ''tagirlW''">трактирщица</a>.'
+
+
+act 'Выйти':
+minut=minut+5
+gt'df2_4'
+end
+--- robotW ---------------------------------
+

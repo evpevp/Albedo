@@ -1,0 +1,129 @@
+# kafe
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 1
+cla
+clr
+gs'stat'
+gs'time'
+'<center><H4>КАФЕ СССР</H4></center>'
+'<center><img src="pic/pic/kafe.jpg" ></center>'
+'Время работы с11 до 23'
+
+
+     act 'Уйти.':
+     GOTO $locMag, $metkaMag
+     end
+     
+     if hour>=11 and hour<=23:
+         act 'Идти в кафе.':gt'kafe','1'
+     end
+end
+
+if $ARGS[0]='1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 5
+cla
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+	 if music_on=0:
+		 inited = 1
+		 music_on=1
+		 volume = 100
+		 $music_theme = 'kafe'
+		 gs 'init_music'
+	 end
+'<center><B>КАФЕ СССР</B></center>'
+'<center><img src="pic/pic/kafe2.jpg" ></center>'
+'Кафе украшено красными флагами, вымпелами и портретами Ленина. Место довольно популярное, живая музыка, не большие цены, что еще надо человеку, что бы отдохнуть.'
+     act 'Выйти из кафе':
+     music_on=0
+     gt'kafe','start'
+     end
+     
+     act 'Сесть за стол':gt'kafe','2'
+
+end
+
+if $ARGS[0]='2':
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+set minut = minut + 5
+cla
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+'<center><B>КАФЕ СССР</B></center>'
+'<center><img src="pic/pic/kafe2.jpg" ></center>'
+'Вы сидите за столом.'
+     if zakaz = 0:
+     act 'Встать из за стола':gt'kafe','1'
+     
+		 act 'Сделать заказ':
+		 cla
+		 set minut = minut + 5
+		 'К вам подошла миловидная, молоденькая официантка с бейджиком, на котором написано Ирина. Она достала блокнот и ручку и подала вам меню.'
+		 act 'Встать из за стола':gt'kafe','1'
+			 if money >= 300:
+				 act 'Поесть 300 руб':
+				 cla
+				 set minut = minut + 30
+				 money=money-300
+				 'Вы заказали солянку, рис с бифштексом и компот. Уже через 15 минут официантка Ира принесла вам заказанное.'
+				 gs'eat'
+				 act 'Расплатится':gt'kafe','2'
+				 end
+			 end
+			 if money >= 1000:
+				 act 'Водка, шашлык и салат 1000 руб':
+				 cla
+				 zakaz = 1
+				 set minut = minut + 15
+				 money=money-1000
+				 'Вы заказали водки, салат и шашлык. Уже через 15 минут официантка Ира принесла вам заказанное.'
+				 act 'Расплатится':gt'kafe','2'
+				 end
+			 end
+		 end
+     end
+     if zakaz = 1:
+     'Официантка ((Ира|ofirina)) крутится не подалеку от вас.'
+     'На столе у вас стоит графин водки окропленный прозрачными как слезы каплями влаги, горячий, ароматный и сочный шашлык, и скромный салатик.'
+     	 act 'Выпивать':
+		 cla
+		 set minut = minut + 60
+		 money=money-300
+		 zakaz = 0
+		 alko=alko+8
+		 horny=horny+20
+		 manna=manna+50
+		 wipo=wipo+50
+		 'Вы выпили холодной водки, которая моментально разошлась по организму приятным теплом и закусили салатиком, после чего приступили к шашлыку.'
+		 gs'eat'
+		 act 'Уйти':gt'kafe','2'
+		 end
+     end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- kafe ---------------------------------
+

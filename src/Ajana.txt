@@ -1,0 +1,18 @@
+# Ajana
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+!Айана певица
+'Айана улыбнулась вам'
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+
+end
+--- Ajana ---------------------------------
+

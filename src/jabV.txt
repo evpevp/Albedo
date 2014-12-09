@@ -1,0 +1,53 @@
+# jabV
+
+if $ARGS[0]='start':
+set stamina = stamina - 1
+set staminaV = staminaV - 1
+set speedKoef = speedV*25/100
+set agilKoef = agil*25/100
+set initKoef = init*10
+set initKoefV = initV*10
+     if init = 0:
+     set baseAgil = 0
+     end
+     if init > 0:
+     set baseAgil = Agil*initKoef/100
+     end
+     if initV = 0:
+     set baseSpeed = 0
+     end
+     if initV > 0:
+     set baseSpeed = speedV*initKoefV/100
+     end
+set pop = speedV + jabV + RAND (150,250)
+set popad = RAND ((pop-baseSpeed)- speedKoef,(pop-baseSpeed)+ speedKoef)
+set def = agil + defence + RAND (100,200)
+set uvorot = RAND ((def-baseAgil)- agilKoef,(def-baseAgil)+ agilKoef)
+     if popad >= uvorot*2:
+     '<B><font color=red>МОЩНОЕ ПОПАДАНИЕ</font></B>'
+     gs'jabV','krit'
+     end
+     if popad < uvorot*2 and popad >= uvorot:
+     '<B><font color=red>ПОПАДАНИЕ</font></B>'
+     gs'jabV','udar'
+     end 
+     if popad < uvorot:
+     set staminaV = staminaV - 1
+     '<B><font color=green>ПРОМАХ</font></B>'
+     end 
+end
+
+if $ARGS[0]='krit':
+pointV = pointV + 1
+set stamina = stamina - RAND (1,5)
+set chin = chin - RAND (1,5)
+end
+
+if $ARGS[0]='udar':
+pointV = pointV + 1
+set stamina = stamina - RAND (1,2)
+set chin = chin - RAND (1,2)
+end
+
+--- jabV ---------------------------------
+

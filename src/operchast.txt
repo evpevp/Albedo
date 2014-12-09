@@ -1,0 +1,37 @@
+# operchast
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+
+clr
+gs'stat'
+
+'<center><img src="pic/jail/oper.jpg" ></center>'
+'(Опер) - А Харитонов, заходи, садись. Ну как тебе шизо? Понравилось? Я надеюсь ты образумился и готов встать на путь исправления.'
+
+	 act 'Отказаться.':
+	 cla
+	 *clr
+	 '<center><img src="pic/jail/oper.jpg" ></center>'
+	 zoneWar=1
+	 otkazfight=0
+	 '(Вы) - Я же сказал нет!'
+	 '(Опер) - Ну не горячись. Подумай хорошенько. А пока иди в барак.'
+     act 'Уйти.':gt 'barak'
+     end
+       
+     act 'Согласиться.':
+	 cla
+	 *clr
+	 '<center><img src="pic/jail/oper.jpg" ></center>'
+	 zoneWar=0
+	 barak=1
+	 актив=1
+	 otkazfight=0
+	 '(Вы) - Ладно, вступлю я в эту секцию.'
+	 '(Опер) - Вот и славно Харитонов, а зачем упирался? Свободен.'
+     act 'Уйти.':gt 'aktiv'
+     end
+--- operchast ---------------------------------
+

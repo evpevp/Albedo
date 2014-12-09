@@ -1,0 +1,372 @@
+# divanW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Диван</H4></center>'
+'<center><img src="pic/Evedon/room.jpg" ></center>'
+'Вы устроились по удобней на диване и начали отдыхать.'
+clr
+gs'stat'
+if GraveDog=1:'Около дивана вьется милый щеночек.'
+
+	 act 'Валяться на диване 1 час':
+	 cla
+	 manna=manna+10
+	 wipo=wipo+10
+	 minut=minut+60
+	 'Вы праздно валяетесь на диване и бездельничаете.'
+	 act 'Потянуться':gt'divanW'
+	 end
+	 
+	 if hornybook>=1:
+		 act 'Листать книжку с развратными картинками (1 час).':
+		 cla
+		 *clr
+         gs'ero'
+		 minut=minut+60
+		 horny+=50
+		 'Вы в течение часа листали книгу разглядывая развратные картинки. Постепенно зрелище начало вас возбуждать.'
+		 
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if marabook>=1:
+		 act 'Читать молитвы мары (1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book2.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 skverna-=3
+		 'Вы в течение часа читали молитвы Мары из книги это охладило ваш пыл убрав всякие мыли о плотских наслаждениях и понизило скверну.'
+		 
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if intelbook>=1:
+		 act 'Читать книгу развития ума (1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book3.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 intelbook-=1
+		 intel+=1
+		 'Осталось часов чтения <<intelbook>>'
+		 'Вы в течение часа читали книгу развивающую разум. Задачки для ума убрали всякие мыли о похоти и кажется вы все же чему-то научились.'
+		 
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if willbook>=1:
+		 act 'Читать унылый трактат о пупочной грязи(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book4.jpg" ></center>'
+		 minut=minut+60
+		 son-=1
+		 horny=0
+		 willbook-=1
+		 will+=1
+		 'Осталось часов чтения <<willbook>>'
+		 'Вы в течение часа читали унылый трактат в котором автор долго и пространно рассказывал о своих исследованиях пупочной грязи и делал глубокомысленные выводы. От этого занудства клонит в сон, но действительно, неплохо развивает волю ибо читать такие бредни неимоверно скучно'
+		 
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if desertbook>=1:
+		 act 'Читать пустынные рассказы(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book5.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 beduin+=10
+		 'Вы в течение часа читали пустынные рассказы караванщика о том как правильно находить дорогу в пустыне, о его битвах с демонами и нагами.'
+		 
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if marshbook>=1:
+		 act 'Читать трактат о болотах(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book6.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 knwmarsh+=10
+		 'Вы в течение часа читали трактат о болотах и способах избегать топей.'
+		 
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if magikabook>=1:
+		 act 'Читать трактат о природе магичности(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book7.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 'Вы в течение часа читали трактат о природе магичности.'
+		     if magika<15:
+		     magikExp=magikExp+RAND(magika*2,magika*4)
+		     else
+		     'Книга для вас бесполезна, все что там написано вы уже давно постигли.'
+		     end
+		 
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if expbook>=1:
+		 act 'Читать трактат о искусстве боя(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book8.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 'Вы в течение часа читали трактат о искусстве боя.'
+		 exp=exp+RAND(200,240)
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if Zerkalobook>=1:
+		 act 'Читать том магии зеркал(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 'Вы в течение часа читали магическую книгу.'
+		 if spZerkalo=100:ZerkaloExp=ZerkaloExp+1
+         if spZerkalo<100:spZerkalo=spZerkalo+10
+         if spZerkalo>100:spZerkalo=100
+         'Вы знаете зеркала на <<spZerkalo>>% Опыт заклинания <<ZerkaloExp>>'
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if MagShildbook>=1:
+		 act 'Читать том щита мага(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 'Вы в течение часа читали магическую книгу.'
+		 if spMagShild=100:MagShildExp=MagShildExp+1
+         if spMagShild<100:spMagShild=spMagShild+10
+         if spMagShild>100:spMagShild=100
+         'Вы знаете щит мага на <<spMagShild>>% Опыт заклинания <<MagShildExp>>'
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if Smesheniebook>=1:
+		 act 'Читать том смещения(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 'Вы в течение часа читали магическую книгу.'
+		 if spSmeshenie=100:spSmeshenieExp=spSmeshenieExp+1
+         if spSmeshenie<100:spSmeshenie=spSmeshenie+10
+         if spSmeshenie>100:spSmeshenie=100
+         'Вы знаете смещение на <<spSmeshenie>>% Опыт заклинания <<spSmeshenieExp>>'
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if Tumanbook>=1:
+		 act 'Читать том тумана(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 'Вы в течение часа читали магическую книгу.'
+		 if spTuman=100:spTumanExp=spTumanExp+1
+         if spTuman<100:spTuman=spTuman+10
+         if spTuman>100:spTuman=100
+         'Вы знаете туман на <<spTuman>>% Опыт заклинания <<spTumanExp>>'
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 
+	 if klonbook>=1:
+		 act 'Читать том клонов(1 час).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
+		 minut=minut+60
+		 horny=0
+		 'Вы в течение часа читали магическую книгу.'
+		 if spKlon=100:spKlonExp=spKlonExp+1
+         if spKlon<100:spKlon=spKlon+10
+         if spKlon>100:spKlon=100
+         'Вы знаете магию клонов на <<spKlon>>% Опыт заклинания <<spKlonExp>>'
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 if blackmagikbook>=1:
+		 act 'Читать черную книгу(30 минут).':
+		 cla
+		 *clr
+         '<center><img src="pic/EvedonOd/book10.jpg" ></center>'
+		 minut=minut+30
+		     if blackAmulet=0:
+		     if blackAmuletQW=0:blackAmuletQW=1
+		     'Открыв книгу вы увидели, что листы плотно склеились между собой и не хотят открываться. На первой странице надпись.'
+		     'Читатель, ты открыл книгу о черной магии и дабы защитить себя от духов при прочтении этой книги, тебе потребуется амулет защиты. Приготовь 1 порцию крови демона, 12 клыков демонов, 12 камней с душами демонов и 1 порцию паучьего шелка. Из этих ингредиентов перед зеркалом собери амулет.'
+		     end
+		     if blackAmulet=1:
+		     if blackAmuletQW=1:blackAmuletQW=2
+		     'Амулет черной книги изготовлен. Поэтому можно продолжить чтение.'
+		     'В книге написано, что маги черпают силы в себе, демоны в уничтожении, эльфы в природе, изверы в сотворении, но есть еще другой путь, черпать силу у мертвых. После смерти не вся сила рассеивается, да и не сразу. Очень долгое время вокруг покойника сохраняется аура его силы, взять ее напрямую нельзя, ты возьмешь и его смерть себе вместе с его силой. Для этого магу нужен проводник служащий только ему. Самые верные существа это естественно собаки, если завести щенка и он полюбит вас, то из него можно будет сделать проводника.'
+		     'Щенка следует убить ночью на кладбище совершив ритуал объединения душ. После этого душа вашего пса станет навсегда прикованной к вам. Вы сможете напитать силой свою могильную собаку, она будет защищать вас в бою, беря на себя весь урон, что шел вам. Могильная собака сможет впитывать энергию мертвых в себя и вы сможете управлять этой энергией через своего питомца.'
+		     'Дальше в книге описаны ритуалы и заклинания. Для совершения ритуала объединения душ потребуется бубен, изготовленный из 6ти кусков кожи демона и нити паучьего шелка, пропитанного кровью демона. Из этих ингридиентов перед зеркалом собери амулет.'
+		      if blackBuben=1:'<B>Бубен готов</B>. Можно идти на кладбище и приступать к ритуалу обьединения душ.'
+		     end
+		 act 'Убрать книгу':gt $curloc
+		 end
+	 end
+	 
+	 
+	 
+	 if skverna>=30:
+	 	 act 'Массировать анус 1 час':
+		 cla
+		 *clr
+		 minut=minut+60
+		 sweat=sweat+1
+		 horny=horny+skverna
+		 manna=manna+50
+		 anus=anus+3
+		 analjerk=analjerk+1
+		 '<center><img src="pic/EvedonMas/masAn.jpg" ></center>'
+		     if anus <10:$anfist='пока не ввели себе два пальца, попытавшись засунуть третий вы поняли что это больно'
+		     if anus >=10 and anus<20:$anfist='пока не ввели себе три пальца, попытавшись засунуть четвертый вы поняли что это больно'
+		     if anus >=20 and anus<30:$anfist='пока не ввели себе четыре пальца, попытавшись засунуть кулак вы поняли что это больно'
+		     if anus >=30:$anfist='пока не засунули целиком весь кулак и не начали им двигать в своей кишке'
+	     'Вы начали медленно вводить себе в анус пальцы руки, <<$anfist>> после этого вы начали трахать свой зад рукой пока не почувствовали как возбудились.'
+		 act 'Встать с дивана':GOTO $locBed, $metkaBed
+		 end
+	 end
+	 
+	 if horny>=50:
+	     act 'Мастурбировать 1 час':
+		 cla
+		 *clr
+		 minut=minut+60
+		 act 'Передумать':GOTO $locBed, $metkaBed
+			
+		     if penis>0:
+		         act 'Дрочить член':
+				 cla
+				 *clr
+				 sweat=sweat+1
+				 horny=0
+				 jerk=jerk+1
+				 manna=manna+30
+				 '<center><img src="pic/EvedonTA/mastr.jpg" ></center>'
+				 'Вы достали свой <<penis>> сантиметровый член и начали его наяривать пока наконец из него не брызнула сперма.'
+				 act 'Встать с дивана':GOTO $locBed, $metkaBed
+				 end
+				 
+				 if skverna>=30:
+				 	 act 'Дрочить член одной рукой, пальцами другой массировать анус':
+					 cla
+					 *clr
+					 sweat=sweat+1
+					 horny=0
+					 jerk=jerk+1
+					 manna=manna+50
+					 anus=anus+3
+					 analjerk=analjerk+1
+					 '<center><img src="pic/EvedonMas/masFuta.jpg" ></center>'
+					     if anus <10:$anfist='пока не ввели себе два пальца, попытавшись засунуть третий вы поняли что это больно'
+					     if anus >=10 and anus<20:$anfist='пока не ввели себе три пальца, попытавшись засунуть четвертый вы поняли что это больно'
+					     if anus >=20 and anus<30:$anfist='пока не ввели себе четыре пальца, попытавшись засунуть кулак вы поняли что это больно'
+					     if anus >=30:$anfist='пока не засунули целиком весь кулак и не начали им двигать в своей кишке'
+					  'Вы достали свой <<penis>> сантиметровый член и начали его ласкать одной рукой, а пальцы другой руки начали медленно вводить себе в анус, <<$anfist>> Наконец из члена брызнула сперма.'
+					 act 'Встать с дивана':GOTO $locBed, $metkaBed
+					 end
+					 
+					 if penis>20:
+					 	 act 'Самоотсос':
+						 cla
+						 *clr
+						 sweat=sweat+1
+						 selfBJ=selfBJ+1
+						 manna=manna+50
+						 '<center><img src="pic/EvedonMas/self.jpg" ></center>'
+                         'Вы легли на спину и достали свой <<penis>> сантиметровый член. Согнув спину вы достали губами до своего члена и начали сосать.'
+                         gs'cumslut'
+                         if horny>0:horny=0&'Наконец вы начали кончать себе в рот, не прекращая отсасывать.'
+                         cumlip=cumlip+1
+                         cumface=cumface+1
+                         facial=facial+1
+                         'Сперма вытекает из вашего рта и попадает на губы, стекая по подбородку.'
+						 act 'Встать с дивана':GOTO $locBed, $metkaBed
+						 end
+					 end
+				 
+				 end
+				 
+				 if vagina>0:
+				 	 act 'Дрочить член одной рукой, пальцами другой ласкать вагину':
+					 cla
+					 *clr
+					 sweat=sweat+1
+					 horny=0
+					 jerk=jerk+1
+					 manna=manna+50
+					 vag=vag+3
+					 vagjerk=vagjerk+1
+					 orgasm=orgasm+1
+					 '<center><img src="pic/EvedonMas/masFuta.jpg" ></center>'
+                     'Вы достали свой <<penis>> сантиметровый член и начали его ласкать одной рукой, а пальцами другой руки начали медленно ласкать клитор, вводя пальцы в свою разгоряченную киску. Наконец вас охватил оргазм и ваш член выстрелил спермой.'
+					 act 'Встать с дивана':GOTO $locBed, $metkaBed
+					 end
+				 end
+				 
+		     end
+		     
+		     if vagina>0:
+		 		 act 'Ласкать киску':
+				 cla
+				 *clr
+				 sweat=sweat+1
+				 manna=manna+50
+				 vag=vag+3
+				 vagjerk=vagjerk+1
+				 !orgasm=orgasm+1
+				 horny=horny+vagjerk+vagina
+				 '<center><img src="pic/EvedonMas/masFem.jpg" ></center>'
+                 'Вы начали медленно ласкать клитор, одновременно вводя пальцы в свою разгоряченную киску.'
+                 gs'femorg'
+				 act 'Встать с дивана':GOTO $locBed, $metkaBed
+				 end    
+		     end
+		 
+		 end
+	 end
+
+	 act 'Встать с дивана':
+	 GOTO $locBed, $metkaBed
+	 end
+
+--- divanW ---------------------------------
+

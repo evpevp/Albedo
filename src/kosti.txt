@@ -1,0 +1,327 @@
+# kosti
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+minut+=60
+cla
+*clr
+clr
+gs'stat'
+'Ставка на один кон игры <<stavkaGame>> гем'
+'Правила игры'
+'Каждый может бросить кубики три раза. Выбирая те кубики, которые хочет бросить. После трех бросков подсчитывается сумма очков. В случае выброса всех костей одинакового достоинства к очкам добавляется еще 50 очков. Всего в игре 6ть туров. Набравший за 6ть туров самую большую сумму очков побеждает в игре и забирает весь призовой фонд. Если победителя нет, как минимум двое набрали одинаковое количество очков, то назначается новая игра с удвоенной ставкой.'
+	 act 'Уйти':
+	 GOTO $locGame, $metkaGame
+	 end
+	 
+	 if hour>=8:
+		 if gem>=stavkaGame:
+			 act 'Сделать ставку':
+			 kub1=0
+			 kub2=0
+			 kub3=0
+			 kub4=0
+			 kub5=0
+			 brosok=3
+			 KubTur=1
+			 KpointPlayer=0
+			 KpointEnemy=0
+			 KpointEnemy2=0
+			 KpointEnemy3=0
+			 EnemyKost=0
+			 gem-=stavkaGame
+			 gt'kosti','0'
+			 end
+		 end
+     else
+	 'Для игры слишком позднее время.'
+	 end
+end
+
+if $ARGS[0]='kubik':
+$metka = $ARGS[0]
+$loc = $CURLOC
+brosok-=1
+if kub1=0:kubik1=RAND(1,6)&kub1=1
+if kub2=0:kubik2=RAND(1,6)&kub2=1
+if kub3=0:kubik3=RAND(1,6)&kub3=1
+if kub4=0:kubik4=RAND(1,6)&kub4=1
+if kub5=0:kubik5=RAND(1,6)&kub5=1
+end
+
+if $ARGS[0]='komb':
+$metka = $ARGS[0]
+$loc = $CURLOC
+Kpoint=kubik1+kubik2+kubik3+kubik4+kubik5
+     if kubik1=kubik2 and kubik1=kubik3 and kubik1=kubik4 and kubik1=kubik5:Kpoint+=50
+end
+
+if $ARGS[0]='0':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+'Вы взяли стакан с кубиками.'
+     act 'Бросить кубики':
+     gs'kosti','kubik'
+     gt'kosti','1'
+     end
+end
+
+if $ARGS[0]='1':
+cla
+*clr
+clr
+gs'stat'
+$metka = $ARGS[0]
+$loc = $CURLOC
+if brosok>0:
+if kub1=1:$kub1='<a href="exec: kub1=0 & gt''kosti'',''1''"><<kubik1>></a>'
+if kub2=1:$kub2='<a href="exec: kub2=0 & gt''kosti'',''1''"><<kubik2>></a>'
+if kub3=1:$kub3='<a href="exec: kub3=0 & gt''kosti'',''1''"><<kubik3>></a>'
+if kub4=1:$kub4='<a href="exec: kub4=0 & gt''kosti'',''1''"><<kubik4>></a>'
+if kub5=1:$kub5='<a href="exec: kub5=0 & gt''kosti'',''1''"><<kubik5>></a>'
+end
+
+if kub1=0 or brosok=0:$kub1='<<kubik1>>'
+if kub2=0 or brosok=0:$kub2='<<kubik2>>'
+if kub3=0 or brosok=0:$kub3='<<kubik3>>'
+if kub4=0 or brosok=0:$kub4='<<kubik4>>'
+if kub5=0 or brosok=0:$kub5='<<kubik5>>'
+'Тур <<KubTur>>'
+'Вы набрали <<KpointPlayer>> очков'
+'1й Соперник набрал <<KpointEnemy>> очков'
+'2й Соперник набрал <<KpointEnemy2>> очков'
+'3й Соперник набрал <<KpointEnemy3>> очков'
+*nl
+*nl
+'<center><h1><<$kub1>> <<$kub2>> <<$kub3>> <<$kub4>> <<$kub5>></h1></center>'
+*nl
+'У вас еще <<brosok>> бросков'
+     if brosok>0:
+         if kub1=0 or kub2=0 or kub3=0 or kub4=0 or kub5=0:
+             act 'Бросить выбранные кубики':
+			 gs'kosti','kubik'
+			 gt'kosti','1'
+			 end
+         end
+     
+     end
+     
+     act 'Составить комбинацию':
+     gs'kosti','komb'
+     gt'kosti','2'
+     end
+
+end
+
+if $ARGS[0]='2':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+KpointPlayer=KpointPlayer+Kpoint
+'В этом туре вы набрали <<Kpoint>> очков, всего набрали <<KpointPlayer>>'
+	 act 'Далее':
+	 Kpoint=0
+	 kub1=0
+	 kub2=0
+	 kub3=0
+	 kub4=0
+	 kub5=0
+	 brosok=3
+	 gs'kosti','kubik'
+	 gt'kosti','3'
+	 end
+end
+
+if $ARGS[0]='3':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+'Тур <<KubTur>>'
+'Вы набрали <<KpointPlayer>> очков'
+'1й Соперник набрал <<KpointEnemy>> очков'
+'2й Соперник набрал <<KpointEnemy2>> очков'
+'3й Соперник набрал <<KpointEnemy3>> очков'
+*nl
+if EnemyKost=0:'<center><h1>1й соперник бросает кубики</h1></center>'
+if EnemyKost=1:'<center><h1>2й соперник бросает кубики</h1></center>'
+if EnemyKost=2:'<center><h1>3й соперник бросает кубики</h1></center>'
+*nl
+*nl
+'<center><h1><<kubik1>> <<kubik2>> <<kubik3>> <<kubik4>> <<kubik5>></h1></center>'
+*nl
+'У соперника еще <<brosok>> бросков'
+     
+     if brosok>0:
+		 act 'Далее':
+		 if kubik1<5:kub1=0
+		 if kubik2<5:kub2=0
+		 if kubik3<5:kub3=0
+		 if kubik4<5:kub4=0
+		 if kubik5<5:kub5=0
+		 gs'kosti','kubik'
+		 gt'kosti','3'
+		 end
+     end
+     
+     if brosok=0:
+		 act 'Составить комбинацию':
+		 gs'kosti','komb'
+		 if EnemyKost=0:gt'kosti','4'
+		 if EnemyKost=1:gt'kosti','5'
+		 if EnemyKost=2:gt'kosti','6'
+		 end
+     end
+end
+
+if $ARGS[0]='4':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+KpointEnemy=KpointEnemy+Kpoint
+EnemyKost=1
+'В этом туре соперник набрал <<Kpoint>> очков, всего набрал <<KpointEnemy>>'
+	 act 'Далее':
+	 Kpoint=0
+	 kub1=0
+	 kub2=0
+	 kub3=0
+	 kub4=0
+	 kub5=0
+	 brosok=3
+	 gs'kosti','kubik'
+	 gt'kosti','3'
+	 end
+end
+
+if $ARGS[0]='5':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+KpointEnemy2=KpointEnemy2+Kpoint
+EnemyKost=2
+'В этом туре 2й соперник набрал <<Kpoint>> очков, всего набрал <<KpointEnemy2>>'
+	 act 'Далее':
+	 Kpoint=0
+	 kub1=0
+	 kub2=0
+	 kub3=0
+	 kub4=0
+	 kub5=0
+	 brosok=3
+	 gs'kosti','kubik'
+	 gt'kosti','3'
+	 end
+end
+
+if $ARGS[0]='6':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+KpointEnemy3=KpointEnemy3+Kpoint
+KubTur+=1
+'В этом туре 3й соперник набрал <<Kpoint>> очков, всего набрал <<KpointEnemy3>>'
+     if KubTur<6:
+		 act 'Далее':
+		 Kpoint=0
+		 kub1=0
+		 kub2=0
+		 kub3=0
+		 kub4=0
+		 kub5=0
+		 brosok=3
+		 EnemyKost=0
+		 gt'kosti','0'
+		 end
+	 end
+	 
+	 if KubTur=6:
+	 	 act 'Выбрать победителя':
+		 gt'kosti','fin'
+		 end
+	 end
+end
+
+if $ARGS[0]='fin':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+'Вы набрали <<KpointPlayer>> очков'
+'1й Соперник набрал <<KpointEnemy>> очков'
+'2й Соперник набрал <<KpointEnemy2>> очков'
+'3й Соперник набрал <<KpointEnemy3>> очков'
+
+     if KpointEnemy>KpointPlayer or KpointEnemy2>KpointPlayer or KpointEnemy3>KpointPlayer:
+     KostiLoss+=1
+     '<B><font color=red>Вы проиграли</font></B>'
+     elseif KpointEnemy<KpointPlayer and KpointEnemy2<KpointPlayer and KpointEnemy3<KpointPlayer:
+     KostiWin+=1
+     gem+=stavkaGame*4
+     '<B><font color=green>Вы выиграли <<stavkaGame*4>> гем</font></B>'
+     else
+		 if KpointEnemy=KpointPlayer or KpointEnemy2=KpointPlayer or KpointEnemy3=KpointPlayer:
+		 KostiDraw+=1
+		 '<B><font color=blue>Ничья, вы можете спасовать и выйти или удвоить ставку</font></B>'
+		 	 if gem>=stavkaGame:
+				 act 'Удвоить ставку':
+				 kub1=0
+				 kub2=0
+				 kub3=0
+				 kub4=0
+				 kub5=0
+				 brosok=3
+				 KubTur=1
+				 KpointPlayer=0
+				 KpointEnemy=0
+				 KpointEnemy2=0
+				 KpointEnemy3=0
+				 EnemyKost=0
+				 gem-=stavkaGame
+				 stavkaGame=stavkaGame*2
+				 gt'kosti','0'
+				 end
+			 end
+			 
+		 	 act 'Уйти':
+		     GOTO $locGame, $metkaGame
+		     end
+		 exit
+		 end
+     end
+
+	 act 'Уйти':
+	 GOTO $locGame, $metkaGame
+	 end
+	 
+	 act 'Новая игра':
+	 gt'kosti','start'
+	 end
+end
+
+
+
+
+
+--- kosti ---------------------------------
+

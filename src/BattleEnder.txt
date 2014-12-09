@@ -1,0 +1,95 @@
+# BattleEnder
+if $ARGS[0]='win':
+     if FightTip = 0:
+     set WIN = WIN + 1
+     end
+     if FightTip = 1:
+         if amature = 0:set BOXWIN = BOXWIN + 1
+         if amature = 1:set BOXWINp = BOXWINp + 1
+     end
+     if FightTip = 2:
+         if amature = 0:set KIKWIN = KIKWIN + 1
+         if amature = 1:set KIKWINp = KIKWINp + 1
+     end
+     if FightTip = 3:
+     set WRESLWIN = WRESLWIN + 1
+     end
+     if FightTip = 4:
+     set MMAWIN = MMAWIN + 1
+     end
+gs'FightNill'
+act 'Уйти.':GOTO $locFight, $metkaFight
+end
+
+if $ARGS[0]='loss':
+     if FightTip = 0:
+     set LOSS = LOSS + 1
+     end
+     if FightTip = 1:
+         if amature = 0:set BOXLOSS = BOXLOSS + 1
+         if amature = 1:set BOXLOSSp = BOXLOSSp + 1
+     end
+     if FightTip = 2:
+         if amature = 0:set KIKLOSS = KIKLOSS + 1
+         if amature = 1:set KIKLOSSp = KIKLOSSp + 1
+     end
+     if FightTip = 3:
+     set WRESLLOSS = WRESLLOSS + 1
+     end
+     if FightTip = 4:
+     set MMALOSS = MMALOSS + 1
+     end
+gs'FightNill'
+act 'Уйти.':GOTO $locFight, $metkaFight
+end
+
+if $ARGS[0]='draw':
+     if FightTip = 1:
+         if amature = 0:set BOXDRAW = BOXDRAW + 1
+         if amature = 1:set BOXDRAWp = BOXDRAWp + 1
+     end
+     if FightTip = 2:
+         if amature = 0:set KIKDRAW = KIKDRAW + 1
+         if amature = 1:set KIKDRAWp = KIKDRAWp + 1
+     end
+     if FightTip = 3:
+     set WRESLDRAW = WRESLDRAW + 1
+     end
+     if FightTip = 4:
+     set MMADRAW = MMADRAW + 1
+     end
+gs'FightNill'
+act 'Уйти.':GOTO $locFight, $metkaFight
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- BattleEnder ---------------------------------
+

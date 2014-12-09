@@ -1,0 +1,74 @@
+# defenceHV
+!магия
+!защита от воздействий на разум противника
+
+!damageH
+!damageHV
+
+gs'PreEffect'
+
+!if conterBat>0:gs'conterBat'
+if conterBatV>0:gs'conterBatV'
+
+!if defenceHV=0:
+!healthv=healthv-damageh
+!'<font color=green><<$tipuronaHV>> нанес противнику <B><<damageh>></B> едениц урона</font>'
+!end
+
+
+if zerkalov>0:
+zeratk=RAND(0,zerkalov)
+     if zeratk=0 or sonar>0:
+     zerkalov=0
+     '<font color=green>Вы попали в настоящего противника а не в его отражения и зеркала рассыпались</font>'
+     end
+     if zeratk>0 and sonar=0:
+     zerkalov=zerkalov-1
+     damageh=0
+     '<font color=green>Вы попали в зеркало и оно рассыпалось</font>'
+     end
+end
+
+if levitationV>0:gs'LevitationV'
+
+if barierV>0 and damageH>0:
+damageH=damageH-((damageH*barierV)/100)
+'<font color=red>Барьер противника снизил урон разуму на <B><<barierV>></B>%</font>'
+barierV=barierV-1
+end
+
+	 if gostbodyv>0:
+	 damageH=0
+	 gostbodyv-=1
+	 '<font color=red><<$namev>> пропустил удар через свое тело</font>'
+	 end
+
+
+if defenceHV=0 and damageH>0:
+gs'klonDefV'
+     if damageH>0:
+	 dynamic $rascheturonaHV
+	 '<font color=green><<$tipuronaHV>> нанес противнику <B><<damageH>></B> едениц урона воле</font>'
+     end
+end
+
+if defenceHv>0 and damageH>0:
+	 if defenceHv>damageH:
+	 defenceHv=defenceHv-damageH
+	 '<font color=green>Вы нанесли <B><<damageH>></B> едениц урона защите РАЗУМА противника</font>'
+	 damagew=0
+	 end
+	 if defenceHv<=damageH:
+	 damageH=damageH-defenceHv
+	 gs'klonDefV'
+	     if damageH>0:
+		 dynamic $rascheturonaHV
+		 defenceH=0
+		 '<font color=green>ЗАЩИТА РАЗУМА ПРОТИВНИКА УНИЧТОЖЕНА</font>'
+		 '<font color=green>Вы нанесли <B><<damageH>></B> едениц урона</font>'
+		 damageH=0
+	     end
+	 end
+end
+--- defenceHV ---------------------------------
+

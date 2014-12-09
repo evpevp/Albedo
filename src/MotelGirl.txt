@@ -1,0 +1,112 @@
+# MotelGirl
+*clr
+'<center><img src="pic/EvedonNarod/traktirribder.jpg"></center>'
+$metka = $ARGS[0]
+$loc = $CURLOC
+clr
+gs'stat'
+
+'Бойкая трактирщица повернулась к вам.'
+if slot=11:
+'Ходют тут бродяги всякие и так спасу нет из-за драпающих от демонов оборванцев.'
+end
+if slot=12 or slot=13:
+'Все цены на этой бумажке, грамоту то может знаешь?'
+end
+if slot>13:
+     if femin>200:
+     'Что вам угодно госпожа?'
+     end
+     if femin<=200:
+     'Что вам угодно господин?'
+     end
+end
+'Еда 4 гема.'
+'Пиво 5 гема.'
+'Виски 10 гемов.'
+'Комната стоит 25 гемов в сутки'
+clr
+gs'stat'
+!if cumface>0:SUB=SUB+1&whoreKD=whoreKD+1&'Трактирщик плотоядно ухмыльнулся разглядывая следы спермы на вашем лице.'
+!if cumlip>0:SUB=SUB+1&whoreKD=whoreKD+1&'Трактирщик плотоядно ухмыльнулся разглядывая следы спермы на ваших губах.'
+act 'Отойти от стойки':gt'fiMotel'
+
+     act 'Поболтать':
+     cla
+     *clr
+     minut=minut+15
+     'Вы завязываете разговор с трактирщицей.'
+      act 'Хмм, надо же.':gt $CURLOC
+     end
+     
+     
+	 if gem>=4:
+		 act 'Еды':
+		 cla
+		 *clr
+		 minut=minut+15
+		 gem=gem-4
+		 gs'eda'
+		 'Трактирщица достала вам тарелку, до верху наполненную едой.'
+		 gs'eat'
+		 act 'Отойти от стойки':gt $CURLOC
+		 end
+	 end
+
+	 if gem>=5:
+		 act 'Пива':
+		 cla
+		 minut=minut+15
+		 gem=gem-5
+		 fat=fat+1
+		 alko=alko+2
+		 golod=golod+3
+		 manna=manna+10
+		 wipo=wipo+10
+		 horny=horny+5
+	      *clr
+         '<center><img src="pic/EvedonOd/beer.jpg"></center>'
+		 'Трактирщица достала вам кружку, наполненную пенящимся пивом и вы быстренько ее выпили.'
+		 act 'Отойти от стойки':gt $CURLOC
+		 end
+	 end
+
+	 if gem>=10:
+		 act 'Виски':
+		 cla
+		 minut=minut+15
+		 gem=gem-10
+		 alko=alko+5
+		 manna=manna+20
+		 wipo=wipo+20
+		 horny=horny+10
+	     *clr
+         '<center><img src="pic/EvedonOd/wiskey.jpg"></center>'
+		 'Трактирщица достал вам стакан, наполненный вонючим пойлом, вы залпом его выпили.'
+		 act 'Отойти от стойки':gt $CURLOC
+		 end
+	 end
+	 
+if roomWMO>0:
+'У вас оплачено <<roomWMO>> дней'
+end
+
+
+	 if gem>=25:
+		 act 'Оплатить комнату 25 гемов сутки':
+		 cla
+		 minut=minut+15
+		 roomWfgem = input ("Сколько суток вы хотите оплатить? (25 гемов 1 сутки)")
+			 if roomWfgem*25 > gem:
+			 'У вас недостаточно гемов.'
+			 end
+			 if roomWgem*25 <= gem:
+			 gem=gem-roomWfgem*25
+			 roomWMO=roomWMO+roomWfgem
+			 'У вас оплачено <<roomWMO>> дней'
+			 end 
+		 act 'Отойти':gt $CURLOC
+		 end
+	 end
+--- MotelGirl ---------------------------------
+

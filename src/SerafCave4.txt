@@ -1,0 +1,84 @@
+# SerafCave4
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+15
+mag = 1
+!2
+
+'<center><H4>Логово Сераф</H4></center>'
+'<center>Количество переходов по комнатам лабиринта <<smazetime>> раз</center>'
+'<center><img src="pic/EvedonKD/cave4.jpg" ></center>'
+'Светлая пещера поросшая странными растениями.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+robrand=RAND(0,100)
+if robrand>=80:
+     if roratimes<=0:
+	 roratimes=1
+	 'Из кустов выскочил гиганский человекообразный волк.'
+	     if serafKey=0:
+		 'Оборотень бросился на вас.'
+         NORUN=1
+         monster=11
+		 $nameV='Вервольф гигант'
+		 lvlv=220
+		 strenV=710
+		 speedV=280
+		 agilV=280
+		 vitalV=600
+		 intelv=10
+		 willv=10
+		 program=21
+		 healthV=vitalV*10
+		 mannaV=intelV*10
+		 wipoV=willV*10
+		 act 'Драться':gt'before'
+		 exit
+		 end
+		 
+		 if serafKey=1:
+		 'Увидев вас, вервольф с воем убежал в кусты.'
+		 act 'Уйти':gt $curloc
+		 exit
+		 end
+	 end
+
+	 if roratimes>0:roratimes=roratimes-1
+
+end
+
+     if colser=4:
+     !красный
+	 act 'Дверь':smazetime+=1&colser=1&gt'serafcave3'
+	 !act 'Идти в дверь №2':colser=1&gt'serafcave7'
+	 end
+	 if colser=1:
+	 !синий
+	 act 'Дверь':smazetime+=1&colser=2&gt'serafcave8'
+	 !act 'Идти в дверь №4':colser=2&gt'serafcave6'
+	 end
+	 if colser=2:
+	 !желтый
+	 act 'Дверь с левой стороны':smazetime+=1&colser=3&gt'serafcave2'
+	 act 'Дверь в центре':smazetime+=1&colser=3&gt'serafcave5'
+	 act 'Дверь с правой стороны':smazetime+=1&colser=3&gt'serafcave6'
+	 end
+	 if colser=3:
+	 !зеленый
+	 act 'Дверь':smazetime+=1&colser=4&gt'serafcave7'
+	 !act 'Идти в дверь №6':colser=4&gt'serafcave5'
+	 end
+
+--- SerafCave4 ---------------------------------
+

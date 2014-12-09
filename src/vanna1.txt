@@ -1,0 +1,26 @@
+# vanna1
+*clr
+minut=minut+1
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><H4>ВАННАЯ КОМНАТА</H4></center>'
+'<center><img src="pic/room/vanA.jpg" ></center>'
+'В ванной все стандартно ((умывальник|umiv)) над которым висит ((зеркало|mirror)) и большая ((ванная|van))'
+clr
+gs'stat'
+
+if shampoo <= 1:shampoo = 10
+if stanok <= 1:stanok = 10
+if milo <= 1:milo = 10
+
+
+
+
+act 'Коридор':gt'koridor1'
+--- vanna1 ---------------------------------
+

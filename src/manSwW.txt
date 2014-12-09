@@ -1,0 +1,224 @@
+# manSwW
+if $ARGS[0]='1':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic/EvedonOd/vorknife.jpg" ></center>'
+'Устрашающий нож.'
+'Урон 10'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if vorknife = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if gem >= payclo:
+			 act 'Купить':
+			 cla
+			 set gem = gem - payclo
+			 set vorknife = 1
+			 !set kostumB = bedra
+			 'Вы заплатили <<payclo>> гемов и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+			 act 'Выбрать основным оружием в бою':
+			 cla
+			 gs'WeapNill'
+			 !оружейный слот для статов
+			 sword = 1
+			 !оружие для шкафа
+			 vorknife = 2
+			 !тип оружия 1 или 2 для боевой системы
+			 weapon=1
+			 !урон для боевой системы
+			 wepAtk=10
+			 GOTO $locP, $metkaP
+			 end
+     end
+end
+
+if $ARGS[0]='2':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic/EvedonOd/vordubina.jpg" ></center>'
+'Воровская дубинка.'
+'Урон 10'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if vordubina = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if gem >= payclo:
+			 act 'Купить':
+			 cla
+			 set gem = gem - payclo
+			 set vordubina = 1
+			 !set kostumB = bedra
+			 'Вы заплатили <<payclo>> гемов и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+			 act 'Выбрать основным оружием в бою':
+			 cla
+			 gs'WeapNill'
+			 !оружейный слот
+			 sword = 2
+			 !оружие
+			 vordubina = 2
+			 !тип оружия 1 или 2
+			 weapon=2
+			 !урон
+			 wepAtk=10
+			 GOTO $locP, $metkaP
+			 end
+     end
+end
+
+if $ARGS[0]='3':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic/EvedonOd/mech.jpg" ></center>'
+'Короткий меч.'
+'Урон 30'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if mech = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if gem >= payclo:
+			 act 'Купить':
+			 cla
+			 set gem = gem - payclo
+			 set mech = 1
+			 !set kostumB = bedra
+			 'Вы заплатили <<payclo>> гемов и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+			 act 'Выбрать основным оружием в бою':
+			 cla
+			 gs'WeapNill'
+			 !оружейный слот для статов
+			 sword = 1
+			 !оружие для шкафа
+			 mech = 2
+			 !тип оружия 1 или 2 для боевой системы
+			 weapon=1
+			 !урон для боевой системы
+			 wepAtk=30
+			 GOTO $locP, $metkaP
+			 end
+     end
+end
+
+if $ARGS[0]='4':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic/EvedonOd/mech2.jpg" ></center>'
+'Средний меч.'
+'Урон 50'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if mech2 = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if gem >= payclo:
+			 act 'Купить':
+			 cla
+			 set gem = gem - payclo
+			 set mech2 = 1
+			 !set kostumB = bedra
+			 'Вы заплатили <<payclo>> гемов и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+			 act 'Выбрать основным оружием в бою':
+			 cla
+			 gs'WeapNill'
+			 !оружейный слот для статов
+			 sword = 3
+			 !оружие для шкафа
+			 mech2 = 2
+			 !тип оружия 1 или 2 для боевой системы
+			 weapon=1
+			 !урон для боевой системы
+			 wepAtk=50
+			 GOTO $locP, $metkaP
+			 end
+     end
+end
+
+if $ARGS[0]='5':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic/EvedonOd/mech3.jpg" ></center>'
+'Дворянский меч.'
+'Урон 70'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if mech3 = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if gem >= payclo:
+			 act 'Купить':
+			 cla
+			 set gem = gem - payclo
+			 set mech3 = 1
+			 !set kostumB = bedra
+			 'Вы заплатили <<payclo>> гемов и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+			 act 'Выбрать основным оружием в бою':
+			 cla
+			 gs'WeapNill'
+			 !оружейный слот для статов
+			 sword = 3
+			 !оружие для шкафа
+			 mech3 = 2
+			 !тип оружия 1 или 2 для боевой системы
+			 weapon=1
+			 !урон для боевой системы
+			 wepAtk=70
+			 GOTO $locP, $metkaP
+			 end
+     end
+end
+
+if $ARGS[0]='6':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic/EvedonOd/desertSword.jpg" ></center>'
+'Пустынный меч.'
+'Урон 45'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if desertSword = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if gem >= payclo:
+			 act 'Купить':
+			 cla
+			 set gem = gem - payclo
+			 set desertSword = 1
+			 !set kostumB = bedra
+			 'Вы заплатили <<payclo>> гемов и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+			 act 'Выбрать основным оружием в бою':
+			 cla
+			 gs'WeapNill'
+			 !оружейный слот для статов
+			 sword = 3
+			 !оружие для шкафа
+			 desertSword = 2
+			 !тип оружия 1 или 2 для боевой системы
+			 weapon=1
+			 !урон для боевой системы
+			 wepAtk=45
+			 GOTO $locP, $metkaP
+			 end
+     end
+end
+--- manSwW ---------------------------------
+

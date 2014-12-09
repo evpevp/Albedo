@@ -1,0 +1,103 @@
+# marryWorld
+$metkaFuck = $ARGS[0]
+$locFuck = $CURLOC
+gs'stat'
+'<<$namefrendM>>'
+'<<$frencloM>> <<$fempropM>> <<$faceM>>'
+
+act 'Уйти':GOTO $locBed, $metkaBed
+
+
+if Mpol=0:
+     if brakW=1:
+     
+     end
+     if brakW=2:
+     
+     end
+     if brakW=3:
+     
+     end
+end
+if Mpol=1:
+
+     if marrygemday+10<=daystart:
+     '<<$namefrendM>> просит у вас денег на хозяйство.'
+		 if brakW=1:
+		 marrygem=100
+		 'Ей нужно 100 гем на 10 дней'
+		 end
+		 if brakW=2:
+		 marrygem=500
+		 'Ей нужно 500 гем на 10 дней'
+		 end
+		 if brakW=3:
+		 marrygem=1000
+		 'Ей нужно 1000 гем на 10 дней'
+		 end
+		 
+		 if marrygem<=gem:
+		     act 'Дать денег':
+		     cla
+		     gem-=marrygem
+		     marrygemday=daystart
+		     'Вы дали денег жене.'
+		     act 'Отойти':GOTO $locBed, $metkaBed   
+		     end
+		 
+		 end
+     else
+     '<<$namefrendM>> предлагает вам поесть или принять уже приготовленную для вас ванну.'
+         act 'Есть 5 мин':
+		 cla
+		 *clr
+		 minut=minut+5
+		 manna=manna+20
+		 wipo=wipo+20
+		 gs'eda'
+		 'Вы сели за стол, любезно сервированный женой и вы приступили к трапезе.'
+		 gs'eat'
+		 act 'Оставить посуду на столе':GOTO $locBed, $metkaBed
+		 end
+     
+         act 'Мыться 15 мин':
+		 cla
+		 minut=minut+15
+		 sweat=-6
+		 wipo=wipo+5
+		 manna=manna+20
+		 'Вы за пятнадцать минут вымылись в кадушке.'
+		 	 if anus >1 and anus<=30:anus=anus-1&'Вода со щелоком щиплет в попе, но кажется анус немного уменьшается.'
+		     if anus>30 and anus < 50:anus=anus-5&'Пока вы мылись в ваш не закрывающийся анус наливалась вода со щелоком, жжение довольно неприятное, но кажется анус немного сократился.'
+		     if anus>=50 and anus<100:anus=anus-10&'Пока вы мылись в ваш растянутый анус заливалась вода со щелоком, жжет очень сильно, но кажется анус немного сжался.'
+		     if anus>=100:anus=anus-50&'Пока вы мылись в ваше огромное дупло заливалась вода со щелоком, жжение невероятное, но кажется анус немного уменьшился.'
+		 gs'bassW'
+		 if alko>0:alko=alko-5
+		 if alko<0:alko=0
+		 act 'Вылезти из кадки':GOTO $locBed, $metkaBed
+		 end
+		 
+		 act 'Супружеский долг':
+		 $namev=$namefrendM
+		 pointSS=0
+		 gt'sexsisteman','vibor'
+		 end
+     
+     end
+     
+     
+     
+end
+
+
+
+
+
+
+
+
+
+
+
+--- marryWorld ---------------------------------
+

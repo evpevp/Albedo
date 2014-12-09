@@ -1,0 +1,205 @@
+# fortW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+
+if SolundAtk>0:
+sweat+=3
+clr
+gs'stat'
+gs'time'
+'<center><H4>Разрушенный форт Каэр Дум</H4></center>'
+'<center><img src="pic/Evedon/demonrealm.jpg" ></center>'
+'Вокруг пепелище и остовы разрушенных зданий. Земля раскаленная и красного цвета, кое где виднеются ручейки огненной лавы. Среди обгоревших скелотов зданий бродят разнообразные демонические твари.'
+fcolor=rgb(0,0,0)
+bcolor=rgb(144,0,32)
+LCOLOR = rgb(0,0,0)
+
+
+demrand=RAND(0,100)
+	 if demrand<20:
+	 !ничего
+	 end  
+	 if demrand>=20 and otkritTA>0:
+	 demevrand=RAND(0,4)
+		 if demevrand=0:
+		 sera=sera+1
+		 *nl
+		 'Вы нашли окаменевший кусок демонической серы.'
+		 end
+		 if demevrand=1:
+		 cla
+		 *clr
+		 fcolor=rgb(200,200,200)
+		 gs'impW'
+		 '<center><img src="pic/Evedon\demonrealm.jpg" ></center>'
+		 'На вас набросился маленького роста красный бес.'
+		 act 'Драться':gt'before'
+		 exit
+		 end
+		 if demevrand=2:
+		 cla
+		 *clr
+		 fcolor=rgb(200,200,200)
+		 gs'hellhoundW'
+		 '<center><img src="pic/Evedon\demonrealm.jpg" ></center>'
+		 'На вас набросился огромный демонический пес.'
+		 act 'Драться':gt'before'
+		 exit
+		 end
+		 if demevrand=3:
+		 cla
+		 *clr
+		 fcolor=rgb(200,200,200)
+		 gs'hellbullW'
+		 '<center><img src="pic/Evedon\demonrealm.jpg" ></center>'
+		 'На вас набросился огромный демонический бык.'
+		 act 'Драться':gt'before'
+		 exit
+		 end
+		 if demevrand=4:
+		 cla
+		 *clr
+		 fcolor=rgb(200,200,200)
+		 gs'minoW'
+		 '<center><img src="pic/Evedon\demonrealm.jpg" ></center>'
+		 'Громыхая доспехами вам на встречу вышел здоровенный полу человек, полу бык.'
+		 act 'Драться':gt'before'
+		 exit
+		 end
+	end
+	
+	 act 'Бродить по пепелищу 15 минут':
+     minut=minut+15
+     gt $CURLOC
+     end
+
+
+end
+
+if SolundAtk=0:
+'<center><H4>Форт Каэр Дум</H4></center>'
+'<center><img src="pic/Evedon/fort.jpg" ></center>'
+if SolundorDead=0:'Величественная крепость, гордо возвышающаяся над пустынной местностью.'
+if SolundorDead=1:'Полуразрушенный атакой демона Солюндора форт с растрескавшимися стенами. Множество куч камня и бревен напоминают, что на этих местах были дома.'
+clr
+gs'stat'
+gs'time'
+
+if serafkey>0 and akbalQW=1000 and deadMeh=1 and SolundorDead=0:
+fcolor=rgb(0,0,0)
+bcolor=rgb(144,0,32)
+LCOLOR = rgb(0,0,0)
+*clr
+'<center><img src="pic/EvedonMonsters\solundor.jpg" ></center>'
+'<b>Небо потемнело и стало красным. С неба прогрохотал ужасающий рев. "Дрожите смертные! Вас пришел покарать высший демон, всевидящий Солюндор."</b>'
+'<b>Возвышаясь над башнями показался огромный, огненный демон.</b>'
+     act 'Идти к демону':
+     cla
+	 $nameV='Солюндор'
+	 lvlv=1500
+	 strenV=30000
+	 speedV=speed+5
+	 agilV=agil+5
+	 vitalV=30000
+	 intelv=40000
+	 willv=1100
+	 program=52
+	 healthV=vitalV*10
+	 mannaV=intelV*10+intelV*10
+	 wipoV=willV*10
+	 NORUN=1
+	 monster=31
+	 'Демон не обращая внимания на людей ударами кулаков разносит дома в клочья.'
+	 act 'Драться':gt'before'
+	 end
+	 
+	 act 'Бежать от демона':
+     cla
+     minut+=60
+	 SolundAtk=1
+	 'Демон не обращая внимания на людей ударами кулаков разносит дома в клочья. Вы пользуясь этим удрали от демона.'
+	 act 'Перевести дух':gt'fishW'
+	 end
+
+exit
+end
+
+if DemonMorf>=10:
+ atkrand=RAND(0,100)
+     if atkrand>=90:
+     cls
+     *clr
+	 pogonarand=RAND(5,10)
+	 'Магистры обнаружили вашу демоническую природу.'
+	 $nameV='Старший магистр ордена четырехлистника'
+	 lvlv=186
+	 strenV=300
+	 speedV=150
+	 agilV=150
+	 vitalV=300
+	 intelv=400
+	 willv=110
+	 program=34
+	 healthV=vitalV*10
+	 mannaV=intelV*10+intelV*18
+	 wipoV=willV*10
+	 BATpotionV=10
+	 mortalv=4
+	 NORUN=1
+	 armorDefV=200
+	 klonv=1
+	 
+	 '<center><img src="pic/EvedonMonsters/magistri.jpg"></center>'
+	 'Вас окружили четыре мага из ордена четырехлистника и приказали вам сдаться.'
+	 act 'Драться':gt'before'
+     exit
+     end
+end
+
+
+'((Трактир Усталый странник|foTraktir|minut=minut+5))'
+'((Местное отделение гильдии караванщиков Эведона|foKarGuild|minut=minut+5))'
+'((Лекарь|foLekar|minut=minut+5))'
+'((Резиденция ордена Четырехлистника|foOrden|minut=minut+5))'
+'((Салон мадам Жозефины|foSalon|minut=minut+5))'
+!'Казармы гвардии Эведона'
+'<a href="exec: gt''foKazarm''">Казармы стражи Каэр Дума.</a>'
+if hour>=12 and hour<21:'<a href="exec: gt''ElenDuplo'',''start''">По улице прохаживается размалеванная Элен по прозвищу дупло, демонстрируя свои прелести редким прохожим.</a>'
+if hour>=9 and hour<21:'<a href="exec: gt''korobeinikFO'',''start''">Коробейник бродит по улицам и зазывает покупателей..</a>'
+
+     act 'Бродить по улицам 20 минут':
+     minut=minut+20
+     gt $CURLOC
+     end
+end
+
+
+	 act 'Идти в пустыню (1 час)':
+	 minut=minut+60
+	 gt'desertW'
+	 end
+	 
+	 act 'Идти в болота (1 час)':
+	 minut=minut+60
+	 gt'marshW'
+	 end
+	 
+	 act 'Выйти на Эведонский тракт (1 час)':
+	 minut=minut+60
+	 roadMark=9
+	 gt'roadW'
+	 end
+	 
+	 if V_Roziske>0 and V_RoziskeDay!day:
+     randroz=RAND(0,100)
+         if randroz>=90:gt'Rozisk'
+     end
+--- fortW ---------------------------------
+

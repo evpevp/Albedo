@@ -1,0 +1,25 @@
+# treedomW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Дом в дереве</H4></center>'
+'<center><img src="pic/Evedon/treedom.jpg" ></center>'
+'Весь дом забит стеллажами с книгами, пучками сушащихся трав и разноцветными склянками.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+'В домике никого нет.'
+
+act 'Выйти':
+minut=minut+5
+gt'df1_8'
+end
+--- treedomW ---------------------------------
+

@@ -1,0 +1,8 @@
+# polChange
+
+if penis=0 and vagina=0:
+vagina=vagina+1
+'У вас вырастает влагалище.'
+end
+--- polChange ---------------------------------
+

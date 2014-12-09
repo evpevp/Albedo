@@ -1,0 +1,353 @@
+# описания
+
+!$femprop='<<grud>> - <<talia>> - <<bedra>>'
+
+
+if SUB>DOM:SUB=SUB-DOM&DOM=0
+if DOM>SUB:DOM=DOM-SUB&SUB=0
+if SUB=DOM:SUB=0&DOM=0
+!tits=tit/10
+
+femin=tit+face+hand+brist+ass+thight+leg
+
+if femin<200:
+     $femprop='<<grud>> (<<podgrud>>)- <<talia>> - <<bedra>>, разница между талией и бедрами <<bedra-talia>> см'
+     if salo > 600:$bodyfat='У вас огромное, раздавшееся во все стороны, словно давно перезревший арбуз, пузо, - то ли ваша гордость, то ли сущее мучение, потому как то и дело вы вынуждены ловить на себе неприязненные взоры, а иногда и глупые смешки со словами "дяденька, а вы случайно не беременны?'&$assfat='Между волосатых и одряхлевших, от изрядно скопившегося в них целлюлита, ягодиц'
+     if salo > 400 and salo <= 600:$bodyfat='У вас большой, выпирающий вперед, живот, который вы частенько, обхватив руками, отчего-то любите поглаживать, очевидно чувствуя себя за ним как за каменной стеной.'&$assfat='Между волосатых и покрытых жиром ягодиц'
+     if salo > 200 and salo <= 400:$bodyfat='У вас вырос небольшой животик, который вы при важном каком случае нет-нет, но иногда старательно втягиваете в себя, дабы на глазах сохранить прежнюю удалую форму.'&$assfat='Между волосатых ягодиц'
+     if salo > 100 and salo <= 200:$bodyfat='Вы прекрасно сложены и стройны, аж глаза не нарадуются'&$assfat='Между волосатых ягодиц'
+     if salo > 50 and salo <= 100:$bodyfat='У вас поджарое телосложение, которое вас не в меру стройнит.'&$assfat='Между тощих волосатых ягодиц'
+     if salo >= 10 and salo <= 50:$bodyfat='Вы порядочно исхудали, что сквозь истонченную, пергаментную кожу без особых усилий угадывается каждая черточка вашего скелета'&$assfat='Между тощих волосатых ягодиц'
+	 if salo < 10:$bodyfat='Вы настолько страшно исхудали, что, ваш, провалившийся в никуда, живот, да уродливо выпирающие из под кожи ребра, превратили вас в хрупкого вида скелет, заставляющий в ужасе содрогнуться каждого встречного.'&$assfat='Между плоских, как гладильная доска, волосатых ягодиц'
+	 if vidage<18:$assfat='Между ягодиц'
+end
+if femin>=200:
+     $femprop='<<grud>> (<<podgrud>>)- <<talia>> - <<bedra>>, разница между талией и бедрами <<bedra-talia>> см'
+     if salo > 600:$bodyfat='Вас безудержно разнесло во стороны и массы жира, словно замешанное на дрожжах сдобное тесто, густыми слоями покрыл ваш обрюзгший, отталкивающего вида, необъятный живот, а бесформенные, жидкие бока грузно опали вниз.'&$assfat='Между массивных, рыхлых, как желе, ягодиц'
+     if salo > 400 and salo <= 600:$bodyfat='У вас появились складки жира на боках и спине, но в целом формы у вас еще очень женственные.'&$assfat='Между огромных и мягких ягодиц'
+     if salo > 200 and salo <= 400:$bodyfat='Ваше тело покрывает мягкий слой жира, но некоторые утверждают, что от этого вы выглядите только женственней.'&$assfat='Между больших и мягких ягодиц'
+     if salo > 100 and salo <= 200:$bodyfat='Вы прекрасно сложены и стройны, аж глаза не нарадуются.'&$assfat='Между округлых и мягких ягодиц'
+     if salo > 50 and salo <= 100:$bodyfat='Вы стройны и на теле не видно ни грамма лишнего жира.'&$assfat='Между не больших и упругих ягодиц'
+     if salo >= 10 and salo <= 50:$bodyfat='Вы слишком стройны, даже можно сказать худы, сквозь кожу просматриваются ребра и на теле не видно ни малейшего признака жира, а ведь именно он делает фигуру женственной.'&$assfat='Между маленьких ягодиц'
+	 if salo < 10:$bodyfat='Вы настолько страшно исхудали, что, ваш, провалившийся в никуда, живот, да уродливо выпирающие из под кожи ребра, превратили вас в хрупкого вида скелет, заставляющий в ужасе содрогнуться каждого встречного.'&$assfat='Между истощавших донельзя ягодиц'
+end
+
+
+if hlong<30:$hlong='короткие'
+if hlong>=30 and hlong<60:$hlong='ниспадающие до плеч'
+if hlong>=60 and hlong<90:$hlong='ниспадающие до спины'
+if hlong>=90:$hlong='ниспадающие до попы'
+
+
+
+if face<40:
+
+if tan <= 0:set $tan = ''
+if tan > 0:set $tan = 'загорелое'
+
+if hcol = 0:set $hair = 'У вас <<$hlong>>, черные волосы,'&$hcolberd='черная'
+if hcol = 1:set $hair = 'У вас <<$hlong>>, русые волосы,'&$hcolberd='русая'
+if hcol = 2:set $hair = 'У вас <<$hlong>>, рыжие волосы,'&$hcolberd='рыжая'
+if hcol = 3:set $hair = 'У вас <<$hlong>>, светлые волосы,'&$hcolberd='светлая'
+if hcol = 4:set $hair = 'У вас <<$hlong>>, седые волосы,'&$hcolberd='седая'
+
+if glacol = 0:set $glacol = 'карие глаза'
+if glacol = 1:set $glacol = 'серые глаза'
+if glacol = 2:set $glacol = 'зеленые глаза'
+if glacol = 3:set $glacol = 'голубые глаза'
+
+if berd <= 0:set $berd = 'выбритое до синевы лицо'
+if face>=20 and berd <= 0:set $berd = 'гладкое лицо юноши на котором не растет борода'
+if berd > 0 and berd < 5:set $berd = 'небольшая щетина на лице'
+if berd >= 5 and berd<30:set $berd = 'густая, <<$hcolberd>> борода на лице'
+if berd >= 30:set $berd = 'длинная, <<$hcolberd>> борода на лице'
+
+set $facem = '<<$hair>> <<$berd>> и <<$glacol>>.'
+
+end
+
+
+
+
+if face >= 40:
+
+     if face >= 60 and face < 80:
+         if lip < 1:lip=1
+         if skin < 1:skin=1
+         if glaraz < 1:glaraz=1
+         if resnic < 1:resnic=1
+     end
+     if face >= 80 and face<100:
+         if lip < 2:lip=2
+         if skin < 2:skin=2
+         if glaraz < 2:glaraz=2
+         if resnic < 2:resnic=2
+     end
+     if face=100:
+         if lip < 3:lip=3
+         if skin < 3:skin=3
+         if glaraz < 3:glaraz=3
+         if resnic < 2:resnic=2
+     end
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+if hapri = 0:set $hapri = 'спутавшиеся'
+if hapri = 1:set $hapri = 'аккуратно уложенные'
+if hcol = 0 and curly <= 0:set $hair = 'У вас <<$hlong>> <<$hapri>> прямые черные волосы.'
+if hcol = 1 and curly <= 0:set $hair = 'У вас <<$hlong>> <<$hapri>> прямые русые волосы.'
+if hcol = 2 and curly <= 0:set $hair = 'У вас <<$hlong>> <<$hapri>> прямые рыжие волосы.'
+if hcol = 3 and curly <= 0:set $hair = 'У вас <<$hlong>> <<$hapri>> прямые светлые волосы.'
+if hcol = 0 and curly > 0:set $hair = 'У вас <<$hlong>> <<$hapri>> кудрявые черные волосы.'
+if hcol = 1 and curly > 0:set $hair = 'У вас <<$hlong>> <<$hapri>> кудрявые русые волосы.'
+if hcol = 2 and curly > 0:set $hair = 'У вас <<$hlong>> <<$hapri>> кудрявые рыжие волосы.'
+if hcol = 3 and curly > 0:set $hair = 'У вас <<$hlong>> <<$hapri>> кудрявые светлые волосы.'
+if lip > 4:set lip = 4
+if serafLip=1:lip=4
+if pirsingLip=0:$pirsingLip=''
+if pirsingLip=1:$pirsingLip='c пирсингом в виде кольца в нижней губе'
+if pirsingLip=2:$pirsingLip='с пирсингом в виде штанги в нижней губе'
+if pirsingTonk=0:$pirsingTonk=''
+if pirsingTonk=1:$pirsingTonk='Иногда при разговоре во рту у вас видно то, что язык проколот и в нем стоит штанга.'
+if lip = 0:set $lip = 'У вас тонкие губы <<$pirsingLip>>. <<$pirsingTonk>>'
+if lip = 1:set $lip = 'У вас нормальные губы <<$pirsingLip>>. <<$pirsingTonk>>'
+if lip = 2:set $lip = 'У вас пухленькие губы <<$pirsingLip>>. <<$pirsingTonk>>'
+if lip = 3:set $lip = 'У вас крупные пухлые и сочные губы <<$pirsingLip>>. <<$pirsingTonk>>'
+if lip = 4:set $lip = 'У вас толстые и огромные губы <<$pirsingLip>>. <<$pirsingTonk>>'
+if lip = 5:set $lip = 'У вас огромные лоснящиеся от влаги, черные губы  <<$pirsingLip>>. <<$pirsingTonk>>'
+if tan <= 0:set $tan = 'бледная'
+if tan > 0:set $tan = 'загорелая'
+if skin > 4:set skin = 4
+if pirsingBrow=0:$pirsingBrow=''
+if pirsingBrow=1:$pirsingBrow='Ваша бровь проколота и в нее вдето кольцо.'
+if pirsingBrow=2:$pirsingBrow='Ваша бровь проколота и в нее вдета штанга.'
+if pirsingEar=0:$pirsingEar=''
+if pirsingEar=1:$pirsingEar='В уши вставлены сережки.'
+
+if skin = 0:set $skin = 'Ваша <<$tan>> кожа неровная и покрыта прыщами и черными точками. <<$pirsingBrow>> <<$pirsingEar>>'
+if skin = 1:set $skin = 'Ваша <<$tan>> кожа неровная и кое-где видно прыщики. <<$pirsingBrow>> <<$pirsingEar>>'
+if skin = 2:set $skin = 'Ваша <<$tan>> кожа неровная, но прыщей не видно. <<$pirsingBrow>> <<$pirsingEar>>'
+if skin = 3:set $skin = 'У вас <<$tan>>, гладкая и ухоженная кожа. <<$pirsingBrow>> <<$pirsingEar>>'
+if skin = 4:set $skin = 'У вас <<$tan>>, гладкая как стекло и шелковистая на ощупь кожа. <<$pirsingBrow>> <<$pirsingEar>>'
+if glacol = 0:set $glacol = 'карие'
+if glacol = 1:set $glacol = 'серые'
+if glacol = 2:set $glacol = 'зеленые'
+if glacol = 3:set $glacol = 'голубые'
+if resnic > 2:set resnic = 2
+if resnic = 0:set $resnic = 'с короткими ресницами'
+if resnic = 1:set $resnic = 'с нормальной длины ресницами'
+if resnic = 2:set $resnic = 'с длинными ресницами'
+if glaraz > 3:set glaraz = 3
+if glaraz = 0:set $glaza = 'У вас маленькие <<$glacol>> глаза, <<$resnic>>.'
+if glaraz = 1:set $glaza = 'У вас среднего размера <<$glacol>> глаза, <<$resnic>>.'
+if glaraz = 2:set $glaza = 'У вас большие <<$glacol>> глаза, <<$resnic>>.'
+if glaraz = 3:set $glaza = 'У вас огромные <<$glacol>> глаза, <<$resnic>>.'
+
+if mop = -1:set $mop = 'У вас потек макияж.'
+if mop = 0:set $mop = 'У вас нет макияжа.'
+if mop = 1:set $mop = 'У вас легкий, практически незаметный макияж.'
+if mop = 2:set $mop = 'У вас нормальный макияж.'
+if mop = 3:set $mop = 'У вас яркий, вызывающий макияж.'
+
+if leghair <= 0:set legkoef = 3&set $leghair = 'гладкие и шелковистые' 
+if leghair > 0 and leghair <= 2:set legkoef = 0&set $leghair = 'немного шершавые от маленьких волосиков' 
+if leghair > 2 and leghair <= 5:set legkoef = 0&set $leghair = 'покрытые жиденькими волосами'
+if leghair > 5:set legkoef = 0&set $leghair = 'волосатые' 
+ 
+if lobok <= 0:set lobkoef = 3&set $lobok = 'гладкая'
+if lobok > 0 and lobok <= 2:set lobkoef = 0&set $lobok = 'покрытая пушком'
+if lobok > 2:set lobkoef = 0&set $lobok = 'волосатая'
+
+set $facem = '<<$hair>> <<$lip>> <<$skin>> <<$glaza>> <<$mop>>'
+end
+
+if vagina>0:
+     if pirsingPussy=0:$pirsingPussy=''
+     if pirsingPussy=1:$pirsingPussy='В клитор вставлено кольцо.'
+     if pirsingPussy=2:$pirsingPussy='В клитор вставлена штанга.'
+     if vag=0:$vagrast='девственная'
+     if vag>0 and vag<5:$vagrast='нежная'
+     if vag>=5 and vag<10:$vagrast='розовая'
+     if vag>=10 and vag<25:$vagrast='разработанная'
+     if vag>=25 and vag<30:$vagrast='растянутая'
+     if vag>=30:$vagrast='раздолбанная'
+     
+     if horny<50:$hornyw='<<$lobok>> <<$vagrast>> киска <<$pirsingPussy>>'
+     if horny>=50 and horny<100:$hornyw='<<$lobok>> <<$vagrast>> мокренькая киска <<$pirsingPussy>>'
+     if horny>=100:$hornyw='<<$lobok>> <<$vagrast>> истекающая соками от желания киска <<$pirsingPussy>>'
+end
+
+!'
+if newstatonce=0:
+newstatonce=1
+leg=0
+thight=0
+ass=0
+penis=18
+vagina=0
+brist=0
+hand=0
+face=0
+end
+'
+
+if penis>0 and vagina=0:pol=0
+if penis=0 and vagina>0:pol=1
+if penis>0 and vagina>0:pol=2
+if penis=0 and vagina=0:pol=3
+
+if face<0:face=0
+if face>100:face=100
+if hand<0:hand=0
+if hand>100:hand=100
+if brist<0:brist=0
+if brist>100:brist=100
+if ass<0:ass=0
+if ass>100:ass=100
+if thight<0:thight=0
+if thight>100:thight=100
+if leg<0:leg=0
+if leg>100:leg=100
+if tit<0:tit=0
+if tit>300:tit=300
+
+if pirsingNipple=1:$pirsing='в которые вставлены колечки'
+if pirsingNipple=2:$pirsing='в которые вставлены штанги'
+
+if tits<=2:$sosk='маленькими розовыми сосочками'&$titOp='остренькие девичьи грудки'
+if tits>2 and tits<=4:$sosk='розовыми сосками'&$titOp='стоящие торчком женские груди'
+if tits>4 and tits<=6:$sosk='большими розовыми сосками'&$titOp='объемные женские груди'
+if tits>6:$sosk='огромными как блюдца розовыми сосками'&$titOp='огромная женская грудь'
+
+if tits<=0:$tits=''
+if tits>0:$tits='У вас <<$titOp>> <<$titsw>> c <<$sosk>> <<$pirsing>>.'
+
+femin=face+hand+brist+ass+thight+leg+tit
+
+if vidage<21:
+if femin=0:$femin='Для окружающих вы выглядите как мужественный юноша.'
+if femin>0 and femin<100:$femin='Для окружающих вы выглядите как симпатичный юноша.'
+if femin>=100 and femin<200:$femin='Для окружающих вы выглядите как симпатичный мальчик.'
+if femin>=200 and femin<400:$femin='Окружающие в основном принимают вас за девушку.'
+if femin>=400:$femin='Вы выглядите как девушка'
+end
+if vidage>=21 and vidage<45:
+if femin=0:$femin='Для окружающих вы выглядите как брутальный мужик.'
+if femin>0 and femin<100:$femin='Для окружающих вы выглядите как нормальный мужчина.'
+if femin>=100 and femin<200:$femin='Для окружающих вы выглядите как симпатичный мальчик.'
+if femin>=200 and femin<400:$femin='Окружающие в основном принимают вас за девушку.'
+if femin>=400:$femin='Вы выглядите как девушка'
+end
+if vidage>=45 and vidage<60:
+if femin=0:$femin='Для окружающих вы выглядите как стареющий мужчина.'
+if femin>0 and femin<100:$femin='Для окружающих вы выглядите как стареющий мужчина.'
+if femin>=100 and femin<200:$femin='Для окружающих вы выглядите как стареющий мальчишка.'
+if femin>=200 and femin<400:$femin='Окружающие в основном принимают вас за женщину в возрасте.'
+if femin>=400:$femin='Вы выглядите как стареющая женщина'
+end
+if vidage>=60:
+if femin=0:$femin='Для окружающих вы выглядите как старик.'
+if femin>0 and femin<100:$femin='Для окружающих вы выглядите как старик.'
+if femin>=100 and femin<200:$femin='Для окружающих вы выглядите как старик.'
+if femin>=200 and femin<400:$femin='Вы выглядите как старуха.'
+if femin>=400:$femin='Вы выглядите как старуха'
+end
+
+if facetattoo=0:$ftattoo=''
+if facetattoo=1:$ftattoo='На шее татуировка в виде буквы К означающая что вы банщица Корнелиуса.'
+
+if vidage<45:
+if face < 10:$face='Грубое <<$tan>> мужское лицо, с резкими чертами. <<$facem>> <<$ftattoo>>'
+if face >= 10 and face < 20:$face='Мужское <<$tan>> лицо с правильными чертами. <<$facem>>'
+if face >= 20 and face < 30:$face='Гладкое и мягкое <<$tan>> лицо юноши с правильными чертами. <<$facem>> <<$ftattoo>>'
+if face >= 30 and face < 40:$face='Мягкое и нежное <<$tan>> лицо мальчика с правильными чертами. <<$facem>> <<$ftattoo>>'
+if face >= 40 and face < 50:$face='Андрогинное, смешанного типа лицо, в чертах которого сплелись мужское и женское начало. <<$facem>> <<$ftattoo>>'
+if face >= 50 and face < 60:$face='Мягкое лицо в чертах которого прослеживается женственность. <<$facem>> <<$ftattoo>>'
+if face >= 60 and face < 80:$face='Симпатичное женское лицо с правильными чертами. <<$facem>> <<$ftattoo>>'
+if face >= 80:$face='Очень красивое женское лицо. <<$facem>> <<$ftattoo>>'
+end
+if vidage>=45 and vidage<60:
+if face < 10:$face='Покрытое морщинами <<$tan>> мужское лицо, с резкими чертами. <<$facem>> <<$ftattoo>>'
+if face >= 10 and face < 20:$face='Мужское, морщинистое <<$tan>> лицо с правильными чертами. <<$facem>>'
+if face >= 20:$face='Морщинистое <<$tan>> женское лицо. <<$facem>> <<$ftattoo>>'
+end
+if vidage>=60:
+if OrdenRang!7:$facepresetcherti='грубыми'
+if OrdenRang=7:$facepresetcherti='тонкими'
+$face='Старое и морщинистое лицо, с <<$facepresetcherti>> чертами. <<$facem>> <<$ftattoo>>'
+end
+
+if hand < 10:$hand='Крепкие мозолистые мужские руки покрытые венами и широкие, мощные плечи.'
+if hand >= 10 and hand < 20:$hand='Крепкие мужские руки и широкие плечи.'
+if hand >= 20 and hand < 30:$hand='Гладкие юношеские руки с обыкновенными плечами.'
+if hand >= 30 and hand < 40:$hand='Мягкие и гладкие мальчишечьи руки с узкими плечами.'
+if hand >= 40 and hand < 50:$hand='Андрогинные руки и плечи, принадлежность которых к конкретному полу сложно определить.'
+if hand >= 50 and hand < 60:$hand='Гладкие и ровные девичьи руки с узенькими плечами.'
+if hand >= 60 and hand < 80:$hand='Узкие женские плечи с мягкими девичьими руками.'
+if hand >= 80:$hand='Узенькие женские плечи с тонкими нежными руками.'
+
+if pirsingLabia=0:$pirsingLabia=''
+if pirsingLabia=1:$pirsingLabia='В пупок продето кольцо.'
+if pirsingLabia=2:$pirsingLabia='В пупок продета штанга.'
+
+if vidage<45:
+if brist < 10:$brist='Мужской мощный торс. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 10 and brist < 20:$brist='Мужской торс. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 20 and brist < 30:$brist='Юношеский торс. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 30 and brist < 40:$brist='Мальчишечий торс. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 40 and brist < 50:$brist='Андрогинный торс могущий принадлежать как мужчине, так и женщине. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 50 and brist < 60:$brist='Гладкий девичий с небольшим намеком на талию торс. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 60 and brist < 80:$brist='Женский торс с отчетливо видимой талией. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 80:$brist='Женственная фигура с миниатюрной талией. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+end
+if vidage>=45 and vidage<60:
+if brist < 10 and brist < 50:$brist='Постаревший и обвислый мужской торс. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 50:$brist='Постаревшая и обвисшая женская фигура. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+end
+if vidage>=60:
+if brist < 10 and brist < 50:$brist='Старое и дряхлое мужское тело. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+if brist >= 50:$brist='Старое и дряхлое женское тело. <<$bodyfat>> <<$tits>> <<$pirsingLabia>>'
+end
+
+if anus=0:$anus='скрывается девственный анус'
+if anus>0 and anus<10:$anus='скрывается анус в форме маленькой звездочки.'
+if anus>=10 and anus<20:$anus='скрывается анус в форме трещины.'
+if anus>=20 and anus<30:$anus='скрывается растянутый и не закрывающийся анус.'
+if anus>30:$anus='зияет черным провалом ваше дупло.'
+
+if ass < 20:$ass='Мужская маленькая задница.'
+if ass >= 20 and ass < 40:$ass='Мужская задница. <<$assfat>> <<$anus>>'
+if ass >= 40 and ass < 60:$ass='Немного выделяющаяся попа. <<$assfat>> <<$anus>>'
+if ass >= 60 and ass < 80:$ass='Отчетливо выделяющаяся попа. <<$assfat>> <<$anus>>'
+if ass >= 80:$ass='Большая и мягкая женская попка. <<$assfat>> <<$anus>>'
+
+if thight < 10:$thight='Узкие мужские бедра.'
+if thight >= 10 and thight < 20:$thight='Мужские бедра.'
+if thight >= 20 and thight < 30:$thight='Юношеские бедра.'
+if thight >= 30 and thight < 40:$thight='Мальчишечьи бедра.'
+if thight >= 40 and thight < 60:$thight='Немного выделяющиеся бедра.'
+if thight >= 60 and thight < 80:$thight='Женские бедра.'
+if thight >= 80:$thight='Широкие женские бедра.'
+
+if leg < 10:$leg='Тонкие, мохнатые и кривые мужские ноги.'
+if leg >= 10 and leg < 20:$leg='Мужские ноги.'
+if leg >= 20 and leg < 30:$leg='Юношеские <<$leghair>> ноги.'
+if leg >= 30 and leg < 40:$leg='Тонкие мальчишечьи <<$leghair>> ноги.'
+if leg >= 40 and leg < 60:$leg='Девичьи <<$leghair>> тонкие и мягкие ноги.'
+if leg >= 60 and leg < 80:$leg='Ваши <<$leghair>> пухленькие женские ножки очень стройны и красивы.'
+if leg >= 80:$leg='Ваши <<$leghair>> пухлые и мягкие женские ножки невероятно длинны и красивы.'
+
+
+
+if vidage >= 90:$va='Ваш организм на грани своей изношенности и жизнь в вас едва теплится.'
+if vidage >=70 and vidage<90:$va='Ваш организм очень сильно изношен.'
+if vidage >=60 and vidage<70:$va='Ваш организм сильно изношен.'
+if vidage >=50 and vidage<60:$va='Ваш организм изношен.'
+if vidage >=40 and vidage<50:$va='Ваш организм немного изношен.'
+if vidage >=30 and vidage<40:$va='У вас крепкий и здоровый организм.'
+if vidage >=20 and vidage<30:$va='У вас молодой и здоровый организм.'
+if vidage<20:$va='У вас юный и цветущий организм.'
+
+
+
+--- описания ---------------------------------
+

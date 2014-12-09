@@ -1,0 +1,45 @@
+# hekelLoss
+cla
+*clr
+'Хэкель победила вас и кажется переломала все ребра. Каждый раз когда вы пытаетесь встать на ноги, боль во всем теле не дает вам пошевелиться.'
+
+if hkdefeat=1:hkdefeat=0
+
+if hkfap=0:
+hkfap=1
+facial=facial+1
+cumface=cumface+1
+if penis>0:$hekeltext='не посмотрю, что ты мужик и выебу тебя".'
+if penis>0:$hekeltext='в следующий раз я выебу тебя".'
+'<center><img src="pic/EvedonTA/HKcum.jpg" ></center>'
+'Разгоряченная боем, Хэкель достает свой член и начинает яростно дрочить его.  Спустя пару минут она кончает, заливая вас спермой. Наклонившись она говорит: "В следующий раз, прежде чем дерзить мне - подумай дважды, <<$hekeltext>>'
+gs'cumslut'
+	 act 'Выползти на улицу':
+	 minut=minut+5
+	 gt'teladareW'
+	 end
+exit
+end
+
+if hkfap=1:
+'<center><img src="pic/EvedonTA/hklose.jpg" ></center>'
+' - Я тебя предупреждала -  говорит Хэкель и начинает драть вас в очко'
+gs'analslut'
+anus=anus+3
+     act '......':
+     cla
+     *clr
+	 minut=minut+5
+	 '<center><img src="pic/EvedonTA/hklosecum.jpg" ></center>'
+	 'Через пару минут она засовывает член вам в рот и кончает.'
+	 gs'cumslut'
+	 swallow=swallow+1
+	 cumlip=cumlip+1
+	 	 act 'Выползти на улицу':
+		 minut=minut+5
+		 gt'teladareW'
+		 end
+	 end
+end
+--- hekelLoss ---------------------------------
+

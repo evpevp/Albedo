@@ -1,0 +1,48 @@
+# childroom
+*clr
+minut=minut+1
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+showinput 0
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><H4>ДЕТСКАЯ</H4></center>'
+'<center><img src="pic/room/childA.jpg" ></center>'
+
+clr
+gs'stat'
+
+if hour >= 11 and hour <= 13 and week>=1 and week<=2 and innaBoyFriend=0 and innaQW<100 and innavag=0 and innaday!day: 
+	 'Инна должна быть в институте, но она в своей комнате и явно не одна.'
+	 innaBoyFriend = 1
+	 act 'Приоткрыть дверь': gt'innasex','BF'
+end
+
+if hour <= 7 and innaQW < 200:'В своей кровати спит ваша дочь ((Инна|inna)).'
+
+if hour >= 18 and week < 6 and innaQW < 200:'За компьютером сидит ваша дочь ((Инна|inna)).'
+
+if hour > 7 and week >= 6 and innaQW < 200:'За компьютером сидит ваша дочь ((Инна|inna)).'
+
+masharand=Rand(0,9)
+if hour >= 7 and hour <=17 and mashaQW =15 and innaQW>=200 and masharand=4 and mashainnaroom=1 and mashaday!day:
+	mashainnaroom=2
+	'Заглянув в комнату, вы слышите шум. Странно, ведь дочка переехала в свою квартиру и редко приходит домой. Возле шкафа вы видете ((Машу|masha)) копающуюся в одежде дочери.'
+end
+if hour >= 7 and hour <=17 and mashainnaroom=3 and innaQW>=200:
+	mashainnaroom=4
+	'Еще в коридоре вы услыщали тихие стоны доносящиеся из комнаты дочери. Приоткрыв дверь вы видите обнаженную ((Машу|masha)) лежащую на кровати.'
+end	
+if hour >= 7 and hour <=17 and mashainnaroom=5 and masharand=3 and innaQW>=200:
+	mashainnaroom=6
+	'В комнате дочери вы видите ((Машу|masha)).'
+end
+
+act 'Коридор':
+	 gt'koridor1'
+end
+--- childroom ---------------------------------
+

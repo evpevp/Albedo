@@ -1,0 +1,113 @@
+# nord
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>СЕВЕРНЫЙ РАЙОН</H4></center>'
+'<center><img src="pic\pic\nord.jpg" ></center>'
+clr
+gs'stat'
+gs'time'
+
+
+
+if car > 0 and cardrive = 3:
+set cardrive = 3
+'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+end
+
+'<a href="exec:GT ''metro'',''start3''">Метро</a>.'
+'Автомобильная <a href="exec:GT ''zapr'',''start''">заправка</a>'
+'Автомобильный <a href="exec:GT ''autosalon'',''start''">салон</a>'
+'<a href="exec:GT ''autoservis'',''start''">Автосервис</a>'
+'<a href="exec:GT ''autotraid'',''start''">Авторынок</a>'
+'<a href="exec:GT ''casino'',''start''">Казино</a>'
+'<a href="exec:GT ''smu'',''start''">Строительно монтажное управление</a>'
+'<a href="exec:GT ''vorAvtobaza'',''start''">Автобаза</a>'
+     act 'Ждать':
+     cla
+     waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
+         end
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
+         end
+     act 'Посмотреть на часы':gt curloc
+     end
+     
+     act 'Ехать на такси':
+     cla
+     *clr
+     '<center><img src="pic\pic\taxi1.jpg" ></center>'
+     'Вы поймали проезжавшую мимо таксишку.'
+     set minut = minut + 15
+         act 'В спальный район 250 руб':
+		 cla
+		 *clr
+         'Вы сели в такси и за 15 минут доехали до спального района'
+			 if money >= 250:
+			 set money = money - 250
+			 'Заплатили таксисту 250 рублей и вышли из машины.'
+			 act 'Уйти':gt 'street'
+			 exit
+			 end
+			 
+			 if money < 250 and pol=0:
+			 'Таксист разозлился и развернул машину обратно выгрузав вас там откуда взял.'
+			 act 'Уйти':gt 'nord'
+			 exit
+			 end
+         end
+         
+         act 'В центр 250 руб':
+		 cla
+		 *clr
+         'Вы сели в такси и за 15 минут доехали до центра'
+			 if money >= 250:
+			 set money = money - 250
+			 'Заплатили таксисту 250 рублей и вышли из машины.'
+			 act 'Уйти':gt 'down'
+			 exit
+			 end
+			 
+			 if money < 250 and pol=0:
+			 'Таксист разозлился и развернул машину обратно выгрузав вас там откуда взял.'
+			 act 'Уйти':gt 'nord'
+			 exit
+			 end
+         end
+     end
+     
+     act 'Идти в центр 3 часа':
+     cla
+     minut=minut+180
+     sweat=sweat+2
+     gt'down'
+     end
+     
+     if pol=0 and money>= 100000:
+     goprand=RAND(0,100)
+         if goprand>=90 and gopRespect=0:
+         cla
+         *clr
+         '<center><img src="pic\pic\gop.jpg" ></center>'
+         'Слыш, дядя. Есть чо? А если найду?'
+         gs'gengop'
+         act 'Дратся':gt'before'
+             if mast>=6:
+                 act 'Базарить с гопником':
+                 cla
+                 gopRespect=1
+                 'Вы побазарили с гопником и он признал что был не прав.'
+                 act 'Уйти':gt $CURLOC
+                 end
+             end
+         end
+         
+     end
+--- nord ---------------------------------
+

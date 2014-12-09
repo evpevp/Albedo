@@ -1,0 +1,43 @@
+# farmMY
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+mag = 1
+
+if fmyH=0:$fmyhouse='покосившийся и обшарпанный домишко'
+if fmyH=1:$fmyhouse='аккуратный и ухоженный фермерский дом'
+if fmya=0:$fmyambar='старый, полуразвалившийся амбар с текущей крышей'
+if fmya=1:$fmyambar='новый, отремонтированный амбар'
+if fmys=0:$fmysarai='гнилой сарай с прислоненной к стене дверью'
+if fmys=1:$fmysarai='новый сарай'
+
+'<center><H4>Ферма <<$farmname>></H4></center>'
+'<center><img src="pic/Evedon\farmMY.jpg" ></center>'
+'Ферма, принадлежащая вам. На территории фермы главное место занимает <a href="exec: gt ''farmMYhouse'' "> <<$fmyhouse>></a> возле которого вы видите <a href="exec: gt ''farmMYambar'' "> <<$fmyambar>></a>. Около обширных <a href="exec: gt ''farmMYpole'' ">полей</a> стоит <a href="exec: gt ''farmMYsarai'' "> <<$fmysarai>></a>.'
+if barnMY>=100:'<a href="exec: gt ''farmMYoslik'' ">Хлев для ослика</a>'
+
+if barnMY>=1 and barnMY<100 and hour>=10 and hour<=20:
+'Возле амбара бесцельно бродят <a href="exec: gt ''plotniki'',''start'' ">плотники</a>.'
+end
+
+
+clr
+gs'stat'
+!fcolor=rgb(0,0,0)
+!bcolor=rgb(255,255,255)
+!LCOLOR = rgb(106,90,205)
+gs'time'
+
+
+act 'Уйти':
+minut=minut+5
+gt'farmW'
+end
+--- farmMY ---------------------------------
+

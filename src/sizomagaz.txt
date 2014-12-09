@@ -1,0 +1,40 @@
+# sizomagaz
+
+
+	 if money>= 100:
+		 act 'Мыло 100руб.':
+         money=money-100
+         milo=milo+10
+		 GOTO $locM, $metkaM
+		 end
+	 end
+	 
+	 if money>= 100:
+		 act 'Станок 100руб.':
+         money=money-100
+         stanok=stanok+10
+		 GOTO $locM, $metkaM
+		 end
+	 end
+	 
+	 if money>= 100:
+		 act 'еда 100руб.':
+         money=money-100
+         balabas=balabas+1
+		 GOTO $locM, $metkaM
+		 end
+	 end
+	 
+	 if money>= 500 and петух=0:
+		 act 'Выпить водки 500руб.':
+         money=money-500
+         wipo=wipo+20
+         manna=manna+20
+         alko=alko+5
+		 GOTO $locM, $metkaM
+		 end
+	 end
+	 
+	 act 'Уйти.':GOTO $locM, $metkaM
+--- sizomagaz ---------------------------------
+

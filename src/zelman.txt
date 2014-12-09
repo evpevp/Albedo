@@ -1,0 +1,15 @@
+# zelman
+clr
+
+
+gs'stat'
+zelman=zelman-1
+manna=manna+1000
+if INFIGHT=1:
+DELOBJ 'Инвентарь'
+'<center><img src="pic/EvedonOd\potion4.jpg"></center>'
+end
+clr
+gs'stat'
+--- zelman ---------------------------------
+

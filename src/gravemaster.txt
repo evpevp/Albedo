@@ -1,0 +1,40 @@
+# gravemaster
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaFuck = $ARGS[0]
+$locFuck = $CURLOC
+minut=minut+5
+mag = 1
+if OrdenRang<=0 and demonmorf<=0 and vampiremorf<=0 and marpeozaQW!100:
+dostupGD=1
+else
+dostupGD=0
+end
+'<center><H4>Домик кладбищенского хранителя</H4></center>'
+!'<center><img src="Evedon\foTraktir.jpg" ></center>'
+'Просторный дом, на первом этаже которого находится мастерская по изготовлению гробов.'
+
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+if hour>=8 and hour<=20:'<a href="exec: gt''GanelonDark''">За верстаком стоит кладбищенский хранитель и строгает новый гроб</a>'
+
+
+act 'Уйти':minut=minut+5&gt'graveyard'
+
+if OrdenRangGD>=1:act 'Идти в подвал':minut=minut+5&gt'OrdenGD'
+
+
+
+--- gravemaster ---------------------------------
+

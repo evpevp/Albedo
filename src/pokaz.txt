@@ -1,0 +1,41 @@
+# pokaz
+
+
+if stamina >= staminaMAX*75/100:set stam = 0&set $stam = '<B><font color=rgb(0,255,0)>Вы свежая и полная сил.</font></B>'
+if stamina < staminaMAX*75/100 and stamina >= staminaMAX*50/100:set stam = 1&set $stam = '<B><font color=rgb(123,160,91)>Вы вспотели и начали утомляться.</font></B>'
+if stamina < staminaMAX*50/100 and stamina >= staminaMAX*25/100:set stam = 2&set $stam = '<B><font color=rgb(205,127,50)>У вас одышка и пот валит градом, вы устали.</font></B>'
+if stamina < staminaMAX*25/100:set stam = 3&set $stam = '<B><font color=rgb(220,20,60)>Вы едва стоите на ногах от усталости.</font></B>'
+
+if staminaV >= staminaMAXV*75/100:set stamV = 0&set $stamV = '<B><font color=rgb(0,255,0)><<$nameV>> свежая и полная сил</font></B>'
+if staminaV < staminaMAXV*75/100 and staminaV >= staminaMAXV*50/100:set stamV = 1&set $stamV = '<B><font color=rgb(123,160,91)><<$nameV>> вспотела и начинает уставать.</font></B>'
+if staminaV < staminaMAXV*50/100 and staminaV >= staminaMAXV*25/100:set stamV = 2&set $stamV = '<B><font color=rgb(205,127,50)><<$nameV>> задыхается и откровенно устала.</font></B>'
+if staminaV < staminaMAXV*25/100:set stamV = 3&set $stamV = '<B><font color=rgb(220,20,60)><<$nameV>> едва стоит на ногах от усталости.</font></B>'
+
+if chin >= chinMAX*75/100:set stun = 0&set $stun = '<B><font color=rgb(0,255,0)>Вы сфокусированы и внимательны.</font></B>'
+if chin < chinMAX*75/100 and chin >= chinMAX*50/100:set stun = 1&set $stun = '<B><font color=rgb(123,160,91)>Вы слегка заторможены от ударов по голове.</font></B>'
+if chin < chinMAX*50/100 and chin >= chinMAX*25/100:set stun = 2&set $stun = '<B><font color=rgb(205,127,50)>У вас плывет перед глазами и качается пол.</font></B>'
+if chin < chinMAX*25/100:set stun = 3&set $stun = '<B><font color=rgb(220,20,60)>У вас совершенно пусто в голове, только яркий свет и какой-то звон.</font></B>'
+
+if chinV >= chinMAXV*75/100:set stunV = 0&set $stunV = '<B><font color=rgb(0,255,0)><<$nameV>> сфокусирована.</font></B>'
+if chinV < chinMAXV*75/100 and chinV >= chinMAXV*50/100:set stunV = 1&set $stunV = '<B><font color=rgb(123,160,91)><<$nameV>> выглядит ошарашенной.</font></B>'
+if chinV < chinMAXV*50/100 and chinV >= chinMAXV*25/100:set stunV = 2&set $stunV = '<B><font color=rgb(205,127,50)><<$nameV>> выглядит потерянной.</font></B>'
+if chinV < chinMAXV*25/100:set stunV = 3&set $stunV = '<B><font color=rgb(220,20,60)><<$nameV>> мотается как шланг.</font></B>'
+
+if cut = 0:set $cut = ''
+if cut = 1:set $cut = 'У вас небольшое рассечение.'
+if cut = 2:set $cut = 'У вас льется кровь из рассечения.'
+if cut = 3:set $cut = 'Кровь заливает ваше лицо.'
+
+if cutV = 0:set $cutV = ''
+if cutV = 1:set $cutV = 'У противницы небольшое рассечение.'
+if cutV = 2:set $cutV = 'У противницы льется кровь из рассечения.'
+if cutV >= 3:set $cutV = 'Кровь заливает лицо противницы.'
+
+if minu = 2 and second = 55:set endround = 1
+if endround = 0:
+if round = 0:set round = 1
+set second = second + 5
+if second >= 60:set second = 0&set minu = minu + 1
+end
+--- pokaz ---------------------------------
+

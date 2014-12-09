@@ -1,0 +1,35 @@
+# genkf
+strenV=9
+speedV=9
+agilV=9
+vitalV=8
+
+
+set lvlg = RAND (lvl-2,lvl)
+if lvlg < 1:set lvlg = 1
+lvlv=lvlg
+set spg=lvlv*5
+
+$nameV='Ученик'
+:loopgen
+if spg > 0:
+randsp=RAND(1,4)
+
+     if randsp=1:strenV=strenV+1&spg=spg-1&JUMP'loopgen'
+     if randsp=2:speedV=speedV+1&spg=spg-1&JUMP'loopgen'
+     if randsp=3:agilV=agilV+1&spg=spg-1&JUMP'loopgen'
+     if randsp=4:vitalV=vitalV+1&spg=spg-1&JUMP'loopgen'
+
+
+else
+intelV=10
+willV=10
+program=1
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+end
+
+
+--- genkf ---------------------------------
+

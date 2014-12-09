@@ -1,0 +1,29 @@
+# AlrunaRoom
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+mag = 1
+'<center><H4>Комната Алруны</H4></center>'
+'<center><img src="pic/Evedon/AlrunaRoom.jpg" ></center>'
+'Не большая комната на втором этаже магазина оборудована под лабораторию.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+'Над столом с склянками и колбами склонилась <a href="exec:minut+=5&GT ''AlrunaAmon''">Алруна Амон</a>.'
+
+
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'monDorf'
+	 end
+--- AlrunaRoom ---------------------------------
+

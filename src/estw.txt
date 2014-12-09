@@ -1,0 +1,10 @@
+# estw
+clr
+gs'stat'
+gs'eat'
+edaw=edaw-1
+if INFIGHT=1:DELOBJ 'Инвентарь'
+clr
+gs'stat'
+--- estw ---------------------------------
+

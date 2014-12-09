@@ -1,0 +1,79 @@
+# spMALGUN
+dynamic $battlemain
+clr
+gs'stat'
+
+     if manna>=500 and spReinkornMal>=100:
+         act 'Абсолютное излечение (500 манны)':
+         cla
+         manna-=500
+         bloodv=0
+         health=vital*10
+         '<font color=green>Вы собираете энергию и восстанавливаете здоровье.</font>'
+         xgt'fight','1'
+         end
+     end
+     
+     if round>=5 and manna>=500 and spGhostBodyMal>=100 and cooldowngostbody<round:
+         act 'Призрачное тело (500 манны)':
+         cla
+         manna-=500
+         skillGBM+=1
+         gostbody+=2+skillGBM/10
+         if gostbody>20:gostbody=20
+         cooldowngostbody=gostbody+round
+         '<font color=green>Используя магическую энергию вы сделали свое тело проницаемым для ударов.</font>'
+         xgt'fight','1'
+         end
+     
+     end
+     
+     if round>=5 and manna>=500 and spGhostDamMal>=100 and gostbody>0:
+         act 'Призрачный удар (500 манны)':
+         cla
+         skillGFM+=1
+         manna-=500
+         '<font color=green>Вы атаковали противника призрачной рукой.</font>'
+         gostfist=1
+			 if fintv>0:fintPam=fintv&finvt=0
+			 if tumanv>0:tumanPam=tumanv&tumanv=0
+			 if sandstormv>0:sandstormPam=sandstormv&sandstormv=0
+			 if defencev>0:defencePam=defencev&defencev=0
+		 tipatk=1
+		 gs'udar','0'
+		 gs'popad'
+			 if fintPam>0:fintv=fintPam&fintPam=0
+			 if tumanPam>0:tumanv=tumanPam&tumanPam=0
+			 if sandstormPam>0:sandstormv=sandstormPam&sandstormPam=0
+			 if defencePam>0:defencev=defencePam&defencePam=0
+         xgt'fight','1'
+         end
+     
+     end
+     
+     
+     
+     
+     
+     
+     
+
+
+act 'Пропустить ход':xgt'fight','1'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- spMALGUN ---------------------------------
+

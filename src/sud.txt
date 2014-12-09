@@ -1,0 +1,164 @@
+# sud
+if $ARGS[0]='1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><B>Суд</B></center>'
+'<center><img src="pic/pic/sud.jpg" ></center>'
+if sud = 2:'Вас обвиняют в умышленном банкротстве.'
+if otkat > 0:'<<otkat>>ти случаях мошенничества.'
+'После слушаний по делу суд постановил.'
+     if otkat = 0 and advokat > 0:
+     sud=0
+     sudtimer=0
+     brak=2
+     abonement=0
+     gs'clonil'
+     sport = 2
+     slot=3
+     !kvartira = 1
+     !bankfond=bankfond+money
+     'Снять обвинения с Харитонова Игоря Германовича и прекратить дело.'
+     ItkQW=1
+     act 'Уйти':gt 'down'
+     end
+     if otkat > 0 or advokat = 0:
+     'В связи с возможностью давления на свидетелей заключить Харитонова Игоря Германовича в следственный изолятор до окончания следственных действий.'
+     bankfond=bankfond+money
+     money=0
+     bankfond=0
+     milo=0
+     stanok=0
+     shampoo=0
+     fairy=0
+     srok = 1
+     car=0
+     abonement=0
+     'Вы сдали наличные деньги адвокату для того, чтобы он положил их на ваш банковский счет.'
+     act 'Идти под конвоем.':gt 'sizo','1'
+     end
+
+
+end
+
+if $ARGS[0]='2':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><B>Суд</B></center>'
+'<center><img src="pic/pic/sud.jpg" ></center>'
+if sud = 2:'Вас обвиняют в умышленном банкротстве.'
+if otkat > 0:'<<otkat>>ти случаях мошенничества.'
+'После слушаний по делу суд постановил.'
+     if otkat = 0 and advokat = 0:
+     sud=0
+     sudtimer=0
+     sizo=0
+     srok=0
+     money=money+5000
+     bankfond=0
+     sport = 2
+     slot=3
+     !bankfond=bankfond+money
+     ItkQW=1
+     'Снять обвинения с Харитонова Игоря Германовича и прекратить дело.'
+     act 'Уйти':gt 'down'
+     end
+     
+     if otkat > 0:
+     'Отправить дело на доследование.'
+     'В связи с возможностью давления на свидетелей заключить Харитонова Игоря Германовича в следственный изолятор до окончания следственных действий.'
+     sud=3
+     act 'Идти под конвоем.':gt 'sizo','3'
+     end
+
+
+end
+
+if $ARGS[0]='3':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><B>Суд</B></center>'
+'<center><img src="pic/pic/sud.jpg" ></center>'
+'Суд рассмотрел сторону обвинения, вяло прослушал сторону защиты и вынес вердикт.'
+'Суд признает Харитонова Игоря Германовича виновным.'
+
+     if otkat <= 2:
+     sud=0
+     sudtimer=0
+     sizo=0
+     srok=0
+     money=money+5000
+     bankfond=0
+     sport = 2
+     slot=3
+     ItkQW=1
+     !bankfond=bankfond+money
+     'Считать Харитонова Игоря Германовича отбывшим срок наказания и отпустить в зале суда из под стражи.'
+     act 'Уйти':gt 'down'
+     exit
+     end
+     
+     if otkat > 2 and sledak = 0 and advokat=1 and otkat < 50:
+     sud=0
+     sudtimer=0
+     sizo=0
+     srok=0
+     money=money+5000
+     bankfond=0
+     sport = 2
+     slot=3
+     ItkQW=1
+     'Назначить Харитонову Игорю Германовичу условное наказания и отпустить из под стражи в зале суда.'
+     act 'Уйти':gt 'down'
+     exit
+     end
+     
+     if otkat > 2 and sledak = 1 or otkat>2 and advokat=0 or otkat >= 50:
+     sud=0
+     sudtimer=0
+     kfabonement=0
+     abonement=0
+         if sroksidki < 365:sroksidki=100&$srok='100 дней'
+         if sroksidki >= 365:sroksidki=150&$srok='150 дней'
+     'Назначить Харитонову Игорю Германовичу отбывание наказания в колонии общего режима сроком <<$srok>>.'
+     act 'В атозак':gt 'etap','0'
+     exit
+     end
+
+
+end
+
+
+
+
+
+
+
+
+
+
+--- sud ---------------------------------
+

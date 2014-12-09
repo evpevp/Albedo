@@ -1,0 +1,8 @@
+# demonologWin
+monster=0
+'Демонолог упала на землю не в силах больше продолжать.'
+
+
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+--- demonologWin ---------------------------------
+

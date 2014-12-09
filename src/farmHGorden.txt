@@ -1,0 +1,46 @@
+# farmHGorden
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+mag = 1
+'<center><H4>Ферма Хокгроув</H4></center>'
+'<center>Особняк филиала ордена</center>'
+'<center><img src="pic/Evedon/farm2.jpg" ></center>'
+'Большое каменное здание в котором расположены спальни магистров и управа фермой.'
+if hour>=5 and hour<=20:'Около входа сидит младший магистр.'
+clr
+gs'stat'
+gs'time'
+
+if farMember=0:
+'К вам подходит магистр "Убирайся отсюда, это закрытая территория"'
+     if OrdenRang>0:
+         act 'Сказать что вы из ордена':
+         cla
+         *clr
+         'Вы сказали что вы из ордена, на что магистр только хмыкнул.'
+         '(Магистр) - Да мне насрать, хоть сам Лорд, без допуска на ферму проходить нельзя.'
+			 act 'Уйти':
+			 minut=minut+5
+			 gt'farmHokGrouW'
+			 end
+         end
+     end
+else
+
+end
+
+
+
+act 'Уйти':
+minut=minut+5
+gt'farmHokGrouW'
+end
+--- farmHGorden ---------------------------------
+

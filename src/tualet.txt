@@ -1,0 +1,39 @@
+# tualet
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+cla
+*clr
+set minut = minut + 5
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><B>Санитарное помещение</B></center>'
+'<center><img src="pic/jail/tua.jpg" ></center>'
+'Мыло <<milo>>, бритвенный станок <<stanok>>'
+'Множество ((умывальников|umiv)) над которыми висят ((зеркала|mirror))'
+
+     if horny>=50:
+         act 'Дрочить член на параше (не западло)':
+         cla
+         minut=minut+15
+         horny=0
+         manna=manna+5
+         jerk = jerk + 1
+         'Вы по-быстрому передернули затвор.'
+         act 'Вымыть руки.':gt 'tualet'
+         end
+     end
+
+if barak=1:act 'Идти в барак.':gt 'aktiv'
+if barak=2:act 'Идти в барак.':gt 'barak'
+if barak=3:act 'Идти в барак.':gt 'petuhi'
+
+
+--- tualet ---------------------------------
+

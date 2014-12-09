@@ -1,0 +1,16 @@
+# insectWin
+monster=0
+demonwin=demonwin+1
+'Вы перебили всех насекомых.'
+
+
+act 'Далее':
+cla
+*clr
+if gem>0:gem=gem-1&demonSoul=demonSoul+1&'В один из гемов вошла душа демонической твари.'
+
+
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+end
+--- insectWin ---------------------------------
+

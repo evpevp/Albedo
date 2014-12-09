@@ -1,0 +1,19 @@
+# spiderWin
+monster=0
+demonwin=demonwin+1
+'Поверженный паук падает на землю.'
+
+
+act 'Далее':
+cla
+*clr
+if gem>0:gem=gem-1&demonSoul=demonSoul+1&'В один из гемов вошла душа демонической твари.'
+
+silk=silk+1
+'С трупа паука вы взяли паучий шелк.'
+
+
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+end
+--- spiderWin ---------------------------------
+

@@ -1,0 +1,82 @@
+# $menu_maf
+if $selobj='Персонаж':
+	 if world=0:
+	     if pol=0:
+	     if NoHaritonov=0:
+		 VIEW 'pic\body\face.jpg'
+		 if berd <= 0:VIEW 'pic\body\face.jpg'
+		 if berd > 0 and berd < 5:VIEW 'pic\body\face2.jpg'
+		 if berd >= 5:VIEW 'pic\body\face3.jpg'
+	     end
+	     if NoHaritonov=7:
+	     VIEW 'pic\picPRE\self.jpg'
+	     end
+	     end
+	     if pol>0:
+	         if hcol = 0 and curly <= 0:VIEW 'pics\picb\hcol.jpg'
+			 if hcol = 1 and curly <= 0:VIEW 'pics\picb\hcol1.jpg'
+			 if hcol = 2 and curly <= 0:VIEW 'pics\picb\hcol2.jpg'
+			 if hcol = 3 and curly <= 0:VIEW 'pics\picb\hcol3.jpg'
+			 if hcol = 0 and curly > 0:VIEW 'pics\picb\hcolcurly.jpg'
+			 if hcol = 1 and curly > 0:VIEW 'pics\picb\hcolcurly1.jpg'
+			 if hcol = 2 and curly > 0:VIEW 'pics\picb\hcolcurly2.jpg'
+			 if hcol = 3 and curly > 0:VIEW 'pics\picb\hcolcurly3.jpg'
+	     end
+	 end
+	 if world=1:
+	     if DemonMorf>=10:VIEW 'pic\EvedonFace\DemonMorf2.jpg'
+	     if DemonMorf>=5 and DemonMorf<10:VIEW 'pic\EvedonFace\DemonMorf.jpg'
+	     if DemonMorf<5:
+			 if face < 20:
+			 if hcol = 0:VIEW 'pic\EvedonFace\man.jpg'
+			 if hcol = 1:VIEW 'pic\EvedonFace\man1.jpg'
+			 if hcol = 2:VIEW 'pic\EvedonFace\man2.jpg'
+			 if hcol = 3:VIEW 'pic\EvedonFace\man3.jpg'
+			 if hcol = 4:VIEW 'pic\EvedonFace\man4.jpg'
+			 end
+			 if face >= 20 and face < 40:
+			 if hcol = 0:VIEW 'pic\EvedonFace\boy.jpg'
+			 if hcol = 1:VIEW 'pic\EvedonFace\boy1.jpg'
+			 if hcol = 2:VIEW 'pic\EvedonFace\boy2.jpg'
+			 if hcol = 3:VIEW 'pic\EvedonFace\boy3.jpg'
+			 if hcol = 4:VIEW 'pic\EvedonFace\boy3.jpg'
+			 end
+			 if face >= 40:
+			 if hcol = 0:VIEW 'pic\EvedonFace\girl.jpg'
+			 if hcol = 1:VIEW 'pic\EvedonFace\girl1.jpg'
+			 if hcol = 2:VIEW 'pic\EvedonFace\girl2.jpg'
+			 if hcol = 3:VIEW 'pic\EvedonFace\girl3.jpg'
+			 end
+			  if face >= 40:
+				 if hcol = 0:
+					 if hlong<30:VIEW 'pic\EvedonFace\gBlack.jpg'
+					 if hlong>=30 and hlong<60:VIEW 'pic\EvedonFace\gBlack1.jpg'
+					 if hlong>=60 and hlong<90:VIEW 'pic\EvedonFace\gBlack2.jpg'
+					 if hlong>=90:VIEW 'pic\EvedonFace\gBlack3.jpg'
+				 end
+				 if hcol = 1:
+					 if hlong<30:VIEW 'pic\EvedonFace\gBrown.jpg'
+					 if hlong>=30 and hlong<60:VIEW 'pic\EvedonFace\gBrown1.jpg'
+					 if hlong>=60 and hlong<90:VIEW 'pic\EvedonFace\gBrown2.jpg'
+					 if hlong>=90:VIEW 'pic\EvedonFace\gBrown3.jpg'
+				 end
+				 if hcol = 2:
+					 if hlong<30:VIEW 'pic\EvedonFace\gRed.jpg'
+					 if hlong>=30 and hlong<60:VIEW 'pic\EvedonFace\gRed1.jpg'
+					 if hlong>=60 and hlong<90:VIEW 'pic\EvedonFace\gRed2.jpg'
+					 if hlong>=90:VIEW 'pic\EvedonFace\gRed3.jpg'
+				 end
+				 if hcol = 3:
+					 if hlong<30:VIEW 'pic\EvedonFace\gBlond.jpg'
+					 if hlong>=30 and hlong<60:VIEW 'pic\EvedonFace\gBlond1.jpg'
+					 if hlong>=60 and hlong<90:VIEW 'pic\EvedonFace\gBlond2.jpg'
+					 if hlong>=90:VIEW 'pic\EvedonFace\gBlond3.jpg'
+				 end
+			 end
+		 end
+	 end
+end
+
+unselect
+--- $menu_maf ---------------------------------
+

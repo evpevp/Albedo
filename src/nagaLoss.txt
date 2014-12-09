@@ -1,0 +1,44 @@
+# nagaLoss
+monster=0
+'Нага победила вас.'
+
+act 'Далее':
+cla
+*clr
+!horny=0
+SUB=SUB+1
+minut=minut+60
+monst=monst+1
+skverna=skverna+5
+bj=bj+1
+'<center><img src="pic/EvedonTA/naga.jpg" ></center>'
+'Нага обвила вас своим длинным хвостом и обездвижела.'
+if penis>0:sexm=sexm+1&horny=0&'Вы почувствовали как на ваш член опускается что-то мягкое и склизкое, вы поняли что это вагина Наги. Она, ловко орудуя своим хвостом, развлекалась с вами как с вибратором. Вы сами не ожидали, что можете возбудится в такой момент, но ваш член стоял как каменный пока наконец не кончил в горячую вагину женщины змеи.'
+'Хвост Наги разжал ваши челюсти и проник вам в рот, Нага не унималась и засовывала свой холодный и жесткий хвост уже в горло.'
+'Наконец Нага насытилась игрой и отпустила вас.'
+     chanrand=RAND(0,7)
+		 if chanrand = 0:
+		 leg=leg+RAND(1,5)
+		 end
+		 if chanrand = 1:
+		 thight=thight+RAND(1,5)
+		 end
+		 if chanrand = 2:
+		 ass=ass+RAND(1,5)
+		 end
+		 if chanrand = 3:
+		 brist=brist+RAND(1,5)
+		 end
+		 if chanrand = 4:
+		 hand=hand+RAND(1,5)
+		 end
+		 if chanrand = 5:
+		 face=face+RAND(1,5)
+		 end
+		 if chanrand = 6:
+		 tit=tit+RAND(1,5)
+		 end
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+end
+--- nagaLoss ---------------------------------
+

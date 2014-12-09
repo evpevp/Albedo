@@ -1,0 +1,23 @@
+# Valafar
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><H4>Валафар</H4></center>'
+'<center><img src="pic/EvedonNarod/Valafar.jpg" ></center>'
+'Мощный мужчина огромного роста закован в доспехи. Его лицо выражает настоящую, звериную жестокость и покрыто многочисленными шрамами.'
+clr
+gs'stat'
+
+
+
+act 'Уйти':gt $locFight,$metkaFight
+
+act 'Болтать':
+cla
+minut+=15
+gs'stat'
+     'Валафар хищно оскалбился и зарокотал густым басом "Чего надо?"'
+act 'Уйти':gt $locFight,$metkaFight
+end
+--- Valafar ---------------------------------
+

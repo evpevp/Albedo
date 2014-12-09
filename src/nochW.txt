@@ -1,0 +1,35 @@
+# nochW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+sweat=sweat+1
+'<center><H4>Ночлежка</H4></center>'
+'<center><img src="pic/Evedon/roomNoch.jpg" ></center>'
+'Отвратительное, вонючее место, в котором ночует весь сброд Эведона.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+'Вы видите свободную <a href="exec:GT ''bed''">грязную кровать</a>.'
+'Дрянной покосившийся <a href="exec:GT ''lokerW''">шкафчик</a> куда можно положить свою одежду.'
+if slot=0:
+*nl
+'Без одежды нельзя выходить на улицу.'
+end
+
+if slot>0:
+	 act 'Выйти':
+	 minut=minut+5
+	 gt'slumsW'
+	 end
+end
+--- nochW ---------------------------------
+

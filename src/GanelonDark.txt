@@ -1,0 +1,73 @@
+# GanelonDark
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaFuck = $ARGS[0]
+$locFuck = $CURLOC
+minut=minut+5
+mag = 1
+
+if OrdenRang<=0 and demonmorf<=0 and vampiremorf<=0 and marpeozaQW!100:
+dostupGD=1
+else
+dostupGD=0
+end
+'<center><H4>Кладбищенский хранитель</H4></center>'
+'<center><img src="pic/EvedonNarod/grobovshik.jpg"></center>'
+'Высокий, крепкого вида мужчина с длинными седыми волосами и чисто выбритым лицом.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+act 'Уйти':minut=minut+5&gt'graveyard'
+
+
+if ordenGDQW<=0:
+'Что вам будет угодно? Новый гроб или может быть памятник? Может могилку выкопать пожелаете?'
+
+else
+
+     if ordenGDQW=1:
+         act 'Как воет могильная собака?':
+         cla
+         '(Вы) - Как воет могильная собака?'
+             if dostupGD=0:
+             '(Могильщик) - Понятия не имею, тут такие не водятся.'
+             act 'Уйти':minut=minut+5&gt'graveyard'
+             end
+             if dostupGD=1:
+             ordenGDQW=0
+             '(Могильщик) - Она воет что у нее есть друг. Приветствую <<$name>>, я ждал тебя. Ты идешь по пути познания темного искусства. И ты такой не один, нас несколько и зовемся мы орденом могильной собаки. Вы идем плечом к плечу по пути познания силы. Хочешь быть одним из нас?'
+             act 'Нет':minut=minut+5&gt'graveyard'
+                 act 'Да':
+                 cla
+                 OrdenRangGD=1
+                 '(Вы) - Да.'
+                 '(Могильщик) - Тебе удалось призвать могильную собаку, поэтому ты уже послушник нашего пути. Наш орден, собирается в моем подвале, можешь пройти туда.'
+                 
+                 act 'Идти в подвал':minut=minut+5&gt'OrdenGD'
+                 end
+             end
+         end
+     
+     end
+end
+
+
+
+
+
+
+
+
+--- GanelonDark ---------------------------------
+

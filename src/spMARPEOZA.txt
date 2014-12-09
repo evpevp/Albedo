@@ -1,0 +1,144 @@
+# spMARPEOZA
+dynamic $battlemain
+clr
+gs'stat'
+'Осталось <<spMarpeozaBuff>> благословений Марпеозы'
+
+     if horny>0 and spMarpeozaBuff>0:
+         act 'Семя Марпеозы, требуется похоть':
+         cla
+         spMarpeozaBuff-=1
+         '<font color=green>Вы воззвали к матери Марпеозе и она дала вам силы.</font>'
+         '<font color=green>Ваш член выстрелил спермой в противника.</font>'
+         $tipuronaHV='Семя Марпеозы'
+         damageH=RAND(horny*50,horny*100)
+		 gs'defenceHV'
+		 horny=0
+         xgt'fight','1'
+         end
+     end
+
+     if manna>=300 and spMarpeozaBuff>0:
+         act 'Стена Марпеозы (300 манны)':
+         cla
+         manna-=300
+         spMarpeozaBuff-=1
+         defence=defence+5000
+		 defenceT=defenceT+5000
+		 defenceW=defenceW+5000
+         '<font color=green>Вы воззвали к матери Марпеозе и она дала вам силы поставить защитную стену.</font>'
+         xgt'fight','1'
+         end
+     end
+     
+     if manna>=250 and spMarpeozaBuff>0:
+         act 'Огненный шар Марпеозы (250 манны)':
+         cla
+         manna-=250
+         spMarpeozaBuff-=1
+         '<font color=green>Вы воззвали к матери Марпеозе и она дала вам силы бросить фаэрболл.</font>'
+		 $tipuronaT='Огненный шар'
+		 damageT=RAND(400,800)
+		 damage=RAND(400,800)
+		 gs'defenceV'
+		 gs'defenceTV'
+         xgt'fight','1'
+         end
+     end
+     
+     if manna>=500 and spMarpeozaBuff>0:
+         act 'Огонь феникса Марпеозы (500 манны)':
+         cla
+         manna-=500
+         spMarpeozaBuff-=1
+         '<font color=green>Вы воззвали к матери Марпеозе и она дала вам силы бросить множество фаэрболов.</font>'
+		 $tipuronaT='Огненный шар'
+		 damageT=RAND(300,600)
+		 damage=RAND(300,600)
+		 gs'defenceV'
+		 gs'defenceTV'
+		 $tipuronaT='Огненный шар'
+		 damageT=RAND(300,600)
+		 damage=RAND(300,600)
+		 gs'defenceV'
+		 gs'defenceTV'
+		 $tipuronaT='Огненный шар'
+		 damageT=RAND(300,600)
+		 damage=RAND(300,600)
+		 gs'defenceV'
+		 gs'defenceTV'
+		 $tipuronaT='Огненный шар'
+		 damageT=RAND(300,600)
+		 damage=RAND(300,600)
+		 gs'defenceV'
+		 gs'defenceTV'
+		 $tipuronaT='Огненный шар'
+		 damageT=RAND(300,600)
+		 damage=RAND(300,600)
+		 gs'defenceV'
+		 gs'defenceTV'
+         xgt'fight','1'
+         end
+     end
+     
+     if manna>=1000 and spMarpeozaBuff>1 and round>=3 and magika>=8:
+         if cooldownSpell<=0:
+			 act 'Жидкий огонь Марпеозы (1000 манны 2благословения)':
+			 cla
+			 manna-=1000
+			 spMarpeozaBuff-=2
+			 cooldownSpell=3
+			 '<font color=green>Вы воззвали к матери Марпеозе и она дала вам силы наполнить воздух жидким огнем.</font>'
+			 $tipuronaT='Жидкий огонь'
+			 damageT=RAND(3000,4000)
+			 damageW=RAND(2000,2500)
+			 gs'defenceW'
+			 gs'defenceTV'
+			 xgt'fight','1'
+			 end
+         end
+     end
+     
+     
+     if manna>=2000 and spMarpeozaBuff>4 and round>=6 and magika>=12:
+     
+         if cooldownSpell<=0:
+			 act 'Запретная тень Марпеозы (2000 манны 5благословения)':
+			 cla
+			 manna-=2000
+			 spMarpeozaBuff-=5
+			 if filosofkam=0:vidage+=1
+			 '<font color=green>Вы воззвали к матери Марпеозе и она дала вам свою защиту.</font>'
+			 StopMagik=6
+			 cooldown=6
+			 MarpeozaShadow=6
+			 cooldownSpell=10
+			 xgt'fight','1'
+			 end
+         end
+     end
+     
+     if wipo>=100 and round>=8 and magika>=12:
+     
+         if cooldownSpell<=0:
+			 act 'Молитва Марпеозе (100 воли 5 благословения)':
+			 cla
+			 manna+=RAND(1000,3000)
+			 wipo-=100
+			 spMarpeozaBuff-=5
+			 '<font color=green>Вы воззвали к матери Марпеозе и она дала вам силы.</font>'
+			 cooldown=3
+			 xgt'fight','1'
+			 end
+         end
+     end
+
+
+
+act 'Пропустить ход':xgt'fight','1'
+
+
+
+
+--- spMARPEOZA ---------------------------------
+

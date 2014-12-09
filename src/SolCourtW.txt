@@ -1,0 +1,36 @@
+# SolCourtW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Служба Охраны Лорда (СОЛ)</H4></center>'
+'<center><img src="pic/Evedon/sol.jpg" ></center>'
+'.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+     if missionData=10:
+         act 'Отдать письмо':
+         cla
+         *clr
+         missionData=0
+         kredit=kredit+100
+         missionC+=1
+         '<center><img src="pic/Photo/License.jpg" ></center>'
+         'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
+         act 'Уйти':gt $CURLOC
+         end
+     end
+
+
+	 act 'Уйти (5 мин)':
+	 minut=minut+5
+	 gt'dvorecLord'
+	 end
+--- SolCourtW ---------------------------------
+

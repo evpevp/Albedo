@@ -1,0 +1,425 @@
+# taAlhW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+mag = 1
+'<center><H4>Алхимик Белинда</H4></center>'
+'<center><img src="pic/Evedon/alhim.jpg" ></center>'
+'В домике множество стеллажей со склянками, травками и прочим алхимическим скарбом.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+act 'Уйти':
+minut=minut+5
+gt'teladareW'
+end
+
+if hour>=7 and hour<= 21:  
+'Белинда говорит вам "У меня есть микстура, которая даже умирающего на ноги поставит, всего 150 гемов."'
+'Так же есть средство для наращивания жира и для его сгонки, всего 20 гемов.' 
+'Есть и отрезвин, всего 10 гемов и вы как будто никогда не пили.'
+'Для путешественников у меня есть нектар совы, всего за 50 гемов, вы будете бодрым так, как будто вы только проснулись.'
+'Малое зелье восстановления здоровья 20 гемов, среднее 40, большое 100, зелье полного восстановления здоровья 300 гем'
+'В продаже есть и зелье восстановления манны за 200 гем, оно восстановит 1000 едениц манны.'
+'Зелье восстановления воли 300 гем, восстановит 1000 едениц силы воли'
+'Зелье монаха используют монахи для того чтобы выдерживать целибат, после него возбуждение исчезнет, стоит сущую мелочь 300 гем.'
+
+     if kladQW=2:
+         act 'Спросить источник тусклого света':
+		 cla
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 act 'Уйти':gt $CURLOC
+		 'Белинда сказала что у нее есть фосфоресцирующая мазь из светлячков за 150 гем.'
+		     if gem>=150:act 'Купить':gem-=150&kladQW=3&gt $CURLOC
+		 end
+     
+     end
+     
+     if kladQW=5:
+         act 'Спросить зажигательную смесь':
+		 cla
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 act 'Уйти':gt $CURLOC
+		 'Белинда сказала что у нее есть зажигательная смесь за 500 гем.'
+		     if gem>=500:act 'Купить':gem-=500&kladQW=6&gt $CURLOC
+		 end
+     
+     end
+
+
+
+	 if gem>=100:
+		 act 'Вылечиться':
+		 cla
+		 *clr
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 gem=gem-150
+		 health=vital*10
+         manna=intel*10+intel*magika
+         wipo=will*10
+         '<center><img src="pic/EvedonNarod/belinda.jpg"></center>'
+		 'Вы отдали 50 гемов Белинде и она дала вам какую то микстуру с отвратительным запахом. Но после того как вы ее выпили, вам стало хорошо.'
+		 act 'Уйти':gt $CURLOC
+		 end
+	 end
+	 
+	 if lakt>0:
+	     act 'Спросить есть ли зелье от лактации':
+		 cla
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 act 'Уйти':gt $CURLOC
+		 'Белинда сказала что может прекратить лактацию за 1500 гем.'
+		     if gem>=1500:act 'Купить':gem-=1500&lakt=0&gt $CURLOC
+		 end
+	 end
+	 
+	 if gem>=200:
+		 act 'Нектар совы 200 гем':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/sova.jpg"></center>'
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 tempshop = input ("Сколько вы хотите купить?")
+             if tempshop*200>gem or tempshop<0 :
+             msg'У вас нет такого количества гемов.'
+			 gt $CURLOC
+             else
+			 gem=gem-tempshop*200
+			 efsleep=efsleep+tempshop 		 
+			 msg'Вы купили <<tempshop>> Нектара совы.'		 
+			 gt $CURLOC
+			 end
+		 end
+		 
+		 act 'Малое зелье восстановления здоровья 20 гем':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/potion.jpg"></center>'
+		 tempshop = input ("Сколько вы хотите купить?")
+             if tempshop*20>gem or tempshop<0 :
+             msg'У вас нет такого количества гемов.'
+			 gt $CURLOC
+             else
+			 gem=gem-tempshop*20
+			 zelhel=zelhel+tempshop 		 
+			 msg'Вы купили <<tempshop>> Малых зелий восстановления здоровья.'
+			 gt $CURLOC
+		     end
+		 end
+	 end
+	 
+	 if gem>=40:
+	 	 act 'Среднее зелье восстановления здоровья 40 гем':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/potion1.jpg"></center>'
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 tempshop = input ("Сколько вы хотите купить?")
+             if tempshop*40>gem or tempshop<0 :
+             msg'У вас нет такого количества гемов.'
+			 gt $CURLOC
+             else
+			 gem=gem-tempshop*40
+			 zelhel2=zelhel2+tempshop
+			 msg'Вы купили <<tempshop>> Средних зелий восстановления здоровья.'
+			 gt $CURLOC
+		     end
+		 end
+	 end
+	 
+	 if gem>=100:
+	 	 act 'Большое зелье восстановления здоровья 100 гем':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/potion2.jpg"></center>'
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 tempshop = input ("Сколько вы хотите купить?")
+             if tempshop*100>gem or tempshop<0 :
+             msg'У вас нет такого количества гемов.'
+			 gt $CURLOC
+             else
+			 gem=gem-tempshop*100
+			 zelhel3=zelhel3+tempshop
+			 msg'Вы купили <<tempshop>> Больших зелий восстановления здоровья.'
+			 gt $CURLOC
+			 end
+		 end
+	 end
+	 
+	 if gem>=300:
+	 	 act 'Зелье полного восстановления здоровья 300 гем':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/potion3.jpg"></center>'
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 tempshop = input ("Сколько вы хотите купить?")
+             if tempshop*300>gem or tempshop<0 :
+             msg'У вас нет такого количества гемов.'
+			 gt $CURLOC
+             else
+			 gem=gem-tempshop*300
+			 zelhel4=zelhel4+tempshop
+			 msg'Вы купили <<tempshop>> Зелий полного восстановления здоровья.'
+			 gt $CURLOC
+             end
+		 end
+		 
+		 act 'Зелье восстановления манны 200 гем':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/potion4.jpg"></center>'
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 tempshop = input ("Сколько вы хотите купить?")
+             if tempshop*200>gem or tempshop<0 :
+             msg'У вас нет такого количества гемов.'
+			 gt $CURLOC
+             else
+			 gem=gem-tempshop*200
+			 zelman=zelman+tempshop
+			 msg'Вы купили <<tempshop>> Зелий восстановления манны.'
+			 gt $CURLOC
+             end
+		 end
+		 
+		 act 'Зелье восстановления воли 300 гем':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/potion5.jpg"></center>'
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 tempshop = input ("Сколько вы хотите купить?")
+             if tempshop*300>gem or tempshop<0 :
+             msg'У вас нет такого количества гемов.'
+			 gt $CURLOC
+             else
+			 gem=gem-tempshop*300
+			 zelwil=zelwil+tempshop
+			 msg'Вы купили <<tempshop>> Зелий восстановления воли.'
+			 gt $CURLOC
+             end
+		 end
+		 
+		 act 'Зелье монаха 300 гем':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/potion6.jpg"></center>'
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 tempshop = input ("Сколько вы хотите купить?")
+             if tempshop*300>gem or tempshop<0 :
+             msg'У вас нет такого количества гемов.'
+			 gt $CURLOC
+             else
+			 gem=gem-tempshop*300
+			 efhorn=efhorn+tempshop
+			 msg'Вы купили <<tempshop>> Зелий монаха.'
+			 gt $CURLOC
+             end
+		 end
+	 end
+	 
+	 
+	 
+	 
+	 if gem>=10 and alko>0:
+		 act 'Отрезвин':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonOd/ozverin.jpg"></center>'
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 gem=gem-10
+         alko=0 
+		 'Вы отдали 10 гемов Белинде и она дала вам какую то микстуру с отвратительным запахом. Но после того как вы ее выпили, вы тут же протрезвели.'
+		 act 'Уйти':gt $CURLOC
+		 end
+	 end
+	 
+	 if gem>=20:
+		 act 'Жировая таблетка':
+		 cla
+		 *clr
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 gem=gem-20
+		 fat=fat+50
+		 salo=salo+10
+		 'Вы отдали 20 гемов Белинде и она дала вам какую то микстуру с отвратительным запахом. После того как вы ее выпили, у вас прибавилось жира на теле.'
+		 act 'Уйти':gt $CURLOC
+		 end
+		 
+		 act 'Антижировая таблетка':
+		 cla
+		 *clr
+		 BelindaQW=BelindaQW+1
+		 minut=minut+15
+		 gem=gem-20
+		 fat=fat-50
+		 salo=salo-10
+		 'Вы отдали 20 гемов Белинде и она дала вам какую то микстуру с отвратительным запахом. После того как вы ее выпили, у вас значительно убавилось жира на теле.'
+		 act 'Уйти':gt $CURLOC
+		 end
+	 end
+	 
+	 if gaman>0 and gamanBelQW=0:
+	 	 act 'Спросить про гаман':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonNarod/belinda.jpg"></center>'
+		 gamanBelQW=1
+		 minut=minut+15
+		 'Вы показали гаман Белинде. Она удивленно раскрыла глаза. "Это запрещенное зелье. В Эведоне можно получить серьезные проблемы из-за него. Я знать не желаю откуда он у тебя. И больше мне не приноси это. И для себя запомни, к Гаману есть привыкание, и не заметишь как жить без него больше не сможешь."'
+		 act 'Уйти':gt $CURLOC
+		 end
+	 end
+	 
+	 if zoday>0 and zodayBalQW=0:
+	 	 act 'Спросить про зодай':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonNarod/belinda.jpg"></center>'
+		 zodayBalQW=1
+		 minut=minut+15
+		 'Вы показали зодай Белинде. Она нахмурилась. "Слушай. Это зелье опасно, к нему мощное привыкание. Гаман против зодая детская шалость. Это действительно убойное зелье. И оно естественно под запретом. Где ты только берешь это дерьмо? Я тебе вот что скажу, когда тебя начнет ломать с этой дряни, можешь ко мне не приходить."'
+		 act 'Уйти':gt $CURLOC
+		 end
+	 end
+
+     if cerafCurDay>0 and penis>0 and cerafBelindaQW=0:
+         act 'У меня по ночам тело ломит, можете поглядеть что это такое?':
+         cla
+         *clr
+         minut=minut+15
+         BelindaQW=BelindaQW+1
+         cerafBelindaQW=1
+         'Вы пожаловались Белинде на странные ощущения в теле. Она посмотрела на вас, потом одела вам на шею амулет который тот час же засветился красным. Сняв его она улыбнулась.'
+         '(Белинда) - Я гляжу ты с Сераф познакомился. Эта сучка устроила настоящую охоту на мужчин, любыми путями пытается их в женщин превращать. Ты тоже попался под ее проклятье. Это проклятье необратимо и лекарства от него нет. Ты обречен стать женщиной.'
+         '(Вы) - то есть как? Я не хочу быть женщиной! Сераф хотела отсосать, я ей дал в рот, она обещала мне какие-то силы.'
+         '(Белинда) - Да да. Я сама тоже на это купилась. Что вылупился? Неужели не заметно, что в Тель Адре мужчин мало? Это все проделки Сераф. Я тоже родилась мальчиком, но Сераф и меня подловила. Теперь я женщина. Правда она так или иначе выполняет свой уговор, если сказала, что получишь какие-то особые способности, значит так оно и будет.'
+         '(Вы) - Где эту Сераф найти можно?'
+         '(Белинда) - Я гляжу тебе мало. Она ведь опять тебя вокруг пальца окрутит. Ничего ты от нее не добьешся. Но если хочешь закончить свои дни в ее рабах, то ищи ее возле павшей статуи богини Мары.'
+         act 'Уйти':gt $CURLOC
+         end
+     end
+     
+     if BelindaQW>10 and belindaaday!day:
+         act 'Поболтать с Белиндой':
+         cla
+         *clr
+         '<center><img src="pic/EvedonNarod/belinda.jpg"></center>'
+         if cerafQW=0:cerafQW=1
+         minut=minut+15
+         BelindaQW=BelindaQW+1
+         belindaaday=day
+         'Вы развлекались разговорами с Белиндой, она вам рассказывала о том, что ингредиенты, найденные в пустыне редки в Эведоне и стоят там дороже, но довольно дешевы в Тель Адре. И наоборот ингредиенты которые встречаются в Эведоне у нас гораздо дороже, чем там. Так же она рассказывала, что Эведоном управляет лорд, но его власть не распространяется дальше города Эведона, другими поселениями управляют другие дворяне, но они все регулярно собираются в замке Эведона, чтобы обсудить свои дела. Она так же рассказала вам о проклятой суккубихе Сераф, которая терроризирует город, она охотится на мужчин, чтобы сделать из них женщин или футанари. Сераф не любит открытый бой, но однажды она подралась со стражей. Стража разбежалась кто куда, они не противники Сераф.'
+         act 'Уйти':gt $CURLOC
+             if BelindaQW>20 and penis>0 and femin >= 50 and belindaday!day and horny>=50:
+                  act 'Заигрывать с Белиндой':
+                 cla
+                 *clr
+                 belindaday=day
+                 minut=minut+15
+                 '<center><img src="pic/EvedonNarod/belinda.jpg"></center>'
+                 'Вы попытались заигрывать с Белиндой, но она пресекла все ваши попытки и сказала вам, что предпочитает настоящих мужчин, а не непойми что.'
+                 act 'Уйти':gt $CURLOC
+                 end
+             end
+             
+             if BelindaQW>20 and penis>0 and femin < 50 and belindaday!day and horny>=50:
+                 act 'Заигрывать с Белиндой':
+                 cla
+                 *clr
+                 belindaday=day
+                 minut=minut+15
+                 'Вы стали заигрывать с Белиндой, она тоже проявляет к вам симпатию. Белинда улыбается вам и кладет вам свою руку на ваш пах лаская ваш член под одеждой.'
+                     act 'Попросить ее поработать грудью':
+                     cla
+                     *clr
+                     if BelindaSex=0:belindaSex=1&girl=girl+1
+                     sexm=sexm+1
+                     manna=manna+30
+                     horny=0
+                     '<center><img src="pic/EvedonTA/BellTit.jpg" ></center>'
+                     'Вы достали член и Белинда обхватив его своими грудями начала его ласкать, пока вы не кончили ей на груди.'
+                     act 'Уйти':gt $CURLOC
+                     end
+                     
+                     if BelindaQW>30:
+                         act 'Попросить ее сделать минет':
+						 cla
+						 *clr
+						 if BelindaSex=0:belindaSex=1&girl=girl+1
+						 sexm=sexm+1
+						 manna=manna+30
+						 horny=0
+						 '<center><img src="pic/EvedonTA/Bellblow.jpg" ></center>'
+						 'Вы сели в кресло и достали член, Белинда встала на четвереньки и начала нежно сосать, через некоторое время вы кончили ей в рот, Белинда глядя вам в глаза проглотила всю сперму.'
+						 act 'Уйти':gt $CURLOC
+						 end
+                     
+                     end
+                     
+                     if BelindaQW>40:
+                         act 'Заняться с Белиндой сексом':
+						 cla
+						 *clr
+						 if BelindaSex=0:belindaSex=1&girl=girl+1
+						 sexm=sexm+1
+						 manna=manna+15
+						 wipo=wipo+15
+						 horny=0
+						 '<center><img src="pic/EvedonTA/BellSex.jpg" ></center>'
+						 'Вы посадили Белинду на стол и раздвинули ей ноги, она обняла вас своими нежными руками и вы вошли в нее. Через некоторое время вы кончили в Белинду.'
+						 act 'Уйти':gt $CURLOC
+						 end
+                     
+                     end
+                     
+                     if BelindaQW>40:
+                         act 'Заняться с Белиндой анальным сексом':
+						 cla
+						 *clr
+						 if BelindaSex=0:belindaSex=1&girl=girl+1
+						 sexm=sexm+1
+						 wipo=wipo+30
+						 horny=0
+						 '<center><img src="pic/EvedonTA/BellAnal.jpg" ></center>'
+						 'Вы нагнули Белинду и начали пальцами разрабатывать ее попку, после чего вы вошли в ее тугую дырочку и начали ее трахать слушая стоны Белинды. Через некоторое время вы кончили в Белинду наполнив ее анус своей спермой.'
+						 act 'Уйти':gt $CURLOC
+						 end
+                     
+                     end
+                 
+                 end
+             
+             end
+         end
+     
+     end
+
+else
+'Закрыто.'
+end
+
+
+--- taAlhW ---------------------------------
+

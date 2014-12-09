@@ -1,0 +1,10 @@
+# $menu_invA
+if $selobj='Инвентарь':
+!
+ $dopzap=input('дополнить запись в журнале')
+ $zap=$zap+' '+$dopzap
+end
+
+unselect
+--- $menu_invA ---------------------------------
+

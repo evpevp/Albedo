@@ -1,0 +1,42 @@
+# monduval
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+'<center><H4>Мондюваль</H4></center>'
+'<center><img src="pic/Evedon/mounttown.jpg" ></center>'
+'Маленький городишко, стоящий между скал, в единственном месте где могут причалить корабли.'
+clr
+gs'stat'
+gs'time'
+
+
+!!!дома monkrik
+'<a href="exec: gt''monMotel''">Многоэтажная каменная гостиница "Эльмонд"</a>.'
+'<a href="exec: gt''monTorg''">Филиал торговой компании Эведона</a>.'
+'<a href="exec: gt''monLabaz''">Лабаз</a>.'
+'<a href="exec: gt''monLitey''">Литейная компания братьев Сеттонов</a>.'
+''
+if fishbarkas>0 and boatmark=3:'У причальной стенки стоит <a href="exec: gt''fishbarkas''"><font color=green><B>Ваш рыболовецкий баркас <<$barkasname>></B></font></a>'
+
+
+
+!!!
+	 act 'Гулять по городу (30 мин)':
+	 minut=minut+30
+	 gt $curloc
+	 end
+
+	 act 'Выйти на северную горную дорогу (1 час)':
+	 minut=minut+60
+	 roadMonMark=45
+	 gt'MonNordRoad'
+	 end
+
+
+--- monduval ---------------------------------
+

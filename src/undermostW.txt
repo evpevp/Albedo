@@ -1,0 +1,53 @@
+# undermostW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Под мостом</H4></center>'
+'<center><img src="pic/Evedon/most.jpg" ></center>'
+clr
+gs'stat'
+gs'time'
+
+'Под мостом лежит прохладная тень'
+
+act 'Идти на мост':
+minut=minut+5
+gt'mostW'
+end
+
+act 'Искупаться под мостом 15 мин':
+cla
+*clr
+minut=minut+15
+sweat=-3
+manna=manna+5
+'Вы искупались в теплой морской воде.'
+gs'bassW'
+act 'Выйти из воды':gt'undermostW'
+end
+
+if hour < 5:
+!Время когда всякая гадость выходит на улицы
+randmonstr=RAND(0,100)
+     if randmonstr>=80:
+     *clr
+     cla
+	 'В тишине ночи слышны какие-то скребущие звуки, приближающиеся к вам, вы напряженно оглядываетесь и видите чудовищный комок щупалец, ползущий в вашу сторону и готовый напасть на вас.'
+	 gs'tentakleW'
+	 act 'Сражаться':gt'before'
+	 exit
+     end
+end
+
+
+
+
+
+
+
+--- undermostW ---------------------------------
+

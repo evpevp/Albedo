@@ -1,0 +1,36 @@
+# udar
+if $ARGS[0]='0':
+!рука
+damage=0
+damage=stren/2
+damkoef=damage*20/100
+damage=RAND(damage-damkoef,damage+damkoef)
+end
+
+if $ARGS[0]='1':
+!нога
+damage=0
+damage=stren
+damkoef=damage*20/100
+damage=RAND(damage-damkoef,damage+damkoef)
+end
+
+if $ARGS[0]='2':
+!дубинал
+damage=0
+damage=stren*2
+damkoef=damage*20/100
+damage=RAND(damage-damkoef,damage+damkoef)
+end
+
+if $ARGS[0]='3':
+!холодное оружие
+damage=0
+damage=(stren*2)+weapDam
+damkoef=damage*20/100
+damage=RAND(stren+damage-damkoef,stren+damage+damkoef)
+end
+
+
+--- udar ---------------------------------
+

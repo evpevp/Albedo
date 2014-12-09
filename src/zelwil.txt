@@ -1,0 +1,13 @@
+# zelwil
+clr
+gs'stat'
+zelwil=zelwil-1
+wipo=wipo+1000
+if INFIGHT=1:
+DELOBJ 'Инвентарь'
+'<center><img src="pic/EvedonOd\potion5.jpg"></center>'
+end
+clr
+gs'stat'
+--- zelwil ---------------------------------
+

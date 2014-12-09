@@ -1,0 +1,214 @@
+# desertW1
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+tan=tan+5
+'<center><H4>Пустыня</H4></center>'
+'<center><img src="pic/Evedon/desert1.jpg" ></center>'
+'Горячий и сухой ветер гонит песок над барханами. В пределах видимости ничего нет.'
+clr
+gs'stat'
+gs'time'
+''
+if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песок</a>'
+if desertMark=15 and domRevengeQW>=1:'((Ковен Вапулы|kovenW|minut=minut+5))'
+if desertMark=27 and mimiko=3:'((Звуки боя|zvykiboia|minut=minut+5))'
+if desertMark=29 and vapulaFight>1:'((Оазис|oasisW|minut=minut+5))'
+
+evrand=RAND(0,100)
+if evrand>=80:
+tiprand=RAND(0,6)
+     if fightdesert<=0:
+     
+		 if tiprand=0:
+		 cla
+		 *clr
+		 fightdesert=1
+		 gs'spiderW'
+		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 'Песок зашевелился и из-под него выполз здоровенный паук, который сразу же направился к вам.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+		 
+		 if tiprand=1:
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonMonsters/vedma.jpg"></center>'
+		 fightdesert=1
+		 'Внезапно вы видите как к вам подходит какая-то женщина. Она вежливо кланяется вам, представляется пустынной ведьмой и просит разрешения наложить на вас заклинание.'
+			 act 'Отказать ей':
+			 cla
+			 *clr
+			 gs'sandwitchW'
+			 'Женщина не приемлет отказа, она бросается в атаку.'
+			 act 'Драться':gs'before'
+			 end
+			 
+			 act 'Согласиться':
+			 monster=0
+			 gt'sandwitchLoss'
+			 end
+		 exit
+		 end
+		 
+		 if tiprand=2:
+		 cla
+		 *clr
+		 fightdesert=1
+		 gs'demonGenW'
+		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 'Полыхнув жаром из-за бархана вышел огромный демон и тяжелой поступью направился к вам.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+		 
+		 if tiprand=3:
+		 cla
+		 *clr
+		 fightdesert=1
+		 gs'nagaW'
+		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 'Вы увидели как над песком поднялась прелестная женская головка и стала рассматривать вас. Тела этой женщины вам было не видно и тут вдруг с громким шипеньем женщина поднялась с песка и выпрямилась. Это была Нага, верхняя часть тела женская, а нижняя змеиная.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+		 
+		 if tiprand=4:
+		 cla
+		 *clr
+		 fightdesert=1
+		 monster=13
+		 $nameV='Песчаный демон'
+		 lvlv=100
+		 strenV=10
+		 speedV=100
+		 agilV=100
+		 vitalV=200
+		 intelv=350
+		 willv=100
+		 program=26
+		 healthV=vitalV*10
+		 mannaV=intelV*10+intelV*10
+		 wipoV=willV*10
+		 '<center><img src="pic/EvedonMonsters/sanddemon.jpg"></center>'
+		 'Песок стал расступаться и из него показалась огромная тварь. Тварь вылезла из песка и направилась к вам.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+		 
+		 if tiprand=5:
+		 cla
+		 *clr
+		 fightdesert=1
+		 gs'spiderW'
+		 mortalv=RAND(3,10)
+		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 'Песок зашевелился и из-под него выполз здоровенный паук, потом еще один и еще. Вы насчитали <<mortalv>> пауков которые устремились к вам.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+		 
+		 if tiprand=6:
+		 cla
+		 *clr
+		 fightdesert=1
+		 monster=14
+		 $nameV='Оскверненное насекомое'
+		 lvlv=100
+		 strenV=100
+		 speedV=200
+		 agilV=200
+		 vitalV=100
+		 intelv=10
+		 willv=10
+		 program=28
+		 healthV=vitalV*10
+		 mannaV=intelV*10+intelV*5
+		 wipoV=willV*10
+		 mortalv=RAND(5,25)
+		 '<center><img src="pic/EvedonMonsters/bee.jpg"></center>'
+		 'На бархан заползло насекомое похожее на муху, только величиной с теленка, оно потерло лапками у уставилось на вас своими фасетчатыми глазами. Следом выползло еще одно, и еще, вскоре вы насчитали <<mortalv>> насекомых, которые устремились к вам.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+		 
+		 if tiprand=7:
+		 cla
+		 *clr
+		 fightdesert=1
+		 monster=15
+		 $nameV='Туманная ведьма'
+		 lvlv=100
+		 strenV=10
+		 speedV=10
+		 agilV=10
+		 vitalV=150
+		 intelv=450
+		 willv=100
+		 program=27
+		 healthV=vitalV*10
+		 mannaV=intelV*10+intelV*5
+		 wipoV=willV*10
+		 BATpotionV=RAND(3,10)
+		 '<center><img src="pic/EvedonMonsters/tumanvedma.jpg"></center>'
+		 'Перед вами показалась симпатичная девушка. Она усмехнулась увидев вас.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+     end
+     if fightdesert>0:
+     fightdesert=fightdesert-1
+     end
+end
+
+!if desertMark>0:
+	 act 'Идти на север(1 час)':
+	 cla
+	 minut=minut+60
+     beduin=beduin+1
+     sweat=sweat+5
+     desrand=rand(0,intel+beduin)
+         gs'desvos'
+         if desrand<70:
+         'Вы идете по пустыне и кажется вы ходите кругами. Да, так и есть, вот ваши следы.'
+         end
+         if desrand>=70:
+         desertMark=desertMark-1
+         'Кажется вам удалось найти правильный путь в песках.'
+         end 
+         
+         act 'Осмотреться':
+             if desertMark<=0:gt'desertW'
+             if desertMark>0:gt'desertW1'
+         end
+	 end
+	 
+	 
+	 act 'Идти на юг(1 час)':
+	 cla
+	 minut=minut+60
+	 beduin=beduin+1
+     sweat=sweat+5
+     desrand=rand(0,intel+beduin)
+     gs'desvos'
+         if desrand<70:
+         'Вы идете по пустыне и кажется вы ходите кругами. Да, так и есть, вот ваши следы.'
+         end
+         if desrand>=70:
+         desertMark=desertMark+1
+         'Кажется вам удалось найти правильный путь в песках.'
+         end 
+         
+         act 'Осмотреться':
+             if desertMark>=30:gt'telaW'
+             if desertMark<30:gt'desertW1'
+         end
+	 end
+--- desertW1 ---------------------------------
+

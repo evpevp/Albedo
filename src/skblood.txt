@@ -1,0 +1,37 @@
+# skblood
+clr
+gs'stat'
+!бесовский корень
+horny=100
+bloodemon=bloodemon-1
+penis=penis+1
+if vagina>0:vagina=0
+skverna=skverna+1
+tit=tit-25
+if rost<205:rost=rost+1
+if vidage>14 and filosofkam=0:vidage=vidage-1
+exp=exp+lvl
+     chanrand=RAND(0,5)
+		 if chanrand = 0:
+		 leg=leg-RAND(5,10)
+		 end
+		 if chanrand = 1:
+		 thight=thight-RAND(5,10)
+		 end
+		 if chanrand = 2:
+		 ass=ass-RAND(5,10)
+		 end
+		 if chanrand = 3:
+		 brist=brist-RAND(5,10)
+		 end
+		 if chanrand = 4:
+		 hand=hand-RAND(5,10)
+		 end
+		 if chanrand = 5:
+		 face=face-RAND(5,10)
+		 end
+clr
+gs'stat'
+'Вы с отвращением выпили омерзительной демонической крови, у вас тут же торчком встал член.'
+--- skblood ---------------------------------
+

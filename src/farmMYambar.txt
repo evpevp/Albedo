@@ -1,0 +1,73 @@
+# farmMYambar
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+mag = 1
+
+'<center><H4>Ферма <<$farmname>></H4></center>'
+'<center>Амбар</center>'
+'<center><img src="pic/Evedon/ambar.jpg" ></center>'
+'Помещение для хранения урожая.'
+if uroz>0:'В амбаре хранится <<uroz>> мешков урожая.'
+if rassada>0:'В ящиках хранится рассада, которой хватит на то, чтобы засеять поле <<rassada>> раз.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+
+act 'Уйти':
+minut=minut+5
+gt'farmMY'
+end
+
+if uroz>0 and farmstam>0:
+	 act 'Пустить мешок урожая на еду 1 час (30 еды)':
+	 minut=minut+60
+	 uroz-=1
+	 edaWF+=30
+	 farmstam-=1
+	 sweat+=1
+	 vital+=RAND(0,1)
+	 exp+=RAND(lvl/4,lvl/2)
+	 gt $CURLOC
+	 end
+	 
+	 if oslik>0:
+	 	 act 'Пустить мешок урожая на корм осликам 1 час (30 штук)':
+		 minut=minut+60
+		 uroz-=1
+		 oslkorm+=30
+		 farmstam-=1
+		 sweat+=1
+		 vital+=RAND(0,1)
+		 exp+=RAND(lvl/4,lvl/2)
+		 gt $CURLOC
+		 end
+	 end
+	 
+	 
+	 
+     if uroz>=10:
+     	 act 'Пустить 10 мешков урожая на рассаду 1 час':
+		 minut=minut+60
+		 uroz-=10
+		 rassada+=1
+		 farmstam-=1
+		 sweat+=1
+		 vital+=RAND(0,1)
+		 exp+=RAND(lvl/4,lvl/2)
+		 gt $CURLOC
+		 end
+     end
+end
+--- farmMYambar ---------------------------------
+

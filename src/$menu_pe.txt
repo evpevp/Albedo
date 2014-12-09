@@ -1,0 +1,10 @@
+# $menu_pe
+if $selobj='Персонаж':
+clr
+gs'stat'
+!gt $CURLOC
+end
+
+unselect
+--- $menu_pe ---------------------------------
+

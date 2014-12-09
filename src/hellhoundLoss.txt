@@ -1,0 +1,44 @@
+# hellhoundLoss
+monster=0
+'Демонический пес победил вас.'
+
+act 'Далее':
+cla
+*clr
+!horny=0
+SUB=SUB+1
+minut=minut+60
+!anus=anus+1
+!anal=anal+1
+!if vagina>0:sex=sex+1
+monst=monst+1
+skverna=skverna+5
+anus=anus+5
+anal=anal+1
+'<center><img src="pic/EvedonTA/doglossanal.jpg" ></center>'
+'Пес поставил вас раком и нетерпеливо вогнал вам в задницу свой толстый член. Он начал вас трахать, упираясь своими когтистыми лапами вам в спину.'
+finrand=RAND(0,1)
+     if finrand = 0:
+     cumass=cumass+1
+     ass=ass+RAND(5,10)
+     thight=thight+RAND(5,10)
+     leg=leg+RAND(5,10)
+     'Наконец пес достает свой член из вашей раздолбанной задницы и кончает вам на ягодицы.'
+     gs'analslut'
+     end
+     if finrand = 1:
+     cumanus=cumanus+1
+     ass=ass+RAND(5,10)
+     brist=brist+RAND(5,10)
+         if penis>0:penis=penis-RAND(1,3)&'У вас зажгло член и вы почувствовали как он уменьшается.'
+         if vagina>0:tit=tit+RAND(3,6)&'Ваши груди заныли и стали тяжелыми.'
+     'Пес застонал и вы почувствовали, как теплая жидкость разливается в вашей попе. После чего он достал свой член из вас и отошел.'
+     gs'analslut'
+     end
+gs'polChange'
+
+
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+end
+--- hellhoundLoss ---------------------------------
+

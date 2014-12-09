@@ -1,0 +1,58 @@
+# dvordom
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+'<center><H4>Ваш дом в дворянском районе</H4></center>'
+'<center><img src="pic/Evedon/dvordom.jpg" ></center>'
+'Роскошный и богатый особняк.'
+if edaWF>0:'Еды для приготовления <<edaWF>> штук'
+if drova>0:'Дров для очага <<drova>> охапок'
+if shelok>0:'Склянок со щелоком для мытья <<shelok>> штук'
+*nl
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
+'Резной <a href="exec:GT ''lokerW''">шкаф</a> из красного дерева.'
+'Уютный <a href="exec:GT ''divanW''">диван</a> обитый дорогой тканью.'
+'<a href="exec:GT ''mirrW''">Зеркало</a>'
+if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+
+if slot=0:
+*nl
+'Без одежды нельзя выходить на улицу.'
+end
+
+if slot>0:
+	 act 'Уйти из комнаты':
+	 minut=minut+5
+	 gt'reachW'
+	 end
+end
+
+if edaWF>0 and drova>0:
+     act 'Приготовить еду 30мин':
+     cla
+     *clr
+	 minut=minut+30
+	 edaWF=edaWF-1
+	 drova=drova-1
+	 manna=manna+20
+	 wipo=wipo+20
+	 gs'eda'
+	 'Вы истопили очаг дровами и поставили еду на огонь, через полчаса все было готово и вы приступили к трапезе.'
+	 gs'eat'
+	 act 'Убрать посуду':gt $CURLOC
+	 end
+end
+--- dvordom ---------------------------------
+

@@ -1,0 +1,191 @@
+# foOrden
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Резиденция ордена Четырехлистника</H4></center>'
+'<center><img src="pic/Evedon/orden.jpg" ></center>'
+'Просторное светлое здание с множеством коридоров и комнат, по которым ходят маги. Над входом вырезан девиз ордена "Карать и покорять."'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+if DemonMorf>=10:
+ atkrand=RAND(0,100)
+     if atkrand>=90:
+     cls
+     *clr
+	 pogonarand=RAND(5,10)
+	 'Магистры обнаружили вашу демоническую природу.'
+	 $nameV='Старший магистр ордена четырехлистника'
+	 lvlv=186
+	 strenV=300
+	 speedV=150
+	 agilV=150
+	 vitalV=300
+	 intelv=400
+	 willv=110
+	 program=34
+	 healthV=vitalV*10
+	 mannaV=intelV*10+intelV*18
+	 wipoV=willV*10
+	 BATpotionV=10
+	 mortalv=4
+	 NORUN=1
+	 armorDefV=200
+	 klonv=1
+	 '<center><img src="pic/EvedonMonsters/magistri.jpg"></center>'
+	 'Вас окружили четыре мага из ордена четырехлистника и приказали вам сдаться.'
+	 act 'Драться':gs'before'
+     exit
+     end
+end
+
+if marpeozaQW=100:
+V_Roziske+=1
+'К вам выходит разгневанный магистр "Убирайся отсюда!"'
+     act 'Уйти':gt'fortW'
+exit
+end
+
+if OrdenRang>0 and OrdenPiper=2:
+OrdenPiper=0
+end
+
+if OrdenRang>0 and OrdenPiper=0 and skverna>0:
+     OrdenPiper=1
+     'Хмм, в тебе опять скверна. На грамоту и иди в монастырь очищаться.'
+     act 'Уйти':gt'fortW'
+exit
+end
+
+
+
+
+if OrdenRang>0 and OrdenPiper=0:
+gs'ornil'
+'((Ваша комната|OrdenRoom|minut=minut+5))'
+if ilranQW=>3 and pol=>1:'((Комната Ильрана|ilranRoom|minut=minut+5))'
+if lidiaQW>0 and pol=0:'((Комната Лидии|lidiaRoom|minut=minut+5))'
+if lektion<50:'((Лекционная аудитория|OrdenAud|minut=minut+5))'
+'((Столовая|OrdenKuh|minut=minut+5))'
+'((Комната практических занятий|OrdenMag|minut=minut+5))'
+'((Библиотека|OrdenBib|minut=minut+5))'
+'((Медицинский кабинет|OrdenLekar|minut=minut+5))'
+'((Заведующий хозяйством|OrdenZav|minut=minut+5))'
+'((Декан|OrdenDec|minut=minut+5))'
+end
+
+
+act 'Выйти из резиденции':
+minut=minut+5
+gt'fortW'
+end
+
+if OrdenRang=-1:
+'Вам на встречу выходит магистр и говорит что вы изгнаны из ордена.'
+end
+
+if OrdenRang=0 and OrdenPiper=1:
+clr
+cla
+'Высокий маг говорит вам, что вам надо для начала идти в монастырь, расположенный в горах.'
+act 'Уйти':gt'fortW'
+exit
+end
+
+if OrdenRang=0 and OrdenPiper=0:
+'К вам подходит высокий мужчина в магической робе зеленого цвета и спрашивает вас по какому вопросу вы пришли.'
+
+     act 'Вступление в орден':
+     cla
+     *clr
+     if vagina>0:$text='готова'
+     if vagina=0:$text='готов'
+         if magika>=8:
+		 'Вы изъявили желание вступить в орден. Маг кивнул и пристально вас осмотрел.'
+		 'Служение ордену может дать великую силу. Но истинное служение невозможно, когда отягощает материальное.'
+		 'Поэтому члены ордена отдают все свои деньги, недвижимость и товары в пользу ордена. Орден позаботится о пропитании и одежде для своих братьев и сестер.'
+		 'Есть послабления, младшие магистры уже имеют право иметь деньги, а старшие магистры могут иметь и деньги и недвижимость и вести бизнес.'
+		 'В ордене распространены свои деньги, ими платят за еду и обучение и зарабатывают, принося пользу ордену.'
+		 'Так же служению ордену не возможно для оскверненных. Хотя, конечно, есть способы избавиться от скверны.'
+		 'Еще в ордене строгая дисциплина. Ослушание не допустимо в таком великом деле, как борьба с нашествием демонов.'
+		 'Ну так как? Ты <<$text>> служить ордену?'
+		 act 'Нет':gt'fortW'
+			 act 'Да':
+			 cla
+			 *clr
+			 OrdenPiper=1
+			 'Возьми эту бумагу и отнеси ее в монастырь, находящийся в горах. Там ты пройдешь первоначальные испытания. Самый короткий путь туда добраться - это дорога в горы от ферм, что в пригороде Эведона.'
+			 act 'Уйти':gt'fortW'
+			 end
+		 else
+		 'У тебя слишком слаборазвитая магичность для вступления в орден.'
+		 act 'Уйти':gt'fortW'
+         end
+         
+     end
+
+end
+
+if OrdenPiper=2:
+
+     if skverna>0:
+     clr
+     cla
+     OrdenPiper=1
+     'Хмм, в тебе опять скверна. На грамоту и иди в монастырь очищаться.'
+     act 'Уйти':gt'fortW'
+     exit
+     end
+     
+     if skverna=0:
+         if OrdenRang=0:
+         OrdenRang=1
+         OrdenPiper=0
+         gs'clonil'
+         slot = 200
+		 robe = 2
+		 armorDef=100
+		 gs'ornil'
+		 *nl
+         'Члены ордена собрались в главном зале, где вас посвятили в послушники и выдали вам робу ордена.'
+         
+         end
+     end
+end
+
+
+if OrdenRang>0 and OrdenPiper<=0:
+'Лекции для послушников идут в 9ть, 11ть, 13ть и 15ть часов.'
+	 
+ 	 act 'Убираться 1 час за 10 кредитов':
+ 	 cla
+ 	 *clr
+	 minut=minut+60
+	 kredit=kredit+10
+	 'Вы убирались в орденской резиденции и драили полы до блеска в течение часа за 10 кредитов.'
+	 act 'Передохнуть':gt $CURLOC
+	 end
+
+
+end
+
+
+
+
+
+
+
+
+
+
+--- foOrden ---------------------------------
+

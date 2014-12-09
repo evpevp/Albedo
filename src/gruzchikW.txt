@@ -1,0 +1,69 @@
+# gruzchikW
+*clr
+'<center><img src="pic/EvedonMonsters/gruzchik.jpg"></center>'
+
+tentrand=RAND(0,3)
+prize=1
+
+
+if tentrand=0:
+$nameV='Тощий забулдыга'
+lvlv=30
+strenV=20
+speedV=50
+agilV=50
+vitalV=60
+intelv=10
+willv=10
+program=0
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+end
+
+if tentrand=1:
+$nameV='Колченогий пьянчужка'
+lvlv=40
+strenV=60
+speedV=60
+agilV=40
+vitalV=80
+intelv=10
+willv=10
+program=0
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+end
+
+if tentrand=2:
+$nameV='Пузатое отребье'
+lvlv=50
+strenV=80
+speedV=60
+agilV=40
+vitalV=110
+intelv=10
+willv=10
+program=0
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+end
+
+if tentrand=3:
+$nameV='Мускулистый опойка'
+lvlv=60
+strenV=110
+speedV=60
+agilV=60
+vitalV=110
+intelv=10
+willv=10
+program=0
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+end
+--- gruzchikW ---------------------------------
+

@@ -1,0 +1,51 @@
+# arenaVieW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+minut=minut+5
+'<center><H4>Арена</H4></center>'
+'<center><img src="pic/Evedon/arena.jpg" ></center>'
+'Вы сели на место и стали дожидаться боя.'
+
+
+
+if gem>=500:
+	 act 'Поставить на бойца 500 гем':
+	 cla
+	 *clr
+	 '<center><img src="pic/Evedon/arena2.jpg" ></center>'
+	 minut+=120
+     winrand=RAND(0,1)
+     'Вы поставили деньги на соблазнительного телосложения воительницу и сели смотреть бой'
+     if winrand=0:
+     gem+=500
+     'В упорном бою ваша умница одержала победу, принеся вам выигрыш.'
+     else
+     gem-=500
+     'В упорном бою ваша бестолочь проиграла и вы потеряли деньги.'
+     end
+     
+		 act 'Выйти на центральную улицу':
+		 minut=minut+5
+		 gt'townW'
+		 end
+	 end
+end
+
+	 act 'Смотреть бой':
+	 cla
+	 *clr
+	 '<center><img src="pic/Evedon/arena1.jpg" ></center>'
+	 minut+=120
+     'Вы решили не ставить деньги, а просто посмотреть бой. Бой был довольно интересен, двое удалых молодцов знатно лупили друг друга на потеху публике.'
+		 act 'Выйти на центральную улицу':
+		 minut=minut+5
+		 gt'townW'
+		 end
+	 end
+
+
+
+
+--- arenaVieW ---------------------------------
+

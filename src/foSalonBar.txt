@@ -1,0 +1,33 @@
+# foSalonBar
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaGame = $ARGS[0]
+$locGame = $CURLOC
+mag = 1
+'<center><H4>Салон мадам Жозефины</H4></center>'
+'<center><b>бар</b></center>'
+'<center><img src="pic/Evedon/kdBar.jpg" ></center>'
+'Бар в салоне где продают дорогие дворянские напитки.'
+
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+'В углу сидит пьяный <a href="exec: gt''DeBren'',''start''">капитан</a> стражи с дуэльным пистолетом и изредка стреляет по свечкам, туша фитили и наполняя комнату пороховым дымом.'
+
+act 'Выйти из бара':
+minut=minut+1
+gt'foSalon2'
+end
+
+--- foSalonBar ---------------------------------
+

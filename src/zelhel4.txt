@@ -1,0 +1,20 @@
+# zelhel4
+clr
+gs'stat'
+
+
+if INFIGHT=0:
+zelhel4=zelhel4-1
+health=vital*10
+end
+if INFIGHT=1:
+zelhel4=zelhel4-1
+health=health+1500
+'<center><img src="pic/EvedonOd\potion3.jpg"></center>'
+'Во время боя это зелье не может подействовать в полную силу!'
+DELOBJ 'Инвентарь'
+end
+clr
+gs'stat'
+--- zelhel4 ---------------------------------
+

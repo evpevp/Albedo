@@ -1,0 +1,124 @@
+# Linel
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center>Линель</center>'
+picrand=RAND(0,3)
+if picrand=0:'<center><img src="pic\Linel\L1.jpg" ></center>'
+if picrand=1:'<center><img src="pic\Linel\L2.jpg" ></center>'
+if picrand=2:'<center><img src="pic\Linel\L3.jpg" ></center>'
+if picrand=3:'<center><img src="pic\Linel\L4.jpg" ></center>'
+clr
+gs'stat'
+
+'В прошлом лесная нимфа, сейчас - ваша "игрушка".'
+
+act 'Отойти':GOTO $locM, $metkaM
+act 'Покажи своё тело': gt 'Linel','strip1'
+if horny>=30:
+	 act 'Сделай мне минет': gt 'Linel','bj1'
+end
+
+
+if $ARGS[0]='bj1':
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Lbj1.jpg" ></center>'
+	 'Линель опускается на колени и послушно берет в рот ваш член. Сосет она его довольно неохотно, но это не мешает вам получить удовольствие.'
+	 act 'Кончить':
+		 cla					 
+		 *clr
+		 '<center><img src="pic\Linel\Lbj2.jpg" ></center>'
+		 'Не сдерживаясь - вы быстро кончаете, умывая лицо Линель своей спермой.'
+		 set minut=minut+15
+		 horny=0
+		 manna=manna+25
+         wipo=wipo+25
+		 act 'Отойти': gt 'HouseRoom1'
+	 end
+end
+
+if $ARGS[0]='strip1':
+	 cla					 
+	 *clr
+	 'Линель начала медленно раздеваться. Постепенно обнажая своё тело.'
+	 '<center><img src="pic\Linel\Strip1\Lstrip1.jpg" ></center>'
+	 WAIT 6000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip2.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip3.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip4.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip5.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip6.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip7.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip8.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip9.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip10.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip11.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip12.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip13.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip14.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip15.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip16.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip17.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip18.jpg" ></center>'
+	 WAIT 4000
+	 cla					 
+	 *clr
+	 '<center><img src="pic\Linel\Strip1\Lstrip19.jpg" ></center>'
+	 WAIT 4000
+	 horny=horny+50
+	 set minut=minut+15
+	 gt 'Linel'
+end
+--- Linel ---------------------------------
+

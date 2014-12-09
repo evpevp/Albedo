@@ -1,0 +1,40 @@
+# dormlesorub
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+mag = 1
+'<center><H4>Общежитие лесорубов</H4></center>'
+'<center><img src="pic/Evedon/lesob.jpg" ></center>'
+'Большое здание с множеством комнат, в которых проживают лесорубы.'
+''
+'На стене висит доска, на которой написаны правила общежития.'
+'Общежитие предоставляется по талонам, получаемым за работу.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+act 'Уйти':minut=minut+5&gt'suburbiaW'
+
+if lesotalon>0 and lesotalonday!day:
+     act 'Отдать талон на комнату и идти в комнату':minut=minut+5&lesotalon-=1&lesotalonday=day&gt'dormroom'
+end
+
+if lesotalonday=day:
+     act 'Идти в комнату':minut=minut+5&gt'dormroom'
+end
+
+
+
+
+--- dormlesorub ---------------------------------
+

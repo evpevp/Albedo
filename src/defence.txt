@@ -1,0 +1,129 @@
+# defence
+!Магия
+!Физ защита игрока, кинетическая энергия, удары землей, воздухом, водой.
+!удары магии автоматически направляются в окна защит
+     if priziv>0:
+         if Pdefence>0:
+             if Pdefence>=damagev:
+             Pdefence-=damagev
+             damagev=0
+             '<font color=#cd00cd><<$pname>> остановил атаку противника своей защитой</font>'
+             end
+             if Pdefence<damagev and damagev>0:
+             damagev-=Pdefence
+             Pdefence=0
+             Phealth-=damagev
+             '<font color=#cd00cd><<$namev>> уничтожил защиту вашего помощника и нанес урон его здоровью <<damagev>></font>'
+             damagev=0
+             end
+         end
+         if Pdefence<=0 and damagev>0:
+         Phealth-=damagev
+         '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damagev>></font>'
+         damagev=0
+         end
+         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         dynamic $prizivNill
+         end
+     end
+     
+gs'PreEffect'
+
+
+if sandstorm>0 and waterdamV>0:
+sandstorm=sandstorm/2
+'<font color=red>Вода противника подавляет ваш песчаный шторм</font>'
+end
+if tuman>0 and waterdamV>0:
+tuman=tuman+3
+'<font color=green>Вода противника усиливает ваш туман</font>'
+end
+if defenceT>0 and waterdamV>0:
+defenceT=defenceT/2
+'<font color=red>Вода противника ослабляет вашу температурную защиту</font>'
+end
+
+if conterBat>0:gs'conterBat'
+!if conterBatV>0:gs'conterBatV'
+
+if zerkalo>0:
+zeratk=RAND(0,zerkalo)
+     if zeratk=0 or sonarv>0:
+     zerkalo=0
+     '<font color=red><<$nameV>> попал в вас, а не в ваши отражения и зеркала рассыпались</font>'
+     end
+     if zeratk>0 and sonarv=0:
+     zerkalo=zerkalo-1
+     damagev=0
+     '<font color=red><<$nameV>> попал в зеркало и оно рассыпалось</font>'
+     end
+end
+
+if levitation>0:gs'Levitation'
+
+
+if barier>0 and damagev>0:
+damagev=damagev-((damagev*barier)/100)
+'<font color=green>Ваш барьер снизил урон на <B><<barier>></B>%</font>'
+barier=barier-1
+end
+
+	 if gostbody>0:
+	 damagev=0
+	 gostbody-=1
+	 '<font color=green>Удар противника прошел через ваше тело, не причинив вам никакого ущерба.</font>'
+	 end
+
+if defence<=0 and damagev>0:
+gs'klonDef'
+dynamic $rascheturona
+'<font color=red>Вам нанесли <B><<damagev>></B> едениц урона</font>'
+damagev=0
+     if shokdamV>0 and damageV>0:
+     wipo=wipo-shokdamV
+     '<font color=red>Электроудар нанес вашей воле <B><<shokdamV>></B> едениц урона</font>'
+     shokdamV=0
+     end
+     if waterdamV>0 and damageV>0:
+     manna=manna-waterdamV
+     '<font color=red>Удар воды нанес вашей манне <B><<waterdamV>></B> едениц урона</font>'
+     waterdamV=0
+     end
+end
+
+gs'UndegraunATk'
+
+
+if defence>0:
+	 if defence>damageV:
+	 defence=defence-damageV
+	 '<font color=red>Вашей защите нанесено <B><<damagev>></B> едениц урона</font>'
+	 damageV=0
+	 end
+	 if defence<=damageV:
+	 damageV=damageV-defence
+	 gs'klonDef'
+	     if damageV>0: 
+		 dynamic $rascheturona
+		 defence=0
+		 '<font color=red>ВАША ЗАЩИТА УНИЧТОЖЕНА</font>'
+		 '<font color=red>Вам нанесли <B><<damagev>></B> едениц урона</font>'
+			 if shokdamV>0 and damageV>0:
+			 wipo=wipo-shokdamV
+			 '<font color=red>Электроудар нанес вашей воле <B><<shokdamV>></B> едениц урона</font>'
+			 shokdamV=0
+			 end
+			 if waterdamV>0 and damageV>0:
+			 manna=manna-waterdamV
+			 '<font color=red>Удар воды нанес вашей манне <B><<waterdamV>></B> едениц урона</font>'
+			 waterdamV=0
+			 end
+		 damagev=0
+		 end
+	 end
+end
+
+waterdamV=0
+shokdamV=0
+--- defence ---------------------------------
+

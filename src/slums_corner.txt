@@ -1,0 +1,47 @@
+# slums_corner
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Темный угол</H4></center>'
+'<center>Темный угол</center>'
+'<center><img src="pic/Evedon/slumscorner.jpg" ></center>'
+'Темный и грязный задворок, всюду мусор и картонные коробки. По углам шарятся бомжи и прочая шпана.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+if drunkMasterW=0 and penis<=0:
+GOTO 'ino_First'
+end
+
+if drunkMasterW=1:
+'Какой-то старикашка <a href="exec:GT ''drunk_master''">с хитрой улыбкой</a> сидит на коробках и играет на флейте.'
+end
+
+! Кнопка ждать
+   act 'Ждать':
+     cla
+     waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
+         end
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
+         end
+     act 'Посмотреть на часы':gt curloc
+     end
+
+
+! Кнопка выход
+act 'Выйти':
+minut=minut+5
+gt'slumsW'
+end
+--- slums_corner ---------------------------------
+

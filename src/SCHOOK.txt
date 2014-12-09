@@ -1,0 +1,44 @@
+# SCHOOK
+if wipo<0:wipo=0&sub+=1
+anus+=1
+clr
+gs'stat'
+picrand=RAND(0,3)
+if picrand=0:'<center><img src="pic/EvedonSC/hook.jpg" ></center>'
+if picrand=1:'<center><img src="pic/EvedonSC/hook1.jpg" ></center>'
+if picrand=2:'<center><img src="pic/EvedonSC/hook2.jpg" ></center>'
+if picrand=3:'<center><img src="pic/EvedonSC/hook3.jpg" ></center>'
+'Вы устали стоять в одной позе, но холодный и твердый крюк в анусе не дает вам расслабить ноги.'
+
+	 act 'Терпеть':
+	 cls
+	 wipo-=10
+	 minut+=60
+	 gt $curloc
+	 end
+
+	 act 'Умолять освободить':
+	 cls
+	 minut+=60
+	 sub+=1
+	 stoksk+=1
+	 storand=RAND(10,20)
+	     if stoksk>storand:
+	     'Я думаю ты достаточно наказана говорит Вапула, выпуская вас.'
+			 act '.....':GT 'SLAVECELL'
+	     elseif storand>0:
+	     'На ваши вопли никто не обращает внимания'
+	     xgt $curloc
+	     else
+	     monst+=1
+	     bj+=1
+	     '<center><img src="pic/EvedonSC/hookbj.jpg" ></center>'
+	     'В комнату вошел гоблин и со смехом засунул свой член вам в рот'
+	     gs'cumslut'
+	     cumlip+=1
+	     'Он спустил вам в рот и ушел довольно хихикая.'
+	     act '.....':gt $curloc
+	     end
+	 end
+--- SCHOOK ---------------------------------
+

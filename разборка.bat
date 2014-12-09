@@ -1,0 +1,1 @@
+split_file.py --split albedo.txt

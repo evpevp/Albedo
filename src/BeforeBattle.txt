@@ -1,0 +1,43 @@
+# BeforeBattle
+if $ARGS[0]='start':
+!ДЕЙСТВИЯ ПЕРЕД БОЕМ
+!скорость работы рук - Speed
+!скорость работы ног - SpeedK
+!быстрота  - Agil
+!ударная мощь рук - Kohand
+!ударная мощь ног - Kokick
+!способность держать удар - Chin
+!выносливость - Stamina
+!Дихтомия Подвижность-Мощь
+!Тип боя FightTip 
+!0 - драка
+!1 - бокс 
+!2 - кикбоксинг
+!3 - борьба
+!4 - бой без правил
+set staminaMAX = stamina
+set staminaMAXV = staminaV
+set chinMAX = chin
+set chinMAXV = chinV
+set agilMAX = agil
+set agilMAXV = agilV
+
+
+     if FightTip = 0:
+     gt'fight','start'
+     end
+     if FightTip = 1:
+     gt'boxing','start'
+     end
+     if FightTip = 2:
+     gt'kikboxing','start'
+     end
+     if FightTip = 3:
+     gt'sambo','start'
+     end
+     if FightTip = 4:
+     gt'MMA','start'
+     end
+end
+--- BeforeBattle ---------------------------------
+

@@ -1,0 +1,100 @@
+# telaW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+tan=tan+3
+'<center><H4>Разрушенная статуя в пустыне</H4></center>'
+'<center><img src="pic/Evedon/tela.jpg" ></center>'
+'Статуя видимо не так давно обрушилась в пески, она еще не целиком погребена под дюнами. Далеко на западе вы видите смутные очертания города. С юга летит раскаленный ветер с красным песком. На севере расстилается бескрайняя пустыня.'
+clr
+gs'stat'
+gs'time'
+''
+if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песок</a>'
+if cerafCurDay>0 and penis>0 and cerafBelindaQW=1 and cerafQW=20 and vapulaFight=0:'((На камне лежит Сераф и греется на солнышке|cerafW|minut=minut+5))'
+if vapulaFight>1:'<a href="exec: minut=minut+5 & gt ''serafCave'' ">Вход в логово Сераф</a>'
+
+
+if hour>=22 or hour<6:
+xhkoef=80
+else
+xhkoef=20
+end
+
+demrand=RAND(0,100)
+if demrand<xhkoef:
+!ничего
+end  
+if demrand>=xhkoef and otkritTA>1:
+demevrand=RAND(0,3)
+     if fightLdes<=0:
+		 if demevrand=0:
+		 fightLdes=3
+		 gem=gem+1
+		 *nl
+		 'Вы нашли блестящий гем, лежащий в песке.'
+		 end
+		 if demevrand=1:
+		 cla
+		 *clr
+		 fightLdes=3
+		 gs'impW'
+		 
+		 'На вас набросился маленького роста красный бес.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+		 if demevrand=2:
+		 cla
+		 *clr
+		 fightLdes=3
+		 gs'hellhoundW'
+		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 'На вас набросился огромный демонический пес.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+		 if demevrand=3:
+		 cla
+		 *clr
+		 fightLdes=3
+		 gs'spiderW'
+		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 'Песок зашевелился и из-под него выполз здоровенный паук, который сразу же направился к вам, шевеля в предвкушении жвалами.'
+		 act 'Драться':gs'before'
+		 exit
+		 end
+     end
+     if fightLdes>0:
+     fightLdes=fightLdes-1
+     end
+end
+
+if otkritTA=0:otkritTA=1
+     act 'Бродить по окрестностям(15 мин)':
+     minut=minut+15
+     gt $CURLOC
+     end
+
+	 act 'Идти на север вглубь пустыни (1 час)':
+	 minut=minut+60
+	 tiprand=RAND(0,9)
+     desertMark=29
+     gt'desertW1'
+	 end
+	 
+	 act 'Идти на запад к городу (1 час)':
+	 minut=minut+60
+	 gt'teladareW'
+	 end
+	 
+	 act 'Идти на юг в демоническую реальность (1 час)':
+	 minut=minut+60
+	 gt'demonrealmW'
+	 end
+--- telaW ---------------------------------
+

@@ -1,0 +1,9 @@
+# $menu_invB
+if $selobj='Инвентарь':
+clr
+pl'<<$zap>>'
+end
+
+unselect
+--- $menu_invB ---------------------------------
+

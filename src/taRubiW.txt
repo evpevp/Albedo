@@ -1,0 +1,307 @@
+# taRubiW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+!Добавлена возможность продавать сразу несколько единиц молока суккуба
+
+'<center><H4>Руби</H4></center>'
+'<center><img src="pic/EvedonNarod/rubi.jpg"></center>'
+'Темно волосая девушка в розовом платьеце, на каблучках и ярко накрашенными ногтями. Руби симпатичная и единственным недостатком вы находите ее довольно плоскую грудь.'
+'Если вы хотите молока или выпечки, что угодно, просто махните мне рукой и я мигом все принесу.'
+'Молоко 10 гем.'
+'Кофе 8 гем.'
+'Травяной чай 5 гемов.'
+clr
+gs'stat'
+act 'Отойти от стойки':gt'taPekarW'
+
+
+if hour>=6 and hour<= 22:  
+
+	 if gem>=10 and serafLip=0:
+		 act 'Молоко 10 гем':
+		 cla
+		 *clr
+		 rubiQW=rubiQW+1
+		 minut=minut+15
+		 gem=gem-10
+		 health=health+100
+		 golod=golod+5
+		 fat=fat+3
+		 'Вы попросили молока, Руби кивнула и тут же принесла вам стакан холодного молока. Вы с удовольствием выпили его и почувствовали как тело становится свежее.'
+		 act 'Отойти от стойки':gt $CURLOC
+		 end
+	 end
+	 if gem>=8 and serafLip=0:
+		 act 'Кофе 8 гем':
+		 cla
+		 *clr
+		 rubiQW=rubiQW+1
+		 minut=minut+15
+		 gem=gem-8
+		 wipo=wipo+100
+		 golod=golod+1
+		 fat=fat+2
+		 son=son+3
+		 'Вы попросили кофе, Руби кивнула и тут же принесла вам стакан чашечку кофе. Вы с удовольствием выпили кофе и почувствовали бодрость в теле и свежесть разума.'
+		 act 'Отойти от стойки':gt $CURLOC
+		 end
+	 end
+	 
+	 if gem>=5 and serafLip=0:
+		 act 'Травяной чай 5 гем':
+		 cla
+		 *clr
+		 rubiQW=rubiQW+1
+		 minut=minut+15
+		 gem=gem-5
+		 manna=manna+100
+		 golod=golod+1
+		 'Вы попросили чая, Руби кивнула и тут же принесла вам стакан горячего и душистого травяного чая. Вы с удовольствием выпили его и почувствовали как тело улучшается настроение.'
+		 act 'Отойти от стойки':gt $CURLOC
+		 end
+	 end
+	 
+	 if gem>=10 and serafLip=0:
+		 act 'Сдобная выпечка 10 гем':
+		 cla
+		 *clr
+		 rubiQW=rubiQW+1
+		 minut=minut+15
+		 gem=gem-10
+		 manna=manna+100
+		 golod=golod+10
+		 salo=salo+10
+		 'Вы попросили выпечки, Руби кивнула и тут же принесла вам душистую и очень вкусную булочку. Вы с удовольствием съели ее, она очень сладкая и жирная.'
+		 act 'Отойти от стойки':gt $CURLOC
+		 end
+	 end
+	 
+	 act 'Особое меню выпечки':
+	 cla
+	 *clr
+	 '<center><img src="pic/EvedonNarod/rubi.jpg"></center>'
+	 'Руби наклоняется к вам и шепчет, это особая выпечка, приготовленная на очищенном от скверны молоке суккуба. 50 гем.'
+	 act 'Отойти от стойки':gt $CURLOC
+	     if gem>=50 and serafLip=0:
+	         act 'Булочки в форме лица':
+	         cla
+	         *clr
+	         minut=minut+15
+		     gem=gem-50
+		     face=face+RAND(1,5)
+		     fat=fat+50
+		     salo=salo+10
+		     'Руби выдала вам булочку.'
+	         gs'eat'
+	         act 'Отойти от стойки':gt $CURLOC
+	         end
+	         
+	         act 'Булочки в форме рук':
+	         cla
+	         *clr
+	         minut=minut+15
+		     gem=gem-50
+		     hand=hand+RAND(1,5)
+		     fat=fat+50
+		     salo=salo+10
+		     'Руби выдала вам булочку.'
+	         gs'eat'
+	         act 'Отойти от стойки':gt $CURLOC
+	         end
+	         
+	         act 'Булочки в форме тела':
+	         cla
+	         *clr
+	         minut=minut+15
+		     gem=gem-50
+		     brist=brist+RAND(1,5)
+		     fat=fat+50
+		     salo=salo+10
+		     'Руби выдала вам булочку.'
+	         gs'eat'
+	         act 'Отойти от стойки':gt $CURLOC
+	         end
+	         
+	         act 'Булочки в форме задницы':
+	         cla
+	         *clr
+	         minut=minut+15
+		     gem=gem-50
+		     ass=ass+RAND(1,5)
+		     fat=fat+50
+		     salo=salo+10
+		     'Руби выдала вам булочку.'
+	         gs'eat'
+	         act 'Отойти от стойки':gt $CURLOC
+	         end
+	         
+	         act 'Булочки в форме бедер':
+	         cla
+	         *clr
+	         minut=minut+15
+		     gem=gem-50
+		     thight=thight+RAND(1,5)
+		     fat=fat+50
+		     salo=salo+10
+		     'Руби выдала вам булочку.'
+	         gs'eat'
+	         act 'Отойти от стойки':gt $CURLOC
+	         end
+	         
+	         act 'Булочки в форме ног':
+	         cla
+	         *clr
+	         minut=minut+15
+		     gem=gem-50
+		     leg=leg+RAND(1,5)
+		     fat=fat+50
+		     salo=salo+10
+		     'Руби выдала вам булочку.'
+	         gs'eat'
+	         act 'Отойти от стойки':gt $CURLOC
+	         end
+	         
+	         act 'Булочки в форме титек':
+	         cla
+	         *clr
+	         minut=minut+15
+		     gem=gem-50
+		     tit=tit+RAND(1,5)
+		     fat=fat+50
+		     salo=salo+10
+		     'Руби выдала вам булочку.'
+	         gs'eat'
+	         act 'Отойти от стойки':gt $CURLOC
+	         end
+	         
+	         act 'Булочки в форме сердца':
+	         cla
+	         *clr
+	         minut=minut+15
+	         gem=gem-50
+	         fat=fat+2
+	         horny=horny+100
+	         'Руби выдала вам булочку.'
+	         gs'eat'
+	         act 'Отойти от стойки':gt $CURLOC
+	         end
+	     end
+	 end
+	 
+	 
+	 
+	 
+	 
+	 if rubiQW>0 and rubiDay!day and rubiQWNO=0 and rubiQWYES=0:
+	 	 act 'Поболтать':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonNarod/rubi.jpg"></center>'
+		 rubiDay=day
+		 rubiQW=rubiQW+1
+		 minut=minut+15
+		 if rubiQW<10:'Руби рассказывает, что она родилась и выросла на ферме близ Эведона и не так давно переехала в Тель Адре. Ей нравится тут, хотя и немного скучает по родным краям.'
+		 if rubiQW>=10 and rubiQW<20:'Руби говорит, что хотя и страшновато жить в Тель Адре из за близости всяких чудовищ, но она никогда еще не попадалась им в лапы.'
+		 if rubiQW>=20:'Вы пытаетесь выспросить у Руби зачем она приехала в Тель Адре, но она упорно отмалчивается о причинах.'
+         
+         
+			 if rubiQW<30 or penis<=0:
+			  act 'Отойти от стойки':gt $CURLOC
+			 end
+			 if rubiQW>=30 and penis>0:
+			     act 'Отойти от стойки':
+			     cla
+			     *clr
+			     '<center><img src="pic/EvedonNarod/rubi.jpg"></center>'
+			     'Вы собрались уходить, как вдруг Руби покраснела и схватила вас за руку. "Подожди, я хочу с тобой поговорить." Лицо Руби наливается краской и она говорит "Ты мне очень нравишся, но я должна тебе кое что сказать обо мне."'
+			     'Вы попросили Руби продолжать, но она молчала и только краснела. Наконец набравшись решимости она сказала "Я, я всегда любила каблуки и красивую одежду, поэтому и переехала сюда. Это помогло мне открыть мою сущность. Но теперь мне так... так трудно это сделать. На самом деле я мальчик."'
+			     'Руби замолчала и потупилась. Ну теперь то вы поняли, почему у Руби плоская грудь и зачем она переехала из Эведона в Тель Адре.'
+			         act 'Извини, но я имею дело только с девочками. (Уйти)':
+			         rubiQWNO=1
+                     gt $CURLOC
+                     end
+                     
+                     act 'Обнять ее за плечо и успокоить':
+                     cla
+                     *clr
+                     '<center><img src="pic/EvedonNarod/rubi.jpg"></center>'
+                     rubiQWYES=1
+			         'Вы обняли Руби и сказали, что не важно кикие у кого гениталии, лишь бы человек хороший был. Она вздохнула с облегчением "Хвала Маре. Я так боялась признатся, только не рассказывай мой секрет никому, ладно?" Вы кивнули головой и направились к выходу.'
+                     act 'Отойти от стойки':gt $CURLOC
+                     end
+			     end
+			 end
+		 end
+	 
+	 end
+	 
+	 if rubiQWYES>=1:
+	     act 'Поболтать':
+		 cla
+		 *clr
+		 '<center><img src="pic/EvedonNarod/rubi.jpg"></center>'
+		 rubiDay=day
+		 manna=manna+20
+		 minut=minut+15
+		 'Вы поболтали с Руби о всяких пустяках, она смотрит на вас влюбленными глазами и слушает ваши рассказы о другом мире с большим интересом.'
+		 act 'Отойти от стойки':gt $CURLOC
+		 end
+	 
+	 end
+	 
+	 if rubiSex>0 and kittySex>0:
+		 if sucmilk>0:
+			 act 'Показать молоко суккуба':
+			 cla
+			 minut=minut+1
+			 'Хмм, я дам за это 50 гемов и ни гемом больше'
+			 'У вас <<sucmilk>> ед. молока суккуба.'
+			     act 'Нет':gt 'taRubiW'
+				 act 'Да':
+				 cla
+				     if sucmilk>1:
+				         act 'Продать все':
+				         gem=gem+sucmilk*50
+				         msg'Вы продали Руби <<sucmilk>> ед. молока суккуба' 
+				         sucmilk=0
+				         minut=minut+5
+				         gt $CURLOC
+				         end
+				         
+				         act 'Продать нужное количество':
+				         tempshop = input ("У вас <<sucmilk>> Молока Суккуба. Сколько вы желаете продать?")
+				             if tempshop > sucmilk or tempshop < 0 :
+				             msg 'У вас нет такого количества молока суккуба.'
+				             minut=minut+1
+				             gt 'taRubiW'
+				             else
+				             gem=gem+tempshop*50
+				             sucmilk=sucmilk-tempshop
+				             minut=minut+5
+				             msg'Вы продали Руби <<tempshop>> ед. молока суккуба.'
+				             gt $CURLOC
+				             end
+				         end
+				     if sucmilk=1:
+			         sucmilk=sucmilk-1
+				     gem=gem+50
+				     'Вы продали Руби свой товар.'
+				     act 'Спрятать деньги': gt $CURLOC
+				     end
+				 end
+			     act 'Нет':gt $CURLOC
+			     end
+			 
+			 end
+		 end
+	 end
+	 
+end
+end
+--- taRubiW ---------------------------------
+

@@ -1,0 +1,214 @@
+# pornstudio
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+
+	 if pornstudio=1 and mentmoney! month:
+	 cla
+	 *clr 
+	 clr
+	 gs'stat'
+	 '<center><img src="pic\studiа\ment_1.jpg" ></center>'
+	 'Пришли менты и требуют 100 тысяч рублей за прикрытие порнобизнеса'
+		 if money > 100000:
+			 act 'Отдать требуемую сумму':
+			 money=money-100000
+			 mentmoney = month
+			 mentrand=RAND(1,2)
+			 cla
+			 *clr 
+			 clr
+			 gs'stat'
+			 if mentrand=1:'<center><img src="pic\studiа\ment_2.jpg" ></center>'
+			 if mentrand=2:'<center><img src="pic\studiа\ment_3.jpg" ></center>'
+			 'Вы отдали 100 тысяч рублей. В этом месяце они больше не придут'
+			 act 'Вернуться в студию': gt'pornstudio','start'
+			 end
+		 end 
+		
+		 if money < 100000:
+		 act 'Отказаться платить':gt'down'
+		 end    
+	 exit
+	 end
+
+	 if week < 6 and pornstudio=1:
+	 '<center><img src="pic\studiа\studiа_0.jpg" ></center>'
+	 'В студии никого нет, все отдыхают и готовятся к новым съёмкам'
+		 act 'Уйти':gt'down'
+	 end
+
+	 if week >= 6 and pornstudio=1:
+	 '<center><img src="pic\studiа\studiа_6.jpg" ></center>'
+	 'Вы приехали на студию и вас встретил режиссер-постановщик'
+		 if week=6 and castig = 0 :
+			 act 'Провести кастинг':
+			 set minut = minut + 480
+			 gt'pornstudio','2'
+			 end
+		 end
+		 
+		 if week=7 and castig = 1 and actris = 0:
+			 act 'Отобрать актрису для главной роли':gt'pornstudio','3'
+		 end
+		 
+		 act 'Уйти':gt'down'
+	 end
+
+	 if filmpart >= 10 and pornstudio=1:
+		 act 'Пётр забрал партию фильмов и дал наличными 100 т.рублей':
+		 money=money+100000
+		 filmpart=filmpart-10
+		 gt'pornstudio','start'
+		 end
+	 end 
+end
+
+
+ 
+if $ARGS[0]='1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 5
+clr
+gs'stat'
+'<center><img src="pic\studiа\Pierre_1.jpg" ></center>'
+'Тимофеич дал вам адресок и вы поехали на встречу с владельцем студии'
+'Он как раз занимался сьёмкой нового фильма.'
+'Вы поздоровались и познакомились. Хозяина студии зовут Пётр'
+     act 'Вы предложили обсудить предстоящую сделку':
+     cla
+	 *clr
+	 minut=minut+60
+	 '<center><img src="pic\studiа\Pierre_2.jpg" ></center>'
+	 'Тимофеич тебе цену сказал - это 10 лямов деревянных. Как сам понимаешь только наличными.'
+	 'Раз ты здесь значит деньги при тебе и ты готов купить этот бизнес.'
+	 'Я тебе оставляю настроенный рабочий механизм, со всеми прилагающими составными.'
+	 'Кроме павильонов у тебя есть рабочая команда для съемок фильма от и до ...'
+		 act 'Расскажи как это работает!':
+		 cla
+		 *clr
+		 '<center><img src="pic\studiа\casting_3.jpg" ></center>'
+		 'Ты проводишь кастинг актрис и выбираешь кто будет сниматься в фильме'  
+		  
+			 act '......':
+			 cla
+			 *clr
+			 '<center><img src="pic\studiа\model_0.jpg" ></center>'
+			 'Потом ты выбираешь кто будет в главной роли!' 
+			 'Это очень важно - хорошая главная героиня это 90% успеха!' 
+			  
+				 act '......':
+				 cla
+				 *clr
+				 '<center><img src="pic\studiа\Film_0.jpg" ></center>'
+				 'Ну потом сама сьёмка -процесс интересный и увлекательный'
+				 'И на выходе мы получаем ....'
+				 
+					 act '......':
+					 cla
+					 *clr
+                     '<center><img src="pic\studiа\dvd-disс.jpg" ></center>'
+                     'То, на чём я сделал хорошие деньги. И, думаю, ты тоже сделаешь'
+						 act 'Я тоже так думаю ... А что с реализацией?':
+						 cla
+						 *clr
+						 '<center><img src="pic\studiа\Pierre_2.jpg" ></center>'
+						 'Реализация уже настроена - основной реализатор Тимофеич.' 
+						 'Выручку он будет тебе отдавать раз в неделю в воскресение (забудешь забрать он их пропьёт).' 
+                         ' Его реализация зависит от количества снятых фильмов и выбора.'
+                         'Да и я буду покупать у тебя партиями по 10 фильмов за 100 тысяч рублей за партию.'
+						 
+						 
+                             act 'А что с крышей?':
+							 cla
+							 *clr
+							 '<center><img src="pic\studiа\ment_0.jpg" ></center>'
+							 'Ментам придётся отстёгивать наличными каждый месяц по 100 штук.'
+							 'Они сами будут приходить в студию. Первые месяц прибыли, конечно, не будет,' 
+							 'но как только наснимаешь побольше фильмов бизнес пойдет в гору.'
+							 'Потом эти 100 штук будут как пыль. И смотри, ты должен быть готов ВСЕГДА отдать им наличные!!!'
+							 'Иначе пи*дец бизнесу!!! Да и за здоровье твоё не поручусь!!!'
+							 'Поэтому носи с собой наличность!!! Правда будет постоянная проблема с гопниками ...'
+							 'Так что рекомендую укреплять тело и дух!!!' 
+							  
+							 
+								 act 'Ну вроде как всё понял ....':
+								 cla
+								 *clr
+								 '<center><img src="pic\studiа\Pierre_2.jpg" ></center>'
+								 'И вот ещё что!!!' 
+								 'Здесь конечно работают профессионалы, но никто без твоего руководства работать не будет.'
+								 'Поэтому кастинг, выбор актёров и съёмка - только под твоим руководством.'
+								 'По времени съёмка занимает около двух дней. В субботу кастинг, в воскресение отбор главной героини и сами съёмки ...'
+                                 'Фильмы конечно можно клепать без остановки, но актёрам и актрисам нужно отдыхать ...'
+								 'Поэтому мы снимаем всего один фильм в неделю!'
+								 'Вот и всё что я хотел тебе сказать - а теперь давай деньги!!!'
+									 act 'Что то я не уверен ... Пойду домой подумаю!':
+                                     pornstudio=0 
+                                     gt'bedroom1','start'
+                                     end
+                                     
+                                     act 'Я принял решение - я в деле!!!': 
+									 pornstudio=1 
+									 money=money-10000000
+									 gt'pornstudio','start'
+									 end
+								 end	 
+                             end    
+                         end
+		             end
+                 end    
+		     end
+         end
+     end
+end
+
+
+if $ARGS[0]='2':
+$metka = $ARGS[0]
+$loc = $CURLOC
+clr
+gs'stat'
+castingrand=RAND(1,6)
+if castingrand=1: '<center><img src="pic\studiа\casting_1.jpg" ></center>'
+if castingrand=2: '<center><img src="pic\studiа\casting_2.jpg" ></center>'
+if castingrand=3: '<center><img src="pic\studiа\casting_3.jpg" ></center>'
+if castingrand=4: '<center><img src="pic\studiа\casting_4.jpg" ></center>'
+if castingrand=5: '<center><img src="pic\studiа\casting_5.jpg" ></center>'
+if castingrand=6: '<center><img src="pic\studiа\casting_6.jpg" ></center>'
+'Вы восемь часов проводили кастинг.'
+
+     act 'Закончить':
+     castig = 1
+     gt'pornstudio','start'
+     end
+end
+
+if $ARGS[0]='3':
+$metka = $ARGS[0]
+$loc = $CURLOC
+clr
+gs'stat'
+'<center><img src="pic\studiа\casting_7.jpg" ></center>'
+'Вы в течении часа выбирали главную героиню для фильма ...'
+'И остановили свой выбор на ...' 
+	 if BDSMactress = 0:
+	 '((Рыженькой|Redhead))'
+	 '((Блондиночке|Blonde))'
+	 '((Брюнеточке|Brunette))'
+	 '((Шатеночке|Brown))'
+	 end
+	 if BDSMactress > 0:
+	 '((Рыженькой|Redhead))'
+	 '((Блондиночке|Blonde))'
+	 '((Брюнеточке|Brunette))'
+	 '((Шатеночке|Brown))'
+	 'Вау! Есть желающие сняться в ((БДСМ|BDSM))!!!' 
+	 end
+end
+--- pornstudio ---------------------------------
+

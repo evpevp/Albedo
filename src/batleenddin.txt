@@ -1,0 +1,288 @@
+# batleenddin
+ $hunterfordemondin={
+ if healthv <= 0 and mortalv=0 and OblavaBat=6:
+ OblavaBat=0
+ NORUN=1
+ $nameV='Старший магистр СБО'
+ lvlv=286
+ strenV=300
+ speedV=250
+ agilV=250
+ vitalV=800
+ intelv=800
+ willv=110
+ program=50
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*15
+ wipoV=willV*10
+ klonv=1
+ armorDefV=600
+ monster=29
+ defencev=10000
+ defencetv=10000
+ defencewv=10000
+ defencehv=10000
+ defencemv=10000
+ barierV=80
+ healthAmuletV=15
+ BATpotionV=5
+ blood=0
+ notHereV=6
+ windstormv=6
+ VibroTravmaV=0
+ 'Из всей напавшей на вас артели остался только один магистр СБО. Земля начала дрожать и трескаться, поднялся воздушный вихрь буквально разрывающий почву на куски, эти куски стали разлетаться в разные стороны, магистра тем временем подняло в вихрь и он скрылся из глаз.'
+ act 'Далее':gt'fight','0'
+ end
+ 
+ if healthv <= 0 and mortalv=0 and OblavaBat=5:
+ OblavaBat=6
+ NORUN=1
+ $nameV='Старший магистр СБО'
+ lvlv=286
+ strenV=300
+ speedV=250
+ agilV=250
+ vitalV=800
+ intelv=800
+ willv=110
+ program=49
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*15
+ wipoV=willV*10
+ klonv=1
+ armorDefV=600
+ monster=29
+ defencev=10000
+ defencetv=10000
+ defencewv=10000
+ defencehv=10000
+ defencemv=10000
+ barierV=80
+ healthAmuletV=15
+ BATpotionV=5
+ notHereV=6
+ watergroundv=6
+ blood=0
+ VibroTravmaV=0
+ 'Еще один магистр СБО повержен и на его место вышел следующий магистр. Земля тут же пропитывается влагой и превращается в грязь, магистр плавно погружается в грязь и исчезает.'
+ act 'Далее':gt'fight','0'
+ end
+ 
+ if healthv <= 0 and mortalv=0 and OblavaBat=4:
+ OblavaBat=5
+ NORUN=1
+ $nameV='Старший магистр СБО'
+ lvlv=286
+ strenV=300
+ speedV=250
+ agilV=250
+ vitalV=800
+ intelv=800
+ willv=110
+ program=48
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*15
+ wipoV=willV*10
+ klonv=1
+ armorDefV=600
+ monster=29
+ defencev=10000
+ defencetv=10000
+ defencewv=10000
+ defencehv=10000
+ defencemv=10000
+ barierV=80
+ healthAmuletV=15
+ BATpotionV=5
+ notHereV=6
+ waterstormv=6
+ blood=0
+ VibroTravmaV=0
+ 'Третий магистр СБО упал и на его место вышел следующий магистр. В воздухе молниеносно образовались водяные капли а магистра в воздух поднял вихрь и спрятал его.'
+ act 'Далее':gt'fight','0'
+ end
+ 
+ if healthv <= 0 and mortalv=0 and OblavaBat=3:
+ OblavaBat=4
+ NORUN=1
+ $nameV='Старший магистр СБО'
+ lvlv=286
+ strenV=300
+ speedV=250
+ agilV=250
+ vitalV=800
+ intelv=800
+ willv=110
+ program=47
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*15
+ wipoV=willV*10
+ klonv=1
+ armorDefV=600
+ monster=29
+ defencev=10000
+ defencetv=10000
+ defencewv=10000
+ defencehv=10000
+ defencemv=10000
+ barierV=80
+ healthAmuletV=15
+ BATpotionV=5
+ notHereV=6
+ elektogroundv=6
+ blood=0
+ VibroTravmaV=0
+ 'Второй магистр СБО упал и на его место вышел следующий магистр. Он погрузился в землю и из земли начали бить молнии.'
+ act 'Далее':gt'fight','0'
+ end
+ 
+ if healthv <= 0 and mortalv=0 and OblavaBat=2:
+ OblavaBat=3
+ NORUN=1
+ $nameV='Старший магистр СБО'
+ lvlv=286
+ strenV=300
+ speedV=250
+ agilV=250
+ vitalV=800
+ intelv=800
+ willv=110
+ program=46
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*15
+ wipoV=willV*10
+ klonv=1
+ armorDefV=600
+ monster=29
+ defencev=10000
+ defencetv=10000
+ defencewv=10000
+ defencehv=10000
+ defencemv=10000
+ barierV=80
+ healthAmuletV=15
+ windGranadV=10
+ BATpotionV=5
+ notHereV=6
+ elektostormv=6
+ blood=0
+ VibroTravmaV=0
+ 'Магистр СБО упал и на его место вышел второй магистр. Он тут же наколдовал вокруг себя вихрь который спрятал его и этот вихрь начал бить молниями во все стороны.'
+ act 'Далее':gt'fight','0'
+ end
+ 
+ if healthv <= 0 and mortalv=0 and OblavaBat=1:
+ OblavaBat=2
+ NORUN=1
+ $nameV='Старший магистр СБО'
+ lvlv=286
+ strenV=300
+ speedV=250
+ agilV=250
+ vitalV=800
+ intelv=800
+ willv=110
+ program=45
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*15
+ wipoV=willV*10
+ klonv=1
+ armorDefV=600
+ monster=29
+ defencev=10000
+ defencetv=10000
+ defencewv=10000
+ defencehv=10000
+ defencemv=10000
+ shokDefV=10
+ barierV=80
+ healthAmuletV=15
+ windGranadV=10
+ BATpotionV=5
+ blood=0
+ VibroTravmaV=0
+ 'Рухнул последний стражник и на вас набросился маг Службы Безопасности Ордена его мощная защита искрила молниями он выставил руку и вода хлынула вам под ноги.'
+ act 'Далее':gt'fight','0'
+ end
+ 
+ 
+ if healthv <= 0 and mortalv>0 and OblavaBat=1:
+ mortalv=mortalv-1
+ '<<$namev>> упал и его место занял новый противник.'
+ $nameV='Гвардеец'
+ lvlv=220
+ strenV=220
+ speedV=250
+ agilV=250
+ vitalV=450
+ intelv=10
+ willv=180
+ program=10
+ healthV=vitalV*10
+ mannaV=intelV*10
+ wipoV=willV*10
+ ShilDefv=80
+ weaponv=1
+ armorDefv=600
+ wepAtkV=80
+ barierV=80
+ healthAmuletV=15
+ windGranadV=10
+ NORUN=1
+ blood=0
+ VibroTravmaV=0
+ act 'Далее':gt'fight','0'
+ end
+ } 
+
+
+$progseraf={
+ if CerafEt<3 and program=38 and healthv <= 0:
+ bloodV=0
+	 if CerafEt=0:
+	 CerafEt=1
+	 '<B><<$namev>> падает и улыбается вам. Внезапно ее тело начинает превращатся в стаю воронов которые разлетаются в разные стороны.</B>'
+	 vitalV=700
+	 healthV=vitalV*10
+	 wipoV=willV*10
+	 klonv=2
+	 defenceV=defenceV+7000
+	 defenceTV=defenceTV+7000
+	 defenceWV=defenceWV+7000
+	 blood=0
+	 VibroTravmaV=0
+	 '<B>Вы слышите аплодисменты за спиной. Обернувшись вы видите что за вами стоит <<$namev>> и аплодирует. "Браво <<$name>>, браво. Но мы же не будем заканчивать веселье так быстро?"</B>'
+	 end
+	 if CerafEt=1 and healthv <= 0:
+	 CerafEt=2
+	 '<B><<$namev>> падает и показывает пальцем вам за спину. Ее тело начинает превращатся в стаю воронов которые разлетаются в разные стороны.</B>'
+	 vitalV=900
+	 healthV=vitalV*10
+	 wipoV=willV*10
+	 klonv=2
+	 defenceV=defenceV+7000
+	 defenceTV=defenceTV+7000
+	 defenceWV=defenceWV+7000
+	 weapDamV=100
+	 blood=0
+	 VibroTravmaV=0
+	 '<B>Обернувшись вы видите что за вами стоит <<$namev>> и одобрительно качает головой. "Ты меня поражаешь <<$name>>, до тебя только двум смертным удавалась проделать подобное. Ну теперь все будет очень серьезно." После этих слов <<$namev>> достает меч</B>'
+	 end
+	 if CerafEt=2 and healthv <= 0:
+	 CerafEt=3
+	 '<B><<$namev>> поднимает руки в стороны и ее тело начинает превращатся в стаю воронов которые разлетаются в разные стороны.</B>'
+	 vitalV=1500
+	 healthV=vitalV*10
+	 wipoV=willV*10
+	 klonv=2
+	 defenceV=defenceV+7000
+	 defenceTV=defenceTV+7000
+	 defenceWV=defenceWV+7000
+	 blood=0
+	 VibroTravmaV=0
+	 '<B>Обернувшись вы видите что за вами стоит <<$namev>> и хмурится. "Кажется я заигралась с тобой <<$name>>, сейчас я покончу с этой глупой игрой."</B>'
+	 end
+ end
+ }
+--- batleenddin ---------------------------------
+

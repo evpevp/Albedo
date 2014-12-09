@@ -1,0 +1,37 @@
+# monastKuh
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Кухня</H4></center>'
+'<center><img src="pic/Evedon/monastKuh.jpg" ></center>'
+'Небольшая, наполненная аппетитными запахами кухня.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+if hour=12:'((За столом ест настоятельница|nastoyat|minut=minut+5))'
+
+	 act 'Есть 1 час':
+	 cla
+	 *clr
+	 minut=minut+60
+	 gs'eda'
+	 'Кухарка достала еды и поставила на стол для вас.'
+	 gs'eat'
+	 act 'Отойти от стола':gt $CURLOC
+	 end
+
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'monastIn'
+	 end
+--- monastKuh ---------------------------------
+

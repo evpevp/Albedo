@@ -1,0 +1,85 @@
+# enterW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaFuck = $ARGS[0]
+$locFuck = $CURLOC
+'<center><H4>ГОРОД ЭВЕДОН</H4></center>'
+'<center>Южные городские ворота</center>'
+'<center><img src="pic/Evedon/enter.jpg" ></center>'
+'Ворота на южной стороне города, охраняемые стражей. Ворота закрывают на ночь с полуночи и до 5ти утра, стража не будет слушать никакие просьбы и жалобы по этому поводу.'
+clr
+gs'stat'
+gs'time'
+
+if DemonMorf>=10:
+ atkrand=RAND(0,100)
+     if atkrand>=90:
+     cls
+	 *clr
+     '<center><img src="pic/EvedonMonsters/guards.jpg"></center>'
+	 pogonarand=RAND(5,10)
+	 'Разгуливать в облике демона опасно, стража вас обнаружила и атаковала.'
+		 act 'Убегать.':
+		 minut=minut+1
+		 crime=1
+		 gt'runW'
+		 end
+     exit
+     end
+end
+
+if V_Roziske>0:'На столбе висит ваш портрет с надписью, "Разыскивается <<$name>>."'
+if hour>=10 and hour<=14 and elisday!day:
+$elis='около него стоит <a href="exec: gt ''eliscapt'' ">стройная брюнетка в доспехах капитана стражи развешивает объявления.</a>'
+else
+$elis=''
+end
+!eliscapt
+'Около ворот висит ((список преступлений|spisokW|minut=minut+1)) <<$elis>>'
+'((Позорный столб|pilloryW|minut=minut+5))'
+'((Министерство скорой расправы|sudW|minut=minut+5))'
+'((Казарма городской стражи|kazarmaW|minut=minut+5))'
+'((Городская управа|upravaW|minut=minut+5))'
+
+if hour>=5 and hour<=23:
+!ворота открыты
+	 act 'Выйти из города':
+	 minut=minut+15
+	 gt'suburbiaW'
+	 end
+end
+
+act 'Идти в Деловой квартал':
+	 minut=minut+15
+	 gt'townW'
+	 end
+end
+
+
+
+
+     act 'Ждать':
+     cla
+     waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
+         end
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
+         end
+     act 'Посмотреть на часы':gt curloc
+     end
+     
+     
+     
+     if V_Roziske>0 and V_RoziskeDay!day:
+     randroz=RAND(0,100)
+         if randroz>=70:gt'Rozisk'
+     end
+--- enterW ---------------------------------
+

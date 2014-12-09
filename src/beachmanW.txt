@@ -1,0 +1,20 @@
+# beachmanW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+'"Вход на пляж только в купальниках. И пляж закрывается по ночам, тут могут из моря выходить монстры.'
+clr
+gs'stat'
+gs'time'
+
+act 'Отойти':
+minut=minut+5
+gt'beachW'
+end
+--- beachmanW ---------------------------------
+

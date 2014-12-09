@@ -1,0 +1,9 @@
+# $menu_invD
+if $selobj='Инвентарь':
+clr
+pl'<center>Записная книжка</center>'
+end
+
+unselect
+--- $menu_invD ---------------------------------
+

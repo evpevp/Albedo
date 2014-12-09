@@ -1,0 +1,40 @@
+# rucheW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Ручеек</H4></center>'
+'<center><img src="pic/Evedon/df21.jpg" ></center>'
+'Прозрачная вода с веселым звоном обрушивается с камней и течет по лесу.'
+clr
+gs'stat'
+gs'time'
+
+act 'Отойти':
+minut=minut+5
+gt'df2_1'
+end
+
+if ruchday!day:
+     act 'Попить воды':
+     cla
+     minut=minut+5
+     golod=14
+     son=20
+     health=vital*10
+     manna=intel*10+intel*magika&wipo=wipo+5
+     wipo=will*10
+     ruchday=day
+     if vidage>16 and filosofkam=0:vidage=vidage-1
+     'Вы глотнули чистой воды и почувствовали моментальный прилив сил и возникло ощущение, что вы даже немного помолодели.'
+		 act 'Отойти':
+		 minut=minut+5
+		 gt'df2_1'
+		 end
+     end
+end
+--- rucheW ---------------------------------
+

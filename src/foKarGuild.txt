@@ -1,0 +1,73 @@
+# foKarGuild
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+mag = 1
+'<center><H4>Гильдия Караванщиков Эведона</H4></center>'
+'<center><img src="pic/Evedon/foKarGuild.jpg" ></center>'
+'Гильдия представляет из себя просторное здание с множеством комнат где проживают члены гильдии. У стен стоят доспехи и сложено оружие.'
+'На стене весит прейскурант услуг.'
+'Переход до Тель Адре 1000 гем (2е суток). Еда и ночлег включены.'
+'Переход до Рыбацкой Деревни (пригород Эведона) 500 гем (6часов). Еда включена.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+act 'Уйти':
+minut=minut+5
+gt'fortW'
+end
+
+
+if gem>=1000:
+     act 'Заплатить 1000 гемов и отправится в Тель Адре (2е суток)':
+     gem=gem-1000
+	 minut=minut+1440
+	 gs 'stat'
+	 minut=minut+1440
+	 gs 'stat'
+	 golod=15
+	 son=20
+	 horny=0
+	 cla
+	 *clr
+	 '<center><img src="pic/Evedon/karavan.jpg" ></center>'
+	 'Вы погрузились на караван и через двое суток достигли Тэль Адрэ без всяких приключений. В пути вы выспались и хорошо поели.'
+	 act 'Уйти':gt'teladareW'
+	 end
+end
+
+if gem>=500:
+     act 'Заплатить 500 гемов и отправится в Рыбацкую деревню (6 часов)' :
+     gem=gem-500
+	 minut=minut+360
+	 golod=15
+	 cla
+	 *clr
+	 '<center><img src="pic/Photo/Escort.jpg" ></center>'
+	 'Вы присоеденились к тяжеловооруженному отряду пехотинцев, который вас сопроводил до места назначения. В пути во время привала вас накормили.'
+	 act 'Уйти':gt'fishW'
+	 end
+end
+
+if gruz>0:
+     act 'Продать груз':
+     gruzMark=1
+     torgTip=1
+     gruzphoto=1
+     noiron=0
+     gt'GRUZ'
+     end
+end
+--- foKarGuild ---------------------------------
+

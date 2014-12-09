@@ -1,0 +1,40 @@
+# monastMag
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+'<center><H4>Магическая комната</H4></center>'
+'<center><img src="pic/Evedon/monastMag.jpg" ></center>'
+'Темное помещение, украшенное светящимися символами.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+if hour>12 and hour<16:'((В магическом круге медитирует настоятельница|nastoyat|minut=minut+5))'
+
+     if magorday!day:
+         act 'Медитировать, развивая магичность 1 час':
+         cla
+         *clr
+         magorday=day
+         exp=exp+RAND(lvl/2,lvl*2)
+	     magikExp=magikExp+RAND(magika,magika*2)
+		 minut=minut+60
+		 'Вы медитируете сидя в магическом символе, пытаясь увеличить свою магичность.'
+		 act 'Уйти':gt $CURLOC
+		 end
+     end
+
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'monastIn'
+	 end
+--- monastMag ---------------------------------
+

@@ -1,0 +1,234 @@
+# sexshop
+if $ARGS[0]='start':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Секс шоп</font></B></center>'
+'<center><img src="pic\pic\sexshop.jpg" ></center>'
+'
+В подвальном помещении расположены кабинки для частного просмотра порно фильмов (50 руб 15 минут).'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+     act 'ВЫЙТИ':
+     cla
+     set ghnow = 0
+     set minut = minut + 5
+     gt'down'
+     end
+     
+     act 'Идти в подвал':gt'sexshop','podval'
+	 
+	 !Для Инны
+	 if bankfond>=100000 and equpformansard!1:
+		 act 'Купить полный набор для BDSM': 
+			 equpformansard=1
+			 bankfond=bankfond-100000
+			 if mansard=1: 
+				 msg 'У вас есть все необходимое для жесткого секса с Инной.'
+				 InnaBDSM=2
+			 end
+			 msg 'Набор куплен'
+		 end
+		 act 'ВЫЙТИ': gt'down'
+	 end
+	 !Конец
+
+	 if DVD_avtomat=1 and DVD_avtomatmoney!day:
+		 act 'Забрать выручку за проданную порнушку':
+		 DVD_avtomatmoney = day
+		 bankfond=bankfond+film*6000+BDSMfilm*12000
+		 cla
+		 *clr 
+		 clr
+		 gs'stat'
+		 '<center><img src="pic\studiа\bankcheck.jpg" ></center>'
+		 'Хозяин сексшопа выписал чек на <<film*6000+BDSMfilm*12000>> рублей'
+			 act 'Поговорить с хозяином ...':
+			 cla
+			 *clr 
+			 clr
+			 gs'stat'
+			 '<center><img src="pic\studiа\bosssexshop.jpg" ></center>'
+			 '- Игорь! Ты большой молодец, твои фильмы пользуются спросом!'
+			 '- Но для увеличения выручки надо снимать больше фильмов!!! '
+			 act 'Хорошо! Будем снимать больше':gt'sexshop','start'
+			 end	 
+		 end
+	 end 
+end
+
+if $ARGS[0]='podval':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Подвал с кабинками для просмотра фильмов</font></B></center>'
+'<center><img src="pic\pic\gloryholeBooths1.jpg" ></center>'
+''
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+!gloryholeBooths
+
+
+if pol = 0:act 'Зайти в свободную кабинку':gt'sexshop','0'
+act 'Выйти из подвала':gt'sexshop','start'
+act 'Идти в туалет':gt'sexshop','toi'
+end
+
+if $ARGS[0]='toi':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Туалет</font></B></center>'
+'<center><img src="pic\pic\PublicToilet.jpg" ></center>'
+''
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+if pol = 0 and horny > 0 and BDSMtoilet=1 and pissing_men!day :
+act 'Заити в кабинку и отлить ...':
+     pissing_men = day
+     set minut = minut + 5
+     cla
+	 *clr 
+	 clr
+	 gs'stat'
+     set pissing_men_Rand = RAND (1,4)
+     if pissing_men_Rand = 1:'<center><img src="pic\toilet\pissing_men_1.jpg" ></center>'
+     if pissing_men_Rand = 2:'<center><img src="pic\toilet\pissing_men_2.jpg" ></center>'
+     if pissing_men_Rand = 3:'<center><img src="pic\toilet\pissing_men_3.jpg" ></center>'
+     if pissing_men_Rand = 4:'<center><img src="pic\toilet\pissing_men_4.jpg" ></center>'
+     'Вы пожурчали над унитазом ... '
+     act 'Вы слышите какую то возню в соседней кабинке. Надо проверить что там!!!':gt'toilet','start'
+     act 'Выйти с туалета':gt'sexshop','podval'
+     end
+end
+
+
+act 'Выйти из туалета':gt'sexshop','podval'
+
+     if hapri = 0:
+         act 'Причесаться':
+         cla
+         set minut = minut + 3
+         set hapri = 1
+         act 'Посмотреть результат':gt'sexshop','toi'
+         end
+     end
+end
+
+if $ARGS[0]='0':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+set minut = minut + 5
+'<center><B><font color=maroon>Кабинка с фильмами</font></B></center>'
+'<center><img src="pic\pic\ghBooths.jpg" ></center>'
+'Небольшая кабинка с телевизором на стене, купюроприемником и двумя дырками в стенах на уровне пояса.'
+
+act 'Выйти из кабинки':gt'sexshop','podval'
+
+     if money >= 50 and hour < 23:
+         act 'Сунуть 50 рублей в автомат':
+         cla
+         set money = money - 50
+         set minut = minut + 15
+         horny=horny+10
+         act 'Фильм закончился':gt'sexshop','0'
+         'После того как вы оплатили деньги заработал телевизор на стене показывающий порнуху.'
+             if horny >= 50:
+                 act 'Маструбировать':
+                 cla
+				 set horny = 0
+				 set jerk = jerk + 1
+				 manna=manna+10
+				 'Вы дрочите и кончаете глядя порнофильм.'
+                 act 'Фильм закончился':gt'sexshop','0'
+                 end
+             ghrand = RAND (0,100)
+                 if ghrand >= 90 and money >= 300:
+                 *clr
+                 picghrand = RAND(0,2)
+                 if picghrand = 0:'<center><img src="pic\picV\ghakt.jpg" ></center>'
+                 if picghrand = 1:'<center><img src="pic\picV\ghakt2.jpg" ></center>'
+                 if picghrand = 2:'<center><img src="pic\picV\ghakt3.jpg" ></center>'
+                 'Через отверстие в стене просунулись женские пальчики и следом показался открытый рот.'
+                     act 'Заплатить 300 руб и натолкать в рот':
+					 cla
+					 *clr
+					 '<center><img src="pic\picV\ghaktS.jpg" ></center>'
+					 set horny = 0
+					 money=money-300
+					 set girl = girl + 1
+					 set minut = minut + 5
+					 sexm=sexm+1
+					 manna=manna+25
+					 'Вы просунули деньги через отверстие и засунули в похотливый рот свой член, который тут же начала обсасывать незнакомка из противоположной кабинки. Через несколько минут вы кончили прямо ей в рот, а она слизала с вашего члена всю сперму до капли.'
+					 act 'Фильм закончился':gt'sexshop','0'
+					 end
+                 end
+                 if ghrand >= 80 and ghrand < 90 and money >= 300 and fagot=0:
+                 cla
+                 *clr
+                 '<center><img src="pic\picV\ghvibor.jpg" ></center>'
+                 'Через отверстие в стене просунулся толстый член, а в другой стене вы увидели рот похотливо прижавшийся к отверстию в стене.'
+                     act 'Заплатить 300 руб и натолкать в рот':
+					 cla
+					 *clr
+					 '<center><img src="pic\picV\ghaktS.jpg" ></center>'
+					 set horny = 0
+					 money=money-300
+					 set girl = girl + 1
+					 set minut = minut + 5
+					 sexm=sexm+1
+					 manna=manna+25
+					 'Вы просунули деньги через отверстие и засунули в похотливый рот свой член, который тут же начала обсасывать незнакомка из противоположной кабинки. Через несколько минут вы кончили прямо ей в рот, а она слизала с вашего члена всю сперму до капли.'
+					 act 'Фильм закончился':gt'sexshop','0'
+					 end
+					 
+					 act 'Уйти':gt'sexshop','0'
+					 
+					 act 'Отсосать член':
+					 cla
+					 *clr
+					 '<center><img src="pic\picV\ghfag.jpg" ></center>'
+					 set horny = 0
+					 money=money+300
+					 set bjm = bjm + 1
+					 set minut = minut + 5
+					 fagot=1
+					 'Вы опустились на колени и обхватили губами член. Через несколько минут член кончил вам в рот.'
+					 act 'Фильм закончился':gt'sexshop','0'
+					 end
+                 
+                 end
+             end
+         
+         end 
+     end
+end
+
+
+
+
+--- sexshop ---------------------------------
+

@@ -1,0 +1,175 @@
+# mdShop
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+mag = 1
+'<center><H4>Магазин Кеннетов</H4></center>'
+'<center><img src="pic/Evedon/mdShop.jpg" ></center>'
+'Темный и пропахший пряностями магазин.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+if hour>=8 and hour<=12:
+'За стойкой стоит <a href="exec:minut+=5&GT ''MaryKennet''">дочь владелицы магазина</a>'
+elseif hour>12 and hour<20:
+'За стойкой стоит <a href="exec:minut+=5&GT ''DollyKennet''">владелица магазина</a>'
+else
+'Магазин закрыт.'
+end
+
+
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'monDorf'
+	 end
+	 
+if toiletJerkQW=4:
+	 act 'Зайти в комнату Алруны':
+	 minut=minut+5
+	 gt'AlrunaRoom'
+	 end
+end
+	 
+if hour>=8 and hour<20:
+
+     if DollyWorkQW=1:
+         act 'Чинить лавку':
+		 cla
+		 minut+=60
+		 plotnikskill+=RAND(1,2)
+         exp+=RAND(5,10)
+		 gs'stat'
+		     if plotnikskill<10:
+		     'Как вы ни старались, но у вас не получается починить эту чертову лавку. Но вы надеетесь, что если долго мучится, то что нибудь получится.'
+		     else
+		     DollyWorkQW=2
+		     'Наконец то вам удалось починить лавку. Можно идти к Долли за заслуженной наградой.'
+		     end
+		 act 'Уйти':gt $locFight,$metkaFight
+		 end
+     end
+     
+     if DollyWorkQW=4:
+         act 'Чинить крышу':
+		 cla
+		 minut+=60
+		 plotnikskill+=RAND(1,2)
+         exp+=RAND(5,10)
+		 gs'stat'
+		     if plotnikskill<25:
+		     'Как вы ни старались, но у вас не получается починить эту чертову крышу. Но вы надеетесь, что если долго мучится, то что нибудь получится.'
+		     else
+		     DollyWorkQW=5
+		     'Наконец то вам удалось залатать крышу. Можно идти к Долли за заслуженной наградой.'
+		     end
+		 act 'Уйти':gt $locFight,$metkaFight
+		 end
+     end
+
+
+'Опасная бритва 10 гемов.'
+if HomeLord>0:'Еда для домашнего приготовления 10 шт 5 гем'
+if HomeLord>0:'Дрова для домашнего очага 10 шт 5 гем'
+'Зеркало для модниц 100 гемов'
+'Макияжные краски 600 гемов.'
+'Вяленое мясо 1 ломоть 10 гем.'
+'10ть порций щелока для мытья 5 гемов'
+	 if gem>=5:
+		 if HomeLord>0:
+			 act 'Купить еды для домашнего приготовления (10 шт 5 гем)':
+			 minut=minut+5
+			  tempshop = input ("Сколько вы хотите купить еды для домашнего приготовления ?")
+				 if tempshop*5 > gem or tempshop<0:
+				 msg'У вас недостаточно гемов.'
+				 else
+				 gem=gem-tempshop*5
+				 edaWF=edaWF+tempshop*10	      		 
+				 msg'Вы купили <<tempshop*10>> еды для домашнего приготовления.'
+				 end
+			 gt $CURLOC
+			 end
+			 
+			 act 'Купить дрова для домашнего очага (10 шт 5 гем)':
+			 minut=minut+5
+			  tempshop = input ("Сколько вы хотите купить дров?")
+				 if tempshop*5 > gem or tempshop<0 :
+				 msg'У вас недостаточно гемов.'
+				 else
+				 gem=gem-tempshop*5
+				 drova=drova+tempshop*10	      		 
+				 msg'Вы купили <<tempshop*10>> дров.'
+				 end
+			 gt $CURLOC
+			 end
+		 end
+		 
+		 act 'Купить щелок':
+		 minut=minut+5
+		 tempshop = input ("Сколько вы хотите купить порций щелока (1 порция 5 гем)?")
+			 if tempshop*5 > gem or tempshop<0 :
+			 msg'У вас недостаточно гемов.'
+			 else
+			 gem=gem-tempshop*5
+			 shelok=shelok+tempshop	      		 
+			 msg'Вы купили <<tempshop>> порций щелока.'
+			 end
+		 gt $CURLOC
+		 end
+		 
+		 if lezvie=0:
+			 act 'Купить бритву':
+			 minut=minut+5
+			 gem=gem-10
+			 lezvie=1
+			 gt $CURLOC
+			 end
+		 end
+	 end
+
+	 if gem>=150 and mirr=0:
+	 	 act 'Купить зеркало':
+		 minut=minut+5
+		 gem=gem-100
+		 mirr=1
+		 gt $CURLOC
+		 end
+	 end
+	 
+	 if gem>=600:
+	 	 act 'Купить макияжные краски':
+		 minut=minut+5
+		 gem=gem-600
+		 makekit=makekit+50
+		 gt $CURLOC
+		 end
+	 end
+
+	 if gem>=10:
+	 	 act 'Купить вяленого мяса':
+		 minut=minut+5
+          tempshop = input ("Сколько вы хотите купить вяленого мяса (1 кусок 10 гем)?")
+             if tempshop*10 > gem or tempshop<0 :
+             msg'У вас недостаточно гемов.'
+			 else
+			 gem=gem-tempshop*10
+			 edaw=edaw+tempshop	      		 
+			 msg'Вы купили <<tempshop>> кусков вяленого мяса.'
+			 end
+         gt $CURLOC
+		 end
+	 end
+
+
+
+end
+--- mdShop ---------------------------------
+

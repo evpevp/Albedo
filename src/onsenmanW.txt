@@ -1,0 +1,62 @@
+# onsenmanW
+*clr
+'<center><img src="pic/EvedonNarod/rasporaditel.jpg"></center>'
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+if slot!11:'"Вход в баню 10 гемов." произносит заученную фразу распорядитель.'
+if slot=11:'"Убирайся отсюда, нам тут не нужны нищие проходимцы", - произносит заученную фразу распорядитель.'
+clr
+gs'stat'
+gs'time'
+
+act 'Отойти':
+minut=minut+5
+gt'onsenW'
+end
+
+if gem>=10 and slot!11:
+     act 'Мыться в бане 1 час':
+     cla
+     *clr
+     minut=minut+60
+     gem=gem-10
+     sweat=-3
+     manna=manna+50
+     wipo=wipo+50
+     fat=fat-5
+     '<center><img src="pic/Evedon/onsen2.jpg" ></center>'
+     'Вы залезли в бассейн с горячей водой и нежились там пока не кончилось оплаченное время.'
+     gs'bassW'
+         act 'Уйти':
+		 minut=minut+5
+		 gt'onsenW'
+		 end
+		 if horny>=50 and pol=0 and gem>=50:
+		 'К вам подошла симпатичная банщица и предложила вам за отдельную плату помыть ваши причиндалы.'
+		     act 'Заплатить 50 гемов':
+		     cla
+		     *clr
+		     horny=0
+		     sexm=sexm+1
+		     girl=girl+1
+		     gem=gem-50
+		     onsensexy=RAND(0,2)
+		     if onsensexy=0:'<center><img src="pic/Evedonsex/onsenSex.jpg" ></center>'
+		     if onsensexy=1:'<center><img src="pic/Evedonsex/onsenSex1.jpg" ></center>'
+		     if onsensexy=2:'<center><img src="pic/Evedonsex/onsenSex2.jpg" ></center>'
+		     'Вы заплатили банщице и она начала тщательно мыть ваш член. Он конечно же встал как стальной. Банщица сполоснула его и облизала. Потом встала раком и вы вошли в нее, начав ее трахать до тех пор пока не кончили.'
+		         act 'Уйти':
+				 minut=minut+5
+				 gt'onsenW'
+				 end
+		     end
+		 end
+     end
+end
+--- onsenmanW ---------------------------------
+

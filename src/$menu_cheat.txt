@@ -1,0 +1,14 @@
+# $menu_cheat
+if $selobj='Меню боевки':
+     if world=0:
+     gt'cheatrl'
+     end
+     if world=1:
+     gt'cheatdm'
+     end
+end
+
+
+unselect
+--- $menu_cheat ---------------------------------
+

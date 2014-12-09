@@ -1,0 +1,26 @@
+# casino
+*PL '<right><img src="pic/casino\zdcasino.jpg" ></right>'
+*PL 'Вы стоите перед дверью огромного здания казино.'
+ACT 'Войти в казино':
+	gt 'холл'
+END
+ACT 'Вернуться в северный район':
+	gt 'nord'
+END
+USEHTML = 1
+
+clr
+gs'stat'
+set minut=minut + 10
+
+!ТЕСТ
+
+!if tobiQW < 1000:tobiQW = 1000
+
+
+
+
+
+
+--- casino ---------------------------------
+

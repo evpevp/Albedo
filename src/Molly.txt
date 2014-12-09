@@ -1,0 +1,18 @@
+# Molly
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+!Молли акробатка
+'Молли холодно взглянула на вас.'
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+
+end
+--- Molly ---------------------------------
+

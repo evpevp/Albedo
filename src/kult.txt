@@ -1,0 +1,65 @@
+# kult
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><B>Комната досуга</B></center>'
+'<center><img src="pic/jail/dosug.jpg" ></center>'
+'Просторная комната с не большим телевизором на стене.'
+
+act 'Смотреть телевизор.':
+cla
+minut=minut+240
+manna=manna+20
+wipo=wipo+20
+'Зэков рассадили по стульям и включили телевизор, вставать со стула запрещено.'
+act 'Выйти на построение.':gt 'itk'
+end
+
+if mast>1:
+	 act 'Идти в спорт зал (Изучать бокс).':
+	 cla
+	 *clr
+	 minut=minut+240
+	     if boxingSeria>=100:
+	      exp=exp+RAND(lvl,lvl*2)
+         'Вы тренировались в зале.'
+         act 'Выйти на построение.':gt 'itk'
+	     end
+         if boxingStile < 100:
+         exp=exp+RAND(lvl,lvl*2)
+             boxingStile=boxingStile+RAND(10,20)
+             if boxingStile>100:boxingStile=100
+             'Вы изучали боксерскую стойку и изучили ее на <<boxingStile>>%'
+         act 'Выйти на построение.':gt 'itk'
+         end
+         if boxingStile >= 100 and boxingFint<100:
+         exp=exp+RAND(lvl,lvl*2)
+             boxingFint=boxingFint+RAND(10,20)
+             if boxingFint>100:boxingFint=100
+             'Вы изучали финты, обманные движения и защиту от ударов и изучили ее на <<boxingFint>>%'
+         act 'Выйти на построение.':gt 'itk'
+         end
+         if boxingStile >= 100 and boxingFint>=100 and boxingPow<100:
+         exp=exp+RAND(lvl,lvl*2)
+             boxingPow=boxingPow+RAND(10,20)
+             if boxingPow>100:boxingPow=100
+             'Вы изучали одиночные силовые удары и изучили их на <<boxingPow>>%'
+         act 'Выйти на построение.':gt 'itk'
+         end
+         if boxingStile >= 100 and boxingFint>=100 and boxingPow>=100 and boxingSeria<100:
+         exp=exp+RAND(lvl,lvl*2)
+             boxingSeria=boxingSeria+RAND(10,20)
+             if boxingSeria>100:boxingSeria=100
+             'Вы изучали серийные силовые удары и изучили их на <<boxingSeria>>%'
+         act 'Выйти на построение.':gt 'itk'
+         end
+	 end
+end
+--- kult ---------------------------------
+

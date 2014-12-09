@@ -1,0 +1,52 @@
+# kittyAndRubi
+minut=minut+5
+kittyAndRubiDay=day
+clr
+gs'stat'
+'В комнате уже сидят Руби и Китти, распивая вино и беседуя.'
+
+
+
+act 'Уйти':
+minut=minut+5
+gt'teladareW'
+end
+
+act 'Секс втроем':
+cla
+*clr
+minut=minut+60
+     if rubiSex=0:rubiSex=1&guy=guy+1
+     if kittySex=0:kittySex=1&girl=girl+1
+     
+     if penis>0:
+	 aktman=aktman+1
+	 horny=0
+	 manna=manna+250
+	 DOM=DOM+1
+     '<center><img src="pic/EvedonTA/rubithreesome.jpg" ></center>'
+     'Китти одела страпон и поставила раком Руби, войдя в ее зад. Вы достали член и вложили его между губ Руби.'
+     end
+     
+     if penis=0:
+     aktman=aktman+1
+	 horny=horny+20
+	 manna=manna+250
+	 DOM=DOM+1
+	 '<center><img src="pic/EvedonTA/rubithreesomef.jpg" ></center>'
+     'Вы одели страпон вместе с Китти и положили Руби на диван. Китти начала трахать страпоном Руби, а вы засовали свой страпон между ее губ.'
+     end
+act 'Уйти':gt'teladareW'
+end
+
+
+
+
+
+
+
+
+
+
+--- kittyAndRubi ---------------------------------
+

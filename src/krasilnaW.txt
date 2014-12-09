@@ -1,0 +1,57 @@
+# krasilnaW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+!Возможность покупать сразу много и фотография от Kasssel
+'<center><H4>Красильня</H4></center>'
+'<center><img src="pic/evedon/krasilna.jpg" ></center>'
+'.'
+'Груз красок стоит 2000 гемов за 1 штуку. Товар отпускается только при наличии лицензии'
+'Лицензии получать в городской управе около южных ворот'
+if Licens>0:'Торговая лицензия действительна еще <<Licens>> дней'
+if GRkraska>0: 'Вы купили <<GRkraska>> ед. краски для тканей'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+if hour>=6 and hour<=23:
+ 
+     if gruz*10<stren and Licens>0:
+         if gem>=2000:
+             act 'Купить краски':
+             cla
+             tempshop= input("Вы можете нести еще<<stren/10-gruz>> груза. Сколько краски вы хотите купить?")
+                 if tempshop*2000>gem or tempshop<0:
+                 msg'У вас нет такого количества гемов.'
+                 gt $CURLOC
+                 elseif gruz+tempshop>stren/10:
+                 msg'Нести столько груза вам не под силу.'
+                 gt $CURLOC
+                 else
+                 GRkraska=GRkraska+tempshop
+                 gruz=gruz+tempshop
+                 gem=gem-tempshop*2000
+                 'Вы купили <<tempshop>> ед. красок для тканей.'
+                 act 'Уйти':gt $CURLOC
+                 end
+             end
+         end
+     end
+else
+'Закрыто'
+end
+
+act 'Уйти':
+minut=minut+5
+gt'pereulokW'
+end
+--- krasilnaW ---------------------------------
+

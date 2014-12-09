@@ -1,0 +1,21 @@
+# MagistrKomp
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+clr
+gs'stat'
+!компания младших магистров
+
+'<center><img src="pic/EvedonNarod/kompmagov.jpg" ></center>'
+'Младшие магистры о чем-то тихо говорят между собой.'
+
+	 act 'Уйти':
+	 GOTO $locBed, $metkaBed
+	 end
+	 
+
+end
+--- MagistrKomp ---------------------------------
+

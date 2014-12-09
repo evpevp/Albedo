@@ -1,0 +1,31 @@
+# FightNill
+!ОБНУЛЕНИЕ ПЕРЕМЕННЫХ БОЯ
+set FightTip = 0
+set stamina = staminaMAX
+set chin = chinMAX
+set stun = 0
+set stunV = 0
+set stam = 0
+set stamV = 0
+set iniOnce = 0
+set cut = 0
+set cutV = 0
+set endround = 0
+set round = 0
+set minu = 0
+set second = 0
+set point = 0
+set pointV = 0
+set pointProf = 0
+set pointProfV = 0
+set amature = 0
+set agilREAL = 0
+set agilREALV = 0
+set agilBonus = 0
+set agilBonusV = 0
+set agilMAX = 0
+set agilMAXV = 0
+set hodtime = 0
+set hodtimeV = 0
+--- FightNill ---------------------------------
+

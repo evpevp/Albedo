@@ -1,0 +1,44 @@
+# aukaWin
+monster=0
+demonwin=demonwin+1
+'Маленький, пузатый как бочонок, Аука падает на землю.'
+
+
+act 'Далее':
+cla
+*clr
+if gem>0:gem=gem-1&demonSoul=demonSoul+1&'В один из гемов вошла душа демонической твари.'
+
+farand=RAND(0,4)
+     if farand=0:
+     grib=grib+1
+     'Вы нашли у ауки гриб.'
+     end
+     if farand=1:
+     grib2=grib2+1
+     'Вы нашли у ауки гриб.'
+     end
+     if farand=2:
+     grib3=grib3+1
+     'Вы нашли у ауки гриб.'
+     end
+     if farand=3:
+     grib4=grib4+1
+     'Вы нашли у ауки гриб.'
+     end
+     if farand=4:
+     berry=berry+1
+     'Вы нашли у ауки эльфийскую ягоду.'
+     end
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+
+	if vampireMorf>0:
+		 act 'Пить кровь':
+		 cla
+		 vampireMorf+=1
+		 GOTO $locFight, $metkaFight
+		 end
+	end
+end
+--- aukaWin ---------------------------------
+

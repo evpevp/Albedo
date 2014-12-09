@@ -1,0 +1,63 @@
+# portnoiW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+mag = 1
+'<center><H4>Портной</H4></center>'
+'<center><img src="pic/Evedon/rinok5.jpg" ></center>'
+'100 гемов крестьянская одежда'
+'500 гемов одежда горожанина'
+'1000 гемов дворянская одежда'
+'5000 гемов роскошная дворянская одежда'
+clr
+gs'stat'
+gs'time'
+
+
+	 act 'Крестьянская одежда':
+	 payclo=100
+	 gt'manodW','2'
+	 end
+
+	 act 'Одежда горожанина':
+	 payclo=500
+	 gt'manodW','3'
+	 end
+	 
+	 act 'Дворянская одежда':
+	 payclo=1000
+	 gt'manodW','4'
+	 end
+	 
+	 act 'Роскошная дворянская одежда':
+	 payclo=5000
+	 gt'manodW','5'
+	 end
+	 
+	 act 'Переодеться':
+	 gt'lokerW'
+	 end
+
+
+act 'Отойти':
+minut=minut+5
+gt'rinokW'
+end
+
+
+if gruz>0:
+     act 'Продать груз':
+     gruzMark=2
+     torgTip=2
+     gt'GRUZ'
+     end
+end
+--- portnoiW ---------------------------------
+

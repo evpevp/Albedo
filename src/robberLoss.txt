@@ -1,0 +1,79 @@
+# robberLoss
+manmob=0
+gem=0
+
+
+'<<$namev>> обыскали вас и забрали все гемы, что нашли.'
+if gruz>0:
+gruz=0
+GRtkan=0
+GRkraska=0
+'Так же они забрал ваш груз'
+end
+
+if femin<100:
+'Плюнув на землю <<$namev>> ушел обратно в лес.'
+
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+end
+
+if penis>0 and femin>=100 and vagina=0:
+!мужиг
+'<<$namev>> стали сдирать вашу одежду, увидев ваш член, они замерли в задумчивости. "Черт, на бабу смахивает."'
+
+     if tits>=0:
+     '<<$namev>> длинно и грязно выругались и стали вас переворачивать на живот, бормоча про себя "Мальчик, девочка, какая в жопу разница."'
+         act 'Нет, пожалуйста, умоляю, не делайте этого':
+         cla
+         *clr
+         minut=minut+30
+         guy=guy+1
+         anal=anal+1
+         cumanus=cumanus+1
+         '<center><img src="pic/EvedonMonsters/robbersex.jpg" ></center>'
+         '<<$namev>> вам пришлось обслужить бандитов, давно изголодавшихся по сексу.'
+         gs'analslut'
+         anus=anus+2
+         act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+         end
+     end
+end
+
+if penis>0 and femin>=100 and vagina>0:
+!фута
+'<<$namev>> стали сдирать вашу одежду, увидев, что у вас между ног есть и член и влагалище, <<$namev>> задумчиво почесал голову. "Нда, ну дела, слышать мне о таком доводилось, а вот ебать такое буду в первый раз."'
+     act 'Нет, пожалуйста, умоляю, не делайте этого':
+     cla
+     *clr
+     minut=minut+30
+     guy=guy+1
+     anal=anal+1
+     cumanus=cumanus+1
+     '<center><img src="pic/EvedonMonsters/robbersex1.jpg" ></center>'
+     '<<$namev>>  без всяких церемоний стали буквально запихивать в ваши дырочки свои члены, вы плакали и умоляли не делать этого, но кажется ваши мольбы только раззадорили негодяев и они начали еще яростней вас трахать пока не всю не обкончали.'
+     gs'analslut'
+     anus=anus+2
+     act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+     end
+
+end
+
+if penis=0 and femin>=100 and vagina>0:
+!тьолко
+'<<$namev>> сорвали с вас одежду "Ааа, телочка, ну не бойся, не обидем."'
+     act 'Нет, пожалуйста, умоляю, не делайте этого':
+     cla
+     *clr
+     minut=minut+30
+     guy=guy+1
+     anal=anal+1
+     cumanus=cumanus+1
+     '<center><img src="pic/EvedonMonsters/robbersex2.jpg" ></center>'
+     '<<$namev>> поставив вас раком без всяких церемоний стали буквально запихивать в ваши дырочки свои члены, вы плакали и умоляли не делать этого, но кажется ваши мольбы только раззадорили негодяев и они начали еще яростней вас трахать пока не всю не обкончали.'
+     gs'analslut'
+     anus=anus+2
+     act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+     end
+end
+--- robberLoss ---------------------------------
+

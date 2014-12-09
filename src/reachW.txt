@@ -1,0 +1,86 @@
+# reachW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaFuck = $ARGS[0]
+$locFuck = $CURLOC
+'<center><H4>ГОРОД ЭВЕДОН</H4></center>'
+'<center>Высокий квартал</center>'
+'<center><img src="pic/Evedon/reach.jpg" ></center>'
+'Просторные улицы, застроенные добротными домами, кругом зелень и фонтаны.'
+clr
+gs'stat'
+gs'time'
+
+if DemonMorf>=10:
+ atkrand=RAND(0,100)
+     if atkrand>=90:
+     cls
+	 *clr
+     '<center><img src="pic/EvedonMonsters/guards.jpg"></center>'
+	 pogonarand=RAND(5,10)
+	 'Разгуливать в облике демона опасно, стража вас обнаружила и атаковала.'
+		 act 'Убегать.':
+		 minut=minut+1
+		 crime=1
+		 gt'runW'
+		 end
+     exit
+     end
+end
+
+if slot>= 14:
+'((Дворянская школа|dvschoolW|minut=minut+15))'
+'((Дворец Лорда|courtW|minut=minut+15))'
+'((Особняк великого магистра ордена четырехлистника|osobnakAltoW|minut=minut+15))'
+'((Театр|teatrW|minut=minut+15))'
+if vorzad=1:'((Особняк купца|vzlom|minut=minut+15))'
+'((Ресторация|restoranW|minut=minut+15))'
+'((Дворянский салон|salonEW|minut=minut+15))'
+'((Банк|bankW|minut=minut+5))'
+if dvordom=1:'<a href="exec: gt''dvordom''"><font color=green><B>Ваш особняк.</B></font></a>'
+if MalgunQW>=5:'<a href="exec: gt''SilveoWiseman''">Дом ученого Сильвео.</a>'
+if frendA>=1:'<a href="exec: gt''frendAhome''">В одном из особняков живет <<$namefrendA>>.</a>'
+end
+
+if slot<14:
+     if slot>11:'К вам подходит стража "Указом его сиятельства достопочтенного Лорда Элберта Ворнхорста запрещено показываться в высоком районе в столь не надлежащем виде. Поэтому мы как милостивая стража настаиваем, чтобы вы как можно быстрее покинули высокий район и не отравляли воздух своим присутствием достопочтенным гражданам."'
+     if slot=11:'К вам подходит стража "Нищим и пройдохам не место в высоком районе, убирайся вон!"'
+     
+	 act 'Выйти в деловой квартал':
+	 minut=minut+15
+	 gt'townW'
+	 end
+exit
+end
+
+
+act 'Выйти в деловой квартал':
+minut=minut+15
+gt'townW'
+end
+
+
+     act 'Ждать':
+     cla
+     waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
+         end
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
+         end
+     act 'Посмотреть на часы':gt curloc
+     end
+     
+     
+     if V_Roziske>0 and V_RoziskeDay!day:
+     randroz=RAND(0,100)
+         if randroz>=60:gt'Rozisk'
+     end
+--- reachW ---------------------------------
+

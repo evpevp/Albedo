@@ -1,0 +1,22 @@
+# werewolfW
+*clr
+'<center><img src="pic/EvedonMonsters/werewolf.jpg"></center>'
+
+monster=11
+
+
+
+$nameV='Вервольф'
+lvlv=120
+strenV=110
+speedV=210
+agilV=210
+vitalV=210
+intelv=10
+willv=10
+program=21
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+--- werewolfW ---------------------------------
+

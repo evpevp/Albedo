@@ -1,0 +1,16 @@
+# sklakt
+clr
+gs'stat'
+!лактаид
+horny=100
+laktaid=laktaid-1
+penis=penis-1
+gs'polChange'
+fat=fat+5
+skverna=skverna+5
+tit=tit+RAND(10,15)
+lakt=lakt+10
+'После того как вы выпили лактаида резко заныла и потяжелела грудь. Из сосков начало выделяться молоко.'
+
+--- sklakt ---------------------------------
+

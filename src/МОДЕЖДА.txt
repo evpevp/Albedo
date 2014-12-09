@@ -1,0 +1,122 @@
+# МОДЕЖДА
+if $ARGS[0]='1':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic\manOd\kostum.jpg" ></center>'
+'Классический мужской костюм.'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if kostum = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if money >= payclo:
+			 act 'Купить':
+			 cla
+			 set money = money - payclo
+			 set kostum = 1
+			 !set kostumB = bedra
+			 set kostumE = 5000
+			 'Вы заплатили на кассе <<payclo>> руб и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+		 if kostumE > 0:
+			 act 'Надеть':
+			 cla
+			 gs'clonil'
+			 set slot = 1
+			 set kostum = 2
+			 GOTO $locP, $metkaP
+			 end
+		 end
+		 
+		 if kostumE <= 0:
+		 set kostum = 0
+		 XGOTO $locP, $metkaP
+		 'Костюм слишком изношен, поэтому пришлось его выбросить.'
+		 end
+	 
+     end
+end
+
+if $ARGS[0]='2':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic\manOd\manjeans.jpg" ></center>'
+'Мужские джинсы с рубашкой.'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if manjeans = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if money >= payclo:
+			 act 'Купить':
+			 cla
+			 set money = money - payclo
+			 set manjeans = 1
+			 !set kostumB = bedra
+			 set manjeansE = 5000
+			 'Вы заплатили на кассе <<payclo>> руб и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+		 if manjeansE > 0:
+			 act 'Надеть':
+			 cla
+			 gs'clonil'
+			 set slot = 2
+			 set manjeans = 2
+			 GOTO $locP, $metkaP
+			 end
+		 end
+		 
+		 if manjeansE <= 0:
+		 set manjeans = 0
+		 XGOTO $locP, $metkaP
+		 'Одежда слишком изношена, поэтому пришлось ее выбросить.'
+		 end
+	 
+     end
+end
+
+if $ARGS[0]='3':
+cla
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><img src="pic\manOd\sport.jpg" ></center>'
+'Мужской спортивный костюм.'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if sport = 0 and mag = 1:
+     'Цена <<payclo>>'
+         if money >= payclo:
+			 act 'Купить':
+			 cla
+			 set money = money - payclo
+			 set sport = 1
+			 !set kostumB = bedra
+			 set sportE = 5000
+			 'Вы заплатили на кассе <<payclo>> руб и забрали покупку'
+			 act 'Уйти.':GOTO $locP, $metkaP
+			 end
+		 end
+	 elseif mag = 0:
+		 if sportE > 0:
+			 act 'Надеть':
+			 cla
+			 gs'clonil'
+			 set slot = 3
+			 set sport = 2
+			 GOTO $locP, $metkaP
+			 end
+		 end
+		 
+		 if sportE <= 0:
+		 set sport = 0
+		 XGOTO $locP, $metkaP
+		 'Одежда слишком изношена, поэтому пришлось ее выбросить.'
+		 end
+	 
+     end
+end
+--- МОДЕЖДА ---------------------------------
+

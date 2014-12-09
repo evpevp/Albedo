@@ -1,0 +1,38 @@
+# monMotel
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaFuck = $ARGS[0]
+$locFuck = $CURLOC
+minut=minut+5
+mag = 1
+'<center><H4>Гостиница "Эльмонд"</H4></center>'
+'<center><img src="pic/Evedon/gosElmond.jpg" ></center>'
+'Большая, роскошная гостиница.'
+if roomWMM>0:'У вас оплачено <<roomWMM>> дней проживания.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<a href="exec: gt''Metrdotel''">За стойкой стоит надушенный метрдотель.</a>'
+if hour= 22 and dominicaDed>1:'За столом сидит <a href="exec:GT ''tadomW''">Доминика</a>'
+if hour>=8 and hour<16 and malgundead>1:'<a href="exec: gt''Malgun'',''start''">За столом сидит Мальган</a>'
+
+act 'Уйти':minut=minut+5&gt'monduval'
+
+
+if roomWMM>0:
+     act 'Идти в свою комнату':
+	 minut=minut+5
+	 gt'MonMotelRoom'
+	 end
+end
+--- monMotel ---------------------------------
+

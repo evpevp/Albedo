@@ -1,0 +1,629 @@
+# sauna
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Сауна</font></B></center>'
+'<center><img src="pic\pic\sauna.jpg" ></center>'
+'Время работы с 8 до 23, каждый день.' 
+'Вы посещаете парилку с друзьями раз в неделю - по пятницам'
+clr
+gs'stat'
+gs'time'
+
+	 if car > 0 and cardrive = 10:
+	 set cardrive = 10
+	 'Около сауны стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+	 end
+
+
+     act 'ВЫЙТИ':
+     cla
+     set minut = minut + 30
+     gt'street'
+     end
+     
+     if hour >= 8 and hour <= 23:
+         act 'Идти в сауну':gt'sauna','1'
+     end
+
+end
+
+if $ARGS[0]='1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Сауна</font></B></center>'
+'<center><img src="pic\pic\sauna1.jpg" ></center>'
+'Снять номер на час стоит 2000 руб.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+act 'ВЫЙТИ':gt'sauna','start'
+ 
+	 if pornstudio=1 and obshak=1 and obshakmoney! month:
+	 cla
+	 *clr 
+	 clr
+	 gs'stat'
+	 '<center><img src="pic\sauna\bratva.jpg" ></center>'
+	 'В баню заехала братва ....'
+	 '- Ну что Игорь Генрихович на общак подкинешь 100 кусков?'
+		 if money > 100000:
+		 act 'Отдать требуемую сумму':
+		 money=money-100000
+		 !вор = вор+5
+		 obshakmoney = month
+		 cla
+		 *clr 
+		 clr
+		 gs'stat'
+		 '<center><img src="pic\sauna\obshakmoney.jpg" ></center>'
+		 'Вы отдали 100 тысяч рублей в общак. В этом месяце братки больше не придут'
+		     act 'Уйти': gt'sauna','start'
+	     end
+		 
+		 act 'Отказаться платить в общак ...':
+		 cla
+		 *clr 
+		 clr
+		 gs'stat'
+		 !вор = 0
+		 obshakmoney = month
+		 '<center><img src="pic\sauna\bratva.jpg" ></center>'
+		 'Ну смотри сам Игорь Генрихович, жизнь долгая, земля круглая ...'
+		     act 'Уйти': gt'sauna','start'
+		 end    
+	 end 
+		
+		 if money < 100000:
+		 act 'Пока нет денег ...':gt'sauna','start'
+	 end 
+exit
+end
+ 
+	 if money>= 2000:
+		 act 'Снять номер':
+		 cla
+		 money=money-2000
+		 gt'sauna','2'
+		 end
+	 end	
+
+	 if pornstudio = 1 and banshikmoney ! day:
+		 act 'Забрать выручку за проданную порнушку':
+		 banshikmoney = day
+		 money=money+film*3000+BDSMfilm*6000
+		 cla
+		 *clr 
+		 clr
+		 gs'stat'
+		 '<center><img src="pic\studiа\money_1.jpg" ></center>'
+		 'За день Тимофеич заработал вам <<film*3000+BDSMfilm*6000>> рублей'
+			 act 'Поговорить с Тимофеичем ...':
+			 cla
+			 *clr
+			 '<center><img src="pic\sauna\banshik.jpg" ></center>'
+			 '- Игорёк порнушка расходится неплохо....'
+			 '- Но для увеличения выручки надо снимать больше фильмов!!! '
+			 act 'Хорошо! Будем снимать больше':gt'sauna','1'
+			 end	 
+		 end
+	 end 
+
+	 if sauna >= 3 and pol = 0 and pornstudio = 0:
+	     act 'Поговорить с банщиком':
+		 cla
+		 *clr
+		 '<center><img src="pic\sauna\banshik.jpg" ></center>'
+		 'Банщик предложил поговорить на едине за кружкой пива .....'
+		 '- Меня здесь все Тимофеичем кличут. А тебя как говоришь? Ну лёгенького парку тебе Игорёк!'
+		 '- Вообщем здесь в баньке не только парятся, но и дела решают ...'
+		 '- А я по мере возможности свожу нужных людей ...'
+		 '- Я вижу ты мужик серьёзный и состоятельный. Я таких уважаю! Хочу тебе одно дело присоветовать.' 
+		 '- У меня есть один знакомый, он заработал в нашем городе кучу денег и сваливает за бугор.'
+		 '- У него здесь остаётся рабочий прибыльный бизнес и он хочет его продать ...'
+		 act 'Нет! Мне это не интересно ...':gt'sauna','1'
+		 
+			 act 'Продолжай ...':
+			 cla
+			 *clr
+			 '<center><img src="pic\sauna\banshik.jpg" ></center>'
+			 '- Так вот этот мужичёк продаёт кино-фото студию со всеми работниками, актёрами и актрисами'
+			 '- Бизнес этот полу криминальный и связан с производством порно фильмов.'
+			 '- Но зато прикрытие ментовское есть ...'
+			 '- Дело очень прибыльное - ты легко сколотишь себе целое состояние  .... Цена вопроса? '
+			 '- Всего то 10 лимонов деревянными!!! Но только налом - сам понимешь что такие сделки через банки не делают!!! ГЫ-ГЫ-ГЫ!!!'
+			 '- Покупай студию!!! А я тебе с реализацией помогу - буду здесь любителям порнушки диски пихать!!!'
+				 act 'Нет! Порно снимать я не буду!':gt'sauna','1'
+				 if money >= 10000000: 
+					 act '-Ну ка Тимофеич расскажи мне подробнее. Не хочется выкидывать деньги на ветер ...':gt'sauna','3'
+				 end
+				 
+				 if money < 10000000:
+					 act 'У меня  наличными нет таких денег. Сейчас вообще с налом тяжковaто.':gt'sauna','1' 
+				 end	 
+			 end
+		 end
+	 end 
+
+	 if sauna >= 5 and pol = 0 and pornstudio = 1 and DVD_avtomat=0:
+	 act 'Выпить с Тимофеечем кружку пива.... ': gt'sauna','4'
+	 end
+	
+	 if sauna >= 7 and pol = 0 and pornstudio = 1 and DVD_avtomat=1 and BDSMtoilet=0:
+	 act 'Тимофеч хитро подмигивает. Налить ему кружку пивка ... ': gt'sauna','5'
+	 end
+	
+	 if sauna >=10 and pol = 0  and pornstudio = 1 and DVD_avtomat=1 and BDSMtoilet=1 and obshak=0 :
+	 act 'Угостить Тимофееча пивком .... ': gt'sauna','6'
+	 end
+end	
+
+if $ARGS[0]='2':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Сауна</font></B></center>'
+'<center><img src="pic\pic\sauna2.jpg" ></center>'
+'Снять номер на час стоит 2000 руб.'
+'Услуги в номере: Массаж ... Девочки по вызову ... '
+'Любой каприз за Ваши деньги! Сколько угодно раз!'
+'А вот посещать парную можно не чаще одного раза в неделю.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+act 'Уйти':gt'sauna','1'
+
+     if week = 5 and saunaday ! day:
+         act 'Парится с друзьями 1 час':
+         cla
+         *clr
+		 fat=fat-10
+		 minut=minut+60
+		 saunaday = day
+		 sauna=sauna+1
+		 sweat=-3
+		 alko= 0
+		 parrand=RAND(1,9)
+		 if parrand = 1:'<center><img src="pic\sauna\par1.jpg" ></center>'
+		 if parrand = 2:'<center><img src="pic\sauna\par2.jpg" ></center>'
+		 if parrand = 3:'<center><img src="pic\sauna\par3.jpg" ></center>'
+		 if parrand = 4:'<center><img src="pic\sauna\par4.jpg" ></center>'
+		 if parrand = 5:'<center><img src="pic\sauna\par5.jpg" ></center>'
+		 if parrand = 6:'<center><img src="pic\sauna\par6.jpg" ></center>'
+		 if parrand = 7:'<center><img src="pic\sauna\par7.jpg" ></center>'
+		 if parrand = 8:'<center><img src="pic\sauna\par8.jpg" ></center>'
+		 if parrand = 9:'<center><img src="pic\sauna\par9.jpg" ></center>'
+		 'Вы посещали парную <<sauna>> раз'
+		 'Вы хорошо попарились, пообщались в мужской компании. По телу разливается приятная нега.'
+		 'Вы договорились встретиться с мужиками в парной на следующецй неделе'
+		 act 'Уйти':gt'sauna','1'
+		 end
+     end
+     
+     if pol = 0 and money>= 2000 and horny > 0:
+         act 'Снять девочку на один час (2 тыр)':
+		 cla
+		 *clr
+		 minut=minut+60
+		 girl=girl+1
+		 sexm=sexm+1
+		 money=money-2000
+		 horny=0
+		 sweat=-3
+		 manna=manna+10
+		 saurand=RAND(1,9)
+		 if saurand = 1:'<center><img src="pic\picVA\sau.jpg" ></center>'
+		 if saurand = 2:'<center><img src="pic\picVA\sau2.jpg" ></center>'
+		 if saurand = 3:'<center><img src="pic\picVA\sau3.jpg" ></center>'
+		 if saurand = 4:'<center><img src="pic\picVA\sau4.jpg" ></center>'
+		 if saurand = 5:'<center><img src="pic\picVA\sau5.jpg" ></center>'
+		 if saurand = 6:'<center><img src="pic\picVA\sau6.jpg" ></center>'
+		 if saurand = 7:'<center><img src="pic\picVA\sau7.jpg" ></center>'
+		 if saurand = 8:'<center><img src="pic\picVA\sau8.jpg" ></center>'
+		 if saurand = 9:'<center><img src="pic\picVA\sau9.jpg" ></center>'
+		 'Вы сняли проститутку и выдрали ее во все щели прямо в сауне.'
+		 act 'Уйти':gt'sauna','1'
+		 end
+     
+     end
+     
+     if pol = 0 and money>= 3000 and horny= 0:
+         act'Заказать эротический массаж на полтора часа (3 тыр)':
+		 cla
+		 *clr
+		 minut=minut+90
+		 money=money-3000
+		 horny= +100
+		 sweat= -5
+		 '<center><img src="pic\sauna\masage_1.jpg" ></center>'
+		 'Красивая девушка положила вас на кушетку и начала втирать ароматические масла в вашу спину.'
+		     act'Вы ощущаете прилив сил...':
+		     cla
+		     minut=minut+20
+		     *clr
+		     '<center><img src="pic\sauna\masage_2.jpg" ></center>'
+		     'Намылив вас девушка стала использовать груди вместо мочалок'
+				 act'Вы испытываете возбуждение и хотите продолжения ...':
+				 cla
+				 *clr
+                 '<center><img src="pic\sauna\masage_3.jpg" ></center>'
+                 'Её движения становятся всё интенсивнее и энергичнее'
+					 act 'Ваше тело разогрето до предела и вы хотите чего то больше ...':
+					 cla
+					 *clr
+					 '<center><img src="pic\sauna\masage_4.jpg" ></center>'
+					 'Натерев грудью всё ваше тело девушка села вам на спину и продолжила массаж попкой'
+                         act 'Вы на вершине блаженства ...':
+		                 cla
+		                 *clr
+		                 '<center><img src="pic\sauna\masage_5.jpg" ></center>'
+		                 'По окончании массажа - девушка нежно поглаживает вас ...'
+		                     act 'Уйти':gt'sauna','1'
+		                     
+		                     if money>= 500:
+								 act 'Дать на чай массажистке 500 рублей и уйти':
+								 cla
+								 *clr
+								 money=money-500
+								 '<center><img src="pic\sauna\masage_6.jpg" ></center>'
+								 'Массаж вас возбудил, а от массажных масел ваш член источал клубничный аромат.'
+								 'А не вызвать ли мне проституток подумали вы ...'
+								 'А может порадовать сексом кого другого?'
+								 act 'Уйти':gt'sauna','1'
+							     end
+                             end
+                                
+                             act 'Поробовать трахнуть силой':
+							 cla
+							 *clr
+							 health = 0
+							 horny = 0
+							 son = 0
+							 manna = 0
+							 otporrand=RAND(1,2)
+							 if otporrand = 1:'<center><img src="pic\sauna\otpor1.gif" ></center>''Массажистка ударила вас обеими ногами ... ОЙ!ОЙ!ОЙ!'
+                             if otporrand = 2:'<center><img src="pic\sauna\otpor2.gif" ></center>''Массажистка начала колотить вас ногами по ... ОЙ!ОЙ!ОЙ!'
+                             'Вы взвыли от боли теряя сознание'
+							     act 'Надо спасать своё "хозяйство" !!! Добратся бы до врача ...': gt'poli','1'
+							 end
+							 
+							 if money>= 10000:
+								 act 'Предложить секс за 10 тысяч рублей':
+								 cla
+								 *clr
+								 money = money-10000
+								 horny = 0
+								 girl=girl+1
+								 sexm=sexm+1
+								 sexmasrand=RAND(1,6)
+								 if sexmasrand = 1:'<center><img src="pic\sauna\conchil1.gif" ></center>''От секса массажистка отказалась, но подрочив благоухающий хуй позволила кончить себе на лицо.'
+								 if sexmasrand = 2:'<center><img src="pic\sauna\conchil2.gif" ></center>''От секса массажистка отказалась, но подрочив благоухающий хуй позволила кончить себе на грудь.'
+								 if sexmasrand = 3:'<center><img src="pic\sauna\conchil3.gif" ></center>''От секса массажистка отказалась, но подрочив благоухающий хуй позволила кончить себе на лицо и в ротик.'
+								 if sexmasrand = 4:'<center><img src="pic\sauna\conchil4.gif" ></center>''От секса массажистка отказалась, но подрочив благоухающий хуй позволила кончить себе на лицо и в ротик.'
+								 if sexmasrand = 5:'<center><img src="pic\sauna\conchil5.gif" ></center>''От секса массажистка отказалась, но подрочив благоухающий хуй позволила кончить себе в ротик.'
+								 if sexmasrand = 6:'<center><img src="pic\sauna\conchil6.gif" ></center>''От секса массажистка отказалась, но заглотила ваш член так, что оргазм не заставил себя долго ждать.'
+								 'Вы на вершине блаженства ...'
+								 act 'Жизнь удалась ....': gt'sauna','1'
+								 end
+                             end
+                         end
+		             end
+                 end    
+		     end
+         end
+     end
+end
+
+
+if $ARGS[0]='3':
+$metka = $ARGS[0]
+$loc = $CURLOC
+set minut = minut + 60
+*clr
+gs'stat'
+'<center><img src="pic\sauna\banshik.jpg" ></center>'
+'Тогда слухай меня внимательно и не пербивай!!!! И плескани мне пивка Игорёк!'
+
+     act 'Плеснуть пива и начать слушать ...':
+     cla
+	 *clr
+	 '<center><img src="pic\studiа\studiа_1.jpg" ></center>'
+	 'Вообщем студия у него оборудована по последнему слову техники ...'
+	 
+		 act '......':
+		 cla
+		 *clr
+		 '<center><img src="pic\studiа\studiа_2.jpg" ></center>'
+		 'Много разных павилионов для съёмок ...'  
+		  
+			 act '......':
+			 cla
+			 *clr
+			 '<center><img src="pic\studiа\studiа_3.jpg" ></center>'
+			 'Кончно же съёмок постельных сцен...' 
+			  
+				 act '......':
+				 cla
+				 *clr
+				 '<center><img src="pic\studiа\studiа_4.jpg" ></center>'
+				 'Профессиональные камеры для съёмок .....'
+				 
+					 act '......':
+					 cla
+					 *clr
+					 '<center><img src="pic\studiа\studiа_5.jpg" ></center>'
+					 'Крутое освещение .....'
+					 
+						 act '......':
+						 cla
+						 *clr
+						 '<center><img src="pic\studiа\studiа_6.jpg" ></center>'
+						 'Отличные режиссеры-постановщики (настоящие профи)'
+						 
+                             act '......':
+							 cla
+							 *clr
+							 '<center><img src="pic\studiа\casting_0.jpg" ></center>'
+							 'И просто огромный выбор актрис любого цвета волос, кожи и размеров ...' 
+							 
+								 act '......':
+								 cla
+								 *clr
+								 '<center><img src="pic\sauna\banshik.jpg" ></center>'
+								 'Вообщем думай Игорёк!!! Такие подарки судьбы не часто выпадают!'
+								 'Был бы я помоложе ......... в любые долги бы залез!' 
+								 'На криминал бы согласился, но такую удачу бы не упустил!'
+									 act 'Что то я не совсем всё понял ....':gt'sauna','3'
+									 act 'Я пока не готов принять решение ....':gt'sauna','1'
+									 act 'А чёт с ним!!! Уговорил!!! Покупаю!!!':gt'pornstudio','1'
+								 end	 
+                             end    
+                         end
+		             end
+                 end    
+		     end
+         end
+     end
+end
+
+
+if $ARGS[0]='4':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr 
+clr
+gs'stat'
+'<center><img src="pic\sauna\banshik.jpg" ></center>'
+'- Игорёк! Мне тут мужичёк знакомый шепнул, что можно в секшопе автомат для продажи дисков поставить ... '
+
+	 act 'Ну раскажи поподробнее ...':
+	 cla
+	 *clr 
+	 clr
+	 gs'stat'
+	 '<center><img src="pic\studiа\DVD_avtomat.jpg" ></center>'
+	 'А что здесь расказывать ... Покупаешь автомат за 200 штук - ставишь в сексшопе ...'
+	 'И начинаешь капусту рубить ... Я так думаю, что там реализация побольше чем в у меня будет ...'
+		 if money>= 200000:
+		 
+			 act 'Купить автомат для установки в сексшопе':
+			 cla
+			 *clr 
+			 clr
+			 money=money-200000
+			 DVD_avtomat=1
+			 '<center><img src="pic\studiа\money_0.jpg" ></center>'
+			 'Вы купили автомат для продажи DVD дисков в секс шопе'
+			 'Выручку надо забирать ежедневно, иначе деньги преведёт себе на счёт хозяин сексшопа ...'
+			 act 'ВЫЙТИ':gt'sauna','start'
+			 end
+		 end  
+		 
+		 if money>= 200000:
+		 act 'Я подумаю над твоим предложением ...': gt'sauna','start'
+		 end
+		 
+		 if money < 200000:
+		 act 'У меня пока нет столько денег, но предложение меня заитересовало ...': gt'sauna','start'
+		 end
+	 end
+end 
+
+
+
+
+if $ARGS[0]='5':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr 
+clr
+gs'stat'
+'<center><img src="pic\sauna\banshik.jpg" ></center>'
+'- Игорёк! У меня тут мысли как можно увеличить прибыль с продаж порно!'
+
+	 act 'Ну раскажи поподробнее ...':
+	 set minut = minut + 5
+	 cla
+	 *clr 
+	 clr
+	 gs'stat'
+	 '<center><img src="pic\sauna\simvol.jpg" ></center>'
+	 'Тебе знаком этот символ на кулоне?'
+	 'Вообщем есть определённый круг ценителей порно немного другого жанра.'
+		 act 'Продолжай':
+		 cla
+		 *clr 
+		 '<center><img src="pic\sauna\BDSM_1.jpg" ></center>'
+		 'Жанр этот называется БДСМ - англицкое название, а смысл ентого такой: '
+		 'Трахют девок очень жестоко, связывют, плётки там всякие .... '
+		     act ' ..... ':
+			 cla
+			 *clr 
+			 '<center><img src="pic\sauna\BDSM_2.jpg" ></center>'
+			 'А так же груповухи, так что девок в усмерть заёбывают ...'
+			 'Но дело не в этом как их ебуть, а в том что на такие фильмы цена дороже!'
+			 'И спрос неплохой. А ты почему такие фильмы не снимаешь?'
+				 act 'Да поблемы у меня Тимофеич ...':
+				 cla
+				 *clr 
+				 '<center><img src="pic\sauna\kasting_beauty.jpg" ></center>'
+				 'Провел я недавно кастинг для съемок ...'
+				 'Народу пришла тьма. Я гонорары предложил хорошие Все хотели сниматься'
+				 'А как узали что это БДСМ и что за сцены по сценарию.....'
+				 'Вообщем все отказались. Только три актрисы согласились. Посмотри фотки ...'
+					 act 'Показать Тимофеичу фотку':
+					 cla
+					 *clr 
+					 '<center><img src="pic\sauna\beauty_1.jpg" ></center>'
+					 'Вот первая "красавлица" ...'
+						 act 'Показать вторую модель ...':
+						 cla
+						 *clr 
+						 '<center><img src="pic\sauna\beauty_2.jpg" ></center>'
+						 'Вот вторая звезда ...'
+							 act ' ..... ':
+							 cla
+							 *clr 
+							 '<center><img src="pic\sauna\beauty_3.jpg" ></center>'
+							 'А эта готова сниматься даже за пол гонорара ...'
+							 'Но с такими актрисами фильма не снимешь. Вернее снять то можно, но кто потом купит?'
+							 'Где актрис хороших взять и что бы на БДСМ не побоялись идти?'
+								 act 'Помогу тебе Игорёк советом ...':
+								 cla
+								 *clr 
+								 '<center><img src="pic\pic\sexshop.jpg" ></center>'
+								 'Обрати внимание на секс шоп. Там людишек с разными пристрастиями полно ...'
+								 'Походи в подвальчик посмотри киношки. Там и девочки залетают поглазеть клубничку...'
+								 'Поглазеть да пизденку почесать ... Кто через дырки в кабинке к хую пристраивается ...'
+								 'А кто и в туалетах "махнатушку" теребит ...'
+									 act 'Ну и в чём совет?':
+									 cla
+									 *clr 
+									 '<center><img src="pic\toilet\mastrub_toilet_1.jpg" ></center>'
+									 'Так вот там туалет - это развратник блядства ...'
+									 'Редкая сучка кто себе пальчик в письку не запустит ...'
+										 act 'Ну и ......':
+										 cla
+										 *clr 
+										 '<center><img src="pic\toilet\mastrub_toilet_2.jpg" ></center>'
+										 'А кто и парочку воткнёт в щелку ...'
+											 act ' ......':
+											 cla
+											 *clr 
+											 '<center><img src="pic\toilet\mastrub_toilet_3.jpg" ></center>'
+											 'Многие девахи с собой вибро-хуи таскают ...'
+												 act '........':
+												 cla
+												 *clr 
+												 '<center><img src="pic\toilet\sex_toilet_1.jpg" ></center>'
+												 'А кто и вообще любит, что бы их там оттрахали ...'
+												 'Так вот весь смысл в том, что все кто там ошивается ...'
+												 'До сексу дюже охочи ... И мечтают что бы их трахнули, возможно даже насильно ...' 
+                                                 'Другого места с таким количеством сеусуальных изврашенок просто нет ...'
+													 act 'А мне что с ними делать?':
+													 cla
+													 *clr 
+													 '<center><img src="pic\sauna\banshik.jpg" ></center>'
+													 'Ходи Игорёк почаще туда! И еби их в туалетах!.'
+													 'Во время секса погрубее будь - може кому и понраву придётся!'
+													 'Ну и приглашай сниматься - в БДСМ, ведь туда чаще всего любители идут ...' 
+													     act 'Хорошо попробую ...':
+													     BDSMtoilet=1
+														 cla
+														 *clr
+														 gt'sauna','1'
+														 end 
+                                                     end
+												 end
+											 end	 
+										 end
+									 end
+								 end
+	                         end
+	                     end
+                     end
+                 end   
+			 end
+		 end	 
+	 end
+end
+
+
+
+if $ARGS[0]='6':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr 
+clr
+gs'stat'
+'<center><img src="pic\sauna\banshik.jpg" ></center>'
+'- Игорёк! Тут такое дело: подъехала ко мне тюремная братва!'
+
+	 act 'Ну и что они хотели?':
+	 set minut = minut + 5
+	 cla
+	 *clr 
+	 clr
+	 gs'stat'
+	 '<center><img src="pic\sauna\bratva.jpg" ></center>'
+	 'Ну а что все хотят?! Бабки конечно ... '
+	 'Сказали что давно наш бизнес пасут - и что бы мы на общак воровской денег давали!'
+		 act 'Да пошли они на хрен!':
+		 cla
+		 *clr 
+		 '<center><img src="pic\studiа\ment_1.jpg" ></center>'
+		 'У нас крыша ментовская есть, мы им исправно платим ... '
+		 'Надо наверно им сказать - что бы ребятишек на место поставили!'
+		     act 'Что скажешь Тимофеич?':
+			 cla
+			 *clr 
+			 '<center><img src="pic\sauna\banshik.jpg" ></center>'
+			 'Игорёк ты мужик умный и сам всё знаешь. Но вот что я тебе скажу:'
+			 'Есть хорошая поговорка: От тюрьмы и от сумы не зарекайся!'
+			 'Кто его знает как жизнь сложится: сегодня ты арестантам помог, завтра они тебе ..'
+			 'Денег у тебя сечас как у дурака мохорки, а скоро будет ещё больше ... Думаю надо согласиться...'
+				 act 'А сколько они просят денег?':
+				 cla
+				 *clr 
+				  '<center><img src="pic\sauna\obshakmoney.jpg" ></center>'
+				 'Просят 100 тысяч в месяц ...'
+				 'Впринципе сумма как за крышу у ментов! А две крыши лучше чем одна!'
+				 'Я человек уже старый и мне то до фени как ты поступишь ...'
+				 'Но совет тебе мой будет таков: Заплати и живи спокойно ...'
+					 act 'Я согласен платить в общак!':
+					 obshak=1
+					 cla
+					 *clr 
+					 clr
+					 gs'stat' 
+					 '<center><img src="pic\sauna\banshik.jpg" ></center>'
+					 'Ну вот и чудьненько!!!'
+					 'Я сечас скажу им, что ты согласен!'
+					     act 'Встретиться с братками':gt'sauna','1'
+	                 end
+	                 act 'Я пока подумаю ....':gt'sauna','start'
+                 end   
+			 end
+		 end	 
+	 end
+end
+--- sauna ---------------------------------
+

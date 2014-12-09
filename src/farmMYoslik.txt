@@ -1,0 +1,56 @@
+# farmMYoslik
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+mag = 1
+
+'<center><H4>Ферма <<$farmname>></H4></center>'
+'<center>Хлев для осликов</center>'
+'<center><img src="pic/Evedon\farmMYpole.jpg" ></center>'
+if oslkorm>0:'Кормов для осликов хватит на <<oslkorm>> дней.'
+if oslikormday+5<daystart:
+     if oslik>0:
+     oslik=0
+     'Ослики подохли от голода.'
+     end
+end
+
+
+if oslik>0:'В хлеву флегматично стоит <<oslik>> шт осликов.'
+if oslikormday=daystart:'В кормушке лежит еда.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+
+act 'Уйти':
+minut=minut+5
+gt'farmMY'
+end
+
+
+if oslkorm>=oslik and oslik>0 and farmstam>0 and oslikormday!daystart:
+
+	 act 'Кормить осликов 1 час':
+	 minut=minut+60
+	 oslkorm-=oslik
+	 sweat+=1
+	 oslikormday=daystart
+	 farmstam-=1
+	 vital+=RAND(0,1)
+	 exp+=RAND(lvl/4,lvl/2)
+	 gt $CURLOC
+	 end
+
+end
+--- farmMYoslik ---------------------------------
+

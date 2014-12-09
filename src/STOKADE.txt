@@ -1,0 +1,38 @@
+# STOKADE
+if wipo<0:wipo=0&sub+=1
+clr
+gs'stat'
+picrand=RAND(0,2)
+if picrand=0:'<center><img src="pic/EvedonSC/stok.jpg" ></center>'
+if picrand=1:'<center><img src="pic/EvedonSC/stok1.jpg" ></center>'
+if picrand=2:'<center><img src="pic/EvedonSC/stok2.jpg" ></center>'
+'Вы сидите на острие своими мягкими и чувствительными местами, вам очень больно.'
+
+	 act 'Терпеть':
+	 cls
+	 wipo-=20
+	 minut+=60
+	 gt $curloc
+	 end
+
+	 act 'Умолять снять':
+	 cls
+	 minut+=60
+	 sub+=1
+	 stoksk+=1
+	 storand=RAND(10,20)
+	     if stoksk>storand:
+	     'Я думаю ты достаточно наказана говорит Вапула, выпуская вас.'
+			 act '.....':GT 'SLAVECELL'
+	     exit
+	     else
+	     'На ваши вопли никто не обращает внимания'
+	     end
+	 xgt $curloc
+	 end
+	 
+	 
+
+
+--- STOKADE ---------------------------------
+

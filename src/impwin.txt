@@ -1,0 +1,30 @@
+# impwin
+monster=0
+demonwin=demonwin+1
+'Поверженный бес падает на землю.'
+
+
+act 'Далее':
+cla
+*clr
+if gem>0:gem=gem-1&demonSoul=demonSoul+1&'В один из гемов вошла душа демонической твари.'
+gemrand=RAND(10,25)
+gem=gem+gemrand
+'У беса вы нашли <<gemrand>> гемов'
+farand=RAND(0,2)
+     if farand=0:
+     sucmilk=sucmilk+1
+     'Так же у беса вы нашли бутылочку с каким-то молоком. На бутылке изображена рогатая женщина с хвостом.'
+     end
+     if farand=1:
+     laktaid=laktaid+1
+     'Так же у беса вы нашли бутылку с надписью лактаид'
+     end
+     if farand=2:
+     improot=improot+1
+     'Так же у беса вы нашли бесовский корень'
+     end
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+end
+--- impwin ---------------------------------
+

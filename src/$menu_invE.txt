@@ -1,0 +1,13 @@
+# $menu_invE
+if $selobj='Инвентарь':
+*clr
+cla
+gt'mirrorf'
+     act 'Закрыть сумочку.':
+     GOTO $loc, $metka
+     end
+end
+
+unselect
+--- $menu_invE ---------------------------------
+

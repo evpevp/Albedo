@@ -1,0 +1,133 @@
+# aktiv
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+cla
+*clr
+set minut = minut + 5
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><B>Спальное помещение отряда №1</B></center>'
+'<center>Барак активистов</center>'
+'<center><img src="pic/jail/barak.jpg" ></center>'
+'Еда <<balabas>>, мыло <<milo>>, бритвенный станок <<stanok>>'
+
+
+if hour>=22 or hour<6:
+     act 'Лечь на шконарь.':gt 'bed'
+end
+
+if hour>=6 and hour<19:
+     act 'Выйти на построение.':gt 'itk'
+end
+
+if hour>= 19 and hour<22:
+        
+     act 'Отдыхать час.':
+     set minut = minut + 60
+     gt $CURLOC
+     end
+     
+     act 'Идти в туалет.':gt 'tualet'
+     
+     act 'Играть в блэк джек 1 час':
+	 minut=minut+60
+	 gt'blackjack','0'
+	 end
+	 
+	 if wipo<10:
+         act 'Плакать':
+         cla
+         вор=0
+         мужик=мужик+1
+         minut=minut+15
+         manna=manna+10
+         wipo=wipo+30
+         'Вы не выдержали и начали плакать.'
+          act 'Умытся.':gt $CURLOC
+         end
+     end
+     
+     if jailfitday ! day and петух = 0:
+         act 'Заниматься спортом 1 час':
+	     cla
+		 *clr
+		 jailfitday = day
+		 set minut = minut + 60
+		 sweat=sweat+3
+		 set exp=exp+RAND(1,3)
+		 fat=fat-1
+		 manna=manna-15
+		 'Вы в течении часа выполняли разнообразные физические упражнения.'
+		 act 'Далее':gt $CURLOC
+		 end
+     end
+     
+     if balabas > 0:
+         act 'Есть еду из запасов 1 час.':
+         cla
+         minut=minut+60
+         balabas=balabas-1
+         golod=golod+10
+         manna=manna+5
+         'Вы балабасили, сидя на своем шконаре.'
+         act 'Убрать остатки.':gt $CURLOC
+         end
+     end
+     
+     if shnirday ! day:
+	     act 'Шнырять за 100руб 1 час.':
+		 set minut = minut + 60
+		 шнырь=шнырь+1
+		 money=money+100
+		 shnirday = day
+		 gt $CURLOC
+		 end
+	 end
+	 
+	 act 'Покупать 1 час.':
+	 set minut = minut + 60
+	 gt 'sizomagaz'
+	 end
+	 
+	 if money>0:
+         act 'Заныкать деньги.':
+		 set minut = minut + 60
+		 moneyNik=moneyNik+money
+		 money=0
+		 gt $CURLOC
+		 end
+     end
+     
+     if moneyNik > 0:
+         act 'Забрать деньги из нычки.':
+		 set minut = minut + 60
+		 money=money+moneyNik
+		 moneyNik=0
+		 gt $CURLOC
+		 end
+     end
+	 
+	 if petrqw >0 and petrmonth ! month:
+	 cla
+	 petrqw=petrqw-1
+	 petrmonth = month
+	 'Вошел вертухай и выдал вам посылку'
+	 stanok=stanok+20
+	 balabas=balabas+30
+	 milo=milo+30
+	 money=money+1000
+	 'Вы достали письмо из посылки и прочитали короткое послание от вашего сына Пети. "Держись папань."'
+	 act 'Забрать посылку.':gt $CURLOC
+	 exit
+	 end
+
+end
+--- aktiv ---------------------------------
+

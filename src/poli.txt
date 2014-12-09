@@ -1,0 +1,86 @@
+# poli
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Поликлиника</font></B></center>'
+'<center><img src="pic\pic\poli.jpg" ></center>'
+'Время работы с 6 до 21, без выходных.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'Прием у врача стоит 1000 рублей.'
+
+     act 'ВЫЙТИ ИЗ ПОЛИКЛИНИКИ':gt'street'
+     
+     
+     
+     if hour>=6 and hour<=21:
+		 if health < vital*10 and money >= 1000:
+			 act 'Лечить здоровье 1 тыр':
+			 cla
+			 set money = money - 1000
+			 set minut = minut + 60
+			 set health = vital*10
+			 'Врач сделал вам укол и вам сразу же стало гораздо лучше'
+			 act 'ВЫЙТИ':gt'poli','start'
+			 end
+		 end
+		 
+		 if wipo < will*10 and money >= 1000:
+			 act 'Прием у психотерапевта 1 тыр':
+			 cla
+			 set money = money - 1000
+			 set minut = minut + 60
+			 wipo=will*10
+			 set manna = intel*10
+			 'Вы полежали на кушетке у психотерапевта и рассказали ему о своих невзгодах и вам сразу же стало гораздо легче на душе.'
+			 act 'ВЫЙТИ':gt'poli','start'
+			 end
+		 end
+		 
+         if ofirinaQW >= 2 and week=5 or ofirinaQW >= 2 and week=1 and hour >= 15 and hour < 21 and horny>=1:
+		 '<b>К вам подошёл врач, протянул вам халат с каким-то бейджиком  и сказал что вас просят подойти в кабинет №69.</b>'
+			 act '<b>Идти в кабинет №69</b>':gt'irinaevent','poli'
+	     end
+	 end
+end
+
+if $ARGS[0]='1':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><B><font color=maroon>Поликлиника</font></B></center>'
+'<center><img src="pic\pic\poli.jpg" ></center>'
+'После такого насилия нам неорбходим хороший врач'
+     act 'Посетить уролога':
+     cla
+	 *clr
+     '<center><img src="pic\poli\urolog_1.jpg" ></center>'
+	 'Врач осмотрев вас сказал что ничего страшнного с вашим членом не произошло'
+	 'Достаточно одного сеанса медицинского массажа'
+         act'Оплатить лечение и поехать домой (3 тыр)': 
+         cla
+		 *clr
+		 Set money = money - 3000
+		 set health = vital*10
+		 '<center><img src="pic\poli\urolog_2.jpg" ></center>'
+		 'Пороботав ручками с вашим членом он привёл его в полный порядок'
+		 'Можно ехать отдыхать домой'
+         act 'ВЫЙТИ':gt'poli','start'
+		 end
+     end  
+end
+--- poli ---------------------------------
+

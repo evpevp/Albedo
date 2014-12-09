@@ -1,0 +1,73 @@
+# spBASA
+dynamic $battlemain
+clr
+gs'stat'
+
+ if spZerkalo>=100 and manna>=10:
+	 act 'Применить заклинание зеркал 10 манны':
+	 cla
+	 manna=manna-10
+	 ZerkaloExp=ZerkaloExp+1
+	 zerkalo=zerkalo+1+(ZerkaloExp/10)
+	 if zerkalo>50:zerkalo=50
+	 '<font color=green>Вы создаете <<zerkalo>> зеркал</font>'
+	 xgt'fight','1'
+	 end
+ end
+ 
+ 
+ if spMagShild>=100 and manna>=50:
+	 act 'Применить заклинание щита мага 50 манны':
+	 cla
+	 MagShildExp=MagShildExp+1
+	 manna=manna-50
+	 defence=defence+300+(MagShildExp*10)
+	 '<font color=green>Вы колдуете и вас защищает щит от физических воздействий прочностью <<defence>> едениц</font>'
+	 xgt'fight','1'
+	 end
+ end
+ 
+ if spSmeshenie>=100:
+ mannaNeedS=100-spSmeshenieExp
+	 if mannaNeedS<10:mannaNeedS=10
+ end
+ 
+ if spSmeshenie>=100 and manna>=100:
+	 act 'Применить заклинание смещения <<mannaNeedS>> манны':
+	 cla
+	 spSmeshenieExp=spSmeshenieExp+1
+	 manna=manna-mannaNeedS
+	 fint=fint+3+(spSmeshenieExp/10)
+	 '<font color=green>Вы колдуете заклинание смещения и теперь вы сможете с легкостью избежать <<fint>> ударов</font>'
+	 xgt'fight','1'
+	 end
+ end
+ 
+ if spTuman>=100 and manna>=150:
+ 	 act 'Создать туман 150 манны':
+	 cla
+	 spTumanExp=spTumanExp+1
+	 manna=manna-150
+	 tuman=tuman+20+(spTumanExp/10)
+	 '<font color=green>Вы колдуете заклинание тумана и туман наплывая на поле боя закрывает обзор противнику</font>'
+	 xgt'fight','1'
+	 end
+ end
+ 
+  if spKlon>=100 and manna>=500 and cooldownSpell<=0:
+ 	 act 'Создать клона 500 манны':
+	 cla
+	 spKlonExp=spKlonExp+1
+	 manna=manna-500
+	 cooldownSpell=2
+	 klon=klon+1+(spKlonExp/100)
+	 '<font color=green>Вы колдуете создавая клона</font>'
+	 xgt'fight','1'
+	 end
+ end
+ 
+ 
+ 
+ act 'Пропустить ход':xgt'fight','1'
+--- spBASA ---------------------------------
+

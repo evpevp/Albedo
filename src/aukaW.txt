@@ -1,0 +1,25 @@
+# aukaW
+*clr
+'<center><img src="pic/EvedonMonsters/auka.jpg"></center>'
+
+
+monster=10
+
+
+
+
+$nameV='Аука'
+lvlv=100
+strenV=30
+speedV=65
+agilV=65
+vitalV=100
+intelv=230
+willv=30
+program=20
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+zerkalov=20
+--- aukaW ---------------------------------
+

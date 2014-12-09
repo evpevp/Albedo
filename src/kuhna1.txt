@@ -1,0 +1,30 @@
+# kuhna1
+*clr
+minut=minut+1
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><H4>КУХНЯ</H4></center>'
+'<center><img src="pic/room/kuhA.jpg" ></center>'
+clr
+gs'stat'
+if hour >= 6 and hour <= 18:'На кухне что то готовит ваша служанка ((Маша|masha)).'
+
+     act 'Есть (15 мин)':
+     cla
+     *clr
+     set minut = minut + 15
+     '<center><img src="pic/pic\food.jpg" ></center>'
+     'Вы поставили еду на стол.'
+     gs'eat'
+     act 'Положить грязную тарелку в раковину':GOTO $loc, $metka
+     end
+
+
+act 'Коридор':gt'koridor1'
+--- kuhna1 ---------------------------------
+

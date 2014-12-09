@@ -1,0 +1,63 @@
+# onsenWork2
+*clr
+'<center><img src="pic/EvedonSex/onsenjob.gif"></center>'
+gem+=60
+minut+=15
+gs'stat'
+
+'Вы зашли с клиентом в комнату перед душевой и помогли ему раздеться.'
+'В душевой вы стали намыливать тело клиента и он попросил вас помыть ему член.'
+
+act 'Отказаться':
+cla
+kornOtkaz+=1
+minut+=15
+gs'stat'
+'Вы отказались мыть член клиента и порекомендовали ему замочить его стручок в шайке. Клиент остался очень недоволен.'
+act 'Уйти':gt'onsenWork','start'
+end
+
+act 'Мыть его член':
+cla
+*clr
+'<center><img src="pic/EvedonSex/onsenjob1.gif"></center>'
+gem+=80
+minut+=15
+'Вы намылили член клиента и стали мыть его руками, чувствуя как он встает. Вскоре член был полностью чистый.'
+act 'Уйти':gt'onsenWork','start'
+klwrand=RAND(0,3)
+     if klwrand=2:
+     kgemrand=RAND(90,200+onwsbj)
+     if kgemrand<10:kgemrand=10
+     'Клиент предлагает вам протестировать член на чистоту, своим ротиком. Обещая вам заплатить за это <<kgemrand>> гемов'
+         act 'Облизать его член':
+         cla
+         onwsbj+=1
+         gem+=kgemrand
+         $namev='Клиент'
+         guy+=1
+         pointSS=0
+         gt'sexsistem','bj'
+         end
+     end
+     if klwrand=3:
+     kgemrand=RAND(140,300)   
+     'Клиент похотливо улыбнулся, положив вам руку между ног, и прошептал "хочешь заработать лишние <<kgemrand>> гемов" '
+         act 'Отдаться':
+	     cla
+	     *clr
+	     minut+=10
+	     guy=guy+1
+	     gem+=kgemrand
+	     onsensexy=RAND(0,2)
+	     if onsensexy=0:'<center><img src="pic/EvedonSex/onsenSex.jpg" ></center>'
+	     if onsensexy=1:'<center><img src="pic/EvedonSex/onsenSex1.jpg" ></center>'
+	     if onsensexy=2:'<center><img src="pic/EvedonSex/onsenSex2.jpg" ></center>'
+	     'Клиент недолго думая употребил вашу киску по прямому назначению - неторопливо и раслабленно начал вас ебать, покряхтывая от наслаждения и лапая ваше мокрое, намыленное тело. Вы подмахивали, пытаясь получить свою долю удовольствия. Вскоре клиент нарастил темп и кончил в вас, в экстазе яростно пытаясь засунуть свой член как можно глубже. '
+         act 'Уйти':gt'onsenWork','start'
+         end
+     end
+end
+
+--- onsenWork2 ---------------------------------
+

@@ -1,0 +1,356 @@
+# karver
+$gribmorf={
+ facegrib=input ("Феминность лица от 0 мужское до 100 женское. Сейчас у вас <<face>>.")
+	 if facegrib<0 or facegrib>100:
+	 'Параметр остался неизменным'
+	 else
+	 face=facegrib
+	 end
+ hcolgrib=input ("Цвет волос 0 черный, 1 русый, 2 рыжий, 3 светлый. Сейчас у вас <<hcol>>.")
+	 if hcolgrib<=0 or hcolgrib>3:
+	 'Параметр остался неизменным'
+	 else
+	 hcol=hcolgrib
+	 end
+  hcolgrib=input ("Цвет волос 0 черный, 1 русый, 2 рыжий, 3 светлый. Сейчас у вас <<hcol>>.")
+	 if hcolgrib<0 or hcolgrib>3:
+	 'Параметр остался неизменным'
+	 else
+	 hcol=hcolgrib
+	 end
+ glacolgrib=input ("Цвет глаз 0 карий, 1 серый, 2 зеленый, 3 голубой. Сейчас у вас <<glacol>>.")
+	 if glacolgrib<0 or glacolgrib>3:
+	 'Параметр остался неизменным'
+	 else
+	 glacol=glacolgrib
+	 end
+ glacolgrib=input ("Цвет глаз 0 карий, 1 серый, 2 зеленый, 3 голубой. Сейчас у вас <<glacol>>.")
+	 if glacolgrib<0 or glacolgrib>3:
+	 'Параметр остался неизменным'
+	 else
+	 glacol=glacolgrib
+	 end
+ hlonggrib=input ("Длинна волос, от 0 до 100. Сейчас у вас <<hlong>>.")
+	 if hlonggrib<0 or hlonggrib>100:
+	 'Параметр остался неизменным'
+	 else
+	 hlong=hlonggrib
+	 end
+ lipgrib=input ("Размер губ, от 0 до 4х. Сейчас у вас <<lip>>.")
+	 if lipgrib<0 or lipgrib>4:
+	 'Параметр остался неизменным'
+	 else
+	 lip=lipgrib
+	 end
+ skingrib=input ("Качество кожи, от 0 до 4х. Сейчас у вас <<skin>>.")
+	 if skingrib<0 or skingrib>4:
+	 'Параметр остался неизменным'
+	 else
+	 skin=skingrib
+	 end
+resnicgrib=input ("Длина ресниц, от 0 до 2х. Сейчас у вас <<resnic>>.")
+	 if resnicgrib<0 or resnicgrib>2:
+	 'Параметр остался неизменным'
+	 else
+	 resnic=resnicgrib
+	 end
+glarazgrib=input ("Размер глаз, от 0 до 3х. Сейчас у вас <<glaraz>>.")
+	 if glarazgrib<0 or glarazgrib>3:
+	 'Параметр остался неизменным'
+	 else
+	 glaraz=glarazgrib
+	 end
+ handgrib=input ("Феминность рук от 0 мужское до 100 женское. Сейчас у вас <<hand>>.")
+	 if handgrib<0 or handgrib>100:
+	 'Параметр остался неизменным'
+	 else
+	 hand=handgrib
+	 end
+ bristgrib=input ("Феминность верхней части тела от 0 мужское до 100 женское. Сейчас у вас <<brist>>.")
+	 if bristgrib<0 or bristgrib>100:
+	 'Параметр остался неизменным'
+	 else
+	 brist=bristgrib
+	 end	
+ assgrib=input ("Феминность задницы от 0 мужское до 100 женское. Сейчас у вас <<ass>>.")
+	 if assgrib<0 or assgrib>100:
+	 'Параметр остался неизменным'
+	 else
+	 ass=assgrib
+	 end
+ thightgrib=input ("Феминность бедер от 0 мужское до 100 женское. Сейчас у вас <<thight>>.")
+	 if thightgrib<0 or thightgrib>100:
+	 'Параметр остался неизменным'
+	 else
+	 thight=thightgrib
+	 end
+ leggrib=input ("Феминность ног от 0 мужское до 100 женское. Сейчас у вас <<leg>>.")
+	 if leggrib<0 or leggrib>100:
+	 'Параметр остался неизменным'
+	 else
+	 leg=leggrib
+	 end
+ titgrib=input ("Размер молочных желез от 0 мужское до 300 женское. Сейчас у вас <<tit>>.")
+	 if titgrib<0 or titgrib>300:
+	 'Параметр остался неизменным'
+	 else
+	 tit=titgrib
+	 end
+ penisgrib=input ("Размер члена от 0 отсутствует до 30. Сейчас у вас <<penis>>.")
+	 if penisgrib<0 or penisgrib>30:
+	 'Параметр остался неизменным'
+	 else
+	 penis=penisgrib
+	 end
+ vaginagrib=input ("Наличие вагины от 0 отсутствует до 1. Сейчас у вас <<vagina>>. Если у вас есть вагина, вы ей довольны и не хотите ничего менять, просто поставте 2")
+	 if vaginagrib<0 or vaginagrib>1:
+	 'Параметр остался неизменным'
+	 else
+	 vagina=vaginagrib
+	 end
+rostgrib=input ("Рост, от 145 до 210. Сейчас у вас рост <<rost>> см.")
+	 if rostgrib<145 or rostgrib>210:
+	 'Параметр остался неизменным'
+	 else
+	 rost=rostgrib
+	 end
+salogrib=input ("Подкожный жир, от 0 до 600. Сейчас у вас <<salo>> подкожного жира.")
+	 if salogrib<0 or rostgrib>600:
+	 'Параметр остался неизменным'
+	 else
+	 salo=salogrib
+	 end
+}
+
+
+
+
+
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaMag = $ARGS[0]
+$locMag = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+if karverQW=0:'<center><H4>Гадкий старичок</H4></center>'
+if karverQW>0:'<center><H4>Заклинатель грибов Абрахам Карвер</H4></center>'
+'<center><img src="pic/Evedonface/karver.jpg" ></center>'
+'На пне сидит старичок в рваных штанах, рваной рубахе, из-под которой что-то блестит и смотрит на вас исподлобья.'
+''
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+
+
+act 'Уйти':minut=minut+5&gt'df0_3'
+
+if karverQW>0 and karverWantBeer=0:
+'(Абрахам Карвер) - Хочешь еще гриба?'
+	 act 'Да.':
+	 cla
+	 minut+=5
+	 karverWantBeer=1
+	 '(Вы) - Да.'
+	 '(Абрахам Карвер) - Условия ты знаешь. Сбегай в пригород на пивоварню, купи мне бочонок самого лучшего пива, а я тебе дам гриб с любыми возможными свойствами. Все, чеши отсюда.'
+	 act 'Уйти':minut=minut+5&gt'df0_3'
+	 end
+	 
+	 act 'Я хочу прибить тебя.':
+	 cla
+	 '(Вы) - Я хочу прибить тебя.'
+	 '(Старичок) - Ух ты, как это ново. Видимо ты просто хочешь умереть, кто я такой, чтобы тебя останавливать'
+	 $nameV='Абрахам Карвер'
+	 lvlv=250
+	 strenV=50
+	 speedV=80
+	 agilV=80
+	 vitalV=2000
+	 intelv=500
+	 willv=500
+	 program=40
+	 healthV=vitalV*10
+	 mannaV=intelV*10+intelV*15
+	 wipoV=willV*10
+	 monster=21
+	 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
+	 act 'Драться':gs'before'
+	 end
+end
+
+if karverQW>0 and karverWantBeer=3:
+'(Абрахам Карвер) - Какого черта ты тянешь кота за яйца, выбирай уже себе свойства гриба.'
+     act 'Выбрать свойства гриба':
+     cla
+     karverWantBeer=0
+     dynamic $gribmorf
+     act 'Уйти':minut=minut+5&gt'df0_3'
+     end
+     
+     act 'Я хочу прибить тебя.':
+	 cla
+	 '(Вы) - Я хочу прибить тебя.'
+	 '(Старичок) - Ух ты, как это ново. Видимо ты просто хочешь умереть, кто я такой, чтобы тебя останавливать'
+	 $nameV='Абрахам Карвер'
+	 lvlv=250
+	 strenV=50
+	 speedV=80
+	 agilV=80
+	 vitalV=2000
+	 intelv=500
+	 willv=500
+	 program=40
+	 healthV=vitalV*10
+	 mannaV=intelV*10+intelV*15
+	 wipoV=willV*10
+	 monster=21
+	 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
+	 act 'Драться':gs'before'
+	 end
+end
+
+if karverQW>0 and karverWantBeer=2:
+karverWantBeer=3
+'Карвер аж подпрыгнул. Вот уважил старика, так уважил. И тут же присосался к бочонку. После того как оторвался сел довольный на пенек и сказал.'
+'Ну заказывай. Я не могу при помощи грибов изменять возраст, силу, скорость, ловкость, магичность, но могу вылепить из твоего тела что угодно. И да, жрать гриб будешь тут, при мне. Мне на расстоянии придется удерживать связь с грибом, чтобы сохранились свойства, а это лишняя трата энергии.'
+     act 'Выбрать свойства гриба':
+     cla
+     karverWantBeer=0
+     dynamic $gribmorf
+     act 'Уйти':minut=minut+5&gt'df0_3'
+     end
+     
+     act 'Я хочу прибить тебя.':
+	 cla
+	 '(Вы) - Я хочу прибить тебя.'
+	 '(Старичок) - Ух ты, как это ново. Видимо ты просто хочешь умереть, кто я такой, чтобы тебя останавливать'
+	 $nameV='Абрахам Карвер'
+	 lvlv=250
+	 strenV=50
+	 speedV=80
+	 agilV=80
+	 vitalV=2000
+	 intelv=500
+	 willv=500
+	 program=40
+	 healthV=vitalV*10
+	 mannaV=intelV*10+intelV*15
+	 wipoV=willV*10
+	 monster=21
+	 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
+	 act 'Драться':gs'before'
+	 end
+end
+
+
+if karverQW>0 and karverWantBeer=1:
+'(Абрахам Карвер) - Я непонятно выразился? Вали на пивоварню в пригороде и принеси мне бочонок самого лучшего пива. За это получишь гриб с любыми свойствами, что я могу сделать.'
+	 act 'Я хочу прибить тебя.':
+	 cla
+	 '(Вы) - Я хочу прибить тебя.'
+	 '(Старичок) - Ух ты, как это ново. Видимо ты просто хочешь умереть, кто я такой, чтобы тебя останавливать'
+	 $nameV='Абрахам Карвер'
+	 lvlv=250
+	 strenV=50
+	 speedV=80
+	 agilV=80
+	 vitalV=2000
+	 intelv=500
+	 willv=500
+	 program=40
+	 healthV=vitalV*10
+	 mannaV=intelV*10+intelV*15
+	 wipoV=willV*10
+	 monster=21
+	 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
+	 act 'Драться':gs'before'
+	 end
+end
+
+
+if karverQW=0:
+'(Старичок) - Ну и какого хрена тебе тут надо?'
+     act 'Да я тебе сейчас башку откручу старый хрыч, будешь так со мной разговаривать.':
+     cla
+     minut+=5
+     '(Вы) - Да я тебе сейчас башку откручу старый хрыч, будешь так со мной разговаривать.'
+     '(Старичок) - Какая глупая молодежь пошла, всему учить вас надо. Даю тебе пять секунд на извинения, после чего я убью тебя, всерьез и по настоящему.'
+         act 'Ну ладно, ладно, извини.':
+         cla
+         minut+=5
+         karverQW=1
+         karverWantBeer=1
+         '(Вы) - Ну ладно, ладно, извини.'
+         '(Старичок) - Я Абрахам Карвер, заклинатель грибов. Прямо сейчас томим жаждой, сбегай в пригород на пивоварню, купи мне бочонок самого лучшего пива, а я тебе дам гриб с любыми возможными свойствами. Все, чеши отсюда.'
+         act 'Уйти':minut=minut+5&gt'df0_3'
+         end
+         
+         act 'Ты первый начал.':
+         cla
+         '(Вы) - Ты первый начал.'
+         '(Старичок) - Да мне похрен кто начал. Так, твое время кончилось. Не будь я Абрахомом Карвером, сейчас ты умрешь самой мучительной смертью, что можешь себе представить.'
+         $nameV='Абрахам Карвер'
+		 lvlv=250
+		 strenV=50
+		 speedV=80
+		 agilV=80
+		 vitalV=2000
+		 intelv=500
+		 willv=500
+		 program=40
+		 healthV=vitalV*10
+		 mannaV=intelV*10+intelV*15
+		 wipoV=willV*10
+		 monster=21
+		 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
+		 act 'Драться':gs'before'
+         end
+         
+         act 'Я тебя сейчас урою старый остолоп.':
+         cla
+         '(Вы) - Я тебя сейчас урою старый остолоп.'
+         '(Старичок) - Ты просто удобрение для моих грибочков, а я Абрахам Карвер, заклинатель грибов.'
+         $nameV='Абрахам Карвер'
+		 lvlv=250
+		 strenV=50
+		 speedV=80
+		 agilV=80
+		 vitalV=2000
+		 intelv=500
+		 willv=500
+		 program=40
+		 healthV=vitalV*10
+		 mannaV=intelV*10+intelV*15
+		 wipoV=willV*10
+		 monster=21
+		 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
+		 act 'Драться':gs'before'
+         end
+     end
+     
+     act 'Добрый день, любезный.':
+     cla
+     minut+=5
+	 karverQW=1
+	 karverWantBeer=1
+	 '(Вы) - Добрый день, любезный.'
+	 '(Старичок) - Я Абрахам Карвер, заклинатель грибов. Прямо сейчас томим жаждой, сбегай в пригород на пивоварню, купи мне бочонок самого лучшего пива, а я тебе дам гриб с любыми возможными свойствами. Все, чеши отсюда.'
+	 act 'Уйти':minut=minut+5&gt'df0_3'
+     end
+end
+
+
+
+
+
+
+
+
+
+
+
+--- karver ---------------------------------
+

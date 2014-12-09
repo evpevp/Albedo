@@ -1,0 +1,109 @@
+# kazarmaW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+mag = 1
+'<center><H4>Казарма городской стражи</H4></center>'
+'<center><img src="pic/Evedon\kazarma.jpg" ></center>'
+'.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+'На посту стоит часовой.'
+'Объявление на стене гласит. Объявлена награда за прах вампира. 300 гем.'
+if sledow=1:'<a href="exec: minut=minut+5 & gt ''sledoW'' ">Кабинет следователя</a>'
+
+     if missionData=3:
+         act 'Отдать письмо':
+         cla
+         *clr
+         missionData=0
+         kredit=kredit+100
+         missionC+=1
+         '<center><img src="pic/Photo\License.jpg" ></center>'
+         'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
+         act 'Уйти':gt $CURLOC
+         end
+     end
+     
+     if vampireDust>0:
+		 act 'Показать прах вампира':
+		 cla
+		 minut=minut+1
+		 'Хмм, я дам за это 300 гемов и ни гемом больше'
+			 act 'Да':
+			 cla
+				 if vampireDust>1:
+					 act 'Продать все':
+					 gem=gem+vampireDust*300
+					 msg'Вы продали <<vampireDust>> шт. праха вампира.'
+					 vampireDust=0
+					 gt $CURLOC
+					 end
+					 act 'Продать нужное количество':
+					  tempshop = input ("У вас <<vampireDust>> шт праха вампира. Cколько вы желаете продать?")
+					   
+						  if tempshop > vampireDust or tempshop < 0 :
+						  msg 'У вас нет такого количества.'  
+						  gt $CURLOC
+						  else
+						  gem=gem+tempshop*300
+						 vampireDust=vampireDust-tempshop
+						 msg'Вы продали <<tempshop>> шт праха вампира.'
+						 gt $CURLOC
+						 end
+					 end
+				 end
+				 if vampireDust=1:
+				 
+				 vampireDust-=1
+				 gem=gem+300
+				 'Вы продали свой товар.'
+				 act 'Спрятать деньги':gt $CURLOC
+				 end
+			 end
+			 
+			 act 'Нет':gt $CURLOC
+		 end
+	 end
+     
+     if kervolQW=10:
+	 	 act 'Куда можно обратиться с заявлением о преступлении?':
+		 cla
+		 *clr
+		 minut=minut+15
+		 if sledow=0:sledow=1
+		 '(Вы) - Куда можно обратиться с заявлением о преступлении?'
+		 '(Стражник) - Вам нужно к следователю. Вон там кабинет.'
+		 act 'Уйти':gt $CURLOC
+		 end
+	 end
+	 
+	 if skyphik=2:
+	     act 'К кому обратиться по поводу преступников?':
+	     cla
+		 *clr
+		 minut=minut+15
+		 if sledow=0:sledow=1
+		 '(Вы) - К кому обратиться по поводу преступников?'
+		 '(Стражник) - Вам нужно к следователю. Вон там кабинет.'
+		 act 'Уйти':gt $CURLOC
+		 end
+	 end
+end
+
+act 'Уйти':
+minut=minut+5
+gt'enterW'
+end
+--- kazarmaW ---------------------------------
+

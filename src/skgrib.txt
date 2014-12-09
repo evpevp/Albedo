@@ -1,0 +1,12 @@
+# skgrib
+clr
+gs'stat'
+!членогриб
+horny=100
+grib=grib-1
+penis=penis+1
+if vagina>0:vagina=0
+skverna=skverna+1
+'Вы кое-как разжевали твердый гриб и проглотили его, у вас тут же торчком встал член.'
+--- skgrib ---------------------------------
+

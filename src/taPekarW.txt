@@ -1,0 +1,41 @@
+# taPekarW
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+mag = 1
+'<center><H4>Пекарня Руби</H4></center>'
+'<center><img src="pic/Evedon/tapek.jpg" ></center>'
+'Просторное кафе.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+*nl
+if hour>=6 and hour<= 22:'За стойкой стоит симпатичная девушка с короткими темными волосами <a href="exec:GT ''taRubiW''">Руби</a>.'
+if rubiQWYES>=1:'((Зайти в комнату Руби|RubiHomeW|minut=minut+5))'
+if hour>=6 and hour<=7 or hour>=21 and hour<=22:'((За столом ест Китти|kittiW|minut=minut+5))'
+if hour>=7 and hour<= 12:'((Задумчиво пьет чай девушка сержант городской стражи Али Мэй|alimayW|minut=minut+5))'
+if hour>=13 and hour<= 21:'((Обвешанная пирсингом стражница Яра|yaraW|minut=minut+5))'
+
+act 'Уйти':
+minut=minut+5
+gt'teladareW'
+end
+
+
+if kittiQW=7 and hour>=22 and kittyAndRubiDay!day:
+	 act 'Зайти в заднюю комнату к Китти и Руби':
+	 minut=minut+5
+	 gt'kittyAndRubi'
+	 end
+end
+--- taPekarW ---------------------------------
+

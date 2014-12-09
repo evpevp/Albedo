@@ -1,0 +1,23 @@
+# straboyW
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+
+if pogonarand=0 and health>10:
+V_Roziske=V_Roziske+1
+V_RoziskeDay=day
+GOTO $locMag, $metkaMag
+end
+
+if pogonarand>0 and health>10:
+mortalv=pogonarand
+pogonarand=0
+OtradStraga=1
+gs'stragaW'
+gt'before'
+end
+
+if health<=10:
+gt'nakazW'
+end
+--- straboyW ---------------------------------
+

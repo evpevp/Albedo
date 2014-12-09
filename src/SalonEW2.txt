@@ -1,0 +1,32 @@
+# SalonEW2
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaGame = $ARGS[0]
+$locGame = $CURLOC
+'<center><H4>Дворянский салон</H4></center>'
+'<center><img src="pic/Evedon/dvorsalon.jpg" ></center>'
+'Роскошно обставленный салон, в котором проводят время сливки общества Эведона'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+
+
+
+	 act 'Уйти (5 мин)':
+	 minut=minut+5
+	 gt'reachW'
+	 end
+	 
+if hour>=10:
+'Очень много леди и джентльменов развлекаются за <a href="exec: stavkaGame=1000 & gt''bakkara'',''start''">карточным столом</a>'
+
+
+end
+--- SalonEW2 ---------------------------------
+

@@ -1,0 +1,35 @@
+# vorRoom
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+'<center><H4>Ваша комната</H4></center>'
+'<center><img src="pic/Evedon\1\vorroom.jpg" ></center>'
+'Небольшая комната, оборудованная под жилое помещение'
+clr
+gs'stat'
+'Простая <a href="exec:GT ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
+'Обычный шкаф <a href="exec:GT ''lokerW''">шкаф</a>.'
+'Простой <a href="exec:GT ''divanW''">диван</a>.'
+if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
+if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+
+if slot=0:
+*nl
+'Без одежды нельзя выходить на улицу.'
+end
+
+if slot>0:
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'vorgildia'
+	 end
+end
+--- vorRoom ---------------------------------
+

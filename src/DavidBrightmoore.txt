@@ -1,0 +1,52 @@
+# DavidBrightmoore
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+'<center><H4>Дэвид Брайтмур</H4></center>'
+'<center><img src="pic/EvedonNarod/DavidBrightmoore.jpg" ></center>'
+if StefanQW>=1:
+'Ваш отец крепкий, хоть и не высокий мужчина с широкими ладонями и усталым лицом заросшим кудлатой, седой бородой.'
+'Отношение отца к вам <<StefanFather>>'
+else
+'Крепкий мужчина с широкими ладонями и усталым лицом заросшим кудлатой, седой бородой.'
+end
+clr
+gs'stat'
+
+
+act 'Уйти':gt $locFight,$metkaFight
+
+if toiletJerkQW=2:
+     act 'Спросить могут ли у него поселится приезжие':
+	 cla
+	 minut+=15
+	 gs'stat'
+	 'У нас у самих места мало.'
+	 act 'Уйти':gt $locFight,$metkaFight
+	 end
+end
+
+act 'Болтать':
+cla
+minut+=15
+gs'stat'
+     if StefanQW>=1:
+     'Привет сын.'
+         if shahtWork=0:
+         'Ты уже достаточно взрослый, что бы работать в шахте.'
+         else
+         'Молодец, что работаешь в шахте. Мой отец тут работал, и отец моего отца. Отдавай матери деньги заработанные в шахте. Так мы сможем поженить тебя и срубить тебе дом.'
+         end
+     else
+     	 if femin>200:
+		 'Привет путница, откуда путь держишь?'
+		 end
+		 if femin<=200:
+		 'Привет путник, откуда путь держишь?'
+		 end
+     end
+     ''
+act 'Уйти':gt $locFight,$metkaFight
+end
+--- DavidBrightmoore ---------------------------------
+

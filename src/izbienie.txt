@@ -1,0 +1,69 @@
+# izbienie
+
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+
+
+
+clr
+gs'stat'
+
+
+
+
+
+
+if health>10:
+'<center><img src="pic/jail/fsin.jpg" ></center>'
+'На вас набрасывается здоровенный спецназовец.'
+$nameV='Вертухай'
+lvlv=100
+strenV=150
+speedV=100
+agilV=100
+vitalV=150
+intelv=10
+willv=10
+bronikv=50
+program=5
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+act 'Дратся':gt'before'
+end
+
+if health<=10:
+'Вы валяетесь на полу избитый. К вам подходит Опер и наклоняясь говорит. Ну, что Харитонов, я убедил тебя вступить в актив?'
+
+	 act 'Отказаться.':
+	 cla
+	 *clr
+	 '<center><img src="pic/jail/oper.jpg" ></center>'
+	 zoneWar=1
+	 otkazfight=0
+	 '(Вы) - Да пошел ты!'
+	 '(Опер) - Упорный как баран. Ладно, 15 суток штрафного изолятора может исправят тебя.'
+	 'Опер приказал охране, в ШИЗО его, пусть посидит, подумает. Охранники схватили вас и потащили в изолятор.'
+     act '.....':gt 'shizo'
+     end
+       
+     act 'Согласиться.':
+	 cla
+	 *clr
+	 '<center><img src="pic/jail/oper.jpg" ></center>'
+	 zoneWar=0
+	 barak=1
+	 актив=1
+	 otkazfight=0
+	 '(Вы) - Ладно, вступлю я в эту секцию.'
+	 '(Опер) - Вот и славно Харитонов, а зачем упирался? Иди на построение.'
+     act 'Выйти на построение.':gt 'itk'
+     end
+end
+
+
+
+--- izbienie ---------------------------------
+

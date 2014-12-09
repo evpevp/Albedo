@@ -1,0 +1,79 @@
+# kuhna
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+'<center><H4>КУХНЯ</H4></center>'
+'<center><img src="pic/room/kuhr.jpg" ></center>'
+clr
+gs'stat'
+'В холодильнике хранится <<eda>> порций еды.'
+if tarelka > 0:'Над раковиной лежат на полочке <<tarelka>>шт чистых тарелок.'
+if dirtar > 0:'В раковине лежат <<dirtar>> шт грязных тарелок.'
+if fairy > 0:'Около раковины стоит чистящее средство для посуды, его хватит на <<fairy>> раз.'
+if tarelka = 0:'У вас нет чистых тарелок.'
+if fairy= 0:'У вас нет чистящего средства для посуды.'
+
+if fairy > 0 and dirtar > 0:
+     act 'Мыть посуду':
+     cla
+     *clr
+     set fairy = fairy - 1
+	 set minut = minut + dirtar*3
+	 set tarelka = tarelka + dirtar
+	 set dirtar = 0
+	 if pol = 0:'<center><img src="pic/pic/dirt1.jpg" ></center>'
+	 'Используя моющее средство вы помыли посуду.'
+     act 'Выйти':GOTO $loc, $metka
+     end
+end
+
+if eda > 0 and tarelka > 0:
+     act 'Готовить еду (30 мин)':
+     cla
+     *clr
+     set minut = minut + 30
+     set edahot = edahot + 1
+     set eda = eda - 1
+     set tarelka = tarelka - 1
+     if pol = 0:'<center><img src="pic/pic/cook1.jpg" ></center>'
+     'Вы приготовили еду на плите.'
+     act 'Выйти':GOTO $loc, $metka
+     end
+end
+
+if edahot > 0:
+     act 'Есть (15 мин)':
+     cla
+     *clr
+     set minut = minut + 15
+     set edahot = edahot - 1
+     set dirtar = dirtar + 1
+     '<center><img src="pic/pic/food.jpg" ></center>'
+     'Вы поставили еду на стол.'
+     gs'eat'
+     act 'Положить грязную тарелку в раковину':GOTO $loc, $metka
+     end
+end
+
+if pizza > 0:
+'У вас <<pizza>> порций пиццы'
+     act 'Есть пиццу(15 мин)':
+     cla
+     *clr
+     set minut = minut + 15
+     set pizza = pizza - 1
+     '<center><img src="pic/pic/food.jpg" ></center>'
+     'Вы поставили еду на стол.'
+     gs'eat'
+     act 'Положить грязную тарелку в раковину':GOTO $loc, $metka
+     end
+end
+
+act 'Коридор':gt'koridor'
+--- kuhna ---------------------------------
+

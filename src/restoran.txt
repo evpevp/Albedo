@@ -1,0 +1,390 @@
+# restoran
+if $ARGS[0]='start':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Ресторан Метрополь</font></B></center>'
+'<center><img src="pic\pic\restoranfasad.jpg" ></center>'
+'Время работы с 10 до 22 без выходных'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+     if hour >= 10 and hour <= 22:
+         act 'Зайти в ресторан':
+         if pol=0:gt'restoran','0'
+         end
+     end
+
+     act 'ВЫЙТИ ИЗ РЕСТОРАНА':
+     cla
+     set minut = minut + 5
+     gt'down'
+     end
+     
+end
+
+if $ARGS[0]='0':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Ресторан</font></B></center>'
+'<center><img src="pic\pic\restoran.jpg" ></center>'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+     if slot = 1:
+     'Мужчина на входе вежливо интересуется какой столик вы предпочитаете в VIP зале или в общем зале'
+         if money >= 5000:
+             act 'VIP зал 5000 руб':
+             cla
+             set money = money - 5000
+             gt'restoran','vip'
+             end
+         end
+     act 'Общий зал':gt'restoran','zal'
+     else
+     'К вам подходит мужчина и вежливо вам сообщает, что в подобной одежде в ресторан нельзя.'
+     end
+
+     act 'ВЫЙТИ ИЗ РЕСТОРАНА':
+     cla
+     set minut = minut + 5
+     gt'restoran','start'
+     end
+     
+end
+
+
+if $ARGS[0]='zal':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Ресторан, общий зал</font></B></center>'
+'<center><img src="pic\pic\restoran2.jpg" ></center>'
+'Общий зал ресторана набит народом, всюду шум, снуют официанты.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+     act 'Уйти':
+     cla
+     set minut = minut + 5
+     gt'restoran','start'
+     end
+     
+     if money>= 5000:
+         act 'Поесть 5 тыр':
+		 cla
+		 set minut = minut + 60
+		 golod=golod+20
+		 fat=fat+1
+		 wipo=wipo+5
+		 manna=manna+5
+		 health=health+5
+		 money=money-5000
+		 'Вы заказали полный стол разносолов и с удовольствием поели в шумном зале ресторана.'
+		 act 'Уйти':gt'restoran','zal'
+		 end
+     end
+end
+
+if $ARGS[0]='vip':
+$metka = $ARGS[0]
+$loc = $CURLOC
+cla
+*clr
+set minut = minut + 5
+'<center><B><font color=maroon>Ресторан, VIP зал</font></B></center>'
+'<center><img src="pic\pic\restoran3.jpg" ></center>'
+'В вип зале столы расположенны в отдельных кабинетах.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+     act 'Уйти':
+     cla
+     set minut = minut + 5
+     gt'restoran','start'
+     end
+     
+     if money>= 5000:
+         act 'Поесть 5 тыр':
+		 cla
+		 set minut = minut + 60
+		 golod=golod+20
+		 fat=fat+5
+		 wipo=wipo+15
+		 manna=manna+15
+		 health=health+5
+		 money=money-5000
+		 'Вы заказали полный стол разносолов и с удовольствием поели в шумном зале ресторана.'
+		 act 'Уйти':gt'restoran','zal'
+		 end
+		 
+		 if pol = 0 and restordeloday ! day:
+			 act 'Деловая встреча с Олегом 5 тыр':
+			 cla
+			 set minut = minut + 60
+			 golod=golod+20
+			 fat=fat+5
+			 wipo=wipo+15
+			 manna=manna+15
+			 health=health+5
+			 money=money-5000
+			 restordeloday = day
+			 alko=alko+5
+			 horny=horny+20
+			 'Вы заказали полный стол разносолов и к вам присоединился Олег.'
+			     if olegQW = 2:
+				 olegQW = 3
+				 '(Олег) - Слушай, Игорь, есть один полковник, если будут проблемы с правами он все решит. Вот его координаты. Как нибудь, опять будешь в ресторане, позвони ему, он подскочит.'
+				 end
+				 
+			 	 if olegQW = 1:
+				 olegQW = 2
+				 '(Олег) - Слушай, Игорь, тут один человечек хочет с тобой познакомится, зовут Владимир Викторович, он директор проектного учереждения. Большой спец по откатам. Вот его координаты. Как нибудь, опять будешь в ресторане, позвони ему, он подскочит.'
+				 end
+				 
+				 if olegQW = 0:
+				 olegQW = 1
+				 '(Олег) - Слушай, Игорь, у меня есть к тебе деловое предложение. У одного моего знакомого есть охранная конторка, он сейчас без заказов сидит. Он согласен работать с откатами. Если интересует то ты сам как нибудь с ним договорись о встрече и потолкуйте. Вот его координаты, зовут его Альберт. Как нибудь, опять будешь в ресторане, позвони ему, он подскочит.'
+				 end
+			 act 'Уйти':gt'restoran','vip'
+			 end
+			 
+			 if olegQW >= 3 and prava=0:
+			 	 act 'Деловая встреча с полковником 5 тыр':
+				 cla
+				 set minut = minut + 60
+				 golod=golod+20
+				 fat=fat+5
+				 wipo=wipo+15
+				 manna=manna+15
+				 health=health+5
+				 money=money-5000
+				 restordeloday = day
+				 alko=alko+5
+				 horny=horny+20
+				 'Вы заказали полный стол разносолов и к вам присоединился полковник.'
+				 '(Полковник) - права у вас будут хоть сейчас, 250 кусоков и я все устрою.'
+					 if money >= 250000:
+					     act 'По рукам':
+					     cla
+					     money=money-250000
+					     prava=1
+					     'Вы доостали деньги и полковник дал вам права.'
+					     act 'Уйти':gt'restoran','vip'
+					     end
+					 end
+				 act 'Уйти':gt'restoran','vip'
+				 end
+			 
+			 end
+			 
+			 if olegQW >= 2 and brak<3 and sud=0:
+			 	 act 'Деловая встреча с Владимиром Викторовичем (директор проектной фирмы) 5 тыр':
+				 cla
+				 set minut = minut + 60
+				 golod=golod+20
+				 fat=fat+5
+				 wipo=wipo+15
+				 manna=manna+15
+				 health=health+5
+				 money=money-5000
+				 restordeloday = day
+				 alko=alko+5
+				 horny=horny+20
+				 'Вы заказали полный стол разносолов и к вам присоединился Владимир Викторович.'
+				 '(Владимир Викторович) - В общем у меня такое предложение. Вы можете заказать у нас какой нибудь проект, это даже не особо важно, например санитарной зоны или предельно допустимых выбросов. Стоимость проекта будет миллион, из них 500 тысяч вы получаете налом прямо сейчас.'
+					 if balance >= 1000000:
+					     act 'По рукам':
+					     cla
+					     balance=balance-1000000
+					     money=money+500000
+					     otkat=otkat+1
+					     'Вы договорились, подписали контракт и Владимир Викторович отдал вам вашу долю.'
+					     act 'Уйти':gt'restoran','vip'
+					     end
+					 end
+				 act 'Уйти':gt'restoran','vip'
+				 end
+			 
+			 end
+			 
+			 if ofirinaQW>=1 and money>=10000:
+			     act 'Встреча с Ириной 10 тыр':
+			     cla
+			     *clr
+			     set minut = minut + 60
+				 golod=golod+20
+				 fat=fat+5
+				 wipo=wipo+15
+				 manna=manna+15
+				 health=health+5
+				 money=money-10000
+				 restordeloday = day
+				 alko=alko+5
+				 horny=horny+20
+				 !ofirinarest
+				 picrand=RAND(0,4)
+					 if picrand=0:'<center><img src="pic\fam\irina\irina_2.jpg" ></center>'
+					 if picrand=1:'<center><img src="pic\fam\irina\irina_13.jpg" ></center>'	
+					 if picrand=2:'<center><img src="pic\fam\irina\irina_18.jpg" ></center>'
+					 if picrand=3:'<center><img src="pic\fam\irina\irina_19.jpg" ></center>'
+					 if picrand=4:'<center><img src="pic\fam\irina\irina_20.jpg" ></center>'	
+				 'Вы пригласили Ирину в ресторан и не плохо там погуляли.'
+				 act 'Уйти':gt'restoran','vip'
+				     if horny>=50:
+				     act 'Напрашиватся к Ире в гости':gt'ofirinasex','start'
+				         if ofirinaQW>=3 and money>= 15000:
+				             act 'Попросить у Иры сделать минет прямо тут':
+				             cla
+				             *clr
+				             horny=0
+				             if ofirinaQW=3:ofirinaQW=4
+				             sexm=sexm+1
+				             minut=minut+15
+				             '<center><img src="pic\fam\irina\restoran\irina_restoran_4.gif" ></center>'
+				             'Ира сползла со стула и села перед вами на колени, вы достали член и провели им по ее мягким губам. Ира послушно обхватила ваш член и начала сосать.'
+				                 act 'Кончить ей в рот':
+				                 cla
+				                 *clr
+				                 money=money-15000
+				                 horny=0
+				                 manna=manna+50
+				                 '<center><img src="pic\fam\irina\restoran\facecum_15.gif" ></center>'
+				                 'Вы спустили ей в рот, а Ира послушно слизала остатки спермы с члена.'
+				                 'Заметив что несколько капель спермы попало ей на платье вы дали Ире 15 штук на новое платье.'
+				                 act 'Уйти':gt'restoran','vip'
+				                 end
+				             end 
+				         end 
+				         
+				         if ofirinaQW>=3 and money>= 15000:
+				             act 'Попросить Ирину раздеться':
+				             cla
+				             *clr
+				             horny=0
+				             if ofirinaQW=3:ofirinaQW=4
+				             sexm=sexm+1
+				             minut=minut+15
+							 '<center><img src="pic\fam\irina\restoran\irina_beforsex_1.gif" ></center>'
+							 'Ирина медленно сняла своё платье, вы подозвали её к себе и уложили головой себе на колени.'
+							 'Она стала поглаживать выпирающий из ваших брюк член.'	
+							     act 'Достать член':
+								 cla
+								 *clr
+								 set minut = minut + 5
+								 picrand=RAND(0,1)
+								 if picrand=0:'<center><img src="pic\fam\irina\restoran\irina_bj_15.gif" ></center>'
+								 if picrand=1:'<center><img src="pic\fam\irina\restoran\irinablow_1.gif" ></center>'				                 
+								 'Вы попросили Ирину освободить рвушийся наружу член.'
+								 'Она послушно помогла спустить вам брюки и обхватив его губами стала скользить по нему.'			                 	
+									 act 'Трахать Ирину':
+									 cla
+									 *clr
+									 set minut = minut + 5
+									 '<center><img src="pic\fam\irina\restoran\irina_restoran_1.gif" ></center>'
+									 'Затем вы посадили Иру на себя, и придерживая за ноги стали быстро насаживать на член.'
+										 act 'Продолжить':
+										 cla
+										 *clr
+										 set minut = minut + 5
+										 '<center><img src="pic\fam\irina\restoran\irina_restoran_3.gif" ></center>'
+										 'Чувствуя что близки к финалу, вы положили Ирину на стол и стали трахать её между сисек.'
+										 'Ира сжимала их, охватывая ваш член и просила кончить ей в рот.'	 
+											 act 'Кончить':
+											 cla
+											 *clr
+											 set minut = minut + 5
+											 picrand=RAND(0,2)
+											 if picrand=0:'<center><img src="pic\fam\irina\restoran\irina_cum_3.gif" ></center>'
+											 if picrand=1:'<center><img src="pic\fam\irina\restoran\irina_restoran_2.gif" ></center>'
+											 if picrand=2:'<center><img src="pic\fam\irina\restoran\irina_cum_9.gif" ></center>'	
+											 'Через минуту вы стали кончать.'
+												 act 'Дальше':
+												 cla
+												 *clr
+												 money=money-15000
+												 horny=0
+												 manna=manna+25
+												 wipo=wipo+25
+												 '<center><img src="pic\fam\irina\restoran\irina_21.jpg" ></center>'
+												 'Ирина быстренько оделась, но вытерев с себя не всю сперму умудрилась испачкать платье.'
+									             'Заметив это вы дали Ире 15 штук на новое платье.'
+									             act 'Уйти':gt'restoran','vip' 
+													 
+												 end					
+											 end						
+										 end							
+									 end		 	
+								 end				 
+				             end
+				         end
+				         
+				     end
+				     
+			     end
+			 end
+			 
+			 
+			 if olegQW >= 1 and albertQW = 0 and brak<3 and sud=0:
+			 	 act 'Деловая встреча с Альбертом (директор охранного предприятия) 5 тыр':
+				 cla
+				 set minut = minut + 60
+				 golod=golod+20
+				 fat=fat+5
+				 wipo=wipo+15
+				 manna=manna+15
+				 health=health+5
+				 money=money-5000
+				 restordeloday = day
+				 alko=alko+5
+				 horny=horny+20
+				 'Вы заказали полный стол разносолов и к вам присоединился Альберт.'
+					 if albertQW = 0:
+					 '(Альберт) - В общем у меня такое предложение. Ваша контора заключает договор с моим охранным агенством. Это будет на миллион дороже, и мы каждый месяц вам даем налом 250 штук. Ну как? По рукам.'
+					     act 'По рукам':
+					     cla
+					     albertQW = 1
+					     smupro=smupro+1000000
+					     otkat=otkat+1
+					     'Вы договорились, что теперь вам каждый месяц будут платить откат налом.'
+					     act 'Уйти':gt'restoran','vip'
+					     end
+					 end
+				 act 'Уйти':gt'restoran','vip'
+				 end
+			 
+			 end
+		 end
+     end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+--- restoran ---------------------------------
+

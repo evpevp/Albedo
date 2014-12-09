@@ -1,0 +1,53 @@
+# korihouse
+if $ARGS[0]='start':
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+5
+mag = 1
+'<center><H4>Дом Кори</H4></center>'
+'<center><img src="pic/Evedon/domkori.jpg"></center>'
+'Большой и украшенный причудливой резьбой дом. Вокруг дома на газонах растут кустарники.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+!'<a href="exec: gt''driskol''">За стойкой стоит хозяин кабака Дрискол</a>'
+
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'suburbiaW'
+	 end
+	 
+	 if lostpeopleQW>0:
+	     act 'Бродить вокруг дома':
+	     cla
+		 minut=minut+15
+		 if korihouseQW=0:korihouseQW=1
+		 'Вы зашли за дом и тут же увидели что задняя дверь взломана. Кто-то выдрал петли с корнем у закрытой двери и вошел внутрь.'
+		 act 'Уйти':gt'korihouse','start'
+		     act 'Войти в дом':
+		     cla
+		     minut=minut+15
+		     if korihouseQW=1:korihouseQW=2
+		     'В доме ничего не тронуто. Вазы книги и безделушки стоят не тронутые. Зайдя в спальную вы увидели там беспорядок, валяются стулья, кровать сдвинута и постельное белье с кровати содранное валяется на полу.'
+		         act 'Осмотреть спальную':
+				 cla
+				 minut=minut+15
+				 'На полу лежит оторванный рукав от пижамы. На скомканной простыне следы крови. Но крови мало, небольшое пятно. Но даже на первый взгляд ничего ценного не пропало в доме, кроме самого хозяина.'
+				 act 'Уйти':gt'korihouse','start'
+				 end
+		     end
+		 end
+	 end
+
+end
+--- korihouse ---------------------------------
+

@@ -1,0 +1,86 @@
+# SerafCave8
+*clr
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaBed = $ARGS[0]
+$locBed = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+$metkaFight = $ARGS[0]
+$locFight = $CURLOC
+minut=minut+15
+mag = 1
+!2
+
+'<center><H4>Логово Сераф</H4></center>'
+'<center>Количество переходов по комнатам лабиринта <<smazetime>> раз</center>'
+'<center><img src="pic/EvedonKD/cave8.jpg" ></center>'
+'Пещера в которой стоят огромные стволы мертвых деревьев некогда росших тут.'
+clr
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
+LCOLOR = rgb(106,90,205)
+
+robrand=RAND(0,100)
+if robrand>=80:
+     if roratimes<=0:
+	 roratimes=1
+	 'На встречу вам вышла эльфийка с бледной кожей покрытой черными прожилками.'
+	     if serafKey=0:
+		 'Эльфийка злобно шипя бросилась на вас.'
+         NORUN=1
+         $nameV='Порченная Эльфийская Волшебница'
+		 lvlv=286
+		 strenV=300
+		 speedV=250
+		 agilV=250
+		 vitalV=800
+		 intelv=800
+		 willv=110
+		 healthV=vitalV*10
+		 mannaV=intelV*10+intelV*15
+		 wipoV=willV*10
+		 klonv=1
+		 armorDefV=400
+		 monster=15
+		 program=31
+		 act 'Драться':gt'before'
+		 exit
+		 end
+		 
+		 if serafKey=1:
+		 'Эльфийка увидив вас спряталась в дупле, откуда на вас смотрели ее перепуганные глаза.'
+		 act 'Уйти':gt $curloc
+		 exit
+		 end
+	 end
+
+	 if roratimes>0:roratimes=roratimes-1
+
+end
+
+     if colser=4:
+     !красный
+	 act 'Дверь с левой стороны':smazetime+=1&colser=1&gt'serafcave9'
+	 act 'Дверь с правой стороны':smazetime+=1&colser=1&gt'serafcave2'
+	 end
+	 if colser=1:
+	 !синий
+	 act 'Дверь с левой стороны':smazetime+=1&colser=2&gt'serafcave5'
+	 act 'Дверь с правой стороны':smazetime+=1&colser=2&gt'serafcave4'
+	 end
+	 if colser=2:
+	 !желтый
+	 act 'Дверь с левой стороны':smazetime+=1&colser=3&gt'serafcave3'
+	 act 'Дверь с правой стороны':smazetime+=1&colser=3&gt'serafcave7'
+	 !act 'Идти в дверь №5':colser=3&gt'serafcave6'
+	 end
+	 if colser=3:
+	 !зеленый
+	 act 'Дверь':smazetime+=1&colser=4&gt'serafcave6'
+	 !act 'Идти в дверь №6':colser=4&gt'serafcave2'
+	 end
+
+--- SerafCave8 ---------------------------------
+
