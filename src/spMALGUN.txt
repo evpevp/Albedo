@@ -4,7 +4,7 @@ clr
 gs'stat'
 
      if manna>=500 and spReinkornMal>=100:
-         act 'Абсолютное излечение (500 манны)':
+         act 'Абсолютное излечение (500 маны)':
          cla
          manna-=500
          bloodv=0
@@ -15,7 +15,7 @@ gs'stat'
      end
      
      if round>=5 and manna>=500 and spGhostBodyMal>=100 and cooldowngostbody<round:
-         act 'Призрачное тело (500 манны)':
+         act 'Призрачное тело (500 маны)':
          cla
          manna-=500
          skillGBM+=1
@@ -29,7 +29,7 @@ gs'stat'
      end
      
      if round>=5 and manna>=500 and spGhostDamMal>=100 and gostbody>0:
-         act 'Призрачный удар (500 манны)':
+         act 'Призрачный удар (500 маны)':
          cla
          skillGFM+=1
          manna-=500

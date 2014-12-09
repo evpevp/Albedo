@@ -71,7 +71,7 @@ dynamic $rascheturonaWV
      mannaV=mannaV-soundMag
      wipoV=wipoV-soundMag
      soundMag=0
-     '<font color=green><<$tipuronaWV>> ударил противника по манне и воле</font>'
+     '<font color=green><<$tipuronaWV>> ударил противника по мане и воле</font>'
      end
 !damageW=0
 end
@@ -106,7 +106,7 @@ if defencewv>0 and damageW>0:
 			 mannaV=mannaV-soundMag
 			 wipoV=wipoV-soundMag
 			 soundMag=0
-			 '<font color=green><<$tipuronaWV>> ударил противника по манне и воле</font>'
+			 '<font color=green><<$tipuronaWV>> ударил противника по мане и воле</font>'
 			 end
 		 damageW=0
 	     end

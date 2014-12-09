@@ -52,7 +52,7 @@ if DemonMorf<5:
 '<<$hair>> <<$lip>> <<$skin>> <<$glaza>> <<$mop>>'
 *nl
 if makekit>0:'У вас <<makekit>> штук макияжных красок.'
-if nospIgla>0:'<<nospIgla>> упаковок швейных игл, для зачарования 1 упаковки нужно 500 манны'
+if nospIgla>0:'<<nospIgla>> упаковок швейных игл, для зачарования 1 упаковки нужно 500 маны'
 if nospIgla>0 and manna>=500:
      act 'Зачаровывать иглы 1 час.':
      cla

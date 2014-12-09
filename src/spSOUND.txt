@@ -4,7 +4,7 @@ clr
 gs'stat'
 
      if manna>=5000 and cooldownSpell<=0 and magika>=8 and sonar<=0 and spellSound>=100:
-         act 'Сонар (5000 манны)':
+         act 'Сонар (5000 маны)':
          cla
          sonarExp+=1
          manna-=5000
@@ -17,7 +17,7 @@ gs'stat'
      
      if manna>=10000 and magika>=8 and spellSound2>=100 and round>2:
          if zerkalov>0:
-			 act 'Зеркальная могила (10000 манны)':
+			 act 'Зеркальная могила (10000 маны)':
 			 cla
 			 zerkSoundExp+=1
 			 manna-=10000
@@ -32,7 +32,7 @@ gs'stat'
 			 end
          end
          if zerkalov<=0:
-         	 act 'Зеркальная могила (10000 манны)':
+         	 act 'Зеркальная могила (10000 маны)':
 			 cla
 			 zerkSoundExp+=1
 			 manna-=10000
@@ -49,7 +49,7 @@ gs'stat'
      end
 
      if manna>=15000 and magika>=8 and spellSound3>=100 and round>3 and cooldownSpell<=0:
-		 act 'Звуковой бур (15000 манны)':
+		 act 'Звуковой бур (15000 маны)':
 		 cla
 		 SoundBurExp+=1
 		 manna-=15000
@@ -62,7 +62,7 @@ gs'stat'
      end
      
      if manna>=20000 and magika>=8 and spellSound4>=100 and round>4:
-		 act 'Похоронный колокол (20000 манны)':
+		 act 'Похоронный колокол (20000 маны)':
 		 cla
 		 SoundKolExp+=1
 		 manna-=20000
@@ -76,7 +76,7 @@ gs'stat'
      end
      
      if manna>=25000 and magika>=10 and spellSound5>=100 and round>5:
-		 act 'Мерцающий удар (25000 манны)':
+		 act 'Мерцающий удар (25000 маны)':
 		 cla
 		 shimmerStrikeExp+=1
 		 manna-=25000
@@ -90,7 +90,7 @@ gs'stat'
      end
      
      if manna>=50000 and magika>=10 and spellSound6>=100 and round>6:
-		 act 'Тихое место (50000 манны)':
+		 act 'Тихое место (50000 маны)':
 		 cla
 		 soundCoolExp+=1
 		 manna-=50000

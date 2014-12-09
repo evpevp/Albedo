@@ -34,7 +34,7 @@ $obnulDamG={
  damageM=0
  mannaStump=0
  GakidoSelfV+=1
- '<font color=red><<$name>> поглотил энергию вашего удара по манне.</font>'
+ '<font color=red><<$name>> поглотил энергию вашего удара по мане.</font>'
  end
 }
 $obnulDamGV={

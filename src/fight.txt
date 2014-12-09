@@ -75,7 +75,7 @@ gs'defenceV'
 end
 
 if waterground>0:
-'<B><font color=green>Грязь заставляет противника вязнуть и вытягивает манну.</font></B>'
+'<B><font color=green>Грязь заставляет противника вязнуть и вытягивает ману.</font></B>'
 damageM=RAND(800,1000)
 gs'defenceMV'
 end
@@ -92,7 +92,7 @@ end
 
 if klon>0:
 manna-=klon*10
-'<font color=green>На поддержание клонов вы тратите <<klon*10>> едениц манны</font>'
+'<font color=green>На поддержание клонов вы тратите <<klon*10>> едениц маны</font>'
 end
 if klonv>0:
 mannav-=klonv*10
@@ -104,12 +104,12 @@ mannaPredelv=(intelv*10+intelv*32)*2
  if manna>mannaPredel:
  stupor+=3
  manna-=100
- '<font color=red>Вы взяли манны гораздо больше, чем можете удержать и из за этого вы не в состоянии двигатся пока лишняя манна не развеится.</font>'
+ '<font color=red>Вы взяли маны гораздо больше, чем можете удержать и из за этого вы не в состоянии двигатся пока лишняя мана не развеится.</font>'
  end
  if mannav>mannaPredelv:
  stuporV+=3
  mannaV-=100
- '<font color=green><<$namev>> взял манны больше, чем может удержать и из за этого противник не может двигатся пока не развеется лишняя манна</font>'
+ '<font color=green><<$namev>> взял маны больше, чем может удержать и из за этого противник не может двигатся пока не развеется лишняя мана</font>'
  end
 
 if firewall>0:
@@ -139,7 +139,7 @@ dynamic $battlemain
          '<B><font color=blue>Тень Марпеозы будет вас защищать еще <<MarpeozaShadow>> ходов</font></B>'
          
              if manna>=500:
-				 act 'Удар тени МАРПЕОЗЫ (500 манны)':
+				 act 'Удар тени МАРПЕОЗЫ (500 маны)':
 				 cla
 				 manna-=500
 				 damage=RAND(8000,12000)
@@ -164,7 +164,7 @@ dynamic $battlemain
          if CoolPlace>0:
          'Магия звука охраняет вас от урона но не дает применить большую часть магии.'
               if manna>=25000 and magika>=10 and spellSound5>=100:
-				 act 'Мерцающий удар (25000 манны)':
+				 act 'Мерцающий удар (25000 маны)':
 				 cla
 				 shimmerStrikeExp+=1
 				 manna-=25000
@@ -211,7 +211,7 @@ dynamic $battlemain
          if cooldown<=0:
          
              if priziv>0 and manna>=1000:
-             	 act 'Поток жизни существа (1000 вашей манны даст 1000жизни существу)':
+             	 act 'Поток жизни существа (1000 вашей маны даст 1000жизни существу)':
 				 cla
 				 manna-=1000
 				 phealth+=1000
@@ -219,7 +219,7 @@ dynamic $battlemain
 				 xgt'fight','1'
 				 end
 				 
-				 act 'Поток энергии существа (1000 вашей манны даст 1000 манны существу)':
+				 act 'Поток энергии существа (1000 вашей маны даст 1000 маны существу)':
 				 cla
 				 manna-=1000
 				 pmanna+=1000
@@ -227,7 +227,7 @@ dynamic $battlemain
 				 xgt'fight','1'
 				 end
 				 
-				 act 'Поток управления существом (1000 вашей манны даст 1000 воли существу)':
+				 act 'Поток управления существом (1000 вашей маны даст 1000 воли существу)':
 				 cla
 				 manna-=1000
 				 pwipo+=1000
@@ -315,7 +315,7 @@ dynamic $battlemain
 			 end
 			 
 			 if serafVoronPower>0 and manna>=25000 and VoronKlon=0:
-				 act 'Создать вороньего клона Сераф (25000 манны)':
+				 act 'Создать вороньего клона Сераф (25000 маны)':
 				 '<font color=green>Вы активировали силу вороньего клона</font>'
 				 VoronKlon=1
 				 manna-=25000
@@ -325,7 +325,7 @@ dynamic $battlemain
          end
          
          if vapulabain>0 and manna>=50 and vapulabainpunch<5:
-             act 'Огненный шестиконечный хлыст Вапулы (50 манны, не более 5ти ударов)':
+             act 'Огненный шестиконечный хлыст Вапулы (50 маны, не более 5ти ударов)':
 			 '<font color=green>Вы взмахнули огненным хлыстом Вапулы и ударили противника</font>'
 			 manna=manna-50
 			 vapulabainpunch+=1
@@ -468,7 +468,7 @@ dynamic $battlemain
          end
          
          if stileMark = 5 and manna>=50:
-             act 'Вложить силу печати в удар (50 манны) изнашивает организм':
+             act 'Вложить силу печати в удар (50 маны) изнашивает организм':
              manna=manna-50
              tipatk=1
              damage=stren+cursedExp
@@ -480,7 +480,7 @@ dynamic $battlemain
          end
          
          if stileMark = 5 and manna>=100:
-             act 'Схватить рукой при помощи силы печати (100 манны) изнашивает организм':
+             act 'Схватить рукой при помощи силы печати (100 маны) изнашивает организм':
              manna=manna-100
              tipatk=1
              damage=stren+cursedExp
@@ -494,7 +494,7 @@ dynamic $battlemain
          end
          
          if stileMark = 5 and manna>=500:
-             act 'Град ударов при помощи силы печати (500 манны) изнашивает организм':
+             act 'Град ударов при помощи силы печати (500 маны) изнашивает организм':
              manna=manna-500
              tipatk=1
              damage=stren+cursedExp
@@ -520,7 +520,7 @@ dynamic $battlemain
          end
      
          if JuravelStile>=100 and stileMark = 0 and manna>10:
-             act 'Применить стиль журавля (10 манны)':
+             act 'Применить стиль журавля (10 маны)':
              stileMark=4
              stile=3
              manna=manna-10
@@ -535,7 +535,7 @@ dynamic $battlemain
          end
          
          if stileMark = 4 and manna>=50 and vertushka>=100:
-             act 'Применить вертушку (50 манны)':
+             act 'Применить вертушку (50 маны)':
              manna=manna-50
              tipatk=2
 			 gs'udar','2'
@@ -551,7 +551,7 @@ dynamic $battlemain
          end
          
          if stileMark = 4 and manna>=50 and podsek>=100:
-             act 'Применить подсечку (50 манны)':
+             act 'Применить подсечку (50 маны)':
              manna=manna-50
              gs'podsek'
              tipatk=2
@@ -562,7 +562,7 @@ dynamic $battlemain
          end
          
          if stileMark = 4 and manna>=50 and flykik>=100:
-             act 'Применить удар с прыжка (50 манны)':
+             act 'Применить удар с прыжка (50 маны)':
              manna=manna-50
              stren=stren+(ves+akrobat)
              flymark=1
@@ -575,7 +575,7 @@ dynamic $battlemain
          
          
          if ironskinStile>=100 and stileMark = 0 and manna>10:
-             act 'Применить стиль железной рубашки (10 манны)':
+             act 'Применить стиль железной рубашки (10 маны)':
              stileMark=3
              stile=3
              manna=manna-10
@@ -588,7 +588,7 @@ dynamic $battlemain
          end
          
          if stileMark = 3 and manna>=50 and ironFist>=100:
-             act 'Применить стальной кулак (50 манны)':
+             act 'Применить стальной кулак (50 маны)':
              manna=manna-50
              stren=stren+vital
              stunMark=1
@@ -601,7 +601,7 @@ dynamic $battlemain
          end
          
          if stileMark = 3 and manna>=50 and ironHealth>=100:
-             act 'Применить выздоровление (50 манны, востанавливает 200 здоровья)':
+             act 'Применить выздоровление (50 маны, востанавливает 200 здоровья)':
              manna=manna-50
              health=health+200
              tipatk=1
@@ -612,7 +612,7 @@ dynamic $battlemain
          end
          
          if stileMark = 3 and manna>=50 and ironGrab>=100:
-             act 'Применить стальной захват (50 манны)':
+             act 'Применить стальной захват (50 маны)':
              manna=manna-50
              speed=speed+vital
              gs'zahvat'
@@ -685,7 +685,7 @@ dynamic $battlemain
          end
          
 		 if tigerStile >= 100 and stileMark = 0 and manna>10:
-			 act 'Применить стиль тигра (10 манны)':
+			 act 'Применить стиль тигра (10 маны)':
 			 '<B><font color=green>Вы применили СТИЛЬ ТИГРА</font></B>'
 			 manna=manna-10
 			 stileMark=1
@@ -699,7 +699,7 @@ dynamic $battlemain
 			 end
 		 end
 		 if tigerClaw >= 100 and manna>= 50 and stileMark=1:
-			 act 'Атаковать приемом Коготь тигра парализующим противника (50 манны)':
+			 act 'Атаковать приемом Коготь тигра парализующим противника (50 маны)':
 			 tipatk=1
 			 stunMark=1
 			 manna=manna-50
@@ -710,7 +710,7 @@ dynamic $battlemain
 			 end
 		 end
 		 if tigerFury >= 100 and manna>=50 and stileMark=1:
-		 	 act 'Атаковать приемом Ярость тигра наносящим множественные удары(50 манны)':
+		 	 act 'Атаковать приемом Ярость тигра наносящим множественные удары(50 маны)':
 			 tipatk=1
 			 manna=manna-50
 			 '<B><font color=green>Вы атаковали приемом ЯРОСТЬ ТИГРА</font></B>'
@@ -726,7 +726,7 @@ dynamic $battlemain
 			 end
 		 end
 		 if tigerWill >= 100 and wipo>=50 and stileMark=1:
-		 	 act 'Воля тигра регенирирует манну и здоровье(50 воли)':
+		 	 act 'Воля тигра регенирирует ману и здоровье(50 воли)':
 			 manna=manna+100
 			 health=health+100
 			 wipo=wipo-50
@@ -758,7 +758,7 @@ dynamic $battlemain
          act 'Пропустить ход':xgt'fight','1'
          
          if ironChin>=100 and manna>=10 and stupor=0:
-             act 'Сбросить стан (10 манны)':
+             act 'Сбросить стан (10 маны)':
              stun=0
              manna=manna-10
              xgt'fight','0'

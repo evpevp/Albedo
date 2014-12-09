@@ -8,7 +8,7 @@
 'Интелект <<intelv>>'
 'Воля <<willv>>'
 'Здоровье <<healthv>>'
-'Манна <<mannav>>'
+'Мана <<mannav>>'
 'Сила воли <<wipov>>'
 
 act 'ВЫЙТИ':GOTO $locFight, $metkaFight

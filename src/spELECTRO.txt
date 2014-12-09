@@ -6,7 +6,7 @@ gs'stat'
 
 if round>=2: 
 	 if spShok>=100 and manna>=50:
-		 act 'Разряд 50 манны':
+		 act 'Разряд 50 маны':
 		 cla
 		 spShokExp=spShokExp+1
 		 manna=manna-50
@@ -21,7 +21,7 @@ end
 
 if round>=3: 
 	 if spShokTri>=100 and manna>=100:
-		 act 'Тройной разряд 100 манны':
+		 act 'Тройной разряд 100 маны':
 		 cla
 		 spShokTriExp=spShokTriExp+1
 		 manna=manna-100
@@ -42,7 +42,7 @@ end
 
 if round>=4: 
 	 if spShokSh>=100 and manna>=150:
-		 act 'Разрядный щит 150 манны':
+		 act 'Разрядный щит 150 маны':
 		 cla
 		 spShokShExp=spShokShExp+1
 		 manna=manna-150
@@ -56,7 +56,7 @@ end
 
 if round>=4: 
 	 if spWillSh>=100 and manna>=150:
-		 act 'Волевой щит 150 манны':
+		 act 'Волевой щит 150 маны':
 		 cla
 		 spWillShExp=spWillShExp+1
 		 manna=manna-150
@@ -70,7 +70,7 @@ end
 if round>=5: 
 	 if spElPole>=100 and manna>=150:
 	     if zerkalov>0 or fintv>0 or tumanv>0:
-			 act 'Ионизирующее поле 200 манны':
+			 act 'Ионизирующее поле 200 маны':
 			 cla
 			 manna=manna-200
 			 '<font color=green>Вы создали поле вокруг себя которое ионизирует воздух</font>'
@@ -85,7 +85,7 @@ end
 
 if round>=5: 
 	 if spBigShok>=100 and manna>=200 and cooldownSpell<=0:
-		 act 'Молния 200 манны':
+		 act 'Молния 200 маны':
 		 cla
 		 cooldownSpell=2
 		 spBigShokExp=spBigShokExp+1
@@ -101,7 +101,7 @@ end
 
 if round>=6: 
 	 if spElProboy>=100 and manna>=250 and defencev>0 and levitationV=0 and ghostbodyv=0:
-		 act 'Пробой 250 манны':
+		 act 'Пробой 250 маны':
 		 cla
 		 spElProboyExp=spElProboyExp+1
 		 manna=manna-250

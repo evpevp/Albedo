@@ -5,7 +5,7 @@ gs'stat'
 
 if DemonMorf>=10:
      if manna>=100 and skverna>=1 and levitation=0:
-		 act 'Взлететь на демонических крыльях 100 манны (1 скверны)':
+		 act 'Взлететь на демонических крыльях 100 маны (1 скверны)':
 		 manna=manna-100
          skverna=skverna-1
          levitation=levitation+5
@@ -16,7 +16,7 @@ if DemonMorf>=10:
      end
      
      if manna>=150 and skverna>=2 and levitation>0:
-		 act 'Бить копытами в воздухе 150 манны (2 скверны)':
+		 act 'Бить копытами в воздухе 150 маны (2 скверны)':
 		 manna=manna-150
          skverna=skverna-2
 		 '<font color=green>Вы в полете начали бить копытами противника</font>'
@@ -47,7 +47,7 @@ if DemonMorf>=10:
      end
      
      if manna>=150 and skverna>=2 and levitation>0:
-		 act 'Удар хвостом в воздухе 150 манны (2 скверны)':
+		 act 'Удар хвостом в воздухе 150 маны (2 скверны)':
 		 manna=manna-150
          skverna=skverna-2
 		 '<font color=green>Вы в полете начали бить хвостом противника</font>'
@@ -74,7 +74,7 @@ if DemonMorf<10:
 end
 
 if manna>=100 and spMindPress=100 and skverna>=1:
-     act 'Давление на разум 100 манны (1 скверны)':
+     act 'Давление на разум 100 маны (1 скверны)':
      '<font color=green>Вы посмотрели пристально в глаза противнику стараясь подавить его волю.</font>'
      manna=manna-100
      skverna=skverna-1
@@ -88,7 +88,7 @@ if manna>=100 and spMindPress=100 and skverna>=1:
 end
 
 if manna>=200 and spMindShild=100 and skverna>=2:
-     act 'Щит разума 200 манны (1 скверны)':
+     act 'Щит разума 200 маны (1 скверны)':
      '<font color=green>Вы создали вокруг себя щит разума</font>'
      manna=manna-200
      skverna=skverna-1
@@ -112,7 +112,7 @@ if DMrab>0:
      
      if DMrab>=50:
 		 if manna>=300:
-			 act 'Стена Суккуба (300 манны 1 скверны)':
+			 act 'Стена Суккуба (300 маны 1 скверны)':
 			 cla
 			 manna-=300
 			 skverna=skverna-1
@@ -133,7 +133,7 @@ if DMrab>0:
      if DMrab>=100:
      
 		 if manna>=250:
-			 act 'Огненный шар Суккуба (250 манны 1 скверны)':
+			 act 'Огненный шар Суккуба (250 маны 1 скверны)':
 			 cla
 			 manna-=250
 			 skverna=skverna-1
@@ -151,7 +151,7 @@ if DMrab>0:
      
      if DMrab>=200:
           if manna>=500:
-			 act 'Огонь феникса (500 манны 3 скверны)':
+			 act 'Огонь феникса (500 маны 3 скверны)':
 			 cla
 			 manna-=500
 			 skverna=skverna-3
@@ -190,7 +190,7 @@ if DMrab>0:
      if DMrab>=300:
      
 		 if manna>=1000:
-			 act 'Стена огня Суккуба (1000 манны 5 скверны)':
+			 act 'Стена огня Суккуба (1000 маны 5 скверны)':
 			 cla
 			 manna-=1000
 			 skverna=skverna-5

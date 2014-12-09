@@ -660,7 +660,7 @@ if $ARGS[0]='15':
      if mannav<50 and wipov>50:
      wipov=wipov-50
      mannav=mannav+300
-     '<B><font color=red><<$namev>> медитирует и восстанавливает часть манны.</font></B>'
+     '<B><font color=red><<$namev>> медитирует и восстанавливает часть маны.</font></B>'
      xgt'fight','2'
      exit
      end
@@ -2159,7 +2159,7 @@ if $ARGS[0]='35':
      end
      
      if mannav>=500 and potopV>0:
-     '<B><font color=red><<$namev>> колдует и вода начинает разрушать вашу манну.</font></B>'
+     '<B><font color=red><<$namev>> колдует и вода начинает разрушать вашу ману.</font></B>'
      defencev=3500
      defenceTV=2500
      defenceWV=2500
@@ -3201,7 +3201,7 @@ end
 if $ARGS[0]='45':
 !СБО электро вода
      if mannav>=100:
-     '<B><font color=red>Вода разлитая магистром на земле стремится разрушить вашу манну и из нее бьют молнии.</font></B>'
+     '<B><font color=red>Вода разлитая магистром на земле стремится разрушить вашу ману и из нее бьют молнии.</font></B>'
      mannav=mannav-100
      damageMV=RAND(300,500)
      gs'defenceM'
@@ -3658,7 +3658,7 @@ if $ARGS[0]='49':
      end
      
      if watergroundv>0:
-     '<B><font color=red>Грязь заставляет вас вязнуть и вытягивает манну.</font></B>'
+     '<B><font color=red>Грязь заставляет вас вязнуть и вытягивает ману.</font></B>'
 	 damageMV=RAND(800,1000)
      gs'defenceM'
      end
@@ -3846,7 +3846,7 @@ sharinganV=1
 	 
 	 '<B><font color=red><<$namev>> достает артефакт в виде черной звезды.</font></B>'
 	 mannav=intelv*10+intelv*magikav
-	 '<B><font color=red>Этот артефакт молниеносно восстанавливает его манну.</font></B>'
+	 '<B><font color=red>Этот артефакт молниеносно восстанавливает его ману.</font></B>'
 	 xgt'fight','2'
 end
 

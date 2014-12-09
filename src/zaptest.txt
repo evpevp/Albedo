@@ -92,7 +92,7 @@
      end
      
      if mannav>=500 and potopV>0:
-     '<B><font color=red><<$namev>> колдует и вода начинает разрушать вашу манну.</font></B>'
+     '<B><font color=red><<$namev>> колдует и вода начинает разрушать вашу ману.</font></B>'
      defencev=3500
      defenceTV=2500
      defenceWV=2500

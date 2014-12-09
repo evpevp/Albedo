@@ -8,7 +8,7 @@ if round>=2:
      if ssmannaNeed<50:ssmannaNeed=50
      
 	 if spSStorm>=100 and manna>=ssmannaNeed:
-		 act 'Песчаный шторм <<ssmannaNeed>> манны':
+		 act 'Песчаный шторм <<ssmannaNeed>> маны':
 		 cla
 		 spSStormExp=spSStormExp+1
 		 manna=manna-ssmannaNeed
@@ -23,7 +23,7 @@ end
 
 if round>=3: 
 	 if spSandShild>=100 and manna>=100:
-		 act 'Песчаный щит 100 манны':
+		 act 'Песчаный щит 100 маны':
 		 cla
 		 spSandShildExp=spSandShildExp+1
 		 manna=manna-100
@@ -37,7 +37,7 @@ end
 
 if round>=4: 
 	 if spSandUdar>=100 and manna>=150:
-		 act 'Земляной удар 150 манны':
+		 act 'Земляной удар 150 маны':
 		 cla
 		 spSandUdarExp=spSandUdarExp+1
 		 manna=manna-150
@@ -53,7 +53,7 @@ end
 
 if round>=5: 
 	 if spSandAbsolut>=100 and manna>=500 and SandAbsolutOnce=0:
-		 act 'Абсолютная защита 500 манны (можно создать 1 раз за бой)':
+		 act 'Абсолютная защита 500 маны (можно создать 1 раз за бой)':
 		 cla
 		 SandAbsolutOnce=1
 		 manna=manna-500
@@ -66,7 +66,7 @@ if round>=5:
 	 end
 	 
 	 if InGround<=0 and manna>=500 and spSandInGround>=100:
-	 	 act 'Погружение 500 манны (потребляет 250 манны за ход)':
+	 	 act 'Погружение 500 маны (потребляет 250 маны за ход)':
 		 cla
 		 InGround=InGround+5
 		 manna=manna-500
@@ -77,7 +77,7 @@ if round>=5:
 	 end
 	 
 	 if manna>=500 and spSandInGroundAtk>=100:
-	 	 act 'Подземная атака 500 манны':
+	 	 act 'Подземная атака 500 маны':
 		 cla
 		 manna=manna-500
 		 '<font color=green>Вы быстро погрузились в землю.</font>'
@@ -90,7 +90,7 @@ if round>=5:
 	 end
 	 
 	 if spSandUdarPlita>=100 and manna>=150:
-		 act 'Удар плитами 150 манны':
+		 act 'Удар плитами 150 маны':
 		 cla
 		 spSandUdarPlitaExp+=1
 		 manna=manna-150

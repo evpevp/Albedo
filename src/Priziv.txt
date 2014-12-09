@@ -17,7 +17,7 @@ prizivProgram=0
 }
 
 if priziv>0:
-'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> Манна:<<pmanna>> Воля:<<pwipo>> Осталось ходов:<<prizivTimes>></font>'
+'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> Мана:<<pmanna>> Воля:<<pwipo>> Осталось ходов:<<prizivTimes>></font>'
 !prizivTimes-=1
      if Phealth>0 and prizivTimes>0 and pmanna>0 and pwipo>0:
          if prizivProgram=0:
@@ -31,7 +31,7 @@ if priziv>0:
          end
          if prizivProgram=2:
          forestPrisonTime+=1
-         '<font color=#cd00cd><<$pname>> оттягивает манну противника на себя</font>'
+         '<font color=#cd00cd><<$pname>> оттягивает ману противника на себя</font>'
          damageM=1000*forestPrisonTime
          gs'defenceMV'
          end

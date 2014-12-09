@@ -4,7 +4,7 @@ clr
 gs'stat'
 
  if spZerkalo>=100 and manna>=10:
-	 act 'Применить заклинание зеркал 10 манны':
+	 act 'Применить заклинание зеркал 10 маны':
 	 cla
 	 manna=manna-10
 	 ZerkaloExp=ZerkaloExp+1
@@ -17,7 +17,7 @@ gs'stat'
  
  
  if spMagShild>=100 and manna>=50:
-	 act 'Применить заклинание щита мага 50 манны':
+	 act 'Применить заклинание щита мага 50 маны':
 	 cla
 	 MagShildExp=MagShildExp+1
 	 manna=manna-50
@@ -33,7 +33,7 @@ gs'stat'
  end
  
  if spSmeshenie>=100 and manna>=100:
-	 act 'Применить заклинание смещения <<mannaNeedS>> манны':
+	 act 'Применить заклинание смещения <<mannaNeedS>> маны':
 	 cla
 	 spSmeshenieExp=spSmeshenieExp+1
 	 manna=manna-mannaNeedS
@@ -44,7 +44,7 @@ gs'stat'
  end
  
  if spTuman>=100 and manna>=150:
- 	 act 'Создать туман 150 манны':
+ 	 act 'Создать туман 150 маны':
 	 cla
 	 spTumanExp=spTumanExp+1
 	 manna=manna-150
@@ -55,7 +55,7 @@ gs'stat'
  end
  
   if spKlon>=100 and manna>=500 and cooldownSpell<=0:
- 	 act 'Создать клона 500 манны':
+ 	 act 'Создать клона 500 маны':
 	 cla
 	 spKlonExp=spKlonExp+1
 	 manna=manna-500

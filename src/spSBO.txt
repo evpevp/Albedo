@@ -13,7 +13,7 @@ gs'stat'
 !!!!!!!!!!!!!!!ЭЛЕКТРО ВОДА
 
      if manna>=1000 and elektroluza<=0 and cooldownSpell<=0 and spellElWa>=100:
-         act 'Электролужа (1000 манны)':
+         act 'Электролужа (1000 маны)':
          cla
          cooldownSpell+=2
          manna-=1000
@@ -29,7 +29,7 @@ gs'stat'
      end
      
      if manna>=1000 and spellElWa2>=100:
-         act 'Электророса (1000 манны)':
+         act 'Электророса (1000 маны)':
          cla
          manna-=1000
          cooldownSpell+=2
@@ -91,7 +91,7 @@ gs'stat'
 !!!!!!!!!!!!!!!!!!!!!!ЭЛЕКТРО ВОЗДУХ
 
      if elektostorm<=0 and manna>=1000 and cooldownSpell<=0 and spellElWi>=100:
-         act 'Прячущий электровихрь 1000 манны':
+         act 'Прячущий электровихрь 1000 маны':
 		 cla
      	 '<B><font color=green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
 		 manna=manna-1000
@@ -104,7 +104,7 @@ gs'stat'
      end
      
      if elektostorm>0 and manna>=1000 and spellElWi2>=100:
-         act 'Удар шторма 1000 манны':
+         act 'Удар шторма 1000 маны':
 		 cla
          '<B><font color=green>Вы колдуете и ударяете мощным вихрем бьющим молниями.</font></B>'
 		 manna-=1000
@@ -124,7 +124,7 @@ gs'stat'
 !!!!!!!!!!!!!!!!!!ЭЛЕКТРО ЗЕМЛЯ
 
      if elektoground<=0 and manna>=1000 and cooldownSpell<=0 and spellElGr>=100:
-         act 'Подземная молния 1000 манны':
+         act 'Подземная молния 1000 маны':
 		 cla
      	 '<B><font color=green>Вы колдуете и погружаетесь в землю наполняя ее электроэнергией.</font></B>'
 		 manna=manna-1000
@@ -137,7 +137,7 @@ gs'stat'
      end
      
      if manna>=1000 and spellElGr2>=100:
-         act 'Электропесок (1000 манны)':
+         act 'Электропесок (1000 маны)':
          cla
          manna-=1000
          cooldownSpell+=2
@@ -179,7 +179,7 @@ gs'stat'
 !!!!!!!!!!!!!!!!!!!!ВОДА ВОЗДУХ
 
      if waterstorm<=0 and manna>=1000 and cooldownSpell<=0 and spellWiWa>=100:
-         act 'Водяной вихрь 1000 манны':
+         act 'Водяной вихрь 1000 маны':
 		 cla
      	 '<B><font color=green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
 		 manna=manna-1000
@@ -192,7 +192,7 @@ gs'stat'
      end
      
      if manna>=1000 and spellWiWa2>=100:
-         act 'Звенящая роса (1000 манны)':
+         act 'Звенящая роса (1000 маны)':
          cla
          manna-=1000
          cooldownSpell+=2
@@ -229,7 +229,7 @@ gs'stat'
 !!!!!!!!!!!!!!!!!!ВОДА ЗЕМЛЯ
 
      if waterground<=0 and manna>=1000 and cooldownSpell<=0 and spellWaGr>=100:
-         act 'Погружение в грязь 1000 манны':
+         act 'Погружение в грязь 1000 маны':
 		 cla
      	 '<B><font color=green>Вы колдуете и погружаетесь в землю.</font></B>'
 		 manna=manna-1000
@@ -242,7 +242,7 @@ gs'stat'
      end
      
      if manna>=1000 and spellWaGr2>=100:
-         act 'Грязевая волна (1000 манны)':
+         act 'Грязевая волна (1000 маны)':
          cla
          manna-=1000
          cooldownSpell+=2
@@ -258,7 +258,7 @@ gs'stat'
 !!!!!!!!!!!!!!!!!!!!!ВОЗДУХ ЗЕМЛЯ
 
      if windstorm<=0 and manna>=1000 and cooldownSpell<=0 and spellWiGr>=100:
-         act 'Каменный вихрь 1000 манны':
+         act 'Каменный вихрь 1000 маны':
 		 cla
      	 '<B><font color=green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
 		 manna=manna-1000
@@ -272,7 +272,7 @@ gs'stat'
      
      
      if manna>=1000 and spellWiGr2>=100:
-         act 'Летающая гора (1000 манны)':
+         act 'Летающая гора (1000 маны)':
          cla
          manna-=1000
          cooldownSpell+=2

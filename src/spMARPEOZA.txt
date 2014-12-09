@@ -19,7 +19,7 @@ gs'stat'
      end
 
      if manna>=300 and spMarpeozaBuff>0:
-         act 'Стена Марпеозы (300 манны)':
+         act 'Стена Марпеозы (300 маны)':
          cla
          manna-=300
          spMarpeozaBuff-=1
@@ -32,7 +32,7 @@ gs'stat'
      end
      
      if manna>=250 and spMarpeozaBuff>0:
-         act 'Огненный шар Марпеозы (250 манны)':
+         act 'Огненный шар Марпеозы (250 маны)':
          cla
          manna-=250
          spMarpeozaBuff-=1
@@ -47,7 +47,7 @@ gs'stat'
      end
      
      if manna>=500 and spMarpeozaBuff>0:
-         act 'Огонь феникса Марпеозы (500 манны)':
+         act 'Огонь феникса Марпеозы (500 маны)':
          cla
          manna-=500
          spMarpeozaBuff-=1
@@ -83,7 +83,7 @@ gs'stat'
      
      if manna>=1000 and spMarpeozaBuff>1 and round>=3 and magika>=8:
          if cooldownSpell<=0:
-			 act 'Жидкий огонь Марпеозы (1000 манны 2благословения)':
+			 act 'Жидкий огонь Марпеозы (1000 маны 2благословения)':
 			 cla
 			 manna-=1000
 			 spMarpeozaBuff-=2
@@ -103,7 +103,7 @@ gs'stat'
      if manna>=2000 and spMarpeozaBuff>4 and round>=6 and magika>=12:
      
          if cooldownSpell<=0:
-			 act 'Запретная тень Марпеозы (2000 манны 5благословения)':
+			 act 'Запретная тень Марпеозы (2000 маны 5благословения)':
 			 cla
 			 manna-=2000
 			 spMarpeozaBuff-=5

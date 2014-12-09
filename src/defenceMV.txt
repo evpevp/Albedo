@@ -1,6 +1,6 @@
 # defenceMV
 !Магия
-!защита от воздействий на манну противника
+!защита от воздействий на ману противника
 
 !damageM
 !damageMV
@@ -30,7 +30,7 @@ gs'klonDefV'
 	     mannaStump=0
 	     stunv=2
 	     mannav=mannav-(mannav*20/100)
-	     '<font color=green>Печать обездвиживает врага и сжигает 20% манны</font>'
+	     '<font color=green>Печать обездвиживает врага и сжигает 20% маны</font>'
 	     end
 	 damageM=0
      end

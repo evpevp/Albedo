@@ -5,7 +5,7 @@ gs'stat'
 
 if round>=2: 
 	 if spWaterStr>=100 and manna>=50:
-		 act 'Струя воды 50 манны':
+		 act 'Струя воды 50 маны':
 		 cla
 		 spWaterStrExp=spWaterStrExp+1
 		 manna=manna-50
@@ -20,7 +20,7 @@ end
 
 if round>=3: 
 	 if spWaterMultiStr>=100 and manna>=100:
-		 act 'Распыление 100 манны':
+		 act 'Распыление 100 маны':
 		 cla
 		 spWaterMultiStrExp=spWaterMultiStrExp+1
 		 manna=manna-100
@@ -50,7 +50,7 @@ end
 
 if round>=4: 
 	 if spWaterShild>=100 and manna>=150:
-		 act 'Водный щит 150 манны':
+		 act 'Водный щит 150 маны':
 		 cla
 		 spWaterShildExp=spWaterShildExp+1
 		 manna=manna-150
@@ -65,7 +65,7 @@ end
 
 if round>=5: 
 	 if manna>=1000 and spPotop=>100 and potop<=0 and cooldownSpell<=0:
-	 	 act 'Потоп 1000 манны':
+	 	 act 'Потоп 1000 маны':
 		 cla
 		 '<font color=green>Вы собрали энергию в руку и стали создавая воду затапливать округу</font>'
 		 defence=3500
@@ -87,7 +87,7 @@ if round>=5:
      
      if potop>0:
          if manna>=500 and spPotopManna=>100:
-			 act 'Маннакрашер 500 манны':
+			 act 'Маннакрашер 500 маны':
 			 cla
 			 '<font color=green>Вы собрали энергию и созданная вами вода начала разрушать энергию противника и восстанавливать ваши щиты</font>'
 			 defence=3500
@@ -103,7 +103,7 @@ if round>=5:
 		 end
 		 
 		 if manna>=500 and spPotopShark=>100:
-			 act 'Водяная акула 500 манны':
+			 act 'Водяная акула 500 маны':
 			 cla
 			 '<font color=green>Вы собрали энергию и создали акулу которая ракетой устремилась к противнику</font>'
 			 manna=manna-500

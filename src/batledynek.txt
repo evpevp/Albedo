@@ -4,17 +4,17 @@ if potop>0:'<font color=blue>Вы затопили местность вокру
 if mortalv>0:'<font color=red>У вас <<mortalv>> противников</font>'
 if notHere>0:'<font color=green><B><<$namev>> вас не видит</B></font>'
 if priziv>0:
-'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> Манна:<<pmanna>> Воля:<<pwipo>> Осталось ходов:<<prizivTimes>></font>'
+'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> мана:<<pmanna>> Воля:<<pwipo>> Осталось ходов:<<prizivTimes>></font>'
 if pdefence>0 or pdefenceT>0 or pdefenceW>0 or pdefenceH>0:'<font color=#cd00cd>Физзащита:<<pdefence>> Температурная защита:<<pdefenceT>> Воздушная защита:<<pdefenceW>> Защита разума:<<pdefenceH>></font>'
 end
-'Ваш уровень <<lvl>> Здоровье <font color=red><B><<health>></B></font> манна <font color=blue><B><<manna>></B></font> сила воли <font color=green><B><<wipo>></B></font>'
+'Ваш уровень <<lvl>> Здоровье <font color=red><B><<health>></B></font> мана <font color=blue><B><<manna>></B></font> сила воли <font color=green><B><<wipo>></B></font>'
 if sonar>0:'<font color=green>Ваш сонар будет отслеживать истинное местанахождение противника еще <<sonar>> раундов</font>'
 if GraveDog=100:'<font color=green>Энергия могильной собаки <<GraveDogPower>>, максимально возможная энергия <<GraveDogPowerM>></font>'
 if defence>0:'<font color=green>Физическая защита <<defence>> едениц</font>'
 if defenceT>0:'<font color=green>Температурная защита <<defenceT>> едениц</font>'
 if defenceW>0:'<font color=green>Воздушная защита <<defenceW>> едениц</font>'
 if defenceH>0:'<font color=green>Защита разума <<defenceH>> едениц</font>'
-if defenceM>0:'<font color=green>Защита манны <<defenceM>> едениц</font>'
+if defenceM>0:'<font color=green>Защита маны <<defenceM>> едениц</font>'
 if defenceG>0:'<font color=green>Гравитационная защита <<defenceG>> едениц</font>'
 if defenceZ>0:'<font color=green>Защита от проклятий <<defenceZ>> едениц</font>'
 if defenceP>0:'<font color=green>Защита телепортацией <<defenceP>> едениц</font>'
@@ -38,18 +38,18 @@ if tuman>0:'<font color=green>Взгляд противника застилае
 if sandstorm>0:'<font color=green>Взгляд противника застилает песчаная буря</font>'
 if gostbody>0:'<font color=green>Устойчивость призрачного тела <<gostbody>></font>'
 if vampireMorf>=1 and vampirePower>0:'<font color=green>Вампирских сил <<vampirePower>>ед</font>'
-if VoronKlon>0:'У вас задействована сила вороньего клона которая не даст вам погибнуть, а возродит вас в целости и сохранности, только уровень манны останется такой, какой был на момент поражения'
+if VoronKlon>0:'У вас задействована сила вороньего клона которая не даст вам погибнуть, а возродит вас в целости и сохранности, только уровень маны останется такой, какой был на момент поражения'
 if round>=5 and cooldowngostbody>0 and spGhostBodyMal>=100 and cooldowngostbody>=round:'<font color=red>Скилл призрачного тела еще не восстановился</font>'
 if cooldownSpell>0:'<font color=red>Вы не можете применять высшие заклинания еще <<cooldownSpell>> ходов</font>'
 
-'<<$namev>> уровень <<lvlv>> здоровье <font color=red><B><<healthV>></B></font> манна <font color=blue><B><<mannaV>></B></font> сила воли <font color=green><B><<wipoV>></B></font>'
+'<<$namev>> уровень <<lvlv>> здоровье <font color=red><B><<healthV>></B></font> мана <font color=blue><B><<mannaV>></B></font> сила воли <font color=green><B><<wipoV>></B></font>'
 if levitationV>0:'<font color=red><<$namev>> летает над вами</font>'
 if tentakNumber>0:'<font color=red>У чудовища <<tentakNumber>> действующих щупалец</font>'
 if defenceV>0:'<font color=red>Физическая защита <<defencev>> едениц</font>'
 if defenceTV>0:'<font color=red>Температурная защита <<defenceTv>> едениц</font>'
 if defenceWV>0:'<font color=red>Воздушная защита <<defenceWv>> едениц</font>'
 if defenceHV>0:'<font color=red>Защита разума <<defenceHv>> едениц</font>'
-if defenceMV>0:'<font color=red>Защита манны <<defenceMv>> едениц</font>'
+if defenceMV>0:'<font color=red>Защита маны <<defenceMv>> едениц</font>'
 if defenceGV>0:'<font color=red>Гравитационная защита <<defenceGv>> едениц</font>'
 if defenceZV>0:'<font color=red>Защита от проклятий <<defenceZv>> едениц</font>'
 if defencePV>0:'<font color=red>Защита телепортацией <<defencePv>> едениц</font>'
@@ -172,7 +172,7 @@ potopV-=1
      if manna>0:
 	 manna-=potopV*30
 	 mannav+=potopV*30
-	 '<font color=red><<$nameV>> поглощает у вас <<potopV*30>> едениц манны</font>'
+	 '<font color=red><<$nameV>> поглощает у вас <<potopV*30>> едениц маны</font>'
 	 end
 end
 
@@ -181,7 +181,7 @@ potop-=1
      if mannaМ>0:
 	 mannaV-=potop*30
 	 manna+=potop*30
-	 '<font color=green>Вы поглощаете у противника <<potop*30>> едениц манны</font>'
+	 '<font color=green>Вы поглощаете у противника <<potop*30>> едениц маны</font>'
 	 end
 end
 
@@ -202,8 +202,8 @@ if zerkalov>50:zerkalov=50
 if tuman>0:tuman=tuman-1
 if tumanv>0:tumanv=tumanv-1
 
-if InGroundV>0:InGroundV=InGroundV-1&notHereV=InGroundV+1&mannaV=mannaV-250&'<font color=green><<$namev>> находясь под землей теряет 250 едениц манны</font>'
-if InGround>0:InGround=InGround-1&notHere=InGround+1&manna=manna-250&'<font color=green>Вы теряете 250 едениц манны находясь под землей</font>'
+if InGroundV>0:InGroundV=InGroundV-1&notHereV=InGroundV+1&mannaV=mannaV-250&'<font color=green><<$namev>> находясь под землей теряет 250 едениц маны</font>'
+if InGround>0:InGround=InGround-1&notHere=InGround+1&manna=manna-250&'<font color=green>Вы теряете 250 едениц маны находясь под землей</font>'
 
 if sandstorm>0:
 sandstorm=sandstorm-1
@@ -304,8 +304,8 @@ end
 
 
 
-if wipo<=0:wipo=0&manna=manna/2&'<font color=red>Из за потери воли вы не можете удержать магическую энергию и половина ее просто исчезает.</font>'
-if wipov<=0:wipov=0&mannav=mannav/2&'<font color=green><<$namev>> из за потери воли не может удержать магическую энергию и половина ее просто исчезает.</font>'
+if wipo<=0:wipo=0&manna=manna/2&'<font color=red>Из-за потери воли вы не можете удержать магическую энергию и половина ее просто исчезает.</font>'
+if wipov<=0:wipov=0&mannav=mannav/2&'<font color=green><<$namev>> из-за потери воли не может удержать магическую энергию и половина ее просто исчезает.</font>'
 
 if defence>manna*10:defence=defence-100&health=health-10&'<font color=red>Физическая защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
 if defenceT>manna*10:defenceT=defenceT-100&health=health-10&'<font color=red>Температурная защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
@@ -336,7 +336,7 @@ defencev=defencev+1000
 defenceTV=defenceTV+1000
 defenceWV=defenceWV+1000
 mannav=mannav-50
-'<font color=red>Древесная защита растет и здоровенный сучек устремляется к вам</font>'
+'<font color=red>Древесная защита растет и здоровенный сучок устремляется к вам</font>'
 damageV=defencev/10
 gs'defence'
 	 if health<=0:
@@ -351,7 +351,7 @@ defence=defence+1000
 defenceT=defenceT+1000
 defenceW=defenceW+1000
 manna=manna-50
-'<font color=green>Ваша древесная защита растет и здоровенный сучек устремляется к противнику</font>'
+'<font color=green>Ваша древесная защита растет и здоровенный сучок устремляется к противнику</font>'
 damage=defence/10
 gs'defenceV'
 	 if healthv<=0:
@@ -677,13 +677,13 @@ $rascheturonaM={
              damageMv-=PdefenceM
              PdefenceM=0
              PMANNA-=damageMv
-             '<font color=#cd00cd><<$namev>> уничтожил защиту магии вашего помощника и нанес урон его манне <<damageMv>></font>'
+             '<font color=#cd00cd><<$namev>> уничтожил защиту магии вашего помощника и нанес урон его мане <<damageMv>></font>'
              damageMv=0
              end
          end
          if PdefenceM<=0 and damageMv>0:
          PMANNA-=damageHv
-         '<font color=#cd00cd><<$namev>> нанес урон манне помощника <<damageMv>></font>'
+         '<font color=#cd00cd><<$namev>> нанес урон мане помощника <<damageMv>></font>'
          damageMv=0
          end
          if Phealth<=0 or Pwipo<=0 or pmanna<=0:

@@ -34,7 +34,7 @@ if takasuge>=100 and wipo>50:
 	 manna=manna+100
 	 health=health+100
 	 wipo=wipo-50
-	 '<B><font color=green>Вы концентрируетесь и восстанавливаете манну и здоровье</font></B>'
+	 '<B><font color=green>Вы концентрируетесь и восстанавливаете ману и здоровье</font></B>'
 	 xgt'fight','1'
 	 end
 end

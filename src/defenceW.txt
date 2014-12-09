@@ -95,7 +95,7 @@ dynamic $rascheturonaW
      manna=manna-soundMagV
      wipo=wipo-soundMagV
      soundMagV=0
-     '<font color=red><<$tipuronaW>> ударил по вашей манне и воле</font>'
+     '<font color=red><<$tipuronaW>> ударил по вашей мане и воле</font>'
      end
      
 	 if gribsporev>0 and damagewv>0:
@@ -130,7 +130,7 @@ if defencew>0 and damagewv>0:
 			 manna=manna-soundMagV
 			 wipo=wipo-soundMagV
 			 soundMagV=0
-			 '<font color=red><<$tipuronaW>> ударил по вашей манне и воле</font>'
+			 '<font color=red><<$tipuronaW>> ударил по вашей мане и воле</font>'
 			 end
 			 if Vibrov>0 and damageWv>0:
 			 Vibrov=0

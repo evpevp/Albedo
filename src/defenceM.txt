@@ -1,6 +1,6 @@
 # defenceM
 !Магия
-!защита от воздействий на манну игрока
+!защита от воздействий на ману игрока
 
 !damageM
 !damageMV
@@ -15,13 +15,13 @@
              damageMv-=PdefenceM
              PdefenceM=0
              PMANNA-=damageMv
-             '<font color=#cd00cd><<$namev>> уничтожил защиту магии вашего помощника и нанес урон его манне <<damageMv>></font>'
+             '<font color=#cd00cd><<$namev>> уничтожил защиту магии вашего помощника и нанес урон его мане <<damageMv>></font>'
              damageMv=0
              end
          end
          if PdefenceM<=0 and damageMv>0:
          PMANNA-=damageHv
-         '<font color=#cd00cd><<$namev>> нанес урон манне помощника <<damageMv>></font>'
+         '<font color=#cd00cd><<$namev>> нанес урон мане помощника <<damageMv>></font>'
          damageMv=0
          end
          if Phealth<=0 or Pwipo<=0 or pmanna<=0:
@@ -54,7 +54,7 @@ gs'klonDef'
 	     mannaStumpV=0
 	     stun=2
 	     manna=manna-(manna*20/100)
-	     '<font color=red>Печать обездвиживает вас и сжигает 20% манны</font>'
+	     '<font color=red>Печать обездвиживает вас и сжигает 20% маны</font>'
 	     end
 	 damageMV=0
      end

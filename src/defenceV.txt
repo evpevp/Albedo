@@ -62,7 +62,7 @@ damage=0
      end
      if waterdam>0 and damage>0:
      mannaV=mannaV-waterdam
-     '<font color=green>Удар воды нанес манне противника <B><<waterdam>></B> едениц урона</font>'
+     '<font color=green>Удар воды нанес мане противника <B><<waterdam>></B> едениц урона</font>'
      waterdam=0
      end
 end

@@ -8,7 +8,7 @@ spElfDefManna=1000-spElfDefExp
 if spElfDefManna<100:spElfDefManna=100
 
      if manna>=spElfDefManna and wooddef<=0 and spellElf>=100:
-         act 'Древесная защита (<<spElfDefManna>> манны)':
+         act 'Древесная защита (<<spElfDefManna>> маны)':
          cla
          spElfDefExp+=1
          manna-=spElfDefManna
@@ -34,7 +34,7 @@ if spElfDefManna<100:spElfDefManna=100
      end
      
      if wooddef>0 and manna>=300 and spellElf2>=100:
-         act 'Древесная атака (300 манны)':
+         act 'Древесная атака (300 маны)':
          cla
          spElfAtkExp+=1
          manna-=300
@@ -44,7 +44,7 @@ if spElfDefManna<100:spElfDefManna=100
          xgt'fight','1'
          end
          
-         act 'Колючее облако (300 манны)':
+         act 'Колючее облако (300 маны)':
          cla
          spElfAtkExp+=1
          manna-=300
@@ -70,7 +70,7 @@ if spElfDefManna<100:spElfDefManna=100
          elvenmeditation=1
          wipo-=100
          cooldown+=5
-         '<font color=green>Вы начали медитацию стараясь соединится с силами природы и увеличить свою манну.</font>'
+         '<font color=green>Вы начали медитацию стараясь соединится с силами природы и увеличить свою ману.</font>'
          xgt'fight','1'
          end
      
@@ -79,7 +79,7 @@ if spElfDefManna<100:spElfDefManna=100
      if manna>=5000 and round>=6 and magika>=8:
      
          if cooldownSpell<=0 and spellElf4>=100:
-			 act 'Лесная тюрьма (5000 манны)':
+			 act 'Лесная тюрьма (5000 маны)':
 			 cla
 			 manna-=5000
 			 '<font color=green>Вы призвали лесную тюрьму которая оплела ветками противника.</font>'
@@ -105,7 +105,7 @@ if spElfDefManna<100:spElfDefManna=100
      if manna>=1000 and round>=6 and magika>=8:
      
          if cooldownSpell<=0 and spellElf5>=100:
-			 act 'Лесное благословение (1000 манны)':
+			 act 'Лесное благословение (1000 маны)':
 			 cla
 			 manna-=1000
 			 '<font color=green>Вы призвали благословение леса увеличивающее ваши характеристики.</font>'
@@ -126,7 +126,7 @@ if spElfDefManna<100:spElfDefManna=100
      end
      
      if manna>=1000 and cooldownSpell<=0 and round>=6 and magika>=8 and spellElf6>=100:
-         act 'Абсолютное излечение (1000 манны)':
+         act 'Абсолютное излечение (1000 маны)':
          cla
          manna-=1000
          bloodv=0
@@ -137,7 +137,7 @@ if spElfDefManna<100:spElfDefManna=100
      end
      
      if manna>=5000 and cooldownSpell<=0 and round>=6 and magika>=8 and spellElf7>=100:
-         act 'Несгибаемость (5000 манны)':
+         act 'Несгибаемость (5000 маны)':
          cla
          manna-=5000
          horny=0

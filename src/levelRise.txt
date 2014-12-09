@@ -9,7 +9,7 @@
 'Интелект <<intel>>'
 'Воля <<will>>'
 'Здоровье <<health>>'
-'Манна <<manna>>'
+'Мана <<manna>>'
 'Сила воли <<wipo>>'
 
 act 'ВЫЙТИ':GOTO $loc, $metka

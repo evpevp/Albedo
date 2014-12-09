@@ -30,13 +30,13 @@ end
 
 if GakidoSelf>0:
      if manna>(intel*10+intel*magika)*2:
-     '<font color=red>Вы взяли манны гораздо больше, чем можете удержать.</font>'
+     '<font color=red>Вы взяли маны гораздо больше, чем можете удержать.</font>'
      end
 GakidoSelf=0
 end
 if GakidoSelfV>0:
      if mannav>(intelv*10+intelv*magikav)*2:
-     '<font color=green><<$name>> взял манны больше, чем может удержать</font>'
+     '<font color=green><<$name>> взял маны больше, чем может удержать</font>'
      end
 GakidoSelfV=0
 end

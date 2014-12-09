@@ -12,7 +12,7 @@ if demonSoul>0 and spSozh>=100:pl'<<demonSoul>> гемов с душой дем�
  end
  
  if spFist>=100 and manna>=mannaNeed:
-	 act 'Применить заклинание кулак грома (<<mannaNeed>> манны)':
+	 act 'Применить заклинание кулак грома (<<mannaNeed>> маны)':
 	 manna=manna-mannaNeed
 	 tipatk=1
 	 spFistExp=spFistExp+1
@@ -27,7 +27,7 @@ if demonSoul>0 and spSozh>=100:pl'<<demonSoul>> гемов с душой дем�
 if round>=2:
 !2й уровень магичности 
 	 if spSphera>=100 and manna>=250:
-		 act 'Применить сферическую защиту 250 манны':
+		 act 'Применить сферическую защиту 250 маны':
 		 cla
 		 spSpheraExp=spSpheraExp+1
 		 if spSpheraExp>500:spSpheraExp=500
@@ -45,7 +45,7 @@ end
 
 if round>=3: 
 	 if spIgla>0 and spSve>=100 and manna>=100:
-		 act 'Применить иглы Каллена 100 манны':
+		 act 'Применить иглы Каллена 100 маны':
 		 cla
 		 spIgla=spIgla-1
 		 manna=manna-100
@@ -77,7 +77,7 @@ end
 
 if round>=4: 
 	 if demonSoul>0 and spSozh>=100 and manna>=100 and defenceV>0:
-		 act 'Применить ритуал Разлома 100 манны':
+		 act 'Применить ритуал Разлома 100 маны':
 		 cla
 		 demonSoul=demonSoul-1
 		 manna=manna-100
@@ -90,7 +90,7 @@ end
 
 if round>=5: 
 	 if sera>0 and spAcid>=100 and manna>=250:
-		 act 'Применить ритуал Кислотного дыхания 250 манны':
+		 act 'Применить ритуал Кислотного дыхания 250 маны':
 		 cla
 		 acidExp=acidExp+1
 		 if acidExp>300:acidExp=300
