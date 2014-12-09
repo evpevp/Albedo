@@ -28,10 +28,10 @@ if kvartira = 0:
 set $kvartira = ''
 end
 !Нимфа тьмы
-fairymeet=RAND(0,15)
-if fairymeet=7 and nark=1: '((На пустыре|wasteland)), что поблизости с парком, что-то происходит...'
+!fairymeet=RAND(0,15)
+if nark=1: '((На пустыре|wasteland)), что поблизости с парком, что-то происходит...'
 !Колдун
-if fairymeet!7 and nark=1 and FNfail=1 and DNvictory=1 and week=1 and WarlockDeal!1 and WarlockMeetDay!day: 'Неведомая сила манит вас на <a href="exec:GT ''wasteland'',''WarlockStart''">пустырь</a>...'
+if nark=1 and FNfail=1 and DNvictory=1 and week=1 and WarlockDeal!1 and WarlockMeetDay!day: 'Неведомая сила манит вас на <a href="exec:GT ''wasteland'',''WarlockStart''">пустырь</a>...'
 !Дом 
 if FNtr=1: 'Небольшой <a href="exec:GT ''HouseKor'',''start''">дом</a> подаренный колдуном'
 
@@ -44,7 +44,7 @@ if brak > 2 or NoHaritonov>0:'<a href="exec:GT ''shopU'',''start''">Универ
 if gopRespect=0:'<a href="exec:GT ''kafe'',''start''">Кафе</a>.'
 if gopRespect>0:'Возле <a href="exec:GT ''kafe'',''start''">Кафе</a> о чем то трут местные <a href="exec:GT ''gopnikiLok'',''start''">гопники</a>.'
 'Большой <a href="exec:GT ''park'',''start''">парк</a> расположен в 30 минутах ходьбы.'
-'Единственное <a href="exec:GT ''lake''">озеро</a> в городе находится около окраины города в часе ходьбы.'
+'Единственное <a href="exec:GT ''lake''">озеро</a> в городе находится около окраины в часе ходьбы.'
 'Круглосуточная <a href="exec:GT ''aptek''">Аптека</a>.'
 '<a href="exec:GT ''sauna'',''start''">Сауна</a>.'
 'Бабушки стайками идут к <a href="exec:GT ''poli'',''start''">Поликлиннике</a>'

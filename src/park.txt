@@ -28,17 +28,17 @@ end
 	 set minut = minut + 30
 	 set manna = manna + 10
 		 !Наркоман!
-		 narkmeet=RAND(0,20)
+		 narkmeet=RAND(0,1)
 		 !Нимфа!
-		 fairymeet=RAND(0,15)
-		 if nark=0 and pol=0 and money>=500 and narkmeet=7:
+		 !fairymeet=RAND(0,15)
+		 if nark=0 and pol=0 and money>=500 and narkmeet=1:
 			 gt 'nimfs','Narik'
 		 end
 		 !Лесная нимфа!
-		 if nark=1 and pol=0 and fairymeet=7 and FNtr!1:
+		 if nark=1 and pol=0 and FNtr!1:
 			 gt 'nimfs','ParkNimfa'
 		 end
-         if nark=0 or fairymeet!7 or money<500: 
+         if nark=0 or money<500: 
 		 'Вы неспеша прогуливаетесь по парку. Дыша свежим воздухом, размышляя о превратностях судьбы.'
 		 act 'Завершить прогулку':gt'park','start'
 		 end
@@ -161,14 +161,16 @@ gs'time'
          'Вы заплатили 20 рублей за удар по силомеру.'
              act 'Ударить':
              cla
-			 set minut = minut + 30
+			 set minut = minut + 5
 			 set money = money - 20
 			 set stKo = stren*20/100
 			 set damage = RAND(stren-stKo,stren+stKo)
-			 if stren < 30:set stren = stren + 1
-			 if stren >= 30:set stren = stren + RAND (0,1)
+			 !if stren < 30:set stren = stren + 1
+			 !if stren >= 30:set stren = stren + RAND (0,1)
+			 stren += 1
 			 'Вы, что есть силы ударили по силомеру и на экране зажглась цифра <<damage>>'
 			 if damage > maxdamage:set maxdamage = damage&'Хмм, новый рекорд.'
+			 gs 'stat'
 			 act 'Отойти':gt'park','luna'
 			 end
          end

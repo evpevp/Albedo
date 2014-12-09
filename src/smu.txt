@@ -390,10 +390,10 @@ act 'Уйти':gt 'smu','smuSek'
 			 act 'Оформлять тендер до 17 часов':
 			 cla
 			 if slot = 1 and hapri=1 and horny<100:tend=tend-1
-			 if tend=0 and SRO = 0 and smumodern=0:tender=5&smukont=RAND(1,5)
-			 if tend=0 and SRO = 1 and smumodern=0:tender=5&smukont=RAND(1,8)
-			 if tend=0 and SRO = 0 and smumodern=1:tender=5&smukont=RAND(1,5)
-			 if tend=0 and SRO = 1 and smumodern=1:tender=5&smukont=RAND(5,10)
+			 if tend=0 and SRO = 0 and smumodern=0:tender=5&smukont=RAND(2,5)
+			 if tend=0 and SRO = 1 and smumodern=0:tender=5&smukont=RAND(5,8)
+			 if tend=0 and SRO = 0 and smumodern=1:tender=5&smukont=RAND(4,7)
+			 if tend=0 and SRO = 1 and smumodern=1:tender=5&smukont=RAND(7,10)
 			 minut=minut+480
 			 clr
              gs'stat'
@@ -624,7 +624,7 @@ act 'Уйти':gt 'smu','3'
 		 if hour<17 and slot = 1 and hapri = 1 and tender = 0 and tend = 0 and metalkran=1 and newkran=1:
 			 act 'Поговорить о контрактах':
 			 cla
-			 tend = 5
+			 tend = 2
 			 '(Вы) - Ну как? Есть какие то контраты?'
 			 '(Зам) - Да Игорь Генрихович. Нашеся объект, вам нужно подготовить тендер.'
 			 act 'Уйти':gt 'smu','3'

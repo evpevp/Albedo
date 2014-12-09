@@ -9,43 +9,43 @@ if $ARGS[0]='Fstrip':
 		 'Лесная нимфа: Сейчас я тебя раскочегарю!'
 		 'Нимфа вылезла на холмик и начала демонстрировать своё красивое тело. Вам ничего не оставалось, как устроиться поудобнее и любоваться этим зрелищем.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip01.jpg" ></center>'
-		 wait 5000
+		 wait 2000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip02.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip03.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip04.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip05.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip06.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip07.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip08.jpg" ></center>'
-		 wait 5000
+		 wait 2000
 		 *clr
 		 'Усевшись поудобнее и глядя вам пристально в глаза - нимфа начала поглаживать свою киску.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip09.jpg" ></center>'
 		 NFpussy=NFpussy+3
-		 wait 5000
+		 wait 2000
 		 *clr
 		 'Запрокинув голову нимфочка стала мастурбировать быстрее...'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip10.jpg" ></center>'
 		 NFpussy=NFpussy+3
-		 wait 5000
+		 wait 2000
 		 *clr
 		 '...из уст нимфы слышны сладкие стоны, но вопреки приближающемуся оргазму нимфа останавливается и становится на колени...'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip11.jpg" ></center>'
 		 NFpussy=NFpussy+4
-		 wait 5000
+		 wait 2000
 		 *clr
 		 horny=100
 		 '"Хочешь меня?",- спрашивает нимфа, вертя своей попкой.'
@@ -59,37 +59,37 @@ if $ARGS[0]='Fstrip':
 		 'Лесная нимфа: Надеюсь вид моего тела сможет тебя завести!'
 		 'Вы: Я тоже!'
 		  '<center><img src="pic\forestevent\ForestNimf\FNstrip201.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 'Нимфа начала мастурбировать. Несколько минут вы наблюдали как лесная красавица возбуждала себя.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip202.jpg" ></center>'
 		 NFpussy=NFpussy+5
-		 wait 5000
+		 wait 2000
 		 *clr
 		 'Поиграв со своей киской, нимфа стала освобождать себя от лишней одежды и демонстрировать, на радость вам, своё прекрасное тело.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip203.jpg" ></center>'
-		 wait 5000
+		 wait 2000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip204.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip205.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip206.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip207.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 'Нимфа вновь принялась за свою киску'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip208.jpg" ></center>'
 		 NFpussy=NFpussy+5
-		 wait 5000
+		 wait 2000
 		 *clr
 		 'Поиграв со своей писей еще пару минут, нимфа спрашивает: "Ну.......?...."'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip209.jpg" ></center>'
-		 wait 4000
+		 wait 2000
 		 *clr
 		 '"...пошалим???!!!"'
 		 'Вы: как после такого я могу отказаться???'
@@ -103,38 +103,38 @@ if $ARGS[0]='Fstrip':
 		 'Лесная нимфа: Чтож, присядь пока, а я сделаю гимнастику. Надеюсь когда я закончу - ты будешь готов для любви.'
 		 'Вы: я тоже на это надеюсь!'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip301.jpg" ></center>'
-		 wait 5000
+		 wait 2000
 		 *clr
 		 'Нимфа вдруг сняла с себя всю одежду. Видимо заниматься гимнастикой она любит голой.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip302.jpg" ></center>'
-		 wait 4000
+		 wait 2000
 		 *clr
 		 'Лесная красотка принялась за зарядку'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip303.jpg" ></center>'
-		 wait 4000
+		 wait 2000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip304.jpg" ></center>'
-		 wait 4000
+		 wait 2000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip305.jpg" ></center>'
-		 wait 4000
+		 wait 2000
 		 *clr
 		 'Забавно, что вся гимнастика нимфы сводится к тренировке раздвигать ноги, как можно шире, в разных позах!'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip306.jpg" ></center>'
-		 wait 5500
+		 wait 2500
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip307.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip308.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip309.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 'Нимфа: Нууууу?.....(раздвигая ноги)'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip310.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '....может присоединишься к моим занятиям?'
 		 'Вы: как после такого я могу отказаться???'
@@ -149,35 +149,35 @@ if $ARGS[0]='Fstrip':
 		 'И да, учти: Моя подружка мужчин не очень любит, протянешь к ней руки - она убежит!'
 		 'Едва договорив это - возле нимфы возникла еще одна нимфа, видимо та самая Меллина.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip401.jpg" ></center>'
-		 wait 7000
+		 wait 3000
 		 *clr
 		 'Нимфочки стали шаловливо играть друг с дружкой.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip402.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip403.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip404.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip405.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 'У Меллины в руке возникло подобие фаллоса. Не долго думая она вонзила его в киску лесной нимфы. Ох как же лесная красотка при этом застонала...'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip406.jpg" ></center>'
-		 wait 5000
+		 wait 1000
 		 *clr
 		 'Спустя пару минут, ваша лесная знакомая и Меллина меняются местами. Дилдо теперь проникает в вагину Меллины. Нимфа начинает яро дрючить свою подружку этой игрушкой.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip407.jpg" ></center>'
-		 wait 7000
+		 wait 3000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip408.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 'Меллина застонала и задергалась. Лесная нимфа подарила своей подруге оргазм! Там в свою очередь чмокнула её на прощание и исчезла.'
 		 '<center><img src="pic\forestevent\ForestNimf\FNstrip409.jpg" ></center>'
-		 wait 7000
+		 wait 3000
 		 *clr
 		 'Нимфа: АААААААА...ну вот...подружку я ублажила, а кто меня ублажать будет? Может ты, а?'
 	 	 'Вы: как после такого я могу отказаться???'
@@ -250,7 +250,7 @@ if $ARGS[0]='End':
 	 agil=agil+1
 	 stren=stren+1
 	 set health = vital*10
-	 set minut = minut + 120
+	 set minut = minut + 60
 	 manna=manna+50
      wipo=wipo+rand(25,50)
      sexm=sexm+1
@@ -290,7 +290,7 @@ if $ARGS[0]='blowjob':
 		 if NFpussy>65:NFpussy=NFpussy-5
 		 '<center><img src="pic\forestevent\ForestNimf\FNblowjob2.jpg" ></center>' 
 		 'Нимфа старательно ублажает ваш агрегат своим ротиком и язычком!'
-		 wait 3000
+		 !wait 3000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNblowjob3.jpg" ></center>' 
 		 'Периодически нимфа останавливается и заглатывает ваш, довольно немалый, член целиком и начинает потихоньку гладить ваши яйца! Какое прекрасное ощущение!'
@@ -386,7 +386,7 @@ if $ARGS[0]='cunni':
 		 if NFpussy>=90: NFpussy=NFpussy+2
 		 '<center><img src="pic\forestevent\ForestNimf\FNcunni1.jpg" ></center>'
 		 'Вы пару-тройку секунд любуетесь сказачной вагиной...'
-		 wait 3000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\ForestNimf\FNcunni2.gif" ></center>'
 		 '...и сразу начинаете активно вылизывать киску нимфы, особенно клитор. Ей это явно нравится!'

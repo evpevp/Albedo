@@ -10,33 +10,33 @@ if $ARGS[0]='Lstrip':
 		 'Вы: Это было бы замечательно!!!'
 		 'Нимфа отошла к скалам и стала снимать с себя одежду, исполняя этакий стриптиз'
 		  '<center><img src="pic\forestevent\LakeNimf\LNstrip001.jpg" ></center>'
-		 wait 6000
+		 wait 2000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip002.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip003.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip004.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip005.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip006.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip007.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip008.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 'Устроившись поудобнее - нимфа начала дрочить свою киску, издавая при этом томные звуки.'
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip009.jpg" ></center>'
 		 NLpussy=NLpussy+5
-		 wait 6000
+		 wait 3000
 		 *clr
 		 'Подрочив минут 5, нимфа вдруг останавливается и спрашивает вас: "Так и будешь смотреть за "соло" любовью или присоединишься ко мне, а?"'
 		 'Вы: как после такого я могу отказаться???'
@@ -50,31 +50,31 @@ if $ARGS[0]='Lstrip':
 		 'Нимфа озера: Возможно вид моего обнаженного тела пробудит в тебе желание! Я недолго побалуюсь в воде, а там посмотрим, что будет дальше...'
 		 'Вы: Это было бы замечательно!!!'
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip201.jpg" ></center>'
-		 wait 6000
+		 wait 2000
 		 *clr
 		 'Нимфа, освободившись от одежды подошла к воде и присела на берегу.'
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip202.jpg" ></center>'
-		 wait 6000
+		 wait 2000
 		 *clr
 		 'Спустя пару минут - нимфа озера стала баловаться в воде! Какое милое, голое баловство.'
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip203.jpg" ></center>'
-		 wait 6000
+		 wait 2000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip204.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip205.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip206.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip207.jpg" ></center>'
-		 wait 4000
+		 wait 1000
 		 *clr
 		 'Став на колени - нимфа вертит перед вами своими прелестями...'
 		 '<center><img src="pic\forestevent\LakeNimf\LNstrip208.jpg" ></center>'
-		 wait 6000
+		 wait 2000
 		 *clr
 		 '...Нимфа: Ну что? Созрел? Займёмся любовью?'
 		 'Вы: как после такого я могу отказаться???'
@@ -144,7 +144,7 @@ if $ARGS[0]='End':
 	 will=will+1
 	 speed=speed+1
 	 set health = vital*10
-	 set minut = minut + 120
+	 set minut = minut + 60
 	 manna=manna+50
      wipo=wipo+rand(25,50)
      sexm=sexm+1

@@ -1,23 +1,6 @@
 # mainStartLoc
 KILLALL
 CLOSE ALL
-ADDQST 'file/Albedo.qsp'
-ADDQST 'file/casino.qsp'
-ADDQST 'file/battle.qsp'
-ADDQST 'file/sport.qsp'
-ADDQST 'file/itk.qsp'
-ADDQST 'file/stat.qsp'
-ADDQST 'file/loker.qsp'
-ADDQST 'file/mebel.qsp'
-ADDQST 'file/car.qsp'
-ADDQST 'file/kungfugym.qsp'
-!ADDQST 'file/Female.qsp'
-ADDQST 'file/seraf.qsp'
-ADDQST 'file/world.qsp'
-ADDQST 'file/slums_corner.qsp'
-ADDQST 'file/vorovskaya.qsp'
-
-
 USEHTML=1
 $ONGLOAD='loadg'
 $ONGSAVE='saveg'

@@ -408,7 +408,7 @@ if $ARGS[0]='LakeNimfa':
 							 if ver=0:
 							 cla
 							 *clr 
-							 act '...':gt'dk','start'
+							 act '...':gt'park','start'
 							 '<center><img src="pic\forestevent\spin.jpg" ></center>'
 							 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
 							 health=5
@@ -442,7 +442,7 @@ if $ARGS[0]='LakeNimfa':
 							 *clr
 							 '<center><img src="pic\forestevent\money.jpg" ></center>'
 							 'Нимфа: Как пожелаешь.'
-							 money=money+100000
+							 money=money+1000000
 							 'Вы чувствуете как свободного пространства в вашем кармане стало меньше.'
 							 set minut = minut + 60
 							 nark=0
@@ -830,9 +830,9 @@ if $ARGS[0]='ParkNimfa':
 						 *clr
 						 '<center><img src="pic\forestevent\money.jpg" ></center>'
 						 'Нимфа: Как пожелаешь.'
-						 money=money+100000
+						 money=money+1000000
 						 'Вы чувствуете как свободного пространства в вашем кармане стало меньше.'
-						 set minut = minut + 60
+						 set minut = minut + 20
 						 nark=0
 						 act '...':gt'park','start'
 					 end
@@ -892,7 +892,7 @@ if $ARGS[0]='ParkNimfa':
 										 'Бывшая нимфа: Линель.'
 										 'Вы: Красивое. Меня зовут Игорь. Пойдем со мной, мне надо многое тебе рассказать о моём мире и по дороге прикупим тебе вещей.'
 										 'После этих слов вы с Линель уходите.'
-										 set minut = minut + 240
+										 set minut = minut + 40
 										 act 'Идти в дом': gt 'HouseKor'
 									 end
 								 end
