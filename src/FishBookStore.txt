@@ -10,342 +10,342 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Книжная лавка</H4></center>'
-'<center><img src = "pic/Evedon/bookstore.jpg" ></center>'
+'<center><img src="pic/Evedon/bookstore.jpg" ></center>'
 'Лавка, забитая книгами.'
 ''
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-if hour>= 8 and hour<= 20: 
+if hour>=8 and hour<=20:
 'За прилавком сидит маленький плешивый человечек, который увлеченно читает книгу.'
 
 
-if GraveDog = 100 and ordenGDQW = 0 and OrdenRangGD<= 0 and OrdenRang<= 0 and demonmorf<= 0 and vampiremorf<= 0 and marpeozaQW!100: 
+if GraveDog=100 and ordenGDQW=0 and OrdenRangGD<=0 and OrdenRang<=0 and demonmorf<=0 and vampiremorf<=0 and marpeozaQW!100:
 'Книжник заулыбался "А вот и вы. Кстати, вам тут передали записку."'
-     act 'Посмотреть записку': 
+     act 'Посмотреть записку':
 	 cla
-	 ordenGDQW = 1
+	 ordenGDQW=1
 	 'Я знаю о твоем интересе к темному искусству магии. Приходи в домик кладбищенского сторожа и спроси у него: "Как воет могильная собака?". Не бойся, я тебе не враг.'
-	 act '.....': minut += 5 & gt $curloc
+	 act '.....':minut=minut+5&gt $curloc
 	 end
 end
-	 act 'Покажите книги которые вы продаете': 
+	 act 'Покажите книги которые вы продаете':
 	 cla
-	 minut += 5
+	 minut=minut+5
 	 'Человечек ловко разложил книги на прилавке. Очень занимательные книги, рекомендую читать лежа на диване.'
-	 act 'Уйти': minut += 5 & gt 'fishW'
+	 act 'Уйти':minut=minut+5&gt'fishW'
 	 
-		 if hornybook<= 0: 
-			 act 'Посмотреть книжку с развратными картинками.': 
+		 if hornybook<=0:
+			 act 'Посмотреть книжку с развратными картинками.':
 			 cla
 			 *clr
-             '<center><img src = "pic/EvedonOd/book1.jpg" ></center>'
+             '<center><img src="pic/EvedonOd/book1.jpg" ></center>'
 			 '(Книжник) - Очень возбуждающий сборник гравюр неизвестного художника. Цена за такую красоту смешная, всего 1000.'
-			     if gem>= 1000: 
-			         act 'Купить': 
+			     if gem>=1000:
+			         act 'Купить':
 			         cla
-			         bookstoreQW+= 2
-			         gem- = 1000
-			         hornybook = 1
+			         bookstoreQW+=2
+			         gem-=1000
+			         hornybook=1
 			         'Книжник завернул для вас книгу в ткань.'
-			         act 'Взять книгу': minut += 5 & gt $curloc
+			         act 'Взять книгу':minut=minut+5&gt $curloc
 			         end
 			     end
-			 act 'Убрать книгу': minut += 5 & gt $curloc
+			 act 'Убрать книгу':minut=minut+5&gt $curloc
 			 end
 		 end
 		 
-		 if marabook<= 0: 
-			 act 'Посмотреть сборник молитв Мары.': 
+		 if marabook<=0:
+			 act 'Посмотреть сборник молитв Мары.':
 			 cla
 			 *clr
-             '<center><img src = "pic/EvedonOd/book2.jpg" ></center>'
+             '<center><img src="pic/EvedonOd/book2.jpg" ></center>'
 			 '(Книжник) - эта книга может снижать скверну у читающего. Цена за спасение души всего 1000.'
-			     if gem>= 1000: 
-			         act 'Купить': 
+			     if gem>=1000:
+			         act 'Купить':
 			         cla
-			         bookstoreQW+= 2
-			         gem- = 1000
-			         marabook = 1
+			         bookstoreQW+=2
+			         gem-=1000
+			         marabook=1
 			         'Книжник завернул для вас книгу в ткань.'
-			         act 'Взять книгу': minut += 5 & gt $curloc
+			         act 'Взять книгу':minut=minut+5&gt $curloc
 			         end
 			     end
-			 act 'Убрать книгу': minut += 5 & gt $curloc
+			 act 'Убрать книгу':minut=minut+5&gt $curloc
 			 end
 		 end
 		 
-		 if intelbook<= 0: 
-			 act 'Посмотреть книгу для развития ума.': 
+		 if intelbook<=0:
+			 act 'Посмотреть книгу для развития ума.':
 			 cla
 			 *clr
-             '<center><img src = "pic/EvedonOd/book3.jpg" ></center>'
+             '<center><img src="pic/EvedonOd/book3.jpg" ></center>'
 			 '(Книжник) - эта книга очень хорошо развивает мозги, проверенная вещь. Цена всего 5000.'
-			     if gem>= 5000: 
-			         act 'Купить': 
+			     if gem>=5000:
+			         act 'Купить':
 			         cla
-			         bookstoreQW+= 3
-			         gem- = 5000
-			         intelbook = 10
+			         bookstoreQW+=3
+			         gem-=5000
+			         intelbook=10
 			         'Книжник завернул для вас книгу в ткань.'
-			         act 'Взять книгу': minut += 5 & gt $curloc
+			         act 'Взять книгу':minut=minut+5&gt $curloc
 			         end
 			     end
-			 act 'Убрать книгу': minut += 5 & gt $curloc
+			 act 'Убрать книгу':minut=minut+5&gt $curloc
 			 end
 		 end
 		 
-		 if willbook<= 0: 
-			 act 'Посмотреть трактат о природе пупочной грязи.': 
+		 if willbook<=0:
+			 act 'Посмотреть трактат о природе пупочной грязи.':
 			 cla
 			 *clr
-             '<center><img src = "pic/EvedonOd/book4.jpg" ></center>'
+             '<center><img src="pic/EvedonOd/book4.jpg" ></center>'
 			 '(Книжник) - эта очень унылая книга, читать неимоверно скучно, постоянно клонит в сон, но может не плохо развить волю, так как постоянно приходится бороться со сном. Цена всего 5000.'
-			     if gem>= 5000: 
-			         act 'Купить': 
+			     if gem>=5000:
+			         act 'Купить':
 			         cla
-			         bookstoreQW+= 3
-			         gem- = 5000
-			         willbook = 10
+			         bookstoreQW+=3
+			         gem-=5000
+			         willbook=10
 			         'Книжник завернул для вас книгу в ткань.'
-			         act 'Взять книгу': minut += 5 & gt $curloc
+			         act 'Взять книгу':minut=minut+5&gt $curloc
 			         end
 			     end
-			 act 'Убрать книгу': minut += 5 & gt $curloc
+			 act 'Убрать книгу':minut=minut+5&gt $curloc
 			 end
 		 end
 		 
-		 if desertbook<= 0: 
-			 act 'Посмотреть сборник пустынных историй.': 
+		 if desertbook<=0:
+			 act 'Посмотреть сборник пустынных историй.':
 			 cla
 			 *clr
-             '<center><img src = "pic/EvedonOd/book5.jpg" ></center>'
+             '<center><img src="pic/EvedonOd/book5.jpg" ></center>'
 			 '(Книжник) - эта книга написана одним караванщиком, который немало походил по пустыне. Цена всего 500.'
-			     if gem>= 500: 
-			         act 'Купить': 
+			     if gem>=500:
+			         act 'Купить':
 			         cla
-			         bookstoreQW+= 1
-			         gem- = 500
-			         desertbook = 1
+			         bookstoreQW+=1
+			         gem-=500
+			         desertbook=1
 			         'Книжник завернул для вас книгу в ткань.'
-			         act 'Взять книгу': minut += 5 & gt $curloc
+			         act 'Взять книгу':minut=minut+5&gt $curloc
 			         end
 			     end
-			 act 'Убрать книгу': minut += 5 & gt $curloc
+			 act 'Убрать книгу':minut=minut+5&gt $curloc
 			 end
 		 end
 		 
-		 if marshbook<= 0: 
-			 act 'Посмотреть трактат о болотах.': 
+		 if marshbook<=0:
+			 act 'Посмотреть трактат о болотах.':
 			 cla
 			 *clr
-             '<center><img src = "pic/EvedonOd/book6.jpg" ></center>'
+             '<center><img src="pic/EvedonOd/book6.jpg" ></center>'
 			 '(Книжник) - эта книга описывает болота и способы избежать топей. Цена всего 500.'
-			     if gem>= 500: 
-			         act 'Купить': 
+			     if gem>=500:
+			         act 'Купить':
 			         cla
-			         bookstoreQW+= 1
-			         gem- = 500
-			         marshbook = 1
+			         bookstoreQW+=1
+			         gem-=500
+			         marshbook=1
 			         'Книжник завернул для вас книгу в ткань.'
-			         act 'Взять книгу': minut += 5 & gt $curloc
+			         act 'Взять книгу':minut=minut+5&gt $curloc
 			         end
 			     end
-			 act 'Убрать книгу': minut += 5 & gt $curloc
+			 act 'Убрать книгу':minut=minut+5&gt $curloc
 			 end
 		 end
 		 
 		 
 	 
-		 if OrdenRang<= 0 and demonmorf<= 0 and vampiremorf<= 0 and marpeozaQW!100: 
+		 if OrdenRang<=0 and demonmorf<=0 and vampiremorf<=0 and marpeozaQW!100:
 		 
-		     if bookstoreQW>= 10: 
+		     if bookstoreQW>=10:
 		     'Книжник, посматривая на дверь шепчет: "Вы очень хороший покупатель, сразу видно любителя читать, что в Эведоне редкость". Я вам покажу еще книги, которые запрещены орденом.'
-		     	 if magikabook<= 0: 
-					 act 'Посмотреть трактат о магичности.': 
+		     	 if magikabook<=0:
+					 act 'Посмотреть трактат о магичности.':
 					 cla
 					 *clr
-                     '<center><img src = "pic/EvedonOd/book7.jpg" ></center>'
+                     '<center><img src="pic/EvedonOd/book7.jpg" ></center>'
 					 '(Книжник) - этот трактат описывает магичность и ее природу, весьма полезная вещь для начинающих волшебников. Цена всего 6000.'
-						 if gem>= 6000: 
-							 act 'Купить': 
+						 if gem>=6000:
+							 act 'Купить':
 							 cla
-							 gem- = 6000
-							 magikabook = 1
+							 gem-=6000
+							 magikabook=1
 							 'Книжник завернул для вас книгу в ткань.'
-							 act 'Взять книгу': minut += 5 & gt $curloc
+							 act 'Взять книгу':minut=minut+5&gt $curloc
 							 end
 						 end
-					 act 'Убрать книгу': minut += 5 & gt $curloc
+					 act 'Убрать книгу':minut=minut+5&gt $curloc
 					 end
 				 end
 				 
-				 if expbook<= 0: 
-					 act 'Посмотреть трактат о искусстве боя.': 
+				 if expbook<=0:
+					 act 'Посмотреть трактат о искусстве боя.':
 					 cla
 					 *clr
-                     '<center><img src = "pic/EvedonOd/book8.jpg" ></center>'
+                     '<center><img src="pic/EvedonOd/book8.jpg" ></center>'
 					 '(Книжник) - этот трактат всегда может научить чему-нибудь новому. Цена всего 3000.'
-						 if gem>= 3000: 
-							 act 'Купить': 
+						 if gem>=3000:
+							 act 'Купить':
 							 cla
-							 gem- = 3000
-							 expbook = 1
+							 gem-=3000
+							 expbook=1
 							 'Книжник завернул для вас книгу в ткань.'
-							 act 'Взять книгу': minut += 5 & gt $curloc
+							 act 'Взять книгу':minut=minut+5&gt $curloc
 							 end
 						 end
-					 act 'Убрать книгу': minut += 5 & gt $curloc
+					 act 'Убрать книгу':minut=minut+5&gt $curloc
 					 end
 				 end
 				 
-				 if magikabook>0 and expbook>0 and magika>5: 
+				 if magikabook>0 and expbook>0 and magika>5:
 				 'Книжник шепчет: "Только для вас у меня есть книги базовых заклинаний."'
 				 
-				 	 if Zerkalobook<= 0: 
-						 act 'Посмотреть том магии зеркал.': 
+				 	 if Zerkalobook<=0:
+						 act 'Посмотреть том магии зеркал.':
 						 cla
 						 *clr
-                         '<center><img src = "pic/EvedonOd/book9.jpg" ></center>'
+                         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
 						 '(Книжник) - эта книга описывает базовую магию зеркал, даже знающий это заклинание может почерпнуть там новый опыт. Книга редкая и под строжайшим запретом ордена, поэтому цена 7000.'
-							 if gem>= 7000: 
-								 act 'Купить': 
+							 if gem>=7000:
+								 act 'Купить':
 								 cla
-								 bookElitStoreQW+= 1
-								 gem- = 7000
-								 Zerkalobook = 1
+								 bookElitStoreQW+=1
+								 gem-=7000
+								 Zerkalobook=1
 								 'Книжник завернул для вас книгу в ткань.'
-								 act 'Взять книгу': minut += 5 & gt $curloc
+								 act 'Взять книгу':minut=minut+5&gt $curloc
 								 end
 							 end
-						 act 'Убрать книгу': minut += 5 & gt $curloc
+						 act 'Убрать книгу':minut=minut+5&gt $curloc
 						 end
 					 end
 					 
-					 if Mags hildbook<= 0 and spZerkalo>= 100: 
-						 act 'Посмотреть том щита мага.': 
+					 if MagShildbook<=0 and spZerkalo>=100:
+						 act 'Посмотреть том щита мага.':
 						 cla
 						 *clr
-                         '<center><img src = "pic/EvedonOd/book9.jpg" ></center>'
+                         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
 						 '(Книжник) - эта книга описывает базовую магию щита, даже знающий это заклинание может почерпнуть там новый опыт. Книга редкая и под строжайшим запретом ордена, поэтому цена 7000.'
-							 if gem>= 7000: 
-								 act 'Купить': 
+							 if gem>=7000:
+								 act 'Купить':
 								 cla
-								 bookElitStoreQW+= 1
-								 gem- = 7000
-								 Mags hildbook = 1
+								 bookElitStoreQW+=1
+								 gem-=7000
+								 MagShildbook=1
 								 'Книжник завернул для вас книгу в ткань.'
-								 act 'Взять книгу': minut += 5 & gt $curloc
+								 act 'Взять книгу':minut=minut+5&gt $curloc
 								 end
 							 end
-						 act 'Убрать книгу': minut += 5 & gt $curloc
+						 act 'Убрать книгу':minut=minut+5&gt $curloc
 						 end
 					 end
 					 
-					 if Mags hildbook<= 0 and spZerkalo>= 100: 
-						 act 'Посмотреть том щита мага.': 
+					 if MagShildbook<=0 and spZerkalo>=100:
+						 act 'Посмотреть том щита мага.':
 						 cla
 						 *clr
-                         '<center><img src = "pic/EvedonOd/book9.jpg" ></center>'
+                         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
 						 '(Книжник) - эта книга описывает базовую магию щита, даже знающий это заклинание может почерпнуть там новый опыт. Книга редкая и под строжайшим запретом ордена, поэтому цена 7000.'
-							 if gem>= 7000: 
-								 act 'Купить': 
+							 if gem>=7000:
+								 act 'Купить':
 								 cla
-								 bookElitStoreQW+= 1
-								 gem- = 7000
-								 Mags hildbook = 1
+								 bookElitStoreQW+=1
+								 gem-=7000
+								 MagShildbook=1
 								 'Книжник завернул для вас книгу в ткань.'
-								 act 'Взять книгу': minut += 5 & gt $curloc
+								 act 'Взять книгу':minut=minut+5&gt $curloc
 								 end
 							 end
-						 act 'Убрать книгу': minut += 5 & gt $curloc
+						 act 'Убрать книгу':minut=minut+5&gt $curloc
 						 end
 					 end
 					 
-					 if Smesheniebook<= 0 and spZerkalo>= 100: 
-						 act 'Посмотреть том смещения.': 
+					 if Smesheniebook<=0 and spZerkalo>=100:
+						 act 'Посмотреть том смещения.':
 						 cla
 						 *clr
-                         '<center><img src = "pic/EvedonOd/book9.jpg" ></center>'
+                         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
 						 '(Книжник) - эта книга описывает базовую магию смещения, даже знающий это заклинание может почерпнуть там новый опыт. Книга редкая и под строжайшим запретом ордена, поэтому цена 7000.'
-							 if gem>= 7000: 
-								 act 'Купить': 
+							 if gem>=7000:
+								 act 'Купить':
 								 cla
-								 bookElitStoreQW+= 1
-								 gem- = 7000
-								 Smesheniebook = 1
+								 bookElitStoreQW+=1
+								 gem-=7000
+								 Smesheniebook=1
 								 'Книжник завернул для вас книгу в ткань.'
-								 act 'Взять книгу': minut += 5 & gt $curloc
+								 act 'Взять книгу':minut=minut+5&gt $curloc
 								 end
 							 end
-						 act 'Убрать книгу': minut += 5 & gt $curloc
+						 act 'Убрать книгу':minut=minut+5&gt $curloc
 						 end
 					 end
 					 
-					 if Tumanbook<= 0 and spZerkalo>= 100: 
-						 act 'Посмотреть том тумана.': 
+					 if Tumanbook<=0 and spZerkalo>=100:
+						 act 'Посмотреть том тумана.':
 						 cla
 						 *clr
-                         '<center><img src = "pic/EvedonOd/book9.jpg" ></center>'
+                         '<center><img src="pic/EvedonOd/book9.jpg" ></center>'
 						 '(Книжник) - эта книга описывает базовую магию тумана, даже знающий это заклинание может почерпнуть там новый опыт. Книга редкая и под строжайшим запретом ордена, поэтому цена 7000.'
-							 if gem>= 7000: 
-								 act 'Купить': 
+							 if gem>=7000:
+								 act 'Купить':
 								 cla
-								 bookElitStoreQW+= 1
-								 gem- = 7000
-								 Tumanbook = 1
+								 bookElitStoreQW+=1
+								 gem-=7000
+								 Tumanbook=1
 								 'Книжник завернул для вас книгу в ткань.'
-								 act 'Взять книгу': minut += 5 & gt $curloc
+								 act 'Взять книгу':minut=minut+5&gt $curloc
 								 end
 							 end
-						 act 'Убрать книгу': minut += 5 & gt $curloc
+						 act 'Убрать книгу':minut=minut+5&gt $curloc
 						 end
 					 end
 					 
-					 if klonbook<= 0 and spZerkalo>= 100: 
-						 act 'Посмотреть том клонов.': 
+					 if klonbook<=0 and spZerkalo>=100:
+						 act 'Посмотреть том клонов.':
 						 cla
 						 *clr
-                         '<center><img src = "pic/EvedonOd/book1.jpg" ></center>'
+                         '<center><img src="pic/EvedonOd/book1.jpg" ></center>'
 						 '(Книжник) - эта книга описывает базовую магию клонов, даже знающий это заклинание может почерпнуть там новый опыт. Книга редкая и под строжайшим запретом ордена, поэтому цена 7000.'
-							 if gem>= 7000: 
-								 act 'Купить': 
+							 if gem>=7000:
+								 act 'Купить':
 								 cla
-								 bookElitStoreQW+= 1
-								 gem- = 7000
-								 klonbook = 1
+								 bookElitStoreQW+=1
+								 gem-=7000
+								 klonbook=1
 								 'Книжник завернул для вас книгу в ткань.'
-								 act 'Взять книгу': minut += 5 & gt $curloc
+								 act 'Взять книгу':minut=minut+5&gt $curloc
 								 end
 							 end
-						 act 'Убрать книгу': minut += 5 & gt $curloc
+						 act 'Убрать книгу':minut=minut+5&gt $curloc
 						 end
 					 end
 					 
-					 if bookElitStoreQW>= 1 and blackmagikbook<= 0: 
+					 if bookElitStoreQW>=1 and blackmagikbook<=0:
 					 'Книжник из-под прилавка достает запыленную книгу, в черном кожаном переплете. У меня тут завалялась одна странная книжонка, не хотите взять?'
-					 	 act 'Посмотреть черную книгу.': 
+					 	 act 'Посмотреть черную книгу.':
 						 cla
 						 *clr
-                         '<center><img src = "pic/EvedonOd/book10.jpg" ></center>'
+                         '<center><img src="pic/EvedonOd/book10.jpg" ></center>'
 						 '(Книжник) - Я уже и не помню откуда у меня эта книга. В ней описываются всякие потусторонние вещи. Книга уникальная, поэтому цена 15000.'
-							 if gem>= 15000: 
-								 act 'Купить': 
+							 if gem>=15000:
+								 act 'Купить':
 								 cla
-								 gem- = 15000
-								 blackmagikbook = 1
+								 gem-=15000
+								 blackmagikbook=1
 								 'Книжник завернул для вас книгу в ткань.'
-								 act 'Взять книгу': minut += 5 & gt $curloc
+								 act 'Взять книгу':minut=minut+5&gt $curloc
 								 end
 							 end
-						 act 'Убрать книгу': minut += 5 & gt $curloc
+						 act 'Убрать книгу':minut=minut+5&gt $curloc
 						 end
 					 end
 				 
@@ -365,6 +365,6 @@ else
 end
 
 
-act 'Уйти': minut += 5 & gt 'fishW'
+act 'Уйти':minut=minut+5&gt'fishW'
 --- FishBookStore ---------------------------------
 

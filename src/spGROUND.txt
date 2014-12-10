@@ -1,110 +1,110 @@
 # spGROUND
 dynamic $battlemain
 clr
-gs 'stat'
+gs'stat'
 
-if round>= 2: 
-     ssmannaNeed = 500-spSStormExp
-     if ssmannaNeed<50: ssmannaNeed = 50
+if round>=2: 
+     ssmannaNeed=500-spSStormExp
+     if ssmannaNeed<50:ssmannaNeed=50
      
-	 if spSStorm>= 100 and manna>= ssmannaNeed: 
-		 act 'Песчаный шторм <<ssmannaNeed>> маны': 
+	 if spSStorm>=100 and manna>=ssmannaNeed:
+		 act 'Песчаный шторм <<ssmannaNeed>> маны':
 		 cla
-		 spSStormExp = spSStormExp+1
-		 manna = manna-ssmannaNeed
-		 '<font color = green>Вы собрали энергию в руку и преобразовали ее в песок который закружился с бешеной скоростью</font>'
-		 sandstorm = sandstorm+5
-         xgt 'fight','1'
+		 spSStormExp=spSStormExp+1
+		 manna=manna-ssmannaNeed
+		 '<font color=green>Вы собрали энергию в руку и преобразовали ее в песок который закружился с бешеной скоростью</font>'
+		 sandstorm=sandstorm+5
+         xgt'fight','1'
 		 end
 	 end
 end 
 
 
 
-if round>= 3: 
-	 if spSandShild>= 100 and manna>= 100: 
-		 act 'Песчаный щит 100 маны': 
+if round>=3: 
+	 if spSandShild>=100 and manna>=100:
+		 act 'Песчаный щит 100 маны':
 		 cla
-		 spSandShildExp = spSandShildExp+1
-		 manna = manna-100
-		 '<font color = green>Вы собрали энергию в руку и подняли песок с земли защищая себя.</font>'
-		 defence = defence+8000+spSandShildExp
-		 xgt 'fight','1'
+		 spSandShildExp=spSandShildExp+1
+		 manna=manna-100
+		 '<font color=green>Вы собрали энергию в руку и подняли песок с земли защищая себя.</font>'
+		 defence=defence+8000+spSandShildExp
+		 xgt'fight','1'
 		 end
 	 end
 end 
 
 
-if round>= 4: 
-	 if spSandUdar>= 100 and manna>= 150: 
-		 act 'Земляной удар 150 маны': 
+if round>=4: 
+	 if spSandUdar>=100 and manna>=150:
+		 act 'Земляной удар 150 маны':
 		 cla
-		 spSandUdarExp = spSandUdarExp+1
-		 manna = manna-150
-		 '<font color = green>Вы собрали энергию в руку и подняв песок с земли метнули его в противника.</font>'
-		 damage = RAND(300,500+spSandUdarExp)
-		 if fint>0: fint = 0
-	     if zerkalo>0: zerkalo = 0 & '<B><font color = green>Зеркала противника лопнули.</font></B>'
-		 gs 'defenceV'
-		 xgt 'fight','1'
+		 spSandUdarExp=spSandUdarExp+1
+		 manna=manna-150
+		 '<font color=green>Вы собрали энергию в руку и подняв песок с земли метнули его в противника.</font>'
+		 damage=RAND(300,500+spSandUdarExp)
+		 if fint>0:fint=0
+	     if zerkalo>0:zerkalo=0&'<B><font color=green>Зеркала противника лопнули.</font></B>'
+		 gs'defenceV'
+		 xgt'fight','1'
 		 end
 	 end
 end 
 
-if round>= 5: 
-	 if spSandAbsolut>= 100 and manna>= 500 and SandAbsolutOnce = 0: 
-		 act 'Абсолютная защита 500 маны (можно создать 1 раз за бой)': 
+if round>=5: 
+	 if spSandAbsolut>=100 and manna>=500 and SandAbsolutOnce=0:
+		 act 'Абсолютная защита 500 маны (можно создать 1 раз за бой)':
 		 cla
-		 SandAbsolutOnce = 1
-		 manna = manna-500
-		 '<font color = green>Вы создали вокруг себя абсолютную защиту.</font>'
-		 defence = defence+10000
-		 defenceT = defenceT+3500
-		 defenceW = defenceW+3500
-		 xgt 'fight','1'
+		 SandAbsolutOnce=1
+		 manna=manna-500
+		 '<font color=green>Вы создали вокруг себя абсолютную защиту.</font>'
+		 defence=defence+10000
+		 defenceT=defenceT+3500
+		 defenceW=defenceW+3500
+		 xgt'fight','1'
 		 end
 	 end
 	 
-	 if InGround<= 0 and manna>= 500 and spSandInGround>= 100: 
-	 	 act 'Погружение 500 маны (потребляет 250 маны за ход)': 
+	 if InGround<=0 and manna>=500 and spSandInGround>=100:
+	 	 act 'Погружение 500 маны (потребляет 250 маны за ход)':
 		 cla
-		 InGround = InGround+5
-		 manna = manna-500
-		 '<font color = green>Вы начали медленно погружатся в землю.</font>'
-		 xgt 'fight','1'
+		 InGround=InGround+5
+		 manna=manna-500
+		 '<font color=green>Вы начали медленно погружатся в землю.</font>'
+		 xgt'fight','1'
 		 end
 		 
 	 end
 	 
-	 if manna>= 500 and spSandInGroundAtk>= 100: 
-	 	 act 'Подземная атака 500 маны': 
+	 if manna>=500 and spSandInGroundAtk>=100:
+	 	 act 'Подземная атака 500 маны':
 		 cla
-		 manna = manna-500
-		 '<font color = green>Вы быстро погрузились в землю.</font>'
-		 damage = RAND(stren,stren*2)
-		 UnAtk = 1
-		 gs 'defenceV'
-		 xgt 'fight','1'
+		 manna=manna-500
+		 '<font color=green>Вы быстро погрузились в землю.</font>'
+		 damage=RAND(stren,stren*2)
+		 UnAtk=1
+		 gs'defenceV'
+		 xgt'fight','1'
 		 end
 		 
 	 end
 	 
-	 if spSandUdarPlita>= 100 and manna>= 150: 
-		 act 'Удар плитами 150 маны': 
+	 if spSandUdarPlita>=100 and manna>=150:
+		 act 'Удар плитами 150 маны':
 		 cla
-		 spSandUdarPlitaExp+= 1
-		 manna = manna-150
-		 '<font color = green>Вы собрали энергию в руку и подняв две земляные плиты ударили ими противника.</font>'
-		 damage = RAND(800+spSandUdarPlitaExp*2,1200+spSandUdarPlitaExp*3)
-		 $tipurona = 'Удар земляными плитами'
-		 gs 'defenceV'
-		 xgt 'fight','1'
+		 spSandUdarPlitaExp+=1
+		 manna=manna-150
+		 '<font color=green>Вы собрали энергию в руку и подняв две земляные плиты ударили ими противника.</font>'
+		 damage=RAND(800+spSandUdarPlitaExp*2,1200+spSandUdarPlitaExp*3)
+		 $tipurona='Удар земляными плитами'
+		 gs'defenceV'
+		 xgt'fight','1'
 		 end
 	 end
 end 
 
 
 
-     act 'Пропустить ход': xgt 'fight','1'
+     act 'Пропустить ход':xgt'fight','1'
 --- spGROUND ---------------------------------
 

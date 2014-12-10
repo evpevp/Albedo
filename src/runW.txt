@@ -2,61 +2,61 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 clr
-gs 'stat'
+gs'stat'
 
-!pogonarand = RAND(0,10)
-if pogonarand = 0: $pogona = 'за вами никто не гонится'
-if pogonarand>0: $pogona = 'за вами гонится <<pogonarand>> стражников'
+!pogonarand=RAND(0,10)
+if pogonarand=0:$pogona='за вами никто не гонится'
+if pogonarand>0:$pogona='за вами гонится <<pogonarand>> стражников'
 
 'Вы улепетываете сломя голову и обернувшись видите что <<$pogona>>'
 
-if pogonarand = 0: 
-crime = 0
-	 act 'Перевести дух.': 
-	 minut += 1
+if pogonarand=0:
+crime=0
+	 act 'Перевести дух.':
+	 minut=minut+1
 	 GOTO $locFight, $metkaFight
 	 end
 end
 
-if pogonarand>0: 
+if pogonarand>0:
 'Ваша воля <<wipo>>'
-!beg = beg+1
+!beg=beg+1
 
-     if wipo>= 10: 
+     if wipo>=10:
      
-		 act 'Стараться оторваться от преследователей по прямой за счет скорости (10 воли).': 
+		 act 'Стараться оторваться от преследователей по прямой за счет скорости (10 воли).':
 		 cla
 		 *clr
-		 minut += 15
-		 wipo = wipo-10
-		 beg = beg+1
-		 porand = RAND(0,speed+beg-(fat/10))
-		     if porand>= 60: pogonarand = pogonarand-1
+		 minut=minut+15
+		 wipo=wipo-10
+		 beg=beg+1
+		 porand=RAND(0,speed+beg-(fat/10))
+		     if porand>=60:pogonarand=pogonarand-1
 		 'Вы ускорились изо всех сил, чтобы оторваться от погони.'
-		 act 'Оглянуться.': GOTO $CURLOC
+		 act 'Оглянуться.':GOTO $CURLOC
 		 end
 		 
-		 act 'Ловко прыгать через заборы, стараясь оторваться от преследователей (10 воли).': 
+		 act 'Ловко прыгать через заборы, стараясь оторваться от преследователей (10 воли).':
 		 cla
 		 *clr
-		 minut += 15
-		 wipo = wipo-10
-		 akrobat = akrobat+1
-		 porand = RAND(0,agil+akrobat-(fat/10))
-		     if porand>= 60: pogonarand = pogonarand-1
+		 minut=minut+15
+		 wipo=wipo-10
+		 akrobat=akrobat+1
+		 porand=RAND(0,agil+akrobat-(fat/10))
+		     if porand>=60:pogonarand=pogonarand-1
 		 'Вы ускорились изо всех сил, чтобы оторваться от погони.'
-		 act 'Оглянуться.': GOTO $CURLOC
+		 act 'Оглянуться.':GOTO $CURLOC
 		 end
 	 
 	 end
 	 
-	 act 'Сдаться.': 
+	 act 'Сдаться.':
 	 cla
 	 'Вы остановились и подняли руки сдаваясь стражникам. Они подбежали, скрутили вас и поволокли в министерство скорой расправы.'
-	 act 'Идти за стражниками.': gt 'nakazW'
+	 act 'Идти за стражниками.':gt'nakazW'
 	 end
 	 
-	 act 'Драться со стражей.': gt 'straboyW'
+	 act 'Драться со стражей.':gt'straboyW'
 end
 --- runW ---------------------------------
 

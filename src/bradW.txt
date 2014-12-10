@@ -6,112 +6,112 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Брадобрей</H4></center>'
-'<center><img src = "pic/Evedon/rinok4.jpg" ></center>'
+'<center><img src="pic/Evedon/rinok4.jpg" ></center>'
 'Всего 2 гема и брадобрей побреет ваше лицо очень чисто.'
 '10 гемов стрижка'
 '50 гемов перманентное окрашивание волос.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-if gem>= 2: 
-	 act 'Брить бороду': 
+if gem>=2:
+	 act 'Брить бороду':
 	 cla
-	 minut += 5
-	 gem = gem-2
+	 minut=minut+5
+	 gem=gem-2
 	 berd = -10
 	 'Брадобрей лихо орудуя бритвой сбрил бороду.'
-	 act 'Уйти': gt 'rinokW'
+	 act 'Уйти':gt'rinokW'
 	 end
 end
 
-if gem>= 10: 
-     act 'Постригать волосы на голове': 
+if gem>=10:
+     act 'Постригать волосы на голове':
      cla
-     minut += 30
-     gem = gem-10
-         act 'Коротко стрич': 
+     minut=minut+30
+     gem=gem-10
+         act 'Коротко стрич':
          cla
          *clr  
-         hlong = 0
+         hlong=0
          'Брадобрей коротко вас постриг оставив лишь ежик волос.'
-         act 'Уйти': gt 'rinokW'
+         act 'Уйти':gt'rinokW'
          end
          
-         if hlong>= 30: 
-             act 'Стрич до плеч': 
+         if hlong>=30:
+             act 'Стрич до плеч':
 			 cla
 			 *clr  
-			 hlong = 30
+			 hlong=30
 			 'Брадобрей постриг вам волосы до плеч.'
-			 act 'Уйти': gt 'rinokW'
+			 act 'Уйти':gt'rinokW'
 			 end
          end
          
-         if hlong>= 60: 
-             act 'Стрич до спины': 
+         if hlong>=60:
+             act 'Стрич до спины':
 			 cla
 			 *clr  
-			 hlong = 60
+			 hlong=60
 			 'Брадобрей постриг вам волосы до спины.'
-			 act 'Уйти': gt 'rinokW'
+			 act 'Уйти':gt'rinokW'
 			 end
          end
      end
 end
 
-if gem>= 50: 
-     act 'Красить волосы': 
+if gem>=50:
+     act 'Красить волосы':
      cla
-     minut += 30
-     gem = gem-50
-         if hcol ! 0: 
-			 act 'Покрасить в черный цвет': 
+     minut=minut+30
+     gem=gem-50
+         if hcol ! 0:
+			 act 'Покрасить в черный цвет':
 			 cla
 			 *clr  
-			 hcol = 0
+			 hcol=0
 			 'Брадобрей покрасил вам волосы в черный цвет.'
-			 act 'Уйти': gt 'rinokW'
+			 act 'Уйти':gt'rinokW'
 			 end
          end
          
-         if hcol ! 1: 
-			 act 'Покрасить в русый цвет': 
+         if hcol ! 1:
+			 act 'Покрасить в русый цвет':
 			 cla
 			 *clr  
-			 hcol = 1
+			 hcol=1
 			 'Брадобрей покрасил вам волосы в русый цвет.'
-			 act 'Уйти': gt 'rinokW'
+			 act 'Уйти':gt'rinokW'
 			 end
          end
          
-         if hcol ! 2: 
-			 act 'Покрасить в рыжий цвет': 
+         if hcol ! 2:
+			 act 'Покрасить в рыжий цвет':
 			 cla
 			 *clr  
-			 hcol = 2
+			 hcol=2
 			 'Брадобрей покрасил вам волосы в рыжий цвет.'
-			 act 'Уйти': gt 'rinokW'
+			 act 'Уйти':gt'rinokW'
 			 end
          end
          
-         if hcol ! 3: 
-			 act 'Покрасить в светлый цвет': 
+         if hcol ! 3:
+			 act 'Покрасить в светлый цвет':
 			 cla
 			 *clr  
-			 hcol = 3
+			 hcol=3
 			 'Брадобрей покрасил вам волосы в светлый цвет.'
-			 act 'Уйти': gt 'rinokW'
+			 act 'Уйти':gt'rinokW'
 			 end
          end
      end
 end
 
-act 'Отойти': 
-minut += 5
- gt 'rinokW'
+act 'Отойти':
+minut=minut+5
+gt'rinokW'
 end
 --- bradW ---------------------------------
 

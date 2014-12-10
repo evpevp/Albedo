@@ -1,46 +1,46 @@
 # RubiHomeW
-minut += 5
+minut=minut+5
 clr
-gs 'stat'
+gs'stat'
 *clr
-'<center><img src = "pic/EvedonNarod/rubi.jpg"></center>'
+'<center><img src="pic/EvedonNarod/rubi.jpg"></center>'
 
 'Вы прошли в комнату Руби, она закрыла наружные двери в пекарню на ключ и прошла к вам.'
 'Она принесла с собой бутылку вина и два бокала.'
 
 
-act 'Уйти': 
-minut += 5
- gt 'teladareW'
+act 'Уйти':
+minut=minut+5
+gt'teladareW'
 end
 
-if penis>0: 
-	 act 'Отвести к кровати': 
+if penis>0:
+	 act 'Отвести к кровати':
 	 cla
 	 *clr
 	 'Вы взяли Руби за руку и подвели к кровати. Сидя на кровати, вы начали целоваться с языком. Не прекращая поцелуя, вы начали снимать с себя и Руби одежду. Руби обхватила ваш член своей рукой и скользнула с кровати, вставая на колени.'
-		 act '......': 
+		 act '......':
 		 cla
 		 *clr
-		 '<center><img src = "pic/EvedonTA/rubi.jpg" ></center>'
+		 '<center><img src="pic/EvedonTA/rubi.jpg" ></center>'
 		 'Руби, соскользнув на пол, удерживает ваш член в руках и разглядывает: "Какой хорошенький", - сказала она и начала его лизать. Рот Руби начинает плясать вдоль длины вашего члена, то делая это нежно и деликатно, то отсасывая с громкими чмокающими звуками. Вы уже готовы кончить и отрываете ее рот от своего члена.'
-			 act 'Поставить раком': 
+			 act 'Поставить раком':
 			 cla
 			 *clr
-			 if rubiSex = 0: rubiSex = 1 & guy = guy+1
-			 aktman = aktman+1
-			 horny = 0
-			 manna = manna+250
-			 '<center><img src = "pic/EvedonTA/rubi2.jpg" ></center>'
+			 if rubiSex=0:rubiSex=1&guy=guy+1
+			 aktman=aktman+1
+			 horny=0
+			 manna=manna+250
+			 '<center><img src="pic/EvedonTA/rubi2.jpg" ></center>'
 			 'Вы встали сзади Руби и толкнув в спину поставили на четвереньки. Руби выгнула поясницу, подставляя свою попу и закрыв глаза прикусила губу. Она застонала и вцепилась ладонями в простынь когда ваш член смазанный ее слюной вошел в ее анус. После нескольких десятков движений в тесном очке Руби вы уже не могли сдерживать себя и войдя в нее до самого основания кончили.'
-				 act '......': 
+				 act '......':
 				 cla
 				 *clr
-				 '<center><img src = "pic/EvedonTA/rubi3.jpg" ></center>'
+				 '<center><img src="pic/EvedonTA/rubi3.jpg" ></center>'
 				 'Вы вынули член и из попы Руби начала сочится ваша сперма. Она обессилено сказала вам: "Это было фантастично!"'
-					 act 'Уйти': 
-					 minut += 5
-					 gt 'teladareW'
+					 act 'Уйти':
+					 minut=minut+5
+					 gt'teladareW'
 					 end
 				 end
 			 end
@@ -48,20 +48,20 @@ if penis>0:
 	 end
 end
 
-act 'Подрочить Руби': 
+act 'Подрочить Руби':
 cla
 *clr
-horny = horny+25
+horny=horny+25
 'Вы приказали Руби снять трусики и она, задрав юбку, скинула их на пол.'
-     act 'Взять ее член в руку': 
+     act 'Взять ее член в руку':
 	 cla
 	 *clr
-	 horny = horny+25
-	 '<center><img src = "pic/EvedonTA/rubi4.jpg" ></center>'
+	 horny=horny+25
+	 '<center><img src="pic/EvedonTA/rubi4.jpg" ></center>'
 	 'Вы нагнули Руби и принялись дрочить ее член. Руби начала постанывать и очень быстро кончила на пол.'
-		 act 'Уйти': 
-		 minut += 5
-		 gt 'teladareW'
+		 act 'Уйти':
+		 minut=minut+5
+		 gt'teladareW'
 		 end
 	 end
 end

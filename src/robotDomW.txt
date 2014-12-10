@@ -7,20 +7,20 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Дом</H4></center>'
-'<center><img src = "pic/Evedon/robotDom.jpg" ></center>'
-'Небольшой домик забит всякими техническими приспособлениями и чертежами, среди всего этого, внутри какого-то механизма что-то увлеченно делает ((девушка|robotGirlW|minut += 5)).'
+'<center><img src="pic/Evedon/robotDom.jpg" ></center>'
+'Небольшой домик забит всякими техническими приспособлениями и чертежами, среди всего этого, внутри какого-то механизма что-то увлеченно делает ((девушка|robotGirlW|minut=minut+5)).'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-!'За стойкой стоит скучает <a href = "exec: gt ''tagirlW''">трактирщица</a>.'
+!'За стойкой стоит скучает <a href="exec:GT ''tagirlW''">трактирщица</a>.'
 
 
-act 'Выйти': 
-minut += 5
- gt 'df2_4'
+act 'Выйти':
+minut=minut+5
+gt'df2_4'
 end
 --- robotDomW ---------------------------------
 

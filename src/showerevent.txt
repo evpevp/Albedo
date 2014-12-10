@@ -1,167 +1,167 @@
 # showerevent
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-     if inurishower>= 0: 
-     '<center><img src = "pic/EvedonNarod/inuri.jpg"></center>'
+set minut = minut + 5
+     if inurishower>=0:
+     '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
      'В вашу душевую заглянула Инури. Ой <<$name>> можно я с тобой помоюсь, а то все кабинки заняты.'
-         act 'Я сейчас домоюсь, потом заходи.': 
+         act 'Я сейчас домоюсь, потом заходи.':
          cla
-             if SUB = 0: 
-             DOM = DOM+1
+             if SUB=0:
+             DOM=DOM+1
              'Вы отказали Инури и домывшись освободили душевую для нее.'
-             act 'Уйти.': gt 'tasportW'
+             act 'Уйти.':gt'tasportW'
              end
-             if SUB>0: 
+             if SUB>0:
              'Вы только что-то промямлили и скорчили недовольную мину, чтобы отказать у вас не хватило решимости.'
-             act 'Подвинуться и пустить Инури в душ.': gt 'showerevent','inuri'
+             act 'Подвинуться и пустить Инури в душ.':gt'showerevent','inuri'
              end
          end
          
          
-         act 'Заходи, вдвоем веселее.': gt 'showerevent','inuri'
+         act 'Заходи, вдвоем веселее.':gt'showerevent','inuri'
      end
 end
 
-if $ARGS[0] = 'inuri': 
+if $ARGS[0]='inuri':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-horny = horny+30
+set minut = minut + 5
+horny=horny+30
 clr
-gs 'stat'
-'<center><img src = "pic/EvedonTA/inurishower.jpg" ></center>'
+gs'stat'
+'<center><img src="pic/EvedonTA/inurishower.jpg" ></center>'
 'Голая Инури забежала в душевую и вы увидили что у нее между ног член. Который тут же начал вставать. Инури мылась под душем и как бы случайно дотрагивалась до вас то грудью, то попой.'
 'Потрешь мне спинку? - сказала вам Инури невинно хлопая глазками и протягивая вам мочалку.'
-     if SUB<5: 
-     act 'Я уже домылась и мне пора уходить': gt 'tasportW'
+     if SUB<5:
+     act 'Я уже домылась и мне пора уходить':gt'tasportW'
      end
      
-     act 'Потереть ей спину': 
+     act 'Потереть ей спину':
      cla
      *clr
-     '<center><img src = "pic/EvedonTA/inurishower2.jpg" ></center>'
+     '<center><img src="pic/EvedonTA/inurishower2.jpg" ></center>'
      'Вы стали натирать Инури мочалкой и заметили как ее член напрягся и полностью встал готовый к бою.'
-         act 'Мыть ее член': gt 'showerevent','inuri2'
+         act 'Мыть ее член':gt'showerevent','inuri2'
          
-         act 'Закончить мытье': 
+         act 'Закончить мытье':
          cla
          'Инури напряженным голосом попросила вас вымыть ее член'
-             act 'Мыть ее член': gt 'showerevent','inuri2'
+             act 'Мыть ее член':gt'showerevent','inuri2'
              
-             if SUB<10: 
-             act 'Я уже домылась и мне пора уходить': gt 'tasportW'
+             if SUB<10:
+             act 'Я уже домылась и мне пора уходить':gt'tasportW'
              end
          end
      end
 
 end
 
-if $ARGS[0] = 'inuri2': 
+if $ARGS[0]='inuri2':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-horny = horny+10
-inurishower = inurishower+1
-inurishowerday = day
+set minut = minut + 5
+horny=horny+10
+inurishower=inurishower+1
+inurishowerday=day
 clr
-gs 'stat'
-'<center><img src = "pic/EvedonTA/inurishower3.jpg" ></center>'
+gs'stat'
+'<center><img src="pic/EvedonTA/inurishower3.jpg" ></center>'
 'Вы начали мыть член Инури и она начала стонать от удовольствия'
-     act 'Подрочить ей член': gt 'showerevent','inuri3'
+     act 'Подрочить ей член':gt'showerevent','inuri3'
      
-     act 'Обхватить губами': gt 'showerevent','inuri4'
+     act 'Обхватить губами':gt'showerevent','inuri4'
      
-     act 'Мыть дальше': gt 'showerevent','inuri5'
+     act 'Мыть дальше':gt'showerevent','inuri5'
 
 end
 
-if $ARGS[0] = 'inuri3': 
+if $ARGS[0]='inuri3':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-horny = horny+10
+set minut = minut + 5
+horny=horny+10
 clr
-gs 'stat'
-'<center><img src = "pic/EvedonTA/insh4.jpg" ></center>'
+gs'stat'
+'<center><img src="pic/EvedonTA/insh4.jpg" ></center>'
 'Вы впились губами в грудь Инури и начали ее сосать, одновременно лаская ее член рукой.'
-     act 'Обхватить губами': gt 'showerevent','inuri4'
+     act 'Обхватить губами':gt'showerevent','inuri4'
 end
 
-if $ARGS[0] = 'inuri4': 
+if $ARGS[0]='inuri4':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-horny = horny+10
-bj = bj+1
-if inurisex = 0: inurisex = 1 & futa = futa+1
+set minut = minut + 5
+horny=horny+10
+bj=bj+1
+if inurisex=0:inurisex=1&futa=futa+1
 clr
-gs 'stat'
-'<center><img src = "pic/EvedonTA/insh3.jpg" ></center>'
+gs'stat'
+'<center><img src="pic/EvedonTA/insh3.jpg" ></center>'
 'Вы обхватили член Инури губами и начали сосать ее член.'
-gs 'cumslut'
-posrand = RAND(0,2)
-     if posrand = 0: 
-     cumlip = cumlip+1
-     swallow = swallow+1
+gs'cumslut'
+posrand=RAND(0,2)
+     if posrand=0:
+     cumlip=cumlip+1
+     swallow=swallow+1
      'Инури не выдерживает и кончает вам в рот.'
-     gs 'passeffect'
-     act 'Уйти': gt 'tasportW'
+     gs'passeffect'
+     act 'Уйти':gt'tasportW'
      end
-     if posrand = 1: 
-     cumface = cumface+1
-     facial = facial+1
+     if posrand=1:
+     cumface=cumface+1
+     facial=facial+1
      'Инури достает свой член из вашего рта и кончает вам на лицо.'
-     gs 'passeffect'
-     act 'Уйти': gt 'tasportW'
+     gs'passeffect'
+     act 'Уйти':gt'tasportW'
      end
-     if posrand = 2: 
+     if posrand=2:
      'Инури поднимает вас с колен и шепчет "Я хочу тебя!"'
-     act '.......': gt 'showerevent','inuri5'
+     act '.......':gt'showerevent','inuri5'
      end
 end
 
-if $ARGS[0] = 'inuri5': 
+if $ARGS[0]='inuri5':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-horny = horny+10
-vag = vag+3
-sex = sex+1
-if inurisex = 0: inurisex = 1 & futa = futa+1
+set minut = minut + 5
+horny=horny+10
+vag=vag+3
+sex=sex+1
+if inurisex=0:inurisex=1&futa=futa+1
 clr
-gs 'stat'
-picrand = RAND(0,2)
-if picrand = 0: '<center><img src = "pic/EvedonTA/insh.jpg" ></center>'
-if picrand = 1: '<center><img src = "pic/EvedonTA/insh2.jpg" ></center>'
-if picrand = 2: '<center><img src = "pic/EvedonTA/insh5.jpg" ></center>'
+gs'stat'
+picrand=RAND(0,2)
+if picrand=0:'<center><img src="pic/EvedonTA/insh.jpg" ></center>'
+if picrand=1:'<center><img src="pic/EvedonTA/insh2.jpg" ></center>'
+if picrand=2:'<center><img src="pic/EvedonTA/insh5.jpg" ></center>'
 'Инури немного нагнула вас и подойдя сзади стала пальчиками ласкать вашу киску. После чего вы почувствовали как ее член входит в вашу мокрую киску. Инури сначала плавно, а затем все убыстряясь начала трахать вас в душевой.'
-gs 'femorg'
-posrand = RAND(0,1)
-     if posrand = 0: 
-     cumpussy = cumpussy+1
+gs'femorg'
+posrand=RAND(0,1)
+     if posrand=0:
+     cumpussy=cumpussy+1
      'Инури не выдерживает и кончает вам в киску, струи ее спермы сильно ударяют вам в матку.'
-     gs 'passeffect'
-     act 'Уйти': gt 'tasportW'
+     gs'passeffect'
+     act 'Уйти':gt'tasportW'
      end
-     if posrand = 1: 
-     cumass = cumss+1
+     if posrand=1:
+     cumass=cumss+1
      'Инури достает свой член из вашей мягкой и красной киски и кончает вам на попку.'
-     gs 'passeffect'
-     act 'Уйти': gt 'tasportW'
+     gs'passeffect'
+     act 'Уйти':gt'tasportW'
      end
 end
 
@@ -170,51 +170,51 @@ end
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!ХЕКЕЛЬ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-if $ARGS[0] = 'start2': 
+if $ARGS[0]='start2':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-     if inurishower>= 0: 
-     '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
+set minut = minut + 5
+     if inurishower>=0:
+     '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
      'В вашу душевую вошла Хекель. "Хм <<$name>> у тебя красивое тело." Она начала вас разглядывать и вы заметили как у нее начал вставать член.'
-         act 'Выскользнуть из душа.': 
+         act 'Выскользнуть из душа.':
          cla
-             if SUB = 0: 
-             DOM = DOM+1
+             if SUB=0:
+             DOM=DOM+1
              'Вы проскользнули мимо Хекель и выбежали из душа.'
-             act 'Уйти.': gt 'tasportW'
+             act 'Уйти.':gt'tasportW'
              end
-             if SUB>0: 
+             if SUB>0:
              'Вы попытались выскользнуть из душа, но Хекель преградила вам путь.'
-             act '....': gt 'showerevent','hekel'
+             act '....':gt'showerevent','hekel'
              end
          end
          
          
-         act 'У тебя тоже, красивое тело.': gt 'showerevent','hekel'
+         act 'У тебя тоже, красивое тело.':gt'showerevent','hekel'
      end
 end
 
 
-if $ARGS[0] = 'hekel': 
+if $ARGS[0]='hekel':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-anus = anus+5
-anal = anal+1
+anus=anus+5
+anal=anal+1
 minut = minut + 15
-'<center><img src = "pic/EvedonTA/heksho.jpg" ></center>'
+'<center><img src="pic/EvedonTA/heksho.jpg" ></center>'
 'Хекль грубо нагнула вас и плюнув пару раз на свой член начала заталкивать вам его в анус.'
 'Не дожидаясь пока пройдет боль в попе, она начала трахать вас в зад своим огромным членом.'
-gs 'analslut'
-cumanus = cumanus+1
+gs'analslut'
+cumanus=cumanus+1
 'Наконец она кончила вам в попу, распространив там приятное тепло.'
-gs 'passeffect'
+gs'passeffect'
 'Хекель вынула член из вашего зада и встала под душ.'
-act 'Уйти.': gt 'tasportW'
+act 'Уйти.':gt'tasportW'
 end
 
 

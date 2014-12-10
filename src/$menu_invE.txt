@@ -1,9 +1,9 @@
 # $menu_invE
-if $selobj = 'Инвентарь': 
+if $selobj='Инвентарь':
 *clr
 cla
- gt 'mirrorf'
-     act 'Закрыть сумочку.': 
+gt'mirrorf'
+     act 'Закрыть сумочку.':
      GOTO $loc, $metka
      end
 end

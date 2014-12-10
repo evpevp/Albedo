@@ -1,373 +1,373 @@
 # ofirinasex
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 60
+set minut = minut + 60
 clr
-gs 'stat'
-if ofirinaQW = 1: girl = girl+1 & ofirinaQW = 2
- sexm = sexm+1
-'<center><img src = "pic\fam\irina\kv\irina_22.jpg" ></center>'
+gs'stat'
+if ofirinaQW=1:girl=girl+1&ofirinaQW=2
+set sexm=sexm+1
+'<center><img src="pic\fam\irina\kv\irina_22.jpg" ></center>'
 'Вы приехали на такси к дому Иры. Зашли в ее квартиру. Она сходила переодеться и пришла к вам.'
-	 act 'Предоставить инициативу': gt 'ofirinasex','ona1'
-	 act 'Взять инициативу': gt 'ofirinasex','on1'	
+	 act 'Предоставить инициативу':gt'ofirinasex','ona1'
+	 act 'Взять инициативу':gt'ofirinasex','on1'	
 end
 
-if $ARGS[0] = 'ona1': 
+if $ARGS[0]='ona1':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_beforsex_2.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_beforsex_2.gif" ></center>'
 'Ирина повалила вас на кровать и стала целовать, лаская при этом своей рукой ваш подымающийся член.'
-     act 'Далее': gt 'ofirinasex','ona2'
+     act 'Далее':gt'ofirinasex','ona2'
 end
 
 
-if $ARGS[0] = 'ona2': 
+if $ARGS[0]='ona2':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_bj_10.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_bj_10.gif" ></center>'
 'Затем она стала опускаться всё ниже и стянула с вас трусы зубами.'
-     act 'Далее': gt 'ofirinasex','ona3'
+     act 'Далее':gt'ofirinasex','ona3'
 end
 
-if $ARGS[0] = 'ona3': 
+if $ARGS[0]='ona3':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irina_bj_11.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irina_bj_12.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irina_bj_11.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irina_bj_12.gif" ></center>'
 'Добравшись до вашего уже напрягшегося члена, Ирина стала медленно с ним играть- то покусывая, то облизывая.'
-     act 'Далее': gt 'ofirinasex','ona4'
+     act 'Далее':gt'ofirinasex','ona4'
 end
 
-if $ARGS[0] = 'ona4': 
+if $ARGS[0]='ona4':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,6)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irina_bj_1.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irina_bj_2.gif" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\irina\kv\irina_bj_15.gif" ></center>'
-if picrand = 3: '<center><img src = "pic\fam\irina\kv\irina_bj_17.gif" ></center>'
-if picrand = 4: '<center><img src = "pic\fam\irina\kv\irina_bj_18.gif" ></center>'
-if picrand = 5: '<center><img src = "pic\fam\irina\kv\irina_bj_23.gif" ></center>'
-if picrand = 6: '<center><img src = "pic\fam\irina\kv\irina_bj_26.gif" ></center>'
+gs'stat'
+picrand=RAND(0,6)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irina_bj_1.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irina_bj_2.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\kv\irina_bj_15.gif" ></center>'
+if picrand=3:'<center><img src="pic\fam\irina\kv\irina_bj_17.gif" ></center>'
+if picrand=4:'<center><img src="pic\fam\irina\kv\irina_bj_18.gif" ></center>'
+if picrand=5:'<center><img src="pic\fam\irina\kv\irina_bj_23.gif" ></center>'
+if picrand=6:'<center><img src="pic\fam\irina\kv\irina_bj_26.gif" ></center>'
 'Затем она полностью погрузила его в рот и стала активно сосать и заглатывать'
-     act 'Не сдержаться и кончить в рот Ирине': gt 'ofirinasex','konec1'
-     act 'Продолжить': gt 'ofirinasex','ona5'
+     act 'Не сдержаться и кончить в рот Ирине':gt'ofirinasex','konec1'
+     act 'Продолжить':gt'ofirinasex','ona5'
 end
 
-if $ARGS[0] = 'konec1': 
+if $ARGS[0]='konec1':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-manna = manna+50
+set minut = minut + 5
+horny=0
+manna=manna+50
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_cum_12.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_cum_12.gif" ></center>'
 'Ирина довела вас до пика блаженства своими оральными ласками. Вы не выдержали этой сладострастной муки и стали обильно кончать ей в рот.'
-     act 'Уйти': gt 'street'
+     act 'Уйти':gt'street'
 end
 
-if $ARGS[0] = 'ona5': 
+if $ARGS[0]='ona5':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,5)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irinafuck_12.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irinafuck_21.gif" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\irina\kv\irinafuck_28.gif" ></center>'
-if picrand = 3: '<center><img src = "pic\fam\irina\kv\irinafuck_29.gif" ></center>'
-if picrand = 4: '<center><img src = "pic\fam\irina\kv\irinafuck_63.gif" ></center>'
-if picrand = 5: '<center><img src = "pic\fam\irina\kv\irinafuck_45.gif" ></center>'
+gs'stat'
+picrand=RAND(0,5)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irinafuck_12.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irinafuck_21.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\kv\irinafuck_28.gif" ></center>'
+if picrand=3:'<center><img src="pic\fam\irina\kv\irinafuck_29.gif" ></center>'
+if picrand=4:'<center><img src="pic\fam\irina\kv\irinafuck_63.gif" ></center>'
+if picrand=5:'<center><img src="pic\fam\irina\kv\irinafuck_45.gif" ></center>'
 'Ирина заметила, что вы уже на грани и решила не терять времени. Оседлав вас уже изрядно потёкшей киской, она стала насаживаться на ваш пылающий член.'
-     act 'Кончить': gt 'ofirinasex','ona6'
+     act 'Кончить':gt'ofirinasex','ona6'
 end
 
-if $ARGS[0] = 'ona6': 
+if $ARGS[0]='ona6':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-manna = manna+25
-wipo = wipo+25
+set minut = minut + 5
+horny=0
+manna=manna+25
+wipo=wipo+25
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_cum_15.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_cum_15.gif" ></center>'
 'Через несколько минут вы оба стали кончать. Когда Ирина немного поднялась из её киски закапала ваша сперма.'
-     act 'Продолжить': gt 'ofirinasex','konec2'
+     act 'Продолжить':gt'ofirinasex','konec2'
 end
 
-if $ARGS[0] = 'konec2': 
+if $ARGS[0]='konec2':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_21.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_21.jpg" ></center>'
 'Ирина сказала, что ей очень понравилось и она хотела бы как-нибудь всё повторить. И ушла в душ. А вы стали собираться по своим делам, пообещав что позвоните на неделе.'
-     act 'Уйти': gt 'street','start'
+     act 'Уйти':gt'street','start'
 end
 
-if $ARGS[0] = 'on1': 
+if $ARGS[0]='on1':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_beforsex_6.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_beforsex_6.gif" ></center>'
 'Ирина призывно легла на кровать, ожидая от вас первого шага.'
-     act 'Раздевать и целовать': gt 'ofirinasex','on2'
+     act 'Раздевать и целовать':gt'ofirinasex','on2'
 end
 
-if $ARGS[0] = 'on2': 
+if $ARGS[0]='on2':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irina_beforsex_7.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irina_beforsex_3.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irina_beforsex_7.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irina_beforsex_3.gif" ></center>'
 'Вы подошли к ней и стали раздевать и целовать.'
-     act 'Дать в рот': gt 'ofirinasex','on3'
-     act 'Сделать куни': gt 'ofirinasex','kuni'
-     act 'Секс': gt 'ofirinasex','on4'    
+     act 'Дать в рот':gt'ofirinasex','on3'
+     act 'Сделать куни':gt'ofirinasex','kuni'
+     act 'Секс':gt'ofirinasex','on4'    
 end
 
-if $ARGS[0] = 'on3': 
+if $ARGS[0]='on3':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,12)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irina_bj_1.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irina_bj_2.gif" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\irina\kv\irina_bj_15.gif" ></center>'
-if picrand = 3: '<center><img src = "pic\fam\irina\kv\irina_bj_17.gif" ></center>'
-if picrand = 4: '<center><img src = "pic\fam\irina\kv\irina_bj_18.gif" ></center>'
-if picrand = 5: '<center><img src = "pic\fam\irina\kv\irina_bj_23.gif" ></center>'
-if picrand = 6: '<center><img src = "pic\fam\irina\kv\irina_bj_26.gif" ></center>'
-if picrand = 7: '<center><img src = "pic\fam\irina\kv\irina_bj_6.gif" ></center>'
-if picrand = 8: '<center><img src = "pic\fam\irina\kv\irina_bj_13.gif" ></center>'
-if picrand = 9: '<center><img src = "pic\fam\irina\kv\irina_bj_19.gif" ></center>'
-if picrand = 10: '<center><img src = "pic\fam\irina\kv\irina_bj_25.gif" ></center>'
-if picrand = 11: '<center><img src = "pic\fam\irina\kv\irina_bj_30.gif" ></center>'
-if picrand = 12: '<center><img src = "pic\fam\irina\kv\irina_bj_31.gif" ></center>'
+gs'stat'
+picrand=RAND(0,12)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irina_bj_1.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irina_bj_2.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\kv\irina_bj_15.gif" ></center>'
+if picrand=3:'<center><img src="pic\fam\irina\kv\irina_bj_17.gif" ></center>'
+if picrand=4:'<center><img src="pic\fam\irina\kv\irina_bj_18.gif" ></center>'
+if picrand=5:'<center><img src="pic\fam\irina\kv\irina_bj_23.gif" ></center>'
+if picrand=6:'<center><img src="pic\fam\irina\kv\irina_bj_26.gif" ></center>'
+if picrand=7:'<center><img src="pic\fam\irina\kv\irina_bj_6.gif" ></center>'
+if picrand=8:'<center><img src="pic\fam\irina\kv\irina_bj_13.gif" ></center>'
+if picrand=9:'<center><img src="pic\fam\irina\kv\irina_bj_19.gif" ></center>'
+if picrand=10:'<center><img src="pic\fam\irina\kv\irina_bj_25.gif" ></center>'
+if picrand=11:'<center><img src="pic\fam\irina\kv\irina_bj_30.gif" ></center>'
+if picrand=12:'<center><img src="pic\fam\irina\kv\irina_bj_31.gif" ></center>'
 'Вы взяли Ирину за голову и наклонили к своему члену. Она сразу погрузила его глубоко себе в рот и причмокивая стала скользить по стволу губами.'
-	 act 'Не сдержаться и кончить в рот Ирине': gt 'ofirinasex','konec1'
-	 act 'Секс': gt 'ofirinasex','on4'
+	 act 'Не сдержаться и кончить в рот Ирине':gt'ofirinasex','konec1'
+	 act 'Секс':gt'ofirinasex','on4'
 end
 
-if $ARGS[0] = 'on4': 
+if $ARGS[0]='on4':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,3)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irinafuck_57.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irinafuck_25.gif" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\irina\kv\irinafuck_8.gif" ></center>'
-if picrand = 3: '<center><img src = "pic\fam\irina\kv\irinafuck_26.gif" ></center>'
+gs'stat'
+picrand=RAND(0,3)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irinafuck_57.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irinafuck_25.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\kv\irinafuck_8.gif" ></center>'
+if picrand=3:'<center><img src="pic\fam\irina\kv\irinafuck_26.gif" ></center>'
 'Затем вы положили Ирину на кровать, раскинули её шикарные ножки и вошли в истекающую соками киску.'
 'Ирина стала сладко постанывать, когда вы стали наращивать темп и хлопать пахом о её разгорячённое тело.'
-     act 'Сменить позу': gt 'ofirinasex','on5'
-     act 'Анал': gt 'ofirinasex','anal'
+     act 'Сменить позу':gt'ofirinasex','on5'
+     act 'Анал':gt'ofirinasex','anal'
 end
 
-if $ARGS[0] = 'on5': 
+if $ARGS[0]='on5':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,5)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irinafuck_39.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irinafuck_27.gif" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\irina\kv\irinafuck_7.gif" ></center>'
-if picrand = 3: '<center><img src = "pic\fam\irina\kv\irinafuck_33.gif" ></center>'
-if picrand = 4: '<center><img src = "pic\fam\irina\kv\irinafuck_41.gif" ></center>'
-if picrand = 5: '<center><img src = "pic\fam\irina\kv\irinafuck_54.gif" ></center>'
+gs'stat'
+picrand=RAND(0,5)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irinafuck_39.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irinafuck_27.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\kv\irinafuck_7.gif" ></center>'
+if picrand=3:'<center><img src="pic\fam\irina\kv\irinafuck_33.gif" ></center>'
+if picrand=4:'<center><img src="pic\fam\irina\kv\irinafuck_41.gif" ></center>'
+if picrand=5:'<center><img src="pic\fam\irina\kv\irinafuck_54.gif" ></center>'
 'Разогревшись, вы решили сменить позу и поставили Ирину задом. Член плавно скользнул внутрь и вы с наслаждением продолжили вгонять его в похотливую дырочку.'
 'Ирина получала огромное удовольствие, когда вы её трахали, призывая вас трахать её ещё сильнее и глубже.'
-     act 'Посадить на себя': gt 'ofirinasex','onsidya6'
-     act 'Положить на живот': gt 'ofirinasex','onlega6'
+     act 'Посадить на себя':gt'ofirinasex','onsidya6'
+     act 'Положить на живот':gt'ofirinasex','onlega6'
 end
 
-if $ARGS[0] = 'onsidya6': 
+if $ARGS[0]='onsidya6':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,5)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\kv\irinafuck_5.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irinafuck_21.gif" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\irina\kv\irinafuck_24.gif" ></center>'
-if picrand = 3: '<center><img src = "pic\fam\irina\kv\irinafuck_35.gif" ></center>'
-if picrand = 4: '<center><img src = "pic\fam\irina\kv\irinafuck_17.gif" ></center>'
-if picrand = 5: '<center><img src = "pic\fam\irina\kv\irinafuck_42.gif" ></center>'
+gs'stat'
+picrand=RAND(0,5)
+if picrand=0:'<center><img src="pic\fam\irina\kv\kv\irinafuck_5.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irinafuck_21.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\kv\irinafuck_24.gif" ></center>'
+if picrand=3:'<center><img src="pic\fam\irina\kv\irinafuck_35.gif" ></center>'
+if picrand=4:'<center><img src="pic\fam\irina\kv\irinafuck_17.gif" ></center>'
+if picrand=5:'<center><img src="pic\fam\irina\kv\irinafuck_42.gif" ></center>'
 'Затем вы легли на кровать и насадили Ирину на член сверху.'
 'Через пару минут Ирина содрогаясь всем телом кончила и обмякла'
-     act 'Трахать в рот': gt 'ofirinasex','onsidya7'
+     act 'Трахать в рот':gt'ofirinasex','onsidya7'
 end
 
-if $ARGS[0] = 'onsidya7': 
+if $ARGS[0]='onsidya7':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_bj_32.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_bj_32.gif" ></center>'
 'Вы встали, и взяв Ирину за голову стали трахать в рот'
-     act 'Кончить': gt 'ofirinasex','onsidya8'
+     act 'Кончить':gt'ofirinasex','onsidya8'
 end
 
-if $ARGS[0] = 'onsidya8': 
+if $ARGS[0]='onsidya8':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-wipo = wipo+50
+set minut = minut + 5
+horny=0
+wipo=wipo+50
 clr
-gs 'stat'
-picrand = RAND(0,6)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irina_cum_5.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irina_cum_3.gif" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\irina\kv\irina_cum_2.gif" ></center>'
-if picrand = 3: '<center><img src = "pic\fam\irina\kv\irina_cum_8.gif" ></center>'
-if picrand = 4: '<center><img src = "pic\fam\irina\kv\irina_cum_9.gif" ></center>'
-if picrand = 5: '<center><img src = "pic\fam\irina\kv\irina_cum_13.gif" ></center>'
-if picrand = 6: '<center><img src = "pic\fam\irina\kv\irina_cum_16.gif" ></center>'
+gs'stat'
+picrand=RAND(0,6)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irina_cum_5.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irina_cum_3.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\kv\irina_cum_2.gif" ></center>'
+if picrand=3:'<center><img src="pic\fam\irina\kv\irina_cum_8.gif" ></center>'
+if picrand=4:'<center><img src="pic\fam\irina\kv\irina_cum_9.gif" ></center>'
+if picrand=5:'<center><img src="pic\fam\irina\kv\irina_cum_13.gif" ></center>'
+if picrand=6:'<center><img src="pic\fam\irina\kv\irina_cum_16.gif" ></center>'
 'Достигнув пика наслаждения вы стали обильно покрывать её спермой.'
-     act 'Дальше': gt 'ofirinasex','konec3'
+     act 'Дальше':gt'ofirinasex','konec3'
 end
 
-if $ARGS[0] = 'konec3': 
+if $ARGS[0]='konec3':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_21_1.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_21_1.jpg" ></center>'
 'Ирина сказала, что ей очень понравилось, что хотела бы как-нибудь всё повторить и ушла в душ. А вы стали собираться по своим делам, пообещав что позвоните на неделе.'
-     act 'Уйти': gt 'street','start'
+     act 'Уйти':gt'street','start'
 end
 
-if $ARGS[0] = 'onlega6': 
+if $ARGS[0]='onlega6':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irinafuck_46.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irinafuck_22.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irinafuck_46.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irinafuck_22.gif" ></center>'
 'Затем вы не вынимая члена положили Ирину на живот и стали трахать хлопая пахом о её нежную задницу.'
 'Ирина выгибала попку вам на встречу и подмахивала вам в такт.'
-	 act 'Трахать в рот': gt 'ofirinasex','onsidya7'
-	 act 'Развернуть Ирину': gt 'ofirinasex','onlega7'
+	 act 'Трахать в рот':gt'ofirinasex','onsidya7'
+	 act 'Развернуть Ирину':gt'ofirinasex','onlega7'
 end
 
-if $ARGS[0] = 'onlega7': 
+if $ARGS[0]='onlega7':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irinafuck_55.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irinafuck_55.gif" ></center>'
 'Затем вы подняли Ирину и положили на край дивана. Вам невероятно нравилось её трахать, но вы уже не могли сдерживать себя.'
 'Ирина была в полуобморочном состоянии от множества оргазмов, то и дело сотрясающих её тело.'
-     act 'Кончить внутрь': gt 'ofirinasex','creampie1'
-     act 'Кончить снаружи': gt 'ofirinasex','bellycum1'
-     act 'Кончить по особому': gt 'ofirinasex','facecum1'
+     act 'Кончить внутрь':gt'ofirinasex','creampie1'
+     act 'Кончить снаружи':gt'ofirinasex','bellycum1'
+     act 'Кончить по особому':gt'ofirinasex','facecum1'
 end
 
-if $ARGS[0] = 'creampie1': 
+if $ARGS[0]='creampie1':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-wipo = wipo+50
+set minut = minut + 5
+horny=0
+wipo=wipo+50
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_cum_17.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_cum_17.gif" ></center>'
 'Как следует выебав Ирину, вы похрипывая от удовольствия наполнили её киску спермой.'
-     act 'Дальше': gt 'ofirinasex','konec2'
+     act 'Дальше':gt'ofirinasex','konec2'
 end
 
-if $ARGS[0] = 'bellycum1': 
+if $ARGS[0]='bellycum1':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-wipo = wipo+50
+set minut = minut + 5
+horny=0
+wipo=wipo+50
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irina_cum_1.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irina_cum_10.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irina_cum_1.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irina_cum_10.gif" ></center>'
 'Как следует выебав Ирину, вы похрипывая от удовольствия выняли член и стали покрывать ей тело спермой.'
 'Первую струю спермы она поймала ртом, вторая покрыла её грудь, третья живот..'
 'Массируя себе при этом клитор Ира вдруг, сотрясаясь от удовольствия, снова испытала оргазм.'
-     act 'Дальше': gt 'ofirinasex','konec3'
+     act 'Дальше':gt'ofirinasex','konec3'
 end
 
-if $ARGS[0] = 'facecum1': 
+if $ARGS[0]='facecum1':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-wipo = wipo+50
+set minut = minut + 5
+horny=0
+wipo=wipo+50
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\irina_cum_14.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\irina_cum_14.gif" ></center>'
 'Как следует выебав Ирину и похрипывая от удовольствия, вы вынули член и подняв её задницу кверху стали кончать на попку и киску так, что сперма стала стекать струйкой прямо в открытый рот Ирины.'
-     act 'Дальше': gt 'ofirinasex','konec2'
+     act 'Дальше':gt'ofirinasex','konec2'
 end
 
-if $ARGS[0] = 'kuni': 
+if $ARGS[0]='kuni':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-manna = manna+5
+set minut = minut + 5
+manna=manna+5
 clr
-gs 'stat'
-picrand = RAND(0,2)
-if picrand = 0: '<center><img src = "pic\fam\irina\kv\irina_kuni_4.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\irina\kv\irina_kuni_5.gif" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\irina\kv\irina_kuni_1.gif" ></center>'
+gs'stat'
+picrand=RAND(0,2)
+if picrand=0:'<center><img src="pic\fam\irina\kv\irina_kuni_4.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\irina\kv\irina_kuni_5.gif" ></center>'
+if picrand=2:'<center><img src="pic\fam\irina\kv\irina_kuni_1.gif" ></center>'
 'Ирина была столь восхитительной сегодня, что вы решили порадовать её своим фирменным куннилингусом.'
 'Через пару минут Ирина кончила охватив вашу голову руками и прижимая к истекающей соками киске.'
-	 act 'Дать в рот': gt 'ofirinasex','on3'
-	 act 'Секс': gt 'ofirinasex','on4' 
+	 act 'Дать в рот':gt'ofirinasex','on3'
+	 act 'Секс':gt'ofirinasex','on4' 
 end
 
-if $ARGS[0] = 'anal': 
+if $ARGS[0]='anal':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\irina\kv\Irina_ass_fingering_1.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\irina\kv\Irina_ass_fingering_1.gif" ></center>'
 'Вы засунули палец Ирине в попку и стали разогревать её, но она попросила оставить самое сладкое на потом. Вы не стали возражать.'
-	 act 'Сменить позу': gt 'ofirinasex','on5'
+	 act 'Сменить позу':gt'ofirinasex','on5'
 end
 --- ofirinasex ---------------------------------
 

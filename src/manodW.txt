@@ -1,254 +1,254 @@
 # manodW
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/roba.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/robaf.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/roba.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/robaf.jpg" ></center>'
 'Рубище.'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if roba = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if roba = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  roba = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set roba = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> руб и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 11
-			  roba = 2
+			 gs'clonil'
+			 set slot = 11
+			 set roba = 2
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/pesantclo.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/pesantclof.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/pesantclo.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/pesantclof.jpg" ></center>'
 'Крестьянская одежда.'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if pesantclo = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if pesantclo = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  pesantclo = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set pesantclo = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> руб и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 12
-			  pesantclo = 2
+			 gs'clonil'
+			 set slot = 12
+			 set pesantclo = 2
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '3': 
+if $ARGS[0]='3':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/townclo.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/towncloF.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/townclo.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/towncloF.jpg" ></center>'
 'Одежда горожанина.'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if townclo = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if townclo = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  townclo = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set townclo = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> руб и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 13
-			  townclo = 2
+			 gs'clonil'
+			 set slot = 13
+			 set townclo = 2
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '4': 
+if $ARGS[0]='4':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/dvorclo.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/dvorcloF.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/dvorclo.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/dvorcloF.jpg" ></center>'
 'Дворянская одежда.'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if dvorclo = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if dvorclo = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  dvorclo = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set dvorclo = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> руб и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 14
-			  dvorclo = 2
+			 gs'clonil'
+			 set slot = 14
+			 set dvorclo = 2
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '5': 
+if $ARGS[0]='5':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/rodvorclo.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/rodvorcloF.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/rodvorclo.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/rodvorcloF.jpg" ></center>'
 'Роскошная дворянская одежда.'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if rodvorclo = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if rodvorclo = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  rodvorclo = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set rodvorclo = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> руб и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 15
-			  rodvorclo = 2
+			 gs'clonil'
+			 set slot = 15
+			 set rodvorclo = 2
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '6': 
+if $ARGS[0]='6':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/pesantclo2.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/pesantclo2F.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/pesantclo2.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/pesantclo2F.jpg" ></center>'
 'Крестьянская одежда Тель Адре.'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if pesantclo2 = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if pesantclo2 = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  pesantclo2 = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set pesantclo2 = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> руб и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 12
-			  pesantclo2 = 2
+			 gs'clonil'
+			 set slot = 12
+			 set pesantclo2 = 2
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '7': 
+if $ARGS[0]='7':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/townclo2.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/townclo2f.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/townclo2.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/townclo2f.jpg" ></center>'
 'Одежда горожанина Тель Адре.'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if townclo2 = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if townclo2 = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  townclo2 = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set townclo2 = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> руб и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 13
-			  townclo2 = 2
+			 gs'clonil'
+			 set slot = 13
+			 set townclo2 = 2
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '8': 
+if $ARGS[0]='8':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/bodysuit.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/bodysuitf.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/bodysuit.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/bodysuitf.jpg" ></center>'
 'Нанокостюм, вооруженный пулеметом и гранатометом.'
 'Защита 500'
-if RocketTEH>0: 'У вас <<RocketTEH>> ракет в боезапасе'
-if RocketTEH>0: 'У вас <<RocketTEHzar>> ракет заряжено'
-if BulletTEH>0: 'У вас <<BulletTEH>> патронов'
-if ShildTEH>0: 'У вас <<ShildTEH>> батарей для энергощитов'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if bodysuit = 0 and mag = 1: 
+if RocketTEH>0:'У вас <<RocketTEH>> ракет в боезапасе'
+if RocketTEH>0:'У вас <<RocketTEHzar>> ракет заряжено'
+if BulletTEH>0:'У вас <<BulletTEH>> патронов'
+if ShildTEH>0:'У вас <<ShildTEH>> батарей для энергощитов'
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if bodysuit = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  bodysuit = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set bodysuit = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> руб и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'dynamic $act_GetNaked'
-			  slot = 500
-			  bodysuit = 2
-			 armorDef = 500
-			 spTEHNO = 1
+			 gs'dynamic $act_GetNaked'
+			 set slot = 500
+			 set bodysuit = 2
+			 armorDef=500
+			 spTEHNO=1
 			 
 			 GOTO $locP, $metkaP
 			 end

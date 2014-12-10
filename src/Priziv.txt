@@ -1,39 +1,39 @@
 # Priziv
 !призванные существа
 
-$prizivNill = {
-Phealth = 0
-priziv = 0
-prizivTimes = 0
-pstren = 0
-pspeed = 0
-pagil = 0
-pvital = 0
-pwill = 0
-pmanna = 0
-pwipo = 0
-prizivProgram = 0
-'<font color = #cd00cd><<$pname>> исчезает в облаке дыма</font>'
+$prizivNill={
+Phealth=0
+priziv=0
+prizivTimes=0
+pstren=0
+pspeed=0
+pagil=0
+pvital=0
+pwill=0
+pmanna=0
+pwipo=0
+prizivProgram=0
+'<font color=#cd00cd><<$pname>> исчезает в облаке дыма</font>'
 }
 
-if priziv>0: 
-'<font color = #cd00cd><<$pname>> охраняет вас Жизнь: <<Phealth>> Мана: <<pmanna>> Воля: <<pwipo>> Осталось ходов: <<prizivTimes>></font>'
-!prizivTimes- = 1
-     if Phealth>0 and prizivTimes>0 and pmanna>0 and pwipo>0: 
-         if prizivProgram = 0: 
+if priziv>0:
+'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> Мана:<<pmanna>> Воля:<<pwipo>> Осталось ходов:<<prizivTimes>></font>'
+!prizivTimes-=1
+     if Phealth>0 and prizivTimes>0 and pmanna>0 and pwipo>0:
+         if prizivProgram=0:
          !программа действий призванного существа
          !стена, просто стоит
          end
-         if prizivProgram = 1: 
-         '<font color = #cd00cd><<$pname>> атакует</font>'
-         damage = RAND(pstren,pstren*2)
-         gs 'damage'
+         if prizivProgram=1:
+         '<font color=#cd00cd><<$pname>> атакует</font>'
+         damage=RAND(pstren,pstren*2)
+         gs'damage'
          end
-         if prizivProgram = 2: 
-         forestPrisonTime+= 1
-         '<font color = #cd00cd><<$pname>> оттягивает ману противника на себя</font>'
-         damageM = 1000*forestPrisonTime
-         gs 'defenceMV'
+         if prizivProgram=2:
+         forestPrisonTime+=1
+         '<font color=#cd00cd><<$pname>> оттягивает ману противника на себя</font>'
+         damageM=1000*forestPrisonTime
+         gs'defenceMV'
          end
      else
      dynamic $prizivNill

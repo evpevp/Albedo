@@ -10,53 +10,53 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 mag = 1
 '<center><H4>Министерство скорой расправы</H4></center>'
-!'<center><img src = "Evedon\alhim.jpg" ></center>'
+!'<center><img src="Evedon\alhim.jpg" ></center>'
 '.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-if hour>= 6 and hour<= 23: 
+if hour>=6 and hour<=23:
 'Худой высокий мужчина с холодным взглядом сидит за столом и заполняет документы.'
 *clr
-'<center><img src = "pic/EvedonNarod/msr.jpg"></center>'
-     if missionData = 2: 
-         act 'Отдать письмо': 
+'<center><img src="pic/EvedonNarod/msr.jpg"></center>'
+     if missionData=2:
+         act 'Отдать письмо':
          cla
          *clr
-         missionData = 0
-         kredit = kredit+100
-         missionC+= 1
-         '<center><img src = "pic/Photo/License.jpg" ></center>'
+         missionData=0
+         kredit=kredit+100
+         missionC+=1
+         '<center><img src="pic/Photo/License.jpg" ></center>'
          'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
          end
      end
      
-     if kervolQW = 10: 
-	 	 act 'Куда можно обратиться с заявлением о преступлении?': 
+     if kervolQW=10:
+	 	 act 'Куда можно обратиться с заявлением о преступлении?':
 		 cla
 		 *clr
-		 minut += 15
+		 minut=minut+15
 		 '(Вы) - Куда можно обратиться с заявлением о преступлении?'
 		 '(Чиновник) - Мы занимаемся судом и исполнением приговоров. Вам нужно к следователю в казармах стражи.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 
 	 end
 	 
-	 if kervolQW = 30: 
-	 	 act 'Нужна санкция на расследование дела в пригороде.': 
+	 if kervolQW=30:
+	 	 act 'Нужна санкция на расследование дела в пригороде.':
 		 cla
 		 *clr
-		 kervolQW = 40
-		 minut += 15
+		 kervolQW=40
+		 minut=minut+15
 		 '(Вы) - Нужна санкция на расследование дела в пригороде.'
 		 '(Чиновник) - Ну вы же понимаете, что я не могу так просто взять и выдать санкцию. Сходите в казарму к следователю и напишите заявление на санкцию.'
-			 act 'Уйти': gt $CURLOC
+			 act 'Уйти':gt $CURLOC
 		 end
 	 end
 
@@ -64,9 +64,9 @@ else
 'Закрыто'
 end
 
-act 'Уйти': 
-minut += 5
- gt 'enterW'
+act 'Уйти':
+minut=minut+5
+gt'enterW'
 end
 --- sudW ---------------------------------
 

@@ -1,367 +1,367 @@
 # urtasexW
-if $ARGS[0] = 'bj': 
+if $ARGS[0]='bj':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
-bj = bj+1
-horny = horny+20
+set minut = minut + 15
+bj=bj+1
+horny=horny+20
 clr
-gs 'stat'
-if penis>0: '<center><img src = "pic/EvedonTA/ubj.jpg" ></center>'
-if penis = 0: '<center><img src = "pic/EvedonTA/ubjf.jpg" ></center>'
+gs'stat'
+if penis>0:'<center><img src="pic/EvedonTA/ubj.jpg" ></center>'
+if penis=0:'<center><img src="pic/EvedonTA/ubjf.jpg" ></center>'
 'Вы встали на колени перед Уртой и достав ее член начали его отсасывать. Через несколько минут Урта со стоном сказала. "Если ты будешь так продолжать то я скоро кончу."'
-     act 'Продолжить сосать': 
+     act 'Продолжить сосать':
      cla
      *clr
-     DOM = DOM+1
-     swallow = swallow+1
-     cumlip = cumlip+1
-     face = face+1
-     hand = hand+1
-     brist = brist+1
-     tit = tit+1
-     if penis>0: '<center><img src = "pic/EvedonTA/ubj2.jpg" ></center>'
-     if penis = 0: '<center><img src = "pic/EvedonTA/ubjf1.jpg" ></center>'
+     DOM=DOM+1
+     swallow=swallow+1
+     cumlip=cumlip+1
+     face=face+1
+     hand=hand+1
+     brist=brist+1
+     tit=tit+1
+     if penis>0:'<center><img src="pic/EvedonTA/ubj2.jpg" ></center>'
+     if penis=0:'<center><img src="pic/EvedonTA/ubjf1.jpg" ></center>'
      'Вы продолжили отсасывать и Урта разрядила вам запасы своего семени в рот.'
-     gs 'cumslut'
+     gs'cumslut'
      'Урта оглушенно села на диван.'
-     act 'Уйти': gt 'teladareW'
-         if DOM>0 and penis>0: 
-             act 'Теперь твоя очередь поработать': 
+     act 'Уйти':gt'teladareW'
+         if DOM>0 and penis>0:
+             act 'Теперь твоя очередь поработать':
              cla
              *clr
-              minut = minut + 15
-             sexm = sexm+1
-             if penis>0: '<center><img src = "pic/EvedonTA/ubj3.jpg" ></center>'
+             set minut = minut + 15
+             sexm=sexm+1
+             if penis>0:'<center><img src="pic/EvedonTA/ubj3.jpg" ></center>'
              'Урта села на корточки и начала сосать ваш член. Ее губки умело ласкают ваш член и язычок обрабатывает головку.'
-             if horny>= 60: horny = 0 & 'Вы не выдержали и кончили Урте в рот наполнив его семенем.'
-                 if horny = 0: 
-                 act 'Уйти': gt 'teladareW'
+             if horny>=60:horny=0&'Вы не выдержали и кончили Урте в рот наполнив его семенем.'
+                 if horny=0:
+                 act 'Уйти':gt'teladareW'
                  end
-                 if horny>0: 
-                     act 'Встань раком': 
+                 if horny>0:
+                     act 'Встань раком':
                      cla
                      *clr
-                      minut = minut + 15
-                     DOM = DOM+1
-                     horny = 0
-                     '<center><img src = "pic/EvedonTA/ubj4.jpg" ></center>'
+                     set minut = minut + 15
+                     DOM=DOM+1
+                     horny=0
+                     '<center><img src="pic/EvedonTA/ubj4.jpg" ></center>'
                      'Вы поставили Урту раком и вошли ей в зад, схватили ее за ягодицы и начали яростно трахать ее. Наконец вы не выдержали и кончили.'
-                     act 'Уйти': gt 'teladareW'
+                     act 'Уйти':gt'teladareW'
                      end
                  end
              end
          end
      end
      
-     if DOM>0 and horny>= 60 and penis>0: 
-         act 'Встань раком': 
+     if DOM>0 and horny>=60 and penis>0:
+         act 'Встань раком':
          cla
          *clr
-          minut = minut + 15
-         DOM = DOM+1
-         horny = 0
-         sexm = sexm+1
-         '<center><img src = "pic/EvedonTA/ubj4.jpg" ></center>'
+         set minut = minut + 15
+         DOM=DOM+1
+         horny=0
+         sexm=sexm+1
+         '<center><img src="pic/EvedonTA/ubj4.jpg" ></center>'
          'Вы поставили Урту раком и вошли ей в зад, схватили ее за ягодицы и начали яростно трахать ее. Наконец вы не выдержали и кончили.'
-         act 'Уйти': gt 'teladareW'
+         act 'Уйти':gt'teladareW'
          end
      end
      
-     act 'Прекратить сосать': 
+     act 'Прекратить сосать':
      cla
      *clr
-      minut = minut + 15
-     if penis = 0: tiprand = RAND(0,1)
-     if penis>0: tiprand = 0
-         if tiprand = 0: 
-		 anus = anus+5
-		 anal = anal+1
-		 cumanus = cumanus+1
-		 ass = ass+1
-		 leg = leg+1
-		 thight = thight+1
-		 tit = tit+1
-		 if penis>0: '<center><img src = "pic/EvedonTA/usex.jpg" ></center>'
-		 if penis = 0: '<center><img src = "pic/EvedonTA/usexf.jpg" ></center>'
+     set minut = minut + 15
+     if penis=0:tiprand=RAND(0,1)
+     if penis>0:tiprand=0
+         if tiprand=0:
+		 anus=anus+5
+		 anal=anal+1
+		 cumanus=cumanus+1
+		 ass=ass+1
+		 leg=leg+1
+		 thight=thight+1
+		 tit=tit+1
+		 if penis>0:'<center><img src="pic/EvedonTA/usex.jpg" ></center>'
+		 if penis=0:'<center><img src="pic/EvedonTA/usexf.jpg" ></center>'
 		 'Урта положила вас на спину и вошла в ваш зад. Она держала ваши ноги раздвинутыми и злобно вбивала свой стальной конец в вашу попу. Наконец она кончила в вас.'
-		 gs 'analslut'
+		 gs'analslut'
 		 'После секса, Урта грохнувшись на диван моментально уснула.'
-		 act 'Уйти': gt 'teladareW'
+		 act 'Уйти':gt'teladareW'
 		 end
 		 
-		 if tiprand = 1: 
-		 vag = vag+3
-		 sex = sex+1
-		 ass = ass+1
-		 leg = leg+1
-		 thight = thight+1
-		 tit = tit+1
-		 '<center><img src = "pic/EvedonTA/usexf2.jpg" ></center>'
+		 if tiprand=1:
+		 vag=vag+3
+		 sex=sex+1
+		 ass=ass+1
+		 leg=leg+1
+		 thight=thight+1
+		 tit=tit+1
+		 '<center><img src="pic/EvedonTA/usexf2.jpg" ></center>'
 		 'Урта положила вас на спину и раздвинула ваши ноги, ее член вошел вам во влагалище и начал вас трахать периодически ударяя в матку.'
-		 gs 'femorg'
-		 finrand = RAND(0,1)
-             if finrand = 0: 
-             cumpussy = cumpussy+1  
+		 gs'femorg'
+		 finrand=RAND(0,1)
+             if finrand=0: 
+             cumpussy=cumpussy+1  
 		     'Урта кончила вам внутрь и вы почувствовали как струя спермы сильно бьет вам во влагалище.'
 		     end
-		     if finrand = 1: 
-             cumbelly = cumbelly+1  
+		     if finrand=1: 
+             cumbelly=cumbelly+1  
 		     'Урта достала из вас член и струя спермы попала вам на живот.'
 		     end
-		 act 'Уйти': gt 'teladareW'
+		 act 'Уйти':gt'teladareW'
 		 end
      end
 
 end
 
-if $ARGS[0] = 'pass': 
+if $ARGS[0]='pass':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-urtaQW = urtaQW+1
-destrand = RAND(0,2)
-     if penis>0: 
-	 if destrand = 0: gt 'urtasexW','0'
-	 if destrand = 1: gt 'urtasexW','1'
-	 if destrand = 2: gt 'urtasexW','2'
+set minut = minut + 5
+urtaQW=urtaQW+1
+destrand=RAND(0,2)
+     if penis>0:
+	 if destrand=0:gt'urtasexW','0'
+	 if destrand=1:gt'urtasexW','1'
+	 if destrand=2:gt'urtasexW','2'
 	 end
-	 if penis = 0: 
-	 gt 'urtasexW','3'
+	 if penis=0:
+	 gt'urtasexW','3'
 	 end
 end
 
-if $ARGS[0] = '0': 
+if $ARGS[0]='0':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
-bj = bj+1
-SUB = SUB+1
-horny = horny+20
+set minut = minut + 15
+bj=bj+1
+SUB=SUB+1
+horny=horny+20
 clr
-gs 'stat'
-if penis>0: '<center><img src = "pic/EvedonTA/u0.jpg" ></center>'
+gs'stat'
+if penis>0:'<center><img src="pic/EvedonTA/u0.jpg" ></center>'
 'Урта ловко связала вас веревками и поставила на колени. Она достала свой член и схватив вас за губы подтянула ваше лицо к своему члену. Смакуя момент она поводила багровой головкой вам по губам и только потом вставила свой напряженный член вам в рот. Урта начала вас буквально трахать в рот погружая член в ваше горло, вы давились и из глаз текли слезы, но ничего не могли поделать.'
-finrand = RAND(0,2)
-     if finrand = 0: 
-     swallow = swallow+1
-     cumlip = cumlip+1
-     face = face+1
-     hand = hand+1
-     brist = brist+1
-     tit = tit+1
+finrand=RAND(0,2)
+     if finrand=0:
+     swallow=swallow+1
+     cumlip=cumlip+1
+     face=face+1
+     hand=hand+1
+     brist=brist+1
+     tit=tit+1
      'Урта застонала и целый поток спермы ударил вам в горло, вы давились но глотали ее сладковато терпкую сперму.'
-     gs 'cumslut'
+     gs'cumslut'
      end
-     if finrand = 1: 
-     facial = facial+1
-     cumface = cumface+1
-     face = face+5
+     if finrand=1:
+     facial=facial+1
+     cumface=cumface+1
+     face=face+5
      'Урта достала свой член из вашего мокрого, натруженного рта и кончила вам на лицо. Она стала размазывать сперму по вашему лицу наслаждаясь процессом.'
-     gs 'cumslut'
+     gs'cumslut'
      end
-     if finrand = 2: 
-     anus = anus+1
+     if finrand=2:
+     anus=anus+1
      'Урта села на диван и подтянула вас задом к себе. Урта плюнула себе на пальцы и вы почувствовали как ее пальчики проникают вам в анус и начинают его разрабатывать.'
-         act 'Сесть на член попой': 
+         act 'Сесть на член попой':
          cla
          *clr
-         anus = anus+5
-         anal = anal+1
-         cumanus = cumanus+1
-         ass = ass+1
-         leg = leg+1
-         thight = thight+1
-         tit = tit+1
-         '<center><img src = "pic/EvedonTA/u01.jpg" ></center>'
+         anus=anus+5
+         anal=anal+1
+         cumanus=cumanus+1
+         ass=ass+1
+         leg=leg+1
+         thight=thight+1
+         tit=tit+1
+         '<center><img src="pic/EvedonTA/u01.jpg" ></center>'
          'Вы сели ей очком на член и ее багровый великан раздвинув ваш анус вошел внутрь вас. Урта начала яростно вас трахать в зад с удивительной силой подбрасывая вас вверх. Наконец она не выдержала и застонав кончила вам в зад.'
-         gs 'analslut'
+         gs'analslut'
          'После секса, Урта грохнувшись на диван моментально уснула.'
-         act 'Уйти': gt 'teladareW'
+         act 'Уйти':gt'teladareW'
          exit
          end
      exit
      end
 'После секса, Урта грохнувшись на кровать моментально уснула.'
-act 'Уйти': gt 'teladareW'
+act 'Уйти':gt'teladareW'
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-horny = horny+50
+set minut = minut + 5
+horny=horny+50
 clr
-gs 'stat'
-if penis>0: '<center><img src = "pic/EvedonTA/u10.jpg" ></center>'
+gs'stat'
+if penis>0:'<center><img src="pic/EvedonTA/u10.jpg" ></center>'
 'Урта раздела вас и разделась сама, она встала позади вас и просунула свой член у вас между ног, своей ручкой Урта начала ласкать ваш член и одновременно тереться своим членом о ваши яйца.'
-finrand = RAND(0,2)
-     if finrand = 0: 
+finrand=RAND(0,2)
+     if finrand=0:
      'Поиграв с вами и достаточно вас возбудив. Урта легла на кровать и жестом показала сесть ей на член.'
-         act 'Сесть на член попой': 
+         act 'Сесть на член попой':
          cla
          *clr
-         anus = anus+5
-         anal = anal+1
-         cumanus = cumanus+1
-         ass = ass+1
-         leg = leg+1
-         thight = thight+1
-         tit = tit+1
-         if penis>0: '<center><img src = "pic/EvedonTA/u11.jpg" ></center>'
+         anus=anus+5
+         anal=anal+1
+         cumanus=cumanus+1
+         ass=ass+1
+         leg=leg+1
+         thight=thight+1
+         tit=tit+1
+         if penis>0:'<center><img src="pic/EvedonTA/u11.jpg" ></center>'
          'Вы сели ей очком на член и ее багровый великан раздвинув ваш анус вошел внутрь вас. Урта начала яростно вас трахать в зад с удивительной силой подбрасывая вас вверх. Наконец она не выдержала и застонав кончила вам в зад.'
-         gs 'analslut'
+         gs'analslut'
          'После секса, Урта грохнувшись на кровать моментально уснула.'
-         act 'Уйти': gt 'teladareW'
+         act 'Уйти':gt'teladareW'
          exit
          end
      end
-     if finrand = 1: 
+     if finrand=1:
      'Поиграв с вами и достаточно вас возбудив. Урта поставила вас на четвереньки и взяв вас за булки стала вводить вам свой член в зад.'
-         act 'Стонать': 
+         act 'Стонать':
          cla
          *clr
-         anus = anus+5
-         anal = anal+1
-         cumanus = cumanus+1
-         ass = ass+1
-         leg = leg+1
-         thight = thight+1
-         tit = tit+1
-         if penis>0: '<center><img src = "pic/EvedonTA/u12.jpg" ></center>'
+         anus=anus+5
+         anal=anal+1
+         cumanus=cumanus+1
+         ass=ass+1
+         leg=leg+1
+         thight=thight+1
+         tit=tit+1
+         if penis>0:'<center><img src="pic/EvedonTA/u12.jpg" ></center>'
          'Наконец ее узловатый член протиснулся в ваш анус и она начала трахать вас в жопу. Наконец она не выдержала и застонав кончила вам в зад.'
-         gs 'analslut'
+         gs'analslut'
          'После секса, Урта грохнувшись на кровать моментально уснула.'
-         act 'Уйти': gt 'teladareW'
+         act 'Уйти':gt'teladareW'
          exit
          end
      end
-     if finrand = 2: 
+     if finrand=2:
      'Поиграв с вами и достаточно вас возбудив. Урта положила вас на кровать и села вам на лицо начав тереться об ваши губы и нос своими яйцами и членом.'
-         act 'Лизать': 
+         act 'Лизать':
          cla
          *clr
-         SUB = SUB+1
-         facial = facial+1
-		 cumface = cumface+1
-		 face = face+5
-		 teabag = teabag+1
-         if penis>0: '<center><img src = "pic/EvedonTA/u13.jpg" ></center>'
+         SUB=SUB+1
+         facial=facial+1
+		 cumface=cumface+1
+		 face=face+5
+		 teabag=teabag+1
+         if penis>0:'<center><img src="pic/EvedonTA/u13.jpg" ></center>'
          'Вы начали лизать ее яички и маленькое влагалище спрятанное под ними. Наконец ее узловатый член изверг целый поток спермы заливая вам лицо вязкой, горячей и резко пахнущей жидкостью..'
-         gs 'cumslut'
+         gs'cumslut'
          'После секса, Урта грохнувшись на кровать моментально уснула.'
-         act 'Уйти': gt 'teladareW'
+         act 'Уйти':gt'teladareW'
          exit
          end
      end
 
 end
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
-bj = bj+1
-SUB = SUB+1
-horny = horny+20
+set minut = minut + 15
+bj=bj+1
+SUB=SUB+1
+horny=horny+20
 clr
-gs 'stat'
-if penis>0: '<center><img src = "pic/EvedonTA/u2.jpg" ></center>'
+gs'stat'
+if penis>0:'<center><img src="pic/EvedonTA/u2.jpg" ></center>'
 'Урта поставила вас на колени и ввела вам между губ свой твердый и багровый член. Она начала вас буквально трахать в рот погружая член в ваше горло, вы давились и из глаз текли слезы, но ничего не могли поделать.'
-finrand = RAND(0,2)
-     if finrand = 0: 
-     swallow = swallow+1
-     cumlip = cumlip+1
-     face = face+1
-     hand = hand+1
-     brist = brist+1
-     tit = tit+1
+finrand=RAND(0,2)
+     if finrand=0:
+     swallow=swallow+1
+     cumlip=cumlip+1
+     face=face+1
+     hand=hand+1
+     brist=brist+1
+     tit=tit+1
      'Урта застонала и целый поток спермы ударил вам в горло, вы давились но глотали ее сладковато терпкую сперму.'
-     gs 'cumslut'
+     gs'cumslut'
      end
-     if finrand = 1: 
-     facial = facial+1
-     cumface = cumface+1
-     face = face+5
+     if finrand=1:
+     facial=facial+1
+     cumface=cumface+1
+     face=face+5
      'Урта достала свой член из вашего мокрого, натруженного рта и кончила вам на лицо. Она стала размазывать сперму по вашему лицу наслаждаясь процессом.'
-     gs 'cumslut'
+     gs'cumslut'
      end
-     if finrand = 2: 
+     if finrand=2:
      'Урта легла на спину и предложила вам позу 69.'
-         if penis<= 0: 
+         if penis<=0:
          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
          'Если вы это видите, то значит возник баг.'
-         act 'Уйти': gt 'teladareW'
+         act 'Уйти':gt'teladareW'
          end
          
-         if penis>0: 
-			 act 'Лечь на нее сверху': 
+         if penis>0:
+			 act 'Лечь на нее сверху':
 			 cla
 			 *clr
-			 '<center><img src = "pic/EvedonTA/u21.jpg" ></center>'
+			 '<center><img src="pic/EvedonTA/u21.jpg" ></center>'
 			 'Вы легли на Урту сверху и она начала у вас сосать пока вы ласкали ее член'
-			 endrand = RAND(0,1)
+			 endrand=RAND(0,1)
 			 
-				 if endrand = 0: 
-				 swallow = swallow+1
-				 cumlip = cumlip+1
-				 face = face+1
-				 hand = hand+1
-				 brist = brist+1
-				 tit = tit+1
+				 if endrand=0:
+				 swallow=swallow+1
+				 cumlip=cumlip+1
+				 face=face+1
+				 hand=hand+1
+				 brist=brist+1
+				 tit=tit+1
 				 'Урта застонала и целый поток спермы ударил вам в горло, вы давились но глотали ее сладковато терпкую сперму.'
-				 gs 'cumslut'
-					 if horny>0 and penis>0: 
-					 horny = 0
+				 gs'cumslut'
+					 if horny>0 and penis>0:
+					 horny=0
 					 'Вы тоже разрядились в рот Урте и наполнили ее своим семенем.'
 					 'Урта сняла вас с себя и впилась губами в ваши губы. Вы целовались и обменивались спермой.'
 					 end
 				 'После секса, Урта грохнувшись на кровать моментально уснула.'
-				 act 'Уйти': gt 'teladareW'
+				 act 'Уйти':gt'teladareW'
 				 end
 				 
-				 if endrand = 1: 
-				 sexm = sexm+1
+				 if endrand=1:
+				 sexm=sexm+1
 				 'Урта положила вас на спину и села своим влагалищем вам на член.'
-					 act '...': 
+					 act '...':
 					 cla
 					 *clr
-					  '<center><img src = "pic/EvedonTA/u22.jpg" ></center>'
+					  '<center><img src="pic/EvedonTA/u22.jpg" ></center>'
 					 'Она скакала на вашем члене, но ей этого показалось мало и она схватив вас за волосы подтащила лицом к своему болтающемуся без дела члену. Вы обхватили его губами и начали сосать.'
-					 finnrand = RAND(0,1)
-						 if finnrand = 0: 
-						 swallow = swallow+1
-						 cumlip = cumlip+1
-						 face = face+1
-						 hand = hand+1
-						 brist = brist+1
-						 tit = tit+1
+					 finnrand=RAND(0,1)
+						 if finnrand=0:
+						 swallow=swallow+1
+						 cumlip=cumlip+1
+						 face=face+1
+						 hand=hand+1
+						 brist=brist+1
+						 tit=tit+1
 						 'Урта застонала и целый поток спермы ударил вам в горло, вы давились но глотали ее сладковато терпкую сперму.'
-						 gs 'cumslut'
+						 gs'cumslut'
 						 end
-						 if finnrand = 1: 
-						 facial = facial+1
-						 cumface = cumface+1
-						 face = face+5
+						 if finnrand=1:
+						 facial=facial+1
+						 cumface=cumface+1
+						 face=face+5
 						 'Урта достала свой член из вашего мокрого, натруженного рта и кончила вам на лицо. Она стала размазывать сперму по вашему лицу наслаждаясь процессом.'
-						 gs 'cumslut'
+						 gs'cumslut'
 						 end
-						 if horny>0 and penis>0: 
-						 horny = 0
+						 if horny>0 and penis>0:
+						 horny=0
 						 'Вы разрядили запас спермы в вагину Урты.'
 						 end
 					 'После секса, Урта грохнувшись на кровать моментально уснула.'
-					 act 'Уйти': gt 'teladareW'
+					 act 'Уйти':gt'teladareW'
 					 end
 				 end
 			 
@@ -371,130 +371,130 @@ finrand = RAND(0,2)
      exit
      end
 'После секса, Урта грохнувшись на кровать моментально уснула.'
-act 'Уйти': gt 'teladareW'
+act 'Уйти':gt'teladareW'
 end
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!ЖЕНСКАЯ ВЕРСИЯ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-if $ARGS[0] = '3': 
+if $ARGS[0]='3':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
-bj = bj+1
-SUB = SUB+1
-horny = horny+20
+set minut = minut + 15
+bj=bj+1
+SUB=SUB+1
+horny=horny+20
 clr
-gs 'stat'
-'<center><img src = "pic/EvedonTA/uf.jpg" ></center>'
+gs'stat'
+'<center><img src="pic/EvedonTA/uf.jpg" ></center>'
 'Урта подняла юбку и достала свой вставший член. Вы послушно опустились на колени и начали его сосать.'
-tiprand = RAND(0,5)
-     act '........': 
+tiprand=RAND(0,5)
+     act '........':
      cla
      *clr
-         if tiprand = 0: 
-         sex = sex+1
-         vag = vag+3
-         '<center><img src = "pic/EvedonTA/uf1.jpg" ></center>'
+         if tiprand=0:
+         sex=sex+1
+         vag=vag+3
+         '<center><img src="pic/EvedonTA/uf1.jpg" ></center>'
          'Урта легла на спину и посадила вас киской на свой член, вы сели на ее член и начали прыгать на нем.'
-         gs 'femorg'
+         gs'femorg'
          'Наконец Урта кончила вам в киску, ее горячие струи ударили вам во влагалище.'
-         cumpussy = cumpussy+1
+         cumpussy=cumpussy+1
          end
-         if tiprand = 1: 
-         '<center><img src = "pic/EvedonTA/uf2.jpg" ></center>'
+         if tiprand=1:
+         '<center><img src="pic/EvedonTA/uf2.jpg" ></center>'
          'Урта вогнала вам член в горло, и стала бешено трахать ваше лицо удерживая вашу голову за волосы.'
-         gs 'cumslut'
+         gs'cumslut'
          'Наконец она застонала и кончила вам в рот.'
-         cumlip = cumlip+1
+         cumlip=cumlip+1
          end
-         if tiprand = 2: 
-         anus = anus+5
-         anal = anal+1
-         '<center><img src = "pic/EvedonTA/uf3.jpg" ></center>'
+         if tiprand=2:
+         anus=anus+5
+         anal=anal+1
+         '<center><img src="pic/EvedonTA/uf3.jpg" ></center>'
          'Урта легла на спину и посадила вас на свой член. Вы почувствовали как ее елда входит в вашу попку раздвигая ее. После того как боль немного успокоилась вы начали прыгать на ее члене все ускоряясь.'
-         gs 'analslut'
+         gs'analslut'
          'Наконец Урта не выдерживает и со стоном разряжается вам в анус.'
-         cumanus = cumanus+1
+         cumanus=cumanus+1
          end
-         if tiprand = 3: 
-         sex = sex+1
-         vag = vag+3
-         '<center><img src = "pic/EvedonTA/uf4.jpg" ></center>'
+         if tiprand=3:
+         sex=sex+1
+         vag=vag+3
+         '<center><img src="pic/EvedonTA/uf4.jpg" ></center>'
          'Урта поставила вас раком и вогнала вам свой болт в киску, вы застонали от неожиданности. Урта не обращая внимания на ваши стоны начала вас жестко трахать, каждым движением вбивая свой член вам в матку.'
-         gs 'femorg'
+         gs'femorg'
          'Урта достала свой член из вас и кончила вам на попку.'
-         cumass = cumass+1
+         cumass=cumass+1
          end
-         if tiprand = 4: 
-         sex = sex+1
-         vag = vag+3
-         '<center><img src = "pic/EvedonTA/uf5.jpg" ></center>'
+         if tiprand=4:
+         sex=sex+1
+         vag=vag+3
+         '<center><img src="pic/EvedonTA/uf5.jpg" ></center>'
          'Урта наклонила вас и уперла в стену. После чего вы почувствовали как ее член входит в ваше нежное лоно и начинает грубо трахать вас. Она с такой силой ударяет всем весом вам в попу, что вы с трудом удерживаетесь за стену, чтобы не впечататься в него лицом.'
-         gs 'femorg'
+         gs'femorg'
          'Наконец Урта кончила вам в киску, ее горячие струи ударили вам во влагалище.'
-         cumpussy = cumpussy+1
+         cumpussy=cumpussy+1
          end
-         if tiprand = 5: 
-         anus = anus+5
-         anal = anal+1
-         '<center><img src = "pic/EvedonTA/uf6.jpg" ></center>'
+         if tiprand=5:
+         anus=anus+5
+         anal=anal+1
+         '<center><img src="pic/EvedonTA/uf6.jpg" ></center>'
          'Урта поставила вас раком и вы почувствовали как ее елда входит в вашу попку раздвигая ее. После того как боль немного успокоилась Урта начала вас трахать на полную катушку.'
-         gs 'analslut'
+         gs'analslut'
          'Наконец Урта не выдерживает и со стоном разряжается вам в попку.'
-         cumanus = cumanus+1
+         cumanus=cumanus+1
          end
      
-     chanrand = RAND(0,7)
-		 if chanrand = 0: 
-		 leg = leg+1
+     chanrand=RAND(0,7)
+		 if chanrand = 0:
+		 leg=leg+1
 		 end
-		 if chanrand = 1: 
-		 thight = thight+1
+		 if chanrand = 1:
+		 thight=thight+1
 		 end
-		 if chanrand = 2: 
-		 ass = ass+1
+		 if chanrand = 2:
+		 ass=ass+1
 		 end
-		 if chanrand = 3: 
-		 brist = brist+1
+		 if chanrand = 3:
+		 brist=brist+1
 		 end
-		 if chanrand = 4: 
-		 hand = hand+1
+		 if chanrand = 4:
+		 hand=hand+1
 		 end
-		 if chanrand = 5: 
-		 face = face+1
+		 if chanrand = 5:
+		 face=face+1
 		 end
-		 if chanrand = 6: 
-		 tit = tit+1
+		 if chanrand = 6:
+		 tit=tit+1
 		 end
-     act 'Уйти': gt 'teladareW'
+     act 'Уйти':gt'teladareW'
      end
 end
 
-if $ARGS[0] = '4': 
+if $ARGS[0]='4':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-sexm = sexm+1
-'<center><img src = "pic/EvedonTA/urtaSub.jpg" ></center>'
+set minut = minut + 5
+sexm=sexm+1
+'<center><img src="pic/EvedonTA/urtaSub.jpg" ></center>'
 'Вы поставили Урту раком и вошли ей в влагалище. Урта застонала от удовольствия и пока вы ее трахали в киску, она ловко согнулась и обхватив губами головку своего напряженного члена начала ее сосать одновременно с вашими фрикциями. Наконец вы не выдержали и кончили ей в киску, тут же Урта застонала и сперма из ее члена наполнила ее рот.'
- DOM = DOM+1
- horny = 0
-act 'Уйти': gt 'teladareW'
+ DOM=DOM+1
+ horny=0
+act 'Уйти':gt'teladareW'
 end
 
-if $ARGS[0] = '5': 
+if $ARGS[0]='5':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
+set minut = minut + 5
 !urtaSub
 ''
-act 'Уйти': gt 'teladareW'
+act 'Уйти':gt'teladareW'
 end
 --- urtasexW ---------------------------------
 

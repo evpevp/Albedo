@@ -1,345 +1,345 @@
 # время
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-if minut >= 60: 
-: loopmin
- hour = hour + 1
- minut = minut - 60
-if DemonMorf<= 0 and vampireMorf<= 0: golod = golod - 1
-if DemonMorf<= 0 and vampireMorf<= 0: son = son - 1
-     if sweat>0: manna = manna-sweat
-     if GraveDog>= 100: 
-         if GraveDogPowerM>GraveDogPower: 
-         GraveDogPower+= GraveDogPowerM*10/100
+if minut >= 60:
+:loopmin
+set hour = hour + 1
+set minut = minut - 60
+if DemonMorf<=0 and vampireMorf<=0:set golod = golod - 1
+if DemonMorf<=0 and vampireMorf<=0:set son = son - 1
+     if sweat>0:manna=manna-sweat
+     if GraveDog>=100:
+         if GraveDogPowerM>GraveDogPower:
+         GraveDogPower+=GraveDogPowerM*10/100
          end
-         if GraveDogPower>GraveDogPowerM: GraveDogPower = GraveDogPowerM
+         if GraveDogPower>GraveDogPowerM:GraveDogPower=GraveDogPowerM
      end
-     if DemonMorf>= 1 and NowSleep = 0: 
-     DemonMorf = DemonMorf+1
-     end
-     
-     if zodayEffect>0: zodayEffect- = 1
-     
-     if narkota<10 and narkoman = 1: 
-     manna = manna-50
-     wipo = wipo-25
-     health = health-1
-     if filosofkam = 0: vidage = vidage+1
-     '<B><font color = red>ВАМ КАЖЕТСЯ ЧТО У ВАС ЛОМАЮТСЯ КОСТИ. ВАМ ОЧЕНЬ БОЛЬНО И ХОЧЕТСЯ ОПЯТЬ НАРКОТЫ.</font></B>'
+     if DemonMorf>=1 and NowSleep=0:
+     DemonMorf=DemonMorf+1
      end
      
-     if salo>fat: 
-         if penis>0: 
-         salo = salo-1 & fat = fat+1
+     if zodayEffect>0:zodayEffect-=1
+     
+     if narkota<10 and narkoman=1:
+     manna=manna-50
+     wipo=wipo-25
+     health=health-1
+     if filosofkam=0:vidage=vidage+1
+     '<B><font color=red>ВАМ КАЖЕТСЯ ЧТО У ВАС ЛОМАЮТСЯ КОСТИ. ВАМ ОЧЕНЬ БОЛЬНО И ХОЧЕТСЯ ОПЯТЬ НАРКОТЫ.</font></B>'
+     end
+     
+     if salo>fat:
+         if penis>0:
+         salo=salo-1&fat=fat+1
          end
-         if penis = 0: 
-         salo = salo-1 & fat = fat+1
+         if penis=0:
+         salo=salo-1&fat=fat+1
          end
      end
-     if salo<fat: 
-         if penis>0: 
-         salo = salo+1 & fat = fat-1
+     if salo<fat:
+         if penis>0:
+         salo=salo+1&fat=fat-1
          end
-         if penis = 0: 
-         salo = salo+2 & fat = fat-1
+         if penis=0:
+         salo=salo+2&fat=fat-1
          end
      end
      
-     if lakt>0: horny = horny+3
-     if fertileAnal>0 and FertAnMark = 1: fertileAnal = fertileAnal-1 & horny = horny+(SUB+skverna) & pl'В вашей попе шевелится яйцо чудовища, возбуждая вас и ожидая времени когда оно вылупиться.'
-     if fertileAnal<= 0 and FertAnMark = 1: 
-     fertileAnal = 0
-     FertAnMark = 0
-     gt 'rodiW'
+     if lakt>0:horny=horny+3
+     if fertileAnal>0 and FertAnMark=1:fertileAnal=fertileAnal-1&horny=horny+(SUB+skverna)&pl'В вашей попе шевелится яйцо чудовища, возбуждая вас и ожидая времени когда оно вылупиться.'
+     if fertileAnal<=0 and FertAnMark=1:
+     fertileAnal=0
+     FertAnMark=0
+     gt'rodiW'
      exit
      !'Вы застонали от возбуждения и из вашей задницы стало вылупляться отложенное там яйцо. Наконец маленькое чудовище вылезло из вас и сбежало.'
      end
      
-     if fertileVag>0 and FertVagMark = 1: fertileVag = fertileVag-1 & horny = horny+(SUB+skverna) & pl'В вашей матке шевелится яйцо чудовища возбуждая вас и ожидая времени когда оно вылупиться.'
-     if fertileVag<= 0 and FertVagMark = 1: 
-     fertileVag = 0
-     FertVagMark = 0
+     if fertileVag>0 and FertVagMark=1:fertileVag=fertileVag-1&horny=horny+(SUB+skverna)&pl'В вашей матке шевелится яйцо чудовища возбуждая вас и ожидая времени когда оно вылупиться.'
+     if fertileVag<=0 and FertVagMark=1:
+     fertileVag=0
+     FertVagMark=0
      !'Вы застонали от возбуждения и из вашего влагалища стало вылупляться отложенное там яйцо. Наконец маленькое чудовище вылезло из вас и сбежало.'
-     gt 'rodiW1'
+     gt'rodiW1'
      exit
      end
      
-     if alko>0: alko = alko-1
-     if minut >= 60: 
+     if alko>0:alko=alko-1
+     if minut >= 60:
      jump 'loopmin'
      end 
 end
 
-if hour >= 24: 
-: loop
- day = day + 1
- daystart = daystart + 1
-gs 'clostar'
- week = week + 1
- hour = hour - 24
+if hour >= 24:
+:loop
+set day = day + 1
+set daystart = daystart + 1
+gs'clostar'
+set week = week + 1
+set hour = hour - 24
 
-if AltotronAmulet = 0: vidageMag = 10+((70-vidage)/2)
-if AltotronAmulet = 1: vidageMag = 1000
-     if vidageMag<= 0: vidageMag = 1
-     if magika>vidageMag: 
-	 magika- = 1
-	 '<B><font color = red>Ваша магичность слишком велика для вашего возраста и вы теряете ее.</font></B>'
+if AltotronAmulet=0:vidageMag=10+((70-vidage)/2)
+if AltotronAmulet=1:vidageMag=1000
+     if vidageMag<=0:vidageMag=1
+     if magika>vidageMag:
+	 magika-=1
+	 '<B><font color=red>Ваша магичность слишком велика для вашего возраста и вы теряете ее.</font></B>'
 	 end
-	 if StefanQW>= 1: 
-	 StefanMother- = 1
-     StefanFather- = 1
-     if StefanMother<= -100 and StefanFather<= -100: StefanIzgnan = 1 
+	 if StefanQW>=1:
+	 StefanMother-=1
+     StefanFather-=1
+     if StefanMother<=-100 and StefanFather<=-100:StefanIzgnan=1 
 	 end
 	 
-	 if stragaTime>0: stragaTime- = 1 & stragaPay+= 1
+	 if stragaTime>0:stragaTime-=1&stragaPay+=1
 
-     if demrabtimes>0: demrabtimes = 0
-     if posadMark>0: posadMark+= 1
-     if narkota = 0 and narkoman = 1: 
-     narkoman = 0
-     intel = intel-1
-         if filosofkam = 0: vidage = vidage+5
-         if intel<0: intel = 0
-     '<B><font color = red>ВЫ ИЗЛЕЧИЛИСЬ ОТ ЗАВИСИМОСТИ НО КАЖЕТСЯ ЗА ЭТО ВЫ ЗАПЛАТИЛИ ПОТЕРЕЙ ИНТЕЛЕКТА.</font></B>'
+     if demrabtimes>0:demrabtimes=0
+     if posadMark>0:posadMark+=1
+     if narkota=0 and narkoman=1:
+     narkoman=0
+     intel=intel-1
+         if filosofkam=0:vidage=vidage+5
+         if intel<0:intel=0
+     '<B><font color=red>ВЫ ИЗЛЕЧИЛИСЬ ОТ ЗАВИСИМОСТИ НО КАЖЕТСЯ ЗА ЭТО ВЫ ЗАПЛАТИЛИ ПОТЕРЕЙ ИНТЕЛЕКТА.</font></B>'
      end
-     if narkota>= 20 and narkoman = 0: narkoman = 1
-     if narkota>0: narkota = narkota-1
-     if Licens>0: Licens = Licens-1
+     if narkota>=20 and narkoman=0:narkoman=1
+     if narkota>0:narkota=narkota-1
+     if Licens>0:Licens=Licens-1
 
-     if world = 1: dayworld = dayworld+1 & karavanday = karavanday+1
-     if karavanday>= 22: karavanday = 0
+     if world=1:dayworld=dayworld+1&karavanday=karavanday+1
+     if karavanday>=22:karavanday=0
      
-     if cumslut>5: cslutimes = cslutimes+1
-     if cslutimes>= 10: cslutimes = 0 & cumslut = cumslut-1
+     if cumslut>5:cslutimes=cslutimes+1
+     if cslutimes>=10:cslutimes=0&cumslut=cumslut-1
      
-     if analslut>5: aslutimes = aslutimes+1
-     if aslutimes>= 10: aslutimes = 0 & analslut = analslut-1
+     if analslut>5:aslutimes=aslutimes+1
+     if aslutimes>=10:aslutimes=0&analslut=analslut-1
      
-     if whore>5: whoretimes = whoretimes+1
-     if whoretimes>= 10: whoretimes = 0 & whore = whore-1
+     if whore>5:whoretimes=whoretimes+1
+     if whoretimes>=10:whoretimes=0&whore=whore-1
      
-     if penis>30: 
-     penis = penis-1
-         if face>0: face = face-1
-         if hand>0: hand = hand-1
-         if brist>0: brist = brist-1
-         if ass>0: ass = ass-1
-         if thight>0: thight = thight-1
-         if leg>0: leg = leg-1
-         if tit>0: tit = tit-1
+     if penis>30:
+     penis=penis-1
+         if face>0:face=face-1
+         if hand>0:hand=hand-1
+         if brist>0:brist=brist-1
+         if ass>0:ass=ass-1
+         if thight>0:thight=thight-1
+         if leg>0:leg=leg-1
+         if tit>0:tit=tit-1
      end
      
-     if vagina = 1: 
-         if face<40: face = face+RAND(1,5) & '<B><font color = red>Страшно чешется лицо.</font></B>'
-         if hand<40: hand = hand+RAND(1,5) & '<B><font color = red>Какой-то непонятный зуд в руках.</font></B>'
-         if brist<40: brist = brist+RAND(1,5) & '<B><font color = red>Ломит тело.</font></B>'
-         if ass<40: ass = ass+RAND(1,5) & '<B><font color = red>Есть ощущение, что как будто растет зад.</font></B>'
-         if thight<40: thight = thight+RAND(1,5) & '<B><font color = red>Бедра ноют.</font></B>'
-         if leg<40: leg = leg+RAND(1,5) & '<B><font color = red>Ломит ноги.</font></B>'
-         if tit<40: tit = tit+1 & '<B><font color = red>Тупая боль в сосках.</font></B>'
-         if rost>185 and penis>0: rost = rost-1
-         if rost>175 and penis = 0: rost = rost-1
+     if vagina=1:
+         if face<40:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
+         if hand<40:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
+         if brist<40:brist=brist+RAND(1,5)&'<B><font color=red>Ломит тело.</font></B>'
+         if ass<40:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение, что как будто растет зад.</font></B>'
+         if thight<40:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
+         if leg<40:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
+         if tit<40:tit=tit+1&'<B><font color=red>Тупая боль в сосках.</font></B>'
+         if rost>185 and penis>0:rost=rost-1
+         if rost>175 and penis=0:rost=rost-1
      end
      
-     if vagina = 2: 
-         if face<50: face = face+RAND(1,5) & '<B><font color = red>Страшно чешется лицо.</font></B>'
-         if hand<50: hand = hand+RAND(1,5) & '<B><font color = red>Какой-то непонятный зуд в руках.</font></B>'
-         if brist<50: brist = brist+RAND(1,5) & '<B><font color = red>Ломит тело.</font></B>'
-         if ass<50: ass = ass+RAND(1,5) & '<B><font color = red>Есть ощущение что как будто растет зад.</font></B>'
-         if thight<50: thight = thight+RAND(1,5) & '<B><font color = red>Бедра ноют.</font></B>'
-         if leg<50: leg = leg+RAND(1,5) & '<B><font color = red>Ломит ноги.</font></B>'
-         if tit<60: tit = tit+1 & '<B><font color = red>Тупая боль в сосках.</font></B>'
-         if rost>185 and penis>0: rost = rost-1
-         if rost>175 and penis = 0: rost = rost-1
+     if vagina=2:
+         if face<50:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
+         if hand<50:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
+         if brist<50:brist=brist+RAND(1,5)&'<B><font color=red>Ломит тело.</font></B>'
+         if ass<50:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
+         if thight<50:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
+         if leg<50:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
+         if tit<60:tit=tit+1&'<B><font color=red>Тупая боль в сосках.</font></B>'
+         if rost>185 and penis>0:rost=rost-1
+         if rost>175 and penis=0:rost=rost-1
      end
      
-     if vagina = 3: 
-         if face<60: face = face+RAND(1,5) & '<B><font color = red>Страшно чешется лицо.</font></B>'
-         if hand<60: hand = hand+RAND(1,5) & '<B><font color = red>Какой-то непонятный зуд в руках.</font></B>'
-         if brist<60: brist = brist+RAND(1,5) & '<B><font color = red>Ломит тело.</font></B>'
-         if ass<60: ass = ass+RAND(1,5) & '<B><font color = red>Есть ощущение что как будто растет зад.</font></B>'
-         if thight<60: thight = thight+RAND(1,5) & '<B><font color = red>Бедра ноют.</font></B>'
-         if leg<60: leg = leg+RAND(1,5) & '<B><font color = red>Ломит ноги.</font></B>'
-         if tit<80: tit = tit+1 & '<B><font color = red>Тупая боль в сосках.</font></B>'
-         if rost>185 and penis>0: rost = rost-1
-         if rost>175 and penis = 0: rost = rost-1
+     if vagina=3:
+         if face<60:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
+         if hand<60:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
+         if brist<60:brist=brist+RAND(1,5)&'<B><font color=red>Ломит тело.</font></B>'
+         if ass<60:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
+         if thight<60:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
+         if leg<60:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
+         if tit<80:tit=tit+1&'<B><font color=red>Тупая боль в сосках.</font></B>'
+         if rost>185 and penis>0:rost=rost-1
+         if rost>175 and penis=0:rost=rost-1
      end
      
-     if vagina = 4: 
-         if face<70: face = face+RAND(1,5) & '<B><font color = red>Страшно чешется лицо.</font></B>'
-         if hand<70: hand = hand+RAND(1,5) & '<B><font color = red>Какой-то непонятный зуд в руках.</font></B>'
-         if brist<70: brist = brist+RAND(1,5) & '<B><font color = red>Ломит тело.</font></B>'
-         if ass<70: ass = ass+RAND(1,5) & '<B><font color = red>Есть ощущение что как будто растет зад.</font></B>'
-         if thight<70: thight = thight+RAND(1,5) & '<B><font color = red>Бедра ноют.</font></B>'
-         if leg<70: leg = leg+RAND(1,5) & '<B><font color = red>Ломит ноги.</font></B>'
-         if tit<100: tit = tit+1 & '<B><font color = red>Тупая боль в сосках.</font></B>'
-         if rost>185 and penis>0: rost = rost-1
-         if rost>175 and penis = 0: rost = rost-1
+     if vagina=4:
+         if face<70:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
+         if hand<70:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
+         if brist<70:brist=brist+RAND(1,5)&'<B><font color=red>Ломит тело.</font></B>'
+         if ass<70:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
+         if thight<70:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
+         if leg<70:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
+         if tit<100:tit=tit+1&'<B><font color=red>Тупая боль в сосках.</font></B>'
+         if rost>185 and penis>0:rost=rost-1
+         if rost>175 and penis=0:rost=rost-1
      end
      
-     if vagina = 5: 
-         if face<80: face = face+RAND(1,5) & '<B><font color = red>Страшно чешется лицо.</font></B>'
-         if hand<80: hand = hand+RAND(1,5) & '<B><font color = red>Какой-то непонятный зуд в руках.</font></B>'
-         if brist<80: brist = brist+RAND(1,5) & '<B><font color = red>Ломит тело.</font></B>'
-         if ass<80: ass = ass+RAND(1,5) & '<B><font color = red>Есть ощущение что как будто растет зад.</font></B>'
-         if thight<80: thight = thight+RAND(1,5) & '<B><font color = red>Бедра ноют.</font></B>'
-         if leg<80: leg = leg+RAND(1,5) & '<B><font color = red>Ломит ноги.</font></B>'
-         if rost>185 and penis>0: rost = rost-1
-         if rost>175 and penis = 0: rost = rost-1
+     if vagina=5:
+         if face<80:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
+         if hand<80:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
+         if brist<80:brist=brist+RAND(1,5)&'<B><font color=red>Ломит тело.</font></B>'
+         if ass<80:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
+         if thight<80:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
+         if leg<80:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
+         if rost>185 and penis>0:rost=rost-1
+         if rost>175 and penis=0:rost=rost-1
      end
      
-     if vagina = 6: 
-         if face<90: face = face+RAND(1,5) & '<B><font color = red>Страшно чешется лицо.</font></B>'
-         if hand<90: hand = hand+RAND(1,5) & '<B><font color = red>Какой-то непонятный зуд в руках.</font></B>'
-         if brist<90: brist = brist+RAND(1,5) & '<B><font color = red>Ломит тело.</font></B>'
-         if ass<90: ass = ass+RAND(1,5) & '<B><font color = red>Есть ощущение что как будто растет зад.</font></B>'
-         if thight<90: thight = thight+RAND(1,5) & '<B><font color = red>Бедра ноют.</font></B>'
-         if leg<90: leg = leg+RAND(1,5) & '<B><font color = red>Ломит ноги.</font></B>'
-         if rost>185 and penis>0: rost = rost-1
-         if rost>175 and penis = 0: rost = rost-1
+     if vagina=6:
+         if face<90:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
+         if hand<90:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
+         if brist<90:brist=brist+RAND(1,5)&'<B><font color=red>Ломит тело.</font></B>'
+         if ass<90:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
+         if thight<90:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
+         if leg<90:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
+         if rost>185 and penis>0:rost=rost-1
+         if rost>175 and penis=0:rost=rost-1
      end
      
-     if vagina = 7: 
-         if face<90: face = face+RAND(1,5) & '<B><font color = red>Страшно чешется лицо.</font></B>'
-         if hand<90: hand = hand+RAND(1,5) & '<B><font color = red>Какой-то непонятный зуд в руках.</font></B>'
-         if brist<90: brist = brist+RAND(1,5) & '<B><font color = red>Ломит тело.</font></B>'
-         if ass<90: ass = ass+RAND(1,5) & '<B><font color = red>Есть ощущение что как будто растет зад.</font></B>'
-         if thight<90: thight = thight+RAND(1,5) & '<B><font color = red>Бедра ноют.</font></B>'
-         if leg<90: leg = leg+RAND(1,5) & '<B><font color = red>Ломит ноги.</font></B>'
-         if rost>185 and penis>0: rost = rost-1
-         if rost>175 and penis = 0: rost = rost-1
+     if vagina=7:
+         if face<90:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
+         if hand<90:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
+         if brist<90:brist=brist+RAND(1,5)&'<B><font color=red>Ломит тело.</font></B>'
+         if ass<90:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
+         if thight<90:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
+         if leg<90:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
+         if rost>185 and penis>0:rost=rost-1
+         if rost>175 and penis=0:rost=rost-1
      end
      
-     if vagina>= 8: 
-         if face<100: face = face+RAND(1,5) & '<B><font color = red>Страшно чешется лицо.</font></B>'
-         if hand<100: hand = hand+RAND(1,5) & '<B><font color = red>Какой-то непонятный зуд в руках.</font></B>'
-         if brist<100: brist = brist+RAND(1,5) & '<B><font color = red>Ломит тело.</font></B>'
-         if ass<100: ass = ass+RAND(1,5) & '<B><font color = red>Есть ощущение что как будто растет зад.</font></B>'
-         if thight<100: thight = thight+RAND(1,5) & '<B><font color = red>Бедра ноют.</font></B>'
-         if leg<100: leg = leg+RAND(1,5) & '<B><font color = red>Ломит ноги.</font></B>'
-         if rost>185 and penis>0: rost = rost-1
-         if rost>175 and penis = 0: rost = rost-1
+     if vagina>=8:
+         if face<100:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
+         if hand<100:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
+         if brist<100:brist=brist+RAND(1,5)&'<B><font color=red>Ломит тело.</font></B>'
+         if ass<100:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
+         if thight<100:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
+         if leg<100:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
+         if rost>185 and penis>0:rost=rost-1
+         if rost>175 and penis=0:rost=rost-1
      end
      
-     lobok = lobok+1
-     leghair = leghair+1
-     if vagina>= 10 and vag>0: vag = vag-1
-     if world = 1: hlong = hlong+1
+     lobok=lobok+1
+     leghair=leghair+1
+     if vagina>=10 and vag>0:vag=vag-1
+     if world=1:hlong=hlong+1
      
-     if cerafcurs = 1 and penis>0: 
-     penis = penis-1
-     cerafCurDay = cerafCurDay+1
-         if face<40: face = face+RAND(1,5)
-         if hand<40: hand = hand+RAND(1,5)
-         if brist<40: brist = brist+RAND(1,5)
-         if ass<40: ass = ass+RAND(1,5)
-         if thight<40: thight = thight+RAND(1,5)
-         if leg<40: leg = leg+RAND(1,5)
-         if tit<40: tit = tit+1
-         if rost>165: rost = rost-1
-     '<B><font color = red>Во всем теле какая-то тупая боль, центром которой вы чувствуете свой член. Черт, кажется он стал меньше!</font></B>'
+     if cerafcurs=1 and penis>0:
+     penis=penis-1
+     cerafCurDay=cerafCurDay+1
+         if face<40:face=face+RAND(1,5)
+         if hand<40:hand=hand+RAND(1,5)
+         if brist<40:brist=brist+RAND(1,5)
+         if ass<40:ass=ass+RAND(1,5)
+         if thight<40:thight=thight+RAND(1,5)
+         if leg<40:leg=leg+RAND(1,5)
+         if tit<40:tit=tit+1
+         if rost>165:rost=rost-1
+     '<B><font color=red>Во всем теле какая-то тупая боль, центром которой вы чувствуете свой член. Черт, кажется он стал меньше!</font></B>'
      end
-     if cerafcurs = 1 and penis = 0: 
-     vagina = 1
-     cerafcurs = 0
-     cerafQW = 30
-     if vidage>= 16 and filosofkam = 0: : vidage = vidage-2
-     rost = rost-4
-     '<B><font color = red>Между ног такой страшный зуд, что кажется там сейчас пламя полыхнет. Вы не выдерживаете зуда и засовываете руку в штаны. Нет! Ничего нет в штанах. Проверив еще раз вы нащупали какие-то складки у себя между ног, господи, да это же влагалище поняли вы! Я стал женщиной!</font></B>'
+     if cerafcurs=1 and penis=0:
+     vagina=1
+     cerafcurs=0
+     cerafQW=30
+     if vidage>=16 and filosofkam=0::vidage=vidage-2
+     rost=rost-4
+     '<B><font color=red>Между ног такой страшный зуд, что кажется там сейчас пламя полыхнет. Вы не выдерживаете зуда и засовываете руку в штаны. Нет! Ничего нет в штанах. Проверив еще раз вы нащупали какие-то складки у себя между ног, господи, да это же влагалище поняли вы! Я стал женщиной!</font></B>'
      end
-     if cerafcurs = 0 and penis<8 and vagina = 0: 
-     penis = penis+1
-         if face>0: face = face-1
-         if hand>0: hand = hand-1
-         if brist>0: brist = brist-1
-         if ass>0: ass = ass-1
-         if thight>0: thight = thight-1
-         if leg>0: leg = leg-1
-         if tit>0: tit = tit-1
-     '<B><font color = red>Тело ломит и вы чувствуете как оно наливается силой и становится более мужским.</font></B>'
+     if cerafcurs=0 and penis<8 and vagina=0:
+     penis=penis+1
+         if face>0:face=face-1
+         if hand>0:hand=hand-1
+         if brist>0:brist=brist-1
+         if ass>0:ass=ass-1
+         if thight>0:thight=thight-1
+         if leg>0:leg=leg-1
+         if tit>0:tit=tit-1
+     '<B><font color=red>Тело ломит и вы чувствуете как оно наливается силой и становится более мужским.</font></B>'
      end
-     if roomW>0: roomW = roomW-1
-     if roomWT>0: roomWT = roomWT-1
-     if roomWTF>0: roomWTF = roomWTF-1
-     if roomWMO>0: roomWMO- = 1
-     if roomWMM>0: roomWMM- = 1
-     if srok >= 1: 
-     srok = srok+1
-     sroksidki = sroksidki-1
+     if roomW>0:roomW=roomW-1
+     if roomWT>0:roomWT=roomWT-1
+     if roomWTF>0:roomWTF=roomWTF-1
+     if roomWMO>0:roomWMO-=1
+     if roomWMM>0:roomWMM-=1
+     if srok >= 1:
+     srok=srok+1
+     sroksidki=sroksidki-1
      end
-     if sud = 1: sudtimer = sudtimer-1
-     if anus>1: anus = anus-1
-     if vag>1: vag = vag-1
-     if beg>100: beg = beg-1
-     if akrobat>100: akrobat = akrobat-1
-     if lakt>0: 
-     lakt = lakt-1
+     if sud=1:sudtimer=sudtimer-1
+     if anus>1:anus=anus-1
+     if vag>1:vag=vag-1
+     if beg>100:beg=beg-1
+     if akrobat>100:akrobat=akrobat-1
+     if lakt>0:
+     lakt=lakt-1
      horny = horny+lakt
-         if face<60: face = face+RAND(1,3)
-         if hand<60: hand = hand+RAND(1,3)
-         if brist<60: brist = brist+RAND(1,3)
-         if ass<60: ass = ass+RAND(1,3)
-         if thight<60: thight = thight+RAND(1,3)
-         if leg<60: leg = leg+RAND(1,3)
-         tit = tit+RAND(5,10)
+         if face<60:face=face+RAND(1,3)
+         if hand<60:hand=hand+RAND(1,3)
+         if brist<60:brist=brist+RAND(1,3)
+         if ass<60:ass=ass+RAND(1,3)
+         if thight<60:thight=thight+RAND(1,3)
+         if leg<60:leg=leg+RAND(1,3)
+         tit=tit+RAND(5,10)
      end
-     if vagina > 0: horny = horny + (vagina+(skverna/4))
-     if face<40: berd = berd + 1
-     if penis>0: horny = horny + (penis+(skverna/4)) 
-     if cerafNip = 1: horny = horny + SUB
+     if vagina > 0:set horny = horny + (vagina+(skverna/4))
+     if face<40:berd = berd + 1
+     if penis>0:horny = horny + (penis+(skverna/4)) 
+     if cerafNip=1:horny = horny + SUB
      
-     if tan>0: tan = tan-1
-     if hour >= 24: 
+     if tan>0:tan=tan-1
+     if hour >= 24:
      jump 'loop'
      end
 end
 
-gs 'выплаты'
+gs'выплаты'
 
 
 
-if day > 30: 
- day = day - 30
- month = month + 1
+if day > 30:
+set day = day - 30
+set month = month + 1
 !ПЛАТЕЖИ
 end
 
-if day = 0: day = 1
+if day = 0:set day = 1
 
-if week > 7: 
-: loopweek
- week = week - 7
-     if week > 7: 
+if week > 7:
+:loopweek
+set week = week - 7
+     if week > 7:
      jump 'loopweek'
      end
 
 end
 
-if week = 1: $week = 'Понедельник'
-if week = 2: $week = 'Вторник'
-if week = 3: $week = 'Среда'
-if week = 4: $week = 'Четверг'
-if week = 5: $week = 'Пятница'
-if week = 6: $week = 'Суббота'
-if week = 7: $week = 'Воскресенье'
+if week = 1:Set $week = 'Понедельник'
+if week = 2:Set $week = 'Вторник'
+if week = 3:Set $week = 'Среда'
+if week = 4:Set $week = 'Четверг'
+if week = 5:Set $week = 'Пятница'
+if week = 6:Set $week = 'Суббота'
+if week = 7:Set $week = 'Воскресенье'
 
-if month = 0: month = 1
-if month = 13 and filosofkam = 1: month = 1 & year = year + 1 & age = age + 1
-if month = 13 and filosofkam = 0: month = 1 & year = year + 1 & age = age + 1 & vidage = vidage + 1
-If month = 1: $month = 'Январь'
-If month = 2: $month = 'Февраль'
-If month = 3: $month = 'Март'
-If month = 4: $month = 'Апрель'
-If month = 5: $month = 'Май'
-If month = 6: $month = 'Июнь'
-If month = 7: $month = 'Июль'
-If month = 8: $month = 'Август'
-If month = 9: $month = 'Сентябрь'
-If month = 10: $month = 'Октябрь'
-If month = 11: $month = 'Ноябрь'
-If month = 12: $month = 'Декабрь'
+if month = 0:Set month = 1
+if month = 13 and filosofkam=1:Set month = 1&set year = year + 1&set age = age + 1
+if month = 13 and filosofkam=0:Set month = 1&set year = year + 1&set age = age + 1&set vidage = vidage + 1
+If month = 1:set $month = 'Январь'
+If month = 2:set $month = 'Февраль'
+If month = 3:set $month = 'Март'
+If month = 4:set $month = 'Апрель'
+If month = 5:set $month = 'Май'
+If month = 6:set $month = 'Июнь'
+If month = 7:set $month = 'Июль'
+If month = 8:set $month = 'Август'
+If month = 9:set $month = 'Сентябрь'
+If month = 10:set $month = 'Октябрь'
+If month = 11:set $month = 'Ноябрь'
+If month = 12:set $month = 'Декабрь'
 
-if minut < 10: $nilmin = '0'
-if minut >= 10: $nilmin = ''
+if minut < 10:set $nilmin = '0'
+if minut >= 10:set $nilmin = ''
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!КОНЕЦ ВРЕМЕНИ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

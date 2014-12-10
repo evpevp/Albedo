@@ -1,73 +1,73 @@
 # seksex
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
- sexm = sexm+1
-'<center><img src = "pic\fam\seksex.jpg" ></center>'
+gs'stat'
+set sexm=sexm+1
+'<center><img src="pic\fam\seksex.jpg" ></center>'
 'В ваш кабинет вошла секретарша Люда, плавно покачивая бедрами.'
 
-     act 'Дать в рот': gt 'seksex','1'
+     act 'Дать в рот':gt'seksex','1'
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\seksex1.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\fam\seksex1.jpg" ></center>'
 'Вы достали член и Люда без разговоров опустилась перед вами на корточки и начала его сосать.'
 'Вы взяли ее за голову и стали загонять ее трахать в рот загоняя каждым движением член в горло.'
 
-     act 'Кончить в рот': gt 'seksex','2'
-     act 'Трахнуть': gt 'seksex','3'
-     act 'Трахнуть в жопу': gt 'seksex','4'
+     act 'Кончить в рот':gt'seksex','2'
+     act 'Трахнуть':gt'seksex','3'
+     act 'Трахнуть в жопу':gt'seksex','4'
 end
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-manna = manna+50
+set minut = minut + 5
+horny=0
+manna=manna+50
 clr
-gs 'stat'
-'<center><img src = "pic\fam\seksex2.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\fam\seksex2.jpg" ></center>'
 'Вы кончили на лицо Люде. Она слизала остатки спермы с вашего члена и ушла.'
 
-act 'Поправить одежду': gt 'smu','smuDirektor'
+act 'Поправить одежду':gt 'smu','smuDirektor'
 end
 
-if $ARGS[0] = '3': 
+if $ARGS[0]='3':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-manna = manna+25
-wipo = wipo+25
+set minut = minut + 5
+horny=0
+manna=manna+25
+wipo=wipo+25
 clr
-gs 'stat'
-'<center><img src = "pic\fam\seksex3.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\fam\seksex3.jpg" ></center>'
 'Вы положили Люду на стол и начали ее трахать, через несколько минут вы кончили ей на задницу.'
 
-act 'Поправить одежду': gt 'smu','smuDirektor'
+act 'Поправить одежду':gt 'smu','smuDirektor'
 end
 
-if $ARGS[0] = '4': 
+if $ARGS[0]='4':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-horny = 0
-wipo = wipo+50
+set minut = minut + 5
+horny=0
+wipo=wipo+50
 clr
-gs 'stat'
-'<center><img src = "pic\fam\seksex4.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\fam\seksex4.jpg" ></center>'
 'Вы поставили Люду раком и грубо вошли ей в зад, не обращая внимания на ее стоны, вы оттрахали ее в жопу и кончили ей туда.'
 
-act 'Поправить одежду': gt 'smu','smuDirektor'
+act 'Поправить одежду':gt 'smu','smuDirektor'
 end
 --- seksex ---------------------------------
 

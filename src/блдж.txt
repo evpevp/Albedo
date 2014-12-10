@@ -1,17 +1,17 @@
 # блдж
-*PL '<right><img src = "pic/casino/stolbd.jpg" ></right>'
+*PL '<right><img src="pic/casino/stolbd.jpg" ></right>'
 *P 'Вы стоите у стола игры в блекджек'
-ACT 'Подойти к крупье': 
-	 gt 'крупье1'
+ACT 'Подойти к крупье':
+	gt 'крупье1'
 END
-ACT 'Сесть за стол': 
-	 gt 'игркарт1'
+ACT 'Сесть за стол':
+	gt 'игркарт1'
 END
-ACT 'Отойти от стола': 
-	 gt 'карты'
+ACT 'Отойти от стола':
+	gt 'карты'
 END
 clr
-gs 'stat'
- minut = minut + 10
+gs'stat'
+set minut=minut + 10
 --- блдж ---------------------------------
 

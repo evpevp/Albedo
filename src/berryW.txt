@@ -7,31 +7,31 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Ягодные кусты</H4></center>'
-'<center><img src = "pic/Evedon/df22.jpg" ></center>'
+'<center><img src="pic/Evedon/df22.jpg" ></center>'
 'На кустах висят крупные мясистые ягоды. По большей части недозревшие, но может удастся найти зрелые ягоды.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
 
-act 'Отойти': 
-minut += 5
- gt 'df2_2'
+act 'Отойти':
+minut=minut+5
+gt'df2_2'
 end
 
-act 'Собирать ягоды 1 час': 
+act 'Собирать ягоды 1 час':
 cla
-lesnik = lesnik+1
-minut += 60
-gribrand = RAND(0,intel+lesnik)
-     if gribrand<20: 
+lesnik=lesnik+1
+minut=minut+60
+gribrand=RAND(0,intel+lesnik)
+     if gribrand<20:
      'Найти ничего не удалось. Кругом одни незрелые ягоды.'
      end
-     if gribrand>= 20: 
-     berry = berry+1
+     if gribrand>=20:
+     berry=berry+1
      'Вам удалось найти созревшую крупную и сочную ягоду.'
      end
-act 'Отойти': gt 'berryW'
+act 'Отойти':gt'berryW'
 end
 
 --- berryW ---------------------------------

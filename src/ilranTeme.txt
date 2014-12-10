@@ -1,188 +1,188 @@
 # ilranTeme
 
-if ilranQW = 2: 
+if ilranQW=2:
 cla
 *clr
 'Пока вы сидели за партой к вам подошел нагловатый послушник Ильран и завел разговор с вами.'
 'Эй детка, как поживаешь? Может сходим куда-нибудь? Например в мою комнату?'
-act 'Отстань': gt 'OrdenAud'
-     act 'Пошли, шалун': 
+act 'Отстань':gt'OrdenAud'
+     act 'Пошли, шалун':
 	 cla
 	 *clr
-	 '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
-	 ilranQW = 3
+	 '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
+	 ilranQW=3
 	 'Ильран обнял вас и повел в свою комнату'
-	 act '....': gt 'ilranRoom'
+	 act '....':gt'ilranRoom'
 	 end
 exit
 end
 
-if ilranQW = 1: 
+if ilranQW=1:
 cla
 *clr
-'<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
-strand1 = RAND(0,9)
-if strand1 = 0: $stih = 'Я помню'
-if strand1 = 1: $stih = 'Не помню'
-if strand1 = 2: $stih = 'Забыть бы'
-if strand1 = 3: $stih = 'Купите'
-if strand1 = 4: $stih = 'Очкуешь'
-if strand1 = 5: $stih = 'Какое'
-if strand1 = 6: $stih = 'Угробил'
-if strand1 = 7: $stih = 'Хреново'
-if strand1 = 8: $stih = 'Открою'
-if strand1 = 9: $stih = 'Ты чуешь?'
-strand2 = RAND(0,9)
-if strand2 = 0: $stih2 = 'чудное'
-if strand2 = 1: $stih2 = 'странное'
-if strand2 = 2: $stih2 = 'некое'
-if strand2 = 3: $stih2 = 'вкусное'
-if strand2 = 4: $stih2 = 'пьяное'
-if strand2 = 5: $stih2 = 'свинское'
-if strand2 = 6: $stih2 = 'четкое'
-if strand2 = 7: $stih2 = 'сраное'
-if strand2 = 8: $stih2 = 'нужное'
-if strand2 = 9: $stih2 = 'конское'
-strand3 = RAND(0,9)
-if strand3 = 0: $stih3 = 'мгновенье'
-if strand3 = 1: $stih3 = 'затменье'
-if strand3 = 2: $stih3 = 'хотенье'
-if strand3 = 3: $stih3 = 'варенье'
-if strand3 = 4: $stih3 = 'творенье'
-if strand3 = 5: $stih3 = 'везенье'
-if strand3 = 6: $stih3 = 'рожденье'
-if strand3 = 7: $stih3 = 'печенье'
-if strand3 = 8: $stih3 = 'ученье'
-if strand3 = 9: $stih3 = 'смущенье'
-strand4 = RAND(0,9)
-if strand4 = 0: $stih4 = 'передо мной'
-if strand4 = 1: $stih4 = 'под косячком'
-if strand4 = 2: $stih4 = 'на кладбище'
-if strand4 = 3: $stih4 = 'в моих мечтах'
-if strand4 = 4: $stih4 = 'под скальпелем'
-if strand4 = 5: $stih4 = 'в моих штанах'
-if strand4 = 6: $stih4 = 'из-за угла'
-if strand4 = 7: $stih4 = 'в моих ушах'
-if strand4 = 8: $stih4 = 'в ночном горшке'
-if strand4 = 9: $stih4 = 'из головы'
-strand5 = RAND(0,9)
-if strand5 = 0: $stih5 = 'явилась ты'
-if strand5 = 1: $stih5 = 'добилась ты'
-if strand5 = 2: $stih5 = 'торчат кресты'
-if strand5 = 3: $stih5 = 'стихов листы'
-if strand5 = 4: $stih5 = 'забилась ты'
-if strand5 = 5: $stih5 = 'мои трусы'
-if strand5 = 6: $stih5 = 'поют дрозды'
-if strand5 = 7: $stih5 = 'из темноты'
-if strand5 = 8: $stih5 = 'помылась ты'
-if strand5 = 9: $stih5 = 'дают пизды'
-strand6 = RAND(0,9)
-if strand6 = 0: $stih6 = 'мимолетное'
-if strand6 = 1: $stih6 = 'детородное'
-if strand6 = 2: $stih6 = 'психотропное'
-if strand6 = 3: $stih6 = 'кайфоломное'
-if strand6 = 4: $stih6 = 'очевидное'
-if strand6 = 5: $stih6 = 'у воробушков'
-if strand6 = 6: $stih6 = 'этакое вот'
-if strand6 = 7: $stih6 = 'нам не чуждое'
-if strand6 = 8: $stih6 = 'благородное'
-if strand6 = 9: $stih6 = 'ябывдульское'
-strand7 = RAND(0,9)
-if strand7 = 0: $stih7 = 'виденье'
-if strand7 = 1: $stih7 = 'сиденье'
-if strand7 = 2: $stih7 = 'паренье'
-if strand7 = 3: $stih7 = 'сужденье'
-if strand7 = 4: $stih7 = 'вращенье'
-if strand7 = 5: $stih7 = 'сношенье'
-if strand7 = 6: $stih7 = 'смятенье'
-if strand7 = 7: $stih7 = 'печенье'
-if strand7 = 8: $stih7 = 'паденье'
-if strand7 = 9: $stih7 = 'сплетенье'
-strand8 = RAND(0,9)
-if strand8 = 0: $stih8 = 'гений'
-if strand8 = 1: $stih8 = 'сторож'
-if strand8 = 2: $stih8 = 'символ'
-if strand8 = 3: $stih8 = 'спарта'
-if strand8 = 4: $stih8 = 'правда'
-if strand8 = 5: $stih8 = 'ангел'
-if strand8 = 6: $stih8 = 'водка'
-if strand8 = 7: $stih8 = 'пиво'
-if strand8 = 8: $stih8 = 'ахтунг'
-if strand8 = 9: $stih8 = 'жопа'
-strand9 = RAND(0,9)
-if strand9 = 0: $stih9 = 'чистой'
-if strand9 = 1: $stih9 = 'вечной'
-if strand9 = 2: $stih9 = 'тухлой'
-if strand9 = 3: $stih9 = 'просит'
-if strand9 = 4: $stih9 = 'грязной'
-if strand9 = 5: $stih9 = 'липкой'
-if strand9 = 6: $stih9 = 'на хрен'
-if strand9 = 7: $stih9 = 'в пене'
-if strand9 = 8: $stih9 = 'женской'
-if strand9 = 9: $stih9 = 'жаждет'
-strand10 = RAND(0,9)
-if strand10 = 0: $stih10 = 'красоты'
-if strand10 = 1: $stih10 = 'мерзлоты'
-if strand10 = 2: $stih10 = 'суеты'
-if strand10 = 3: $stih10 = 'наркоты'
-if strand10 = 4: $stih10 = 'срамоты'
-if strand10 = 5: $stih10 = 'школоты'
-if strand10 = 6: $stih10 = 'типа ты'
-if strand10 = 7: $stih10 = 'простоты'
-if strand10 = 8: $stih10 = 'хуеты'
-if strand10 = 9: $stih10 = 'наготы'
+'<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
+strand1=RAND(0,9)
+if strand1=0:$stih='Я помню'
+if strand1=1:$stih='Не помню'
+if strand1=2:$stih='Забыть бы'
+if strand1=3:$stih='Купите'
+if strand1=4:$stih='Очкуешь'
+if strand1=5:$stih='Какое'
+if strand1=6:$stih='Угробил'
+if strand1=7:$stih='Хреново'
+if strand1=8:$stih='Открою'
+if strand1=9:$stih='Ты чуешь?'
+strand2=RAND(0,9)
+if strand2=0:$stih2='чудное'
+if strand2=1:$stih2='странное'
+if strand2=2:$stih2='некое'
+if strand2=3:$stih2='вкусное'
+if strand2=4:$stih2='пьяное'
+if strand2=5:$stih2='свинское'
+if strand2=6:$stih2='четкое'
+if strand2=7:$stih2='сраное'
+if strand2=8:$stih2='нужное'
+if strand2=9:$stih2='конское'
+strand3=RAND(0,9)
+if strand3=0:$stih3='мгновенье'
+if strand3=1:$stih3='затменье'
+if strand3=2:$stih3='хотенье'
+if strand3=3:$stih3='варенье'
+if strand3=4:$stih3='творенье'
+if strand3=5:$stih3='везенье'
+if strand3=6:$stih3='рожденье'
+if strand3=7:$stih3='печенье'
+if strand3=8:$stih3='ученье'
+if strand3=9:$stih3='смущенье'
+strand4=RAND(0,9)
+if strand4=0:$stih4='передо мной'
+if strand4=1:$stih4='под косячком'
+if strand4=2:$stih4='на кладбище'
+if strand4=3:$stih4='в моих мечтах'
+if strand4=4:$stih4='под скальпелем'
+if strand4=5:$stih4='в моих штанах'
+if strand4=6:$stih4='из-за угла'
+if strand4=7:$stih4='в моих ушах'
+if strand4=8:$stih4='в ночном горшке'
+if strand4=9:$stih4='из головы'
+strand5=RAND(0,9)
+if strand5=0:$stih5='явилась ты'
+if strand5=1:$stih5='добилась ты'
+if strand5=2:$stih5='торчат кресты'
+if strand5=3:$stih5='стихов листы'
+if strand5=4:$stih5='забилась ты'
+if strand5=5:$stih5='мои трусы'
+if strand5=6:$stih5='поют дрозды'
+if strand5=7:$stih5='из темноты'
+if strand5=8:$stih5='помылась ты'
+if strand5=9:$stih5='дают пизды'
+strand6=RAND(0,9)
+if strand6=0:$stih6='мимолетное'
+if strand6=1:$stih6='детородное'
+if strand6=2:$stih6='психотропное'
+if strand6=3:$stih6='кайфоломное'
+if strand6=4:$stih6='очевидное'
+if strand6=5:$stih6='у воробушков'
+if strand6=6:$stih6='этакое вот'
+if strand6=7:$stih6='нам не чуждое'
+if strand6=8:$stih6='благородное'
+if strand6=9:$stih6='ябывдульское'
+strand7=RAND(0,9)
+if strand7=0:$stih7='виденье'
+if strand7=1:$stih7='сиденье'
+if strand7=2:$stih7='паренье'
+if strand7=3:$stih7='сужденье'
+if strand7=4:$stih7='вращенье'
+if strand7=5:$stih7='сношенье'
+if strand7=6:$stih7='смятенье'
+if strand7=7:$stih7='печенье'
+if strand7=8:$stih7='паденье'
+if strand7=9:$stih7='сплетенье'
+strand8=RAND(0,9)
+if strand8=0:$stih8='гений'
+if strand8=1:$stih8='сторож'
+if strand8=2:$stih8='символ'
+if strand8=3:$stih8='спарта'
+if strand8=4:$stih8='правда'
+if strand8=5:$stih8='ангел'
+if strand8=6:$stih8='водка'
+if strand8=7:$stih8='пиво'
+if strand8=8:$stih8='ахтунг'
+if strand8=9:$stih8='жопа'
+strand9=RAND(0,9)
+if strand9=0:$stih9='чистой'
+if strand9=1:$stih9='вечной'
+if strand9=2:$stih9='тухлой'
+if strand9=3:$stih9='просит'
+if strand9=4:$stih9='грязной'
+if strand9=5:$stih9='липкой'
+if strand9=6:$stih9='на хрен'
+if strand9=7:$stih9='в пене'
+if strand9=8:$stih9='женской'
+if strand9=9:$stih9='жаждет'
+strand10=RAND(0,9)
+if strand10=0:$stih10='красоты'
+if strand10=1:$stih10='мерзлоты'
+if strand10=2:$stih10='суеты'
+if strand10=3:$stih10='наркоты'
+if strand10=4:$stih10='срамоты'
+if strand10=5:$stih10='школоты'
+if strand10=6:$stih10='типа ты'
+if strand10=7:$stih10='простоты'
+if strand10=8:$stih10='хуеты'
+if strand10=9:$stih10='наготы'
 'Пока вы сидели за партой к вам подошел нагловатый послушник Ильран и завел разговор с вами.'
 'Эй детка. Ты такая строгая, давай я тебе стих расскажу.'
 '<<$stih>> <<$stih2>> <<$stih3>> <<$stih4>> <<$stih5>> как <<$stih6>> <<$stih7>> как <<$stih8>> <<$stih9>> <<$stih10>>'
-act 'Идиот': gt 'OrdenAud'
-     act 'Поцеловать': 
+act 'Идиот':gt'OrdenAud'
+     act 'Поцеловать':
      cla
      *clr
-     '<center><img src = "pic/Evedon\1\ilranpocelui.jpg" ></center>'
-	 ilranQW = 3
+     '<center><img src="pic/Evedon\1\ilranpocelui.jpg" ></center>'
+	 ilranQW=3
 	 'Ильран обнял вас и повел в свою комнату'
-	 act '....': gt 'ilranRoom'
+	 act '....':gt'ilranRoom'
 	 end
 exit
 end
 
-if ilranQW = 0: 
+if ilranQW=0:
 cla
 *clr
-'<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
+'<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
 'Пока вы сидели за партой к вам подошел нагловатый послушник Ильран и завел разговор с вами.'
 'Эй детка, я Ильран будущий великий маг, не хочешь завести полезное знакомство заблаговременно?'
-     if DOM>0: 
-         act 'Отвали, шут гороховый': 
+     if DOM>0:
+         act 'Отвали, шут гороховый':
          cla
          *clr
-         ilranQW = 1
+         ilranQW=1
          'Вы послали нагловатого пацана куда подальше, но его это явно не останавливает. Он сел рядом и начал клеится к вам.'
-         act '....': gt 'OrdenAud'
+         act '....':gt'OrdenAud'
          end
      end
      
-	 act 'Я <<$name>>': 
+	 act 'Я <<$name>>':
 	 cla
 	 *clr
-	 '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
+	 '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
 	 'Вы представились, Ильран заулыбался и сел рядом с вами. Он обнял вас за плечи и прошептал на ухо, "Детка, пойдем ко мне в комнату, обещаю, скучно не будет."'
-	 act 'Я не такая': 
+	 act 'Я не такая':
 	 cla
 	 *clr
-	 '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
-	 ilranQW = 2
+	 '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
+	 ilranQW=2
 	 'Вы решили с ним никуда не идти'
-	 act '....': gt 'OrdenAud'
+	 act '....':gt'OrdenAud'
 	 end
 	 
-	 act 'Пошли, шалун': 
+	 act 'Пошли, шалун':
 	 cla
 	 *clr
-	 '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
-	 ilranQW = 3
+	 '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
+	 ilranQW=3
 	 'Ильран обнял вас и повел в свою комнату'
-	 act '....': gt 'ilranRoom'
+	 act '....':gt'ilranRoom'
 	 end
      end
 exit

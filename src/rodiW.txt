@@ -2,20 +2,20 @@
 *clr
 $metka = $ARGS[0]
 $loc = $CURLOC
-horny = 100
-SUB = SUB+1
-anus = anus+50
-ass = ass+5
-thight = thight+5
-tit = tit+1
-skverna = skverna+5
-lakt = lakt+10
-rodila = rodila+1
-if filosofkam = 0: vidage = vidage+1
-'<center><img src = "pic/Evedon/bird.jpg" ></center>'
+horny=100
+SUB=SUB+1
+anus=anus+50
+ass=ass+5
+thight=thight+5
+tit=tit+1
+skverna=skverna+5
+lakt=lakt+10
+rodila=rodila+1
+if filosofkam=0:vidage=vidage+1
+'<center><img src="pic/Evedon/bird.jpg" ></center>'
 'Вы застонали от возбуждения и из вашей задницы стало вылупляться отложенное там яйцо. Наконец маленькое чудовище вылезло из вас и сбежало.'
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 
 
 --- rodiW ---------------------------------

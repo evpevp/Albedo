@@ -1,88 +1,88 @@
 # korobeinikFO
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-gs 'stat'
+gs'stat'
 !коробейник
-if hour>= 9 and hour<21: 
+if hour>=9 and hour<21:
 !торгует на улице
 
-'<center><img src = "pic/EvedonNarod/korobeinik.jpg" ></center>'
+'<center><img src="pic/EvedonNarod/korobeinik.jpg" ></center>'
 'Да да, подходите, налетайте, лучшие товары со всех уголков Эведона.'
-     if gem>= 100 and spSve>= 100: 
-         act 'Купить пачку швейных игл (100 гем)': 
-		 minut += 5
+     if gem>=100 and spSve>=100:
+         act 'Купить пачку швейных игл (100 гем)':
+		 minut=minut+5
 		 tempshop = input ("Сколько вы хотите купить пачек игл (1 пачка 100 гем)?")
-             if tempshop*100>gem or tempshop<0 : 
+             if tempshop*100>gem or tempshop<0 :
              msg'У вас нет такого количества гемов.'
-			 gt 'fortW'
+			 gt'fortW'
              end
          
-         gem = gem-tempshop*100
-		 nospIgla = nospIgla+tempshop 		 
+         gem=gem-tempshop*100
+		 nospIgla=nospIgla+tempshop 		 
          msg'Вы купили <<tempshop>> пачек игл.'
-		 gt 'fortW'
+		 gt'fortW'
 		 end
      end
   
-	 if gem>= 10: 
-		 act 'Купить щелок': 
-		 minut += 5
+	 if gem>=10:
+		 act 'Купить щелок':
+		 minut=minut+5
 		 tempshop = input ("Сколько вы хотите купить щелока (1 пачка 10 гем)?")
-             if tempshop*10 > gem or tempshop<0 : 
+             if tempshop*10 > gem or tempshop<0 :
              msg'У вас недостаточно гемов.'
 			 end
          
-         gem = gem-tempshop*10
-		 shelok = shelok+tempshop		 
+         gem=gem-tempshop*10
+		 shelok=shelok+tempshop		 
          msg'Вы купили <<tempshop>> щелока.'
-		 gt 'fortW'
+		 gt'fortW'
 		 end
 		 
-		 if lezvie = 0: 
-			 act 'Купить бритву': 
-			 minut += 5
-			 gem = gem-10
-			 lezvie = 1
-			 gt 'fortW'
+		 if lezvie=0:
+			 act 'Купить бритву':
+			 minut=minut+5
+			 gem=gem-10
+			 lezvie=1
+			 gt'fortW'
 			 end
 		 end
 	 end
 	 
-	 if gem>= 100 and mirr = 0: 
-	 	 act 'Купить зеркало': 
-		 minut += 5
-		 gem = gem-100
-		 mirr = 1
-		 gt 'fortW'
+	 if gem>=100 and mirr=0:
+	 	 act 'Купить зеркало':
+		 minut=minut+5
+		 gem=gem-100
+		 mirr=1
+		 gt'fortW'
 		 end
 	 end
 	 
-	 if gem>= 500: 
-	 	 act 'Купить макияжные краски 500 гем': 
-		 minut += 5
-		 gem = gem-500
-		 makekit = makekit+50
-		 gt 'fortW'
+	 if gem>=500:
+	 	 act 'Купить макияжные краски 500 гем':
+		 minut=minut+5
+		 gem=gem-500
+		 makekit=makekit+50
+		 gt'fortW'
 		 end
 	 end
 	 
 	 
-	 if gem>= 50: 
-	 	 act 'Купить вяленого мяса': 
-		 minut += 5
+	 if gem>=50:
+	 	 act 'Купить вяленого мяса':
+		 minut=minut+5
           tempshop = input ("Сколько вы хотите купить вяленого мяса (1 кусок 50 гем)?")
-             if tempshop*50 > gem or tempshop<0 : 
+             if tempshop*50 > gem or tempshop<0 :
              msg'У вас недостаточно гемов.'
 			 end
          
-         gem = gem-tempshop*50
-		 edaw = edaw+tempshop	      		 
+         gem=gem-tempshop*50
+		 edaw=edaw+tempshop	      		 
 		 msg'Вы купили <<tempshop>> вяленого мяса.'
-		 gt 'fortW'
+		 gt'fortW'
 		 end
 	 end
 	 
@@ -92,7 +92,7 @@ else
 'Извините, я пока не на работе, если нужен товар то подойдите когда я буду на улице.'
 end
 
-	 act 'Уйти': 
+	 act 'Уйти':
 	 GOTO $locBed, $metkaBed
 	 end
 	 

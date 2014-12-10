@@ -6,39 +6,39 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Горы</H4></center>'
-'<center><img src = "pic/Evedon/mount.jpg" ></center>'
-'В одном из ущелий расположен величественный <a href = "exec: minut += 60 & gt ''monastW''">Монастырь Мары</a>. От перекрестка уходят две дороги, одна на север и вторая на запад. Около западной дороги вбит столбик в землю, на табличке, прикрепленной к столбику написано: "Путник осторожно! На этой дороге пропадают люди!"'
+'<center><img src="pic/Evedon/mount.jpg" ></center>'
+'В одном из ущелий расположен величественный <a href="exec: minut=minut+60 & gt''monastW''">Монастырь Мары</a>. От перекрестка уходят две дороги, одна на север и вторая на запад. Около западной дороги вбит столбик в землю, на табличке, прикрепленной к столбику написано: "Путник осторожно! На этой дороге пропадают люди!"'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 ''
-if vampireMorf>= 1: 'Зарыться в <a href = "exec: gt ''vampGrave''">землю</a>'
+if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
 
-	 act 'Выйти на северную горную дорогу (1 час)': 
-	 minut += 60
-	 roadMonMark = 1
-	 gt 'MonNordRoad'
+	 act 'Выйти на северную горную дорогу (1 час)':
+	 minut=minut+60
+	 roadMonMark=1
+	 gt'MonNordRoad'
 	 end
 	 
-	 act 'Выйти на западную горную дорогу (1 час)': 
-	 minut += 60
-	 roadMonMark = 1
-	 gt 'MonWestRoad'
+	 act 'Выйти на западную горную дорогу (1 час)':
+	 minut=minut+60
+	 roadMonMark=1
+	 gt'MonWestRoad'
 	 end
 
-	 act 'Идти на восток к лесу (30 мин)': 
-	 minut += 30
-	 tiprand = RAND(0,2)
-	     if tiprand = 0: gt 'df0_0'
-	     if tiprand = 1: gt 'df1_0'
-	     if tiprand = 2: gt 'df2_0'
+	 act 'Идти на восток к лесу (30 мин)':
+	 minut=minut+30
+	 tiprand=RAND(0,2)
+	     if tiprand=0:gt'df0_0'
+	     if tiprand=1:gt'df1_0'
+	     if tiprand=2:gt'df2_0'
 	 end
 	 
-	 act 'Идти на восток к фермам (1 час)': 
-	 minut += 60
-	 gt 'farmW'
+	 act 'Идти на восток к фермам (1 час)':
+	 minut=minut+60
+	 gt'farmW'
 	 end
 	 
 

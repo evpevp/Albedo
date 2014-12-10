@@ -1,105 +1,105 @@
 # spSOUND
 dynamic $battlemain
 clr
-gs 'stat'
+gs'stat'
 
-     if manna>= 5000 and cooldownSpell<= 0 and magika>= 8 and sonar<= 0 and spellSound>= 100: 
-         act 'Сонар (5000 маны)': 
+     if manna>=5000 and cooldownSpell<=0 and magika>=8 and sonar<=0 and spellSound>=100:
+         act 'Сонар (5000 маны)':
          cla
-         sonarExp+= 1
-         manna- = 5000
-         cooldownSpell+= 2
-         sonar+= 5+(sonarExp/100)
-         '<font color = green>Вы прикладываете руку ко рту и тихо шепчете, звуковые волны распространяются вокруг и отражася оповещают вас об истинной картине событий.</font>'
-         xgt 'fight','1'
+         sonarExp+=1
+         manna-=5000
+         cooldownSpell+=2
+         sonar+=5+(sonarExp/100)
+         '<font color=green>Вы прикладываете руку ко рту и тихо шепчете, звуковые волны распространяются вокруг и отражася оповещают вас об истинной картине событий.</font>'
+         xgt'fight','1'
          end
      end
      
-     if manna>= 10000 and magika>= 8 and spellSound2>= 100 and round>2: 
-         if zerkalov>0: 
-			 act 'Зеркальная могила (10000 маны)': 
+     if manna>=10000 and magika>=8 and spellSound2>=100 and round>2:
+         if zerkalov>0:
+			 act 'Зеркальная могила (10000 маны)':
 			 cla
-			 zerkSoundExp+= 1
-			 manna- = 10000
-			 '<font color = green>Вы выкидываете руку по направлению к зеркалам противника и ударяете звуком.</font>'
-			 '<font color = green>Звук усиливается отражаясь от зеркал противника.</font>'
-			 damagew = RAND((1000+zerkSoundExp*2)*(zerkalov/10),(2000+zerkSoundExp*4)*(zerkalov/10))
-			 sonar+= 1
-			 soundMag = 1000+zerkSoundExp*2
-		     $tipuronaWV = 'Удар звука многократно отраженный от зеркал'
-		     gs 'defenceWV'
-			 xgt 'fight','1'
+			 zerkSoundExp+=1
+			 manna-=10000
+			 '<font color=green>Вы выкидываете руку по направлению к зеркалам противника и ударяете звуком.</font>'
+			 '<font color=green>Звук усиливается отражаясь от зеркал противника.</font>'
+			 damagew=RAND((1000+zerkSoundExp*2)*(zerkalov/10),(2000+zerkSoundExp*4)*(zerkalov/10))
+			 sonar+=1
+			 soundMag=1000+zerkSoundExp*2
+		     $tipuronaWV='Удар звука многократно отраженный от зеркал'
+		     gs'defenceWV'
+			 xgt'fight','1'
 			 end
          end
-         if zerkalov<= 0: 
-         	 act 'Зеркальная могила (10000 маны)': 
+         if zerkalov<=0:
+         	 act 'Зеркальная могила (10000 маны)':
 			 cla
-			 zerkSoundExp+= 1
-			 manna- = 10000
-			 '<font color = green>Вы выкидываете руку по направлению к противнику и ударяете звуком.</font>'
-			 '<font color = green>Этот удар максимально эффективен против тех, кто защищается зеркалами.</font>'
-			 damagew = RAND(1000+zerkSoundExp*2,2000+zerkSoundExp*4)
-			 sonar+= 1
-			 soundMag = 1000+zerkSoundExp*2
-		     $tipuronaWV = 'Удар звука'
-		     gs 'defenceWV'
-			 xgt 'fight','1'
+			 zerkSoundExp+=1
+			 manna-=10000
+			 '<font color=green>Вы выкидываете руку по направлению к противнику и ударяете звуком.</font>'
+			 '<font color=green>Этот удар максимально эффективен против тех, кто защищается зеркалами.</font>'
+			 damagew=RAND(1000+zerkSoundExp*2,2000+zerkSoundExp*4)
+			 sonar+=1
+			 soundMag=1000+zerkSoundExp*2
+		     $tipuronaWV='Удар звука'
+		     gs'defenceWV'
+			 xgt'fight','1'
 			 end
          end
      end
 
-     if manna>= 15000 and magika>= 8 and spellSound3>= 100 and round>3 and cooldownSpell<= 0: 
-		 act 'Звуковой бур (15000 маны)': 
+     if manna>=15000 and magika>=8 and spellSound3>=100 and round>3 and cooldownSpell<=0:
+		 act 'Звуковой бур (15000 маны)':
 		 cla
-		 SoundBurExp+= 1
-		 manna- = 15000
-		 cooldownSpell+= 2
-		 '<font color = green>Вы выкидываете руку по направлению к противнику и ударяете не слышимым для уха звуком который способен разнести целое дерево в щепки.</font>'
-		 damage = RAND(4000+SoundBurExp*2,8000+SoundBurExp*4)
-		 gs 'defenceV'
-		 xgt 'fight','1'
+		 SoundBurExp+=1
+		 manna-=15000
+		 cooldownSpell+=2
+		 '<font color=green>Вы выкидываете руку по направлению к противнику и ударяете не слышимым для уха звуком который способен разнести целое дерево в щепки.</font>'
+		 damage=RAND(4000+SoundBurExp*2,8000+SoundBurExp*4)
+		 gs'defenceV'
+		 xgt'fight','1'
 		 end
      end
      
-     if manna>= 20000 and magika>= 8 and spellSound4>= 100 and round>4: 
-		 act 'Похоронный колокол (20000 маны)': 
+     if manna>=20000 and magika>=8 and spellSound4>=100 and round>4:
+		 act 'Похоронный колокол (20000 маны)':
 		 cla
-		 SoundKolExp+= 1
-		 manna- = 20000
-		 '<font color = green>Вы выкидываете руку по направлению к противнику и ударяете не слышимым для уха звуком заставляющим тело вибрировать и рвущее внутрение органы.</font>'
-		 damageW = RAND(500+SoundKolExp*4,1000+SoundKolExp*8)
-		 Vibro = 1
-		 $tipuronaWV = 'Высокочастотные колебания в теле противника'
-		 gs 'defenceWV'
-		 xgt 'fight','1'
+		 SoundKolExp+=1
+		 manna-=20000
+		 '<font color=green>Вы выкидываете руку по направлению к противнику и ударяете не слышимым для уха звуком заставляющим тело вибрировать и рвущее внутрение органы.</font>'
+		 damageW=RAND(500+SoundKolExp*4,1000+SoundKolExp*8)
+		 Vibro=1
+		 $tipuronaWV='Высокочастотные колебания в теле противника'
+		 gs'defenceWV'
+		 xgt'fight','1'
 		 end
      end
      
-     if manna>= 25000 and magika>= 10 and spellSound5>= 100 and round>5: 
-		 act 'Мерцающий удар (25000 маны)': 
+     if manna>=25000 and magika>=10 and spellSound5>=100 and round>5:
+		 act 'Мерцающий удар (25000 маны)':
 		 cla
-		 shimmerStrikeExp+= 1
-		 manna- = 25000
-		 '<font color = green>Окружив вибрациями воздуха свою руку вы ударили ей.</font>'
-		 Vizor = 1
-		 tipatk = 1
-         damage = RAND((stren/2)+sonarExp+zerkSoundExp+SoundBurExp+SoundKolExp+soundCoolExp+(shimmerStrikeExp*2),stren+sonarExp+zerkSoundExp+SoundBurExp+SoundKolExp+soundCoolExp+(shimmerStrikeExp*2)+500)
-		 gs 'popad'
-		 xgt 'fight','1'
+		 shimmerStrikeExp+=1
+		 manna-=25000
+		 '<font color=green>Окружив вибрациями воздуха свою руку вы ударили ей.</font>'
+		 Vizor=1
+		 tipatk=1
+         damage=RAND((stren/2)+sonarExp+zerkSoundExp+SoundBurExp+SoundKolExp+soundCoolExp+(shimmerStrikeExp*2),stren+sonarExp+zerkSoundExp+SoundBurExp+SoundKolExp+soundCoolExp+(shimmerStrikeExp*2)+500)
+		 gs'popad'
+		 xgt'fight','1'
 		 end
      end
      
-     if manna>= 50000 and magika>= 10 and spellSound6>= 100 and round>6: 
-		 act 'Тихое место (50000 маны)': 
+     if manna>=50000 and magika>=10 and spellSound6>=100 and round>6:
+		 act 'Тихое место (50000 маны)':
 		 cla
-		 soundCoolExp+= 1
-		 manna- = 50000
-		 '<font color = green>Сложив руки в знак, вы создали вокруг себя отражающий барьер.</font>'
-		 StopMagik = 6
-		 cooldown = 6
-		 cooldownSpell = 10
-		 CoolPlace = 6
-		 xgt 'fight','1'
+		 soundCoolExp+=1
+		 manna-=50000
+		 '<font color=green>Сложив руки в знак, вы создали вокруг себя отражающий барьер.</font>'
+		 StopMagik=6
+		 cooldown=6
+		 cooldownSpell=10
+		 CoolPlace=6
+		 xgt'fight','1'
 		 end
      end
      
@@ -108,6 +108,6 @@ gs 'stat'
 
 
 
-act 'Пропустить ход': xgt 'fight','1'
+act 'Пропустить ход':xgt'fight','1'
 --- spSOUND ---------------------------------
 

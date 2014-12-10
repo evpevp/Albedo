@@ -8,53 +8,53 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-tan = tan+5
+tan=tan+5
 '<center><H4>Оазис</H4></center>'
-'<center><img src = "pic/Evedon/oasis.jpg" ></center>'
+'<center><img src="pic/Evedon/oasis.jpg" ></center>'
 'Небольшой оазис в пустыне. В оазисе чувствуется присутствие чего-то очень мощного.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-	 act 'Уйти в пустыню': 
-	 minut += 5
-     gt 'desertW1'
+	 act 'Уйти в пустыню':
+	 minut=minut+5
+     gt'desertW1'
 	 end
 	 
-if akbalQW>0 and akbalQW<1000: 
+if akbalQW>0 and akbalQW<1000:
 'Навстречу вам вышел Акбал.'
-     if akbalernday!day: 
-     act 'Учиться у Акбала': gt 'akbalLern'
+     if akbalernday!day:
+     act 'Учиться у Акбала':gt'akbalLern'
      end
      
-     if DemonMorf>= 1: 
+     if DemonMorf>=1:
      'У вас <<DMrab>> сломленных рабов'
-         if DemonMorf>1: 
-			 act 'Снизить демоничность облика': 
+         if DemonMorf>1:
+			 act 'Снизить демоничность облика':
 			 cla
 			 *clr
-			 minut += 60
-			 DemonMorf = 1
+			 minut=minut+60
+			 DemonMorf=1
 			 'Акбал помог вам наложить заклинание, делающее вас похожей на человека, вы потеряли 10 скверны и Акбал предупреждает вас, что демон потерявший скверну полностью умрет навсегда.'
-			 act 'Уйти': gt $CURLOC
+			 act 'Уйти':gt $CURLOC
 			 end
 		 end
 		 
-		 if DMrab>0 and demrabtimes<DMrab: 
-		 	 act 'Трахать раба': 
+		 if DMrab>0 and demrabtimes<DMrab:
+		 	 act 'Трахать раба':
 			 cla
 			 *clr
-			 demrabtimes+= 1
-			 dom+= 1
-			 minut += 60
-			 skverna = skverna+5
-			  health = vital*10
-			 manna = intel*10+intel*magika
-			 wipo = will*10
-			 exp = exp+RAND(lvl/4,lvl/2)
-		     magikExp = magikExp+RAND(magika*2,magika*4)
-		     $namev = 'Рабыня'
-			 gt 'sexsisteman','vibor'
+			 demrabtimes+=1
+			 dom+=1
+			 minut=minut+60
+			 skverna=skverna+5
+			  health=vital*10
+			 manna=intel*10+intel*magika
+			 wipo=will*10
+			 exp=exp+RAND(lvl/4,lvl/2)
+		     magikExp=magikExp+RAND(magika*2,magika*4)
+		     $namev='Рабыня'
+			 gt'sexsisteman','vibor'
 			 end
 		 
 		 end
@@ -62,53 +62,53 @@ if akbalQW>0 and akbalQW<1000:
      end
 end
 
-if akbalQW = 0: 
-     act 'Бродить по оазису': 
+if akbalQW=0:
+     act 'Бродить по оазису':
      cla
      *clr
-	 minut += 120
+	 minut=minut+120
 	 clr
-	 '<center><img src = "pic/EvedonMonsters/akbaleye.jpg"></center>'
-	 gs 'stat'
+	 '<center><img src="pic/EvedonMonsters/akbaleye.jpg"></center>'
+	 gs'stat'
 	 'Перед Вами стоит большое существо демонического вида. Его мускулистый торс размеренно поднимается и опускается, следуя ритму дыхания.
 Подняв взгляд выше, Вы не успеваете рассмотреть нечеловеческое лицо твари, как Ваши взгляды пересекаются.
 В этот момент в мире остались только они - глаза, не моргающие, с вертикальным, как у кошки, зрачком. Они излучают потусторонний золотистый свет. Вы любуетесь этим светом, полным власти и спокойствия.
 Через мгновение глаза все же моргнули, но вы остались стоять, будучи оглушенным(ой) вернувшимися звуками окружающего мира.
 "А ты любопытна", - низким, утробным голосом произнесла тварь, "думаю я смогу повеселиться чуть больше чем обычно, не хочешь познать крайность силы демона?"
 Вы заморгали, из ваших глаз ручьем потекли слезы. Когда зрение вернулось, первое что Вы заметили, так это положение светил на небе - судя по всему игра в гляделки шла не один час.'
-     act 'Уйти из оазиса': gt 'desertW1'
-         act 'Что ты имеешь в виду': 
+     act 'Уйти из оазиса':gt'desertW1'
+         act 'Что ты имеешь в виду':
          cla
          *clr
-         '<center><img src = "pic/EvedonMonsters\akbal.jpg"></center>'
+         '<center><img src="pic/EvedonMonsters\akbal.jpg"></center>'
          '(Акбал) - станешь моей шлюхой и я вознагражу тебя силой демонов.'
-             act 'Уйти из оазиса': gt 'desertW1'
+             act 'Уйти из оазиса':gt'desertW1'
          
-             act 'Драться с Акбалом': 
+             act 'Драться с Акбалом':
              cla
              *clr
-             $nameV = 'Акбал'
-			 lvlv = 250
-			 strenV = 700
-			 speedV = 250
-			 agilV = 250
-			 vitalV = 650
-			 intelv = 650
-			 willv = 650
-			 program = 25
-			 healthV = vitalV*10
-			 mannaV = intelV*10+intelV*20
-			 wipoV = willV*10
-			 monster = 17
-			 NORUN = 1
-			 '<center><img src = "pic/EvedonMonsters/akbal.jpg"></center>'
+             $nameV='Акбал'
+			 lvlv=250
+			 strenV=700
+			 speedV=250
+			 agilV=250
+			 vitalV=650
+			 intelv=650
+			 willv=650
+			 program=25
+			 healthV=vitalV*10
+			 mannaV=intelV*10+intelV*20
+			 wipoV=willV*10
+			 monster=17
+			 NORUN=1
+			 '<center><img src="pic/EvedonMonsters/akbal.jpg"></center>'
 			 'Да как ты смеешь смертный червь противиться воле Акбала?'
-			 act 'Драться': gt 'before'
+			 act 'Драться':gt'before'
 			 end
 			 
-			 act 'Согласиться': 
-			 akbalQW = 1
-             gt 'akbalSex'
+			 act 'Согласиться':
+			 akbalQW=1
+             gt'akbalSex'
              end
 			 
          end

@@ -1,29 +1,29 @@
 # aptek
 cla
 *clr
- minut = minut + 5
-'<center><B><font color = maroon>Аптека</font></B></center>'
-'<center><img src = "pic/pic/aptek.jpg" ></center>'
+set minut = minut + 5
+'<center><B><font color=maroon>Аптека</font></B></center>'
+'<center><img src="pic/pic/aptek.jpg" ></center>'
 clr
-gs 'stat'
-gs 'time'
-     if money >= 1500: 
-         act 'Купить жиросжигатели 1500 руб': 
+gs'stat'
+gs'time'
+     if money >= 1500:
+         act 'Купить жиросжигатели 1500 руб':
 		 cla
 		 *clr
-		  minut = minut + 15
-		  fat = fat - 10
-		  money = money - 1500
-		 '<center><img src = "pic/pic/aptek.jpg" ></center>'
+		 set minut = minut + 15
+		 set fat = fat - 10
+		 set money = money - 1500
+		 '<center><img src="pic/pic/aptek.jpg" ></center>'
 		 'Вы купили жиросжигающую капсулу и заплатили деньги в кассу. Не отходя далеко от кассы вы '
-		 act 'Отойти от прилавка': gt 'aptek','start'
+		 act 'Отойти от прилавка':gt'aptek','start'
 		 end
      end
 
-     act 'ВЫЙТИ': 
+     act 'ВЫЙТИ':
      cla
-      minut = minut + 5
-     gt 'street'
+     set minut = minut + 5
+     gt'street'
      end
 
 --- aptek ---------------------------------

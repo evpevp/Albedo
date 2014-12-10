@@ -1,150 +1,150 @@
 # damageV
 
 
-     if priziv>0: 
-         if Pdefence>0: 
-             if Pdefence>= damagev: 
-             Pdefence- = damagev
-             damagev = 0
-             '<font color = #cd00cd><<$pname>> остановил атаку противника своей защитой</font>'
+     if priziv>0:
+         if Pdefence>0:
+             if Pdefence>=damagev:
+             Pdefence-=damagev
+             damagev=0
+             '<font color=#cd00cd><<$pname>> остановил атаку противника своей защитой</font>'
              end
-             if Pdefence<damagev and damagev>0: 
-             damagev- = Pdefence
-             Pdefence = 0
-             Phealth- = damagev
-             '<font color = #cd00cd><<$namev>> уничтожил защиту вашего помощника и нанес урон его здоровью <<damagev>></font>'
-             damagev = 0
+             if Pdefence<damagev and damagev>0:
+             damagev-=Pdefence
+             Pdefence=0
+             Phealth-=damagev
+             '<font color=#cd00cd><<$namev>> уничтожил защиту вашего помощника и нанес урон его здоровью <<damagev>></font>'
+             damagev=0
              end
          end
-         if Pdefence<= 0 and damagev>0: 
-         Phealth- = damagev
-         '<font color = #cd00cd><<$namev>> нанес урон здоровью помощника <<damagev>></font>'
-         damagev = 0
+         if Pdefence<=0 and damagev>0:
+         Phealth-=damagev
+         '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damagev>></font>'
+         damagev=0
          end
-         if Phealth<= 0 or Pwipo<= 0 or pmanna<= 0: 
+         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end
 
 
-gs 'PreEffect'
+gs'PreEffect'
 
-if round = 1 and damagev>50: damagev = 50
+if round=1 and damagev>50:damagev=50
 
-if conterBat>0: gs 'conterBat'
-!if conterBatV>0: gs 'conterBatV'
+if conterBat>0:gs'conterBat'
+!if conterBatV>0:gs'conterBatV'
 
-if defence<= 0: 
+if defence<=0:
 
-	 if zerkalo>0: 
-	 zeratk = RAND(0,zerkalo)
-		 if zeratk = 0 or sonarv>0: 
-		 zerkalo = 0
-		 '<font color = red><<$nameV>> попал в вас, а не в ваши отражения и зеркала рассыпались</font>'
+	 if zerkalo>0:
+	 zeratk=RAND(0,zerkalo)
+		 if zeratk=0 or sonarv>0:
+		 zerkalo=0
+		 '<font color=red><<$nameV>> попал в вас, а не в ваши отражения и зеркала рассыпались</font>'
 		 end
-		 if zeratk>0 and sonarv = 0: 
-		 zerkalo = zerkalo-1
-		 damagev = 0
-		 '<font color = red><<$nameV>> попал в зеркало и оно рассыпалось</font>'
+		 if zeratk>0 and sonarv=0:
+		 zerkalo=zerkalo-1
+		 damagev=0
+		 '<font color=red><<$nameV>> попал в зеркало и оно рассыпалось</font>'
 		 end
 	 end
 	 
-	 if notHere>0 and damagev>0 and sonarv = 0: 
-	 damagev = 0
-	 '<font color = green><<$nameV>> не видит вас.</font>'
+	 if notHere>0 and damagev>0 and sonarv=0:
+	 damagev=0
+	 '<font color=green><<$nameV>> не видит вас.</font>'
 	 end
 	 
-	 if klon>0 and damagev>0 and sonarv = 0: 
-	 damagev = 0
-	 klon = klon-1
-	 notHere = notHere+1
-	 '<font color = green><<$nameV>> попал в ваш иллюзорный клон и ваш клон растворился.</font>'
+	 if klon>0 and damagev>0 and sonarv=0:
+	 damagev=0
+	 klon=klon-1
+	 notHere=notHere+1
+	 '<font color=green><<$nameV>> попал в ваш иллюзорный клон и ваш клон растворился.</font>'
 	 end
 
-     if barier>0 and damagev>0: 
-	 damagev = damagev-((damagev*barier)/100)
-	 '<font color = green>Ваш барьер снизил урон на <B><<barier>></B>%</font>'
-	 barier = barier-1
+     if barier>0 and damagev>0:
+	 damagev=damagev-((damagev*barier)/100)
+	 '<font color=green>Ваш барьер снизил урон на <B><<barier>></B>%</font>'
+	 barier=barier-1
 	 end
 	 
-	 if gostbody>0: 
-	 damagev = 0
-	 gostbody- = 1
-	 '<font color = green>Удар противника прошел через ваше тело, не причинив вам никакого ущерба.</font>'
+	 if gostbody>0:
+	 damagev=0
+	 gostbody-=1
+	 '<font color=green>Удар противника прошел через ваше тело, не причинив вам никакого ущерба.</font>'
 	 end
 	 
 	 
-	 if gostfistv>0 and damagev>0: 
-	 gostfistv = 0
-	 damagev = RAND(1000,2000)
-	 BloodV = BloodV+RAND(100,500)
-	 '<font color = red>Рука противника не материальна, она входит в ваше тело и внезапно материализуется разрывая вашу плоть и нанося страшный урон.</font>'
-	 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+	 if gostfistv>0 and damagev>0:
+	 gostfistv=0
+	 damagev=RAND(1000,2000)
+	 BloodV=BloodV+RAND(100,500)
+	 '<font color=red>Рука противника не материальна, она входит в ваше тело и внезапно материализуется разрывая вашу плоть и нанося страшный урон.</font>'
+	 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
 	 dynamic $rascheturona
-	 damagev = 0
+	 damagev=0
 	 end
 	 
 	 
 	 
 
-	 if bronik = 0 and ironskin = 0 and aktivdef = 0 and damagev>0: 
+	 if bronik=0 and ironskin=0 and aktivdef=0 and damagev>0:
 	 dynamic $rascheturona
-		 if weaponv = 1 and wepAtkv>0 and damagev>0 or beast = 1 and damagev>0: 
-		 bloodv = bloodv+RAND(1,3)
-		 health = health-BloodV
-		 '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+		 if weaponv=1 and wepAtkv>0 and damagev>0 or beast=1 and damagev>0:
+		 bloodv=bloodv+RAND(1,3)
+		 health=health-BloodV
+		 '<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
 		 end
-	 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+	 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
 	 end
-	 if bronik>0 and damagev>0: 
-		 if bronik >= damagev: 
-		 '<B><font color = green>Доспех полностью погасил нанесенный урон</font></B>'
+	 if bronik>0 and damagev>0:
+		 if bronik >= damagev:
+		 '<B><font color=green>Доспех полностью погасил нанесенный урон</font></B>'
 		 end
-		 if bronik < damagev: 
-		 '<B><font color = green>Доспех частично погасил нанесенный урон</font></B>'
-		 damagev = damagev-bronik
+		 if bronik < damagev:
+		 '<B><font color=green>Доспех частично погасил нанесенный урон</font></B>'
+		 damagev=damagev-bronik
 		 dynamic $rascheturona
-			 if weaponv = 1 and wepAtkv>0 and damagev>0 or beast = 1 and damagev>0: 
-			 bloodv = bloodv+RAND(1,3)
-			 health = health-BloodV
-			 '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+			 if weaponv=1 and wepAtkv>0 and damagev>0 or beast=1 and damagev>0:
+			 bloodv=bloodv+RAND(1,3)
+			 health=health-BloodV
+			 '<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
 			 end
-		 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
-		 end
-	 end
-	 if ironskin>0 and damagev>0: 
-		 if ironskin >= damagev: 
-		 '<B><font color = green>Защита полностью погасила нанесенный урон</font></B>'
-		 end
-		 if ironskin < damagev: 
-		 '<B><font color = green>Защита частично погасила нанесенный урон</font></B>'
-		 damagev = damagev-ironskin
-		 dynamic $rascheturona
-		 ironskin = 0
-			 if weaponv = 1 and wepAtkv>0 and damagev>0 or beast = 1 and damagev>0: 
-			 bloodv = bloodv+RAND(1,3)
-			 health = health-BloodV
-			 '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
-			 end
-		 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+		 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
 		 end
 	 end
-	 if aktivdef>0 and damagev>0: 
-		 '<B><font color = green>Активная защита ослабляет нанесенный урон</font></B>'
-		 stun = 0
-		 damagev = damagev/4
+	 if ironskin>0 and damagev>0:
+		 if ironskin >= damagev:
+		 '<B><font color=green>Защита полностью погасила нанесенный урон</font></B>'
+		 end
+		 if ironskin < damagev:
+		 '<B><font color=green>Защита частично погасила нанесенный урон</font></B>'
+		 damagev=damagev-ironskin
 		 dynamic $rascheturona
-			 if weaponv = 1 and wepAtkv>0 and damagev>0 or beast = 1 and damagev>0: 
-			 bloodv = bloodv+RAND(1,3)
-			 health = health-BloodV
-			 '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+		 ironskin=0
+			 if weaponv=1 and wepAtkv>0 and damagev>0 or beast=1 and damagev>0:
+			 bloodv=bloodv+RAND(1,3)
+			 health=health-BloodV
+			 '<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
 			 end
-		 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+		 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+		 end
+	 end
+	 if aktivdef>0 and damagev>0:
+		 '<B><font color=green>Активная защита ослабляет нанесенный урон</font></B>'
+		 stun=0
+		 damagev=damagev/4
+		 dynamic $rascheturona
+			 if weaponv=1 and wepAtkv>0 and damagev>0 or beast=1 and damagev>0:
+			 bloodv=bloodv+RAND(1,3)
+			 health=health-BloodV
+			 '<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+			 end
+		 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
 	end
 end
 
-if defence>0 and damagev>0: 
-gs 'defence'
+if defence>0 and damagev>0:
+gs'defence'
 end
 --- damageV ---------------------------------
 

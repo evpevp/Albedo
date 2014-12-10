@@ -1,90 +1,90 @@
 # edrinW
 $metka = $ARGS[0]
 $loc = $CURLOC
-if karavanday>= 12 and karavanday<= 20: 
-edrinday = day
+if karavanday>=12 and karavanday<=20:
+edrinday=day
 *clr
-'<center><img src = "pic/EvedonNarod/edrin.jpg"></center>'
+'<center><img src="pic/EvedonNarod/edrin.jpg"></center>'
 'Рядом с Эдрин сидит мужик из Эведона, воин из гильдии караванщиков. Он пьет с Эдрин, хохочет и мнет ее за сиськи.'
 
-act 'Уйти': GOTO $locP, $metkaP
-     if femin<200: 
+act 'Уйти':GOTO $locP, $metkaP
+     if femin<200:
      'Караванщик повернул голову в вашу сторону "Эй уважаемый, не нависай. Не видишь, мы отдыхаем. Ступай отсюда с миром."'
      end
-     if femin>= 200: 
-		 if penis>0: 
+     if femin>=200:
+		 if penis>0:
 		 'Караванщик повернул голову в вашу сторону "О, какая симпатичная девушка к нам пожаловала." Эдрин усмехнулась, "губы закати, она не в твоем вкусе!" Караванщик кивнул "Понятно, очередная членодевка. И что за хрень такая у вас в Тель Адре, больше нигде этих убогих нет кроме как у вас."'
 		 end
-		 if penis = 0: 
+		 if penis=0:
 		 'Караванщик повернул голову в вашу сторону "О какая симпатичная девушка к нам пожаловала, присаживайся, выпей с нами."'
-		     if whore>= 10: 'Эдрин улыбнулась "Это наша местная шлюшка <<$name>>."'
-		     if cumslut>= 10: 'И еще поговаривают будто бы она без ума от спермы, любит ее есть и когда на лицо кончают!'
-		     if analslut>= 10: 'Про ее рабочую попку уже легенды ходят. Принимает в себя член любого размера и тащится как последняя блядь от этого.'
-		 act 'Уйти': GOTO $locP, $metkaP
-		 act 'Сесть к караванщику и Эдрин': gt 'edrinTreesome','start'
+		     if whore>=10:'Эдрин улыбнулась "Это наша местная шлюшка <<$name>>."'
+		     if cumslut>=10:'И еще поговаривают будто бы она без ума от спермы, любит ее есть и когда на лицо кончают!'
+		     if analslut>=10:'Про ее рабочую попку уже легенды ходят. Принимает в себя член любого размера и тащится как последняя блядь от этого.'
+		 act 'Уйти':GOTO $locP, $metkaP
+		 act 'Сесть к караванщику и Эдрин':gt'edrinTreesome','start'
 		 end
      end
 end
 
-if karavanday<12 or karavanday>20: 
+if karavanday<12 or karavanday>20:
 *clr
-'<center><img src = "pic/EvedonNarod/edrin1.jpg"></center>'
+'<center><img src="pic/EvedonNarod/edrin1.jpg"></center>'
 'Вы подошли к Эдрин и она пригласила вас сесть за ее столик. Она улыбнулась вам и с улыбкой сказала: "Может купишь девушке пива?"'
 
-	 if gem>= 2: 
-		 act 'Купить ей пива': 
+	 if gem>=2:
+		 act 'Купить ей пива':
 		 cla
 		 *clr
-		 minut += 30
-		 gem = gem-2
-		 if penis>0: '<center><img src = "pic/EvedonNarod/edrin1.jpg"></center>'
+		 minut=minut+30
+		 gem=gem-2
+		 if penis>0:'<center><img src="pic/EvedonNarod/edrin1.jpg"></center>'
 		 'Вы подозвали трактирщицу и заплатив два гема купили пиво для Эдрин. Она благодарно улыбнулась вам.'
-			 if penis>0: 
-			 horny = 100
+			 if penis>0:
+			 horny=100
 			 clr
-			 gs 'stat'
+			 gs'stat'
 			 'Вы почувствовали как нога Эдрин ловко добралась до вашего члена и начала его ласкать. Она так ловко действовала, что у вас моментально встал дыбом член и захотелось продолжения. Но тут Эдрин убрала ногу и прошептала вам. Пиво я отработала, а если заплатишь мне 100 гемов, то мы продолжим.'
-				 if gem>= 100: 
-					 act 'Дать ей 100 гемов': 
+				 if gem>=100:
+					 act 'Дать ей 100 гемов':
 					 cla
 					 *clr
-						 if penis>= 6: 
-						 gem = gem-100
-						 horny = 0
-						 if edrinSex = 0: edrinSex = 1 & girl = girl+1
-						 sexm = sexm+1
-						 if penis>18: edrinLove = edrinLove+1
-						 dom = dom+1
-						 '<center><img src = "pic/EvedonTA/edrin2.jpg" ></center>'
+						 if penis>=6: 
+						 gem=gem-100
+						 horny=0
+						 if edrinSex=0:edrinSex=1&girl=girl+1
+						 sexm=sexm+1
+						 if penis>18:edrinLove=edrinLove+1
+						 dom=dom+1
+						 '<center><img src="pic/EvedonTA/edrin2.jpg" ></center>'
 						 'Вы расплатились с Эдрин и она отвела вас в переулок за баром. Там она сняла с себя юбку и встала раком уперевшись на стену, вы обезумев от вожделения тут же вогнали ей свой член и оттрахали Эдрин кончив ей на задницу, она выпрямилась, вытерла платочком сперму и поцеловала вас в губы. После этого развернулась и ушла.'
-						 act 'Уйти': gt 'teladareW'
+						 act 'Уйти':gt'teladareW'
 						 end
 						 
-						 if penis<6: 
-						 gem = gem-100
-						 horny = 0
-						 if edrinSex = 0: edrinSex = 1 & girl = girl+1
-						 sexm = sexm+1
-						 if penis>18: edrinLove = edrinLove+1
-						 '<center><img src = "pic/EvedonTA/edrin3.jpg" ></center>'
+						 if penis<6:
+						 gem=gem-100
+						 horny=0
+						 if edrinSex=0:edrinSex=1&girl=girl+1
+						 sexm=sexm+1
+						 if penis>18:edrinLove=edrinLove+1
+						 '<center><img src="pic/EvedonTA/edrin3.jpg" ></center>'
 						 'Вы расплатились с Эдрин и она отвела вас в переулок за баром. Вы достали свой маленький, торчащий как гвоздик членик и Эдрин усмехнулась. "Нет, секса у нас не получится, но я поласкаю тебя" Эдрин взяла ваш крохотный приборчик и начала его дрочить двумя пальчиками, вас быстро охватило блаженство и вы кончили Эдрин в ладони.'
-						 act 'Уйти': gt 'teladareW'
+						 act 'Уйти':gt'teladareW'
 						 
 						 end
 					 end
 				 end
 				 
-			 act 'Уйти': GOTO $locP, $metkaP
+			 act 'Уйти':GOTO $locP, $metkaP
 			 end
 			 
-			 if penis<= 0: 
+			 if penis<=0:
 			 'Вы немного поболтали с Эдрин, но она не особо хочет с вами разговаривать, отвечает односложно и смотрит куда-то вдаль, не обращая на вас внимания.'
-			 act 'Уйти': GOTO $locP, $metkaP
+			 act 'Уйти':GOTO $locP, $metkaP
 			 end
 		 end
 	 end
 
-act 'Уйти': GOTO $locP, $metkaP
+act 'Уйти':GOTO $locP, $metkaP
 end
 --- edrinW ---------------------------------
 

@@ -1,13 +1,13 @@
 # poliWin
-monster = 0
+monster=0
 
 'Тварь растаяла оставив после себя маленькую черную лужицу.'
-magikExp = magikExp+RAND(magika*4,magika*6)
-gs 'stat'
+magikExp=magikExp+RAND(magika*4,magika*6)
+gs'stat'
 
-gs 'stat'
+gs'stat'
 'Вы чувствуете как сила твари рассеивается в воздухе и часть ее достается вам.'
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 --- poliWin ---------------------------------
 

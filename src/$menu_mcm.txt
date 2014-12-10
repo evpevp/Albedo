@@ -1,9 +1,9 @@
 # $menu_mcm
-if $selobj = 'Одежда': 
+if $selobj='Одежда':
 !Мужская одежда manOd\kostum.jpg
-     if kostum = 2: VIEW 'pic\manOd\kostum.jpg'
-     if manjeans = 2: VIEW 'pic\manOd\manjeans.jpg'
-     if sport = 2: VIEW 'pic\manOd\sport.jpg'
+     if kostum = 2:VIEW 'pic\manOd\kostum.jpg'
+     if manjeans = 2:VIEW 'pic\manOd\manjeans.jpg'
+     if sport = 2:VIEW 'pic\manOd\sport.jpg'
 end
 
 unselect

@@ -7,27 +7,27 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Мимико</H4></center>'
-'<center><img src = "pic/EvedonNarod\mimiko.jpg"></center>'
+'<center><img src="pic/EvedonNarod\mimiko.jpg"></center>'
 'Привет <<$name>>, рада тебя видеть.'
 clr
-gs 'stat'
+gs'stat'
 
-if mimikoQW = 0: 
-mimikoQW = 1
+if mimikoQW=0:
+mimikoQW=1
 'Спасибо еще раз за мое спасение, мне нечем оплатить тебе. Но я могу тренировать тебя, а также научить нескольким приемам, которые помогут тебе выжить.'
-act 'Отойти': gt 'tavernavor'
+act 'Отойти':gt'tavernavor'
 end
 
-if gem>= 100 and syriken>= 100: 
-         act 'Купить метательные кинжалы': 
-		 minut += 5
+if gem>=100 and syriken>=100:
+         act 'Купить метательные кинжалы':
+		 minut=minut+5
 		 tempshop = input ("Сколько вы хотите купить метательных кинжал (1 кинжал 100 гем)?")
-             if tempshop*100>gem or tempshop<0 : 
+             if tempshop*100>gem or tempshop<0 :
              msg'У вас нет такого количества гемов.'
 			 gt $CURLOC
              else
-			 gem = gem-tempshop*100
-			 spsyriken = spsyriken+tempshop 		 
+			 gem=gem-tempshop*100
+			 spsyriken=spsyriken+tempshop 		 
 			 msg'Вы купили <<tempshop>> шт. метательных кинжалов.'
 		     end
 		 gt $CURLOC
@@ -37,69 +37,69 @@ end
 
 
 
-if mimikoQW = 1 and mimikoday!day: 
-     act 'Тренировка': 
+if mimikoQW=1 and mimikoday!day:
+     act 'Тренировка':
      cla
      *clr
-     minut += 60
-     fat = fat-5
-     sweat = 5
-     exp = exp+RAND(lvl,lvl*2)
-     mimikoday = day
+     minut=minut+60
+     fat=fat-5
+     sweat=5
+     exp=exp+RAND(lvl,lvl*2)
+     mimikoday=day
      clr
-     gs 'stat'
-     '<center><img src = "pic/EvedonNarod\mimiko.jpg"></center>'
+     gs'stat'
+     '<center><img src="pic/EvedonNarod\mimiko.jpg"></center>'
      'Мимико встала и повела вас в одну из комнат, оборудованную под спортзал.'
      'Мимико гоняла вас целый час, показывая различные упражнения.'
-     act 'Уйти': gt 'vorgildia'
+     act 'Уйти':gt'vorgildia'
      end
      
-     if tai<100: 
-         act 'Изучать технику рукопашного боя.': 
+     if tai<100:
+         act 'Изучать технику рукопашного боя.':
          cla
          *clr
          minut = minut + 60
-         tai = tai+RAND(10,25)
-         mimikoday = day
-         if tai>100: tai = 100
-         '<center><img src = "pic/EvedonNarod\mimiko.jpg"></center>'
+         tai=tai+RAND(10,25)
+         mimikoday=day
+         if tai>100:tai=100
+         '<center><img src="pic/EvedonNarod\mimiko.jpg"></center>'
          'Мимико встала и повела вас в одну из комнат, оборудованную под спортзал.'
          'Мимико показывала вам технику рукопашного боя. Эта техника боя позволяет наносить голыми руками очень болезненные удары, если знать куда наносить.'
          'Вы изучили прием на <<tai>>%'
-         act 'Уйти': gt 'vorgildia'
+         act 'Уйти':gt'vorgildia'
          end
      end
      
-     if tai = 100 and syriken<100: 
-         act 'Изучать технику бросания метательного оружия': 
+     if tai=100 and syriken<100:
+         act 'Изучать технику бросания метательного оружия':
          cla
          *clr
          minut = minut + 60
-         syriken = syriken+RAND(10,25)
-         mimikoday = day
-         if syriken>100: syriken = 100
-         '<center><img src = "pic/EvedonNarod\mimiko.jpg"></center>'
+         syriken=syriken+RAND(10,25)
+         mimikoday=day
+         if syriken>100:syriken=100
+         '<center><img src="pic/EvedonNarod\mimiko.jpg"></center>'
          'Мимико встала и повела вас в одну из комнат, оборудованную под спортзал.'
          'Мимико показывала вам как правильно держать метательное оружие и бросать его точно в цель.'
-             if spsyrikenQW = 0: spsyrikenQW = 1 & spsyriken = spsyriken+10 & 'Я дарю тебе десять кинжалов. Они пропитаны особым ядом, рецепт которого знаю только я. Если надо будет еще, то я могу продать тебе их.'
+             if spsyrikenQW=0:spsyrikenQW=1&spsyriken=spsyriken+10&'Я дарю тебе десять кинжалов. Они пропитаны особым ядом, рецепт которого знаю только я. Если надо будет еще, то я могу продать тебе их.'
          'Вы изучили прием на <<syriken>>%'
-         act 'Уйти': gt 'vorgildia'
+         act 'Уйти':gt'vorgildia'
          end
      end
      
-     if syriken = 100 and takasuge<100: 
-         act 'Изучать технику лечения': 
+     if syriken=100 and takasuge<100:
+         act 'Изучать технику лечения':
          cla
          *clr
          minut = minut + 60
-         takasuge = takasuge+RAND(10,25)
-         mimikoday = day
-         if takasuge>100: takasuge = 100
-         '<center><img src = "pic/EvedonNarod\mimiko.jpg"></center>'
+         takasuge=takasuge+RAND(10,25)
+         mimikoday=day
+         if takasuge>100:takasuge=100
+         '<center><img src="pic/EvedonNarod\mimiko.jpg"></center>'
          'Мимико встала и повела вас в одну из комнат, оборудованную под спортзал.'
          'Мимико показывала вам как правильно концентрироваться, что-бы успешно восстанавливать свои жизненные силы.'
          'Вы изучили прием на <<takasuge>>%'
-         act 'Уйти': gt 'vorgildia'
+         act 'Уйти':gt'vorgildia'
          end
      end
 end
@@ -107,6 +107,6 @@ end
 
 
 
-act 'Отойти': gt 'tavernavor'
+act 'Отойти':gt'tavernavor'
 --- mimiko ---------------------------------
 

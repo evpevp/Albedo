@@ -3,46 +3,46 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Мелинда Кларксон</H4></center>'
-'<center><img src = "pic/EvedonNarod/MelindaKlarkson.jpg" ></center>'
+'<center><img src="pic/EvedonNarod/MelindaKlarkson.jpg" ></center>'
 'Молодая и пышногрудая брюнетка является дочерью трактирщика.'
 clr
-gs 'stat'
-if penis>0: 
-horny+= 10
+gs'stat'
+if penis>0:
+horny+=10
 'Вы с трудом можете отвести свои глаза от ее пышного бюста и чувствуете шевеление члена в штанах.'
-     if StefanQW>= 1 and horny>= 75 and toiletJerkQW = 0: 
+     if StefanQW>=1 and horny>=75 and toiletJerkQW=0:
      'Черт, у вас настоящая революция в штанах, а даже подрочить негде, если только в туалете, что около шахты.'
      end
 end
 
 
-act 'Уйти': gt $locFight,$metkaFight
+act 'Уйти':gt $locFight,$metkaFight
 
-act 'Болтать': 
+act 'Болтать':
 cla
-minut+= 15
-gs 'stat'
-     if StefanQW>= 1: 
+minut+=15
+gs'stat'
+     if StefanQW>=1:
      'Привет <<$name>>.'
      else
-     	 if femin>200: 
+     	 if femin>200:
 		 'Привет путница, откуда путь держишь?'
 		 end
-		 if femin<= 200: 
+		 if femin<=200:
 		 'Привет путник, откуда путь держишь?'
 		 end
      end
      ''
-act 'Уйти': gt $locFight,$metkaFight
+act 'Уйти':gt $locFight,$metkaFight
 end
 
-if toiletJerkQW = 2: 
-     act 'Спросить могут ли у нее поселится приезжие': 
+if toiletJerkQW=2:
+     act 'Спросить могут ли у нее поселится приезжие':
 	 cla
-	 minut+= 15
-	 gs 'stat'
+	 minut+=15
+	 gs'stat'
 	 'Мой отец сказал нет, его не переубедишь, значит нет.'
-	 act 'Уйти': gt $locFight,$metkaFight
+	 act 'Уйти':gt $locFight,$metkaFight
 	 end
 end
 --- MelindaKlarkson ---------------------------------

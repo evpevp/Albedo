@@ -1,78 +1,78 @@
 # level
 
 
-if lvlNeedExp<= exp: exp = exp-lvl*10 & lvl = lvl+1 & sp = sp+5 & 'У ВАС ПОВЫСИЛСЯ УРОВЕНЬ'
+if lvlNeedExp<=exp:exp=exp-lvl*10&lvl=lvl+1&sp=sp+5&'У ВАС ПОВЫСИЛСЯ УРОВЕНЬ'
 
-!'if lvl = 1 and exp = 10: lvl = 2 & sp = sp+5
-if lvl = 2 and exp = 30: lvl = 3 & sp = sp+5
-if lvl = 3 and exp = 60: lvl = 4 & sp = sp+5
-if lvl = 4 and exp = 100: lvl = 5 & sp = sp+5
-if lvl = 5 and exp = 150: lvl = 6 & sp = sp+5
-if lvl = 6 and exp = 210: lvl = 7 & sp = sp+5
-if lvl = 7 and exp = 280: lvl = 8 & sp = sp+5
-if lvl = 8 and exp = 360: lvl = 9 & sp = sp+5
-if lvl = 9 and exp = 450: lvl = 10 & sp = sp+5
-if lvl = 10 and exp = 550: lvl = 11 & sp = sp+5
-if lvl = 11 and exp = 660: lvl = 12 & sp = sp+5
-if lvl = 12 and exp = 120: lvl = 13 & sp = sp+5
-if lvl = 13 and exp = 130: lvl = 14 & sp = sp+5
-if lvl = 14 and exp = 140: lvl = 15 & sp = sp+5
-if lvl = 15 and exp = 150: lvl = 16 & sp = sp+5
-if lvl = 16 and exp = 160: lvl = 17 & sp = sp+5
-if lvl = 17 and exp = 170: lvl = 18 & sp = sp+5
-if lvl = 18 and exp = 180: lvl = 19 & sp = sp+5
-if lvl = 19 and exp = 190: lvl = 20 & sp = sp+5
-if lvl = 20 and exp = 200: lvl = 21 & sp = sp+5
-if lvl = 21 and exp = 210: lvl = 22 & sp = sp+5
-if lvl = 22 and exp = 220: lvl = 23 & sp = sp+5
-if lvl = 23 and exp = 230: lvl = 24 & sp = sp+5
-if lvl = 24 and exp = 240: lvl = 25 & sp = sp+5
-if lvl = 25 and exp = 250: lvl = 26 & sp = sp+5
-if lvl = 26 and exp = 260: lvl = 27 & sp = sp+5
-if lvl = 27 and exp = 270: lvl = 28 & sp = sp+5
-if lvl = 28 and exp = 280: lvl = 29 & sp = sp+5
-if lvl = 29 and exp = 290: lvl = 30 & sp = sp+5
-if lvl = 30 and exp = 300: lvl = 31 & sp = sp+5
-if lvl = 31 and exp = 310: lvl = 32 & sp = sp+5
-if lvl = 32 and exp = 320: lvl = 33 & sp = sp+5
-if lvl = 33 and exp = 330: lvl = 34 & sp = sp+5
-if lvl = 34 and exp = 340: lvl = 35 & sp = sp+5
-if lvl = 35 and exp = 350: lvl = 36 & sp = sp+5
-if lvl = 36 and exp = 360: lvl = 37 & sp = sp+5
-if lvl = 37 and exp = 370: lvl = 38 & sp = sp+5
-if lvl = 38 and exp = 380: lvl = 39 & sp = sp+5
-if lvl = 39 and exp = 390: lvl = 40 & sp = sp+5
-if lvl = 40 and exp = 400: lvl = 41 & sp = sp+5
-if lvl = 41 and exp = 410: lvl = 42 & sp = sp+5
-if lvl = 42 and exp = 420: lvl = 43 & sp = sp+5
-if lvl = 43 and exp = 430: lvl = 44 & sp = sp+5
-if lvl = 44 and exp = 440: lvl = 45 & sp = sp+5
-if lvl = 45 and exp = 450: lvl = 46 & sp = sp+5
-if lvl = 46 and exp = 460: lvl = 47 & sp = sp+5
-if lvl = 47 and exp = 470: lvl = 48 & sp = sp+5
-if lvl = 48 and exp = 480: lvl = 49 & sp = sp+5
-if lvl = 49 and exp = 490: lvl = 50 & sp = sp+5
-if lvl = 50 and exp = 500: lvl = 51 & sp = sp+5
-if lvl = 51 and exp = 510: lvl = 52 & sp = sp+5
-if lvl = 52 and exp = 520: lvl = 53 & sp = sp+5
-if lvl = 53 and exp = 530: lvl = 54 & sp = sp+5
-if lvl = 54 and exp = 540: lvl = 55 & sp = sp+5
-if lvl = 55 and exp = 550: lvl = 56 & sp = sp+5
-if lvl = 56 and exp = 560: lvl = 57 & sp = sp+5
-if lvl = 57 and exp = 570: lvl = 58 & sp = sp+5
-if lvl = 58 and exp = 580: lvl = 59 & sp = sp+5
-if lvl = 59 and exp = 590: lvl = 60 & sp = sp+5
-if lvl = 60 and exp = 600: lvl = 61 & sp = sp+5
-if lvl = 61 and exp = 610: lvl = 62 & sp = sp+5
-if lvl = 62 and exp = 620: lvl = 63 & sp = sp+5
-if lvl = 63 and exp = 630: lvl = 64 & sp = sp+5
-if lvl = 64 and exp = 640: lvl = 65 & sp = sp+5
-if lvl = 65 and exp = 650: lvl = 66 & sp = sp+5
-if lvl = 66 and exp = 660: lvl = 67 & sp = sp+5
-if lvl = 67 and exp = 670: lvl = 68 & sp = sp+5
-if lvl = 68 and exp = 680: lvl = 69 & sp = sp+5
-if lvl = 69 and exp = 690: lvl = 70 & sp = sp+5
-if lvl = 70 and exp = 700: lvl = 71 & sp = sp+5'
+!'if lvl=1 and exp=10:lvl=2&sp=sp+5
+if lvl=2 and exp=30:lvl=3&sp=sp+5
+if lvl=3 and exp=60:lvl=4&sp=sp+5
+if lvl=4 and exp=100:lvl=5&sp=sp+5
+if lvl=5 and exp=150:lvl=6&sp=sp+5
+if lvl=6 and exp=210:lvl=7&sp=sp+5
+if lvl=7 and exp=280:lvl=8&sp=sp+5
+if lvl=8 and exp=360:lvl=9&sp=sp+5
+if lvl=9 and exp=450:lvl=10&sp=sp+5
+if lvl=10 and exp=550:lvl=11&sp=sp+5
+if lvl=11 and exp=660:lvl=12&sp=sp+5
+if lvl=12 and exp=120:lvl=13&sp=sp+5
+if lvl=13 and exp=130:lvl=14&sp=sp+5
+if lvl=14 and exp=140:lvl=15&sp=sp+5
+if lvl=15 and exp=150:lvl=16&sp=sp+5
+if lvl=16 and exp=160:lvl=17&sp=sp+5
+if lvl=17 and exp=170:lvl=18&sp=sp+5
+if lvl=18 and exp=180:lvl=19&sp=sp+5
+if lvl=19 and exp=190:lvl=20&sp=sp+5
+if lvl=20 and exp=200:lvl=21&sp=sp+5
+if lvl=21 and exp=210:lvl=22&sp=sp+5
+if lvl=22 and exp=220:lvl=23&sp=sp+5
+if lvl=23 and exp=230:lvl=24&sp=sp+5
+if lvl=24 and exp=240:lvl=25&sp=sp+5
+if lvl=25 and exp=250:lvl=26&sp=sp+5
+if lvl=26 and exp=260:lvl=27&sp=sp+5
+if lvl=27 and exp=270:lvl=28&sp=sp+5
+if lvl=28 and exp=280:lvl=29&sp=sp+5
+if lvl=29 and exp=290:lvl=30&sp=sp+5
+if lvl=30 and exp=300:lvl=31&sp=sp+5
+if lvl=31 and exp=310:lvl=32&sp=sp+5
+if lvl=32 and exp=320:lvl=33&sp=sp+5
+if lvl=33 and exp=330:lvl=34&sp=sp+5
+if lvl=34 and exp=340:lvl=35&sp=sp+5
+if lvl=35 and exp=350:lvl=36&sp=sp+5
+if lvl=36 and exp=360:lvl=37&sp=sp+5
+if lvl=37 and exp=370:lvl=38&sp=sp+5
+if lvl=38 and exp=380:lvl=39&sp=sp+5
+if lvl=39 and exp=390:lvl=40&sp=sp+5
+if lvl=40 and exp=400:lvl=41&sp=sp+5
+if lvl=41 and exp=410:lvl=42&sp=sp+5
+if lvl=42 and exp=420:lvl=43&sp=sp+5
+if lvl=43 and exp=430:lvl=44&sp=sp+5
+if lvl=44 and exp=440:lvl=45&sp=sp+5
+if lvl=45 and exp=450:lvl=46&sp=sp+5
+if lvl=46 and exp=460:lvl=47&sp=sp+5
+if lvl=47 and exp=470:lvl=48&sp=sp+5
+if lvl=48 and exp=480:lvl=49&sp=sp+5
+if lvl=49 and exp=490:lvl=50&sp=sp+5
+if lvl=50 and exp=500:lvl=51&sp=sp+5
+if lvl=51 and exp=510:lvl=52&sp=sp+5
+if lvl=52 and exp=520:lvl=53&sp=sp+5
+if lvl=53 and exp=530:lvl=54&sp=sp+5
+if lvl=54 and exp=540:lvl=55&sp=sp+5
+if lvl=55 and exp=550:lvl=56&sp=sp+5
+if lvl=56 and exp=560:lvl=57&sp=sp+5
+if lvl=57 and exp=570:lvl=58&sp=sp+5
+if lvl=58 and exp=580:lvl=59&sp=sp+5
+if lvl=59 and exp=590:lvl=60&sp=sp+5
+if lvl=60 and exp=600:lvl=61&sp=sp+5
+if lvl=61 and exp=610:lvl=62&sp=sp+5
+if lvl=62 and exp=620:lvl=63&sp=sp+5
+if lvl=63 and exp=630:lvl=64&sp=sp+5
+if lvl=64 and exp=640:lvl=65&sp=sp+5
+if lvl=65 and exp=650:lvl=66&sp=sp+5
+if lvl=66 and exp=660:lvl=67&sp=sp+5
+if lvl=67 and exp=670:lvl=68&sp=sp+5
+if lvl=68 and exp=680:lvl=69&sp=sp+5
+if lvl=69 and exp=690:lvl=70&sp=sp+5
+if lvl=70 and exp=700:lvl=71&sp=sp+5'
 
 
 

@@ -1,42 +1,42 @@
 # игркарт1
-!by Master  (blakarchont@gmail.com)
+!by Master Set (blakarchont@gmail.com)
 !НАЧАЛО ИГРЫ 
 clr
-gs 'stat'
- minut = minut + 5
-IF turn = 0: 
+gs'stat'
+set minut=minut + 5
+IF turn = 0:
  CLA
- '<right><img src = "pic/casino/stavkabd.jpg" ></right>'
+ '<right><img src="pic/casino/stavkabd.jpg" ></right>'
  ' Прошу делать ставки, господа.'
-ACT 'Сделать ставку': 
+ACT 'Сделать ставку':
    deal = input 'Введите сумму'
-   if money<deal: 
+   if money<deal:
 	 msg 'У вас недостаточно денег'
 	 gt 'игркарт1'
    end
-   if deal<0: 
+   if deal<0:
 	 msg 'Неправильно, попробуй еще раз.'
 	 gt 'игркарт1'
    end
-   if deal>1000: 
+   if deal>1000:
 	 msg 'Максимальная ставка 1000 рублей.'
 	 gt 'игркарт1'
    end
-    money = money - deal
+   set money = money - deal
    turn = 1
-   gt 'игркарт1'
+   GT 'игркарт1'
 END
- ACT 'Отойти от стола': 
-  gt 'блдж'
+ ACT 'Отойти от стола':
+  GT 'блдж'
  END
  
 END
 
 !РАЗДАЧА КАРТ
-IF turn = 1: 
+IF turn = 1:
  CLA
- '<right><img src = "pic/casino/cartbd.jpg" ></right>'
- ' Крупье сдает карты: '
+ '<right><img src="pic/casino/cartbd.jpg" ></right>'
+ ' Крупье сдает карты:'
  '...'
  suit = RAND (1,4)
  number = RAND (1,13)
@@ -52,175 +52,175 @@ IF turn = 1:
  p_points = p_points + points[number]
  IF p_points = 22: p_points = 21  
  wait 1000
- IF p_points < 21: 
-  'Карта крупье: '
+ IF p_points < 21:
+  'Карта крупье:'
   '  <<$d_card[1]>>'
   '__________________________'
-  'Карты игрока: '
+  'Карты игрока:'
   '  <<$p_card[1]>>'
   '  <<$p_card[2]>>'
-  ACT 'Хватит': 
+  ACT 'Хватит':
    turn = 3
-   gt 'игркарт1'
+   GT 'игркарт1'
   END
-  ACT 'Еще карту': 
+  ACT 'Еще карту':
    turn = 2
-   gt 'игркарт1'
+   GT 'игркарт1'
   END  
  END
- IF p_points = 21: 
-  'Карта крупье: '
+ IF p_points = 21:
+  'Карта крупье:'
   '  <<$d_card[1]>>'
   '__________________________'
-  'Карты игрока: '
+  'Карты игрока:'
   '  <<$p_card[1]>>'
   '  <<$p_card[2]>>'
   'БЛЭК ДЖЕК!!!'
   prise = deal*3
-  ACT 'Забрать выигрыш <<prise>> руб.': 
-    money = money + prise
+  ACT 'Забрать выигрыш <<prise>> руб.':
+   set money = money + prise
    turn = 0
-   gt 'игркарт1'  
+   GT 'игркарт1'  
   END
  END 
 
 END
 
 !ДОПОЛНИТЕЛЬНАЯ КАРТА
-IF turn = 2: 
+IF turn = 2:
  CLA
- '<right><img src = "pic/casino/cartbde.jpg" ></right>' 
- 'Крупье сдает еще одну карту: '
+ '<right><img src="pic/casino/cartbde.jpg" ></right>' 
+ 'Крупье сдает еще одну карту:'
  '...' 
  suit = RAND (1,4)
  number = RAND (1,13) 
  $p_card[3] = $number[number] + $suit[suit]
  p_points = p_points + points[number] 
- IF p_points <= 21: 
-  'Карта крупье: '
+ IF p_points <= 21:
+  'Карта крупье:'
   '  <<$d_card[1]>>'
   '__________________________'
-  'Карты игрока: '
+  'Карты игрока:'
   '  <<$p_card[1]>>'
   '  <<$p_card[2]>>'
   '  <<$p_card[3]>>'
-  ACT 'Хватит': 
+  ACT 'Хватит':
    turn = 3
-   gt 'игркарт1'
+   GT 'игркарт1'
   END
-  ACT 'Еще карту': 
+  ACT 'Еще карту':
    turn = 22
-   gt 'игркарт1'
+   GT 'игркарт1'
   END   
  END
- IF p_points > 21: 
-  'Карта крупье: '
+ IF p_points > 21:
+  'Карта крупье:'
   '  <<$d_card[1]>>'
   '__________________________'
-  'Карты игрока: '
+  'Карты игрока:'
   '  <<$p_card[1]>>'
   '  <<$p_card[2]>>'
   '  <<$p_card[3]>>'
   'ПЕРЕБОР! Вы проиграли.'
-  ACT '...': 
+  ACT '...':
    turn = 0
-   gt 'игркарт1'
+   GT 'игркарт1'
   END
  END 
 END
 
-IF turn = 22: 
+IF turn = 22:
  CLA
- '<right><img src = "pic/casino/cartbde.jpg" ></right>'
- 'Крупье сдает еще одну карту: '
+ '<right><img src="pic/casino/cartbde.jpg" ></right>'
+ 'Крупье сдает еще одну карту:'
  '...' 
  suit = RAND (1,4)
  number = RAND (1,13) 
  $p_card[4] = $number[number] + $suit[suit]
  p_points = p_points + points[number] 
- IF p_points <= 21: 
-  'Карта крупье: '
+ IF p_points <= 21:
+  'Карта крупье:'
   '  <<$d_card[1]>>'
   '__________________________'
-  'Карты игрока: '
+  'Карты игрока:'
   '  <<$p_card[1]>>'
   '  <<$p_card[2]>>'
   '  <<$p_card[3]>>'
   '  <<$p_card[4]>>'
-  ACT 'Хватит': 
+  ACT 'Хватит':
    turn = 3
-   gt 'игркарт1'
+   GT 'игркарт1'
   END
-  ACT 'Еще карту': 
+  ACT 'Еще карту':
    turn = 222
-   gt 'игркарт1'
+   GT 'игркарт1'
   END   
  END
- IF p_points > 21: 
-  'Карта крупье: '
+ IF p_points > 21:
+  'Карта крупье:'
   '  <<$d_card[1]>>'
   '__________________________'
-  'Карты игрока: '
+  'Карты игрока:'
   '  <<$p_card[1]>>'
   '  <<$p_card[2]>>'
   '  <<$p_card[3]>>'
   '  <<$p_card[4]>>'  
   'ПЕРЕБОР! Вы проиграли.'
-  ACT '...': 
+  ACT '...':
    turn = 0
-   gt 'игркарт1'
+   GT 'игркарт1'
   END
  END 
 END
 
-IF turn = 222: 
+IF turn = 222:
  CLA
- '<right><img src = "pic/casino/cartbde.jpg" ></right>'
- 'Крупье сдает еще одну карту: '
+ '<right><img src="pic/casino/cartbde.jpg" ></right>'
+ 'Крупье сдает еще одну карту:'
  '...' 
  suit = RAND (1,4)
  number = RAND (1,13) 
  $p_card[5] = $number[number] + $suit[suit]
  p_points = p_points + points[number] 
  wait 500
- IF p_points <= 21: 
-  'Карта банкующего: '
+ IF p_points <= 21:
+  'Карта банкующего:'
   '  <<$d_card[1]>>'
   '__________________________'
-  'Карты игрока: '
+  'Карты игрока:'
   '  <<$p_card[1]>>'
   '  <<$p_card[2]>>'
   '  <<$p_card[3]>>'
   '  <<$p_card[4]>>'
   '  <<$p_card[5]>>'  
-  ACT 'Хватит': 
+  ACT 'Хватит':
    turn = 3
-   gt 'игркарт1'
+   GT 'игркарт1'
   END
  END
- IF p_points > 21: 
-  'Карта крупье: '
+ IF p_points > 21:
+  'Карта крупье:'
   '  <<$d_card[1]>>'
   '__________________________'
-  'Карты игрока: '
+  'Карты игрока:'
   '  <<$p_card[1]>>'
   '  <<$p_card[2]>>'
   '  <<$p_card[3]>>'
   '  <<$p_card[4]>>'
   '  <<$p_card[5]>>'    
   'ПЕРЕБОР! Вы проиграли.'
-  ACT '...': 
+  ACT '...':
    turn = 0
-   gt 'игркарт1'
+   GT 'игркарт1'
   END
  END 
 END
 
 !ДОБОР КАРТ БАНКУЮЩИМ
-IF turn = 3: 
+IF turn = 3:
  CLA
- '<right><img src = "pic/casino/cartbde.jpg" ></right>'
- 'Крупье добирает карты: '
+ '<right><img src="pic/casino/cartbde.jpg" ></right>'
+ 'Крупье добирает карты:'
  '...' 
  suit = RAND (1,4)
  number = RAND (1,13) 
@@ -228,46 +228,46 @@ IF turn = 3:
  d_points = d_points + points[number]  
  IF p_points = 22: p_points = 21   
  wait 500
- IF d_points >= 17: 
-  'Карты банкующего: '
+ IF d_points => 17:
+  'Карты банкующего:'
   '  <<$d_card[1]>>'
   '  <<$d_card[2]>>'
   'Очки крупье: <<d_points>>'
   '__________________________'
   'Очки игрока: <<p_points>>'
   '__________________________'  
-  IF d_points > p_points: 
+  IF d_points > p_points:
    'Казино выиграло'
-   ACT '...': 
+   ACT '...':
     turn = 0
-    gt 'игркарт1'
+    GT 'игркарт1'
    END   
   END
-  IF d_points = p_points: 
+  IF d_points = p_points:
    'Ничья'
-   ACT 'Забрать ставку': 
-     money = money + deal
+   ACT 'Забрать ставку':
+    set money = money + deal
     turn = 0
-    gt 'игркарт1'
+    GT 'игркарт1'
    END      
   END
-  IF d_points < p_points: 
+  IF d_points < p_points:
    'Игрок выиграл'
    prise = deal*2   
-   ACT 'Забрать выигрыш <<prise>> руб.': 
-     money = money + prise
+   ACT 'Забрать выигрыш <<prise>> руб.':
+    set money = money + prise
     turn = 0
-    gt 'игркарт1'
+    GT 'игркарт1'
    END      
   END  
  END
- IF d_points < 17: 
+ IF d_points < 17:
   suit = RAND (1,4)
   number = RAND (1,13) 
   $d_card[3] = $number[number] + $suit[suit]
   d_points = d_points + points[number]    
-  IF d_points <= 21: 
-   'Карты крупье: '
+  IF d_points <= 21:
+   'Карты крупье:'
    '  <<$d_card[1]>>'
    '  <<$d_card[2]>>'
    '  <<$d_card[3]>>'
@@ -275,33 +275,33 @@ IF turn = 3:
    '__________________________'
    'Очки игрока: <<p_points>>'
    '__________________________'  
-   IF d_points > p_points: 
+   IF d_points > p_points:
     'Казино выиграло'
-    ACT '...': 
+    ACT '...':
      turn = 0
-     gt 'игркарт1'  
+     GT 'игркарт1'  
     END   
    END
-   IF d_points = p_points: 
+   IF d_points = p_points:
     'Ничья'
-    ACT 'Забрать ставку': 
-      money = money + deal
+    ACT 'Забрать ставку':
+     set money = money + deal
      turn = 0
-     gt 'игркарт1'
+     GT 'игркарт1'
     END      
    END
-   IF d_points < p_points: 
+   IF d_points < p_points:
     'Игрок выиграл'
     prise = deal*2   
-    ACT 'Забрать выигрыш <<prise>> руб.': 
-      money = money + prise
+    ACT 'Забрать выигрыш <<prise>> руб.':
+     set money = money + prise
      turn = 0
-     gt 'игркарт1'
+     GT 'игркарт1'
     END      
    END     
   END
-  IF d_points > 21: 
-   'Карты крупье: '
+  IF d_points > 21:
+   'Карты крупье:'
    '  <<$d_card[1]>>'
    '  <<$d_card[2]>>'
    '  <<$d_card[3]>>'
@@ -310,10 +310,10 @@ IF turn = 3:
    '__________________________'
    'Игрок выиграл'
    prise = deal*2   
-   ACT 'Забрать выигрыш <<prise>> руб.': 
-     money = money + prise
+   ACT 'Забрать выигрыш <<prise>> руб.':
+    set money = money + prise
     turn = 0
-    gt 'игркарт1'
+    GT 'игркарт1'
    END      
   END    
  END

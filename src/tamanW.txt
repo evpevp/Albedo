@@ -1,64 +1,64 @@
 # tamanW
 *clr
-'<center><img src = "pic/EvedonNarod/trPort.jpg"></center>'
+'<center><img src="pic/EvedonNarod/trPort.jpg"></center>'
 
 'Пиво 1 гем, пойло поядреней 3 гема. Жратва 2 гема. Сказал трактирщик разглядывая ваш наряд.'
 $metka = $ARGS[0]
 $loc = $CURLOC
 
-act 'Отойти от стойки': gt 'portbarW'
+act 'Отойти от стойки':gt'portbarW'
 
-if proverka = 1: 
-     act 'Спросить про старика управляющего портом живущего в подвале': 
+if proverka=1:
+     act 'Спросить про старика управляющего портом живущего в подвале':
      cla
-     proverka = 2
+     proverka=2
      'Вы спросили про старика из подвала. Трактирщик засмеялся. Да он чокнутый. Подсел на старости лет на гаман, вот ему мозги и вышибло. То он великий магистр, то глава тайной организации, то еще какую-нибудь херню придумает. Псих, что с него взять.'
-     act 'Отойти от стойки': gt 'portbarW'
+     act 'Отойти от стойки':gt'portbarW'
      end
 end
 
-if gem>= 2: 
-     act 'Еды': 
+if gem>=2:
+     act 'Еды':
      cla
      *clr
-     minut += 15
-     gem = gem-2
-     gs 'eda'
+     minut=minut+15
+     gem=gem-2
+     gs'eda'
      'Трактирщик достал вам тарелку, до верху наполненную какой то полусъедобной едой.'
-     gs 'eat'
-     act 'Отойти от стойки': gt 'portbarW'
+     gs'eat'
+     act 'Отойти от стойки':gt'portbarW'
      end
 end
 
-if gem>= 1: 
-     act 'Пива': 
+if gem>=1:
+     act 'Пива':
      cla
-     minut += 15
-     gem = gem-1
-     fat = fat+1
-     alko = alko+2
-     golod = golod+2
-     manna = manna+5
-     wipo = wipo+5
+     minut=minut+15
+     gem=gem-1
+     fat=fat+1
+     alko=alko+2
+     golod=golod+2
+     manna=manna+5
+     wipo=wipo+5
      *clr
-     '<center><img src = "pic/EvedonOd/beer.jpg"></center>'
+     '<center><img src="pic/EvedonOd/beer.jpg"></center>'
      'Трактирщик достал вам кружку, наполненную пенящимся пивом и вы быстренько выпили водянистую пакость, называемую местными бродягами пивом.'
-     act 'Отойти от стойки': gt 'portbarW'
+     act 'Отойти от стойки':gt'portbarW'
      end
 end
 
-if gem>= 3: 
-     act 'Виски': 
+if gem>=3:
+     act 'Виски':
      cla
-     minut += 15
-     gem = gem-3
-     alko = alko+5
-     manna = manna+10
-     wipo = wipo+10
+     minut=minut+15
+     gem=gem-3
+     alko=alko+5
+     manna=manna+10
+     wipo=wipo+10
      *clr
-     '<center><img src = "pic/EvedonOd/wiskey.jpg"></center>'
+     '<center><img src="pic/EvedonOd/wiskey.jpg"></center>'
      'Трактирщик достал вам стакан наполненный вонючим пойлом, вы залпом его выпили.'
-     act 'Отойти от стойки': gt 'portbarW'
+     act 'Отойти от стойки':gt'portbarW'
      end
 end
 

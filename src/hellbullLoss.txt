@@ -1,44 +1,44 @@
 # hellbullLoss
-monster = 0
+monster=0
 'Демонический бык победил вас.'
 
-act 'Далее': 
+act 'Далее':
 cla
 *clr
-!horny = 0
-SUB = SUB+1
-minut += 60
-!anus = anus+1
-!anal = anal+1
-!if vagina>0: sex = sex+1
-monst = monst+1
-skverna = skverna+5
-anus = anus+10
-anal = anal+1
-'<center><img src = "pic/EvedonTA/bulloss.jpg" ></center>'
+!horny=0
+SUB=SUB+1
+minut=minut+60
+!anus=anus+1
+!anal=anal+1
+!if vagina>0:sex=sex+1
+monst=monst+1
+skverna=skverna+5
+anus=anus+10
+anal=anal+1
+'<center><img src="pic/EvedonTA/bulloss.jpg" ></center>'
 'Бык поставил вас раком и нетерпеливо вогнал вам в задницу свой толстый член. Он начал вас трахать, упираясь своими копытами рядом по сторонам вашего тела.'
-anus = anus+10
-gs 'analslut'
-finrand = RAND(0,1)
-     if finrand = 0: 
-     cumass = cumass+1
-     ass = ass+RAND(5,10)
-     thight = thight+RAND(5,10)
-     leg = leg+RAND(5,10)
+anus=anus+10
+gs'analslut'
+finrand=RAND(0,1)
+     if finrand = 0:
+     cumass=cumass+1
+     ass=ass+RAND(5,10)
+     thight=thight+RAND(5,10)
+     leg=leg+RAND(5,10)
      'Наконец бык достает свой член из вашей раздолбанной задницы и кончает вам на ягодицы.'
      end
-     if finrand = 1: 
-     cumanus = cumanus+1
-     ass = ass+RAND(5,10)
-     brist = brist+RAND(5,10)
-         if penis>0: penis = penis-RAND(1,3) & 'У вас зажгло член и вы почувствовали как он уменьшается.'
-         if vagina>0: tit = tit+RAND(3,6) & 'Ваши груди заныли и стали тяжелыми.'
+     if finrand = 1:
+     cumanus=cumanus+1
+     ass=ass+RAND(5,10)
+     brist=brist+RAND(5,10)
+         if penis>0:penis=penis-RAND(1,3)&'У вас зажгло член и вы почувствовали как он уменьшается.'
+         if vagina>0:tit=tit+RAND(3,6)&'Ваши груди заныли и стали тяжелыми.'
      'Бык глухо замычал и вы почувствовали как теплая жидкость разливается в вашей попе. После чего он достал свой член из вас и отошел.'
      end
-gs 'polChange'
+gs'polChange'
 
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
 --- hellbullLoss ---------------------------------
 

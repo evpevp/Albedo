@@ -6,31 +6,31 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Лекарь</H4></center>'
-'<center><img src = "pic/Evedon/rinok1.jpg" ></center>'
+'<center><img src="pic/Evedon/rinok1.jpg" ></center>'
 'Полное оздоровление 100 гемов.'
 
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-if gem>= 100: 
-	 act 'Лечиться': 
+if gem>=100:
+	 act 'Лечиться':
 	 cla
-	 minut += 5
-	 gem = gem-100
-	 health = vital*10
-	 manna = intel*10+intel*magika
-	 wipo = will*10
+	 minut=minut+5
+	 gem=gem-100
+	 health=vital*10
+	 manna=intel*10+intel*magika
+	 wipo=will*10
 	 'Лекарь наложил на вас заклинание и вы почувствовали себя просто замечательно.'
-	 act 'Уйти': gt 'rinokW'
+	 act 'Уйти':gt'rinokW'
 	 end
 end
 
-act 'Отойти': 
-minut += 5
- gt 'rinokW'
+act 'Отойти':
+minut=minut+5
+gt'rinokW'
 end
 
 --- lekarW ---------------------------------

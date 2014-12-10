@@ -1,94 +1,94 @@
 # imploss
-monster = 0
+monster=0
 'Бес победил вас.'
 
-act 'Далее': 
+act 'Далее':
 cla
 *clr
-SUB = SUB+1
-minut += 60
-!anus = anus+1
-!anal = anal+1
-!if vagina>0: sex = sex+1
-monst = monst+1
-skverna = skverna+5
-!'<center><img src = "Evedon\tentacle.jpg" ></center>'
+SUB=SUB+1
+minut=minut+60
+!anus=anus+1
+!anal=anal+1
+!if vagina>0:sex=sex+1
+monst=monst+1
+skverna=skverna+5
+!'<center><img src="Evedon\tentacle.jpg" ></center>'
 
-if pol>0: 
-imptiprand = RAND(0,1)
+if pol>0:
+imptiprand=RAND(0,1)
 
-     if imptiprand = 0: 
-     bj = bj+1
+     if imptiprand=0:
+     bj=bj+1
      'Бес схватил вас за волосы, подняв ваше лицо и стукнул вам по губам своим большим узловатым красным членом. Не в силах сопротивляться, вы покорно открыли рот и бес вставил вам свой член. После чего начал грубо вас трахать, проникая в горло, вы давились, слезы текли из глаз, но сделать ничего не могли.'
-     tiperand = RAND(0,1)
-         if tiperand = 0: 
-         '<center><img src = "pic/EvedonMonsters/impsex.jpg" ></center>'
-         swallow = swallow+1
-         cumlip = cumlip+1
+     tiperand=RAND(0,1)
+         if tiperand=0:
+         '<center><img src="pic/EvedonMonsters/impsex.jpg" ></center>'
+         swallow=swallow+1
+         cumlip=cumlip+1
          'Бес кончил вам в рот и заставил вас проглотить всю сперму.'
-         gs 'cumslut'
-             if penis>0: penis = penis-RAND(1,3) & 'У вас зажгло член и вы почувствовали как он уменьшается.'
-             if vagina>0: tit = tit+RAND(3,6) & 'Ваши груди заныли и стали тяжелыми.'
+         gs'cumslut'
+             if penis>0:penis=penis-RAND(1,3)&'У вас зажгло член и вы почувствовали как он уменьшается.'
+             if vagina>0:tit=tit+RAND(3,6)&'Ваши груди заныли и стали тяжелыми.'
          end
-         if tiperand = 1: 
-         facial = facial+1
-         cumface = cumface+1
-         face = face+RAND(5,10)
+         if tiperand=1:
+         facial=facial+1
+         cumface=cumface+1
+         face=face+RAND(5,10)
          'Бес достал свой член и кончил вам на лицо, продолжая размазывать свою сперму вам по лицу.'
-         gs 'cumslut'
+         gs'cumslut'
          end
      end
-     if imptiprand = 1: 
-     anal = anal+1
-     '<center><img src = "pic/EvedonMonsters/impsex.jpg" ></center>'
+     if imptiprand=1:
+     anal=anal+1
+     '<center><img src="pic/EvedonMonsters/impsex.jpg" ></center>'
      'Бес поставил вас раком и нетерпеливо вогнал вам в задницу свой толстый член. Он начал вас трахать, сжимая своими когтистыми лапами ваш зад.'
-     gs 'analslut'
-     anus = anus+5
-     finrand = RAND(0,1)
-         if finrand = 0: 
-         cumass = cumass+1
-         ass = ass+RAND(5,10)
-         thight = thight+RAND(5,10)
-         leg = leg+RAND(5,10)
+     gs'analslut'
+     anus=anus+5
+     finrand=RAND(0,1)
+         if finrand = 0:
+         cumass=cumass+1
+         ass=ass+RAND(5,10)
+         thight=thight+RAND(5,10)
+         leg=leg+RAND(5,10)
          'Наконец бес достает свой член из вашей раздолбанной задницы и кончает вам на ягодицы.'
          end
-         if finrand = 1: 
-         cumanus = cumanus+1
-         ass = ass+RAND(5,10)
-         brist = brist+RAND(5,10)
-             if penis>0: penis = penis-RAND(1,3) & 'У вас зажгло член и вы почувствовали как он уменьшается.'
-             if vagina>0: tit = tit+RAND(3,6) & 'Ваши груди заныли и стали тяжелыми.'
+         if finrand = 1:
+         cumanus=cumanus+1
+         ass=ass+RAND(5,10)
+         brist=brist+RAND(5,10)
+             if penis>0:penis=penis-RAND(1,3)&'У вас зажгло член и вы почувствовали как он уменьшается.'
+             if vagina>0:tit=tit+RAND(3,6)&'Ваши груди заныли и стали тяжелыми.'
          'Бес застонал и вы почувствовали как теплая жидкость разливается в вашей попе. После чего он достал свой член из вас и отошел.'
          end
      end
 end
-gs 'polChange'
+gs'polChange'
 
-if pol = 0: 
-     anal = anal+1
-     '<center><img src = "pic/EvedonMonsters/impsexM.jpg" ></center>'
+if pol=0:
+     anal=anal+1
+     '<center><img src="pic/EvedonMonsters/impsexM.jpg" ></center>'
      'Бес поставил вас раком и нетерпеливо вогнал вам в задницу свой толстый член. Он начал вас трахать, сжимая своими когтистыми лапами ваш зад.'
-     gs 'analslut'
-     anus = anus+5
-     finrand = RAND(0,1)
-         if finrand = 0: 
-         cumass = cumass+1
-         ass = ass+RAND(5,10)
-         thight = thight+RAND(5,10)
-         leg = leg+RAND(5,10)
+     gs'analslut'
+     anus=anus+5
+     finrand=RAND(0,1)
+         if finrand = 0:
+         cumass=cumass+1
+         ass=ass+RAND(5,10)
+         thight=thight+RAND(5,10)
+         leg=leg+RAND(5,10)
          'Наконец бес достает свой член из вашей раздолбанной задницы и кончает вам на ягодицы.'
          end
-         if finrand = 1: 
-         cumanus = cumanus+1
-         ass = ass+RAND(5,10)
-         brist = brist+RAND(5,10)
-             if penis>0: penis = penis-RAND(1,3) & 'У вас зажгло член и вы почувствовали как он уменьшается.'
-             if vagina>0: tit = tit+RAND(3,6) & 'Ваши груди заныли и стали тяжелыми.'
+         if finrand = 1:
+         cumanus=cumanus+1
+         ass=ass+RAND(5,10)
+         brist=brist+RAND(5,10)
+             if penis>0:penis=penis-RAND(1,3)&'У вас зажгло член и вы почувствовали как он уменьшается.'
+             if vagina>0:tit=tit+RAND(3,6)&'Ваши груди заныли и стали тяжелыми.'
          'Бес застонал и вы почувствовали как теплая жидкость разливается в вашей попе. После чего он достал свой член из вас и отошел.'
          end
      end
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
 --- imploss ---------------------------------
 

@@ -1,228 +1,228 @@
 # frendGenerator
-fsalo = RAND(0,600)
-fhlong = RAND(0,100)
-ftan = RAND(0,1)
-fhcol = RAND(0,3)
-fglacol = RAND(0,3)
-fage = RAND(16,45)
+fsalo=RAND(0,600)
+fhlong=RAND(0,100)
+ftan=RAND(0,1)
+fhcol=RAND(0,3)
+fglacol=RAND(0,3)
+fage=RAND(16,45)
 
-if ranpol = 1: 
-fnamerand = RAND(0,40)
-if fnamerand = 0: $frendname = 'Агнесс'
-if fnamerand = 1: $frendname = 'Ариэль'
-if fnamerand = 2: $frendname = 'Алиша'
-if fnamerand = 3: $frendname = 'Аманда'
-if fnamerand = 4: $frendname = 'Анабет'
-if fnamerand = 5: $frendname = 'Анелиза'
-if fnamerand = 6: $frendname = 'Астория'
-if fnamerand = 7: $frendname = 'Амелия'
-if fnamerand = 8: $frendname = 'Беатрис'
-if fnamerand = 9: $frendname = 'Бэтла'
-if fnamerand = 10: $frendname = 'Бармия'
-if fnamerand = 11: $frendname = 'Брайна'
-if fnamerand = 12: $frendname = 'Барбара'
-if fnamerand = 13: $frendname = 'Бэсс'
-if fnamerand = 14: $frendname = 'Виктория'
-if fnamerand = 15: $frendname = 'Верония'
-if fnamerand = 16: $frendname = 'Виола'
-if fnamerand = 17: $frendname = 'Генриетта'
-if fnamerand = 18: $frendname = 'Гармония'
-if fnamerand = 19: $frendname = 'Гестия'
-if fnamerand = 20: $frendname = 'Диана'
-if fnamerand = 21: $frendname = 'Джесика'
-if fnamerand = 22: $frendname = 'Джулия'
-if fnamerand = 23: $frendname = 'Джэйн'
-if fnamerand = 24: $frendname = 'Элизабэт'
-if fnamerand = 25: $frendname = 'Энни'
-if fnamerand = 26: $frendname = 'Эланор'
-if fnamerand = 27: $frendname = 'Элис'
-if fnamerand = 28: $frendname = 'Элена'
-if fnamerand = 29: $frendname = 'Элиада'
-if fnamerand = 30: $frendname = 'Элеонора'
-if fnamerand = 31: $frendname = 'Ирида'
-if fnamerand = 32: $frendname = 'Изабель'
-if fnamerand = 33: $frendname = 'Карина'
-if fnamerand = 34: $frendname = 'Лиана'
-if fnamerand = 35: $frendname = 'Лейла'
-if fnamerand = 36: $frendname = 'Мэйлин'
-if fnamerand = 37: $frendname = 'Нэнси'
-if fnamerand = 38: $frendname = 'Рэйчел'
-if fnamerand = 39: $frendname = 'Сьюзен'
-if fnamerand = 40: $frendname = 'Талеона'
-fvagina = 1
-fpenis = 0
-fface = RAND(50,100)
-fhand = RAND(50,100)
-fbrist = RAND(50,100)
-fass = RAND(50,100)
-fthight = RAND(50,100)
-fleg = RAND(50,100)
-ftit = RAND(20,300)
-frost = RAND(145,175)
+if ranpol=1:
+fnamerand=RAND(0,40)
+if fnamerand=0:$frendname='Агнесс'
+if fnamerand=1:$frendname='Ариэль'
+if fnamerand=2:$frendname='Алиша'
+if fnamerand=3:$frendname='Аманда'
+if fnamerand=4:$frendname='Анабет'
+if fnamerand=5:$frendname='Анелиза'
+if fnamerand=6:$frendname='Астория'
+if fnamerand=7:$frendname='Амелия'
+if fnamerand=8:$frendname='Беатрис'
+if fnamerand=9:$frendname='Бэтла'
+if fnamerand=10:$frendname='Бармия'
+if fnamerand=11:$frendname='Брайна'
+if fnamerand=12:$frendname='Барбара'
+if fnamerand=13:$frendname='Бэсс'
+if fnamerand=14:$frendname='Виктория'
+if fnamerand=15:$frendname='Верония'
+if fnamerand=16:$frendname='Виола'
+if fnamerand=17:$frendname='Генриетта'
+if fnamerand=18:$frendname='Гармония'
+if fnamerand=19:$frendname='Гестия'
+if fnamerand=20:$frendname='Диана'
+if fnamerand=21:$frendname='Джесика'
+if fnamerand=22:$frendname='Джулия'
+if fnamerand=23:$frendname='Джэйн'
+if fnamerand=24:$frendname='Элизабэт'
+if fnamerand=25:$frendname='Энни'
+if fnamerand=26:$frendname='Эланор'
+if fnamerand=27:$frendname='Элис'
+if fnamerand=28:$frendname='Элена'
+if fnamerand=29:$frendname='Элиада'
+if fnamerand=30:$frendname='Элеонора'
+if fnamerand=31:$frendname='Ирида'
+if fnamerand=32:$frendname='Изабель'
+if fnamerand=33:$frendname='Карина'
+if fnamerand=34:$frendname='Лиана'
+if fnamerand=35:$frendname='Лейла'
+if fnamerand=36:$frendname='Мэйлин'
+if fnamerand=37:$frendname='Нэнси'
+if fnamerand=38:$frendname='Рэйчел'
+if fnamerand=39:$frendname='Сьюзен'
+if fnamerand=40:$frendname='Талеона'
+fvagina=1
+fpenis=0
+fface=RAND(50,100)
+fhand=RAND(50,100)
+fbrist=RAND(50,100)
+fass=RAND(50,100)
+fthight=RAND(50,100)
+fleg=RAND(50,100)
+ftit=RAND(20,300)
+frost=RAND(145,175)
 
 
 end
-if ranpol = 0: 
-fnamerand = RAND(0,40)
-if fnamerand = 0: $frendname = 'Аэлмар'
-if fnamerand = 1: $frendname = 'Аэлнесс'
-if fnamerand = 2: $frendname = 'Андэрс'
-if fnamerand = 3: $frendname = 'Альберт'
-if fnamerand = 4: $frendname = 'Арчибальд'
-if fnamerand = 5: $frendname = 'Айбер'
-if fnamerand = 6: $frendname = 'Бесталл'
-if fnamerand = 7: $frendname = 'Баэлнесс'
-if fnamerand = 8: $frendname = 'Брэндон'
-if fnamerand = 9: $frendname = 'Берадот'
-if fnamerand = 10: $frendname = 'Вильгельм'
-if fnamerand = 11: $frendname = 'Вандон'
-if fnamerand = 12: $frendname = 'Виктор'
-if fnamerand = 13: $frendname = 'Гилдрим'
-if fnamerand = 14: $frendname = 'Гарольд'
-if fnamerand = 15: $frendname = 'Гордон'
-if fnamerand = 16: $frendname = 'Галахэд'
-if fnamerand = 17: $frendname = 'Джейкоб'
-if fnamerand = 18: $frendname = 'Дэниэл'
-if fnamerand = 19: $frendname = 'Эвари'
-if fnamerand = 20: $frendname = 'Элберт'
-if fnamerand = 21: $frendname = 'Эдвард'
-if fnamerand = 22: $frendname = 'Эдгар'
-if fnamerand = 23: $frendname = 'Иладар'
-if fnamerand = 24: $frendname = 'Ингард'
-if fnamerand = 25: $frendname = 'Кантил'
-if fnamerand = 26: $frendname = 'Келлан'
-if fnamerand = 27: $frendname = 'Криан'
-if fnamerand = 28: $frendname = 'Лекс'
-if fnamerand = 29: $frendname = 'Лонгрен'
-if fnamerand = 30: $frendname = 'Леонард'
-if fnamerand = 31: $frendname = 'Оливер'
-if fnamerand = 32: $frendname = 'Питер'
-if fnamerand = 33: $frendname = 'Ридесар'
-if fnamerand = 34: $frendname = 'Рональд'
-if fnamerand = 35: $frendname = 'Ричард'
-if fnamerand = 36: $frendname = 'Роджер'
-if fnamerand = 37: $frendname = 'Седрик'
-if fnamerand = 38: $frendname = 'Тейлор'
-if fnamerand = 39: $frendname = 'Фермар'
-if fnamerand = 40: $frendname = 'Харрин'
-fvagina = 0
-fpenis = RAND(8,23)
-fface = RAND(0,50)
-fhand = RAND(0,50)
-fbrist = RAND(0,50)
-fass = RAND(0,50)
-fthight = RAND(0,50)
-fleg = RAND(0,50)
-ftit = 0
-frost = RAND(165,195)
+if ranpol=0:
+fnamerand=RAND(0,40)
+if fnamerand=0:$frendname='Аэлмар'
+if fnamerand=1:$frendname='Аэлнесс'
+if fnamerand=2:$frendname='Андэрс'
+if fnamerand=3:$frendname='Альберт'
+if fnamerand=4:$frendname='Арчибальд'
+if fnamerand=5:$frendname='Айбер'
+if fnamerand=6:$frendname='Бесталл'
+if fnamerand=7:$frendname='Баэлнесс'
+if fnamerand=8:$frendname='Брэндон'
+if fnamerand=9:$frendname='Берадот'
+if fnamerand=10:$frendname='Вильгельм'
+if fnamerand=11:$frendname='Вандон'
+if fnamerand=12:$frendname='Виктор'
+if fnamerand=13:$frendname='Гилдрим'
+if fnamerand=14:$frendname='Гарольд'
+if fnamerand=15:$frendname='Гордон'
+if fnamerand=16:$frendname='Галахэд'
+if fnamerand=17:$frendname='Джейкоб'
+if fnamerand=18:$frendname='Дэниэл'
+if fnamerand=19:$frendname='Эвари'
+if fnamerand=20:$frendname='Элберт'
+if fnamerand=21:$frendname='Эдвард'
+if fnamerand=22:$frendname='Эдгар'
+if fnamerand=23:$frendname='Иладар'
+if fnamerand=24:$frendname='Ингард'
+if fnamerand=25:$frendname='Кантил'
+if fnamerand=26:$frendname='Келлан'
+if fnamerand=27:$frendname='Криан'
+if fnamerand=28:$frendname='Лекс'
+if fnamerand=29:$frendname='Лонгрен'
+if fnamerand=30:$frendname='Леонард'
+if fnamerand=31:$frendname='Оливер'
+if fnamerand=32:$frendname='Питер'
+if fnamerand=33:$frendname='Ридесар'
+if fnamerand=34:$frendname='Рональд'
+if fnamerand=35:$frendname='Ричард'
+if fnamerand=36:$frendname='Роджер'
+if fnamerand=37:$frendname='Седрик'
+if fnamerand=38:$frendname='Тейлор'
+if fnamerand=39:$frendname='Фермар'
+if fnamerand=40:$frendname='Харрин'
+fvagina=0
+fpenis=RAND(8,23)
+fface=RAND(0,50)
+fhand=RAND(0,50)
+fbrist=RAND(0,50)
+fass=RAND(0,50)
+fthight=RAND(0,50)
+fleg=RAND(0,50)
+ftit=0
+frost=RAND(165,195)
 
 end
 
 
 
 
-if fbrist<12: ftaliaBase = frost-100
-if fbrist>= 12 and fbrist<14: ftaliaBase = frost-101
-if fbrist>= 14 and fbrist<16: ftaliaBase = frost-102
-if fbrist>= 16 and fbrist<18: ftaliaBase = frost-103
-if fbrist>= 18 and fbrist<20: ftaliaBase = frost-104
-if fbrist>= 20 and fbrist<22: ftaliaBase = frost-105
-if fbrist>= 22 and fbrist<24: ftaliaBase = frost-106
-if fbrist>= 24 and fbrist<26: ftaliaBase = frost-107
-if fbrist>= 26 and fbrist<28: ftaliaBase = frost-108
-if fbrist>= 28 and fbrist<30: ftaliaBase = frost-109
-if fbrist>= 30 and fbrist<32: ftaliaBase = frost-110
-if fbrist>= 32 and fbrist<34: ftaliaBase = frost-111
-if fbrist>= 34 and fbrist<36: ftaliaBase = frost-112
-if fbrist>= 36 and fbrist<38: ftaliaBase = frost-113
-if fbrist>= 38 and fbrist<40: ftaliaBase = frost-114
-if fbrist>= 40 and fbrist<42: ftaliaBase = frost-115
-if fbrist>= 42 and fbrist<44: ftaliaBase = frost-116
-if fbrist>= 44 and fbrist<46: ftaliaBase = frost-117
-if fbrist>= 46 and fbrist<48: ftaliaBase = frost-118
-if fbrist>= 48 and fbrist<50: ftaliaBase = frost-119
-if fbrist >= 50: ftaliaBase = frost-120
+if fbrist<12:ftaliaBase=frost-100
+if fbrist>=12 and fbrist<14:ftaliaBase=frost-101
+if fbrist>=14 and fbrist<16:ftaliaBase=frost-102
+if fbrist>=16 and fbrist<18:ftaliaBase=frost-103
+if fbrist>=18 and fbrist<20:ftaliaBase=frost-104
+if fbrist>=20 and fbrist<22:ftaliaBase=frost-105
+if fbrist>=22 and fbrist<24:ftaliaBase=frost-106
+if fbrist>=24 and fbrist<26:ftaliaBase=frost-107
+if fbrist>=26 and fbrist<28:ftaliaBase=frost-108
+if fbrist>=28 and fbrist<30:ftaliaBase=frost-109
+if fbrist>=30 and fbrist<32:ftaliaBase=frost-110
+if fbrist>=32 and fbrist<34:ftaliaBase=frost-111
+if fbrist>=34 and fbrist<36:ftaliaBase=frost-112
+if fbrist>=36 and fbrist<38:ftaliaBase=frost-113
+if fbrist>=38 and fbrist<40:ftaliaBase=frost-114
+if fbrist>=40 and fbrist<42:ftaliaBase=frost-115
+if fbrist>=42 and fbrist<44:ftaliaBase=frost-116
+if fbrist>=44 and fbrist<46:ftaliaBase=frost-117
+if fbrist>=46 and fbrist<48:ftaliaBase=frost-118
+if fbrist>=48 and fbrist<50:ftaliaBase=frost-119
+if fbrist >=50:ftaliaBase=frost-120
 
-ftalia = ftaliaBase+(fsalo/10)
-fpodgrud = ftalia+2
-fgrud = fpodgrud+(ftit/5)+(fsalo/100)
-fbedra = ftalia+5+((fass+fthight)/8)+(fsalo/100)
+ftalia=ftaliaBase+(fsalo/10)
+fpodgrud=ftalia+2
+fgrud=fpodgrud+(ftit/5)+(fsalo/100)
+fbedra=ftalia+5+((fass+fthight)/8)+(fsalo/100)
 
-fves = ftalia
+fves=ftalia
 
-ftitk = fgrud-fpodgrud
-     if ftitK = 0: $ftitsw = 'нет груди'
-	 if ftitK>0 and ftitK < 5: ftits = 0 & $ftitsw = 'немного увеличенные груди но не тянут даже на самый маленький размер'
-	 if ftitK >= 5 and ftitK <= 10: ftits = 1 & $ftitsw = 'груди размера AA'  
-	 if ftitK > 10 and ftitK <= 15: ftits = 2 & $ftitsw = 'груди размера A' 
-	 if ftitK > 15 and ftitK <= 20: ftits = 3 & $ftitsw = 'груди размера B' 
-	 if ftitK > 20 and ftitK <= 30: ftits = 4 & $ftitsw = 'груди размера C' 
-	 if ftitK > 30 and ftitK <= 40: ftits = 5 & $ftitsw = 'груди размера D' 
-	 if ftitK > 40 and ftitK <= 50: ftits = 6 & $ftitsw = 'груди размера DD' 
-	 if ftitK > 50 and ftitK <= 60: ftits = 7 & $ftitsw = 'груди размера E'
-	 if ftitK > 60: ftits = 8 & $ftitsw = 'груди размера F' 
-
-
+ftitk=fgrud-fpodgrud
+     if ftitK=0:$ftitsw='нет груди'
+	 if ftitK>0 and ftitK < 5:set ftits = 0&$ftitsw='немного увеличенные груди но не тянут даже на самый маленький размер'
+	 if ftitK >= 5 and ftitK <= 10:set ftits = 1&$ftitsw='груди размера AA'  
+	 if ftitK > 10 and ftitK <= 15:set ftits = 2&$ftitsw='груди размера A' 
+	 if ftitK > 15 and ftitK <= 20:set ftits = 3&$ftitsw='груди размера B' 
+	 if ftitK > 20 and ftitK <= 30:set ftits = 4&$ftitsw='груди размера C' 
+	 if ftitK > 30 and ftitK <= 40:set ftits = 5&$ftitsw='груди размера D' 
+	 if ftitK > 40 and ftitK <= 50:set ftits = 6&$ftitsw='груди размера DD' 
+	 if ftitK > 50 and ftitK <= 60:set ftits = 7&$ftitsw='груди размера E'
+	 if ftitK > 60:set ftits = 8&$ftitsw='груди размера F' 
 
 
-if ranpol = 0: 
-$fpristext = 'него'
-     $ffemprop = 'Его пропорции тела <<fgrud>> (<<fpodgrud>>)- <<ftalia>> - <<fbedra>>, разница между талией и бедрами <<fbedra-ftalia>> см. Рост <<frost>> см'
-     if salo > 600: $fbodyfat = 'У него огромное, раздавшееся во все стороны, словно давно перезревший арбуз, пузо'
-     if salo > 400 and salo <= 600: $fbodyfat = 'У него большой, выпирающий вперед живот'
-     if salo > 200 and salo <= 400: $fbodyfat = 'У него вырос небольшой животик'
-     if salo > 100 and salo <= 200: $fbodyfat = 'Он прекрасно сложен и строен'
-     if salo > 50 and salo <= 100: $fbodyfat = 'У него поджарое телосложение'
-     if salo > 10 and salo <= 50: $fbodyfat = 'Он худой как скелет'
-	 if salo < 10: $bodyfat = 'Он страшно исхудавший и гремит костями'
+
+
+if ranpol=0:
+$fpristext='него'
+     $ffemprop='Его пропорции тела <<fgrud>> (<<fpodgrud>>)- <<ftalia>> - <<fbedra>>, разница между талией и бедрами <<fbedra-ftalia>> см. Рост <<frost>> см'
+     if salo > 600:$fbodyfat='У него огромное, раздавшееся во все стороны, словно давно перезревший арбуз, пузо'
+     if salo > 400 and salo <= 600:$fbodyfat='У него большой, выпирающий вперед живот'
+     if salo > 200 and salo <= 400:$fbodyfat='У него вырос небольшой животик'
+     if salo > 100 and salo <= 200:$fbodyfat='Он прекрасно сложен и строен'
+     if salo > 50 and salo <= 100:$fbodyfat='У него поджарое телосложение'
+     if salo > 10 and salo <= 50:$fbodyfat='Он худой как скелет'
+	 if salo < 10:$bodyfat='Он страшно исхудавший и гремит костями'
 	 
 end
-if ranpol = 1: 
-$fpristext = 'нее'
-     $ffemprop = 'У <<$fpristext>> <<$ftitsw>> <<fgrud>> (<<fpodgrud>>)- <<ftalia>> - <<fbedra>>, разница между талией и бедрами <<fbedra-ftalia>> см. Рост <<frost>> см'
-     if salo > 600: $fbodyfat = 'Ее безудержно разнесло во стороны и массы жира, словно замешанное на дрожжах сдобное тесто, густыми слоями покрыли ее обрюзгший, отталкивающего вида, необъятный живот'
-     if salo > 400 and salo <= 600: $fbodyfat = 'У нее есть складки жира на боках и спине, но в целом формы еще очень женственные'
-     if salo > 200 and salo <= 400: $fbodyfat = 'Ее тело покрывает мягкий слой жира, но формы тела от этого только женственнее и круглее'
-     if salo > 100 and salo <= 200: $fbodyfat = 'Она прекрасно сложена и стройна, аж глаза не нарадуются'
-     if salo > 50 and salo <= 100: $fbodyfat = 'Она стройна и на теле не видно ни грамма лишнего жира'
-     if salo > 10 and salo <= 50: $fbodyfat = 'Она слишком стройная, даже можно сказать тощая'
-	 if salo < 10: $fbodyfat = 'Она худущая как скелет'
+if ranpol=1:
+$fpristext='нее'
+     $ffemprop='У <<$fpristext>> <<$ftitsw>> <<fgrud>> (<<fpodgrud>>)- <<ftalia>> - <<fbedra>>, разница между талией и бедрами <<fbedra-ftalia>> см. Рост <<frost>> см'
+     if salo > 600:$fbodyfat='Ее безудержно разнесло во стороны и массы жира, словно замешанное на дрожжах сдобное тесто, густыми слоями покрыли ее обрюзгший, отталкивающего вида, необъятный живот'
+     if salo > 400 and salo <= 600:$fbodyfat='У нее есть складки жира на боках и спине, но в целом формы еще очень женственные'
+     if salo > 200 and salo <= 400:$fbodyfat='Ее тело покрывает мягкий слой жира, но формы тела от этого только женственнее и круглее'
+     if salo > 100 and salo <= 200:$fbodyfat='Она прекрасно сложена и стройна, аж глаза не нарадуются'
+     if salo > 50 and salo <= 100:$fbodyfat='Она стройна и на теле не видно ни грамма лишнего жира'
+     if salo > 10 and salo <= 50:$fbodyfat='Она слишком стройная, даже можно сказать тощая'
+	 if salo < 10:$fbodyfat='Она худущая как скелет'
 end
 
-if fhlong<30: $fhlong = 'короткие'
-if fhlong>= 30 and hlong<60: $fhlong = 'ниспадающие до плеч'
-if fhlong>= 60 and hlong<90: $fhlong = 'ниспадающие до спины'
-if fhlong>= 90: $fhlong = 'ниспадающие до попы'
+if fhlong<30:$fhlong='короткие'
+if fhlong>=30 and hlong<60:$fhlong='ниспадающие до плеч'
+if fhlong>=60 and hlong<90:$fhlong='ниспадающие до спины'
+if fhlong>=90:$fhlong='ниспадающие до попы'
 
 
 
 
 
-if ftan <= 0: $ftan = ''
-if ftan > 0: $ftan = 'загорелое'
+if ftan <= 0:set $ftan = ''
+if ftan > 0:set $ftan = 'загорелое'
 
-if fhcol = 0: $fhair = 'У <<$fpristext>> <<$fhlong>>, черные волосы,'
-if fhcol = 1: $fhair = 'У <<$fpristext>> <<$fhlong>>, русые волосы,'
-if fhcol = 2: $fhair = 'У <<$fpristext>> <<$fhlong>>, рыжие волосы,'
-if fhcol = 3: $fhair = 'У <<$fpristext>> <<$fhlong>>, светлые волосы,'
+if fhcol = 0:set $fhair = 'У <<$fpristext>> <<$fhlong>>, черные волосы,'
+if fhcol = 1:set $fhair = 'У <<$fpristext>> <<$fhlong>>, русые волосы,'
+if fhcol = 2:set $fhair = 'У <<$fpristext>> <<$fhlong>>, рыжие волосы,'
+if fhcol = 3:set $fhair = 'У <<$fpristext>> <<$fhlong>>, светлые волосы,'
 
-if fglacol = 0: $fglacol = 'карие глаза'
-if fglacol = 1: $fglacol = 'серые глаза'
-if fglacol = 2: $fglacol = 'зеленые глаза'
-if fglacol = 3: $fglacol = 'голубые глаза'
-
-
- $ffacem = '<<$fhair>> и <<$fglacol>>.'
+if fglacol = 0:set $fglacol = 'карие глаза'
+if fglacol = 1:set $fglacol = 'серые глаза'
+if fglacol = 2:set $fglacol = 'зеленые глаза'
+if fglacol = 3:set $fglacol = 'голубые глаза'
 
 
-if fface < 10: $fface = 'У <<$fpristext>> грубое <<$ftan>> мужское лицо, с резкими чертами. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'
-if fface >= 10 and fface < 20: $fface = 'У <<$fpristext>> мужское <<$ftan>> лицо с правильными чертами. <<$ffacem>> . На внешний вид можно дать <<fage>> лет'
-if fface >= 20 and fface < 30: $fface = 'У <<$fpristext>> гладкое и мягкое <<$ftan>> лицо юноши с правильными чертами. <<$ffacem>> . На внешний вид можно дать <<fage>> лет'
-if fface >= 30 and fface < 40: $fface = 'У <<$fpristext>> мягкое и нежное <<$ftan>> лицо мальчика с правильными чертами. <<$ffacem>> . На внешний вид можно дать <<fage>> лет'
-if fface >= 40 and fface < 50: $fface = 'У <<$fpristext>> андрогинное, смешанного типа лицо, в чертах которого сплелись мужское и женское начало. <<$ffacem>> . На внешний вид можно дать <<fage>> лет'
-if fface >= 50 and fface < 60: $fface = 'У <<$fpristext>> мягкое лицо в чертах которого прослеживается женственность. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'
-if fface >= 60 and fface < 80: $fface = 'У <<$fpristext>> симпатичное женское лицо с правильными чертами. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'
-if fface >= 80: $fface = 'У <<$fpristext>> очень красивое женское лицо. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'
+set $ffacem = '<<$fhair>> и <<$fglacol>>.'
+
+
+if fface < 10:$fface='У <<$fpristext>> грубое <<$ftan>> мужское лицо, с резкими чертами. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'
+if fface >= 10 and fface < 20:$fface='У <<$fpristext>> мужское <<$ftan>> лицо с правильными чертами. <<$ffacem>> . На внешний вид можно дать <<fage>> лет'
+if fface >= 20 and fface < 30:$fface='У <<$fpristext>> гладкое и мягкое <<$ftan>> лицо юноши с правильными чертами. <<$ffacem>> . На внешний вид можно дать <<fage>> лет'
+if fface >= 30 and fface < 40:$fface='У <<$fpristext>> мягкое и нежное <<$ftan>> лицо мальчика с правильными чертами. <<$ffacem>> . На внешний вид можно дать <<fage>> лет'
+if fface >= 40 and fface < 50:$fface='У <<$fpristext>> андрогинное, смешанного типа лицо, в чертах которого сплелись мужское и женское начало. <<$ffacem>> . На внешний вид можно дать <<fage>> лет'
+if fface >= 50 and fface < 60:$fface='У <<$fpristext>> мягкое лицо в чертах которого прослеживается женственность. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'
+if fface >= 60 and fface < 80:$fface='У <<$fpristext>> симпатичное женское лицо с правильными чертами. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'
+if fface >= 80:$fface='У <<$fpristext>> очень красивое женское лицо. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'
 
 
 --- frendGenerator ---------------------------------

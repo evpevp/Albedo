@@ -5,47 +5,47 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Банк</H4></center>'
-!'<center><img src = "Evedon\lesopilka.jpg" ></center>'
+!'<center><img src="Evedon\lesopilka.jpg" ></center>'
 '.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-if bankhran>0: 'У вас <<bankhran>> гем, на хранении в банке.'
+if bankhran>0:'У вас <<bankhran>> гем, на хранении в банке.'
 
 
 
-	 act 'Уйти (5 мин)': minut += 5 & gt 'reachW'
+	 act 'Уйти (5 мин)':minut=minut+5&gt'reachW'
 	 
 	 
 
-act 'Положить гемы на хранение': 
+act 'Положить гемы на хранение':
 cla
-tempshop = 0
+tempshop =0
 tempshop = input ("У вас <<gem>> гемов. Cколько вы желаете положить на хранение?")
-	 if tempshop > gem or tempshop < 0: 
+	 if tempshop > gem or tempshop < 0:
 	 msg 'У вас нет такого количества.'  
 	 gt $CURLOC
 	 else
-	 gem = gem-tempshop
-	 bankhran = bankhran+tempshop
+	 gem=gem-tempshop
+	 bankhran=bankhran+tempshop
 	 msg'Вы положили <<tempshop>> гемов на хранение. У вас осталось <<gem>> гемов, на хранении в банке находятся <<bankhran>> гемов'
 	 gt $CURLOC
 	 end
 end
 
-if bankhran>0: 
-	 act 'Забрать хранящиеся гемы': 
+if bankhran>0:
+	 act 'Забрать хранящиеся гемы':
 	 cla
-	 tempshop = 0
+	 tempshop =0
 	 tempshop = input ("У вас <<bankhran>> гемов на хранении. Cколько вы желаете забрать?")
-		 if tempshop > bankhran or tempshop < 0: 
+		 if tempshop > bankhran or tempshop < 0:
 		 msg 'У вас нет такого количества.'  
 		 gt $CURLOC
 		 else
-		 gem = gem+tempshop
-		 bankhran = bankhran-tempshop
+		 gem=gem+tempshop
+		 bankhran=bankhran-tempshop
 		 msg'Вы забрали <<tempshop>> гемов. У вас <<gem>> гемов, на хранении в банке находятся <<bankhran>> гемов'
 		 gt $CURLOC
 		 end

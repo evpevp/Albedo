@@ -1,40 +1,40 @@
 # spiderLoss
-monster = 0
+monster=0
 'Паук победил вас.'
 
-act 'Далее': 
+act 'Далее':
 cla
 *clr
-!horny = 0
-SUB = SUB+1
-minut += 60
-!anus = anus+1
-!anal = anal+1
-!if vagina>0: sex = sex+1
-monst = monst+1
-skverna = skverna+5
-anal = anal+1
+!horny=0
+SUB=SUB+1
+minut=minut+60
+!anus=anus+1
+!anal=anal+1
+!if vagina>0:sex=sex+1
+monst=monst+1
+skverna=skverna+5
+anal=anal+1
 
-sploss = rand(0,2)
-if sploss = 0: '<center><img src = "pic/EvedonTA/spiderloss.jpg" ></center>'
-if sploss = 1: '<center><img src = "pic/EvedonMonsters/spidersex1.jpg" ></center>'
-if sploss = 2: '<center><img src = "pic/EvedonMonsters/spidersex2.jpg" ></center>'
+sploss=rand(0,2)
+if sploss=0:'<center><img src="pic/EvedonTA/spiderloss.jpg" ></center>'
+if sploss=1:'<center><img src="pic/EvedonMonsters/spidersex1.jpg" ></center>'
+if sploss=2:'<center><img src="pic/EvedonMonsters/spidersex2.jpg" ></center>'
 
 'Паук поставил вас раком и нетерпеливо вогнал вам в задницу свой толстый хитиновый отросток.'
-gs 'analslut'
-anus = anus+10
-ass = ass+RAND(5,10)
-brist = brist+RAND(5,10)
- if penis>0: penis = penis-RAND(1,3) & 'У вас зажгло член и вы почувствовали как он уменьшается.'
- if vagina>0: tit = tit+RAND(3,6) & 'Ваши груди заныли и стали тяжелыми.'
+gs'analslut'
+anus=anus+10
+ass=ass+RAND(5,10)
+brist=brist+RAND(5,10)
+ if penis>0:penis=penis-RAND(1,3)&'У вас зажгло член и вы почувствовали как он уменьшается.'
+ if vagina>0:tit=tit+RAND(3,6)&'Ваши груди заныли и стали тяжелыми.'
  'Паук задвигался и вы почувствовали как большое яйцо проникает вам в зад. После чего он достал свой хитиновый член из вас и отошел.'
-if fertileAnal = 0: fertileAnal = 60 & FertAnMark = 1 & 'Лежа на земле, вы поняли, что оно отложило свое яйцо вам в прямую кишку.'
-if vagina>0 and fertileVag = 0: fertileVag = 60 & FertVagMark = 1 & 'И еще в матку.'
-gs 'femorg'
-gs 'polChange'
+if fertileAnal=0:fertileAnal=60&FertAnMark=1&'Лежа на земле, вы поняли, что оно отложило свое яйцо вам в прямую кишку.'
+if vagina>0 and fertileVag=0:fertileVag=60&FertVagMark=1&'И еще в матку.'
+gs'femorg'
+gs'polChange'
 
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
 --- spiderLoss ---------------------------------
 

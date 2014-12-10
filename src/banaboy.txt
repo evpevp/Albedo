@@ -1,85 +1,85 @@
 # banaboy
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-banaboyMark = banaboyMark+1
+banaboyMark=banaboyMark+1
 
-if health<= 10: 
+if health<=10:
 'Ну че, допрыгался? Сейчас мы тебя петушнем.'
- health = health/2
- wipo = wipo/2
- manna = 0
- петух = петух+1
- sweat = sweat+1
- bjm = bjm+1
- analm = analm+3
- '<center><img src = "pic/jail/petuh3.jpg" ></center>'
+ health=health/2
+ wipo=wipo/2
+ manna=0
+ петух=петух+1
+ sweat=sweat+1
+ bjm=bjm+1
+ analm=analm+3
+ '<center><img src="pic/jail/petuh3.jpg" ></center>'
  'Вас скрутили и повалили животом на табуретку, тут же с вас содрали штаны и в анус уперлось что-то твердое, с резкой болью член вошел вам в зад, другой зек провел вам членом по губам и засунул его вам в рот, вас насиловали и насиловали, не по одному кругу, а потом бросили на парашу отлеживаться.'
- barak = 3 
-act 'Выйти на построение.': gt 'itk'
+ barak=3 
+act 'Выйти на построение.':gt 'itk'
 exit
 end
 
-if health>10: 
-	 if banaboyMark = 1: 
-	 $nameV = 'Дятел'
-	 lvlv = 50
-	 strenV = 80
-	 speedV = 70
-	 agilV = 60
-	 vitalV = 80
-	 intelv = 10
-	 willv = 10
-	 program = 0
-	 healthV = vitalV*10
-	 mannaV = intelV*10
-	 wipoV = willV*10
-	 gt 'before'
+if health>10:
+	 if banaboyMark=1:
+	 $nameV='Дятел'
+	 lvlv=50
+	 strenV=80
+	 speedV=70
+	 agilV=60
+	 vitalV=80
+	 intelv=10
+	 willv=10
+	 program=0
+	 healthV=vitalV*10
+	 mannaV=intelV*10
+	 wipoV=willV*10
+	 gt'before'
 	 exit
 	 end
 
-	 if banaboyMark = 2: 
-	 $nameV = 'Сиплый'
-	 lvlv = 50
-	 strenV = 50
-	 speedV = 80
-	 agilV = 80
-	 vitalV = 80
-	 intelv = 10
-	 willv = 10
-	 program = 0
-	 healthV = vitalV*10
-	 mannaV = intelV*10
-	 wipoV = willV*10
-	 gt 'before'
+	 if banaboyMark=2:
+	 $nameV='Сиплый'
+	 lvlv=50
+	 strenV=50
+	 speedV=80
+	 agilV=80
+	 vitalV=80
+	 intelv=10
+	 willv=10
+	 program=0
+	 healthV=vitalV*10
+	 mannaV=intelV*10
+	 wipoV=willV*10
+	 gt'before'
 	 exit
 	 end
 
-	 if banaboyMark = 3: 
-	 $nameV = 'Мразь'
-	 lvlv = 60
-	 strenV = 90
-	 speedV = 70
-	 agilV = 80
-	 vitalV = 100
-	 intelv = 10
-	 willv = 10
-	 program = 1
-	 healthV = vitalV*10
-	 mannaV = intelV*10
-	 wipoV = willV*10
-	 gt 'before'
+	 if banaboyMark=3:
+	 $nameV='Мразь'
+	 lvlv=60
+	 strenV=90
+	 speedV=70
+	 agilV=80
+	 vitalV=100
+	 intelv=10
+	 willv=10
+	 program=1
+	 healthV=vitalV*10
+	 mannaV=intelV*10
+	 wipoV=willV*10
+	 gt'before'
 	 exit
 	 end
 end
 
-if banaboyMark = 4: 
-zoneWar = 5
+if banaboyMark=4:
+zoneWar=5
 'Козлы валялись по углам сушилки с разбитыми мордами и стонали. Вы схватили за шкирку Дятла.'
 '(Вы) - Кто вас послал?'
 '(Дятел) - Только больше не бей! Я все скажу. Это кум, начальник оперчасти. Он нам давно приказал опустить тебя и мы момент выжидали.'
 '(Вы) - Когда он приказал вам это?'
 'Дятел назвал дату время, и вы опешили. Это практически сразу после разговора с Князем. Это не может быть совпадением, на вас кто-то стукнул оперу. А знать могли об этом разговоре только Могол и Князь. И то Могол не мог знать подробностей, получается Князь стуканул оперу, чтобы убрать вас с дороги. И получается Князь кумовская наседка.'
-act 'Выйти на построение.': gt 'itk'
+act 'Выйти на построение.':gt 'itk'
 exit
 end
 

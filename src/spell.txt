@@ -1,220 +1,220 @@
 # spell
 '<B>Ваш уровень <<lvl>> Здоровье <<health>> мана <<manna>> сила воли <<wipo>></B>'
-if defence>0: '<font color = green>Физическая защита <<defence>> едениц</font>'
-if defenceT>0: '<font color = green>Температурная защита <<defenceT>> едениц</font>'
-if defenceW>0: '<font color = green>Воздушная защита <<defenceW>> едениц</font>'
-if defenceH>0: '<font color = green>Защита разума <<defenceH>> едениц</font>'
-if defenceM>0: '<font color = green>Защита маны <<defenceM>> едениц</font>'
-if defenceG>0: '<font color = green>Гравитационная защита <<defenceG>> едениц</font>'
-if defenceZ>0: '<font color = green>Защита от проклятий <<defenceZ>> едениц</font>'
-if defenceP>0: '<font color = green>Защита телепортацией <<defenceP>> едениц</font>'
-if zerkalo>0: '<font color = green> <<zerkalo>> штук зеркал</font>'
-if monster>0: 'Возбужденность <<horny>>'
+if defence>0:'<font color=green>Физическая защита <<defence>> едениц</font>'
+if defenceT>0:'<font color=green>Температурная защита <<defenceT>> едениц</font>'
+if defenceW>0:'<font color=green>Воздушная защита <<defenceW>> едениц</font>'
+if defenceH>0:'<font color=green>Защита разума <<defenceH>> едениц</font>'
+if defenceM>0:'<font color=green>Защита маны <<defenceM>> едениц</font>'
+if defenceG>0:'<font color=green>Гравитационная защита <<defenceG>> едениц</font>'
+if defenceZ>0:'<font color=green>Защита от проклятий <<defenceZ>> едениц</font>'
+if defenceP>0:'<font color=green>Защита телепортацией <<defenceP>> едениц</font>'
+if zerkalo>0:'<font color=green> <<zerkalo>> штук зеркал</font>'
+if monster>0:'Возбужденность <<horny>>'
 !
-if skulMark = 1: 'У вас активирована школа огня'
+if skulMark=1:'У вас активирована школа огня'
 !
-if stileMark = 1: 'Вы стоите в стойке ТИГРА'
-if stileMark = 2: 'Вы стоите в боксерской стойке'
-if stileMark = 3: 'Вы стоите в стойке железной рубашки'
-if stileMark = 4: 'Вы стоите в стойке журавля'
-if stileMark = 5: 'Ваше тело покрыто черными узорами печати Оротимару'
-if stileMark = 6: 'Вы стоите закрывшись щитом'
-if ironskin>0: 'Ваша защита выдержит <<ironskin>> едениц урона'
-if Bloodv>0: '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+if stileMark=1:'Вы стоите в стойке ТИГРА'
+if stileMark=2:'Вы стоите в боксерской стойке'
+if stileMark=3:'Вы стоите в стойке железной рубашки'
+if stileMark=4:'Вы стоите в стойке журавля'
+if stileMark=5:'Ваше тело покрыто черными узорами печати Оротимару'
+if stileMark=6:'Вы стоите закрывшись щитом'
+if ironskin>0:'Ваша защита выдержит <<ironskin>> едениц урона'
+if Bloodv>0:'<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
 '<B><<$namev>> уровень <<lvlv>> здоровье <<healthV>> мана <<mannaV>> сила воли <<wipoV>></B>'
-if defenceV>0: '<font color = red>Физическая защита <<defencev>> едениц</font>'
-if defenceTV>0: '<font color = red>Температурная защита <<defenceTv>> едениц</font>'
-if defenceWV>0: '<font color = red>Воздушная защита <<defenceWv>> едениц</font>'
-if defenceHV>0: '<font color = red>Защита разума <<defenceHv>> едениц</font>'
-if defenceMV>0: '<font color = red>Защита маны <<defenceMv>> едениц</font>'
-if defenceGV>0: '<font color = red>Гравитационная защита <<defenceGv>> едениц</font>'
-if defenceZV>0: '<font color = red>Защита от проклятий <<defenceZv>> едениц</font>'
-if defencePV>0: '<font color = red>Защита телепортацией <<defencePv>> едениц</font>'
-if zerkalov>0: '<font color = red> <<zerkalov>> штук зеркал</font>'
+if defenceV>0:'<font color=red>Физическая защита <<defencev>> едениц</font>'
+if defenceTV>0:'<font color=red>Температурная защита <<defenceTv>> едениц</font>'
+if defenceWV>0:'<font color=red>Воздушная защита <<defenceWv>> едениц</font>'
+if defenceHV>0:'<font color=red>Защита разума <<defenceHv>> едениц</font>'
+if defenceMV>0:'<font color=red>Защита маны <<defenceMv>> едениц</font>'
+if defenceGV>0:'<font color=red>Гравитационная защита <<defenceGv>> едениц</font>'
+if defenceZV>0:'<font color=red>Защита от проклятий <<defenceZv>> едениц</font>'
+if defencePV>0:'<font color=red>Защита телепортацией <<defencePv>> едениц</font>'
+if zerkalov>0:'<font color=red> <<zerkalov>> штук зеркал</font>'
 !
-if skulMarkV = 1: '<<$namev>> активировал школу огня'
+if skulMarkV=1:'<<$namev>> активировал школу огня'
 !
-if stileVMark = 1: '<<$namev>> стоит в стойке ТИГРА'
-if stileVMark = 2: '<<$namev>> стоит в боксерской стойке'
-if stileVMark = 3: '<<$namev>> стоит в стойке железной рубашки'
-if stileVMark = 4: '<<$namev>> стоит в стойке журавля'
-if stileVMark = 6: '<<$namev>> стоит закрывшись щитом'
-if ironskinv>0: 'Защита противника выдержит <<ironskinv>> едениц урона'
-if Blood>0: '<font color = green><<$nameV>> теряет <B><<Blood>></B> едениц жизни от кровотечения</font>'
+if stileVMark=1:'<<$namev>> стоит в стойке ТИГРА'
+if stileVMark=2:'<<$namev>> стоит в боксерской стойке'
+if stileVMark=3:'<<$namev>> стоит в стойке железной рубашки'
+if stileVMark=4:'<<$namev>> стоит в стойке журавля'
+if stileVMark=6:'<<$namev>> стоит закрывшись щитом'
+if ironskinv>0:'Защита противника выдержит <<ironskinv>> едениц урона'
+if Blood>0:'<font color=green><<$nameV>> теряет <B><<Blood>></B> едениц жизни от кровотечения</font>'
 
 
 *nl
 '<center>Доступные школы</center>'
-if FireSkul = 100: 'Опыт школы огня <<FireSkulExp>>'
+if FireSkul=100:'Опыт школы огня <<FireSkulExp>>'
 
 
-if FireSkul = 100 and manna>= 50: 
+if FireSkul=100 and manna>=50:
 !1 магичность
-     act 'Активировать школу ОГНЯ (50 маны)': 
+     act 'Активировать школу ОГНЯ (50 маны)':
      cla
-     FireSkulExp = FireSkulExp+1
-     manna = manna-50
-     skul = 10
-     skulMark = 1
-     defence = defence+50
-     defenceT = defenceT+500
-     gt 'fight','1'
+     FireSkulExp=FireSkulExp+1
+     manna=manna-50
+     skul=10
+     skulMark=1
+     defence=defence+50
+     defenceT=defenceT+500
+     gt'fight','1'
      end
 end
 
-if skulMark = 1 and skul>0: 
+if skulMark=1 and skul>0:
 !заклинания школы огня
 !2 магичность
-     if spFire = 100 and manna>= 100: 
-         act 'Заклинание огня (100 маны) АТАКА': 
+     if spFire=100 and manna>=100:
+         act 'Заклинание огня (100 маны) АТАКА':
          cla
          *clr
-         manna = manna-100
-         FireSkulExp = FireSkulExp+1
-         damageT = RAND(200,400+FireSkulExp)
-         '<font color = green>Из вашей руки вылетели языки пламени</font>'
-         $tipuronaT = 'Огонь'
-         gs 'defenceTV'
-         xgt 'fight','1'
+         manna=manna-100
+         FireSkulExp=FireSkulExp+1
+         damageT=RAND(200,400+FireSkulExp)
+         '<font color=green>Из вашей руки вылетели языки пламени</font>'
+         $tipuronaT='Огонь'
+         gs'defenceTV'
+         xgt'fight','1'
          end
      end
 !3 магичность
-     if spFireBall = 100 and manna>= 150: 
-         act 'Заклинание Фаербол (150 маны) АТАКА': 
+     if spFireBall=100 and manna>=150:
+         act 'Заклинание Фаербол (150 маны) АТАКА':
          cla
          *clr
-         manna = manna-150
-         FireSkulExp = FireSkulExp+1
-         damage = RAND(100,200+FireSkulExp)
-         damageT = RAND(400,600+FireSkulExp)
-         '<font color = green>Из вашей руки вылетел огненный шар</font>'
-         $tipuronaT = 'Огонь'
-         gs 'defenceV'
-         gs 'defenceTV'
-         xgt 'fight','1'
+         manna=manna-150
+         FireSkulExp=FireSkulExp+1
+         damage=RAND(100,200+FireSkulExp)
+         damageT=RAND(400,600+FireSkulExp)
+         '<font color=green>Из вашей руки вылетел огненный шар</font>'
+         $tipuronaT='Огонь'
+         gs'defenceV'
+         gs'defenceTV'
+         xgt'fight','1'
          end
      end
 !4 магичность
-     if spFireBlast = 100 and manna>= 200: 
-         act 'Заклинание Взрыв пламени (200 маны) АТАКА': 
+     if spFireBlast=100 and manna>=200:
+         act 'Заклинание Взрыв пламени (200 маны) АТАКА':
          cla
          *clr
-         manna = manna-200
-         FireSkulExp = FireSkulExp+1
-         damage = RAND(500,700+FireSkulExp)
-         damageT = RAND(400,600+FireSkulExp)
-         '<font color = green>Из вашей руки вылетел огромный огненный шар который взорвался при ударе о землю</font>'
-         $tipuronaT = 'Огонь'
-         gs 'defenceV'
-         gs 'defenceTV'
-         xgt 'fight','1'
+         manna=manna-200
+         FireSkulExp=FireSkulExp+1
+         damage=RAND(500,700+FireSkulExp)
+         damageT=RAND(400,600+FireSkulExp)
+         '<font color=green>Из вашей руки вылетел огромный огненный шар который взорвался при ударе о землю</font>'
+         $tipuronaT='Огонь'
+         gs'defenceV'
+         gs'defenceTV'
+         xgt'fight','1'
          end
      end
 !5 магичность
-     if spFireDust = 100 and manna>= 250: 
-         act 'Заклинание Испепеление (250 маны) АТАКА': 
+     if spFireDust=100 and manna>=250:
+         act 'Заклинание Испепеление (250 маны) АТАКА':
          cla
          *clr
-         manna = manna-250
-         FireSkulExp = FireSkulExp+1
-         damage = RAND(100,150+FireSkulExp)
-         damageT = RAND(800,1000+FireSkulExp)
-         '<font color = green>Вы подняли руки и все вокруг охватило огненное марево</font>'
-         $tipuronaT = 'Огонь'
-         gs 'defenceV'
-         gs 'defenceTV'
-         xgt 'fight','1'
+         manna=manna-250
+         FireSkulExp=FireSkulExp+1
+         damage=RAND(100,150+FireSkulExp)
+         damageT=RAND(800,1000+FireSkulExp)
+         '<font color=green>Вы подняли руки и все вокруг охватило огненное марево</font>'
+         $tipuronaT='Огонь'
+         gs'defenceV'
+         gs'defenceTV'
+         xgt'fight','1'
          end
      end
 !6 магичность
-     if spFireWall = 100 and manna>= 300: 
-         act 'Заклинание Огненная стена (300 маны) ЗАЩИТА': 
+     if spFireWall=100 and manna>=300:
+         act 'Заклинание Огненная стена (300 маны) ЗАЩИТА':
          cla
          *clr
-         manna = manna-250
-         FireSkulExp = FireSkulExp+1
-         defence = defence+600
-         defenceT = defenceT+6000
-         '<font color = green>Вы подняли руки и вас окружил огонь защищающий вас</font>'
-         xgt 'fight','1'
+         manna=manna-250
+         FireSkulExp=FireSkulExp+1
+         defence=defence+600
+         defenceT=defenceT+6000
+         '<font color=green>Вы подняли руки и вас окружил огонь защищающий вас</font>'
+         xgt'fight','1'
          end
      end
 !7 магичность
-     if spFireMult = 100 and manna>= 350: 
-         act 'Заклинание Огонь феникса (350 маны) АТАКА': 
+     if spFireMult=100 and manna>=350:
+         act 'Заклинание Огонь феникса (350 маны) АТАКА':
          cla
          *clr
-         manna = manna-350
-         FireSkulExp = FireSkulExp+1
-         '<font color = green>Вы подняли руки и в противника полетело три фаербола</font>'
-         $tipuronaT = 'Огонь'
-         damage = RAND(500,700+FireSkulExp)
-         damageT = RAND(400,600+FireSkulExp)
-         gs 'defenceV'
-         gs 'defenceTV'
-         damage = RAND(500,700+FireSkulExp)
-         damageT = RAND(400,600+FireSkulExp)
-         gs 'defenceV'
-         gs 'defenceTV'
-         damage = RAND(500,700+FireSkulExp)
-         damageT = RAND(400,600+FireSkulExp)
-         gs 'defenceV'
-         gs 'defenceTV'
-         xgt 'fight','1'
+         manna=manna-350
+         FireSkulExp=FireSkulExp+1
+         '<font color=green>Вы подняли руки и в противника полетело три фаербола</font>'
+         $tipuronaT='Огонь'
+         damage=RAND(500,700+FireSkulExp)
+         damageT=RAND(400,600+FireSkulExp)
+         gs'defenceV'
+         gs'defenceTV'
+         damage=RAND(500,700+FireSkulExp)
+         damageT=RAND(400,600+FireSkulExp)
+         gs'defenceV'
+         gs'defenceTV'
+         damage=RAND(500,700+FireSkulExp)
+         damageT=RAND(400,600+FireSkulExp)
+         gs'defenceV'
+         gs'defenceTV'
+         xgt'fight','1'
          end
      end
 !8 магичность
-     if spFireCup = 100 and manna>= 400: 
-         act 'Заклинание Огненная купель (400 маны) ЗАЩИТА': 
+     if spFireCup=100 and manna>=400:
+         act 'Заклинание Огненная купель (400 маны) ЗАЩИТА':
          cla
          *clr
-         manna = manna-400
-         FireSkulExp = FireSkulExp+1
-         defence = defence+1000
-         defenceT = defenceT+10000
-         '<font color = green>Вы подняли руки и вас окружил плотный огонь защищающий вас и от его жара даже земля начала плавится</font>'
-         $tipuronaT = 'Огонь'
-         damageT = RAND(800,1200+FireSkulExp)
-         gs 'defenceTV'
-         xgt 'fight','1'
+         manna=manna-400
+         FireSkulExp=FireSkulExp+1
+         defence=defence+1000
+         defenceT=defenceT+10000
+         '<font color=green>Вы подняли руки и вас окружил плотный огонь защищающий вас и от его жара даже земля начала плавится</font>'
+         $tipuronaT='Огонь'
+         damageT=RAND(800,1200+FireSkulExp)
+         gs'defenceTV'
+         xgt'fight','1'
          end
      end
 !9 магичность (запретные заклинания)
-     if spFireSoul = 100 and manna>= 500: 
-         act 'Заклинание Огненная душа (500 маны) ЗАПРЕТНАЯ ТЕХНИКА': 
+     if spFireSoul=100 and manna>=500:
+         act 'Заклинание Огненная душа (500 маны) ЗАПРЕТНАЯ ТЕХНИКА':
          cla
          *clr
-         manna = manna-500
-         FireSkulExp = FireSkulExp+1
-         defence = defence+5000
-         defenceT = defenceT+50000
-         defenceW = defenceW+5000
-         defenceH = defenceH+5000
-         defenceM = defenceM+5000
-         defenceZ = defenceZ+5000
-         if filosofkam = 0: vidage = vidage+1
-         '<font color = green>Вы превратились в живой огонь!</font>'
-         $tipuronaT = 'Огонь'
-         damageT = RAND(1000,1500+FireSkulExp)
-         gs 'defenceTV'
-         xgt 'fight','1'
+         manna=manna-500
+         FireSkulExp=FireSkulExp+1
+         defence=defence+5000
+         defenceT=defenceT+50000
+         defenceW=defenceW+5000
+         defenceH=defenceH+5000
+         defenceM=defenceM+5000
+         defenceZ=defenceZ+5000
+         if filosofkam=0:vidage=vidage+1
+         '<font color=green>Вы превратились в живой огонь!</font>'
+         $tipuronaT='Огонь'
+         damageT=RAND(1000,1500+FireSkulExp)
+         gs'defenceTV'
+         xgt'fight','1'
          end
      end
 !10 магичность (запретные заклинания)
-     if spFireDragon = 100 and manna>= 800: 
-         act 'Заклинание Испепеление (800 маны) ЗАПРЕТНАЯ ТЕХНИКА': 
+     if spFireDragon=100 and manna>=800:
+         act 'Заклинание Испепеление (800 маны) ЗАПРЕТНАЯ ТЕХНИКА':
          cla
          *clr
-         manna = manna-800
-         FireSkulExp = FireSkulExp+1
-         damage = RAND(1000,1500+FireSkulExp)
-         damageT = RAND(8000,10000+FireSkulExp)
-         if filosofkam = 0: vidage = vidage+2
-         '<font color = green>Вы открыли рот и из него вырвалось настоящее пламя дракона способное превратить в пар даже самую крепкую сталь</font>'
-         $tipuronaT = 'Огонь'
-         gs 'defenceV'
-         gs 'defenceTV'
-         xgt 'fight','1'
+         manna=manna-800
+         FireSkulExp=FireSkulExp+1
+         damage=RAND(1000,1500+FireSkulExp)
+         damageT=RAND(8000,10000+FireSkulExp)
+         if filosofkam=0:vidage=vidage+2
+         '<font color=green>Вы открыли рот и из него вырвалось настоящее пламя дракона способное превратить в пар даже самую крепкую сталь</font>'
+         $tipuronaT='Огонь'
+         gs'defenceV'
+         gs'defenceTV'
+         xgt'fight','1'
          end
      end
 end
@@ -224,8 +224,8 @@ end
 
 
 
-act 'Ничего не выбирать': 
- gt 'fight','1'
+act 'Ничего не выбирать':
+gt'fight','1'
 end
 --- spell ---------------------------------
 

@@ -5,46 +5,46 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Особняк купца</H4></center>'
-'<center><img src = "pic/Evedon\1\osobniak.jpg"></center>'
+'<center><img src="pic/Evedon\1\osobniak.jpg"></center>'
 'Это тот самый дом, где живет нечестный купец.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-	 act 'Уйти (5 мин)': 
-	 minut += 5
-	 gt 'reachW'
+	 act 'Уйти (5 мин)':
+	 minut=minut+5
+	 gt'reachW'
 	 end
 	 
-	 if otmicka>0 and hour>= 22 or hour<7: 
-	     act 'Взломать': 
+	 if otmicka>0 and hour>=22 or hour<7:
+	     act 'Взломать':
 	     cla
-	     minut += 5
-		 vzlomdom = RAND(0,100)
-		 otmickadom = RAND(0,100)
-		     if vzlomdom<= 40: 
+	     minut=minut+5
+		 vzlomdom=RAND(0,100)
+		 otmickadom=RAND(0,100)
+		     if vzlomdom<=40:
 		     'Вы взламывали замок, но увидели отряд стражников, идущих в вашу сторону. К счастью они вас еще не заметили. Вы решили прервать свое занятие, пока стража не уйдет.'
-		     	 act 'Отойти': 
-				 minut += 5
-				 gt 'reachW'
+		     	 act 'Отойти':
+				 minut=minut+5
+				 gt'reachW'
 				 end
 			 end
-			 if vzlomdom>40 and otmickadom<40: 
-			 otmicka = otmicka-1
+			 if vzlomdom>40 and otmickadom<40:
+			 otmicka=otmicka-1
 			 'Вы сломали отмычку'
-			     act 'Попробывать снова': 
-			     minut += 1
-			     gt 'vzlom'
+			     act 'Попробывать снова':
+			     minut=minut+1
+			     gt'vzlom'
 			     end
 			 end
-			 if vzlomdom>40 and otmickadom>= 40: 
+			 if vzlomdom>40 and otmickadom>=40:
 			 'Вы смогли открыть замок'
-			     act 'Войти внутрь': 
-			     minut += 1
-			     gt 'vzlom1'
+			     act 'Войти внутрь':
+			     minut=minut+1
+			     gt'vzlom1'
 			     end
 			 end
 	     end

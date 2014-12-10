@@ -1,44 +1,44 @@
 # impW2
 *clr
-'<center><img src = "pic/EvedonMonsters\imp2.jpg"></center>'
+'<center><img src="pic/EvedonMonsters\imp2.jpg"></center>'
 
-strenV = 9
-speedV = 9
-agilV = 9
-vitalV = 8
-monster = 2
-
-
-besrand = RAND(0,6)
-if besrand = 0: lvlg = 20 & $nameV = 'Тщедушный бесенок'
-if besrand = 1: lvlg = 25 & $nameV = 'Мелкий бесенок'
-if besrand = 2: lvlg = 30 & $nameV = 'Крепкий бесенок'
-if besrand = 3: lvlg = 35 & $nameV = 'Мелкий бес'
-if besrand = 4: lvlg = 40 & $nameV = 'Бес'
-if besrand = 5: lvlg = 45 & $nameV = 'Крупный бес'
-if besrand = 6: lvlg = 50 & $nameV = 'Жирный бес'
-
-lvlv = lvlg
- spg = lvlv*5
+strenV=9
+speedV=9
+agilV=9
+vitalV=8
+monster=2
 
 
-: loopgeni
-if spg > 0: 
-randsp = RAND(1,4)
+besrand=RAND(0,6)
+if besrand=0:lvlg = 20&$nameV='Тщедушный бесенок'
+if besrand=1:lvlg = 25&$nameV='Мелкий бесенок'
+if besrand=2:lvlg = 30&$nameV='Крепкий бесенок'
+if besrand=3:lvlg = 35&$nameV='Мелкий бес'
+if besrand=4:lvlg = 40&$nameV='Бес'
+if besrand=5:lvlg = 45&$nameV='Крупный бес'
+if besrand=6:lvlg = 50&$nameV='Жирный бес'
 
-     if randsp = 1: strenV = strenV+1 & spg = spg-1 & JUMP'loopgeni'
-     if randsp = 2: speedV = speedV+1 & spg = spg-1 & JUMP'loopgeni'
-     if randsp = 3: agilV = agilV+1 & spg = spg-1 & JUMP'loopgeni'
-     if randsp = 4: vitalV = vitalV+1 & spg = spg-1 & JUMP'loopgeni'
+lvlv=lvlg
+set spg=lvlv*5
+
+
+:loopgeni
+if spg > 0:
+randsp=RAND(1,4)
+
+     if randsp=1:strenV=strenV+1&spg=spg-1&JUMP'loopgeni'
+     if randsp=2:speedV=speedV+1&spg=spg-1&JUMP'loopgeni'
+     if randsp=3:agilV=agilV+1&spg=spg-1&JUMP'loopgeni'
+     if randsp=4:vitalV=vitalV+1&spg=spg-1&JUMP'loopgeni'
 
 
 else
-intelV = 10
-willV = 10
-program = 11
-healthV = vitalV*10
-mannaV = intelV*10
-wipoV = willV*10
+intelV=10
+willV=10
+program=11
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
 end
 
 

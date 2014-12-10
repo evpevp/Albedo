@@ -2,92 +2,92 @@
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 
-if V_Roziske = 0 and health>10: 
+if V_Roziske=0 and health>10:
 GOTO $locMag, $metkaMag
 end
 
-if V_Roziske>0 and DemonWish>0: 
+if V_Roziske>0 and DemonWish>0:
 cls
-V_Roziske = 0
+V_Roziske=0
 'К вам подошел целый отряд стражи вооруженных по самые зубы и обвешанных амулетами. Из толпы стражников вышло шестеро магов ордена четырехлистника с нашивками в виде вензеля СБО. Они вежливо представились как Служба Безопасности Ордена и предложили пройти с ними.'
-OblavaBat = 1
-OtradStraga = 1
-$nameV = 'Гвардеец'
-lvlv = 220
-strenV = 220
-speedV = 250
-agilV = 250
-vitalV = 450
-intelv = 10
-willv = 180
-program = 10
-healthV = vitalV*10
-mannaV = intelV*10
-wipoV = willV*10
-ShilDefv = 80
-weaponv = 1
-armorDefv = 600
-wepAtkV = 80
-barierV = 80
-healthAmuletV = 15
-windGranadV = 10
-mortalv = 30
-monster = 29
-NORUN = 1
-     act 'Пройти с магами': crime = 1 & gt 'nakazW'
-     act 'Драться': gs 'before'
+OblavaBat=1
+OtradStraga=1
+$nameV='Гвардеец'
+lvlv=220
+strenV=220
+speedV=250
+agilV=250
+vitalV=450
+intelv=10
+willv=180
+program=10
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+ShilDefv=80
+weaponv=1
+armorDefv=600
+wepAtkV=80
+barierV=80
+healthAmuletV=15
+windGranadV=10
+mortalv=30
+monster=29
+NORUN=1
+     act 'Пройти с магами':crime=1&gt'nakazW'
+     act 'Драться':gs'before'
 exit
 end
 
-if V_Roziske>0: 
+if V_Roziske>0:
 cla
 *clr
-V_Roziske = 0
- $nameV = 'Младший магистр ордена четырехлистника'
- lvlv = 100
- strenV = 60
- speedV = 160
- agilV = 160
- vitalV = 100
- intelv = 300
- willv = 100
- program = 29
- healthV = vitalV*10
- mannaV = intelV*10+intelV*12
- wipoV = willV*10
- BATpotionV = 10
- mortalv = 4
- NORUN = 1
- armorDefV = 200
- klonv = 1
+V_Roziske=0
+ $nameV='Младший магистр ордена четырехлистника'
+ lvlv=100
+ strenV=60
+ speedV=160
+ agilV=160
+ vitalV=100
+ intelv=300
+ willv=100
+ program=29
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*12
+ wipoV=willV*10
+ BATpotionV=10
+ mortalv=4
+ NORUN=1
+ armorDefV=200
+ klonv=1
  'Вас окружили четыре мага из ордена четырехлистника и приказали вам сдаться.'
- act 'Драться': gs 'before'
+ act 'Драться':gs'before'
  
-     act 'Сдаться': 
-     crime = 1
-     gt 'nakazW'
+     act 'Сдаться':
+     crime=1
+     gt'nakazW'
      end
      
-     if OrdenRang>0 and demonmorf = 0: 
-         act 'Я тоже член ордена как и вы!': 
+     if OrdenRang>0 and demonmorf=0:
+         act 'Я тоже член ордена как и вы!':
          cla
          *clr
-         minut+= 120
-         crime = 0
-         V_Roziske = 0
-         crimeOrden+= 1
+         minut+=120
+         crime=0
+         V_Roziske=0
+         crimeOrden+=1
          'Вы сказали, что тоже член ордена как и они. Магистры приказали вам следовать за ними.'
-         if crimeOrden<5: 'Вы пришли в орден где декан вас отругал и долго на вас кричал, но преступления с вас снял.'
-         if crimeOrden>= 5: OrdenRang = -1 & 'Вы пришли в орден и декан уставший от ваших безобразий приказал вас изгнать из ордена.'   
-             act 'Уйти': gt 'foOrden'
+         if crimeOrden<5:'Вы пришли в орден где декан вас отругал и долго на вас кричал, но преступления с вас снял.'
+         if crimeOrden>=5:OrdenRang=-1&'Вы пришли в орден и декан уставший от ваших безобразий приказал вас изгнать из ордена.'   
+             act 'Уйти':gt'foOrden'
          end
      end
  exit
 end
 
-if health<= 10: 
-crime = 1
- gt 'nakazW'
+if health<=10:
+crime=1
+gt'nakazW'
 end
 --- Rozisk ---------------------------------
 

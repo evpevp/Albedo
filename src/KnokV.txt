@@ -1,16 +1,16 @@
 # KnokV
 
 
-if powerPunch >= (chin*40/100) and powerPunch < (chin*70/100): 
+if powerPunch >= (chin*40/100) and powerPunch < (chin*70/100):
 pointV = pointV + 1
-if amature = 1: pointProf = pointProf - 1
-'<B><font color = red>НОКДАУН</font></B>'
+if amature = 1:set pointProf = pointProf - 1
+'<B><font color=red>НОКДАУН</font></B>'
 'Вы с трудом встаете на ноги.'
 end
-if powerPunch >= (chin*70/100): 
-'<B><font color = red>НОКАУТ</font></B>'
+if powerPunch >= (chin*70/100):
+'<B><font color=red>НОКАУТ</font></B>'
 'Вы не в состоянии продолжать бой.'
-xgt 'ender','loss'
+xgt'ender','loss'
 exit 
 end
 --- KnokV ---------------------------------

@@ -1,42 +1,42 @@
 # выплаты
 
 
-if day = 25 and oplataday ! day and oplataonce = 0 and world = 0: 
+if day = 25 and oplataday ! day and oplataonce = 0 and world=0:
 oplataday = day
 oplataonce = 1
    
-     if pol = 0 and brak = 0: 
-     smudohod = 0
-         if keditmonth > 0: keditmonth = keditmonth-1
-         if keditmonth = 0: smukredit = 0
-         if keditmonth2 > 0: keditmonth2 = keditmonth2-1
-         if keditmonth2 = 0: smukredit2 = 0
-         if albertQW = 1: money = money+250000 & 'Вам пришел откат от Альберта 250 тысяч рублей.'
-     bankfond = bankfond+zarplata & 'На ваш банковский счет перечислили <<zarplata>> рублей зарплаты.'
-     bankfond = bankfond-famrashod & 'С вашего личного счета сняли <<famrashod>> рублей в счет оплаты расходов семьи.'
-     balance = balance-smurashod & 'Со счета СМУ сняли <<smurashod>> рублей в оплату расходов.'
-         if balance <0: 
-             if keditmonth > 0: 
-             brak = 1
-             sudtimer = 10
-             sud = 1
+     if pol = 0 and brak = 0:
+     smudohod=0
+         if keditmonth > 0:keditmonth=keditmonth-1
+         if keditmonth = 0:smukredit=0
+         if keditmonth2 > 0:keditmonth2=keditmonth2-1
+         if keditmonth2 = 0:smukredit2=0
+         if albertQW = 1:money=money+250000&'Вам пришел откат от Альберта 250 тысяч рублей.'
+     bankfond=bankfond+zarplata&'На ваш банковский счет перечислили <<zarplata>> рублей зарплаты.'
+     bankfond=bankfond-famrashod&'С вашего личного счета сняли <<famrashod>> рублей в счет оплаты расходов семьи.'
+     balance=balance-smurashod&'Со счета СМУ сняли <<smurashod>> рублей в оплату расходов.'
+         if balance <0:
+             if keditmonth > 0:
+             brak=1
+             sudtimer=10
+             sud=1
              'Начат процесс банкротства.'
              end
-             if keditmonth <= 0: 
-             balance = balance+15000000
-		     smukredit = 1500000
-		     keditmonth = 12
+             if keditmonth <= 0:
+             balance=balance+15000000
+		     smukredit=1500000
+		     keditmonth=12
 		     'Чтобы спастись от разорения главбух взяла кредит.'
              end
          end
      end
-     if pol = 0 and brak>2 and sizo = 0: 
-     money = money-2500 & 'Вы оплатили 2500 рублей, за коммунальные услуги вашей квартиры.'
+     if pol=0 and brak>2 and sizo=0:
+     money=money-2500&'Вы оплатили 2500 рублей, за коммунальные услуги вашей квартиры.'
      end
 
 end
 
-if day ! 25 and oplataonce = 1 and world = 0: 
+if day ! 25 and oplataonce = 1 and world=0:
 oplataonce = 0
 oplataday = 0
 end

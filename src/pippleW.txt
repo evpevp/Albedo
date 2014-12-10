@@ -1,158 +1,158 @@
 # pippleW
 
-if manpip = 1: 
+if manpip=1:
 !нищий мужчина
-$pipl = 'какой то бродяга одетый в лохмотья'
-$frenclo = 'Одет в лохмотья'
-$namevv = 'бродяга'
-$namev = 'Бродяга'
-mangem = 1
-ranpol = 0
+$pipl='какой то бродяга одетый в лохмотья'
+$frenclo='Одет в лохмотья'
+$namevv='бродяга'
+$namev='Бродяга'
+mangem=1
+ranpol=0
 end
-if manpip = 2: 
+if manpip=2:
 !крестьянин мужчина
-$pipl = 'какой то крестьянин одетый в простую одежду'
-$frenclo = 'Одет в простую, крестьянскую одежду'
-$namevv = 'крестьянин'
-$namev = 'Крестьянин'
-mangem = 2
-ranpol = 0
+$pipl='какой то крестьянин одетый в простую одежду'
+$frenclo='Одет в простую, крестьянскую одежду'
+$namevv='крестьянин'
+$namev='Крестьянин'
+mangem=2
+ranpol=0
 end
-if manpip = 3: 
+if manpip=3:
 !горожанин мужчина
-$pipl = 'какой то горожанин одетый в обыкновенную одежду'
-$frenclo = 'Одет в обыкновенную одежду'
-$namevv = 'горожанин'
-$namev = 'Горожанин'
-mangem = 3
-ranpol = 0
+$pipl='какой то горожанин одетый в обыкновенную одежду'
+$frenclo='Одет в обыкновенную одежду'
+$namevv='горожанин'
+$namev='Горожанин'
+mangem=3
+ranpol=0
 end
-if manpip = 4: 
+if manpip=4:
 !дворянин мужчина
-$pipl = 'какой то дворянин одетый в простой дворянский наряд'
-$frenclo = 'Одет в простой дворянский наряд'
-$namevv = 'дворянин'
-$namev = 'Дворянин'
-mangem = 4
-ranpol = 0
+$pipl='какой то дворянин одетый в простой дворянский наряд'
+$frenclo='Одет в простой дворянский наряд'
+$namevv='дворянин'
+$namev='Дворянин'
+mangem=4
+ranpol=0
 end
-if manpip = 5: 
+if manpip=5:
 !богатый дворянин мужчина
-$pipl = 'какой то богатый дворянин одетый в роскошные одеяния'
-$frenclo = 'Одет в роскошные одеяния'
-$namevv = 'дворянин'
-$namev = 'Дворянин'
-mangem = 5
-ranpol = 0
+$pipl='какой то богатый дворянин одетый в роскошные одеяния'
+$frenclo='Одет в роскошные одеяния'
+$namevv='дворянин'
+$namev='Дворянин'
+mangem=5
+ranpol=0
 end
-if manpip = 6: 
+if manpip=6:
 !нищенка
-$pipl = 'какая-то нищенка одетая в лохмотья'
-$frenclo = 'Одета в лохмотья'
-$namevv = 'нищенка'
-$namev = 'Нищенка'
-mangem = 1
-ranpol = 1
+$pipl='какая-то нищенка одетая в лохмотья'
+$frenclo='Одета в лохмотья'
+$namevv='нищенка'
+$namev='Нищенка'
+mangem=1
+ranpol=1
 end
-if manpip = 7: 
+if manpip=7:
 !крестьянка
-$pipl = 'какая-то крестьянка одетая в простое платье'
-$frenclo = 'Одета в крестьянское простое платье'
-$namevv = 'крестьянка'
-$namev = 'Крестьянка'
-mangem = 2
-ranpol = 1
+$pipl='какая-то крестьянка одетая в простое платье'
+$frenclo='Одета в крестьянское простое платье'
+$namevv='крестьянка'
+$namev='Крестьянка'
+mangem=2
+ranpol=1
 end
-if manpip = 8: 
+if manpip=8:
 !горожанка
-$pipl = 'какая-то горожанка одетая в обыкновенное городское платье'
-$frenclo = 'Одета в обыкновенное городское платье'
-$namevv = 'горожанка'
-$namev = 'Горожанка'
-mangem = 3
-ranpol = 1
+$pipl='какая-то горожанка одетая в обыкновенное городское платье'
+$frenclo='Одета в обыкновенное городское платье'
+$namevv='горожанка'
+$namev='Горожанка'
+mangem=3
+ranpol=1
 end
-if manpip = 9: 
+if manpip=9:
 !дворянка
-$pipl = 'какая-то дворянка одетая в простое дворянское платье'
-$frenclo = 'Одета в простое дворянское платье'
-$namevv = 'дворянка'
-$namev = 'Дворянка'
-mangem = 4
-ranpol = 1
+$pipl='какая-то дворянка одетая в простое дворянское платье'
+$frenclo='Одета в простое дворянское платье'
+$namevv='дворянка'
+$namev='Дворянка'
+mangem=4
+ranpol=1
 end
-if manpip = 10: 
+if manpip=10:
 !богатая дворянка
-$pipl = 'какая-то дворянка одетая в роскошное и дорогое платье'
-$frenclo = 'Одета в роскошное и дорогое платье'
-$namevv = 'дворянка'
-$namev = 'Дворянка'
-mangem = 5
-ranpol = 1
+$pipl='какая-то дворянка одетая в роскошное и дорогое платье'
+$frenclo='Одета в роскошное и дорогое платье'
+$namevv='дворянка'
+$namev='Дворянка'
+mangem=5
+ranpol=1
 end
 
-gs 'frendGenerator'
+gs'frendGenerator'
 
-if mangem = 1: koshelRand = 0
-if mangem = 2: koshelRand = RAND(0,100)
-if mangem = 3: koshelRand = RAND(0,300)
-if mangem = 4: koshelRand = RAND(100,500)
-if mangem = 5: koshelRand = RAND(500,1000)
-if koshelRand = 0: $koshel = 'кошелька нет'
-if koshelRand > 0 and koshelRand < 100: $koshel = 'тощий кошелек болтается на поясе'
-if koshelRand >= 100 and koshelRand < 500: $koshel = 'тугой кошелек болтается на поясе'
-if koshelRand >= 500: $koshel = 'едва не лопающийся от гемов кошелек болтается на поясе'
-
-
-if slot = 11: ggem = 1
-if slot = 12: ggem = 2
-if slot = 13: ggem = 3
-if slot = 14: ggem = 4
-if slot = 15: ggem = 5
-if slot>15: ggem = 0
+if mangem=1:koshelRand=0
+if mangem=2:koshelRand=RAND(0,100)
+if mangem=3:koshelRand=RAND(0,300)
+if mangem=4:koshelRand=RAND(100,500)
+if mangem=5:koshelRand=RAND(500,1000)
+if koshelRand = 0:$koshel='кошелька нет'
+if koshelRand > 0 and koshelRand < 100:$koshel='тощий кошелек болтается на поясе'
+if koshelRand >= 100 and koshelRand < 500:$koshel='тугой кошелек болтается на поясе'
+if koshelRand >= 500:$koshel='едва не лопающийся от гемов кошелек болтается на поясе'
 
 
-$genprivet = {
-if slot = 12: 'Чего тебе надо?'
-if slot = 13: 'Чего вам надо?'
-if slot = 14: 'Что вам угодно?'
-if slot = 15: 'Что вам будет угодно?'
-if slot>15: 'Чего вы хотите?'
+if slot=11:ggem=1
+if slot=12:ggem=2
+if slot=13:ggem=3
+if slot=14:ggem=4
+if slot=15:ggem=5
+if slot>15:ggem=0
+
+
+$genprivet={
+if slot=12:'Чего тебе надо?'
+if slot=13:'Чего вам надо?'
+if slot=14:'Что вам угодно?'
+if slot=15:'Что вам будет угодно?'
+if slot>15:'Чего вы хотите?'
 }
 
 
-$gentalk = {
+$gentalk={
 cla
-gentextrand = RAND(0,5)
-if gentextrand = 0: $gentext = 'погоде'
-if gentextrand = 1: $gentext = 'прошлом бое на арене'
-if gentextrand = 2: $gentext = 'новых тканях из Тель Адре'
-if gentextrand = 3: $gentext = 'демонах'
-if gentextrand = 4: $gentext = 'жулье из трущоб'
-if gentextrand = 5: $gentext = 'слухах'
+gentextrand=RAND(0,5)
+if gentextrand=0:$gentext='погоде'
+if gentextrand=1:$gentext='прошлом бое на арене'
+if gentextrand=2:$gentext='новых тканях из Тель Адре'
+if gentextrand=3:$gentext='демонах'
+if gentextrand=4:$gentext='жулье из трущоб'
+if gentextrand=5:$gentext='слухах'
 
-act 'Уйти.': minut += 1 & GOTO $locFight, $metkaFight
+act 'Уйти.':minut=minut+1&GOTO $locFight, $metkaFight
 
-     if ggem = 0: 
+     if ggem=0:
      '<<$namev>> вежливо ссылается на спешку, поглядывая на ваши доспехи.'
      end
-     if ggem>0: 
-         if ggem>= mangem: 
+     if ggem>0:
+         if ggem>=mangem:
          '<<$namev>> говорит вам о <<$gentext>>'
-             act 'Представиться и спросить имя.': 
+             act 'Представиться и спросить имя.':
              cla
-             if ranpol = 0: $textsub = ''
-             if ranpol = 1: $textsub = 'а'
+             if ranpol=0:$textsub=''
+             if ranpol=1:$textsub='а'
              'Я <<$name>>, а вас как зовут? <<$frendname>> ответил<<$textsub>> <<$namev>>'
-                 act 'Уйти.': minut += 1 & GOTO $locFight, $metkaFight
+                 act 'Уйти.':minut=minut+1&GOTO $locFight, $metkaFight
                  
-                 if pol!ranpol: 
-					 act 'Предложить познакомиться поближе.': 
+                 if pol!ranpol:
+					 act 'Предложить познакомиться поближе.':
 					 cla
 					 dynamic $gentalk2
 					 '(Вы) - Может познакомимся поближе?'
 					 '(<<$frendname>>) - <<$frendstart>>'
-					 act 'Уйти.': minut += 1 & GOTO $locFight, $metkaFight
+					 act 'Уйти.':minut=minut+1&GOTO $locFight, $metkaFight
 					 end
                  end
              end
@@ -165,103 +165,103 @@ act 'Уйти.': minut += 1 & GOTO $locFight, $metkaFight
 
 
 
-$gentalk2 = {
-frendnarryrand = RAND(0,1)
-if frendnarryrand = 0: $frendstart = 'прошу меня простить, но я давно уж в браке'
-	 if frendnarryrand = 1: 
-	     if frendA<= 1 and mangem>= 4: 
-	     apol = ranpol
-		 frendA = 1
-		 $namefrendA = $frendname
-		 asalo = fsalo
-		 ahlong = fhlong
-		 atan = ftan
-		 ahcol = fhcol
-		 aglacol = fglacol
-		 afage = fage
-		 avagina = fvagina
-         apenis = fpenis
-         aface = fface
-		 ahand = fhand
-		 abrist = fbrist
-		 aass = fass
-		 athight = fthight
-		 aleg = fleg
-		 atit = ftit
-		 arost = frost
-		 $frencloA = $frenclo
-		 $fempropA = $ffemprop
-		 $faceA = $fface
-		 Asex = 0
-		 marryMeA = 0
-	     $frendstart = 'о, это было бы чудесно. Я живу в высоком районе, заходите как-нибудь ко мне.'
+$gentalk2={
+frendnarryrand=RAND(0,1)
+if frendnarryrand=0:$frendstart='прошу меня простить, но я давно уж в браке'
+	 if frendnarryrand=1:
+	     if frendA<=1 and mangem>=4:
+	     apol=ranpol
+		 frendA=1
+		 $namefrendA=$frendname
+		 asalo=fsalo
+		 ahlong=fhlong
+		 atan=ftan
+		 ahcol=fhcol
+		 aglacol=fglacol
+		 afage=fage
+		 avagina=fvagina
+         apenis=fpenis
+         aface=fface
+		 ahand=fhand
+		 abrist=fbrist
+		 aass=fass
+		 athight=fthight
+		 aleg=fleg
+		 atit=ftit
+		 arost=frost
+		 $frencloA=$frenclo
+		 $fempropA=$ffemprop
+		 $faceA=$fface
+		 Asex=0
+		 marryMeA=0
+	     $frendstart='о, это было бы чудесно. Я живу в высоком районе, заходите как-нибудь ко мне.'
 	     end
-	     if frendB<= 1 and mangem>= 2 and mangem<= 3: 
-		 bpol = ranpol
-		 frendB = 1
-		 $namefrendB = $frendname
-		 bsalo = fsalo
-		 bhlong = fhlong
-		 btan = ftan
-		 bhcol = fhcol
-		 bglacol = fglacol
-		 bfage = fage
-		 bvagina = fvagina
-         bpenis = fpenis
-         bface = fface
-		 bhand = fhand
-		 bbrist = fbrist
-		 bass = fass
-		 bthight = fthight
-		 bleg = fleg
-		 btit = ftit
-		 brost = frost
-		 $frencloB = $frenclo
-		 $fempropB = $ffemprop
-		 $faceB = $fface
-		 Bsex = 0
-		 marryMeB = 0
-	     $frendstart = 'я не против. Живу я в деловом квартале, заходите как-нибудь ко мне'
+	     if frendB<=1 and mangem>=2 and mangem<=3:
+		 bpol=ranpol
+		 frendB=1
+		 $namefrendB=$frendname
+		 bsalo=fsalo
+		 bhlong=fhlong
+		 btan=ftan
+		 bhcol=fhcol
+		 bglacol=fglacol
+		 bfage=fage
+		 bvagina=fvagina
+         bpenis=fpenis
+         bface=fface
+		 bhand=fhand
+		 bbrist=fbrist
+		 bass=fass
+		 bthight=fthight
+		 bleg=fleg
+		 btit=ftit
+		 brost=frost
+		 $frencloB=$frenclo
+		 $fempropB=$ffemprop
+		 $faceB=$fface
+		 Bsex=0
+		 marryMeB=0
+	     $frendstart='я не против. Живу я в деловом квартале, заходите как-нибудь ко мне'
 	     end
-	     if frendC<= 1 and mangem<2: 
-		 cpol = ranpol
-		 frendC = 1
-		 $namefrendC = $frendname
-		 csalo = fsalo
-		 chlong = fhlong
-		 ctan = ftan
-		 chcol = fhcol
-		 cglacol = fglacol
-		 cfage = fage
-		 cvagina = fvagina
-         cpenis = fpenis
-         cface = fface
-		 chand = fhand
-		 cbrist = fbrist
-		 cass = fass
-		 cthight = fthight
-		 cleg = fleg
-		 ctit = ftit
-		 crost = frost
-		 $frencloC = $frenclo
-		 $fempropC = $ffemprop
-		 $faceC = $fface
-		 Csex = 0
-		 marryMeC = 0
-	     $frendstart = 'конечно я не против. В трущобах я живу, заходите как-нибудь ко мне.'
+	     if frendC<=1 and mangem<2:
+		 cpol=ranpol
+		 frendC=1
+		 $namefrendC=$frendname
+		 csalo=fsalo
+		 chlong=fhlong
+		 ctan=ftan
+		 chcol=fhcol
+		 cglacol=fglacol
+		 cfage=fage
+		 cvagina=fvagina
+         cpenis=fpenis
+         cface=fface
+		 chand=fhand
+		 cbrist=fbrist
+		 cass=fass
+		 cthight=fthight
+		 cleg=fleg
+		 ctit=ftit
+		 crost=frost
+		 $frencloC=$frenclo
+		 $fempropC=$ffemprop
+		 $faceC=$fface
+		 Csex=0
+		 marryMeC=0
+	     $frendstart='конечно я не против. В трущобах я живу, заходите как-нибудь ко мне.'
 	     end
 	     
-		 if frendA>1 and mangem>= 4: 
-		 frendA = 0
-	     $frendstart = 'тебя мене удалось вспомнить, <<$namefrendA>> твой близкий друг, я все поведаю о твоем легкомыслии.'
+		 if frendA>1 and mangem>=4:
+		 frendA=0
+	     $frendstart='тебя мене удалось вспомнить, <<$namefrendA>> твой близкий друг, я все поведаю о твоем легкомыслии.'
 	     end
-	     if frendB>1 and mangem>= 2 and mangem<= 3: 
-		 frendB = 0
-	     $frendstart = 'тебя мене удалось вспомнить, <<$namefrendB>> твой близкий друг, я все поведаю о твоем легкомыслии.'
+	     if frendB>1 and mangem>=2 and mangem<=3:
+		 frendB=0
+	     $frendstart='тебя мене удалось вспомнить, <<$namefrendB>> твой близкий друг, я все поведаю о твоем легкомыслии.'
 	     end
-	     if frendC>1 and mangem<2: 
-		 frendC = 0
-	     $frendstart = 'тебя мене удалось вспомнить, <<$namefrendC>> твой близкий друг, я все поведаю о твоем легкомыслии.'
+	     if frendC>1 and mangem<2:
+		 frendC=0
+	     $frendstart='тебя мене удалось вспомнить, <<$namefrendC>> твой близкий друг, я все поведаю о твоем легкомыслии.'
 	     end
 	 end
 }

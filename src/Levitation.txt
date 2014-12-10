@@ -1,24 +1,24 @@
 # Levitation
 
 
-if levitation>0: 
- koefspeed = speedv*20/100
- koefagil = agil*20/100
- pop = RAND(speedv-koefspeed,speedv+koefspeed)
- uvo = RAND((agil-Kar)-koefagil,(agil-Kar)+koefagil)
- levirand = RAND(0,10)
-     if pop>= uvo and levirand<10 or levirand = 0: 
-     '<B><font color = red>ВАМ НЕ УДАЛОСЬ УВЕРНУТСЯ ОТ АТАКИ</font></B>'
+if levitation>0:
+ koefspeed=speedv*20/100
+ koefagil=agil*20/100
+ pop=RAND(speedv-koefspeed,speedv+koefspeed)
+ uvo=RAND((agil-Kar)-koefagil,(agil-Kar)+koefagil)
+ levirand=RAND(0,10)
+     if pop>=uvo and levirand<10 or levirand=0: 
+     '<B><font color=red>ВАМ НЕ УДАЛОСЬ УВЕРНУТСЯ ОТ АТАКИ</font></B>'
      end
-     if pop<uvo and levirand>0 or levirand = 10: 
-	 damageV = 0
-	 damageTV = 0
-	 damageWV = 0
-	 damageHV = 0
-	 damageMV = 0
-	 PerepadV = 0
-	 mannaStumpV = 0
-     '<B><font color = green>ВЫ УВЕРНУЛИСЬ ОТ АТАКИ</font></B>'
+     if pop<uvo and levirand>0 or levirand=10:
+	 damageV=0
+	 damageTV=0
+	 damageWV=0
+	 damageHV=0
+	 damageMV=0
+	 PerepadV=0
+	 mannaStumpV=0
+     '<B><font color=green>ВЫ УВЕРНУЛИСЬ ОТ АТАКИ</font></B>'
      end
 end
 --- Levitation ---------------------------------

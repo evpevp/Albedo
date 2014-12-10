@@ -1,17 +1,17 @@
 # HouseKor
 *clr
- minut += 1
+set minut=minut+1
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>КОРИДОР</H4></center>'
-'<center><img src = "pic\housew\kor.jpg" ></center>'
+'<center><img src="pic\housew\kor.jpg" ></center>'
 clr
-gs 'stat'
+gs'stat'
 'В коридоре на стене висит ((зеркало|mirror))'
 
 

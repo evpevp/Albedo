@@ -6,66 +6,66 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Портовый распорядитель</H4></center>'
-'<center><img src = "pic/Evedon/portman.jpg" ></center>'
+'<center><img src="pic/Evedon/portman.jpg" ></center>'
 'Могучий, просоленный морскими ветрами старик басовитым голосом командует грузчиками.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
 
 
-if hour>= 5 and hour<= 20 and farmstam>0: 
+if hour>=5 and hour<=20 and farmstam>0:
 '- Что смотришь? Час работы 2 гема. Хватай ящик и неси вон туда.'
-     act 'Работать грузчиком 1 час': 
+     act 'Работать грузчиком 1 час':
      cla
      *clr
-	 minut += 60
-	 fat = fat-1
-	 gem = gem+2
-	 manna = manna-5
-	 sweat = sweat+1
-	 exp = exp+1
-	 farmstam- = 1
+	 minut=minut+60
+	 fat=fat-1
+	 gem=gem+2
+	 manna=manna-5
+	 sweat=sweat+1
+	 exp=exp+1
+	 farmstam-=1
 	 'Вы таскали ящики целый час. Вытирая пот рукавом. Наконец к вам подошел старик, хозяйничающий в порту и дал вам два гема.'
-	 act 'Передохнуть': gt 'portmanW'
-	 sexport = rand(1,100)
-		 if vagina>0 and iventPortBJ = 0: 
-		     if sexport > 85: 
+	 act 'Передохнуть':gt'portmanW'
+	 sexport=rand(1,100)
+		 if vagina>0 and iventPortBJ=0:
+		     if sexport > 85:
 		     cla
 		     *clr
 		     '(Старик) - эй, ты, да ты, хочешь подзаработать? Если да, то отсоси у меня, деньгами не обижу.'
-			 act 'Спасибо, нет': gt 'portmanW'
-		         act 'Да, не откажусь от лишнего заработка.': 
+			 act 'Спасибо, нет':gt'portmanW'
+		         act 'Да, не откажусь от лишнего заработка.':
 		         cls
-	             '<center><img src = "pic/EvedonTA\cottonBJ.jpg" ></center>' 
+	             '<center><img src="pic/EvedonTA\cottonBJ.jpg" ></center>' 
 		         'Вы, не жалея своего горла, заглатываете член старика, в надежде на то, что он даст вам лишние гемы.'
-		         gs 'cumslut'
+		         gs'cumslut'
 		         'Он кончает вам на лицо и говорит: "Эй, раз ты отсосала у такого старика как я, значит у тебя или добрая душа, или тебе очень сильно нужны деньги...
 		         В любом случае, я могу тебе помочь с заработком, у меня тут есть одна комнатка в таверне, зайди, там поговорим.
 		         Вас смутили слова старика, но все же взяли на заметку.'
-				 cumlip = cumlip+1
-				 swallow = swallow+1
-				 bj = bj+1
-				 if iventPortBJ = 0: guy = guy+1 & iventPortBJ = 1
-				 gem = gem+25
+				 cumlip=cumlip+1
+				 swallow=swallow+1
+				 bj=bj+1
+				 if iventPortBJ=0:guy=guy+1&iventPortBJ=1
+				 gem=gem+25
 				 'Старик дал вам 25 гемов.'
-			     act 'Уйти': gt 'portmanW'
+			     act 'Уйти':gt'portmanW'
 			     end
 			 end
 		 end
 	 end
-elseif farmstam<= 0: 
+elseif farmstam<=0:
 'Вы слишком устали, чтобы таскать ящики.'
 end
 
 
 
 
-act 'Отойти': 
-minut += 5
- gt 'portW'
+act 'Отойти':
+minut=minut+5
+gt'portW'
 end
 --- portmanW ---------------------------------
 

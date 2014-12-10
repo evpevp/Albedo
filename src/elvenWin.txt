@@ -1,32 +1,32 @@
 # elvenWin
-monster = 0
+monster=0
 
-robgem = RAND(lvlv,lvlv*3)
-gem = gem+robgem
+robgem=RAND(lvlv,lvlv*3)
+gem=gem+robgem
 '<<$namev>> пал и вы получили <<robgem>> гемов'
 
-lootrand = RAND(0,13)
-if lootrand = 0: zelhel = zelhel+1 & 'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
-if lootrand = 1: zelhel2 = zelhel2+1 & 'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
-if lootrand = 2: zelhel3 = zelhel3+1 & 'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
-if lootrand = 3: zelhel4 = zelhel4+1 & 'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
-if lootrand = 4: zelman = zelman+1 & 'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
-if lootrand = 5: zelwil = zelwil+1 & 'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
-if lootrand = 6: edaw = edaw+1 & 'Покопавшись в вещах эльфа вы обнаружили ломоть вяленого мяса'
-if lootrand = 7: efsleep = efsleep+1 & 'Покопавшись в вещах эльфа вы обнаружили нектар совы'
-if lootrand = 8: efhorn = efhorn+1 & 'Покопавшись в вещах эльфа вы обнаружили зелье монаха'
-if lootrand = 9: grib = grib+1 & 'Вы нашли у эльфа гриб.'
-if lootrand = 10: grib2 = grib2+1 & 'Вы нашли у эльфа гриб.'
-if lootrand = 11: grib3 = grib3+1 & 'Вы нашли у эльфа гриб.'
-if lootrand = 12: grib4 = grib4+1 & 'Вы нашли у эльфа гриб.'
-if lootrand = 13: berry = berry+1 & 'Вы нашли у эльфа ягоду.'
+lootrand=RAND(0,13)
+if lootrand=0:zelhel=zelhel+1&'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
+if lootrand=1:zelhel2=zelhel2+1&'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
+if lootrand=2:zelhel3=zelhel3+1&'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
+if lootrand=3:zelhel4=zelhel4+1&'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
+if lootrand=4:zelman=zelman+1&'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
+if lootrand=5:zelwil=zelwil+1&'Покопавшись в вещах эльфа вы обнаружили целительное снадобье'
+if lootrand=6:edaw=edaw+1&'Покопавшись в вещах эльфа вы обнаружили ломоть вяленого мяса'
+if lootrand=7:efsleep=efsleep+1&'Покопавшись в вещах эльфа вы обнаружили нектар совы'
+if lootrand=8:efhorn=efhorn+1&'Покопавшись в вещах эльфа вы обнаружили зелье монаха'
+if lootrand=9:grib=grib+1&'Вы нашли у эльфа гриб.'
+if lootrand=10:grib2=grib2+1&'Вы нашли у эльфа гриб.'
+if lootrand=11:grib3=grib3+1&'Вы нашли у эльфа гриб.'
+if lootrand=12:grib4=grib4+1&'Вы нашли у эльфа гриб.'
+if lootrand=13:berry=berry+1&'Вы нашли у эльфа ягоду.'
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 
-if vampireMorf>0: 
-     act 'Пить кровь': 
+if vampireMorf>0:
+     act 'Пить кровь':
      cla
-     vampireMorf+= 1
+     vampireMorf+=1
      GOTO $locFight, $metkaFight
      end
 end

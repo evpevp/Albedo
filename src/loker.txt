@@ -5,12 +5,12 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 mag = 0
 clr
-gs 'stat'
+gs'stat'
 
-if pol = 0: 
-     if kostum = 1: '<a href = "exec: gt ''МОДЕЖДА'',''1''">Мужской деловой костюм.</a>. Прочность <<kostumE>>'
-     if manjeans = 1: '<a href = "exec: gt ''МОДЕЖДА'',''2''">Мужские джинсы с рубашкой.</a>. Прочность <<manjeansE>>'
-     if sport = 1: '<a href = "exec: gt ''МОДЕЖДА'',''3''">Мужской спортивный костюм.</a>. Прочность <<sportE>>'
+if pol = 0:
+     if kostum = 1:'<a href="exec:GT ''МОДЕЖДА'',''1''">Мужской деловой костюм.</a>. Прочность <<kostumE>>'
+     if manjeans = 1:'<a href="exec:GT ''МОДЕЖДА'',''2''">Мужские джинсы с рубашкой.</a>. Прочность <<manjeansE>>'
+     if sport = 1:'<a href="exec:GT ''МОДЕЖДА'',''3''">Мужской спортивный костюм.</a>. Прочность <<sportE>>'
 end
 
 

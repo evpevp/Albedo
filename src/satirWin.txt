@@ -1,11 +1,11 @@
 # satirWin
-monster = 0
-satirFwin+= 1
+monster=0
+satirFwin+=1
 'Сатиры едва завидев поражение собрата тут же пустились удирать от вас.'
 
 
 
-act 'Уйти': minut += 5 & gt 'df0_2'
+act 'Уйти':minut=minut+5&gt'df0_2'
 
 
 --- satirWin ---------------------------------

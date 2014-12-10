@@ -1,71 +1,71 @@
 # GRUZ
 clr
-gs 'stat'
-!tor gt ip = 1 скупка всего
-!tor gt ip = 2 только ткани
+gs'stat'
+!torgTip=1 скупка всего
+!torgTip=2 только ткани
 
-!Доработка Kasssel. gruzphoto = 1 Все Гильдии кроме Тель Адре. gruzphoto = 2 краски в Тель Адре. 
+!Доработка Kasssel. gruzphoto=1 Все Гильдии кроме Тель Адре. gruzphoto=2 краски в Тель Адре. 
 !Noiron - метка железо не продается (багфикс в Мондювале).
 !Добавлена возможность купить и продать сразу все.
 
-'<center><B><Font Color = green>Груза на продажу <<gruz>> единиц</Font></B></center>'
-if GRtkan>0: '<center><B><Font Color = blue><<GRtkan>> шт. дорогих тканей из Тель Адре.</B></Font></center>'
-if GRkraska>0: '<center><B><Font Color = blue><<GRkraska>> шт. краски для ткани.</B></Font></center>'
-if GRiron>0: '<center><B><Font Color = blue><<GRiron>> ед металла из шахт Мондюваля. Металл весит 2 ед груза</B></Font></center>'
-if gruzphoto = 1: '<center><img src = "pic/Photo/Guild.jpg" ></center>'
-if gruzphoto = 2: '<center><img src = "pic/Photo/tkani.jpg" ></center>'
+'<center><B><Font Color=green>Груза на продажу <<gruz>> единиц</Font></B></center>'
+if GRtkan>0:'<center><B><Font Color=blue><<GRtkan>> шт. дорогих тканей из Тель Адре.</B></Font></center>'
+if GRkraska>0: '<center><B><Font Color=blue><<GRkraska>> шт. краски для ткани.</B></Font></center>'
+if GRiron>0: '<center><B><Font Color=blue><<GRiron>> ед металла из шахт Мондюваля. Металл весит 2 ед груза</B></Font></center>'
+if gruzphoto=1:'<center><img src="pic/Photo/Guild.jpg" ></center>'
+if gruzphoto=2:'<center><img src="pic/Photo/tkani.jpg" ></center>'
 *nl
-if GRtkan>0 and tor gt ip<= 2: 
-     if gruzMark = 1: guzTkanPay = 1050
-     if gruzMark = 2: guzTkanPay = 1100
-     if gruzMark = 4: guzTkanPay = 1200
-     act 'Продать всю ткань по <<guzTkanPay>> гем': 
+if GRtkan>0 and torgTip<=2:
+     if gruzMark=1:guzTkanPay=1050
+     if gruzMark=2:guzTkanPay=1100
+     if gruzMark=4:guzTkanPay=1200
+     act 'Продать всю ткань по <<guzTkanPay>> гем':
      cla
-     gem = gem+guzTkanPay*GRtkan
-     gruz = gruz-GRtkan
-     GRtkan = 0
+     gem=gem+guzTkanPay*GRtkan
+     gruz=gruz-GRtkan
+     GRtkan=0
      'Вы продали весь груз тканей из Тель Адре.'
-     act 'Уйти': gt $CURLOC
+     act 'Уйти':gt $CURLOC
      end
-     act 'Продать нужное количество тканей по <<guzTkanPay>> гем': 
+     act 'Продать нужное количество тканей по <<guzTkanPay>> гем':
      tempshop = input ("У вас <<GRtkan>>шт. тканей. Сколько вы желаете продать?")
-         if tempshop > GRtkan or tempshop < 0 : 
+         if tempshop > GRtkan or tempshop < 0 :
 		 msg 'У вас нет такого количества тканей.' 
 		 gt $CURLOC
 		 else
-		 gem = gem+tempshop*guzTkanPay
-		 GRtkan = GRtkan-tempshop
-		 gruz = gruz-tempshop
+		 gem=gem+tempshop*guzTkanPay
+		 GRtkan=GRtkan-tempshop
+		 gruz=gruz-tempshop
 		 'Вы продали <<tempshop>>шт. дорогих тканей из Тель Адре.'
 		 gt $CURLOC
 		 end
      end
 end
 
-if GRkraska>0: 
-     if tor gt ip = 1 or tor gt ip = 3: 
+if GRkraska>0:
+     if torgTip=1 or torgTip=3:
      
-		 if gruzMark = 1: guzKrasPay = 2000
-		 if gruzMark = 3: guzKrasPay = 2100
-		 if gruzMark = 4: guzKrasPay = 2200
+		 if gruzMark=1:guzKrasPay=2000
+		 if gruzMark=3:guzKrasPay=2100
+		 if gruzMark=4:guzKrasPay=2200
 		 
-         act 'Продать всю краску по <<guzKrasPay>>': 
+         act 'Продать всю краску по <<guzKrasPay>>':
 		 cla
-		 gem = gem+guzKrasPay*GRkraska
-		 gruz = gruz-GRkraska
-		 GRkraska = 0
+		 gem=gem+guzKrasPay*GRkraska
+		 gruz=gruz-GRkraska
+		 GRkraska=0
 		 'Вы продали всю краску'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
-		 act'Продать нужное количество краски по <<guzKrasPay>> гем.': 
-		 tempshop = input ("У вас <<GRkraska>>шт. краски. Сколько вы желаете продать?")
-		     if tempshop > GRkraska or tempshop < 0 : 
+		 act'Продать нужное количество краски по <<guzKrasPay>> гем.':
+		 tempshop= input ("У вас <<GRkraska>>шт. краски. Сколько вы желаете продать?")
+		     if tempshop > GRkraska or tempshop < 0 :
 		     msg 'У вас нет такого количества краски.' 
 		     gt $CURLOC
 		     else
-		     gem = gem+tempshop*guzKrasPay
-		     GRkraska = GRkraska-tempshop
-		     gruz = gruz-tempshop
+		     gem=gem+tempshop*guzKrasPay
+		     GRkraska=GRkraska-tempshop
+		     gruz=gruz-tempshop
 		     'Вы продали <<tempshop>>шт. краски для тканей.'
 		     gt $CURLOC
 		     end
@@ -73,29 +73,29 @@ if GRkraska>0:
      end
 end
 
-if GRiron>0 and Noiron = 0: 
-     if tor gt ip = 1: 
+if GRiron>0 and Noiron=0:
+     if torgTip=1:
      
-		 if gruzMark = 1: gruzIronPay = 6500
+		 if gruzMark=1:gruzIronPay=6500
 		 
-         act 'Продать весь металл по <<gruzIronPay>> гем.': 
+         act 'Продать весь металл по <<gruzIronPay>> гем.':
 		 cla
-		 gem = gem+GRiron*gruzIronPay
-		 gruz = gruz-GRiron*2
-		 GRiron = 0
+		 gem=gem+GRiron*gruzIronPay
+		 gruz=gruz-GRiron*2
+		 GRiron=0
 		 'Вы продали весь металл.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 		 
-		 act 'Продать нужное количество металла по <<gruzIronPay>> гем.': 
-		 tempshop = input ("У вас <<GRiron>> ед. металла. Сколько вы желаете продать?")
-		     if tempshop > GRiron or tempshop < 0 : 
+		 act 'Продать нужное количество металла по <<gruzIronPay>> гем.':
+		 tempshop= input ("У вас <<GRiron>> ед. металла. Сколько вы желаете продать?")
+		     if tempshop > GRiron or tempshop < 0 :
 		     msg 'У вас нет такого количества металла.' 
 		     gt $CURLOC
 		     else
-		     gem = gem+tempshop*gruzIronPay
-		     gruz = gruz-tempshop*2
-		     GRiron = GRiron-tempshop
+		     gem=gem+tempshop*gruzIronPay
+		     gruz=gruz-tempshop*2
+		     GRiron=GRiron-tempshop
 		     'Вы продали <<tempshop>> ед. металла из шахт мондюваля'
 		      gt $CURLOC
 		      end
@@ -105,9 +105,9 @@ end
 
 
 
-act 'Уйти из окна торговли': 
-gruzMark = 0
-tor gt ip = 0
+act 'Уйти из окна торговли':
+gruzMark=0
+torgTip=0
 GOTO $locBed, $metkaBed
 end
 --- GRUZ ---------------------------------

@@ -8,50 +8,50 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 
-if skverna<20: 
-$namestohrspeek = 'По какому вопросу?'
+if skverna<20:
+$namestohrspeek='По какому вопросу?'
 else
-$namestohrspeek = 'Убирайся отсюда. В тебе слишком много скверны!'
+$namestohrspeek='Убирайся отсюда. В тебе слишком много скверны!'
 end
 
 '<center><H4>Усадьба наместника</H4></center>'
-'<center><img src = "pic/Evedon/taNam.jpg" ></center>'
+'<center><img src="pic/Evedon/taNam.jpg" ></center>'
 'В просторной усадьбе стоит охрана из грозного вида мужчин с каменными лицами.'
 'Один из них подходит к вам и достает амулет рассматривая его. Потом говорит вам "<<$namestohrspeek>>"'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-act 'Уйти': 
-minut += 5
- gt 'teladareW'
+act 'Уйти':
+minut=minut+5
+gt'teladareW'
 end
 
-     if missionData = 5: 
-         act 'Отдать письмо': 
+     if missionData=5:
+         act 'Отдать письмо':
          cla
          *clr
-         missionData = 0
-         kredit = kredit+100
-         missionC+= 1
-         '<center><img src = "pic/Photo/License.jpg" ></center>'
+         missionData=0
+         kredit=kredit+100
+         missionC+=1
+         '<center><img src="pic/Photo/License.jpg" ></center>'
          'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
          end
      end
      
-     if skverna<20: 
-         act 'Мне хотелось бы поступить в стражу Тель Адре.': 
+     if skverna<20:
+         act 'Мне хотелось бы поступить в стражу Тель Адре.':
          cla
          *clr
          'Вы заявили охранникам о том что хотели бы поступить в стражу Тель Адре. Один из охраны безапеляционно вам заявил "В Тель Адре нет базы для подготовки новичков, потому в стражу берут лишь тех, кто отслужил в страже Эведона."'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
          end
      end
      

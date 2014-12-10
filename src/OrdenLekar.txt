@@ -9,42 +9,42 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Орденская лечебница</H4></center>'
-'<center><img src = "pic/Evedon/ordenLekar.jpg" ></center>'
+'<center><img src="pic/Evedon/ordenLekar.jpg" ></center>'
 'Лечебница, в которой поставят на ноги любого, у кого есть 10 кредитов.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-     if kredit>= 10: 
-		 act 'Вылечиться': 
+     if kredit>=10:
+		 act 'Вылечиться':
 		 cla
 		 *clr
-		 minut += 60
-		 kredit = kredit-10
-		 health = vital*10
-		 manna = intel*10+intel*magika
-		 wipo = will*10
+		 minut=minut+60
+		 kredit=kredit-10
+		 health=vital*10
+		 manna=intel*10+intel*magika
+		 wipo=will*10
 		 'Лекарь осмотрел вас и наложил заклинание, которое вдохнуло в вас силы.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 end
 
-	 act 'Уйти': 
-	 minut += 5
-	 gt 'foOrden'
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'foOrden'
 	 end
 	 
-	 if lekOrday!day: 
-		 act 'Мыть судна 1 час за 20 кредитов': 
+	 if lekOrday!day:
+		 act 'Мыть судна 1 час за 20 кредитов':
 		 cla
 		 *clr
-		 minut += 60
-		 kredit = kredit+20
-		 lekOrday = day
+		 minut=minut+60
+		 kredit=kredit+20
+		 lekOrday=day
 		 'Вы мыли судна в течение часа за 20 кредитов.'
-		 act 'Передохнуть': gt $CURLOC
+		 act 'Передохнуть':gt $CURLOC
 		 end
 	 end
 --- OrdenLekar ---------------------------------

@@ -10,87 +10,87 @@ $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Пригород Эведона</H4></center>'
-'<center><img src = "pic/Evedon/suburb.jpg" ></center>'
+'<center><img src="pic/Evedon/suburb.jpg" ></center>'
 'Большие дома утопают в зелени деревьев.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-if DemonMorf>= 10: 
- atkrand = RAND(0,100)
-     if atkrand>= 90: 
+if DemonMorf>=10:
+ atkrand=RAND(0,100)
+     if atkrand>=90:
      cls
 	 *clr
-     '<center><img src = "pic/EvedonMonsters/guards.jpg"></center>'
-	 pogonarand = RAND(5,10)
+     '<center><img src="pic/EvedonMonsters/guards.jpg"></center>'
+	 pogonarand=RAND(5,10)
 	 'Разгуливать в облике демона опасно, стража вас обнаружила и атаковала.'
-		 act 'Убегать.': 
-		 minut += 1
-		 crime = 1
-		 gt 'runW'
+		 act 'Убегать.':
+		 minut=minut+1
+		 crime=1
+		 gt'runW'
 		 end
      exit
      end
 end
 
-if hour>= 5 and hour<= 23: 
+if hour>=5 and hour<=23:
 !ворота открыты
-	 act 'Войти в город': minut += 15 & gt 'enterW'
+	 act 'Войти в город':minut=minut+15&gt'enterW'
 else
 'Ворота в город закрыты'
 end
 
 !!!дома
-'((Кабак Веселый лесоруб|subkabak|minut += 5))'
-'((Пивоварня Лигербрау|pivovarn|minut += 5))'
-'((Будка городового|gorodovoi|minut += 5))'
-'((Общежитие лесорубов|dormlesorub|minut += 5))'
-if lostpeopleQW>0: '<a href = "exec: gt ''korihouse'',''start'' ">Дом Кори</a>.'
+'((Кабак Веселый лесоруб|subkabak|minut=minut+5))'
+'((Пивоварня Лигербрау|pivovarn|minut=minut+5))'
+'((Будка городового|gorodovoi|minut=minut+5))'
+'((Общежитие лесорубов|dormlesorub|minut=minut+5))'
+if lostpeopleQW>0:'<a href="exec: gt ''korihouse'',''start'' ">Дом Кори</a>.'
 
 !!!
 
 
-if hour >= 6 and hour<= 21: 
-piprand = RAND(0,100)
-     if piprand < 50: 
+if hour >= 6 and hour<=21:
+piprand=RAND(0,100)
+     if piprand < 50:
      'На улице никого нет.'
      end
-     if piprand >= 50: 
-     manpip = RAND(1,10)
-         if manpip = 4 or manpip = 5: manpip = 1
-         if manpip = 9 or manpip = 10: manpip = 6
-     gs 'pippleW'
-     'По улице идет ((<<$pipl>>|pipaktW|minut += 1))'
+     if piprand >= 50:
+     manpip=RAND(1,10)
+         if manpip=4 or manpip = 5:manpip=1
+         if manpip=9 or manpip = 10:manpip=6
+     gs'pippleW'
+     'По улице идет ((<<$pipl>>|pipaktW|minut=minut+1))'
      end
 end
 
-	 act 'Идти к фермам (1 час)': minut += 60 & gt 'farmW'
+	 act 'Идти к фермам (1 час)':minut=minut+60&gt'farmW'
 	 
-	 act 'Идти к озеру (1 час)': minut += 60 & gt 'lakeW'
+	 act 'Идти к озеру (1 час)':minut=minut+60&gt'lakeW'
 	 
-	 act 'Идти к лесу (1 час)': minut += 60 & gt 'forestW'
+	 act 'Идти к лесу (1 час)':minut=minut+60&gt'forestW'
 
-     act 'Ждать': 
+     act 'Ждать':
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120: 
-          minut = minut + 15
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120: 
-          minut = minut + waiting
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
          end
-     act 'Посмотреть на часы': gt curloc
+     act 'Посмотреть на часы':gt curloc
      end
      
      
      
      
      
-     if V_Roziske>0 and V_RoziskeDay!day: 
-     randroz = RAND(0,100)
-         if randroz>= 80: gt 'Rozisk'
+     if V_Roziske>0 and V_RoziskeDay!day:
+     randroz=RAND(0,100)
+         if randroz>=80:gt'Rozisk'
      end
      
      

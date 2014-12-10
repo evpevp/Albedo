@@ -2,35 +2,35 @@
 *clr
 $metka = $ARGS[0]
 $loc = $CURLOC
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>Зал КунФу</H4></center>'
-'<center><img src = "pic/pic/kungfugym1.jpg" ></center>'
+'<center><img src="pic/pic/kungfugym1.jpg" ></center>'
 'Стоимость абонемента на 10 занятий 5000 руб. Так же Мастер Чоу не допускает к занятиям физически неподготовленных (необходим 5й уровень.)'
-if kfabonement > 0: 'Абонемент действителен еще на <<kfabonement>> посещений.'
+if kfabonement > 0:'Абонемент действителен еще на <<kfabonement>> посещений.'
 clr
-gs 'stat'
+gs'stat'
 
-act 'ВЫЙТИ': 
-minut += 5
- gt 'kungfugym'
+act 'ВЫЙТИ':
+minut=minut+5
+gt'kungfugym'
 end
 
-if money>= 5000 and lvl >= 5: 
-     act 'Купить абонемент': 
+if money>= 5000 and lvl >= 5:
+     act 'Купить абонемент':
      cla
-     money = money-5000
-     kfabonement = kfabonement+10
-     gt 'kungfugym1'
+     money=money-5000
+     kfabonement=kfabonement+10
+     gt'kungfugym1'
      end
 end
 
-if kfabonement>0: 
-     act 'Посетить занятия': 
+if kfabonement>0:
+     act 'Посетить занятия':
      cla
-     kfabonement = kfabonement-1
-     gt 'kungfugym2'
+     kfabonement=kfabonement-1
+     gt'kungfugym2'
      end
 end
 --- kungfugym1 ---------------------------------

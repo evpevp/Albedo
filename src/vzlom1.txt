@@ -9,31 +9,31 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Холл особняка купца</H4></center>'
-'<center><img src = "pic/Evedon\1\osobniakholl.jpg" ></center>'
+'<center><img src="pic/Evedon\1\osobniakholl.jpg" ></center>'
 'Да шикарно живет купец.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-act 'Искать нужную вещь': 
+act 'Искать нужную вещь':
 cla
-minut += 15
-vzlomdom = RAND(0,100)
-     if vzlomdom<40: 
+minut=minut+15
+vzlomdom=RAND(0,100)
+     if vzlomdom<40:
      'Вы шарили по дому, но разбили случайно вазу. Хозяин дома проснулся и пошел выяснять в чем дело. Вам пришлось в спешке покидать дом через окно.'
-         act 'Сбежать': 
-         minut += 5
-         gt 'reachW'
+         act 'Сбежать':
+         minut=minut+5
+         gt'reachW'
          end
      end
-     if vzlomdom>= 40: 
-     vorzad = 2
+     if vzlomdom>=40:
+     vorzad=2
      'После долгих поисков вы нашли ту самую вещь, которая нужна Коннору.'
-         act 'Уйти': 
-         minut += 5
-         gt 'reachW'
+         act 'Уйти':
+         minut=minut+5
+         gt'reachW'
          end
      end
      end

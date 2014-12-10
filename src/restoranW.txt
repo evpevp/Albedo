@@ -5,35 +5,35 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Ресторация</H4></center>'
-'<center><img src = "pic/Evedon/restaurant.jpg" ></center>'
+'<center><img src="pic/Evedon/restaurant.jpg" ></center>'
 'Большой и роскошный ресторан со сценой на которой выступают музыканты и танцорки. В зале за столами, покрытыми белоснежными накрахмаленными скатертями, сидят дворяне и неспешно едят.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
 
-	 act 'Уйти (5 мин)': 
-	 minut += 5
-	 gt 'reachW'
+	 act 'Уйти (5 мин)':
+	 minut=minut+5
+	 gt'reachW'
 	 end
 	 
-     if gem>= 500 and hour>= 9 and hour<23: 
-		 act 'Поесть (500 гем)': 
+     if gem>=500 and hour>=9 and hour<23:
+		 act 'Поесть (500 гем)':
 		 cla
 		 *clr
-		 minut += 60
-		 gem = gem-500
-		 noble+= 1
-		 alko = alko+2
-		 manna+= 1000
-		 wipo+= 1000
-		 gs 'eda'
+		 minut=minut+60
+		 gem=gem-500
+		 noble+=1
+		 alko=alko+2
+		 manna+=1000
+		 wipo+=1000
+		 gs'eda'
 		 'Официантка подала вам столовые приборы и разнообразные кушанья. А так же бутылку вина.'
-		 gs 'eat'
-		 act 'Отойти от стойки': gt 'reachW'
+		 gs'eat'
+		 act 'Отойти от стойки':gt'reachW'
 		 end
 	end
 --- restoranW ---------------------------------

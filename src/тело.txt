@@ -1,124 +1,124 @@
 # тело
 
-if brist<12: taliaBase = rost-110
-if brist>= 12 and brist<14: taliaBase = rost-111
-if brist>= 14 and brist<16: taliaBase = rost-112
-if brist>= 16 and brist<18: taliaBase = rost-113
-if brist>= 18 and brist<20: taliaBase = rost-114
-if brist>= 20 and brist<22: taliaBase = rost-115
-if brist>= 22 and brist<24: taliaBase = rost-116
-if brist>= 24 and brist<26: taliaBase = rost-117
-if brist>= 26 and brist<28: taliaBase = rost-118
-if brist>= 28 and brist<30: taliaBase = rost-119
-if brist>= 30 and brist<32: taliaBase = rost-120
-if brist>= 32 and brist<34: taliaBase = rost-121
-if brist>= 34 and brist<36: taliaBase = rost-122
-if brist>= 36 and brist<38: taliaBase = rost-123
-if brist>= 38 and brist<40: taliaBase = rost-124
-if brist>= 40 and brist<42: taliaBase = rost-125
-if brist>= 42 and brist<44: taliaBase = rost-126
-if brist>= 44 and brist<46: taliaBase = rost-127
-if brist>= 46 and brist<48: taliaBase = rost-128
-if brist>= 48 and brist<50: taliaBase = rost-129
-if brist >= 50: taliaBase = rost-130
+if brist<12:taliaBase=rost-110
+if brist>=12 and brist<14:taliaBase=rost-111
+if brist>=14 and brist<16:taliaBase=rost-112
+if brist>=16 and brist<18:taliaBase=rost-113
+if brist>=18 and brist<20:taliaBase=rost-114
+if brist>=20 and brist<22:taliaBase=rost-115
+if brist>=22 and brist<24:taliaBase=rost-116
+if brist>=24 and brist<26:taliaBase=rost-117
+if brist>=26 and brist<28:taliaBase=rost-118
+if brist>=28 and brist<30:taliaBase=rost-119
+if brist>=30 and brist<32:taliaBase=rost-120
+if brist>=32 and brist<34:taliaBase=rost-121
+if brist>=34 and brist<36:taliaBase=rost-122
+if brist>=36 and brist<38:taliaBase=rost-123
+if brist>=38 and brist<40:taliaBase=rost-124
+if brist>=40 and brist<42:taliaBase=rost-125
+if brist>=42 and brist<44:taliaBase=rost-126
+if brist>=44 and brist<46:taliaBase=rost-127
+if brist>=46 and brist<48:taliaBase=rost-128
+if brist>=48 and brist<50:taliaBase=rost-129
+if brist >=50:taliaBase=rost-130
 
-talia = taliaBase+(salo/10)
-podgrud = talia+2
-grud = podgrud+(tit/5)+(salo/100)
-bedra = talia+5+((ass+thight)/8)+(salo/100)
+talia=taliaBase+(salo/10)
+podgrud=talia+2
+grud=podgrud+(tit/5)+(salo/100)
+bedra=talia+5+((ass+thight)/8)+(salo/100)
 
-ves = talia
+ves=talia
 
-titk = grud-podgrud
-     if titK = 0: $titsw = 'нет груди'
-	 if titK>0 and titK < 5: tits = 0 & $titsw = 'немного увеличенные но не тянут даже на самый маленький размер'
-	 if titK >= 5 and titK <= 10: tits = 1 & $titsw = 'размера AA'  
-	 if titK > 10 and titK <= 15: tits = 2 & $titsw = 'размера A' 
-	 if titK > 15 and titK <= 20: tits = 3 & $titsw = 'размера B' 
-	 if titK > 20 and titK <= 30: tits = 4 & $titsw = 'размера C' 
-	 if titK > 30 and titK <= 40: tits = 5 & $titsw = 'размера D' 
-	 if titK > 40 and titK <= 50: tits = 6 & $titsw = 'размера DD' 
-	 if titK > 50 and titK <= 60: tits = 7 & $titsw = 'размера E'
-	 if titK > 60: tits = 8 & $titsw = 'размера F'  
+titk=grud-podgrud
+     if titK=0:$titsw='нет груди'
+	 if titK>0 and titK < 5:set tits = 0&$titsw='немного увеличенные но не тянут даже на самый маленький размер'
+	 if titK >= 5 and titK <= 10:set tits = 1&$titsw='размера AA'  
+	 if titK > 10 and titK <= 15:set tits = 2&$titsw='размера A' 
+	 if titK > 15 and titK <= 20:set tits = 3&$titsw='размера B' 
+	 if titK > 20 and titK <= 30:set tits = 4&$titsw='размера C' 
+	 if titK > 30 and titK <= 40:set tits = 5&$titsw='размера D' 
+	 if titK > 40 and titK <= 50:set tits = 6&$titsw='размера DD' 
+	 if titK > 50 and titK <= 60:set tits = 7&$titsw='размера E'
+	 if titK > 60:set tits = 8&$titsw='размера F'  
 	 
 	 
 	 
 	 
-!podgrudKF = fat/100
-!podgrudKH = 20-(hand/4)
-!podgrudKoef = podgrudKF+podgrudKH
+!podgrudKF=fat/100
+!podgrudKH=20-(hand/4)
+!podgrudKoef=podgrudKF+podgrudKH
 
-!'if hand<2: podgrud = (rost/2)+18
-if hand>= 2 and hand<4: podgrud = (rost/2)+17
-if hand>= 4 and hand<6: podgrud = (rost/2)+16
-if hand>= 6 and hand<8: podgrud = (rost/2)+15
-if hand>= 8 and hand<10: podgrud = (rost/2)+14
-if hand>= 10 and hand<12: podgrud = (rost/2)+13
-if hand>= 12 and hand<14: podgrud = (rost/2)+12
-if hand>= 14 and hand<16: podgrud = (rost/2)+11
-if hand>= 16 and hand<18: podgrud = (rost/2)+10
-if hand>= 18 and hand<20: podgrud = (rost/2)+9
-if hand>= 20 and hand<22: podgrud = (rost/2)+8
-if hand>= 22 and hand<24: podgrud = (rost/2)+7
-if hand>= 24 and hand<26: podgrud = (rost/2)+6
-if hand>= 26 and hand<28: podgrud = (rost/2)+5
-if hand>= 28 and hand<30: podgrud = (rost/2)+4
-if hand>= 30 and hand<32: podgrud = (rost/2)+3
-if hand>= 32 and hand<34: podgrud = (rost/2)+2
-if hand>= 34 and hand<36: podgrud = (rost/2)+1
-if hand>= 36 and hand<60: podgrud = (rost/2)
-if hand>= 60 and hand<80: podgrud = (rost/2)-1
-if hand>= 80 and hand<90: podgrud = (rost/2)-2
-if hand>= 90 and hand<100: podgrud = (rost/2)-3
-if hand>= 100: podgrud = (rost/2)-4
+!'if hand<2:podgrud=(rost/2)+18
+if hand>=2 and hand<4:podgrud=(rost/2)+17
+if hand>=4 and hand<6:podgrud=(rost/2)+16
+if hand>=6 and hand<8:podgrud=(rost/2)+15
+if hand>=8 and hand<10:podgrud=(rost/2)+14
+if hand>=10 and hand<12:podgrud=(rost/2)+13
+if hand>=12 and hand<14:podgrud=(rost/2)+12
+if hand>=14 and hand<16:podgrud=(rost/2)+11
+if hand>=16 and hand<18:podgrud=(rost/2)+10
+if hand>=18 and hand<20:podgrud=(rost/2)+9
+if hand>=20 and hand<22:podgrud=(rost/2)+8
+if hand>=22 and hand<24:podgrud=(rost/2)+7
+if hand>=24 and hand<26:podgrud=(rost/2)+6
+if hand>=26 and hand<28:podgrud=(rost/2)+5
+if hand>=28 and hand<30:podgrud=(rost/2)+4
+if hand>=30 and hand<32:podgrud=(rost/2)+3
+if hand>=32 and hand<34:podgrud=(rost/2)+2
+if hand>=34 and hand<36:podgrud=(rost/2)+1
+if hand>=36 and hand<60:podgrud=(rost/2)
+if hand>=60 and hand<80:podgrud=(rost/2)-1
+if hand>=80 and hand<90:podgrud=(rost/2)-2
+if hand>=90 and hand<100:podgrud=(rost/2)-3
+if hand>=100:podgrud=(rost/2)-4
 
 
-!podgrud = (rost/2)+podgrudKoef
+!podgrud=(rost/2)+podgrudKoef
 
-titKT = tit/2
-titKF = fat/50
-titKoef = titKT+titKF
-grud = podgrud+titKoef'
+titKT=tit/2
+titKF=fat/50
+titKoef=titKT+titKF
+grud=podgrud+titKoef'
 
-!'bristKB = 100-brist
+!'bristKB=100-brist
 
-if brist < 30: 
-bristKB = 105-(fat/10)
+if brist < 30:
+bristKB=105-(fat/10)
 end
 
-if brist >= 30 and brist<60: 
-bristKB = 125-(fat/10)
+if brist >= 30 and brist<60:
+bristKB=125-(fat/10)
 end
 
-if brist >= 60: 
-bristKB = 130-(fat/10)
+if brist >=60:
+bristKB=130-(fat/10)
 end
 
-bristKoef = fat/100
-taliaKR = rost-bristKB
-talia = podgrud-5
+bristKoef=fat/100
+taliaKR=rost-bristKB
+talia=podgrud-5
 
 
-assK = (ass+thight)/6
-assF = fat/50
-assKoef = assK+assF
-bedra = talia+assKoef
+assK=(ass+thight)/6
+assF=fat/50
+assKoef=assK+assF
+bedra=talia+assKoef
 
 
-vesKoef = fat/50
-ves = talia+vesKoef
+vesKoef=fat/50
+ves=talia+vesKoef
 
-titk = grud-podgrud
-     if titK = 0: $titsw = ''
-	 if titK>0 and titK < 10: tits = 0 & $titsw = 'немного увеличенные но не тянут даже на самый маленький размер'
-	 if titK >= 10 and titK <= 15: tits = 1 & $titsw = 'размера AA'  
-	 if titK > 15 and titK <= 20: tits = 2 & $titsw = 'размера A' 
-	 if titK > 20 and titK <= 25: tits = 3 & $titsw = 'размера B' 
-	 if titK > 25 and titK <= 30: tits = 4 & $titsw = 'размера C' 
-	 if titK > 30 and titK <= 35: tits = 5 & $titsw = 'размера D' 
-	 if titK > 35 and titK <= 40: tits = 6 & $titsw = 'размера DD' 
-	 if titK > 40 and titK <= 45: tits = 7 & $titsw = 'размера E'
-	 if titK > 45: tits = 8 & $tits = 'размера F''  
+titk=grud-podgrud
+     if titK=0:$titsw=''
+	 if titK>0 and titK < 10:set tits = 0&$titsw='немного увеличенные но не тянут даже на самый маленький размер'
+	 if titK >= 10 and titK <= 15:set tits = 1&$titsw='размера AA'  
+	 if titK > 15 and titK <= 20:set tits = 2&$titsw='размера A' 
+	 if titK > 20 and titK <= 25:set tits = 3&$titsw='размера B' 
+	 if titK > 25 and titK <= 30:set tits = 4&$titsw='размера C' 
+	 if titK > 30 and titK <= 35:set tits = 5&$titsw='размера D' 
+	 if titK > 35 and titK <= 40:set tits = 6&$titsw='размера DD' 
+	 if titK > 40 and titK <= 45:set tits = 7&$titsw='размера E'
+	 if titK > 45:set tits = 8&$tits='размера F''  
 
 
 
@@ -142,84 +142,84 @@ titk = grud-podgrud
 !192 92 102-92-97 192 82 112-82-117
 !100 жира это
 !скелет базовый
-!грудь = рост-100 92
-!талия = рост-110 82 
-!бедра = рост-100 92
+!грудь=рост-100 92
+!талия=рост-110 82 
+!бедра=рост-100 92
 
-!'femKoef = 100+()
+!'femKoef=100+()
 
 musleKoef = (vital + stren)/10
 fatKoef = fat/10
 agilKoef = agil/10
 ves = rost + fatKoef + musleKoef - (femKoef + agilKoef)
-talia = ves
-bedra = talia+fatKoef+musleKoef
-grud = talia+5+fatKoef+(tit/5)
-titk = grud-talia
-	 if titK <= 10: tits = 0
-	 if titK > 10 and titK <= 15: tits = 1  
-	 if titK > 15 and titK <= 20: tits = 2
-	 if titK > 20 and titK <= 25: tits = 3
-	 if titK > 25 and titK <= 30: tits = 4
-	 if titK > 30 and titK <= 35: tits = 5
-	 if titK > 35: tits = 6'
+talia=ves
+bedra=talia+fatKoef+musleKoef
+grud=talia+5+fatKoef+(tit/5)
+titk=grud-talia
+	 if titK <= 10:set tits = 0
+	 if titK > 10 and titK <= 15:set tits = 1  
+	 if titK > 15 and titK <= 20:set tits = 2
+	 if titK > 20 and titK <= 25:set tits = 3
+	 if titK > 25 and titK <= 30:set tits = 4
+	 if titK > 30 and titK <= 35:set tits = 5
+	 if titK > 35:set tits = 6'
 
 
 
 
 
-!'if femin<200: 
+!'if femin<200:
 musleKoef = (vital + stren)/10
 fatKoef = fat/10
 agilKoef = agil/10
 
- ves = rost + fatKoef + musleKoef - (100 + agilKoef)
+set ves = rost + fatKoef + musleKoef - (100 + agilKoef)
 end
 
-if femin>= 200: 
+if femin>=200:
 musleKoef = (vital + stren)/10
 fatKoef = fat/10
 agilKoef = agil/10
-talKoef = (100-brist)/10
+talKoef=(100-brist)/10
 ves = rost + fatKoef + musleKoef - (130 + agilKoef)
 
-if brist < 30: 
-polKoef = 30-brist
-talia = ves+talKoef+polKoef
+if brist < 30:
+polKoef=30-brist
+talia=ves+talKoef+polKoef
 end
 
-if brist >= 30 and brist < 60: 
-polKoef = brist/10
-talia = ves+talKoef-polKoef
+if brist >= 30 and brist < 60:
+polKoef=brist/10
+talia=ves+talKoef-polKoef
 end
 
-if brist >= 60: 
-polKoef = 6
-talia = ves+talKoef-polKoef
+if brist >= 60:
+polKoef=6
+talia=ves+talKoef-polKoef
 end
 
-bedra = talia+fatKoef+musleKoef+(ass+thight)/20
-grud = talia+5+fatKoef+(tit/5)
-titk = grud-talia
-	 if titK <= 10: tits = 0
-	 if titK > 10 and titK <= 15: tits = 1  
-	 if titK > 15 and titK <= 20: tits = 2
-	 if titK > 20 and titK <= 25: tits = 3
-	 if titK > 25 and titK <= 30: tits = 4
-	 if titK > 30 and titK <= 35: tits = 5
-	 if titK > 35: tits = 6
+bedra=talia+fatKoef+musleKoef+(ass+thight)/20
+grud=talia+5+fatKoef+(tit/5)
+titk=grud-talia
+	 if titK <= 10:set tits = 0
+	 if titK > 10 and titK <= 15:set tits = 1  
+	 if titK > 15 and titK <= 20:set tits = 2
+	 if titK > 20 and titK <= 25:set tits = 3
+	 if titK > 25 and titK <= 30:set tits = 4
+	 if titK > 30 and titK <= 35:set tits = 5
+	 if titK > 35:set tits = 6
 end'
 
-musle = stren+vital
+musle=stren+vital
 
-if bjm>0: 
-bj = bj+bjm
-bjm = 0
+if bjm>0:
+bj=bj+bjm
+bjm=0
 end
 
-if analm>0: 
-anal = anal+analm
-analm = 0
+if analm>0:
+anal=anal+analm
+analm=0
 end
 --- тело ---------------------------------
 

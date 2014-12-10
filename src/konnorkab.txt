@@ -9,87 +9,87 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Кабинет Коннора</H4></center>'
-'<center><img src = "pic/Evedon\1\vorkab.jpg" ></center>'
+'<center><img src="pic/Evedon\1\vorkab.jpg" ></center>'
 'Кабинет Коннора, сам хозяин сидит за столом и занимается бумагами.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
 
-     act 'Спросить работу': 
+     act 'Спросить работу':
      cla
      *clr
-     '<center><img src = "pic/EvedonNarod\konnor.jpg"></center>'
-     minut += 15
+     '<center><img src="pic/EvedonNarod\konnor.jpg"></center>'
+     minut=minut+15
      'Ищешь работу? У меня есть для тебя кое-что. выбирай сам: мелкие поручения для меня или особые задания.'
-     act 'Отойти': gt 'konnorkab'
-     if melpor = 0: 
-         act 'Мелкие поручения': 
+     act 'Отойти':gt'konnorkab'
+     if melpor=0:
+         act 'Мелкие поручения':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod\konnor.jpg"></center>'
+         '<center><img src="pic/EvedonNarod\konnor.jpg"></center>'
          'Ну давай посмотрим что у нас есть.'
-         act 'Отойти': gt 'konnorkab'
-             if vorzad = 0: 
-                 act 'Слушать': 
+         act 'Отойти':gt'konnorkab'
+             if vorzad=0:
+                 act 'Слушать':
                  cla
                  *clr
-                 '<center><img src = "pic/EvedonNarod\konnor.jpg"></center>'
+                 '<center><img src="pic/EvedonNarod\konnor.jpg"></center>'
                  'В общем один купец должен мне одну вещь(протягивает вам листок с изображением). Он живет в Дворянском районе. Чтобы попасть в дом, тебе нужны отмычки, их можешь купить у меня. Они имеют свойство ломаться. Да и лезть к купцу лучше ночью.'
-                 vorzad = 1
-                 melpor = 1
-                 act 'Отойти': gt 'konnorkab'
+                 vorzad=1
+                 melpor=1
+                 act 'Отойти':gt'konnorkab'
                  end
              end
          end
      end
      
-     if osobzad = 0: 
-         act 'Особые задания': 
+     if osobzad=0:
+         act 'Особые задания':
          gt 'osobzad'
          end
      end
      
-     if osobzad = 2: 
-         act 'Доложить': 
+     if osobzad=2:
+         act 'Доложить':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod\konnor.jpg"></center>'
-         minut += 15
-         gem = gem+500
-         osobzad = 0
+         '<center><img src="pic/EvedonNarod\konnor.jpg"></center>'
+         minut=minut+15
+         gem=gem+500
+         osobzad=0
          'Молодец, держи свою награду. Если хочешь еще, так у меня есть для тебя работа.'
-         act 'Отойти': gt 'konnorkab'
+         act 'Отойти':gt'konnorkab'
          end
      end
      
-     if vorzad = 2: 
-         act 'Отдать вещицу': 
+     if vorzad=2:
+         act 'Отдать вещицу':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod\konnor.jpg"></center>'
-         minut += 15
-         gem = gem+100
-         vorzad = 0
-         melpor = 0
+         '<center><img src="pic/EvedonNarod\konnor.jpg"></center>'
+         minut=minut+15
+         gem=gem+100
+         vorzad=0
+         melpor=0
          'Молодец, держи свою награду. Если хочешь еще, так у меня есть для тебя работа.'
-         act 'Отойти': gt 'konnorkab'
+         act 'Отойти':gt'konnorkab'
          end
      end
      
-     if gem >=10: 
-         act 'Купить отмычки': 
-         minut += 5
+     if gem=>10:
+         act 'Купить отмычки':
+         minut=minut+5
          tempshop = input ("Сколько вы хотите купить отмычек (1 отмычка 10 гем)?")
-             if tempshop*10>gem or tempshop<0 : 
+             if tempshop*10>gem or tempshop<0 :
              msg'У вас нет такого количества гемов.'
 			 gt $CURLOC
              else
-			 gem = gem-tempshop*10
-			 otmicka = otmicka+tempshop 		 
+			 gem=gem-tempshop*10
+			 otmicka=otmicka+tempshop 		 
 			 msg'Вы купили <<otmicka>> штук отмычек'
 		     end
 		 gt $CURLOC
@@ -98,9 +98,9 @@ LCOLOR = rgb(106,90,205)
 end
 
 
-act 'Уйти': 
-minut += 5
- gt 'vorgildia'
+act 'Уйти':
+minut=minut+5
+gt'vorgildia'
 end
 
 

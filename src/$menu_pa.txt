@@ -1,27 +1,27 @@
 # $menu_pa
-if $selobj = 'Персонаж': 
+if $selobj='Персонаж':
 clr
-if vampireMorf>= 1: pl'Вы вампир'
-if DemonMorf>= 10: 
+if vampireMorf>=1:pl'Вы вампир'
+if DemonMorf>=10:
 pl'Вы выглядите как самый настоящий демон Суккуб: красноватая кожа, демонические рога, за спиной крылья, вместо ступней выросли копыта.'
 end
-if DemonMorf>= 5 and DemonMorf<10: 
+if DemonMorf>=5 and DemonMorf<10:
 pl'Некоторые могут догадаться о вашей демонической природе. В волосах прячутся маленькие рожки и у вас вырос тонкий хвостик.'
 end
-if DemonMorf<5: 
-	 if world = 0: pl'Вас зовут <<$name>> <<$surname>>. Вам <<age>> лет, на вид вам можно дать не больше <<vidage>> лет. <<$vnesh>> Рост <<rost>> см, вес <<ves>> кг. <<$femin>>'
-	 if world = 1: pl'Вас зовут <<$name>>. Вам <<age>> лет, на вид вам можно дать не больше <<vidage>> лет. <<$vnesh>> Рост <<rost>> см, вес <<ves>> кг <<$femprop>>. <<$femin>>'
+if DemonMorf<5:
+	 if world=0:pl'Вас зовут <<$name>> <<$surname>>. Вам <<age>> лет, на вид вам можно дать не больше <<vidage>> лет. <<$vnesh>> Рост <<rost>> см, вес <<ves>> кг. <<$femin>>'
+	 if world=1:pl'Вас зовут <<$name>>. Вам <<age>> лет, на вид вам можно дать не больше <<vidage>> лет. <<$vnesh>> Рост <<rost>> см, вес <<ves>> кг <<$femprop>>. <<$femin>>'
 	 !pl'salo <<salo>> fat <<fat>> taliaBase <<taliaBase>> salo/10 <<salo/10>> ass+thight<<ass+thight>> ass<<ass>> thight<<thight>> salo/100 <<salo/100>> tit/5 <<tit/5>> tit <<tit>>'
-	 !if pol > 0: pl'<<$hair>> <<$lip>> <<$skin>> <<$glaza>> <<$mop>> <<$leghair>> <<$lobok>>'
-	 !if pol = 0: pl'<<$facem>> Рост <<rost>> см, вес <<ves>> кг. Жир <<fat>> Мышцы <<musle>> <<$femin>>'
-	 if analslut>= 10: pl'Вы анальная шлюха. Вам очень нравится когда вас трахают в задницу и вы всегда кончаете от этого.'
-	 if cumslut>= 10: pl'Вы вафлерша, которая кончает от вкуса, вида, цвета и запаха спермы. Вы обожаете сперму во всех ее проявлениях и всегда кончаете как только она попадает вам на лицо.'
-	 if whore>= 10: pl'В Тель Адре у вас репутация конченой шлюхи. Практически всем известно, что вы блядь и жить не можете без хорошей палки.'
-	 if vagina>0: pl'Между ног <<$hornyw>>'
-	 if pirsingDick = 0: $pirsingDick = ''
-	 if pirsingDick = 1: $pirsingDick = 'В кожу около головки вставлено кольцо.'
-	 if pirsingDick = 2: $pirsingDick = 'В кожу около головки вставлена штанга.'
-	 if penis>0: pl'Член <<penis>> см <<$pirsingDick>>'
+	 !if pol > 0:pl'<<$hair>> <<$lip>> <<$skin>> <<$glaza>> <<$mop>> <<$leghair>> <<$lobok>>'
+	 !if pol = 0:pl'<<$facem>> Рост <<rost>> см, вес <<ves>> кг. Жир <<fat>> Мышцы <<musle>> <<$femin>>'
+	 if analslut>=10:pl'Вы анальная шлюха. Вам очень нравится когда вас трахают в задницу и вы всегда кончаете от этого.'
+	 if cumslut>=10:pl'Вы вафлерша, которая кончает от вкуса, вида, цвета и запаха спермы. Вы обожаете сперму во всех ее проявлениях и всегда кончаете как только она попадает вам на лицо.'
+	 if whore>=10:pl'В Тель Адре у вас репутация конченой шлюхи. Практически всем известно, что вы блядь и жить не можете без хорошей палки.'
+	 if vagina>0:pl'Между ног <<$hornyw>>'
+	 if pirsingDick=0:$pirsingDick=''
+	 if pirsingDick=1:$pirsingDick='В кожу около головки вставлено кольцо.'
+	 if pirsingDick=2:$pirsingDick='В кожу около головки вставлена штанга.'
+	 if penis>0:pl'Член <<penis>> см <<$pirsingDick>>'
 	 pl'<<$face>>'
 	 pl'<<$hand>>'
 	 pl'<<$brist>>'
@@ -32,23 +32,23 @@ if DemonMorf<5:
 	 pl'Феминность тела <<femin>>'
 	 !pl'Жир <<fat>>'
 	 !pl'Мышцы <<musle>>'
-	 $femprop = '<<grud>> - <<talia>> - <<bedra>>'
-	 if curly > 0: pl'Завивки хватит еще на <<curly>> дней.'
+	 $femprop='<<grud>> - <<talia>> - <<bedra>>'
+	 if curly > 0:pl'Завивки хватит еще на <<curly>> дней.'
 	 nl
 end
-if pirsingLip = 0: pl''
-if pirsingLip = 1: pl'В нижней губе продето кольцо.'
-if pirsingLip = 2: pl'Нижняя губа проколота штангой.'
-if pirsin gt onk = 1: pl'В языке пирсинг в виде штанги'
-if pirsingBrow = 1: pl'Ваша бровь проколота и в нее вдето кольцо'
-if pirsingBrow = 2: pl'Ваша бровь проколота и в нее вдета штанга'
-if pirsingEar = 1: pl'В уши вставлены сережки'
-if pirsingNipple = 1: pl'В соски вставлены колечки'
-if pirsingNipple = 2: pl'В соски вставлены штанги'
-if pirsingLabia = 1: pl'В пупок продето кольцо.'
-if pirsingLabia = 2: pl'В пупок продета штанга.'
-if pirsingPussy = 1 and vagina>0: pl'В клитор вставлено кольцо.'
-if pirsingPussy = 2 and vagina>0: pl'В клитор вставлена штанга.'
+if pirsingLip=0:pl''
+if pirsingLip=1:pl'В нижней губе продето кольцо.'
+if pirsingLip=2:pl'Нижняя губа проколота штангой.'
+if pirsingTonk=1:pl'В языке пирсинг в виде штанги'
+if pirsingBrow=1:pl'Ваша бровь проколота и в нее вдето кольцо'
+if pirsingBrow=2:pl'Ваша бровь проколота и в нее вдета штанга'
+if pirsingEar=1:pl'В уши вставлены сережки'
+if pirsingNipple=1:pl'В соски вставлены колечки'
+if pirsingNipple=2:pl'В соски вставлены штанги'
+if pirsingLabia=1:pl'В пупок продето кольцо.'
+if pirsingLabia=2:pl'В пупок продета штанга.'
+if pirsingPussy=1 and vagina>0:pl'В клитор вставлено кольцо.'
+if pirsingPussy=2 and vagina>0:pl'В клитор вставлена штанга.'
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 end
 

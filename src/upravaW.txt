@@ -10,152 +10,152 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 mag = 1
 '<center><H4>Городская управа</H4></center>'
-!'<center><img src = "Evedon\alhim.jpg" ></center>'
+!'<center><img src="Evedon\alhim.jpg" ></center>'
 '.'
 'Лицензия на торговлю 10000 гемов за 10 дней использования'
-if Licens>0: 'Торговая лицензия действительна еще <<Licens>> дней'
+if Licens>0:'Торговая лицензия действительна еще <<Licens>> дней'
 'Продаются следующие дома'
-if HomeSlums = 0: 'Халупа в трущебах за 30000' 
+if HomeSlums=0:'Халупа в трущебах за 30000' 
 !(Тестовое значение параметра <<HomeSlums>> <<HomeLord>>)
-if farmland = 0: 'Продается старенькая ферма за 100 тысяч'
-if fishhouse = 0: 'Двухэтажный дом в рыбацкой деревне за 60 тысяч '
+if farmland=0:'Продается старенькая ферма за 100 тысяч'
+if fishhouse=0:'Двухэтажный дом в рыбацкой деревне за 60 тысяч '
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-if hour>= 6 and hour<= 23: 
+if hour>=6 and hour<=23:
 *clr
-'<center><img src = "pic/EvedonNarod/chinovnik.jpg"></center>'
+'<center><img src="pic/EvedonNarod/chinovnik.jpg"></center>'
 'Отъевшийся пухлощекий чиновник заполняет разнообразные бланки.'
 
-     if missionData = 1: 
-         act 'Отдать письмо': 
+     if missionData=1:
+         act 'Отдать письмо':
          cla
          *clr
-         missionData = 0
-         kredit = kredit+100
-         missionC+= 1
-         '<center><img src = "pic/Photo/License.jpg" ></center>'
+         missionData=0
+         kredit=kredit+100
+         missionC+=1
+         '<center><img src="pic/Photo/License.jpg" ></center>'
          'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
          end
      end
 
-	 if gem>= 10000: 
-		 act 'Купить лицензию': 
+	 if gem>=10000:
+		 act 'Купить лицензию':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem-10000
-		 Licens = Licens+10
-		 '<center><img src = "pic/Photo/License.jpg" ></center>'
+		 minut=minut+15
+		 gem=gem-10000
+		 Licens=Licens+10
+		 '<center><img src="pic/Photo/License.jpg" ></center>'
 		 'Вы отдали 10000 гемов и чиновник выдал вам лицензию.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 end
 	 
-	 if HomeSlums = 0 and gem>= 30000: 
-	 	 act 'Купить халупу в трущебах': 
+	 if HomeSlums=0 and gem>=30000:
+	 	 act 'Купить халупу в трущебах':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem-30000
-		 HomeSlums = 1
-		 HomeLord = HomeLord+1
-		 '<center><img src = "pic/Photo/Live.jpg" ></center>'
+		 minut=minut+15
+		 gem=gem-30000
+		 HomeSlums=1
+		 HomeLord=HomeLord+1
+		 '<center><img src="pic/Photo/Live.jpg" ></center>'
 		 'Вы отдали 30000 гемов и чиновник отдал вам ключи от дома и свидетельство о собственности.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 
 	 end
 	 
-	 if HomeSlums = 1: 
-	 	 act 'Продать халупу в трущебах за 15 тысяч': 
+	 if HomeSlums=1:
+	 	 act 'Продать халупу в трущебах за 15 тысяч':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem+15000
-		 HomeSlums = 0
-		 HomeLord = HomeLord-1
-		 '<center><img src = "pic/Photo/Live.jpg" ></center>'
+		 minut=minut+15
+		 gem=gem+15000
+		 HomeSlums=0
+		 HomeLord=HomeLord-1
+		 '<center><img src="pic/Photo/Live.jpg" ></center>'
 		 'Вы продали дом в трущебах за 15000 гемов и чиновник забрал ключи от дома и свидетельство о собственности.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 
 	 end
 	 
 	 
-	 if fishhouse = 0 and gem>= 60000: 
-	 	 act 'Купить дом в рыбацкой деревне': 
+	 if fishhouse=0 and gem>=60000:
+	 	 act 'Купить дом в рыбацкой деревне':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem-60000
-		 fishhouse = 1
-		 HomeLord = HomeLord+1
-		 '<center><img src = "pic/Photo/Live.jpg" ></center>'
+		 minut=minut+15
+		 gem=gem-60000
+		 fishhouse=1
+		 HomeLord=HomeLord+1
+		 '<center><img src="pic/Photo/Live.jpg" ></center>'
 		 'Вы отдали 60000 гемов и чиновник отдал вам ключи от дома и свидетельство о собственности.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 
 	 end
 	 
-	 if fishhouse = 1: 
-	 	 act 'Продать дом в рыбацкой деревне за 25 тысяч': 
+	 if fishhouse=1:
+	 	 act 'Продать дом в рыбацкой деревне за 25 тысяч':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem+25000
-		 fishhouse = 0
-		 HomeLord = HomeLord-1
-		 '<center><img src = "pic/Photo/Live.jpg" ></center>'
+		 minut=minut+15
+		 gem=gem+25000
+		 fishhouse=0
+		 HomeLord=HomeLord-1
+		 '<center><img src="pic/Photo/Live.jpg" ></center>'
 		 'Вы продали дом в трущебах за 25000 гемов и чиновник забрал ключи от дома и свидетельство о собственности.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 
 	 end
 
-	 if farmland = 0 and gem>= 100000: 
-	 	 act 'Купить ферму': 
+	 if farmland=0 and gem>=100000:
+	 	 act 'Купить ферму':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem-100000
-		 farmland = 1
-		 HomeLord = HomeLord+1
+		 minut=minut+15
+		 gem=gem-100000
+		 farmland=1
+		 HomeLord=HomeLord+1
 		 $farmname = input ("Как вы назовете ферму?")
-		 if $farmname<= 0: $farmname = 'Айронвуд'
-		 '<center><img src = "pic/Photo/Live.jpg" ></center>'
+		 if $farmname<=0:$farmname='Айронвуд'
+		 '<center><img src="pic/Photo/Live.jpg" ></center>'
 		 'Вы отдали 100000 гемов и чиновник отдал вам ключи от дома и свидетельство о собственности.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 end
 	 
-	 if farmland = 1: 
-	 	 act 'Продать ферму за 50 тысяч': 
+	 if farmland=1:
+	 	 act 'Продать ферму за 50 тысяч':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem+50000
-		 farmland = 0
-		 HomeLord = HomeLord-1
-		 '<center><img src = "pic/Photo/Live.jpg" ></center>'
+		 minut=minut+15
+		 gem=gem+50000
+		 farmland=0
+		 HomeLord=HomeLord-1
+		 '<center><img src="pic/Photo/Live.jpg" ></center>'
 		 'Вы продали ферму за 50 тысяч гемов и чиновник забрал ключи от дома и свидетельство о собственности.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 end
 	 
-	 if kervolQW = 10: 
-	 	 act 'Куда можно обратится с заявлением о преступлении?': 
+	 if kervolQW=10:
+	 	 act 'Куда можно обратится с заявлением о преступлении?':
 		 cla
 		 *clr
-		 minut += 15
+		 minut=minut+15
 		 '(Вы) - Куда можно обратится с заявлением о преступлении?'
 		 '(Чиновник) - Это канцелярия. Вам нужно идти в казармы стражи и найти там следователя.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 
 	 end
@@ -163,9 +163,9 @@ else
 'Закрыто'
 end
 
-act 'Уйти': 
-minut += 5
- gt 'enterW'
+act 'Уйти':
+minut=minut+5
+gt'enterW'
 end
 --- upravaW ---------------------------------
 

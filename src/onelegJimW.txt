@@ -1,101 +1,101 @@
 # onelegJimW
 *clr
-'<center><img src = "pic/EvedonNarod\jim.jpg"></center>'
+'<center><img src="pic/EvedonNarod\jim.jpg"></center>'
 
 $metka = $ARGS[0]
 $loc = $CURLOC
 
-if onelegJimQW = 0: 
+if onelegJimQW=0:
 'Я вижу ты тут человек новый. Я одноногий Джим. Когда-то был лучшим срезателем кошельков, пока мне ногу не отрубили. Сейчас приторговываю инструментом.'
 'Мы тут кстати общаемся только по кличкам, какая у тебя кличка?'
-     act 'Назваться': 
+     act 'Назваться':
      cla
      $vorname = input ("Какая будет ваша кличка?")
-         if $vorname <= 0: 
-         $vorname = 'Молчун'
+         if $vorname <= 0:
+         $vorname='Молчун'
          'Не хочешь говорить? Ну ладно, будешь Молчуном.'
          end
-         if $vorname > 0: 
+         if $vorname > 0:
          '<<$vorname>>, смакуя вашу новую кличку произнес одноногий Джим, кивнув головой.'
          end
             
-         act 'Что за инструмент ты продаешь?': 
+         act 'Что за инструмент ты продаешь?':
          cla
-         onelegJimQW = 1
+         onelegJimQW=1
          'Обыкновенный воровской инструмент, лезвия для срезания кошельков у уличных зевак. Дубинка, чтобы отключить зеваку и страшного вида ножик от которого душа в пятки уходит им хорошо запугивать и отбирать денежки.'
-         act 'Покажи': gt 'onelegJimW'
+         act 'Покажи':gt'onelegJimW'
          end
      end
 end
 
-if onelegJimQW>0: 
+if onelegJimQW>0:
 *clr
-'<center><img src = "pic/EvedonNarod\jim.jpg"></center>'
+'<center><img src="pic/EvedonNarod\jim.jpg"></center>'
 'Одноногий Джим приоткрыл свою сумку и показал инструмент.'
 'Лезвие для срезания кошельков 100 гемов.'
 'Дубинка для вырубания 300 гемов.'
 'Страшный нож 500 гемов.'
-act 'Отойти': gt 'pritonW'
+act 'Отойти':gt'pritonW'
 
-     if gem>= 100 and vorazer = 0: 
-         act 'Воровское лезвие 100 гемов': 
+     if gem>=100 and vorazer=0:
+         act 'Воровское лезвие 100 гемов':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem-100
-		 vorazer = vorazer+1
+		 minut=minut+15
+		 gem=gem-100
+		 vorazer=vorazer+1
 		 'Одноногий Джим взял гемы, пересчитал и передал вам инструмент.'
-		 act 'Не заметно спрятать в карман': gt 'onelegJimW'
+		 act 'Не заметно спрятать в карман':gt'onelegJimW'
 		 end
      end
      
-     if gem>= 300 and vordubina = 0: 
-         act 'Воровская дубинка 300 гемов': 
+     if gem>=300 and vordubina=0:
+         act 'Воровская дубинка 300 гемов':
 		 cla
 		 *clr
-		 '<center><img src = "pic/Evedonod\vordubina.jpg"></center>'
-		 minut += 15
-		 gem = gem-300
-		 vordubina = vordubina+1
+		 '<center><img src="pic/Evedonod\vordubina.jpg"></center>'
+		 minut=minut+15
+		 gem=gem-300
+		 vordubina=vordubina+1
 		 'Одноногий Джим взял гемы, пересчитал и передал вам инструмент.'
-		 act 'Не заметно спрятать в карман': gt 'onelegJimW'
+		 act 'Не заметно спрятать в карман':gt'onelegJimW'
 		 end
      end
      
-     if gem>= 500 and vorknife = 0: 
-         act 'Страшный нож 500 гемов': 
+     if gem>=500 and vorknife=0:
+         act 'Страшный нож 500 гемов':
 		 cla
 		 *clr
-		 '<center><img src = "pic/Evedonod\vorknife.jpg"></center>'
-		 minut += 15
-		 gem = gem-300
-		 vorknife = vorknife+1
+		 '<center><img src="pic/Evedonod\vorknife.jpg"></center>'
+		 minut=minut+15
+		 gem=gem-300
+		 vorknife=vorknife+1
 		 'Одноногий Джим взял гемы, пересчитал и передал вам инструмент.'
-		 act 'Не заметно спрятать в карман': gt 'onelegJimW'
+		 act 'Не заметно спрятать в карман':gt'onelegJimW'
 		 end
      end
      
-     if vor = 0: 
-         act 'Спросить про воров': 
+     if vor=0:
+         act 'Спросить про воров':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod\jim.jpg"></center>'
-         minut += 15
-         vor = 1
+         '<center><img src="pic/EvedonNarod\jim.jpg"></center>'
+         minut=minut+15
+         vor=1
          'Одноногий Джим наклонился к вам поближе "Хочешь узнать о ворах больше? Так вот воровской организации больше нет, все этот чертов Орден. Но мой приятель хочет возродить воровскую гидьдию. Трущобы орденские крысы не очень любят. Иди к окраине трущоб, увидишь развалившийся дом, спустись в подвал и нажми на третий кирпич слева от двери, дальше сам разберешься. Не забудь кодовую фразу вор должен быть на свободе."'
-         act 'Отойти': gt 'pritonW'
+         act 'Отойти':gt'pritonW'
          end
      end
-     if skyphik = 1: 
-         act 'Спросить про скупщика краденого': 
+     if skyphik=1:
+         act 'Спросить про скупщика краденого':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod\jim.jpg"></center>'
-         minut += 15
-         skyphik = 2
+         '<center><img src="pic/EvedonNarod\jim.jpg"></center>'
+         minut=minut+15
+         skyphik=2
          'Говоришь Коннор послал тебя. Мда, сам понимаешь скупщиком краденого я быть не могу. Но помочь могу.'
          'Ты ведь знаешь где содержаться преступники? В казарме городской страже. Под выкуп они могут выпустить любого.'
-         act 'Отойти': gt 'pritonW'
+         act 'Отойти':gt'pritonW'
          end
      end
 end

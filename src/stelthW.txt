@@ -1,131 +1,131 @@
 # stelthW
 $metka = $ARGS[0]
 $loc = $CURLOC
-pipvidrand = RAND(0,agil+stelth)
+pipvidrand=RAND(0,agil+stelth)
 
 
-     if manpip>= 6: 
+     if manpip>=6:
      'Осматривая девушку вы заметили что <<$koshel>>.'
      end
-     if manpip<6: 
+     if manpip<6:
      'Осматривая мужчину вы заметили что <<$koshel>>.'
      end
 
-if pipvidrand< 50: 
+if pipvidrand< 50:
 !гг замечен
-     if manpip>= 6: 
+     if manpip>=6:
      'Кажется <<$namevv>> заметила вас и обернулась.'
      end
-     if manpip<6: 
+     if manpip<6:
      'Кажется <<$namevv>> заметил вас и обернулся.'
      end
      
-     act 'Окликнуть': 
-     gt 'dialogW'
+     act 'Окликнуть':
+     gt'dialogW'
      end
      
-     if vorknife>0 and koshelRand > 0: 
-         act 'Грабить угрожая ножом': 
+     if vorknife>0 and koshelRand > 0:
+         act 'Грабить угрожая ножом':
 		 cla
-		 pipvidrand = RAND(0,will+scary)
-		     if pipvidrand>= 50: 
-		     gem = gem+koshelRand
-		     scary = scary+1
+		 pipvidrand=RAND(0,will+scary)
+		     if pipvidrand>=50:
+		     gem=gem+koshelRand
+		     scary=scary+1
 		     '<<$namev>> пугается вас и не говоря ни слова отдает вам кошелек и вы получаете <<koshelRand>> гемов'
-		         act 'Отойти': 
+		         act 'Отойти':
 		         cla
-		         tiprand = RAND(0,100)
-		             if tiprand < 50: 
-				     minut += 1
+		         tiprand=RAND(0,100)
+		             if tiprand < 50:
+				     minut=minut+1
 				     GOTO $locFight, $metkaFight
 				     end
-				     if tiprand >= 50: 
+				     if tiprand >= 50:
 				     'Стоило вам сделать пару шагов как <<$namev>> начинает вопить и звать стражу.'
-				     	 act 'Убегать.': 
-						 minut += 1
-						 crime = 1
-						 gt 'runW'
+				     	 act 'Убегать.':
+						 minut=minut+1
+						 crime=1
+						 gt'runW'
 						 end
 				     end
 				 end
 		     end
-		     if pipvidrand<50: 
+		     if pipvidrand<50:
 		     '<<$namev>> бесстрашно кричит и начинает звать стражу.'
-		         act 'Убегать.': 
-				 minut += 1
-				 crime = 1
-				 gt 'runW'
+		         act 'Убегать.':
+				 minut=minut+1
+				 crime=1
+				 gt'runW'
 				 end
 		     end
 		 end
      end
 end
 
-if pipvidrand>= 50: 
+if pipvidrand>= 50:
 !гг не замечен
-stelth = stelth+1
+stelth=stelth+1
 
-     if manpip>= 6: 
+     if manpip>=6:
      'Кажется <<$namevv>> не заметила вас.'
      end
-     if manpip<6: 
+     if manpip<6:
      'Кажется <<$namevv>> не заметил вас.'
      end
      
      
-     if vorazer>0 and koshelRand>0: 
-		 act 'Не заметно срезать кошелек': 
+     if vorazer>0 and koshelRand>0:
+		 act 'Не заметно срезать кошелек':
 		 cla
-		 pipvidrand = RAND(0,agil+stelth)
-		     if pipvidrand>= 50: 
-		     gem = gem+koshelRand
-		     stelth = stelth+1
-		     kraw = kraw+1
+		 pipvidrand=RAND(0,agil+stelth)
+		     if pipvidrand>=50:
+		     gem=gem+koshelRand
+		     stelth=stelth+1
+		     kraw=kraw+1
 		     'Вам удается не заметно срезать кошелек и получить <<koshelRand>> гемов'
-		         act 'Отойти': 
-				 minut += 1
+		         act 'Отойти':
+				 minut=minut+1
 				 GOTO $locFight, $metkaFight
 				 end
 		     end
-		     if pipvidrand<50: 
+		     if pipvidrand<50:
 		     'В самый не подходящий момент <<$namev>> оборачивается и начинает звать стражу.'
-		         act 'Убегать.': 
-				 minut += 1
-				 crime = 1
-				 gt 'runW'
+		         act 'Убегать.':
+				 minut=minut+1
+				 crime=1
+				 gt'runW'
 				 end
 		     end
 		 end
      end
      
-     if vordubina>0 and koshelRand>0: 
-		 act 'Треснуть по голове дубинкой и отнять кошелек.': 
+     if vordubina>0 and koshelRand>0:
+		 act 'Треснуть по голове дубинкой и отнять кошелек.':
 		 cla
-		 pipvidrand = RAND(0,stren+stelth)
-		     if pipvidrand>= 50: 
-		     gem = gem+koshelRand
-		     stelth = stelth+1
-		     robber = robber+1
+		 pipvidrand=RAND(0,stren+stelth)
+		     if pipvidrand>=50:
+		     gem=gem+koshelRand
+		     stelth=stelth+1
+		     robber=robber+1
 		     'Вы легко вырубаете жертву и берете кошелек, получая <<koshelRand>> гемов'
-		         act 'Отойти': 
-				 minut += 1
+		         act 'Отойти':
+				 minut=minut+1
 				 GOTO $locFight, $metkaFight
 				 end
 		     end
-		     if pipvidrand<50: 
+		     if pipvidrand<50:
 		     'Вы попадаете по голове, но не вырубаете жертву и <<$namev>> кричит и зовет стражу.'
-		         act 'Убегать.': 
-				 minut += 1
-				 crime = 1
-				 gt 'runW'
+		         act 'Убегать.':
+				 minut=minut+1
+				 crime=1
+				 gt'runW'
 				 end
 		     end
 		 end
      end
 end
 
-act 'Отойти': 
-minut += 1
+act 'Отойти':
+minut=minut+1
 GOTO $locFight, $metkaFight
 end
 --- stelthW ---------------------------------

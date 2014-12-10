@@ -7,154 +7,154 @@ $locFight = $CURLOC
 $metkaBed = $ARGS[0]
 $locBed = $CURLOC
 
-if wipo<= 0: SUB = SUB+1 & wipo+= 10
-if SCrest>13: SCrest = 13
-if SCrest<0: SCrest = 0
-wipo- = SCrest
+if wipo<=0:SUB=SUB+1&wipo+=10
+if SCrest>13:SCrest=13
+if SCrest<0:SCrest=0
+wipo-=SCrest
 
 '<center><H4>Камера раба</H4></center>'
-if SCrest = 0: '<center><img src = "pic/Evedon/dungeon.jpg" ></center>'
-if SCrest = 1: '<center><img src = "pic/EvedonSC/aarst.jpg" ></center>'
-if SCrest = 2: '<center><img src = "pic/EvedonSC/aarst2.jpg" ></center>'
-if SCrest = 3: '<center><img src = "pic/EvedonSC/aarst3.jpg" ></center>'
-if SCrest = 4: '<center><img src = "pic/EvedonSC/aarst4.jpg" ></center>'
-if SCrest = 5: '<center><img src = "pic/EvedonSC/aarst5.jpg" ></center>'
-if SCrest = 6: '<center><img src = "pic/EvedonSC/aarst6.jpg" ></center>'
-if SCrest = 7: '<center><img src = "pic/EvedonSC/aarst7.jpg" ></center>'
-if SCrest = 8: '<center><img src = "pic/EvedonSC/aarst8.jpg" ></center>'
-if SCrest = 9: '<center><img src = "pic/EvedonSC/aarst9.jpg" ></center>'
-if SCrest = 10: '<center><img src = "pic/EvedonSC/aarst10.jpg" ></center>'
-if SCrest = 11: '<center><img src = "pic/EvedonSC/aarst11.jpg" ></center>'
-if SCrest = 12: '<center><img src = "pic/EvedonSC/aarst12.jpg" ></center>'
-if SCrest = 13: '<center><img src = "pic/EvedonSC/aarst13.jpg" ></center>'
+if SCrest=0:'<center><img src="pic/Evedon/dungeon.jpg" ></center>'
+if SCrest=1:'<center><img src="pic/EvedonSC/aarst.jpg" ></center>'
+if SCrest=2:'<center><img src="pic/EvedonSC/aarst2.jpg" ></center>'
+if SCrest=3:'<center><img src="pic/EvedonSC/aarst3.jpg" ></center>'
+if SCrest=4:'<center><img src="pic/EvedonSC/aarst4.jpg" ></center>'
+if SCrest=5:'<center><img src="pic/EvedonSC/aarst5.jpg" ></center>'
+if SCrest=6:'<center><img src="pic/EvedonSC/aarst6.jpg" ></center>'
+if SCrest=7:'<center><img src="pic/EvedonSC/aarst7.jpg" ></center>'
+if SCrest=8:'<center><img src="pic/EvedonSC/aarst8.jpg" ></center>'
+if SCrest=9:'<center><img src="pic/EvedonSC/aarst9.jpg" ></center>'
+if SCrest=10:'<center><img src="pic/EvedonSC/aarst10.jpg" ></center>'
+if SCrest=11:'<center><img src="pic/EvedonSC/aarst11.jpg" ></center>'
+if SCrest=12:'<center><img src="pic/EvedonSC/aarst12.jpg" ></center>'
+if SCrest=13:'<center><img src="pic/EvedonSC/aarst13.jpg" ></center>'
 'Тускло освещенная, но просторная камера. Комната вся заполнена вделанными в стены кольцами и крючьями, какими-то деревянными устройствами и цепями.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 
 
-if hour = 8: 
-xgt 'MISSTRESS'
+if hour=8:
+xgt'MISSTRESS'
 exit
 end
 
-if hour = 12: 
-xgt 'MISSTRESS'
+if hour=12:
+xgt'MISSTRESS'
 exit
 end
 
-if hour = 16: 
-xgt 'MISSTRESS'
+if hour=16:
+xgt'MISSTRESS'
 exit
 end
 
-if hour = 21: 
-xgt 'MISSTRESS'
+if hour=21:
+xgt'MISSTRESS'
 exit
 end
 
-if hour = 22: 
+if hour=22:
 'В комнату вошел гоблин Скраффи и достав шланг начал вас поливать водой.'
-minut += 60
- sweat = -3
- manna = manna+5
- gs 'bassW' 
- if SCrest = 0: SCrest- = 1 & 'Скраффи ослабил ваши путы.'
-act '.....': gt $CURLOC
+minut=minut+60
+ sweat=-3
+ manna=manna+5
+ gs'bassW' 
+ if SCrest=0:SCrest-=1&'Скраффи ослабил ваши путы.'
+act '.....':GT $CURLOC
 exit
 end
 
-	 act 'Отдыхать 1 час': 
+	 act 'Отдыхать 1 час':
 	 cla
 	 *clr
-	 minut += 60	 
-	 act '.....': gt $CURLOC
+	 minut=minut+60	 
+	 act '.....':GT $CURLOC
 	 end
 
-if hour>= 7 and hour<23: 
-	 if SCbrot>0: 
+if hour>=7 and hour<23:
+	 if SCbrot>0:
 	 'В тарелке на полу лежит <<SCbrot>> кусков черствого хлеба'
-		 act 'Съесть черствый хлеб 1 час': 
+		 act 'Съесть черствый хлеб 1 час':
 		 cla
-		 SCbrot = SCbrot-1
-		 minut += 60
-		 golod = golod+5	
-		 SUB = SUB-1	
+		 SCbrot=SCbrot-1
+		 minut=minut+60
+		 golod=golod+5	
+		 SUB=SUB-1	
 		 '' 
-		 act '.....': gt $CURLOC
+		 act '.....':GT $CURLOC
 		 end
 	 end
 	 
-	 if SCUMbrot>0: 
+	 if SCUMbrot>0:
 	 'В тарелке со спермой плавает <<SCUMbrot>> кусков черствого хлеба'
-         act 'Съесть черствый хлеб плавающий в сперме 1 час': 
+         act 'Съесть черствый хлеб плавающий в сперме 1 час':
 		 cla
-		 SCUMbrot = SCUMbrot-1
-		 minut += 60
-		 golod = golod+5			 	
-		 SUB+= 1
-		 skverna+= 5
+		 SCUMbrot=SCUMbrot-1
+		 minut=minut+60
+		 golod=golod+5			 	
+		 SUB+=1
+		 skverna+=5
 		 '' 
-		 act '.....': gt $CURLOC
+		 act '.....':GT $CURLOC
 		 end
 	 end
 
-     !'if sub>0: 
-		 act 'Тренировать свою попку 1 час': 
+     !'if sub>0:
+		 act 'Тренировать свою попку 1 час':
 		 cla
 		 *clr
-		 minut += 60
-		 horny = horny+5	
-		 manna = manna+50	
-		 SUB = SUB+1
-		 anus+= 1
+		 minut=minut+60
+		 horny=horny+5	
+		 manna=manna+50	
+		 SUB=SUB+1
+		 anus+=1
 		 '' 
-		 act '.....': gt $CURLOC
+		 act '.....':GT $CURLOC
 		 end
      end'	 
 	 
-	 act 'Размышлять о своем положении 1 час': 
+	 act 'Размышлять о своем положении 1 час':
 	 cla
 	 *clr
-	 minut += 60
-	 manna = manna+50
-	 wipo+= 50	
-	 horny = horny-5 
+	 minut=minut+60
+	 manna=manna+50
+	 wipo+=50	
+	 horny=horny-5 
 	 ''	 
-	 act '.....': gt $CURLOC
+	 act '.....':GT $CURLOC
 	 end
 	 
-	 act 'Молиться': 
+	 act 'Молиться':
 	 cla
 	 *clr
-	 minut += 30
-	 skverna = skverna-15
-	 manna = manna+25	
-	 horny = horny-5
+	 minut=minut+30
+	 skverna=skverna-15
+	 manna=manna+25	
+	 horny=horny-5
 	 ''
-	 act '.....': gt $CURLOC
+	 act '.....':gt $CURLOC
 	 end
 	 
-	 if SUB<30: 
-		 act 'Искать возможность побега 1 час': 
+	 if SUB<30:
+		 act 'Искать возможность побега 1 час':
 		 cla
-		 pobeg = pobeg+RAND(0,5)
-		 minut += 60
-		     if pobeg>100: 
-		     desertMark = 15
+		 pobeg=pobeg+RAND(0,5)
+		 minut=minut+60
+		     if pobeg>100:
+		     desertMark=15
 			 'Вам удалось вскрыть двери и вроде путь свободен.'
-			 act 'Сбежать': gt 'desertW1'
+			 act 'Сбежать':gt 'desertW1'
 			 exit
 			 end
          ''
-		 act '.....': gt $CURLOC
+		 act '.....':GT $CURLOC
 		 end
 	 end
 else
-     act 'Спать': gt 'bed'
+     act 'Спать':gt'bed'
 end
 
 

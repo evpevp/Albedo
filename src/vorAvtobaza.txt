@@ -5,24 +5,24 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>Автобаза</H4></center>'
 '<center><i>Время работы с 7 до 23 часов каждый день.</i></center>'
-'<center><img src = "pic/pic/vorAvtobaza.jpg" ></center>'
+'<center><img src="pic/pic/vorAvtobaza.jpg" ></center>'
 
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-if $ARGS[0] = '' : 
-	 gt 'vorAvtobaza','start'
+if $ARGS[0] = '' :
+	gt 'vorAvtobaza','start'
 end
 
-if $ARGS[0] = 'start': 
-	act 'ВЫЙТИ': 
-		minut += 1
+if $ARGS[0] = 'start':
+	act 'ВЫЙТИ':
+		minut=minut+1
 		GOTO $locMag, $metkaMag
 	end
 
@@ -34,8 +34,8 @@ if $ARGS[0] = 'start':
 		if vorJoined > 0: 
 		''
 		'Седой приветствует вас и предлагает выбрать дело по душе.'
-			if vorRep >= 0: 
-				act 'Охранять базу (8 часов)': 
+			if vorRep >= 0:
+				act 'Охранять базу (8 часов)':
 					minut = minut + 480	
 					*clr	
 					!gs 'stat'
@@ -45,34 +45,34 @@ if $ARGS[0] = 'start':
 					'<b>Седой вручил вам 3000 и велел сторожить объект.</b>'
 					'Вы проводите смену, ошиваясь у ворот базы и базаря с бритоголовыми.'
 					cla
-					act 'Охранять дальше': 
+					act 'Охранять дальше':
 						vorAtkRnd = RAND(1, 20)
-						if vorAtkRnd = 1: 
+						if vorAtkRnd = 1:
 							cla
 							*clr
-							'<center><img src = "pic/pic/gop.jpg" ></center>'
+							'<center><img src="pic/pic/gop.jpg" ></center>'
 							'Какой-то гоп приперся к воротам и гнет пальцы.'
-							gs 'gengop'
+							gs'gengop'
 							$metkaFight = 'guardFight'
 							vorWinPre = win
-							act 'Драться': gt 'before'
+							act 'Драться':gt'before'
 						else
 							'Смена прошла без происшествий. Скука одна.'
 							cla
-							act 'ВЫЙТИ': 
+							act 'ВЫЙТИ':
 								minut = minut + 1
-								 gt 'vorAvtobaza'
+								gt 'vorAvtobaza'
 							end
 						end
 					end
 					 
 				end
 			end
-			if vorRep >= 10: 	
-				act 'Сопровождать груз (8 часов)': 
+			if vorRep >= 10:	
+				act 'Сопровождать груз (8 часов)':
 					*clr
 					cla
-					'<center><img src = "pic/pic/vorFura.jpg" ></center>'
+					'<center><img src="pic/pic/vorFura.jpg" ></center>'
 					minut = minut + 480		
 					clr
 					!gs 'stat'
@@ -81,22 +81,22 @@ if $ARGS[0] = 'start':
 					vorRep = vorRep + 1
 					'<b>Седой вручил вам 10000 и велел ехать с фурой, везущей ценный груз. Он предупредил, что недавно на этом маршруте фуру обчистили.</b>'
 					
-					act 'В путь': 
+					act 'В путь':
 						vorAtkRnd = RAND(1, 100)
-						if vorAtkRnd <= 10: 
+						if vorAtkRnd <= 10:
 							cla
 							*clr
-							'<center><img src = "pic/picar/car3.jpg" ></center>'
+							'<center><img src="pic/picar/car3.jpg" ></center>'
 							'На безлюдном отрезке трассы вашу фуру подрезает тонированная в ноль девятка. Из нее выпрыгивают трое. <br> Пока ваш напарник и водила месятся с двумя, третий бросается на вас.'
-							gs 'gengop'
+							gs'gengop'
 							$metkaFight = 'escortFight'
 							vorWinPre = win
-							act 'Драться': gt 'before'
+							act 'Драться':gt'before'
 						else
-							if vorAtkRnd <= 80: 					
+							if vorAtkRnd <= 80:					
 								'Вы успешно закончили рейс. За исключением мелких гаишников, никто не пытался вас ограбить.'
 								cla
-								act 'ВЫЙТИ': 
+								act 'ВЫЙТИ':
 									minut = minut + 1
 									GOTO 'vorAvtobaza'
 								end
@@ -110,22 +110,22 @@ if $ARGS[0] = 'start':
 								hour = hour + 1
 								'Фуру тщательно обыскивают и обнюхивают собаками.'
 								''
-								if vorAtkRnd <= 95: 
+								if vorAtkRnd <= 95:
 									'(Сержант): Документики на груз у вас не в порядке. Да и огнетушитель с аптечкой не по ГОСТу. Будем протокол составлять?'
 									''
 									'Вы торгуетесь с гаишником и в итоге сходитесь на 10000 рублей штрафа на месте.'
 									money = money - 10000
 									
-									act 'ВЫЙТИ': 
+									act 'ВЫЙТИ':
 									minut = minut + 1
 									GOTO 'vorAvtobaza'
 									end
 								else							
 									'Сержант и еще несколько сотрудников вдруг окружают вас и ложат мордой на асфальт. Под дулом трех автоматов вам немного некомфортно.'
-									act 'Поинтересоваться в чем дело': 
+									act 'Поинтересоваться в чем дело':
 										*clr
 										cla
-										'<center><img src = "pic/studiа/ment_1.jpg" ></center>'
+										'<center><img src="pic/studiа/ment_1.jpg" ></center>'
 										''
 										'(Вы): Сержант, в чем дело, мы ж ничего не нарушили?'
 										''
@@ -138,7 +138,7 @@ if $ARGS[0] = 'start':
 										'Вы торгуетесь с гаишником. Подлец набивает цену, в деталях расписывая Колыму, куда он обещает вас засадить. Но вы тоже тертый калач и в итоге сходитесь на 100000 рублей штрафа на месте.'
 										money = money - 100000
 										
-										act 'ВЫЙТИ': 
+										act 'ВЫЙТИ':
 										minut = minut + 1
 										GOTO 'vorAvtobaza'
 										end
@@ -151,8 +151,8 @@ if $ARGS[0] = 'start':
 				end
 			end
 			
-			if vorRep >= 30: 
-				act 'Выбивать долги (4 часа)': 
+			if vorRep >= 30:
+				act 'Выбивать долги (4 часа)':
 					minut = minut + 240	
 					*clr	
 					cla				
@@ -176,7 +176,7 @@ if $ARGS[0] = 'start':
 					'Причем лавэ у него есть, это точно. Сходи, Харя, верни наше. 10% твои.'
 					'Вот его адрес, вот куда он ходит.</b>'					
 					
-					act 'Искать этого <<$vorLohTypeStr>>а': 
+					act 'Искать этого <<$vorLohTypeStr>>а':
 						
 						vorLohLoc = RAND(1, 5)
 						if vorLohLoc = 1: $vorLohLocStr = 'дома'
@@ -188,24 +188,24 @@ if $ARGS[0] = 'start':
 						*clr
 						cla
 						
-						'<center><img src = "pic/pic/gop.jpg" ></center>'
+						'<center><img src="pic/pic/gop.jpg" ></center>'
 						'После продолжительных поисков, вы наконец застаете <<$vorLohTypeStr>>а <<$vorLohLocStr>>.'
 						
 						vorAtkRnd = RAND(1, 100)
-						act 'Спросить с него за долг' : 						
-							if vorAtkRnd < 70: 
+						act 'Спросить с него за долг' :						
+							if vorAtkRnd < 70:
 								cla
 								*clr
 								'Неожиданно <<$vorLohTypeStr>> бросается на вас.'
 								'(<<$vorLohTypeStr>>): Ох ты у меня щас схватишь, ростовщик хренов!'							
-								if vorAtkRnd < 35: 
+								if vorAtkRnd < 35:
 									'Его первый удар застает вас врасплох и попадает точно в цель.'
 									health = health - (50 + RAND(0,50))
 								end
-								gs 'gengop'
+								gs'gengop'
 								$metkaFight = 'debtFight'
 								vorWinPre = win
-								act 'Драться': gt 'before'
+								act 'Драться':gt'before'
 							else
 								cla
 								*clr
@@ -213,23 +213,23 @@ if $ARGS[0] = 'start':
 								'Видя вашу решимость, <<$vorLohTypeStr>> миролюбиво подымает руки и соглашается сей же час вернуть долг.'
 								'Вы следуете за ним в банк и возвращаетесь с толстой котлетой купюр к Седому.'
 								cla
-								act 'ВЫЙТИ': 
+								act 'ВЫЙТИ':
 									minut = minut + 1
-									 gt 'vorAvtobaza'
+									gt 'vorAvtobaza'
 								end
 							end
 						end
 						
-						act 'Зарядить сходу в табло' : 
-							if vorAtkRnd < 70: 
+						act 'Зарядить сходу в табло' :
+							if vorAtkRnd < 70:
 								cla
 								*clr
 								'Каким-то чудом <<$vorLohTypeStr>> предвидит ваш удар и успешно уворачивается от него.'
 								'(<<$vorLohTypeStr>>): Ах ты урод исподтишка бьешь!'							
-								gs 'gengop'
+								gs'gengop'
 								$metkaFight = 'debtFight'
 								vorWinPre = win
-								act 'Драться': gt 'before'
+								act 'Драться':gt'before'
 							else
 								cla
 								*clr
@@ -237,16 +237,16 @@ if $ARGS[0] = 'start':
 								'Мастерский хук справа, и <<$vorLohTypeStr>> падает на пол, как мешок с дерьмом.' 
 								'Затем вы достаете свой железный аргумент. Против него невозможно устоять.'
 								
-								act 'Применить "аргумент"': 
+								act 'Применить "аргумент"':
 									*clr
 									cla
-									'<center><img src = "pic/pic/vorUtjug.jpg" ></center>'
+									'<center><img src="pic/pic/vorUtjug.jpg" ></center>'
 									'Старый добрый "аргумент" работает исправно.'
 									'Очень быстро, <<$vorLohTypeStr>> соглашается расплатиться.'
 									'Вы следуете за ним в банк и возвращаетесь с толстой котлетой купюр к Седому.'
-									act 'ВЫЙТИ': 
+									act 'ВЫЙТИ':
 										minut = minut + 1
-										 gt 'vorAvtobaza'
+										gt 'vorAvtobaza'
 									end
 								end							
 							end	
@@ -267,11 +267,11 @@ if $ARGS[0] = 'start':
 end
 
 
-if $ARGS[0] = 'guardFight': 
+if $ARGS[0] = 'guardFight':
 	'Немного запыхавшись, вы возвращаетесь к Седому, пока другие быки присматривают за воротами. В двух словах вы объясняете происшествие.'
 	''
 	
-	if win > vorWinPre : 
+	if win > vorWinPre :
 		'(Седой): Скрутил его? Ну и славно. Иди домой, Харя, ребята тут разберутся кто этот клоун и че он к нам попер.'
 	else
 		'(Седой): Да, Харя, не ожидал. Ты ж боец, вроде? А он тебя так...' 
@@ -280,17 +280,17 @@ if $ARGS[0] = 'guardFight':
 		vorRep = vorRep - 1
 	end
 	
-	act 'ВЫЙТИ': 
-		minut += 1
-		 gt 'vorAvtobaza','start'
+	act 'ВЫЙТИ':
+		minut=minut+1
+		gt 'vorAvtobaza','start'
 	end
 end
 
-if $ARGS[0] = 'escortFight': 
+if $ARGS[0] = 'escortFight':
 	'По возвращении фуры, вы предстаете перед Седым и докладываете о нападении.'
 	''
 	
-	if win > vorWinPre : 
+	if win > vorWinPre :
 		'(Седой): Да... Похоже те же самые отморозки, что рейс Фила на прошлой неделе подкараулили.' 
 		'(Седой): Ну ты правильно их отделал. Пусть по больничке поваляются. Нам так спокойней ездить будет.'
 	else
@@ -302,17 +302,17 @@ if $ARGS[0] = 'escortFight':
 		vorRep = vorRep - 2
 	end
 	
-	act 'ВЫЙТИ': 
-		minut += 1
-		 gt 'vorAvtobaza','start'
+	act 'ВЫЙТИ':
+		minut=minut+1
+		gt 'vorAvtobaza','start'
 	end	
 end
 
-if $ARGS[0] = 'debtFight': 
+if $ARGS[0] = 'debtFight':
 	'После боя вы возвращаетесь к Седому.'
 	''
 	
-	if win > vorWinPre : 
+	if win > vorWinPre :
 		'(Седой): Лавэ принес?'
 		'(Вы): Вот, здесь все.'
 		'(Седой): Отлично. Вот твоя доля.'
@@ -324,9 +324,9 @@ if $ARGS[0] = 'debtFight':
 		vorRep = vorRep - 2
 	end		
 	
-	act 'ВЫЙТИ': 
-		minut += 1
-		 gt 'vorAvtobaza','start'
+	act 'ВЫЙТИ':
+		minut=minut+1
+		gt 'vorAvtobaza','start'
 	end	
 end
 

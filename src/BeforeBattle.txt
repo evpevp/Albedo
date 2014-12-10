@@ -1,5 +1,5 @@
 # BeforeBattle
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 !ДЕЙСТВИЯ ПЕРЕД БОЕМ
 !скорость работы рук - Speed
 !скорость работы ног - SpeedK
@@ -15,28 +15,28 @@ if $ARGS[0] = 'start':
 !2 - кикбоксинг
 !3 - борьба
 !4 - бой без правил
- staminaMAX = stamina
- staminaMAXV = staminaV
- chinMAX = chin
- chinMAXV = chinV
- agilMAX = agil
- agilMAXV = agilV
+set staminaMAX = stamina
+set staminaMAXV = staminaV
+set chinMAX = chin
+set chinMAXV = chinV
+set agilMAX = agil
+set agilMAXV = agilV
 
 
-     if FightTip = 0: 
-     gt 'fight','start'
+     if FightTip = 0:
+     gt'fight','start'
      end
-     if FightTip = 1: 
-     gt 'boxing','start'
+     if FightTip = 1:
+     gt'boxing','start'
      end
-     if FightTip = 2: 
-     gt 'kikboxing','start'
+     if FightTip = 2:
+     gt'kikboxing','start'
      end
-     if FightTip = 3: 
-     gt 'sambo','start'
+     if FightTip = 3:
+     gt'sambo','start'
      end
-     if FightTip = 4: 
-     gt 'MMA','start'
+     if FightTip = 4:
+     gt'MMA','start'
      end
 end
 --- BeforeBattle ---------------------------------

@@ -8,80 +8,80 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 15
+minut=minut+15
 mag = 1
 !2
 '<center><H4>Логово Сераф</H4></center>'
 '<center>Количество переходов по комнатам лабиринта <<smazetime>> раз</center>'
-'<center><img src = "pic/EvedonKD/cave9.jpg" ></center>'
+'<center><img src="pic/EvedonKD/cave9.jpg" ></center>'
 'Пещера с древним, обветшалым храмом.'
-if smazetime<12 and serafKey = 0: 'Ты грязный читер. Решение Фишера предполагает не менее 12 переходов.'
-if smazetime<SmazeRecord and serafKey = 0: smazetime = SmazeRecord
-if serafKey = 0: SecretMazeStat = SmazeRecord
+if smazetime<12 and serafKey=0:'Ты грязный читер. Решение Фишера предполагает не менее 12 переходов.'
+if smazetime<SmazeRecord and serafKey=0:smazetime=SmazeRecord
+if serafKey=0:SecretMazeStat=SmazeRecord
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-     if serafKey>0: 
-     '<a href = "exec: gt ''marahram''">На стенах храма зажигаются какие то печати</a>'
-     act 'Использовать ключ Сераф': gt 'serafcave'
+     if serafKey>0:
+     '<a href="exec: gt''marahram''">На стенах храма зажигаются какие то печати</a>'
+     act 'Использовать ключ Сераф':gt'serafcave'
      end
-	 act 'Выход в лабиринт': colser = 1 & gt 'serafcave8'
+	 act 'Выход в лабиринт':colser=1&gt'serafcave8'
 	 
-	 if serafKey>0 and filosofkamQW = 5: 
-	     act 'Искать осколок камня.': 
+	 if serafKey>0 and filosofkamQW=5:
+	     act 'Искать осколок камня.':
 	     cla
-	     minut += 60
-	     filosofkamQW = 6
+	     minut=minut+60
+	     filosofkamQW=6
 	     'Вы в течении часа обыскивали логово, и нашли пергамет и завернутый в него камень.'
-	     act 'Закончить поиски': gt $CURLOC
+	     act 'Закончить поиски':gt $CURLOC
 	     end
 	 end
 
-if serafbattleQW = 1: 
+if serafbattleQW=1:
 cla
-serafbattleQW = 2
- $nameV = 'Сераф'
- lvlv = 500
- strenV = 700
- speedV = 450
- agilV = 450
- vitalV = 400
- intelv = 2000
- willv = 700
- program = 38
- healthV = vitalV*10
- mannaV = intelV*10+intelV*25
- wipoV = willV*10
- CerafSlaveBat = 10
- monster = 27
- NORUN = 1
- !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
+serafbattleQW=2
+ $nameV='Сераф'
+ lvlv=500
+ strenV=700
+ speedV=450
+ agilV=450
+ vitalV=400
+ intelv=2000
+ willv=700
+ program=38
+ healthV=vitalV*10
+ mannaV=intelV*10+intelV*25
+ wipoV=willV*10
+ CerafSlaveBat=10
+ monster=27
+ NORUN=1
+ !'<center><img src="Evedon\demonrealm.jpg" ></center>'
  '(Сераф) - Иди к мамочке малыш.'
- act 'Дратся': gs 'before'
+ act 'Дратся':gs'before'
 end
 
-if serafbattleQW = 0: 
+if serafbattleQW=0:
 cla
 ''
 'Сераф встретила вас на пороге храма. Она улыбается и апплодирует "Браво, храбрый герой, браво. Тебе удалось далеко зайти что бы встретится со мной. Поздравляю, вот и я. Ну как? Чувствуешь радость?"'
 
-     act 'Ага. Наконец то удалось пройти этот чертов лабиринт.': 
+     act 'Ага. Наконец то удалось пройти этот чертов лабиринт.':
      cla
-     serafbattleQW = 1
+     serafbattleQW=1
      '(Вы) - Ага. Наконец то удалось пройти этот чертов лабиринт.'
      '(Сераф) - Придется тебя огорчить. Это конец твоего приключения герой. Я уже приготовила для тебя веселую шутку, когда ты падешь и начнешь умолять меня о прощении.'
-     act 'Это мы еще посмотрим': gt $curloc
+     act 'Это мы еще посмотрим':gt $curloc
      end
      
-     act 'Да не очень.': 
+     act 'Да не очень.':
      cla
-     serafbattleQW = 1
+     serafbattleQW=1
      '(Вы) - Да не очень.'
      '(Сераф) - Ха ха ха. Правильно. Лабиринт пустяк, вот сейчас тебя ждет настоящее испытание.'
-     act 'Хватит трепатся': gt $curloc
+     act 'Хватит трепатся':gt $curloc
      end
 
 end

@@ -1,17 +1,17 @@
 # tentaklwin
-monster = 0
-demonwin = demonwin+1
+monster=0
+demonwin=demonwin+1
 'Чудовище с щупальцами поверженно.'
 
 
-act 'Далее': 
+act 'Далее':
 cla
 *clr
-if gem>0: gem = gem-1 & demonSoul = demonSoul+1
-tentSperm = tentSperm+1
+if gem>0:gem=gem-1&demonSoul=demonSoul+1
+tentSperm=tentSperm+1
 'Вы собрали сперму тентакля в бутылочку' 
-if gem>0: gem = gem-1 & demonSoul = demonSoul+1 & 'и в один из гемов вошла душа демонической твари.'
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+if gem>0:gem=gem-1&demonSoul=demonSoul+1&'и в один из гемов вошла душа демонической твари.'
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
 --- tentaklwin ---------------------------------
 

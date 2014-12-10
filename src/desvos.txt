@@ -1,20 +1,20 @@
 # desvos
-if golod < 1: 
-     if fat > 0: 
-     fat = fat-3
+if golod < 1:
+     if fat > 0:
+     fat=fat-3
      end
-     if fat <= 0: 
-     manna = manna-10
+     if fat <= 0:
+     manna=manna-10
      end
 end
-if son < 1: 
-manna = manna-10
+if son < 1:
+manna=manna-10
 end
-if manna < 1: 
-wipo = wipo-10
+if manna < 1:
+wipo=wipo-10
 end
-if wipo < 1: 
-health = health-10
+if wipo < 1:
+health=health-10
 end
 'Эта страшная жара просто убивает.'
 --- desvos ---------------------------------

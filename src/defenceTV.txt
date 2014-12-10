@@ -5,61 +5,61 @@
 !damageT
 !damageTV
 
-!if conterBat>0: gs 'conterBat'
+!if conterBat>0:gs'conterBat'
 
-gs 'PreEffect'
+gs'PreEffect'
 
-if conterBatV>0: gs 'conterBatV'
+if conterBatV>0:gs'conterBatV'
 
-if zerkalov>0: 
-zeratk = RAND(0,zerkalov)
-     if zeratk = 0 or sonar>0: 
-     zerkalov = 0
-     '<font color = green>Вы попали в настоящего противника а не в его отражения и зеркала рассыпались</font>'
+if zerkalov>0:
+zeratk=RAND(0,zerkalov)
+     if zeratk=0 or sonar>0:
+     zerkalov=0
+     '<font color=green>Вы попали в настоящего противника а не в его отражения и зеркала рассыпались</font>'
      end
-     if zeratk>0 and sonar = 0: 
-     zerkalov = zerkalov-1
-     damageT = 0
-     '<font color = green>Вы попали в зеркало и оно рассыпалось</font>'
+     if zeratk>0 and sonar=0:
+     zerkalov=zerkalov-1
+     damageT=0
+     '<font color=green>Вы попали в зеркало и оно рассыпалось</font>'
      end
 end
 
-if levitationV>0: gs 'LevitationV'
+if levitationV>0:gs'LevitationV'
 
-if barierV>0 and damageT>0: 
-damageT = damageT-((damageT*barierV)/100)
-'<font color = red>Барьер противника снизил термо урон на <B><<barierV>></B>%</font>'
-barierV = barierV-1
+if barierV>0 and damageT>0:
+damageT=damageT-((damageT*barierV)/100)
+'<font color=red>Барьер противника снизил термо урон на <B><<barierV>></B>%</font>'
+barierV=barierV-1
 end
 
-	 if gostbodyv>0: 
-	 damageT = 0
-	 gostbodyv- = 1
-	 '<font color = red><<$namev>> пропустил удар через свое тело</font>'
+	 if gostbodyv>0:
+	 damageT=0
+	 gostbodyv-=1
+	 '<font color=red><<$namev>> пропустил удар через свое тело</font>'
 	 end
 
-if defenceTV<= 0: 
-gs 'klonDefV'
+if defenceTV<=0:
+gs'klonDefV'
 dynamic $rascheturonaTV
-'<font color = green><<$tipuronaT>> нанес противнику <B><<damaget>></B> едениц урона</font>'
-!damageT = 0
+'<font color=green><<$tipuronaT>> нанес противнику <B><<damaget>></B> едениц урона</font>'
+!damageT=0
 end
 
-if defencetv>0: 
-	 if defencetv>damaget: 
-	 defencetv = defencetv-damaget
-	 '<font color = green>Вы нанесли <B><<damaget>></B> едениц урона ТЕМПЕРАТУРНОЙ защите противника</font>'
-	 damaget = 0
+if defencetv>0:
+	 if defencetv>damaget:
+	 defencetv=defencetv-damaget
+	 '<font color=green>Вы нанесли <B><<damaget>></B> едениц урона ТЕМПЕРАТУРНОЙ защите противника</font>'
+	 damaget=0
 	 end
-	 if defencetv<= damaget: 
-	 ddefencetv = defencetv-damaget
-	 gs 'klonDefV'
-	     if damaget>0: 
+	 if defencetv<=damaget:
+	 ddefencetv=defencetv-damaget
+	 gs'klonDefV'
+	     if damaget>0:
 		 dynamic $rascheturonaTV
-		 defencetv = 0
-		 '<font color = green>ТЕМПЕРАТУРНАЯ ЗАЩИТА ПРОТИВНИКА УНИЧТОЖЕНА</font>'
-		 '<font color = green>Вы нанесли <B><<damaget>></B> едениц урона</font>'
-		 damaget = 0
+		 defencetv=0
+		 '<font color=green>ТЕМПЕРАТУРНАЯ ЗАЩИТА ПРОТИВНИКА УНИЧТОЖЕНА</font>'
+		 '<font color=green>Вы нанесли <B><<damaget>></B> едениц урона</font>'
+		 damaget=0
 	     end
 	 end
 end

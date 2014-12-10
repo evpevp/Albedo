@@ -1,97 +1,97 @@
 # korneliyW
-$korneliyA = {
+$korneliyA={
 cla
 *clr
-'<center><img src = "pic/EvedonNarod/banshitsi.jpg"></center>'
+'<center><img src="pic/EvedonNarod/banshitsi.jpg"></center>'
 'Вы следуя за Корнелием проходите сквозь мраморную арку внутрь павильона, декорированного различными мозаиками на непристойные сюжеты. Корнелий рассказывает вам, что у него самые лучшие во всём Эведоне девочки, что банщицы в термах это не какие-то плебейские проститутки, а тонкое и изящное времяпрепровождение для благородных господ. И вообще какой он замечательный щедрый умный и благородный господин, дворянин в 40 поколениях между прочим. Корнелий заводит вас в комнату, где выстроились девочки и как бы между делом замечает что слева стоят рабыни и час с ними стоит 500гемов, но они исполнят все желания, а справа стоят свободные девушки-банщицы и час с ними стоит 1000гемов.'
-act 'Уйти': gt 'onsenW'
+act 'Уйти':gt'onsenW'
 ''
 'Свободные девушки'
-'<a href = "exec: dynamic $lianaD ">рыжеволосая Лиана</a>'
-'<a href = "exec: dynamic $eneaD ">блондинка Энея</a>'
+'<a href="exec: dynamic $lianaD ">рыжеволосая Лиана</a>'
+'<a href="exec: dynamic $eneaD ">блондинка Энея</a>'
 ''
 'Рабыни'
-'<a href = "exec: dynamic $ingaD ">черноволосая Инга</a>'
-'<a href = "exec: dynamic $samiraD ">экзотическая Самира</a>'
+'<a href="exec: dynamic $ingaD ">черноволосая Инга</a>'
+'<a href="exec: dynamic $samiraD ">экзотическая Самира</a>'
 }
-$lianaD = {
-if gem>= 1000: 
-gem- = 1000
- gt 'lianaOnsen'
+$lianaD={
+if gem>=1000:
+gem-=1000
+GT 'lianaOnsen'
 else
 msg 'У тебя не хватает денег'
- gt 'onsenW'
+gt 'onsenW'
 end
 }
-$eneaD = {
-if gem>= 1000: 
-gem- = 1000
- gt 'eneaOnsen'
+$eneaD={
+if gem>=1000:
+gem-=1000
+GT 'eneaOnsen'
 else
 msg 'У тебя не хватает денег'
- gt 'onsenW'
+gt 'onsenW'
 end
 }
-$ingaD = {
-if gem>= 500: 
-gem- = 500
- gt 'ingaOnsen'
+$ingaD={
+if gem>=500:
+gem-=500
+GT 'ingaOnsen'
 else
 msg 'У тебя не хватает денег'
- gt 'onsenW'
+gt 'onsenW'
 end
 }
-$samiraD = {
-if gem>= 500: 
-gem- = 500
- gt 'samiraOnsen'
+$samiraD={
+if gem>=500:
+gem-=500
+GT 'samiraOnsen'
 else
 msg 'У тебя не хватает денег'
- gt 'onsenW'
+gt 'onsenW'
 end
 }
 
-act 'Отойти': 
-minut += 5
- gt 'onsenW'
+act 'Отойти':
+minut=minut+5
+gt'onsenW'
 end
 
-if pol = 0: 
-'<center><img src = "pic/EvedonNarod/korneliy.jpg"></center>'
-	 if slot<13: 
+if pol=0:
+'<center><img src="pic/EvedonNarod/korneliy.jpg"></center>'
+	 if slot<13:
 	 '- Тьфу сколько в городе черни развелось! Совсем страх потеряли, уже ко мне, К КОРНЕЛИЮ нищие подходят. А ну пошёл вон отсюда пока я не позвал стражу.'
-	 elseif slot = 13: 
+	 elseif slot=13:
 	 '- Ну и?. Ещё один разбогатевший нувориш? Будешь что заказывать у господина Корнелия, или просто так постоять пришёл?'
-	     act 'Идти с Корнелием': dynamic $korneliyA
-	 elseif slot>13: 
+	     act 'Идти с Корнелием':dynamic $korneliyA
+	 elseif slot>13:
 	 '- Здравствуйте, здравствуйте благородный господин. Чего изволите? Чем может услужить вам господин Корнелий?'
-	     act 'Идти с Корнелием': dynamic $korneliyA
+	     act 'Идти с Корнелием':dynamic $korneliyA
 	 end
 else
-'<center><img src = "pic/EvedonNarod/korneliy.jpg"></center>'
-     if facetattoo = 0: 
+'<center><img src="pic/EvedonNarod/korneliy.jpg"></center>'
+     if facetattoo=0:
 	 'Слушай барышня, не хочешь подработать? Хорошие условия, лучше оплаты ты во всём Эведоне не найдёшь. Всё пристойно ты будешь просто банщицей, помогать мыться знатным клиентам. Никакого интима, хорошая работа для хорошей девочки.'
-		 act 'Какие условия?': 
+		 act 'Какие условия?':
 		 cla
 		 '- Ну как какие условия, ты записываешься у меня в клиентеллу. Тебе ставят татуировку на шею в знак того что ты работаешь на Корнелиуса.'
 		 'Получать будешь 100 гемов за клиента, в твои обязанности входит только мытьё и развлекать клиента разговорами.'
-		 act 'Уйти': minut += 5 & gt 'onsenW'
-			 act 'Согласиться с условиями.': 
+		 act 'Уйти':minut=minut+5&gt'onsenW'
+			 act 'Согласиться с условиями.':
 			 cla
-			 minut+= 30
-			 gs 'stat'
-			 facetattoo = 1
+			 minut+=30
+			 gs'stat'
+			 facetattoo=1
 			 'Корнелиус завел вас в заднюю комнату, вы сели на табурет и он сделал вам татуировку на шее.'
-			 act 'Уйти': minut += 5 & gt 'onsenW'
+			 act 'Уйти':minut=minut+5&gt'onsenW'
 			 end
 		 end
-     elseif facetattoo = 1: 
+     elseif facetattoo=1:
      'Привет <<$name>>. Почему не на работе?'
-         if noonsenwork>0: 
-             act 'Жаловаться, что девчонки вас силой раздевают': 
+         if noonsenwork>0:
+             act 'Жаловаться, что девчонки вас силой раздевают':
              cla
              'Вы пожаловались Корнелиусу на действия Инги, но он только плечами пожал, она все делала правильно. Тебя трахаться никто не заставляет, но работать нужно голой.'
-             act 'Уйти': minut += 5 & gt 'onsenW'
+             act 'Уйти':minut=minut+5&gt'onsenW'
              end
          end
      end

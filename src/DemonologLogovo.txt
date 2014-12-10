@@ -11,26 +11,26 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Старый постоялый двор</H4></center>'
-'<center><img src = "pic/Evedon/demondvor.jpg" ></center>'
+'<center><img src="pic/Evedon/demondvor.jpg" ></center>'
 'Обветшалый постоялый двор, но все просто сияет чистотой и из кухни очень вкусно пахнет.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-'<a href = "exec: gt ''DemPrivratnik''">За стойкой стоит симпатичная девушка.</a>'
+'<a href="exec: gt''DemPrivratnik''">За стойкой стоит симпатичная девушка.</a>'
 
-act 'Уйти': minut += 5 & roadMonMark = 3 & gt 'monwestroad'
+act 'Уйти':minut=minut+5&roadMonMark=3&gt'monwestroad'
 
 
-if marpeozaQW = 100: 
-	 act 'Идти в свою комнату': minut += 5 & gt 'demlogroom'
+if marpeozaQW=100:
+	 act 'Идти в свою комнату':minut=minut+5&gt'demlogroom'
 	 
-	 act 'Идти в тайную обитель': minut += 5 & gt 'MarpeozaCave1'
+	 act 'Идти в тайную обитель':minut=minut+5&gt'MarpeozaCave1'
 end
 --- DemonologLogovo ---------------------------------
 

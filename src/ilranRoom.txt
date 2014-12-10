@@ -9,342 +9,342 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Комната Ильрана, точная копия вашей</H4></center>'
-'<center><img src = "pic/Evedon\ordenRoom.jpg" ></center>'
+'<center><img src="pic/Evedon\ordenRoom.jpg" ></center>'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-if ilranQW >=3: 
-'<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
+if ilranQW=>3:
+'<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
 'Ильран улыбается вам "Привет <<$name>>, спасибо что зашла."'
-act 'Уйти': gt 'foOrden'
-     act 'Поцеловать': 
+act 'Уйти':gt'foOrden'
+     act 'Поцеловать':
      cla
      *clr
-     '<center><img src = "pic/Evedon\1\ilranpocelui.jpg" ></center>'
-     gs 'stat'
+     '<center><img src="pic/Evedon\1\ilranpocelui.jpg" ></center>'
+     gs'stat'
      'Ильран поцеловал вас в ваши губы и указал на кровать.'
-     act 'Лечь на кровать': gt 'ilranRoom','ilranpred'
+     act 'Лечь на кровать':gt'ilranRoom','ilranpred'
      end
      end
 end
 
-if $ARGS[0] = 'ilranpred': 
+if $ARGS[0]='ilranpred':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
- minut += 5
-horny = horny+25
-gs 'stat'
+set minut=minut+5
+horny=horny+25
+gs'stat'
 'Ильран начал вас раздевать'
-     if penis>0 and ilransexfuta = 0: 
-     '<center><img src = "pic/Evedon\1\ilranpredfuta.jpg" ></center>'
+     if penis>0 and ilransexfuta=0:
+     '<center><img src="pic/Evedon\1\ilranpredfuta.jpg" ></center>'
      'Ильран раздел вас и немного оторопел, увидя ваш <<penis>> сантиметровый член. Но он быстро взял себя в руки и начал вас ласкать.'
-     act 'Наслаждаться': gt 'ilranRoom','ilransexfuta'
+     act 'Наслаждаться':gt'ilranRoom','ilransexfuta'
      end
      
-     if penis>0 and ilransexfuta>0: 
-     '<center><img src = "pic/Evedon\1\ilranpredfuta.jpg" ></center>'
+     if penis>0 and ilransexfuta>0:
+     '<center><img src="pic/Evedon\1\ilranpredfuta.jpg" ></center>'
      'Ильран раздел вас и смотря на ваш <<penis>> сантиметровый член, начал ласкать вас'
-     act 'Наслаждаться': gt 'ilranRoom','ilransexfuta'
+     act 'Наслаждаться':gt'ilranRoom','ilransexfuta'
      end
      
-     if penis = 0 and ilransex >=0: 
+     if penis=0 and ilransex=>0:
      'Ильран раздел вас и начал вас ласкать'
-     '<center><img src = "pic/Evedon\1\ilranpred.jpg" ></center>'
-     act 'Наслаждаться': gt 'ilranRoom','ilransex'
+     '<center><img src="pic/Evedon\1\ilranpred.jpg" ></center>'
+     act 'Наслаждаться':gt'ilranRoom','ilransex'
      end
 end
 end
 
-if $ARGS[0] = 'ilransex': 
+if $ARGS[0]='ilransex':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-'<center><img src = "pic/Evedon\1\ilranpred1.jpg" ></center>'
- minut += 10
-ilransex = ilransex+1
-guy+= 1
-horny = horny+20
-gs 'stat'
+'<center><img src="pic/Evedon\1\ilranpred1.jpg" ></center>'
+set minut=minut+10
+ilransex=ilransex+1
+guy+=1
+horny=horny+20
+gs'stat'
 'Вы ласкаете член парня и думаете, что с ним дальше делать.'
-     act 'Взять в рот': 
+     act 'Взять в рот':
      cla
      *clr
-     bj+= 1
-     '<center><img src = "pic/Evedon\1\ilranoral.jpg" ></center>'
+     bj+=1
+     '<center><img src="pic/Evedon\1\ilranoral.jpg" ></center>'
      'Вы опустились на колени перед Ильраном и начали сосать его член.'
-     gs 'cumslut'
-     finrand = RAND(0,1)
-         if finrand = 0: 
-         swallow = swallow+1
-         cumlip = cumlip+1
+     gs'cumslut'
+     finrand=RAND(0,1)
+         if finrand=0:
+         swallow=swallow+1
+         cumlip=cumlip+1
          'Ильран застонал и струя спермы ударила вам рот'
          end
-         if finrand = 1: 
-         facial = facial+1
-         cumface = cumface+1
+         if finrand=1:
+         facial=facial+1
+         cumface=cumface+1
          'Ильран вытащил член из вашего рта и залил ваше лицо своей спермой'
          end
-     act 'Уйти': gt 'foOrden'
+     act 'Уйти':gt'foOrden'
      end
      
-     act 'Принять в киску': 
+     act 'Принять в киску':
      cla
      *clr
-     sex+= 1
-     vag = vag+3
-     '<center><img src = "pic/Evedon\1\ilransex.jpg" ></center>'
+     sex+=1
+     vag=vag+3
+     '<center><img src="pic/Evedon\1\ilransex.jpg" ></center>'
      'Ильран вставил член в вашу киску и начал неистово вас трахать'
-     gs 'femorg'
-     sexrand = RAND(0,1)
-         if sexrand = 0: 
-         cumpussy = cumpussy+1
+     gs'femorg'
+     sexrand=RAND(0,1)
+         if sexrand=0:
+         cumpussy=cumpussy+1
          'Ильран застонал и струя спермы ударила вам внутрь.'
          end
-         if sexrand = 1: 
-         cumbelly = cumbelly+1
+         if sexrand=1:
+         cumbelly=cumbelly+1
          'Ильран вытащил член и кончил на ваш живот'
          end
-     act 'Уйти': gt 'foOrden'
+     act 'Уйти':gt'foOrden'
      end
      
-     act 'Дать в попку': 
+     act 'Дать в попку':
      cla
      *clr
-     anal+= 1
-     anus = anus+3
-     '<center><img src = "pic/Evedon\1\ilrananal.jpg" ></center>'
+     anal+=1
+     anus=anus+3
+     '<center><img src="pic/Evedon\1\ilrananal.jpg" ></center>'
      'Ильран вставил член вам в попу и стал ее трахать'
-     gs 'analslut'
-     analrand = RAND(0,1)
-         if analrand = 0: 
-         cumanus+= 1
+     gs'analslut'
+     analrand=RAND(0,1)
+         if analrand=0:
+         cumanus+=1
          'Ильран кончил вам в попу'
          end
-         if analrand = 1: 
-         cumass = cumass+1
+         if analrand=1:
+         cumass=cumass+1
          'Ильран вытащил член и кончил на вашу попку'
          end
-     act 'Уйти': gt 'foOrden'
+     act 'Уйти':gt'foOrden'
      end
 end
 
-if $ARGS[0] = 'ilransexfuta': 
+if $ARGS[0]='ilransexfuta':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-'<center><img src = "pic/Evedon\1\ilranpred1.jpg" ></center>'
- minut += 10
-ilransexfuta = ilransexfuta+1
-guy+= 1
-horny = horny+20
-gs 'stat'
+'<center><img src="pic/Evedon\1\ilranpred1.jpg" ></center>'
+set minut=minut+10
+ilransexfuta=ilransexfuta+1
+guy+=1
+horny=horny+20
+gs'stat'
 'Вы ласкаете член парня и думаете, что с ним дальше делать.'
-     if ilrandomfuta = 1: 
-         act 'Дать в рот': 
+     if ilrandomfuta=1:
+         act 'Дать в рот':
          cla
          *clr
-         aktman = aktman+1
-         DOM = DOM+1
-         horny = 0
-         '<center><img src = "pic/Evedon\1\ilranoralf.jpg" ></center>'
+         aktman=aktman+1
+         DOM=DOM+1
+         horny=0
+         '<center><img src="pic/Evedon\1\ilranoralf.jpg" ></center>'
          'Ильран опустился на колени и обхватив губами ваш <<penis>> сантиметровый член, начал его сосать.'
-             act 'Кончить в рот': 
+             act 'Кончить в рот':
              cla
              *clr
-             '<center><img src = "Evedon\1\ilrancumwhore.jpg" ></center>'
+             '<center><img src="Evedon\1\ilrancumwhore.jpg" ></center>'
              'Продолжая сношать рот Ильрана, вы не выдерживаете и кончаете ему в рот.'
-             act 'Уйти': gt 'foOrden'
-                 if ilransexfuta = 15: 
+             act 'Уйти':gt'foOrden'
+                 if ilransexfuta=15:
                  minut = minut + 5
-                 horny = 0
-                 DOM = DOM+1
-                 aktman = aktman+1
-                 ilrandomfuta1 = 1
-                 '<center><img src = "pic/Evedon\1\ilrananalf.jpg" ></center>'
+                 horny=0
+                 DOM=DOM+1
+                 aktman=aktman+1
+                 ilrandomfuta1=1
+                 '<center><img src="pic/Evedon\1\ilrananalf.jpg" ></center>'
                  'Ильран опустился на колени и попросил трахнуть его в попу. Вы смазали анус парня своей слюной и со всей силы засунули свой <<penis>> сантиметровый член в анус Ильрана. Он застонал от боли, но вы не обращали внимания на стоны и продолжали сношать эту девственную попку, пока не кончили внутрь'
-                 act 'Уйти': gt 'foOrden'
+                 act 'Уйти':gt'foOrden'
                  end
              end
              
-             act 'Кончить на лицо': 
+             act 'Кончить на лицо':
              cla
              *clr
-             '<center><img src = "pic/Evedon\1\ilrancumface.jpg" ></center>'
+             '<center><img src="pic/Evedon\1\ilrancumface.jpg" ></center>'
              'Вы заливаете лицо Ильрана своей спермой'
-             act 'Уйти': gt 'foOrden'
-                 if ilransexfuta = 15: 
+             act 'Уйти':gt'foOrden'
+                 if ilransexfuta=15:
                  minut = minut + 5
-                 horny = 0
-                 DOM = DOM+1
-                 aktman = aktman+1
-                 ilrandomfuta1 = 1
-                 '<center><img src = "pic/Evedon\1\ilrananalf.jpg" ></center>'
+                 horny=0
+                 DOM=DOM+1
+                 aktman=aktman+1
+                 ilrandomfuta1=1
+                 '<center><img src="pic/Evedon\1\ilrananalf.jpg" ></center>'
                  'Ильран опустился на колени и попросил трахнуть его в попу. Вы смазали анус парня своей слюной и со всей силы засунули свой <<penis>> сантиметровый член в анус Ильрана. Он застонал от боли, но вы не обращали внимания на стоны и продолжали сношать эту девственную попку, пока не кончили внутрь'
-                 act 'Уйти': gt 'foOrden'
+                 act 'Уйти':gt'foOrden'
                  end
              end
          end
      end
      
-     if ilrandomfuta1 = 1: 
-         act 'Трахуть в попу': 
+     if ilrandomfuta1=1:
+         act 'Трахуть в попу':
          cla
          *clr
-         aktman = aktman+1
-         DOM = DOM+1
-         horny = 0
-         '<center><img src = "pic/Evedon\1\ilrananalf.jpg" ></center>'
+         aktman=aktman+1
+         DOM=DOM+1
+         horny=0
+         '<center><img src="pic/Evedon\1\ilrananalf.jpg" ></center>'
          'Вы засунули свой <<penis>> сантиметровый член в анус Ильрана и начали его сношать'
-             act 'Кончить внутрь': 
+             act 'Кончить внутрь':
              cla
              *clr
-             '<center><img src = "pic/Evedon\1\ilrancumanal.jpg" ></center>'
+             '<center><img src="pic/Evedon\1\ilrancumanal.jpg" ></center>'
              'Вы заливаете анус Ильрана своей спермой'
-             act 'Уйти': gt 'foOrden'
+             act 'Уйти':gt'foOrden'
              end
              
-             act 'Кончить наружу': 
+             act 'Кончить наружу':
              cla
              *clr
-             '<center><img src = "pic/Evedon\1\ilrancum.jpg" ></center>'
+             '<center><img src="pic/Evedon\1\ilrancum.jpg" ></center>'
              'Вы вытаскиваете член из ануса Ильрана и покрываете его тело своей спермой.'
-             act 'Уйти': gt 'foOrden'
+             act 'Уйти':gt'foOrden'
              end
          end
      end
      
-     act 'Взять в рот': 
+     act 'Взять в рот':
      cla
      *clr
-     bj+= 1
-     '<center><img src = "pic/Evedon\1\ilranoralfuta.jpg" ></center>'
+     bj+=1
+     '<center><img src="pic/Evedon\1\ilranoralfuta.jpg" ></center>'
      'Вы опустились на колени перед Ильраном и начали сосать его член.'
-     gs 'cumslut'
-     finrand = RAND(0,1)
-         if finrand = 0: 
-         swallow = swallow+1
-         cumlip = cumlip+1
+     gs'cumslut'
+     finrand=RAND(0,1)
+         if finrand=0:
+         swallow=swallow+1
+         cumlip=cumlip+1
          'Ильран застонал и струя спермы ударила вам рот'
          end
-         if finrand = 1: 
-         facial = facial+1
-         cumface = cumface+1
+         if finrand=1:
+         facial=facial+1
+         cumface=cumface+1
          'Ильран вытащил член из вашего рта и залил ваше лицо своей спермой'
          end
-     act 'Уйти': gt 'foOrden'
-         if ilransexfuta = 10: 
+     act 'Уйти':gt'foOrden'
+         if ilransexfuta=10:
          minut = minut + 5
-         horny = 0
-         DOM = DOM+1
-         aktman = aktman+1
-         ilrandomfuta = 1
-         '<center><img src = "pic/Evedon\1\ilranoralf.jpg" ></center>'
+         horny=0
+         DOM=DOM+1
+         aktman=aktman+1
+         ilrandomfuta=1
+         '<center><img src="pic/Evedon\1\ilranoralf.jpg" ></center>'
          'Ильран неожиданно опустился на колени, обхватил губами ваш <<penis>> сантиметровый член и начал его сосать, пока вы не кончили ему в рот.'
-         act 'Уйти': gt 'foOrden'
+         act 'Уйти':gt'foOrden'
          end
          
-         if ilransexfuta = 15: 
+         if ilransexfuta=15:
          minut = minut + 5
-         horny = 0
-         DOM = DOM+1
-         aktman = aktman+1
-         ilrandomfuta1 = 1
-         '<center><img src = "pic/Evedon\1\ilrananalf.jpg" ></center>'
+         horny=0
+         DOM=DOM+1
+         aktman=aktman+1
+         ilrandomfuta1=1
+         '<center><img src="pic/Evedon\1\ilrananalf.jpg" ></center>'
          'Ильран опустился на колени и попросил трахнуть его в попу. Вы смазали анус парня своей слюной и со всей силы засунули свой <<penis>> сантиметровый член в анус Ильрана. Он застонал от боли, но вы не обращали внимания на стоны и продолжали сношать эту девственную попку, пока не кончили внутрь'
-         act 'Уйти': gt 'foOrden'
+         act 'Уйти':gt'foOrden'
          end
      end
      
-     act 'Принять в киску': 
+     act 'Принять в киску':
      cla
      *clr
-     sex+= 1
-     vag = vag+3
-     '<center><img src = "pic/Evedon\1\ilransexfuta.jpg" ></center>'
+     sex+=1
+     vag=vag+3
+     '<center><img src="pic/Evedon\1\ilransexfuta.jpg" ></center>'
      'Ильран вставил член в вашу киску и начал неистово вас трахать'
-     gs 'femorg'
-     sexrand = RAND(0,1)
-         if sexrand = 0: 
-         cumpussy = cumpussy+1
+     gs'femorg'
+     sexrand=RAND(0,1)
+         if sexrand=0:
+         cumpussy=cumpussy+1
          'Ильран застонал и струя спермы ударила вам внутрь.'
          end
-         if sexrand = 1: 
-         cumbelly = cumbelly+1
+         if sexrand=1:
+         cumbelly=cumbelly+1
          'Ильран вытащил член и кончил на ваш живот'
          end
-     act 'Уйти': gt 'foOrden'
-         if ilransexfuta = 10: 
+     act 'Уйти':gt'foOrden'
+         if ilransexfuta=10:
          minut = minut + 5
-         horny = 0
-         DOM = DOM+1
-         aktman = aktman+1
-         ilrandomfuta = 1
-         '<center><img src = "pic/Evedon\1\ilranoralf.jpg" ></center>'
+         horny=0
+         DOM=DOM+1
+         aktman=aktman+1
+         ilrandomfuta=1
+         '<center><img src="pic/Evedon\1\ilranoralf.jpg" ></center>'
          'Ильран неожиданно опустился на колени, обхватил губами ваш <<penis>> сантиметровый член и начал его сосать, пока вы не кончили ему в рот.'
-         act 'Уйти': gt 'foOrden'
+         act 'Уйти':gt'foOrden'
          end
          
-         if ilransexfuta = 15: 
+         if ilransexfuta=15:
          minut = minut + 5
-         horny = 0
-         DOM = DOM+1
-         aktman = aktman+1
-         ilrandomfuta1 = 1
-         '<center><img src = "pic/Evedon\1\ilrananalf.jpg" ></center>'
+         horny=0
+         DOM=DOM+1
+         aktman=aktman+1
+         ilrandomfuta1=1
+         '<center><img src="pic/Evedon\1\ilrananalf.jpg" ></center>'
          'Ильран опустился на колени и попросил трахнуть его в попу. Вы смазали анус парня своей слюной и со всей силы засунули свой <<penis>> сантиметровый член в анус Ильрана. Он застонал от боли, но вы не обращали внимания на стоны и продолжали сношать эту девственную попку, пока не кончили внутрь'
-         act 'Уйти': gt 'foOrden'
+         act 'Уйти':gt'foOrden'
          end
      end
      
-     act 'Дать в попку': 
+     act 'Дать в попку':
      cla
      *clr
-     anal+= 1
-     anus = anus+3
-     '<center><img src = "pic/Evedon\1\ilrananalfuta.jpg" ></center>'
+     anal+=1
+     anus=anus+3
+     '<center><img src="pic/Evedon\1\ilrananalfuta.jpg" ></center>'
      'Ильран вставил член вам в попу и стал ее трахать'
-     gs 'analslut'
-     analrand = RAND(0,1)
-         if analrand = 0: 
-         cumanus+= 1
+     gs'analslut'
+     analrand=RAND(0,1)
+         if analrand=0:
+         cumanus+=1
          'Ильран кончил вам в попу'
          end
-         if analrand = 1: 
-         cumass = cumass+1
+         if analrand=1:
+         cumass=cumass+1
          'Ильран вытащил член и кончил на вашу попку'
          end
-     act 'Уйти': gt 'foOrden'
-         if ilransexfuta = 10: 
+     act 'Уйти':gt'foOrden'
+         if ilransexfuta=10:
          minut = minut + 5
-         horny = 0
-         DOM = DOM+1
-         aktman = aktman+1
-         ilrandomfuta = 1
-         '<center><img src = "pic/Evedon\1\ilranoralf.jpg" ></center>'
+         horny=0
+         DOM=DOM+1
+         aktman=aktman+1
+         ilrandomfuta=1
+         '<center><img src="pic/Evedon\1\ilranoralf.jpg" ></center>'
          'Ильран неожиданно опустился на колени, обхватил губами ваш <<penis>> сантиметровый член и начал его сосать, пока вы не кончили ему в рот.'
-         act 'Уйти': gt 'foOrden'
+         act 'Уйти':gt'foOrden'
          end
          
-         if ilransexfuta = 15: 
+         if ilransexfuta=15:
          minut = minut + 5
-         horny = 0
-         DOM = DOM+1
-         aktman = aktman+1
-         ilrandomfuta1 = 1
-         '<center><img src = "pic/Evedon\1\ilrananalf.jpg" ></center>'
+         horny=0
+         DOM=DOM+1
+         aktman=aktman+1
+         ilrandomfuta1=1
+         '<center><img src="pic/Evedon\1\ilrananalf.jpg" ></center>'
          'Ильран опустился на колени и попросил трахнуть его в попу. Вы смазали анус парня своей слюной и со всей силы засунули свой <<penis>> сантиметровый член в анус Ильрана. Он застонал от боли, но вы не обращали внимания на стоны и продолжали сношать эту девственную попку, пока не кончили внутрь'
-         act 'Уйти': gt 'foOrden'
+         act 'Уйти':gt'foOrden'
          end
      end
 end

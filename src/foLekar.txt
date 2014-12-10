@@ -8,38 +8,38 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Лучший лекарь в округе Гилбертус</H4></center>'
-'<center><img src = "pic/EvedonNarod/gilbertus.jpg" ></center>'
+'<center><img src="pic/EvedonNarod/gilbertus.jpg" ></center>'
 'В домике множество стелажей с склянками, травками и прочим алхимическим скарбом.'
 'Лечение 50 гемов'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if hour>= 6 and hour<= 23: 
+if hour>=6 and hour<=23:
 'Тощий и длинный мужчина с крючковатым носом что-то переливает из реторт и колбочек и смотрит состав на свет.'
 
-	 if gem>= 50: 
-		 act 'Вылечиться': 
+	 if gem>=50:
+		 act 'Вылечиться':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem-50
-		 health = vital*10
-         manna = intel*10+intel*magika
-         wipo = will*10
-         '<center><img src = "pic/EvedonNarod/gilbertus.jpg" ></center>'
+		 minut=minut+15
+		 gem=gem-50
+		 health=vital*10
+         manna=intel*10+intel*magika
+         wipo=will*10
+         '<center><img src="pic/EvedonNarod/gilbertus.jpg" ></center>'
 		 'Вы отдали 50 гемов Гилбертусу и он дал вам какую-то микстуру с отвратительным запахом. Но после того как вы ее выпили, вам стало хорошо.'
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
 	 end
 
@@ -47,9 +47,9 @@ else
 'Закрыто'
 end
 
-act 'Уйти': 
-minut += 5
- gt 'fortW'
+act 'Уйти':
+minut=minut+5
+gt'fortW'
 end
 
 --- foLekar ---------------------------------

@@ -1,55 +1,55 @@
 # before
 
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 DELOBJ 'Меню боевки'
 DELOBJ 'Инвентарь'
 ADDOBJ'Выключить музыку'
 
-	 if music_on = 0: 
+	 if music_on=0:
 		 inited = 1
-		 music_on = 1
+		 music_on=1
 		 volume = 100
-		 club = 1
+		 club=1
 		 $music_theme = 'fight'
 		 gs 'init_music'
 	 end
 
 
-INFIGHT = 1
+INFIGHT=1
 
 !максимальная энергия могильной собаки
-GraveDogPowerMMAX = GraveDogPowerM
+GraveDogPowerMMAX=GraveDogPowerM
 
 
-!$nameV = $nameV[namev]
+!$nameV=$nameV[namev]
 
-strenMAX = stren
-speedMAX = speed
-agilMAX = agil
-vitalMAX = vital
-intelMAX = intel
-willMAX = will
+strenMAX=stren
+speedMAX=speed
+agilMAX=agil
+vitalMAX=vital
+intelMAX=intel
+willMAX=will
 
-strenMAXV = strenV
-speedMAXV = speedV
-agilMAXV = agilV
-vitalMAXV = vitalV
-intelMAXV = intelV
-willMAXV = willV
+strenMAXV=strenV
+speedMAXV=speedV
+agilMAXV=agilV
+vitalMAXV=vitalV
+intelMAXV=intelV
+willMAXV=willV
 
 
-kar = armorDef/10
-karv = armorDefv/10
+kar=armorDef/10
+karv=armorDefv/10
 
-bronik = armorDef
-bronikv = armorDefv
+bronik=armorDef
+bronikv=armorDefv
 
-barierMAX = barier
-barierMAXV = barierV
+barierMAX=barier
+barierMAXV=barierV
 
- gt 'fight','0'
+gt'fight','0'
 --- before ---------------------------------
 

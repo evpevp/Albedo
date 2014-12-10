@@ -3,24 +3,24 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Зепар</H4></center>'
-'<center><img src = "pic/EvedonNarod/Zepar.jpg" ></center>'
+'<center><img src="pic/EvedonNarod/Zepar.jpg" ></center>'
 'Молодой слуга Алруны. Высокий стройный молодой человек с великолепной фигурой, стройный как кипарис и крепкий как дуб.'
 clr
-gs 'stat'
-if penis = 0: 
-horny+= 10
+gs'stat'
+if penis=0:
+horny+=10
 'Вы с трудом можете отвести свои глаза от Зепара, настолько он вам нравится.'
 end
 
 
-act 'Уйти': gt $locFight,$metkaFight
+act 'Уйти':gt $locFight,$metkaFight
 
-act 'Болтать': 
+act 'Болтать':
 cla
-minut+= 15
-gs 'stat'
+minut+=15
+gs'stat'
      'Зепар приветливо, но отстраненно и холодно улыбнулся вам и произнес "Мое почтение."'
-act 'Уйти': gt $locFight,$metkaFight
+act 'Уйти':gt $locFight,$metkaFight
 end
 --- Zepar ---------------------------------
 

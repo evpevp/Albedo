@@ -1,17 +1,17 @@
 # казвар
-*PL '<right><img src = "pic/casino/stolcw.jpg" ></right>'
+*PL '<right><img src="pic/casino/stolcw.jpg" ></right>'
 *P 'Вы стоите у стола игры в Casino War'
-ACT 'Подойти к крупье': 
-	 gt 'крупье2'
+ACT 'Подойти к крупье':
+	gt 'крупье2'
 END
-ACT 'Сесть за стол': 
-	 gt 'игркарт2'
+ACT 'Сесть за стол':
+	gt 'игркарт2'
 END
-ACT 'Отойти от стола': 
-	 gt 'карты'
+ACT 'Отойти от стола':
+	gt 'карты'
 END
 clr
-gs 'stat'
- minut = minut + 10
+gs'stat'
+set minut=minut + 10
 --- казвар ---------------------------------
 

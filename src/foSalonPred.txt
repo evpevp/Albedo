@@ -1,16 +1,16 @@
 # foSalonPred
-salonRand = RAND(0,5)
+salonRand=RAND(0,5)
 
-if salonRand = 0: $salonText = 'На сцену вышла <a href = "exec: gt ''Ajana'',''start''">прелестная девушка</a> и начала декламировать звонким голосом романтические стихи.'
-if salonRand = 1: $salonText = 'На сцену вышла <a href = "exec: gt ''Nimy'',''start''">симпатичная девушка</a> и начала музицировать на пианино.'
-if salonRand = 2: $salonText = 'На сцену вышли две девушки, <a href = "exec: gt ''Nimy'',''start''">одна</a> начала играть на пианино, а <a href = "exec: gt ''Ajana'',''start''">вторая</a> затянула песню.'
-if salonRand = 3: $salonText = 'На сцену вышла <a href = "exec: gt ''Berty'',''start''">фигуристая девушка</a> которая начала обворожительно танцевать, демонстрируя свои пышные формы.'
-if salonRand = 4: $salonText = 'На сцену вышла <a href = "exec: gt ''Molly'',''start''">девушка акробатка</a>, которая начала показывать разные трюки и номера, демонстрируя силу и гибкость своего упругого тела.'
-if salonRand = 5: $salonText = 'На сцену вышла <a href = "exec: gt ''Nimy'',''start''">симпатичная девушка</a> и начала музицировать на пианино, <a href = "exec: gt ''Molly'',''start''">вторая девушка</a> начала показывать акробатический танец под музыку.'
-if salonRand = 6: $salonText = ''
-if salonRand = 7: $salonText = ''
-if salonRand = 8: $salonText = ''
-if salonRand = 9: $salonText = ''
-if salonRand = 10: $salonText = ''
+if salonRand=0:$salonText='На сцену вышла <a href="exec: gt''Ajana'',''start''">прелестная девушка</a> и начала декламировать звонким голосом романтические стихи.'
+if salonRand=1:$salonText='На сцену вышла <a href="exec: gt''Nimy'',''start''">симпатичная девушка</a> и начала музицировать на пианино.'
+if salonRand=2:$salonText='На сцену вышли две девушки, <a href="exec: gt''Nimy'',''start''">одна</a> начала играть на пианино, а <a href="exec: gt''Ajana'',''start''">вторая</a> затянула песню.'
+if salonRand=3:$salonText='На сцену вышла <a href="exec: gt''Berty'',''start''">фигуристая девушка</a> которая начала обворожительно танцевать, демонстрируя свои пышные формы.'
+if salonRand=4:$salonText='На сцену вышла <a href="exec: gt''Molly'',''start''">девушка акробатка</a>, которая начала показывать разные трюки и номера, демонстрируя силу и гибкость своего упругого тела.'
+if salonRand=5:$salonText='На сцену вышла <a href="exec: gt''Nimy'',''start''">симпатичная девушка</a> и начала музицировать на пианино, <a href="exec: gt''Molly'',''start''">вторая девушка</a> начала показывать акробатический танец под музыку.'
+if salonRand=6:$salonText=''
+if salonRand=7:$salonText=''
+if salonRand=8:$salonText=''
+if salonRand=9:$salonText=''
+if salonRand=10:$salonText=''
 --- foSalonPred ---------------------------------
 

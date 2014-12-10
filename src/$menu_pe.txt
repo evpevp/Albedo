@@ -1,8 +1,8 @@
 # $menu_pe
-if $selobj = 'Персонаж': 
+if $selobj='Персонаж':
 clr
-gs 'stat'
-! gt $CURLOC
+gs'stat'
+!gt $CURLOC
 end
 
 unselect

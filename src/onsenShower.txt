@@ -2,66 +2,66 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 clr
-gs 'stat'
+gs'stat'
 '<center><H4>Душевая</H4></center>'
-if shelok > 0: 'Щелока для мытья хватит на <<shelok>> раз'
-if lezvie>0: 
+if shelok > 0:'Щелока для мытья хватит на <<shelok>> раз'
+if lezvie>0:
 'На полке лежит опасная бритва.'
-     if face <40 and berd > 0: 
-         act 'Брить щетину': 
+     if face <40 and berd > 0:
+         act 'Брить щетину':
          cla
-         minut += 15
-          berd = -1
+         minut=minut+15
+         set berd = -1
          'Вы сбрили щетину.'
-         act 'Отложить бритву': gt $CURLOC
+         act 'Отложить бритву':gt $CURLOC
          end
      end
      
-     if vagina>0 and lobok>0: 
-         act 'Брить лобок': 
+     if vagina>0 and lobok>0:
+         act 'Брить лобок':
          cla
-         minut += 15
-          lobok = -10
+         minut=minut+15
+         set lobok = -10
          'Вы побрили лобок.'
-         act 'Отложить бритву': gt $CURLOC
+         act 'Отложить бритву':gt $CURLOC
          end
      end
      
-     if leg >= 20 and leghair>0: 
-         act 'Брить волосы на ногах': 
+     if leg >= 20 and leghair>0:
+         act 'Брить волосы на ногах':
          cla
-         minut += 15
-          leghair = -10
+         minut=minut+15
+         set leghair = -10
          'Вы побрили ноги.'
-         act 'Отложить бритву': gt $CURLOC
+         act 'Отложить бритву':gt $CURLOC
          end
      end
 end
 
- act 'Мыться под душем (30 мин)': 
+ act 'Мыться под душем (30 мин)':
  cla
- minut += 30
- sweat = -6
- wipo = wipo+10
- manna = manna+40
- gs 'stat'
+ minut=minut+30
+ sweat=-6
+ wipo=wipo+10
+ manna=manna+40
+ gs'stat'
  'Вы за полчаса вымылись в кадушке.'
-	 if anus >1 and anus<= 30: anus = anus-1 & 'Вода со щелоком щиплет в попе, но кажется анус немного уменьшается.'
-	 if anus>30 and anus < 50: anus = anus-5 & 'Пока вы мылись в ваш не закрывающийся анус наливалась вода со щелоком, жжение довольно неприятное, но кажется анус немного сократился.'
-	 if anus>= 50 and anus<100: anus = anus-10 & 'Пока вы мылись в ваш растянутый анус заливалась вода со щелоком, жжет очень сильно, но кажется анус немного сжался.'
-	 if anus>= 100: anus = anus-50 & 'Пока вы мылись в ваше огромное дупло заливалась вода со щелоком, жжение невероятное, но кажется анус немного уменьшился.'
- gs 'bassW'
- if alko>0: alko = alko-3
- if alko<0: alko = 0
- act 'Выйти из душа': gt $CURLOC
-	 if tits>0: 
-		 act 'Потрогать грудь 15 мин': 
+	 if anus >1 and anus<=30:anus=anus-1&'Вода со щелоком щиплет в попе, но кажется анус немного уменьшается.'
+	 if anus>30 and anus < 50:anus=anus-5&'Пока вы мылись в ваш не закрывающийся анус наливалась вода со щелоком, жжение довольно неприятное, но кажется анус немного сократился.'
+	 if anus>=50 and anus<100:anus=anus-10&'Пока вы мылись в ваш растянутый анус заливалась вода со щелоком, жжет очень сильно, но кажется анус немного сжался.'
+	 if anus>=100:anus=anus-50&'Пока вы мылись в ваше огромное дупло заливалась вода со щелоком, жжение невероятное, но кажется анус немного уменьшился.'
+ gs'bassW'
+ if alko>0:alko=alko-3
+ if alko<0:alko=0
+ act 'Выйти из душа':gt $CURLOC
+	 if tits>0:
+		 act 'Потрогать грудь 15 мин':
 		 cla
 		 *clr
-		 minut += 15
-		 horny = horny+tit
+		 minut=minut+15
+		 horny=horny+tit
 		 'Вы дотронулись до груди, от этого в грудях как будто зажегся приятный огонь, распространившийся по всему телу. Вы немного помассировали грудь и соски и очень от этого возбудились.'
-		 act 'Выйти из душа': gt $CURLOC
+		 act 'Выйти из душа':gt $CURLOC
 		 end
 	 end 
  end
@@ -69,6 +69,6 @@ end
 
 
 
-act 'Уйти из душевой': gt 'onsenWork','start'
+act 'Уйти из душевой':gt'onsenWork','start'
 --- onsenShower ---------------------------------
 

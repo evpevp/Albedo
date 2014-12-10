@@ -1,202 +1,202 @@
 # onobjsel
-if $selobj = 'Персонаж': menu '$menu_pers'
+if $selobj='Персонаж': menu '$menu_pers'
 
-if $selobj = 'Одежда': 
-     if world = 0: menu '$menu_manclo' 
+if $selobj='Одежда':
+     if world=0: menu '$menu_manclo' 
 
-     if world = 1: 
-		 if roba = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\roba.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\robaf.jpg'
+     if world=1:
+		 if roba = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\roba.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\robaf.jpg'
 		 end
-		 if pesantclo = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\pesantclo.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\pesantclof.jpg'
+		 if pesantclo = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\pesantclo.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\pesantclof.jpg'
 		 end
-		 if townclo = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\townclo.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\townclof.jpg'
+		 if townclo = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\townclo.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\townclof.jpg'
 		 end
-		 if dvorclo = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\dvorclo.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\dvorclof.jpg'
+		 if dvorclo = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\dvorclo.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\dvorclof.jpg'
 		 end
-		 if rodvorclo = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\rodvorclo.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\rodvorclof.jpg'
+		 if rodvorclo = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\rodvorclo.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\rodvorclof.jpg'
 		 end
-		 if pesantclo2 = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\pesantclo2.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\pesantclo2F.jpg'
+		 if pesantclo2 = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\pesantclo2.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\pesantclo2F.jpg'
 		 end
-		 if townclo2 = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\townclo2.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\townclo2F.jpg'
+		 if townclo2 = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\townclo2.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\townclo2F.jpg'
 		 end
-		 if armor = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\armor.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\armorf.jpg'
+		 if armor = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\armor.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\armorf.jpg'
 		 end
-		 if armor2 = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\armor2.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\armor2f.jpg'
+		 if armor2 = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\armor2.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\armor2f.jpg'
 		 end
-		 if armor3 = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\armor3.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\armor3f.jpg'
+		 if armor3 = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\armor3.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\armor3f.jpg'
 		 end
-		 if armor4 = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\armor4.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\armor4f.jpg'
+		 if armor4 = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\armor4.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\armor4f.jpg'
 		 end
-		 if armor5 = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\armor5.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\armor5f.jpg'
+		 if armor5 = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\armor5.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\armor5f.jpg'
 		 end
-		 if robe = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\robe.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\robef.jpg'
+		 if robe = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\robe.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\robef.jpg'
 		 end
-		 if robe2 = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\robe2.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\robe2f.jpg'
+		 if robe2 = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\robe2.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\robe2f.jpg'
 		 end
-		 if robe3 = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\robe3.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\robe3f.jpg'
+		 if robe3 = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\robe3.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\robe3f.jpg'
 		 end
-		 if bodysuit = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\bodysuit.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\bodysuitf.jpg'
+		 if bodysuit = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\bodysuit.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\bodysuitf.jpg'
 		 end
-		 if robeGrand = 2: 
-		     if tits<= 0: VIEW 'pic\EvedonOd\robeGrand.jpg'
-		     if tits>0: VIEW 'pic\EvedonOd\robe3f.jpg'
+		 if robeGrand = 2:
+		     if tits<=0:VIEW 'pic\EvedonOd\robeGrand.jpg'
+		     if tits>0:VIEW 'pic\EvedonOd\robe3f.jpg'
 		 end
      end 
 end
 
-if $selobj = 'Инвентарь': 
+if $selobj='Инвентарь':
 clr
-$mazesvitokali = {
-if INFIGHT = 0: 
-MazeSvitok = 0
- gt 'telaW'
+$mazesvitokali={
+if INFIGHT=0:
+MazeSvitok=0
+gt'telaW'
 end
 }
-$BSzarad = {
-if INFIGHT = 0 and BSmanna<100000 and zaradkabsday!day: 
-BSmanna+= manna
-zaradkabsday = day
-manna = 0
-gs 'stat'
+$BSzarad={
+if INFIGHT=0 and BSmanna<100000 and zaradkabsday!day:
+BSmanna+=manna
+zaradkabsday=day
+manna=0
+gs'stat'
 end
 }
-$BSvzat = {
-mannanow = intel*10+intel*magika
-     if mannanow>manna: 
-     mannaNeed = mannanow-manna
-         if mannaNeed<= BSmanna: 
-         BSmanna- = mannaNeed
-         manna+= mannaNeed
+$BSvzat={
+mannanow=intel*10+intel*magika
+     if mannanow>manna:
+     mannaNeed=mannanow-manna
+         if mannaNeed<=BSmanna:
+         BSmanna-=mannaNeed
+         manna+=mannaNeed
          end
-         if mannaNeed>BSmanna: 
-         manna+= BSmanna
-         BSmanna = 0
+         if mannaNeed>BSmanna:
+         manna+=BSmanna
+         BSmanna=0
          end
      end
-gs 'stat'
+gs'stat'
 }
-$spermEater = {
-if INFIGHT = 0: 
+$spermEater={
+if INFIGHT=0:
 clr
-SPbut- = 1
-	 if golod >= 10: 
-	  golod = golod + 5
-	 health = health+5
-	  fat = fat + 1
+SPbut-=1
+	 if golod >= 10:
+	 set golod = golod + 5
+	 health=health+5
+	 set fat = fat + 1
 	 'Вы объелись спермой.'
 	 end
-	 if golod < 10: 
-	  golod = golod + 10
-	 health = health+5
-	 manna = manna+5
+	 if golod < 10:
+	 set golod = golod + 10
+	 health=health+5
+	 manna=manna+5
 	 'Вы присосались к бутылочке со спермой своими огромными мокрыми черными губами и начали втягивать сперму.'
 	 end
  end
-gs 'stat'
+gs'stat'
 }
-$ToiletBookDin = {
-horny+= 50
-skverna+= 1
+$ToiletBookDin={
+horny+=50
+skverna+=1
 view'pic\EvedonEroBook\Dbook.jpg'
 }
 
-if BSmanna>= 100000: BSmanna = 100000
+if BSmanna>=100000:BSmanna=100000
 pl'<center>Содержимое инвентаря</center>'
-if SPbut>0 and serafLip = 1: pl'В бутылочке собрано <<SPbut>> порций спермы. <a href = "exec: dynamic $spermEater ">Съесть 1 порцию</a>'
-if blackStarArt = 1: pl'Артефакт черной звезды Механика, в нем <<BSmanna>> едениц маны <a href = "exec: dynamic $BSzarad ">ЗАРЯДИТЬ</a> <a href = "exec: dynamic $BSvzat ">ВЗЯТЬ ИЗ НЕГО ЭНЕРГИЮ</a>'
-if MazeSvitok = 1: pl'Одноразовый свиток телепортации <a href = "exec: dynamic $mazesvitokali ">ИСПОЛЬЗОВАТЬ</a>'
-if efsleep>0: pl'Нектар совы <<efsleep>> пузырьков <a href = "exec: gs ''efsleep''">выпить</a>'
-if edaw>0: pl'У вас <<edaw>> ломтей вяленого мяса <a href = "exec: gs ''estw''">съесть</a>'
-if spsyriken>0: pl'<<spsyriken>> шт. отравленных метательных кинжалов.'
-if spIgla>0: pl'<<spIgla>> упаковок игл Каллена необходимых для одноименного заклинания.'
-if nospIgla>0: pl'<<nospIgla>> упаковок швейных игл из которых посредством медитации перед зеркалом можно получить иглы Каллена.'
-if zelhel>0: pl'Малое зелье востановления здоровья <<zelhel>> пузырьков <a href = "exec: gs ''zelhel''">выпить</a>'
-if zelhel2>0: pl'Среднее зелье востановления здоровья <<zelhel2>> пузырьков <a href = "exec: gs ''zelhel2''">выпить</a>'
-if zelhel3>0: pl'Большое зелье востановления здоровья <<zelhel3>> пузырьков <a href = "exec: gs ''zelhel3''">выпить</a>'
-if zelhel4>0: pl'Зелье полного востановления здоровья <<zelhel4>> пузырьков <a href = "exec: gs ''zelhel4''">выпить</a>'
-if zelman>0: pl'Зелье востановления маны <<zelman>> пузырьков <a href = "exec: gs ''zelman''">выпить</a>'
-if zelwil>0: pl'Зелье востановления разума <<zelwil>> пузырьков <a href = "exec: gs ''zelwil''">выпить</a>'
-if efhorn>0: pl'Зелье монаха <<efhorn>> пузырьков <a href = "exec: gs ''efhorn''">выпить</a>'
-if gaman>0: pl'<<gaman>> пузырьков Гамана <a href = "exec: gs ''gaman''">выпить</a>'
-if zoday>0: pl'<<zoday>> пузырьков Зодая <a href = "exec: gs ''zoday''">выпить</a>'
-if shelok>0: pl'Склянок со щелоком <<shelok>> шт'
-if vordubina>0: pl'Бандитская дубинка для оглушения жертвы.'
-if vorazer>0: pl'Воровское лезвие для срезания кошельков.'
-if vorknife>0: pl'Нож устрашающего вида для запугивания жертвы.'
-if demonSoul>0: pl'Гемов с душами демонических тварей <<demonSoul>> штук'
-if tentSperm>0: pl'Спермы тентакля <<tentSperm>> штук <a href = "exec: gs ''skvr''">выпить</a>'
-if grib>0: pl'Членогрибов <<grib>> штук <a href = "exec: gs ''skgrib''">съесть</a>'
-if grib2>0: pl'Грибов красноголовиков <<grib2>> штук <a href = "exec: gs ''skgrib1''">съесть</a>'
-if grib3>0: pl'Грибов дристогонок <<grib3>> штук <a href = "exec: gs ''skgrib2''">съесть</a>'
-if grib4>0: pl'Грибов коротунов <<grib4>> штук <a href = "exec: gs ''skgrib3''">съесть</a>'
-if grib5>0: pl'Цвето грибов <<grib5>> штук <a href = "exec: gs ''skgrib4''">съесть</a>'
-if grib6>0: pl'Гриб плоскотун <<grib6>> штук <a href = "exec: gs ''skgrib6''">съесть</a>'
-if berry>0: pl'"Эльфийские ягоды <<berry>> штук <a href = "exec: gs ''skberry''">съесть</a>'
-if sera>0: pl'Демонической серы <<sera>> шт'
-if sucmilk>0: pl'Молока суккуба <<sucmilk>> штук <a href = "exec: gs ''skmilk''">выпить</a>'
-if laktaid>0: pl'Бутылок Лактаида <<laktaid>> штук <a href = "exec: gs ''sklakt''">выпить</a>'
-if improot>0: pl'Бесовский корень <<improot>> штук <a href = "exec: gs ''skimproot''">съесть</a>'
-if wooldemon>0: pl'Клочков демонической шерсти <<wooldemon>> шт'
-if klikdemon>0: pl'Демонических клыков <<klikdemon>> шт'
-if bloodemon>0: pl'Крови демона <<bloodemon>> пузырьков <a href = "exec: gs ''skblood''">выпить</a>'
-if horndemon>0: pl'Рогов демонов <<horndemon>> шт'
-if letherdemon>0: pl'Кусков кожи демона <<letherdemon>> шт'
-if silk>0: pl'Паучьего шелка <<silk>> штук'
-if vampireDust>0: pl'Прах вампира <<vampireDust>> шт'
-if blackAmulet = 1: pl'Амулет черной книги.'
-if blackBuben = 1: pl'Бубен из кожи демона для совершения обряда на кладбище.'
+if SPbut>0 and serafLip=1:pl'В бутылочке собрано <<SPbut>> порций спермы. <a href="exec:dynamic $spermEater ">Съесть 1 порцию</a>'
+if blackStarArt=1:pl'Артефакт черной звезды Механика, в нем <<BSmanna>> едениц маны <a href="exec:dynamic $BSzarad ">ЗАРЯДИТЬ</a> <a href="exec:dynamic $BSvzat ">ВЗЯТЬ ИЗ НЕГО ЭНЕРГИЮ</a>'
+if MazeSvitok=1:pl'Одноразовый свиток телепортации <a href="exec:dynamic $mazesvitokali ">ИСПОЛЬЗОВАТЬ</a>'
+if efsleep>0:pl'Нектар совы <<efsleep>> пузырьков <a href="exec:GS ''efsleep''">выпить</a>'
+if edaw>0:pl'У вас <<edaw>> ломтей вяленого мяса <a href="exec:GS ''estw''">съесть</a>'
+if spsyriken>0:pl'<<spsyriken>> шт. отравленных метательных кинжалов.'
+if spIgla>0:pl'<<spIgla>> упаковок игл Каллена необходимых для одноименного заклинания.'
+if nospIgla>0:pl'<<nospIgla>> упаковок швейных игл из которых посредством медитации перед зеркалом можно получить иглы Каллена.'
+if zelhel>0:pl'Малое зелье востановления здоровья <<zelhel>> пузырьков <a href="exec:GS ''zelhel''">выпить</a>'
+if zelhel2>0:pl'Среднее зелье востановления здоровья <<zelhel2>> пузырьков <a href="exec:GS ''zelhel2''">выпить</a>'
+if zelhel3>0:pl'Большое зелье востановления здоровья <<zelhel3>> пузырьков <a href="exec:GS ''zelhel3''">выпить</a>'
+if zelhel4>0:pl'Зелье полного востановления здоровья <<zelhel4>> пузырьков <a href="exec:GS ''zelhel4''">выпить</a>'
+if zelman>0:pl'Зелье востановления маны <<zelman>> пузырьков <a href="exec:GS ''zelman''">выпить</a>'
+if zelwil>0:pl'Зелье востановления разума <<zelwil>> пузырьков <a href="exec:GS ''zelwil''">выпить</a>'
+if efhorn>0:pl'Зелье монаха <<efhorn>> пузырьков <a href="exec:GS ''efhorn''">выпить</a>'
+if gaman>0:pl'<<gaman>> пузырьков Гамана <a href="exec:GS ''gaman''">выпить</a>'
+if zoday>0:pl'<<zoday>> пузырьков Зодая <a href="exec:GS ''zoday''">выпить</a>'
+if shelok>0:pl'Склянок со щелоком <<shelok>> шт'
+if vordubina>0:pl'Бандитская дубинка для оглушения жертвы.'
+if vorazer>0:pl'Воровское лезвие для срезания кошельков.'
+if vorknife>0:pl'Нож устрашающего вида для запугивания жертвы.'
+if demonSoul>0:pl'Гемов с душами демонических тварей <<demonSoul>> штук'
+if tentSperm>0:pl'Спермы тентакля <<tentSperm>> штук <a href="exec:GS ''skvr''">выпить</a>'
+if grib>0:pl'Членогрибов <<grib>> штук <a href="exec:GS ''skgrib''">съесть</a>'
+if grib2>0:pl'Грибов красноголовиков <<grib2>> штук <a href="exec:GS ''skgrib1''">съесть</a>'
+if grib3>0:pl'Грибов дристогонок <<grib3>> штук <a href="exec:GS ''skgrib2''">съесть</a>'
+if grib4>0:pl'Грибов коротунов <<grib4>> штук <a href="exec:GS ''skgrib3''">съесть</a>'
+if grib5>0:pl'Цвето грибов <<grib5>> штук <a href="exec:GS ''skgrib4''">съесть</a>'
+if grib6>0:pl'Гриб плоскотун <<grib6>> штук <a href="exec:GS ''skgrib6''">съесть</a>'
+if berry>0:pl'"Эльфийские ягоды <<berry>> штук <a href="exec:GS ''skberry''">съесть</a>'
+if sera>0:pl'Демонической серы <<sera>> шт'
+if sucmilk>0:pl'Молока суккуба <<sucmilk>> штук <a href="exec:GS ''skmilk''">выпить</a>'
+if laktaid>0:pl'Бутылок Лактаида <<laktaid>> штук <a href="exec:GS ''sklakt''">выпить</a>'
+if improot>0:pl'Бесовский корень <<improot>> штук <a href="exec:GS ''skimproot''">съесть</a>'
+if wooldemon>0:pl'Клочков демонической шерсти <<wooldemon>> шт'
+if klikdemon>0:pl'Демонических клыков <<klikdemon>> шт'
+if bloodemon>0:pl'Крови демона <<bloodemon>> пузырьков <a href="exec:GS ''skblood''">выпить</a>'
+if horndemon>0:pl'Рогов демонов <<horndemon>> шт'
+if letherdemon>0:pl'Кусков кожи демона <<letherdemon>> шт'
+if silk>0:pl'Паучьего шелка <<silk>> штук'
+if vampireDust>0:pl'Прах вампира <<vampireDust>> шт'
+if blackAmulet=1:pl'Амулет черной книги.'
+if blackBuben=1:pl'Бубен из кожи демона для совершения обряда на кладбище.'
 
-if toiletBook = 1: pl'Непристойная книга найденная в туалете. <a href = "exec: dynamic $ToiletBookDin ">Посмотреть</a>'
+if toiletBook=1:pl'Непристойная книга найденная в туалете. <a href="exec:dynamic $ToiletBookDin ">Посмотреть</a>'
 
-if gruz>0: pl'<center>Груза на продажу <<gruz>> единиц.</center>'
-if Licens>0: pl'<center>Торговая лицензия действительна еще <<Licens>> дней</center>'
-if GRtkan>0: pl'<center><<GRtkan>> шт дорогих тканей из Тель Адре.</center>'
-if GRkraska>0: pl'<center><<GRkraska>> шт упаковок краски для тканей.</center>'
-if GRiron>0: pl'<center><<GRiron>> шт металла из Мондюваля. Металл весит 2 ед</center>'
-if HomeLord>0: pl'<center>Дома во владении</center>'
-if HomeSlums = 1: pl'Свидетельство о собственности дома в трущебах.'
-if farmland = 1: pl'Свидетельство о владении фермой <<$farmname>>'
-if fishhouse = 1: pl'Свидетельство о собственности дома в рыбацкой деревне.'
-if fishbarkas>0: pl'В вашей собственности рыболовецкий баркас <<$barkasname>>' 
-     if world = 0: menu '$menu_inv'
+if gruz>0:pl'<center>Груза на продажу <<gruz>> единиц.</center>'
+if Licens>0:pl'<center>Торговая лицензия действительна еще <<Licens>> дней</center>'
+if GRtkan>0:pl'<center><<GRtkan>> шт дорогих тканей из Тель Адре.</center>'
+if GRkraska>0:pl'<center><<GRkraska>> шт упаковок краски для тканей.</center>'
+if GRiron>0:pl'<center><<GRiron>> шт металла из Мондюваля. Металл весит 2 ед</center>'
+if HomeLord>0:pl'<center>Дома во владении</center>'
+if HomeSlums=1:pl'Свидетельство о собственности дома в трущебах.'
+if farmland=1:pl'Свидетельство о владении фермой <<$farmname>>'
+if fishhouse=1:pl'Свидетельство о собственности дома в рыбацкой деревне.'
+if fishbarkas>0:pl'В вашей собственности рыболовецкий баркас <<$barkasname>>' 
+     if world=0:menu '$menu_inv'
 end
 
-if $selobj = 'Меню боевки': menu '$menu_fight'
+if $selobj='Меню боевки':menu '$menu_fight'
 
-if $selobj = 'Выключить музыку': 
-music_on = 0
+if $selobj='Выключить музыку':
+music_on=0
 DELOBJ'Выключить музыку'
 end
 

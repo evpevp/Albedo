@@ -7,122 +7,122 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Трактирщица Тенни</H4></center>'
-'<center><img src = "pic/EvedonNarod\tenny.jpg"></center>'
+'<center><img src="pic/EvedonNarod\tenny.jpg"></center>'
 'Что изволите?'
 'Еда 3 гема.'
 'Пиво 2 гема.'
 'Виски 5 гемов.'
 clr
-gs 'stat'
-if cumface>0: SUB = SUB+1 & whore = whore+1 & 'Хм, ты бы хоть сперму с лица смыла, шлюха. У вас вспыхнули щеки после этого замечания.'
-if cumlip>0: SUB = SUB+1 & whore = whore+1 & 'Фу, у тебя не рот, а мусорка для спермы, оттуда живьем несет кончей. У вас вспыхнули щеки после этого замечания.'
-if karavanday>= 12 and karavanday<= 20: 'От этих мужланов из гильдии караванщиков одни проблемы, но у них водятся деньги и они много пьют.'
-act 'Отойти от стойки': gt 'tabarW'
+gs'stat'
+if cumface>0:SUB=SUB+1&whore=whore+1&'Хм, ты бы хоть сперму с лица смыла, шлюха. У вас вспыхнули щеки после этого замечания.'
+if cumlip>0:SUB=SUB+1&whore=whore+1&'Фу, у тебя не рот, а мусорка для спермы, оттуда живьем несет кончей. У вас вспыхнули щеки после этого замечания.'
+if karavanday>=12 and karavanday<=20:'От этих мужланов из гильдии караванщиков одни проблемы, но у них водятся деньги и они много пьют.'
+act 'Отойти от стойки':gt'tabarW'
 
-if sweat>0: manna = manna-10 & 'Фу, воняет от тебя как от задницы ишака. Говорит вам, затыкая нос трактирщица.'
+if sweat>0:manna=manna-10&'Фу, воняет от тебя как от задницы ишака. Говорит вам, затыкая нос трактирщица.'
 
 
-if hour>= 6 and hour<= 22:  
+if hour>=6 and hour<= 22:  
 
-	 if gem>= 3: 
-		 act 'Еды': 
+	 if gem>=3:
+		 act 'Еды':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem-3
-		 gs 'eda'
+		 minut=minut+15
+		 gem=gem-3
+		 gs'eda'
 		 'Трактирщица достала вам тарелку, до верху наполненную едой.'
-		 gs 'eat'
-		 act 'Отойти от стойки': gt 'tabarW'
+		 gs'eat'
+		 act 'Отойти от стойки':gt'tabarW'
 		 end
 	 end
 
-	 if gem>= 2: 
-		 act 'Пива': 
+	 if gem>=2:
+		 act 'Пива':
 		 cla
-		 minut += 15
-		 gem = gem-2
-		 fat = fat+1
-		 alko = alko+2
-		 golod = golod+3
-		 manna = manna+10
-		 wipo = wipo+10
-		 horny = horny+5
+		 minut=minut+15
+		 gem=gem-2
+		 fat=fat+1
+		 alko=alko+2
+		 golod=golod+3
+		 manna=manna+10
+		 wipo=wipo+10
+		 horny=horny+5
 	      *clr
-         '<center><img src = "pic/EvedonOd\beer.jpg"></center>'
+         '<center><img src="pic/EvedonOd\beer.jpg"></center>'
 		 'Трактирщица достала вам кружку, наполненную пенящимся пивом и вы быстренько ее выпили.'
-		 act 'Отойти от стойки': gt 'tabarW'
+		 act 'Отойти от стойки':gt'tabarW'
 		 end
 	 end
 
-	 if gem>= 5: 
-		 act 'Виски': 
+	 if gem>=5:
+		 act 'Виски':
 		 cla
-		 minut += 15
-		 gem = gem-5
-		 alko = alko+5
-		 manna = manna+20
-		 wipo = wipo+20
-		 horny = horny+10
+		 minut=minut+15
+		 gem=gem-5
+		 alko=alko+5
+		 manna=manna+20
+		 wipo=wipo+20
+		 horny=horny+10
 	     *clr
-         '<center><img src = "pic/EvedonOd\wiskey.jpg"></center>'
+         '<center><img src="pic/EvedonOd\wiskey.jpg"></center>'
 		 'Трактирщица достала вам стакан, наполненный вонючим пойлом, вы залпом его выпили.'
-		 act 'Отойти от стойки': gt 'tabarW'
+		 act 'Отойти от стойки':gt'tabarW'
 		 end
 	 end
 	 
-	 if mimiko = 2: 
-	     act 'Спросить про Мимико': 
+	 if mimiko=2:
+	     act 'Спросить про Мимико':
 	     cla
 	     *clr
-	     minut += 15
-	     mimiko = 3
-	     '<center><img src = "pic/EvedonNarod\tenny.jpg"></center>'
+	     minut=minut+15
+	     mimiko=3
+	     '<center><img src="pic/EvedonNarod\tenny.jpg"></center>'
 	     'Вы спрашиваете трактирщице про Мимико. Тенни говорит вам, что была здесь девушка с таким именем, но она ушла в пустыню буквально час назад.'
-	     act 'Отойти': gt 'tabarW'
+	     act 'Отойти':gt'tabarW'
 	     end
 	 end
 	 
-	 act 'Поболтать с трактирщицей': 
+	 act 'Поболтать с трактирщицей':
 	 cla
-	 minut += 5
+	 minut=minut+5
 	 'Трактирщица спокойная дородная женщина по имени Тенни. Она рассказывает вам что на многие лиги вокруг нет не то что лучшей кухни чем у нее, а вообще ни одного трактира нет.'
 	 'Отношения <<tenniQW>>'
-     act 'Отойти': gt $CURLOC
+     act 'Отойти':gt $CURLOC
      
-         if gem = 0: 'Если у тебя гемов нет, зайди в швейную мастерскую. Элесса ищет помощников, да и платит вроде неплохо. Можешь, конечно, и на меня поработать, полы там помыть или посуду.'
+         if gem=0:'Если у тебя гемов нет, зайди в швейную мастерскую. Элесса ищет помощников, да и платит вроде неплохо. Можешь, конечно, и на меня поработать, полы там помыть или посуду.'
          
      
-         act 'Сменить имя': 
+         act 'Сменить имя':
          cla
-         $name = input ("Введите ваше новое имя")
-         act 'Отойти': gt $CURLOC
+         $name= input ("Введите ваше новое имя")
+         act 'Отойти':gt $CURLOC
          end
          	
-		 if polbarday!day: 	
-			 act 'Подрабатывать мытьем полов': 
+		 if polbarday!day:	
+			 act 'Подрабатывать мытьем полов':
 			 cla
-			 minut += 60
-			 manna = manna-2
-			 gem = gem+25
-			 polbarday = day
-			 exp = exp+1
-			 tenniQW = tenniQW+1
+			 minut=minut+60
+			 manna=manna-2
+			 gem=gem+25
+			 polbarday=day
+			 exp=exp+1
+			 tenniQW=tenniQW+1
 			 'Трактирщица показала вам ведро и тряпку. Вы взяли их и начали мыть полы в трактире. Наконец через час полы были уже в приличном виде и трактирщица дала вам за работу 25 гемов.'
-			 act 'Отойти': gt $CURLOC
+			 act 'Отойти':gt $CURLOC
 			 end
 		 end	
-		 if posudbarday!day: 	
-			 act 'Подрабатывать мытьем посуды': 
+		 if posudbarday!day:	
+			 act 'Подрабатывать мытьем посуды':
 			 cla
-			 minut += 60
-			 manna = manna-2
-			 gem = gem+25
-			 posudbarday = day
-			 exp = exp+1
-			 tenniQW = tenniQW+1
+			 minut=minut+60
+			 manna=manna-2
+			 gem=gem+25
+			 posudbarday=day
+			 exp=exp+1
+			 tenniQW=tenniQW+1
 			 'Трактирщица показала вам корыто, в котором она обыкновенно моет посуду. Вы взяли тряпку и щелок и начали отмывать посуду до блеска. Наконец через час вы отдраили всю посуду и трактирщица дала вам за работу 25 гемов.'
-			 act 'Отойти': gt $CURLOC
+			 act 'Отойти':gt $CURLOC
 			 end
 		 end
 	 end

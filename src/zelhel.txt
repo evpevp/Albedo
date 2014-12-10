@@ -1,14 +1,14 @@
 # zelhel
 clr
 
-gs 'stat'
-zelhel = zelhel-1
-health = health+200
-if INFIGHT = 1: 
+gs'stat'
+zelhel=zelhel-1
+health=health+200
+if INFIGHT=1:
 DELOBJ 'Инвентарь'
-'<center><img src = "pic/EvedonOd\potion.jpg"></center>'
+'<center><img src="pic/EvedonOd\potion.jpg"></center>'
 end
 clr
-gs 'stat'
+gs'stat'
 --- zelhel ---------------------------------
 

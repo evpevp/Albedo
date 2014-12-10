@@ -1,125 +1,125 @@
 # init
 !ИНИЦИАТИВА
 
- init = stun + stam + cut
- initV = stunV + stamV + cutV
+set init = stun + stam + cut
+set initV = stunV + stamV + cutV
 
 
 
 
-if init = initV: 
+if init = initV:
 !равные кондиции
-     if hodtime <= hodtimeV and iniOnce = 0: 
-      hod = 0
-      hodtime = hodtime + 1
-      iniOnce = 1
-     '<font color = green>Вы захватили инициативу</font>'
+     if hodtime <= hodtimeV and iniOnce = 0:
+     set hod = 0
+     set hodtime = hodtime + 1
+     set iniOnce = 1
+     '<font color=green>Вы захватили инициативу</font>'
      end
-     if hodtime > hodtimeV and iniOnce = 0: 
-      hod = 1
-      hodtimeV = hodtimeV + 1
-      iniOnce = 1
-     '<font color = red><<$nameV>> захватила инициативу</font>'
+     if hodtime > hodtimeV and iniOnce = 0:
+     set hod = 1
+     set hodtimeV = hodtimeV + 1
+     set iniOnce = 1
+     '<font color=red><<$nameV>> захватила инициативу</font>'
      end
 
 end
 
-if init < initV: 
+if init < initV:
 !игрок свежее
- kini = initV - init
-     if kini >= 4: 
+set kini = initV - init
+     if kini >= 4:
      !полная жопа, 4 подряд
-         if hodtime <= hodtimeV+3 and iniOnce = 0: 
-		  hod = 0
-		  hodtime = hodtime + 1
-		  iniOnce = 1
-		 '<font color = green>Вы захватили инициативу</font>'
+         if hodtime <= hodtimeV+3 and iniOnce = 0:
+		 set hod = 0
+		 set hodtime = hodtime + 1
+		 set iniOnce = 1
+		 '<font color=green>Вы захватили инициативу</font>'
 		 end
-		 if hodtime > hodtimeV+3 and iniOnce = 0: 
-		  hod = 1
-		  hodtimeV = hodtimeV + 1
-		  iniOnce = 1
-		 '<font color = red><<$nameV>> захватила инициативу</font>'
+		 if hodtime > hodtimeV+3 and iniOnce = 0:
+		 set hod = 1
+		 set hodtimeV = hodtimeV + 1
+		 set iniOnce = 1
+		 '<font color=red><<$nameV>> захватила инициативу</font>'
 		 end
      end
-     if kini >= 2 and kini < 4: 
+     if kini >= 2 and kini < 4:
      !полная жопа, 3 подряд
-         if hodtime <= hodtimeV+2 and iniOnce = 0: 
-		  hod = 0
-		  hodtime = hodtime + 1
-		  iniOnce = 1
-		 '<font color = green>Вы захватили инициативу</font>'
+         if hodtime <= hodtimeV+2 and iniOnce = 0:
+		 set hod = 0
+		 set hodtime = hodtime + 1
+		 set iniOnce = 1
+		 '<font color=green>Вы захватили инициативу</font>'
 		 end
-		 if hodtime > hodtimeV+2 and iniOnce = 0: 
-		  hod = 1
-		  hodtimeV = hodtimeV + 1
-		  iniOnce = 1
-		 '<font color = red><<$nameV>> захватила инициативу</font>'
+		 if hodtime > hodtimeV+2 and iniOnce = 0:
+		 set hod = 1
+		 set hodtimeV = hodtimeV + 1
+		 set iniOnce = 1
+		 '<font color=red><<$nameV>> захватила инициативу</font>'
 		 end
      end
-     if kini < 2: 
+     if kini < 2:
      ! 2 подряд
-         if hodtime <= hodtimeV+1 and iniOnce = 0: 
-		  hod = 0
-		  hodtime = hodtime + 1
-		  iniOnce = 1
-		 '<font color = green>Вы захватили инициативу</font>'
+         if hodtime <= hodtimeV+1 and iniOnce = 0:
+		 set hod = 0
+		 set hodtime = hodtime + 1
+		 set iniOnce = 1
+		 '<font color=green>Вы захватили инициативу</font>'
 		 end
-		 if hodtime > hodtimeV+1 and iniOnce = 0: 
-		  hod = 1
-		  hodtimeV = hodtimeV + 1
-		  iniOnce = 1
-		 '<font color = red><<$nameV>> захватила инициативу</font>'
+		 if hodtime > hodtimeV+1 and iniOnce = 0:
+		 set hod = 1
+		 set hodtimeV = hodtimeV + 1
+		 set iniOnce = 1
+		 '<font color=red><<$nameV>> захватила инициативу</font>'
 		 end
      end
 end
 
-if init > initV: 
+if init > initV:
 !противник свежее
- kini = init - initV
-     if kini >= 4: 
+set kini = init - initV
+     if kini >= 4:
      !полная жопа 3 подряд
-         if hodtimeV <= hodtime+3 and iniOnce = 0: 
-		  hod = 1
-		  hodtimeV = hodtimeV + 1
-		  iniOnce = 1
-		 '<font color = red><<$nameV>> захватила инициативу</font>'
+         if hodtimeV <= hodtime+3 and iniOnce = 0:
+		 set hod = 1
+		 set hodtimeV = hodtimeV + 1
+		 set iniOnce = 1
+		 '<font color=red><<$nameV>> захватила инициативу</font>'
 		 end
-		 if hodtimeV > hodtime+3 and iniOnce = 0: 
-		  hod = 0
-		  hodtime = hodtime + 1
-		  iniOnce = 1
-		 '<font color = green>Вы захватили инициативу</font>'
+		 if hodtimeV > hodtime+3 and iniOnce = 0:
+		 set hod = 0
+		 set hodtime = hodtime + 1
+		 set iniOnce = 1
+		 '<font color=green>Вы захватили инициативу</font>'
 		 end
      end
-     if kini >= 2 and kini < 4: 
+     if kini >= 2 and kini < 4:
      !полная жопа 3 подряд
-         if hodtimeV <= hodtime+2 and iniOnce = 0: 
-		  hod = 1
-		  hodtimeV = hodtimeV + 1
-		  iniOnce = 1
-		 '<font color = red><<$nameV>> захватила инициативу</font>'
+         if hodtimeV <= hodtime+2 and iniOnce = 0:
+		 set hod = 1
+		 set hodtimeV = hodtimeV + 1
+		 set iniOnce = 1
+		 '<font color=red><<$nameV>> захватила инициативу</font>'
 		 end
-		 if hodtimeV > hodtime+2 and iniOnce = 0: 
-		  hod = 0
-		  hodtime = hodtime + 1
-		  iniOnce = 1
-		 '<font color = green>Вы захватили инициативу</font>'
+		 if hodtimeV > hodtime+2 and iniOnce = 0:
+		 set hod = 0
+		 set hodtime = hodtime + 1
+		 set iniOnce = 1
+		 '<font color=green>Вы захватили инициативу</font>'
 		 end
      end
-     if kini < 2: 
+     if kini < 2:
      !2 подряд
-         if hodtimeV <= hodtime+1 and iniOnce = 0: 
-		  hod = 1
-		  hodtimeV = hodtimeV + 1
-		  iniOnce = 1
-		 '<font color = red><<$nameV>> захватила инициативу</font>'
+         if hodtimeV <= hodtime+1 and iniOnce = 0:
+		 set hod = 1
+		 set hodtimeV = hodtimeV + 1
+		 set iniOnce = 1
+		 '<font color=red><<$nameV>> захватила инициативу</font>'
 		 end
-		 if hodtimeV > hodtime+1 and iniOnce = 0: 
-		  hod = 0
-		  hodtime = hodtime + 1
-		  iniOnce = 1
-		 '<font color = green>Вы захватили инициативу</font>'
+		 if hodtimeV > hodtime+1 and iniOnce = 0:
+		 set hod = 0
+		 set hodtime = hodtime + 1
+		 set iniOnce = 1
+		 '<font color=green>Вы захватили инициативу</font>'
 		 end
      end
 end

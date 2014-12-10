@@ -8,72 +8,72 @@ $locM = $CURLOC
 cla
 *clr
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>ШИзо</B></center>'
 '<center>Штрафной изолятор</center>'
-'<center><img src = "pic/jail/shizo.jpg" ></center>'
+'<center><img src="pic/jail/shizo.jpg" ></center>'
 'Вы отсидели в шизо <<shizosrok>> суток'
 'Мыло <<milo>>, бритвенный станок <<stanok>>'
 'Ржавый ((умывальник|umiv)) над которыми висит маленькое ((зеркало|mirror)) из полированного металла.'
 
-if knazQW = 0: 
+if knazQW=0:
 cla
-knazQW = 1
+knazQW=1
 'В шизо сидят трое человек. Самый старший по возрасту не вставая из-за столика представляется. "Я Князь, смотрящий зоны, это Макака и Гвоздь, а ты кто?"'
 'Вы едва двигая разбитыми в кровь губами прошамкали "Харитонов из 2го отряда."'
 '(Князь) - Доходили слухи о тебе, живешь по закону, мусора прессануть тебя пытаются. Проходи к нам, присаживайся.'
 'Вы сели за стол. Князь похлопал вас по плечу. "Ничего, до свадьбы заживет, и не дрейфь, скажу Моголу, чтобы подтянул тебя. Ты правильный пацан. Будешь общак собирать, а опера не бойся, отстанет."'
 '"Тут в шизо душняк мусора устраивают, курехи нет, жратвы тоже." грустно подытожил Князь.'
-act 'Встать.': gt $CURLOC
+act 'Встать.':gt $CURLOC
 exit
 end
 
-if hour>= 22 or hour<6: 
-     act 'Лечь на шконарь.': 
-     shizosrok = shizosrok+1
+if hour>=22 or hour<6:
+     act 'Лечь на шконарь.':
+     shizosrok=shizosrok+1
      gt 'bed'
      end
 end
 
-if hour>= 6 and hour<22 and shizosrok < 15: 
-     act 'Сидеть на лавке час.': 
-      minut = minut + 60
-     manna = manna+will
+if hour>=6 and hour<22 and shizosrok < 15:
+     act 'Сидеть на лавке час.':
+     set minut = minut + 60
+     manna=manna+will
      gt $CURLOC
      end
      
-     if hour = 12: 
+     if hour = 12:
      'Открылось окошко и начали выдавать баланду.'
-     	 act 'Есть баланду 1 час.': 
+     	 act 'Есть баланду 1 час.':
          cla
-         minut += 60
-         golod = golod+10
-         manna = manna-5
+         minut=minut+60
+         golod=golod+10
+         manna=manna-5
          'Вы едите мерзко воняющую баланду приготовленную не понятно из какой дряни.'
-         act 'Убрать остатки.': gt $CURLOC
+         act 'Убрать остатки.':gt $CURLOC
          end
      end
      
-     if horny>= 50: 
-         act 'Дрочить член на параше (не западло)': 
+     if horny>=50:
+         act 'Дрочить член на параше (не западло)':
          cla
-         minut += 15
-         horny = 0
-         manna = manna+5
+         minut=minut+15
+         horny=0
+         manna=manna+5
          jerk = jerk + 1
          'Вы по-быстрому передернули затвор.'
-         act 'Вымыть руки.': gt $CURLOC
+         act 'Вымыть руки.':gt $CURLOC
          end
      end
 
 end
 
-if hour>= 6 and hour<22 and shizosrok >= 15: 
+if hour>=6 and hour<22 and shizosrok >= 15:
 'В шизо ввалилась охрана, Харитонов, на выход.'
-act 'Выйти.': gt 'operchast'
+act 'Выйти.':gt 'operchast'
 end
 --- shizo ---------------------------------
 

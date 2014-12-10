@@ -1,13 +1,13 @@
 # bakkara
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-minut+= 60
+minut+=60
 cla
 *clr
 clr
-gs 'stat'
-kardE = 0
+gs'stat'
+kardE=0
 'Правила игры'
 'Игрок играет против банка. Можно сделать ставку на победу, на поражение и на ничью. Выплаты при ставке на победу 1к1, при ставке на поражение 1к0,5 и выплата при ставке на ничью 1к9'
 'В начале игры сдается две карты, и игрок и банк могут взять третью карту.'
@@ -17,28 +17,28 @@ kardE = 0
 *nl
 'Ставка <<stavkaGame>> гем'
 
-	 act 'Уйти': 
+	 act 'Уйти':
 	 GOTO $locGame, $metkaGame
 	 end
 	 
-	 if hour>= 8: 
-		 if gem>= stavkaGame: 
-			 act 'Сделать ставку на победу': 
-			 gem- = stavkaGame
-			 StavkaKardNum = 1
-			 gt 'bakkara','0'
+	 if hour>=8:
+		 if gem>=stavkaGame:
+			 act 'Сделать ставку на победу':
+			 gem-=stavkaGame
+			 StavkaKardNum=1
+			 gt'bakkara','0'
 			 end
 			 
-			 act 'Сделать ставку на поражение': 
-			 gem- = stavkaGame
-			 StavkaKardNum = 2
-			 gt 'bakkara','0'
+			 act 'Сделать ставку на поражение':
+			 gem-=stavkaGame
+			 StavkaKardNum=2
+			 gt'bakkara','0'
 			 end
 			 
-			 act 'Сделать ставку на ничью': 
-			 gem- = stavkaGame
-			 StavkaKardNum = 3
-			 gt 'bakkara','0'
+			 act 'Сделать ставку на ничью':
+			 gem-=stavkaGame
+			 StavkaKardNum=3
+			 gt'bakkara','0'
 			 end
 		 end
 	 else
@@ -46,243 +46,243 @@ kardE = 0
 	 end
 end
 
-if $ARGS[0] = 'kart': 
+if $ARGS[0]='kart':
 $metka = $ARGS[0]
 $loc = $CURLOC
-kartrand = RAND(0,51)
-     if kartrand = 0: $kart = 'Туз пик' & Knom = 1
-     if kartrand = 1: $kart = 'Король пик' & Knom = 0
-     if kartrand = 2: $kart = 'Дама пик' & Knom = 0
-     if kartrand = 3: $kart = 'Валет пик' & Knom = 0
-     if kartrand = 4: $kart = '10 пик' & Knom = 0
-     if kartrand = 5: $kart = '9 пик' & Knom = 9
-     if kartrand = 6: $kart = '8 пик' & Knom = 8
-     if kartrand = 7: $kart = '7 пик' & Knom = 7
-     if kartrand = 8: $kart = '6 пик' & Knom = 6
-     if kartrand = 9: $kart = '5 пик' & Knom = 5
-     if kartrand = 10: $kart = '4 пик' & Knom = 4
-     if kartrand = 11: $kart = '3 пик' & Knom = 3
-     if kartrand = 12: $kart = '2 пик' & Knom = 2
-     if kartrand = 13: $kart = 'Туз крестей' & Knom = 1
-     if kartrand = 14: $kart = 'Король крестей' & Knom = 0
-     if kartrand = 15: $kart = 'Дама крестей' & Knom = 0
-     if kartrand = 16: $kart = 'Валет крестей' & Knom = 0
-     if kartrand = 17: $kart = '10 крестей' & Knom = 0
-     if kartrand = 18: $kart = '9 крестей' & Knom = 9
-     if kartrand = 19: $kart = '8 крестей' & Knom = 8
-     if kartrand = 20: $kart = '7 крестей' & Knom = 7
-     if kartrand = 21: $kart = '6 крестей' & Knom = 6
-     if kartrand = 22: $kart = '5 крестей' & Knom = 5
-     if kartrand = 23: $kart = '4 крестей' & Knom = 4
-     if kartrand = 24: $kart = '3 крестей' & Knom = 3
-     if kartrand = 25: $kart = '2 крестей' & Knom = 2
-     if kartrand = 26: $kart = 'Туз червей' & Knom = 1
-     if kartrand = 27: $kart = 'Король червей' & Knom = 0
-     if kartrand = 28: $kart = 'Дама червей' & Knom = 0
-     if kartrand = 29: $kart = 'Валет червей' & Knom = 0
-     if kartrand = 30: $kart = '10 червей' & Knom = 0
-     if kartrand = 31: $kart = '9 червей' & Knom = 9
-     if kartrand = 32: $kart = '8 червей' & Knom = 8
-     if kartrand = 33: $kart = '7 червей' & Knom = 7
-     if kartrand = 34: $kart = '6 червей' & Knom = 6
-     if kartrand = 35: $kart = '5 червей' & Knom = 5
-     if kartrand = 36: $kart = '4 червей' & Knom = 4
-     if kartrand = 37: $kart = '3 червей' & Knom = 3
-     if kartrand = 38: $kart = '2 червей' & Knom = 2
-     if kartrand = 39: $kart = 'Туз бубей' & Knom = 1
-     if kartrand = 40: $kart = 'Король бубей' & Knom = 0
-     if kartrand = 41: $kart = 'Дама бубей' & Knom = 0
-     if kartrand = 42: $kart = 'Валет бубей' & Knom = 0
-     if kartrand = 43: $kart = '10 бубей' & Knom = 0
-     if kartrand = 44: $kart = '9 бубей' & Knom = 9
-     if kartrand = 45: $kart = '8 бубей' & Knom = 8
-     if kartrand = 46: $kart = '7 бубей' & Knom = 7
-     if kartrand = 47: $kart = '6 бубей' & Knom = 6
-     if kartrand = 48: $kart = '5 бубей' & Knom = 5
-     if kartrand = 49: $kart = '4 бубей' & Knom = 4
-     if kartrand = 50: $kart = '3 бубей' & Knom = 3
-     if kartrand = 51: $kart = '2 бубей' & Knom = 2
+kartrand=RAND(0,51)
+     if kartrand=0:$kart='Туз пик'&Knom=1
+     if kartrand=1:$kart='Король пик'&Knom=0
+     if kartrand=2:$kart='Дама пик'&Knom=0
+     if kartrand=3:$kart='Валет пик'&Knom=0
+     if kartrand=4:$kart='10 пик'&Knom=0
+     if kartrand=5:$kart='9 пик'&Knom=9
+     if kartrand=6:$kart='8 пик'&Knom=8
+     if kartrand=7:$kart='7 пик'&Knom=7
+     if kartrand=8:$kart='6 пик'&Knom=6
+     if kartrand=9:$kart='5 пик'&Knom=5
+     if kartrand=10:$kart='4 пик'&Knom=4
+     if kartrand=11:$kart='3 пик'&Knom=3
+     if kartrand=12:$kart='2 пик'&Knom=2
+     if kartrand=13:$kart='Туз крестей'&Knom=1
+     if kartrand=14:$kart='Король крестей'&Knom=0
+     if kartrand=15:$kart='Дама крестей'&Knom=0
+     if kartrand=16:$kart='Валет крестей'&Knom=0
+     if kartrand=17:$kart='10 крестей'&Knom=0
+     if kartrand=18:$kart='9 крестей'&Knom=9
+     if kartrand=19:$kart='8 крестей'&Knom=8
+     if kartrand=20:$kart='7 крестей'&Knom=7
+     if kartrand=21:$kart='6 крестей'&Knom=6
+     if kartrand=22:$kart='5 крестей'&Knom=5
+     if kartrand=23:$kart='4 крестей'&Knom=4
+     if kartrand=24:$kart='3 крестей'&Knom=3
+     if kartrand=25:$kart='2 крестей'&Knom=2
+     if kartrand=26:$kart='Туз червей'&Knom=1
+     if kartrand=27:$kart='Король червей'&Knom=0
+     if kartrand=28:$kart='Дама червей'&Knom=0
+     if kartrand=29:$kart='Валет червей'&Knom=0
+     if kartrand=30:$kart='10 червей'&Knom=0
+     if kartrand=31:$kart='9 червей'&Knom=9
+     if kartrand=32:$kart='8 червей'&Knom=8
+     if kartrand=33:$kart='7 червей'&Knom=7
+     if kartrand=34:$kart='6 червей'&Knom=6
+     if kartrand=35:$kart='5 червей'&Knom=5
+     if kartrand=36:$kart='4 червей'&Knom=4
+     if kartrand=37:$kart='3 червей'&Knom=3
+     if kartrand=38:$kart='2 червей'&Knom=2
+     if kartrand=39:$kart='Туз бубей'&Knom=1
+     if kartrand=40:$kart='Король бубей'&Knom=0
+     if kartrand=41:$kart='Дама бубей'&Knom=0
+     if kartrand=42:$kart='Валет бубей'&Knom=0
+     if kartrand=43:$kart='10 бубей'&Knom=0
+     if kartrand=44:$kart='9 бубей'&Knom=9
+     if kartrand=45:$kart='8 бубей'&Knom=8
+     if kartrand=46:$kart='7 бубей'&Knom=7
+     if kartrand=47:$kart='6 бубей'&Knom=6
+     if kartrand=48:$kart='5 бубей'&Knom=5
+     if kartrand=49:$kart='4 бубей'&Knom=4
+     if kartrand=50:$kart='3 бубей'&Knom=3
+     if kartrand=51:$kart='2 бубей'&Knom=2
 end
 
 
-if $ARGS[0] = '0': 
+if $ARGS[0]='0':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-gs 'stat'
-gs 'bakkara','kart'
-$kart1 = $kart
-Knom1 = Knom
-gs 'bakkara','kart'
-$kart2 = $kart
-Knom2 = Knom
-KnomSum = Knom1+Knom2
-if KnomSum>= 10: 
-KnomSumA = KnomSum-10
+gs'stat'
+gs'bakkara','kart'
+$kart1=$kart
+Knom1=Knom
+gs'bakkara','kart'
+$kart2=$kart
+Knom2=Knom
+KnomSum=Knom1+Knom2
+if KnomSum>=10:
+KnomSumA=KnomSum-10
 else
-KnomSumA = KnomSum
+KnomSumA=KnomSum
 end
 'Вам сдали две карты.'
 '<B><<$kart1>></B> и <B><<$kart2>></B>, сумма очков <<KnomSumA>>'
-	 act 'Открыть третью карту': 
-	 gs 'bakkara','kart'
-	 $kart3 = $kart
-	 Knom3 = Knom
-	 KnomSum = KnomSum+Knom3
-	 gt 'bakkara','1'
+	 act 'Открыть третью карту':
+	 gs'bakkara','kart'
+	 $kart3=$kart
+	 Knom3=Knom
+	 KnomSum=KnomSum+Knom3
+	 gt'bakkara','1'
 	 end
 	 
-	 act 'Ставка': 
-	 PlayerPointKart = KnomSumA
-	 gt 'bakkara','2'
+	 act 'Ставка':
+	 PlayerPointKart=KnomSumA
+	 gt'bakkara','2'
 	 end
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-gs 'stat'
-if KnomSum>= 10: 
-KnomSumA = KnomSum-10
+gs'stat'
+if KnomSum>=10:
+KnomSumA=KnomSum-10
 else
-KnomSumA = KnomSum
+KnomSumA=KnomSum
 end
-PlayerPointKart = KnomSumA
+PlayerPointKart=KnomSumA
 'Вы открыли третью карту.'
 '<B><<$kart1>></B>, <B><<$kart2>></B> и <B><<$kart3>></B>, сумма очков <<KnomSumA>>'
-	 act 'Ход банкира': 
-	 gt 'bakkara','2'
+	 act 'Ход банкира':
+	 gt'bakkara','2'
 	 end
 end
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-gs 'stat'
+gs'stat'
 'У вас <<PlayerPointKart>> очков.'
-gs 'bakkara','kart'
-$kartE1 = $kart
-KnomE1 = Knom
-gs 'bakkara','kart'
-$kartE2 = $kart
-KnomE2 = Knom
-KnomSumE = KnomE1+KnomE2
-	 if KnomSumE>= 10: 
-	 KnomSumEA = KnomSumE-10
+gs'bakkara','kart'
+$kartE1=$kart
+KnomE1=Knom
+gs'bakkara','kart'
+$kartE2=$kart
+KnomE2=Knom
+KnomSumE=KnomE1+KnomE2
+	 if KnomSumE>=10:
+	 KnomSumEA=KnomSumE-10
 	 else
-	 KnomSumEA = KnomSumE
+	 KnomSumEA=KnomSumE
 	 end
 	 
-	 if StavkaKardNum = 1: 
-	     if PlayerPointKart>KnomSumEA: 
-	     gs 'bakkara','kart'
-		 $kartE3 = $kart
-		 KnomE3 = Knom
-		 KnomSumE = KnomE1+KnomE2+KnomE3
-		 	 if KnomSumE>= 10: 
-			 KnomSumEA = KnomSumE-10
+	 if StavkaKardNum=1:
+	     if PlayerPointKart>KnomSumEA:
+	     gs'bakkara','kart'
+		 $kartE3=$kart
+		 KnomE3=Knom
+		 KnomSumE=KnomE1+KnomE2+KnomE3
+		 	 if KnomSumE>=10:
+			 KnomSumEA=KnomSumE-10
 			 else
-			 KnomSumEA = KnomSumE
+			 KnomSumEA=KnomSumE
 			 end
-		 kardE = 1
+		 kardE=1
 	     end
 	 end
 	 
-	 if StavkaKardNum = 2: 
-	 	 if PlayerPointKart<KnomSumEA: 
-	     gs 'bakkara','kart'
-		 $kartE3 = $kart
-		 KnomE3 = Knom
-		 KnomSumE = KnomE1+KnomE2+KnomE3
-		 	 if KnomSumE>= 10: 
-			 KnomSumEA = KnomSumE-10
+	 if StavkaKardNum=2:
+	 	 if PlayerPointKart<KnomSumEA:
+	     gs'bakkara','kart'
+		 $kartE3=$kart
+		 KnomE3=Knom
+		 KnomSumE=KnomE1+KnomE2+KnomE3
+		 	 if KnomSumE>=10:
+			 KnomSumEA=KnomSumE-10
 			 else
-			 KnomSumEA = KnomSumE
+			 KnomSumEA=KnomSumE
 			 end
-		 kardE = 1
+		 kardE=1
 	     end
 	 end
 	 
-	 if StavkaKardNum = 3: 
-	 	 if PlayerPointKart = KnomSumEA: 
-	     gs 'bakkara','kart'
-		 $kartE3 = $kart
-		 KnomE3 = Knom
-		 KnomSumE = KnomE1+KnomE2+KnomE3
-		 	 if KnomSumE>= 10: 
-			 KnomSumEA = KnomSumE-10
+	 if StavkaKardNum=3:
+	 	 if PlayerPointKart=KnomSumEA:
+	     gs'bakkara','kart'
+		 $kartE3=$kart
+		 KnomE3=Knom
+		 KnomSumE=KnomE1+KnomE2+KnomE3
+		 	 if KnomSumE>=10:
+			 KnomSumEA=KnomSumE-10
 			 else
-			 KnomSumEA = KnomSumE
+			 KnomSumEA=KnomSumE
 			 end
-		 kardE = 1
+		 kardE=1
 	     end
 	 end
 	 
-if kardE = 0: 'Карты банка <B><<$kartE1>></B>, <B><<$kartE2>></B>, сумма очков <<KnomSumEA>>'
-if kardE = 1: 'Карты банка <B><<$kartE1>></B>, <B><<$kartE2>></B> и <B><<$kartE3>></B>, сумма очков <<KnomSumEA>>'
+if kardE=0:'Карты банка <B><<$kartE1>></B>, <B><<$kartE2>></B>, сумма очков <<KnomSumEA>>'
+if kardE=1:'Карты банка <B><<$kartE1>></B>, <B><<$kartE2>></B> и <B><<$kartE3>></B>, сумма очков <<KnomSumEA>>'
 
-	 act 'Далее': 
-	 PlayerPointKart = KnomSumA
-	 gt 'bakkara','3'
+	 act 'Далее':
+	 PlayerPointKart=KnomSumA
+	 gt'bakkara','3'
 	 end
 end
 
-if $ARGS[0] = '3': 
+if $ARGS[0]='3':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-gs 'stat'
-     if StavkaKardNum = 1: 
-	     if PlayerPointKart>KnomSumEA: 
-	     gem+= stavkaGame*2
-         '<B><font color = green>Вы выиграли <<stavkaGame*2>></font></B>'
+gs'stat'
+     if StavkaKardNum=1:
+	     if PlayerPointKart>KnomSumEA:
+	     gem+=stavkaGame*2
+         '<B><font color=green>Вы выиграли <<stavkaGame*2>></font></B>'
 	     end
-	     if PlayerPointKart<KnomSumEA: 
-         '<B><font color = red>Вы проиграли</font></B>'
+	     if PlayerPointKart<KnomSumEA:
+         '<B><font color=red>Вы проиграли</font></B>'
 	     end
-	     if PlayerPointKart = KnomSumEA: 
-         '<B><font color = red>Вы проиграли</font></B>'
-	     end
-	 end
-	 
-	 if StavkaKardNum = 2: 
-	 	 if PlayerPointKart>KnomSumEA: 
-         '<B><font color = red>Вы проиграли</font></B>'
-	     end
-	     if PlayerPointKart<KnomSumEA: 
-	     gem+= stavkaGame+(stavkaGame*20/100)
-         '<B><font color = green>Вы выиграли <<stavkaGame+(stavkaGame*20/100)>></font></B>'
-	     end
-	     if PlayerPointKart = KnomSumEA: 
-         '<B><font color = red>Вы проиграли</font></B>'
+	     if PlayerPointKart=KnomSumEA:
+         '<B><font color=red>Вы проиграли</font></B>'
 	     end
 	 end
 	 
-	 if StavkaKardNum = 3: 
-	 	 if PlayerPointKart>KnomSumEA: 
-         '<B><font color = red>Вы проиграли</font></B>'
+	 if StavkaKardNum=2:
+	 	 if PlayerPointKart>KnomSumEA:
+         '<B><font color=red>Вы проиграли</font></B>'
 	     end
-	     if PlayerPointKart<KnomSumEA: 
-         '<B><font color = red>Вы проиграли</font></B>'
+	     if PlayerPointKart<KnomSumEA:
+	     gem+=stavkaGame+(stavkaGame*20/100)
+         '<B><font color=green>Вы выиграли <<stavkaGame+(stavkaGame*20/100)>></font></B>'
 	     end
-	     if PlayerPointKart = KnomSumEA: 
-	     gem+= stavkaGame*9
-         '<B><font color = green>Вы выиграли <<stavkaGame*9>></font></B>'
+	     if PlayerPointKart=KnomSumEA:
+         '<B><font color=red>Вы проиграли</font></B>'
 	     end
 	 end
 	 
-	 act 'Далее': 
-	 gt 'bakkara','start'
+	 if StavkaKardNum=3:
+	 	 if PlayerPointKart>KnomSumEA:
+         '<B><font color=red>Вы проиграли</font></B>'
+	     end
+	     if PlayerPointKart<KnomSumEA:
+         '<B><font color=red>Вы проиграли</font></B>'
+	     end
+	     if PlayerPointKart=KnomSumEA:
+	     gem+=stavkaGame*9
+         '<B><font color=green>Вы выиграли <<stavkaGame*9>></font></B>'
+	     end
+	 end
+	 
+	 act 'Далее':
+	 gt'bakkara','start'
 	 end
 
 end

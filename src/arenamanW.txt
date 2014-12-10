@@ -1,73 +1,73 @@
 # arenamanW
 *clr
-'<center><img src = "pic/EvedonNarod/raspor.jpg"></center>'
+'<center><img src="pic/EvedonNarod/raspor.jpg"></center>'
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaMag = $ARGS[0]
 $locMag = $CURLOC
-minut += 5
-if arenaday!day: 'Хочешь заработать деньжат? Выступи на арене и победи.'
-if arenaday = day: 'Эй <<$arenaname>>. На сегодня с тебя хватит, иди отдохни.'
+minut=minut+5
+if arenaday!day:'Хочешь заработать деньжат? Выступи на арене и победи.'
+if arenaday=day:'Эй <<$arenaname>>. На сегодня с тебя хватит, иди отдохни.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-act 'Отойти': 
-minut += 5
- gt 'arenaW'
+act 'Отойти':
+minut=minut+5
+gt'arenaW'
 end
 
-if arenaQW = 0 and arenaOnce = 0: 
+if arenaQW=0 and arenaOnce=0:
 'Эй ты! Да ты, я к тебе обращаюсь. Да не трясись ты так, на арене дерутся не до смерти.'
-     act 'Я хочу выступить на арене': 
+     act 'Я хочу выступить на арене':
      cla
-     arenaOnce = 1
+     arenaOnce=1
      'Распорядитель осмотрел вас с головы до ног.'
-     if slot = 11: 'Где же только берется такое отребье.'
+     if slot=11:'Где же только берется такое отребье.'
      'Ладно, тебе надо подобрать имя для арены.'
-         act 'Подобрать имя для Арены': 
+         act 'Подобрать имя для Арены':
          cla
          $arenaname = input ("Какое будет ваше имя на арене?")
-             if $arenaname <= 0: 
-             $arenaname = 'Задница'
+             if $arenaname <= 0:
+             $arenaname='Задница'
              'Не хочешь выбирать имя? Ну тогда я записываю тебя как Задницу, я думаю очень подходящее для тебя имя.'
              end
-             if $arenaname > 0: 
+             if $arenaname > 0:
              '<<$arenaname>>, херня конечно, но фиг с ним, подойдет.'
              end
              
-             act 'Что теперь?': 
+             act 'Что теперь?':
              cla
-             arenaQW = 1
-             arenaday = day
-             gs 'arenaFighters'
+             arenaQW=1
+             arenaday=day
+             gs'arenaFighters'
              'Топай на арену и постарайся побить противника, иначе не видать тебе денег как своих ушей.'
-             act 'Идти на арену': gt 'arenaWF'
+             act 'Идти на арену':gt'arenaWF'
              end
          end
      end
 
 end
 
-if arenaday!day: 
+if arenaday!day:
 
-	 if arenaQW<= 0 and arenaOnce = 1: 
+	 if arenaQW<=0 and arenaOnce=1:
 	 'Распорядитель почесал подбородок. "Я за всю свою жизнь не видывал более жалкого бойца, чем ты. Ну как хочешь, хочешь за бесплатно тумаки получать иди и получай."'
-	     act 'Идти на арену': 
-	     arenaQW = 1
-         gt 'arenaWF'
+	     act 'Идти на арену':
+	     arenaQW=1
+         gt'arenaWF'
          end
 	 end
 	 
-	 if arenaQW>= 1 and arenaQW<40: 
-	 gs 'arenaFighters'
+	 if arenaQW>=1 and arenaQW<40:
+	 gs'arenaFighters'
 	 'Можешь идти на арену.'
-	 act 'Идти на арену': gt 'arenaWF'
+	 act 'Идти на арену':gt'arenaWF'
 	 end
 	 
-	 if arenaQW>= 40: 
+	 if arenaQW>=40:
 	 'Тут все в шоке от тебя и никто не хочет с тобой драться. Так что погуляй, может кого и найдем со временем.'
-	 act 'Идти на арену': gt 'arenaW'
+	 act 'Идти на арену':gt'arenaW'
 	 end
 
 end

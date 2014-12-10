@@ -1,36 +1,36 @@
 # stavros
 *clr
-'<center><img src = "pic/EvedonNarod/stavros.jpg"></center>'
-gs 'stat'
+'<center><img src="pic/EvedonNarod/stavros.jpg"></center>'
+gs'stat'
 'Ставрос заулыбался увидев вас.'
 '(Ставрос) - Привет <<$name>>, как жизнь?'
 
-act 'Поговорить': 
+act 'Поговорить':
 cla
-minut+= 15
-gs 'stat'
+minut+=15
+gs'stat'
 '(Вы) - Нормально, а ты как?'
 '(Ставрос) - Тоже ничего, работаю как видишь. Но я могу прерваться если хочешь, сходим на озеро, искупнемся.'
-     act 'Мне пора': gt 'lesopilka'
+     act 'Мне пора':gt'lesopilka'
      
-     act 'Пойдем': 
+     act 'Пойдем':
      cla
      *clr
-     minut+= 60
-     gs 'stat'
+     minut+=60
+     gs'stat'
      '<center><H4>Озеро</H4></center>'
-     '<center><img src = "pic/Evedon/lake.jpg" ></center>'
+     '<center><img src="pic/Evedon/lake.jpg" ></center>'
      'Вы пришли на озеро в обнимку со Ставросом.'
      '(Ставрос) - Ну что <<$name>>, искупаемся?'
-         act 'Купаться': 
+         act 'Купаться':
          cla
-         minut+= 15
-         horny+= 20
-         gs 'stat'
+         minut+=15
+         horny+=20
+         gs'stat'
          'Вы искупались в прохладной и чистой озерной воде со Ставросом, он играючи поднимал вас на водой и подбрасывал в воздух, чтобы вы могли нырнуть.'
          'Наконец вы немного устали и выйдя из озера легли на берегу.'
          'Ставрос лег рядом и начал поглаживать рукой ваши округлости, вскоре его руки сосредоточились на ваших грудях и из ваших губ вырвался протяжный стон удовольствия.'
-         act 'Я хочу тебя': gt 'sexsistem','stavroslake'
+         act 'Я хочу тебя':gt'sexsistem','stavroslake'
          end
      end
 end

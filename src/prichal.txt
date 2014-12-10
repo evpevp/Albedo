@@ -6,18 +6,18 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Причал</H4></center>'
-'<center><img src = "pic/Evedon/prichal.jpg" ></center>'
+'<center><img src="pic/Evedon/prichal.jpg" ></center>'
 'Причал в порту где стоят на стоянки корабли.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-if fishbarkas>0 and boatmark = 1: '<a href = "exec: gt ''fishbarkas''"><font color = green><B>Ваш рыболовецкий баркас <<$barkasname>></B></font></a>'
+if fishbarkas>0 and boatmark=1:'<a href="exec: gt''fishbarkas''"><font color=green><B>Ваш рыболовецкий баркас <<$barkasname>></B></font></a>'
 !шхуна память мон крика
 
 
-act 'Выйти в порт': minut += 15 & gt 'portW'
+act 'Выйти в порт':minut=minut+15&gt'portW'
 --- prichal ---------------------------------
 

@@ -3,90 +3,90 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-barakFightNum = barakFightNum+1
-zoneWar = 14
-if health <= 10: 
-zoneWar = 20
+barakFightNum=barakFightNum+1
+zoneWar=14
+if health <=10:
+zoneWar=20
 'Обезьян хватает вас за грудки, поднимает высоко над землей и швыряет вас в окно, вы проламываете раму спиной, разбиваете стекла и вылетаете со второго этажа на асфальт. Сильный удар об землю выбивает из вас сознание.'
-     act 'Очнуться': 
-     hour = 6
-     minut = 0
+     act 'Очнуться':
+     hour=6
+     minut=0
      daystart = daystart + 30
      month = month + 1
-     srok = srok+30
-     sroksidki = sroksidki-30
+     srok=srok+30
+     sroksidki=sroksidki-30
      clr
-     gs 'stat'
-     gt 'lasaret'
+     gs'stat'
+     gt'lasaret'
      end
 exit
 end
 
-if health>10: 
-     if barakFightNum = 1: 
-     $nameV = 'Дизель'
-	 lvlv = 80
-	 strenV = 100
-	 speedV = 100
-	 agilV = 100
-	 vitalV = 100
-	 intelv = 10
-	 willv = 100
-	 program = 6
-	 healthV = vitalV*10
-	 mannaV = intelV*10
-	 wipoV = willV*10
+if health>10:
+     if barakFightNum=1:
+     $nameV='Дизель'
+	 lvlv=80
+	 strenV=100
+	 speedV=100
+	 agilV=100
+	 vitalV=100
+	 intelv=10
+	 willv=100
+	 program=6
+	 healthV=vitalV*10
+	 mannaV=intelV*10
+	 wipoV=willV*10
 	 'Из-за плеча мускулистого амбала вышел высокий худощавый парень. Он глядя на вас ледяным взглядом тихо сказал: "Обезьян, дай я с ним разберусь." Атлет пожал плечами: "Давай Дизель, потренируйся на этой гниде."'
-     act 'Драться': gt 'before'
+     act 'Драться':gt'before'
      end
      
-     if barakFightNum = 2: 
-     $nameV = 'Япошка'
-	 lvlv = 80
-	 strenV = 60
-	 speedV = 100
-	 agilV = 100
-	 vitalV = 60
-	 intelv = 100
-	 willv = 60
-	 program = 8
-	 healthV = vitalV*10
-	 mannaV = intelV*10
-	 wipoV = willV*10
+     if barakFightNum=2:
+     $nameV='Япошка'
+	 lvlv=80
+	 strenV=60
+	 speedV=100
+	 agilV=100
+	 vitalV=60
+	 intelv=100
+	 willv=60
+	 program=8
+	 healthV=vitalV*10
+	 mannaV=intelV*10
+	 wipoV=willV*10
 	 'Дизель упал и потерял сознание. Обезьян похлопал в ладоши, браво Харя, не зря тебя так опер нахваливал, кое-что можешь. Ну-ка Япошка покажи мастер класс. Из-за плеча Обезьяна стремительно вылетел небольшой японец и бросился на вас.'
-     act 'Драться': gt 'before'
+     act 'Драться':gt'before'
      end
      
-     if barakFightNum = 3: 
-     $nameV = 'Обезьян'
-	 lvlv = 100
-	 strenV = 160
-	 speedV = 80
-	 agilV = 80
-	 vitalV = 180
-	 intelv = 100
-	 willv = 10
-	 program = 7
-	 healthV = vitalV*10
-	 mannaV = intelV*10
-	 wipoV = willV*10
+     if barakFightNum=3:
+     $nameV='Обезьян'
+	 lvlv=100
+	 strenV=160
+	 speedV=80
+	 agilV=80
+	 vitalV=180
+	 intelv=100
+	 willv=10
+	 program=7
+	 healthV=vitalV*10
+	 mannaV=intelV*10
+	 wipoV=willV*10
 	 'Обезьян хмыкнул "Ну надо же, еще ни у кого не получалось побить Япошку. Ладно, хватит лирики, иди к папочке."'
-     act 'Драться': gt 'before'
+     act 'Драться':gt'before'
      end
      
-     if barakFightNum>3: 
-     zoneWar = 100
+     if barakFightNum>3:
+     zoneWar=100
      'Жестоко отпизженные прессхатовцы валяются в лужах собственной крови. Тут влетают вертухаи и дубиналами всех кладут на пол, включая и вас. От страшного удара по голове дубинкой вы потеряли сознание.'
-         act 'Очнуться': 
-		 hour = 6
-		 minut = 0
+         act 'Очнуться':
+		 hour=6
+		 minut=0
 		 daystart = daystart + 30
 		 month = month + 1
-		 srok = srok+30
-		 sroksidki = sroksidki-30
+		 srok=srok+30
+		 sroksidki=sroksidki-30
 		 clr
-		 gs 'stat'
-		 gt 'lasaret'
+		 gs'stat'
+		 gt'lasaret'
 		 end
      end
 end

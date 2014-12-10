@@ -1,360 +1,360 @@
 # autosalon
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 cla
 *clr
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><B>Автосалон</B></center>'
-'<center><img src = "pic\pic\autosalon.jpg" ></center>'
+'<center><img src="pic\pic\autosalon.jpg" ></center>'
 'Часы работы автосалона с 9 до 17, выходной Понедельник.'
-if car > 0 and cardrive = 8: 
- cardrive = 8
-'На парковке стоит <a href = "exec: gs ''car'',''start''">ваш <<$car>></a>.'
+if car > 0 and cardrive = 8:
+set cardrive = 8
+'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
 end
-     if hour >= 9 and hour <= 17 and week > 1: 
-     act 'Зайти в автосалон': gt 'autosalon','manager'
+     if hour >= 9 and hour <= 17 and week > 1:
+     act 'Зайти в автосалон':gt'autosalon','manager'
      end
 
-act 'Уйти': gt 'nord'
+act 'Уйти':gt 'nord'
 end
 
-if $ARGS[0] = 'manager': 
+if $ARGS[0]='manager':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
- cartraid = 1
+set minut = minut + 5
+set cartraid = 1
 clr
-gs 'stat'
+gs'stat'
 '<center><B>Автосалон</B></center>'
-'<center><img src = "pic\pic\manager.jpg" ></center>'
+'<center><img src="pic\pic\manager.jpg" ></center>'
 'Список автомобилей в продаже'
-'<a href = "exec: gs ''car1'',''car''">ВАЗ 2107</a>. - новый, цена 200тыр'
-'<a href = "exec: gs ''car1'',''car2''">ВАЗ 2115</a>. - новый, цена 310тыр'
-'<a href = "exec: gs ''car1'',''car3''">ВАЗ 2113</a>. - новый, цена 290тыр'
-'<a href = "exec: gs ''car1'',''car4''">ВАЗ 2114</a>. - новый, цена 300тыр'
-'<a href = "exec: gs ''car1'',''car5''">ВАЗ 2110</a>. - новый, цена 350тыр'
-'<a href = "exec: gs ''car1'',''car6''">ВАЗ КАЛИНА</a>. - новый, цена 400тыр'
-'<a href = "exec: gs ''car1'',''car7''">ВАЗ ПРИОРА</a>. - новый, цена 450тыр'
-'<a href = "exec: gs ''car1'',''car8''">НИВА ШЕВРОЛЕ</a>. - новый, цена 500тыр'
-'<a href = "exec: gs ''car1'',''car9''">УАЗ ХАНТЕР</a>. - новый, цена 500тыр'
-'<a href = "exec: gs ''car1'',''car10''">УАЗ ПАТРИОТ</a>. - новый, цена 600тыр'
-'<a href = "exec: gs ''car1'',''car95''">Mitsubishi l200</a>. - новый, цена 1 млн'
-'<a href = "exec: gs ''car1'',''car96''">Audi Q7</a>. - новый, цена 5 млн'
-'<a href = "exec: gs ''car1'',''car97''">Cadillac Escalade</a>. - новый, цена 2 млн'
-'<a href = "exec: gs ''car1'',''car98''">Porsche Cayenne</a>. - новый, цена 5 млн'
-'<a href = "exec: gs ''car1'',''car99''">BMW X6</a>. - новый, цена 4,5млн'
-'<a href = "exec: gs ''car1'',''car100''">Mercedes-Benz S 600</a>. - новый, цена 8млн'
+'<a href="exec:GS ''car1'',''car''">ВАЗ 2107</a>. - новый, цена 200тыр'
+'<a href="exec:GS ''car1'',''car2''">ВАЗ 2115</a>. - новый, цена 310тыр'
+'<a href="exec:GS ''car1'',''car3''">ВАЗ 2113</a>. - новый, цена 290тыр'
+'<a href="exec:GS ''car1'',''car4''">ВАЗ 2114</a>. - новый, цена 300тыр'
+'<a href="exec:GS ''car1'',''car5''">ВАЗ 2110</a>. - новый, цена 350тыр'
+'<a href="exec:GS ''car1'',''car6''">ВАЗ КАЛИНА</a>. - новый, цена 400тыр'
+'<a href="exec:GS ''car1'',''car7''">ВАЗ ПРИОРА</a>. - новый, цена 450тыр'
+'<a href="exec:GS ''car1'',''car8''">НИВА ШЕВРОЛЕ</a>. - новый, цена 500тыр'
+'<a href="exec:GS ''car1'',''car9''">УАЗ ХАНТЕР</a>. - новый, цена 500тыр'
+'<a href="exec:GS ''car1'',''car10''">УАЗ ПАТРИОТ</a>. - новый, цена 600тыр'
+'<a href="exec:GS ''car1'',''car95''">Mitsubishi l200</a>. - новый, цена 1 млн'
+'<a href="exec:GS ''car1'',''car96''">Audi Q7</a>. - новый, цена 5 млн'
+'<a href="exec:GS ''car1'',''car97''">Cadillac Escalade</a>. - новый, цена 2 млн'
+'<a href="exec:GS ''car1'',''car98''">Porsche Cayenne</a>. - новый, цена 5 млн'
+'<a href="exec:GS ''car1'',''car99''">BMW X6</a>. - новый, цена 4,5млн'
+'<a href="exec:GS ''car1'',''car100''">Mercedes-Benz S 600</a>. - новый, цена 8млн'
 
-act 'Поговорить с менеджером': gt 'autosalon','manager1'
-act 'Уйти': gt 'autosalon','start'
+act 'Поговорить с менеджером':gt'autosalon','manager1'
+act 'Уйти':gt'autosalon','start'
 end
 
-if $ARGS[0] = 'manager1': 
+if $ARGS[0]='manager1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
+gs'stat'
 '<center><B>Автосалон</B></center>'
-'<center><img src = "pic\pic\manager.jpg" ></center>'
+'<center><img src="pic\pic\manager.jpg" ></center>'
 'На счету в банке <<bankfond>> рублей'
 *nl
 'Менеджер приветливо улыбается и говорит. Для покупки необходимо иметь права и достаточно наличности на счету в банке, мы не работаем по наличному расчету. Так же нельзя иметь две машины, извините, но это новый, антипробковый закон городской мэрии.'
 
-act 'Уйти': gt 'autosalon','manager'
+act 'Уйти':gt'autosalon','manager'
 
-     if prava = 1 and car = 0: 
-         if bankfond >= 200000: 
-             act 'Купить ВАЗ 2107 (200 тыр)': 
+     if prava = 1 and car = 0:
+         if bankfond >= 200000:
+             act 'Купить ВАЗ 2107 (200 тыр)':
              cla
              *clr
-              bankfond = bankfond - 200000
-              $car = 'ВАЗ 2107'
-              car = 1
-              benz = 3
-              cardrive = 8
-              teh = 200
-              tehcar = 200
-              wrek = 0
+             set bankfond = bankfond - 200000
+             set $car = 'ВАЗ 2107'
+             set car = 1
+             set benz = 3
+             set cardrive = 8
+             set teh = 200
+             set tehcar = 200
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 310000: 
-             act 'Купить ВАЗ 2115 (310 тыр)': 
+         if bankfond >= 310000:
+             act 'Купить ВАЗ 2115 (310 тыр)':
              cla
              *clr
-              bankfond = bankfond - 310000
-              $car = 'ВАЗ 2115'
-              car = 2
-              benz = 3
-              cardrive = 8
-              teh = 300
-              tehcar = 300
-              wrek = 0
+             set bankfond = bankfond - 310000
+             set $car = 'ВАЗ 2115'
+             set car = 2
+             set benz = 3
+             set cardrive = 8
+             set teh = 300
+             set tehcar = 300
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
-         if bankfond >= 290000: 
-             act 'Купить ВАЗ 2113 (290 тыр)': 
+         if bankfond >= 290000:
+             act 'Купить ВАЗ 2113 (290 тыр)':
              cla
              *clr
-              bankfond = bankfond - 290000
-              $car = 'ВАЗ 2113'
-              car = 3
-              benz = 3
-              cardrive = 8
-              teh = 290
-              tehcar = 290
-              wrek = 0
+             set bankfond = bankfond - 290000
+             set $car = 'ВАЗ 2113'
+             set car = 3
+             set benz = 3
+             set cardrive = 8
+             set teh = 290
+             set tehcar = 290
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
-         if bankfond >= 300000: 
-             act 'Купить ВАЗ 2114 (300 тыр)': 
+         if bankfond >= 300000:
+             act 'Купить ВАЗ 2114 (300 тыр)':
              cla
              *clr
-              bankfond = bankfond - 300000
-              $car = 'ВАЗ 2114'
-              car = 4
-              benz = 3
-              cardrive = 8
-              teh = 300
-              tehcar = 300
-              wrek = 0
+             set bankfond = bankfond - 300000
+             set $car = 'ВАЗ 2114'
+             set car = 4
+             set benz = 3
+             set cardrive = 8
+             set teh = 300
+             set tehcar = 300
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
-         if bankfond >= 350000: 
-             act 'Купить ВАЗ 2110 (350 тыр)': 
+         if bankfond >= 350000:
+             act 'Купить ВАЗ 2110 (350 тыр)':
              cla
              *clr
-              bankfond = bankfond - 350000
-              $car = 'ВАЗ 2110'
-              car = 5
-              benz = 3
-              cardrive = 8
-              teh = 350
-              tehcar = 350
-              wrek = 0
+             set bankfond = bankfond - 350000
+             set $car = 'ВАЗ 2110'
+             set car = 5
+             set benz = 3
+             set cardrive = 8
+             set teh = 350
+             set tehcar = 350
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
-             end
-         
-         end 
-         
-         if bankfond >= 400000: 
-             act 'Купить ВАЗ Калина (400 тыр)': 
-             cla
-             *clr
-              bankfond = bankfond - 400000
-              $car = 'ВАЗ КАЛИНА'
-              car = 6
-              benz = 3
-              cardrive = 8
-              teh = 400
-              tehcar = 400
-              wrek = 0
-             'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 450000: 
-             act 'Купить ВАЗ Приора (450 тыр)': 
+         if bankfond >= 400000:
+             act 'Купить ВАЗ Калина (400 тыр)':
              cla
              *clr
-              bankfond = bankfond - 450000
-              $car = 'ВАЗ ПРИОРА'
-              car = 7
-              benz = 3
-              cardrive = 8
-              teh = 450
-              tehcar = 450
-              wrek = 0
+             set bankfond = bankfond - 400000
+             set $car = 'ВАЗ КАЛИНА'
+             set car = 6
+             set benz = 3
+             set cardrive = 8
+             set teh = 400
+             set tehcar = 400
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 500000: 
-             act 'Купить Нива Шевроле (500 тыр)': 
+         if bankfond >= 450000:
+             act 'Купить ВАЗ Приора (450 тыр)':
              cla
              *clr
-              bankfond = bankfond - 500000
-              $car = 'НИВА ШЕВРОЛЕ'
-              car = 8
-              benz = 3
-              cardrive = 8
-              teh = 500
-              tehcar = 500
-              wrek = 0
+             set bankfond = bankfond - 450000
+             set $car = 'ВАЗ ПРИОРА'
+             set car = 7
+             set benz = 3
+             set cardrive = 8
+             set teh = 450
+             set tehcar = 450
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 500000: 
-             act 'Купить УАЗ Хантер (500 тыр)': 
+         if bankfond >= 500000:
+             act 'Купить Нива Шевроле (500 тыр)':
              cla
              *clr
-              bankfond = bankfond - 500000
-              $car = 'УАЗ ХАНТЕР'
-              car = 9
-              benz = 3
-              cardrive = 8
-              teh = 300
-              tehcar = 300
-              wrek = 0
+             set bankfond = bankfond - 500000
+             set $car = 'НИВА ШЕВРОЛЕ'
+             set car = 8
+             set benz = 3
+             set cardrive = 8
+             set teh = 500
+             set tehcar = 500
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 600000: 
-             act 'Купить УАЗ Патриот (600 тыр)': 
+         if bankfond >= 500000:
+             act 'Купить УАЗ Хантер (500 тыр)':
              cla
              *clr
-              bankfond = bankfond - 600000
-              $car = 'УАЗ ПАТРИОТ'
-              car = 10
-              benz = 3
-              cardrive = 8
-              teh = 400
-              tehcar = 400
-              wrek = 0
+             set bankfond = bankfond - 500000
+             set $car = 'УАЗ ХАНТЕР'
+             set car = 9
+             set benz = 3
+             set cardrive = 8
+             set teh = 300
+             set tehcar = 300
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 1000000: 
-             act 'Купить Mitsubishi l200 (1 млн)': 
+         if bankfond >= 600000:
+             act 'Купить УАЗ Патриот (600 тыр)':
              cla
              *clr
-              bankfond = bankfond - 1000000
-              $car = 'Mitsubishi l200'
-              car = 95
-              benz = 3
-              cardrive = 8
-              teh = 2000
-              tehcar = 2000
-              wrek = 0
+             set bankfond = bankfond - 600000
+             set $car = 'УАЗ ПАТРИОТ'
+             set car = 10
+             set benz = 3
+             set cardrive = 8
+             set teh = 400
+             set tehcar = 400
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 5000000: 
-             act 'Купить Audi Q7 (5 млн)': 
+         if bankfond >= 1000000:
+             act 'Купить Mitsubishi l200 (1 млн)':
              cla
              *clr
-              bankfond = bankfond - 5000000
-              $car = 'Audi Q7'
-              car = 96
-              benz = 3
-              cardrive = 8
-              teh = 5000
-              tehcar = 5000
-              wrek = 0
+             set bankfond = bankfond - 1000000
+             set $car = 'Mitsubishi l200'
+             set car = 95
+             set benz = 3
+             set cardrive = 8
+             set teh = 2000
+             set tehcar = 2000
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 2000000: 
-             act 'Купить Cadillac Escalade (2 млн)': 
+         if bankfond >= 5000000:
+             act 'Купить Audi Q7 (5 млн)':
              cla
              *clr
-              bankfond = bankfond - 2000000
-              $car = 'Cadillac Escalade'
-              car = 97
-              benz = 3
-              cardrive = 8
-              teh = 4000
-              tehcar = 4000
-              wrek = 0
+             set bankfond = bankfond - 5000000
+             set $car = 'Audi Q7'
+             set car = 96
+             set benz = 3
+             set cardrive = 8
+             set teh = 5000
+             set tehcar = 5000
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 5000000: 
-             act 'Купить Porsche Cayenne (5 млн)': 
+         if bankfond >= 2000000:
+             act 'Купить Cadillac Escalade (2 млн)':
              cla
              *clr
-              bankfond = bankfond - 5000000
-              $car = 'Porsche Cayenne'
-              car = 98
-              benz = 3
-              cardrive = 8
-              teh = 3000
-              tehcar = 3000
-              wrek = 0
+             set bankfond = bankfond - 2000000
+             set $car = 'Cadillac Escalade'
+             set car = 97
+             set benz = 3
+             set cardrive = 8
+             set teh = 4000
+             set tehcar = 4000
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 4500000: 
-             act 'Купить BMW X6 (4,5 млн)': 
+         if bankfond >= 5000000:
+             act 'Купить Porsche Cayenne (5 млн)':
              cla
              *clr
-              bankfond = bankfond - 4500000
-              $car = 'BMW X6'
-              car = 99
-              benz = 3
-              cardrive = 8
-              teh = 4000
-              tehcar = 4000
-              wrek = 0
+             set bankfond = bankfond - 5000000
+             set $car = 'Porsche Cayenne'
+             set car = 98
+             set benz = 3
+             set cardrive = 8
+             set teh = 3000
+             set tehcar = 3000
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 
          
-         if bankfond >= 8000000: 
-             act 'Купить Mercedes-Benz S 600 (8 млн)': 
+         if bankfond >= 4500000:
+             act 'Купить BMW X6 (4,5 млн)':
              cla
              *clr
-              bankfond = bankfond - 8000000
-              $car = 'Mercedes-Benz S 600'
-              car = 100
-              benz = 3
-              cardrive = 8
-              teh = 8000
-              tehcar = 8000
-              wrek = 0
+             set bankfond = bankfond - 4500000
+             set $car = 'BMW X6'
+             set car = 99
+             set benz = 3
+             set cardrive = 8
+             set teh = 4000
+             set tehcar = 4000
+             set wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
-             act 'Уйти': gt 'autosalon','manager'
+             act 'Уйти':gt'autosalon','manager'
+             end
+         
+         end 
+         
+         if bankfond >= 8000000:
+             act 'Купить Mercedes-Benz S 600 (8 млн)':
+             cla
+             *clr
+             set bankfond = bankfond - 8000000
+             set $car = 'Mercedes-Benz S 600'
+             set car = 100
+             set benz = 3
+             set cardrive = 8
+             set teh = 8000
+             set tehcar = 8000
+             set wrek = 0
+             'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
+             act 'Уйти':gt'autosalon','manager'
              end
          
          end 

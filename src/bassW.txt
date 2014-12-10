@@ -1,16 +1,16 @@
 # bassW
-cumbelly = 0
-cumpussy = 0
-cumass = 0
-cumanus = 0
-cumlip = 0
-cumface = 0
-mop = 0
-hapri = 0
-body_writing = 0
-alko = alko-5
-if tits>0: 
-horny = horny+(tit/2)
+cumbelly=0
+cumpussy=0
+cumass=0
+cumanus=0
+cumlip=0
+cumface=0
+mop=0
+hapri=0
+body_writing=0
+alko=alko-5
+if tits>0:
+horny=horny+(tit/2)
 'Ваша грудь очень чувствительна и когда вы ее моете, то по телу распространяются приятные ощущения.'
 end
 --- bassW ---------------------------------

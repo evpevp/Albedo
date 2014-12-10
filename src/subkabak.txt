@@ -10,24 +10,24 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Кабак Веселый лесоруб</H4></center>'
-'<center><img src = "pic/Evedon/foTraktir.jpg" ></center>'
+'<center><img src="pic/Evedon/foTraktir.jpg" ></center>'
 'Грязный и пропахший потом притон.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if hour>= 8: '<a href = "exec: gt ''driskol''">За стойкой стоит хозяин кабака Дрискол</a>'
-if hour>= 20: '<a href = "exec: gt ''lesorub''">В кабаке стоит дым коромыслом, лесорубы гуляют после рабочего дня.</a>'
-if hour>= 20: '<a href = "exec: gt ''vernon''">За столом сидит пивовар Вернон.</a>'
+if hour>=8:'<a href="exec: gt''driskol''">За стойкой стоит хозяин кабака Дрискол</a>'
+if hour>=20:'<a href="exec: gt''lesorub''">В кабаке стоит дым коромыслом, лесорубы гуляют после рабочего дня.</a>'
+if hour>=20:'<a href="exec: gt''vernon''">За столом сидит пивовар Вернон.</a>'
 
-act 'Уйти': 
-minut += 5
- gt 'suburbiaW'
+act 'Уйти':
+minut=minut+5
+gt'suburbiaW'
 end
 --- subkabak ---------------------------------
 

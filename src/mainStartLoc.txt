@@ -1,15 +1,15 @@
 # mainStartLoc
 KILLALL
 CLOSE ALL
-USEHTML = 1
-$ONGLOAD = 'loadg'
-$ONGSAVE = 'saveg'
-$ONNEWLOC = 'LOC'
+USEHTML=1
+$ONGLOAD='loadg'
+$ONGSAVE='saveg'
+$ONNEWLOC  = 'LOC'
 $onobjsel = 'onobjsel'
 showinput 0
 $counter = 'count'
-$USERCOM = 'ввод'
-debug = 1
+$USERCOM='ввод'
+debug=1
 DISABLESCROLL = 1
 
 SHOWOBJS 0
@@ -17,17 +17,17 @@ SHOWSTAT 0
 !FSIZE = 12
 $FNAME = 'Georgia'
 
-fcolor = rgb(0,0,0)
-bcolor = rgb(250,238,221)
+fcolor=rgb(0,0,0)
+bcolor=rgb(250,238,221)
 LCOLOR = rgb(106,90,205)
 
 gs 'Dynamics'
 
-'<center>http: //albedo.fludilka.su/ и DeGross представляет</center>'
+'<center>http://albedo.fludilka.su/ и DeGross представляет</center>'
 *nl
-'<hr align = "left" color = "red" size = "3" width = "1000">'
+'<hr align="left" color="red" size="3" width="1000">'
 '<center><h2>Альбедо</h2></center>'
-'<hr align = "left" color = "red" size = "3" width = "1000">'
+'<hr align="left" color="red" size="3" width="1000">'
 *nl
 '<center>Версия 0.8</center>'
 '<b>Основной сюжет завершен.</b>'
@@ -37,135 +37,135 @@ gs 'Dynamics'
 *nl
 'В данный пусковой файл встроены различные варианты выбора персонажа. Но любой вариант кроме варианта по умолчанию, делает основной сюжет игры не проходимым и создан исключительно как песочница.'
 
-act '<center><b>Старт с реального мира</b></center>': 
- gt 'RealStartLoc'
+act '<center><b>Старт с реального мира</b></center>':
+gt'RealStartLoc'
 end
 
-act '<center><b>Старт с другого мира</b></center>': 
- gt 'DMstartLoc'
+act '<center><b>Старт с другого мира</b></center>':
+gt'DMstartLoc'
 end
 
 
-$menu_pers[0] = 'Описание: $menu_pa'
-$menu_pers[1] = '-: -'
-$menu_pers[2] = 'Характеристики: $menu_pb'
-$menu_pers[3] = '-: -'
-$menu_pers[4] = 'Статистика: $menu_pc'
-$menu_pers[5] = '-: -'
-$menu_pers[6] = 'Посмотреть: $menu_pd'
-$menu_pers[7] = '-: -'
-$menu_pers[8] = 'Обновить: $menu_pe'
+$menu_pers[0]='Описание:$menu_pa'
+$menu_pers[1]='-:-'
+$menu_pers[2]='Характеристики:$menu_pb'
+$menu_pers[3]='-:-'
+$menu_pers[4]='Статистика:$menu_pc'
+$menu_pers[5]='-:-'
+$menu_pers[6]='Посмотреть:$menu_pd'
+$menu_pers[7]='-:-'
+$menu_pers[8]='Обновить:$menu_pe'
 
-$menu_manbody[0] = 'Лицо: $menu_maf'
-$menu_manbody[1] = '-: -'
-$menu_manbody[2] = 'Тело: $menu_mam'
+$menu_manbody[0]='Лицо:$menu_maf'
+$menu_manbody[1]='-:-'
+$menu_manbody[2]='Тело:$menu_mam'
 
-$menu_fembody[0] = 'Лицо: $menu_fef'
-$menu_fembody[1] = '-: -'
-$menu_fembody[2] = 'Грудь: $menu_fem'
-$menu_fembody[3] = '-: -'
-$menu_fembody[4] = 'Бедра: $menu_femb'
+$menu_fembody[0]='Лицо:$menu_fef'
+$menu_fembody[1]='-:-'
+$menu_fembody[2]='Грудь:$menu_fem'
+$menu_fembody[3]='-:-'
+$menu_fembody[4]='Бедра:$menu_femb'
 
-$menu_fembodyA[0] = 'Лицо: $menu_fef'
-$menu_fembodyA[1] = '-: -'
-$menu_fembodyA[2] = 'Грудь: $menu_fem'
-$menu_fembodyA[3] = '-: -'
-$menu_fembodyA[4] = 'Бедра: $menu_femb'
-$menu_fembodyA[5] = '-: -'
-$menu_fembodyA[6] = 'Татуировки: $menu_femtat'
+$menu_fembodyA[0]='Лицо:$menu_fef'
+$menu_fembodyA[1]='-:-'
+$menu_fembodyA[2]='Грудь:$menu_fem'
+$menu_fembodyA[3]='-:-'
+$menu_fembodyA[4]='Бедра:$menu_femb'
+$menu_fembodyA[5]='-:-'
+$menu_fembodyA[6]='Татуировки:$menu_femtat'
 
-$menu_fembodyB[0] = 'Лицо: $menu_fef'
-$menu_fembodyB[1] = '-: -'
-$menu_fembodyB[2] = 'Грудь: $menu_fem'
-$menu_fembodyB[3] = '-: -'
-$menu_fembodyB[4] = 'Бедра: $menu_femb'
-$menu_fembodyB[5] = '-: -'
-$menu_fembodyB[6] = 'Пирсинг: $menu_fempirs'
+$menu_fembodyB[0]='Лицо:$menu_fef'
+$menu_fembodyB[1]='-:-'
+$menu_fembodyB[2]='Грудь:$menu_fem'
+$menu_fembodyB[3]='-:-'
+$menu_fembodyB[4]='Бедра:$menu_femb'
+$menu_fembodyB[5]='-:-'
+$menu_fembodyB[6]='Пирсинг:$menu_fempirs'
 
-$menu_fembodyC[0] = 'Лицо: $menu_fef'
-$menu_fembodyC[1] = '-: -'
-$menu_fembodyC[2] = 'Грудь: $menu_fem'
-$menu_fembodyC[3] = '-: -'
-$menu_fembodyC[4] = 'Бедра: $menu_femb'
-$menu_fembodyC[5] = '-: -'
-$menu_fembodyC[6] = 'Пирсинг: $menu_fempirs'
-$menu_fembodyC[7] = '-: -'
-$menu_fembodyC[8] = 'Татуировки: $menu_femtat'
-
-
-$menu_femclo[0] = 'Верхняя одежда: $menu_fcv'
-$menu_femclo[1] = '-: -'
-$menu_femclo[2] = 'Одежда: $menu_fcm'
+$menu_fembodyC[0]='Лицо:$menu_fef'
+$menu_fembodyC[1]='-:-'
+$menu_fembodyC[2]='Грудь:$menu_fem'
+$menu_fembodyC[3]='-:-'
+$menu_fembodyC[4]='Бедра:$menu_femb'
+$menu_fembodyC[5]='-:-'
+$menu_fembodyC[6]='Пирсинг:$menu_fempirs'
+$menu_fembodyC[7]='-:-'
+$menu_fembodyC[8]='Татуировки:$menu_femtat'
 
 
-$menu_manclo[0] = 'Верхняя одежда: $menu_mcv'
-$menu_manclo[1] = '-: -'
-$menu_manclo[2] = 'Одежда: $menu_mcm'
+$menu_femclo[0]='Верхняя одежда:$menu_fcv'
+$menu_femclo[1]='-:-'
+$menu_femclo[2]='Одежда:$menu_fcm'
 
 
-$menu_inv[0] = 'Сделать запись в дневник: $menu_invA'
-$menu_inv[1] = '-: -'
-$menu_inv[2] = 'Посмотреть записи в дневнике: $menu_invB'
-$menu_inv[3] = '-: -'
-$menu_inv[4] = 'Сотовый телефон: $menu_invC'
-$menu_inv[5] = '-: -'
-$menu_inv[6] = 'Записная книжка: $menu_invD'
-
-$menu_invF[0] = 'Сделать запись в дневник: $menu_invA'
-$menu_invF[1] = '-: -'
-$menu_invF[2] = 'Посмотреть записи в дневнике: $menu_invB'
-$menu_invF[3] = '-: -'
-$menu_invF[4] = 'Сотовый телефон: $menu_invC'
-$menu_invF[5] = '-: -'
-$menu_invF[6] = 'Записная книжка: $menu_invD'
-$menu_invF[7] = '-: -'
-$menu_invF[8] = 'Косметичка: $menu_invE'
-
-$menu_fight[0] = 'Повышение уровня: $menu_lvl'
-$menu_fight[1] = '-: -'
-$menu_fight[2] = 'Магия: $menu_magik'
-$menu_fight[3] = '-: -'
-$menu_fight[4] = 'Читы: $menu_cheat'
+$menu_manclo[0]='Верхняя одежда:$menu_mcv'
+$menu_manclo[1]='-:-'
+$menu_manclo[2]='Одежда:$menu_mcm'
 
 
+$menu_inv[0]='Сделать запись в дневник:$menu_invA'
+$menu_inv[1]='-:-'
+$menu_inv[2]='Посмотреть записи в дневнике:$menu_invB'
+$menu_inv[3]='-:-'
+$menu_inv[4]='Сотовый телефон:$menu_invC'
+$menu_inv[5]='-:-'
+$menu_inv[6]='Записная книжка:$menu_invD'
+
+$menu_invF[0]='Сделать запись в дневник:$menu_invA'
+$menu_invF[1]='-:-'
+$menu_invF[2]='Посмотреть записи в дневнике:$menu_invB'
+$menu_invF[3]='-:-'
+$menu_invF[4]='Сотовый телефон:$menu_invC'
+$menu_invF[5]='-:-'
+$menu_invF[6]='Записная книжка:$menu_invD'
+$menu_invF[7]='-:-'
+$menu_invF[8]='Косметичка:$menu_invE'
+
+$menu_fight[0]='Повышение уровня:$menu_lvl'
+$menu_fight[1]='-:-'
+$menu_fight[2]='Магия:$menu_magik'
+$menu_fight[3]='-:-'
+$menu_fight[4]='Читы:$menu_cheat'
 
 
-!act 'ТЕСТ БОЕВОЙ СИСТЕМЫ': gt 'test'
+
+
+!act 'ТЕСТ БОЕВОЙ СИСТЕМЫ':gt'test'
 
 
 !это трасса №1
- $race1[0] = '<center>-------СТАРТ--------</center>'
- $race1[1] = '<center>долгий <a href = "exec: gs ''RACE_COUNT'',''start''">ПРЯМОЙ</a> участок</center>'
- $race1[2] = ' '
- $race1[3] = ' '
- $race1[4] = ' '
- $race1[5] = '<div align = "left"> пологий поворот <a href = "exec: gs ''RACE_COUNT'',''start''">НАЛЕВО</a>, на шувалова</div>'
- $race1[6] = ' '
- $race1[7] = ' '
- $race1[8] = ' '
- $race1[9] = '<div align = "right"> резкий поворот <a href = "exec: gs ''RACE_COUNT'',''start''">НАПРАВО</a></div>'
- $race1[10] = ' '
- $race1[11] = ' '
- $race1[12] = '<div align = "right"> поворот <a href = "exec: gs ''RACE_COUNT'',''start''">НАПРАВО</a></div>'
- $race1[13] = ' '
- $race1[14] = ' '
- $race1[15] = '<center>долгий <a href = "exec: gs ''RACE_COUNT'',''start''">ПРЯМОЙ</a> участок</center>'
- $race1[16] = ' '
- $race1[17] = ' '
- $race1[18] = ' '
- $race1[19] = ' '
- $race1[20] = '<div align = "left"> плавный <a href = "exec: gs ''RACE_COUNT'',''start''">ЛЕВЫЙ</a> поворот, на мещёрскую</div>'
- $race1[21] = ' '
- $race1[22] = ' '
- $race1[23] = '<center>долгий <a href = "exec: gs ''RACE_COUNT'',''start''">ПРЯМОЙ</a> участок</center>'
- $race1[24] = ' '
- $race1[25] = ' '
- $race1[26] = ' '
- $race1[27] = ' '
- $race1[28] = '<div align = "left"> плавный <a href = "exec: gs ''RACE_COUNT'',''start''">ЛЕВЫЙ</a> поворот, под виадук</div>'
- $race1[29] = ' '
- $race1[30] = ' '
- $race1[31] = '<center>-------ФИНИШ--------</center>'
+set $race1[0]='<center>-------СТАРТ--------</center>'
+set $race1[1]='<center>долгий <a href="exec:GS ''RACE_COUNT'',''start''">ПРЯМОЙ</a> участок</center>'
+set $race1[2]=' '
+set $race1[3]=' '
+set $race1[4]=' '
+set $race1[5]='<div align="left"> пологий поворот <a href="exec:GS ''RACE_COUNT'',''start''">НАЛЕВО</a>, на шувалова</div>'
+set $race1[6]=' '
+set $race1[7]=' '
+set $race1[8]=' '
+set $race1[9]='<div align="right"> резкий поворот <a href="exec:GS ''RACE_COUNT'',''start''">НАПРАВО</a></div>'
+set $race1[10]=' '
+set $race1[11]=' '
+set $race1[12]='<div align="right"> поворот <a href="exec:GS ''RACE_COUNT'',''start''">НАПРАВО</a></div>'
+set $race1[13]=' '
+set $race1[14]=' '
+set $race1[15]='<center>долгий <a href="exec:GS ''RACE_COUNT'',''start''">ПРЯМОЙ</a> участок</center>'
+set $race1[16]=' '
+set $race1[17]=' '
+set $race1[18]=' '
+set $race1[19]=' '
+set $race1[20]='<div align="left"> плавный <a href="exec:GS ''RACE_COUNT'',''start''">ЛЕВЫЙ</a> поворот, на мещёрскую</div>'
+set $race1[21]=' '
+set $race1[22]=' '
+set $race1[23]='<center>долгий <a href="exec:GS ''RACE_COUNT'',''start''">ПРЯМОЙ</a> участок</center>'
+set $race1[24]=' '
+set $race1[25]=' '
+set $race1[26]=' '
+set $race1[27]=' '
+set $race1[28]='<div align="left"> плавный <a href="exec:GS ''RACE_COUNT'',''start''">ЛЕВЫЙ</a> поворот, под виадук</div>'
+set $race1[29]=' '
+set $race1[30]=' '
+set $race1[31]='<center>-------ФИНИШ--------</center>'
 
 
 

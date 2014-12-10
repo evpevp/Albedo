@@ -1,65 +1,65 @@
 # advokat
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-'<center><B><font color = maroon>Адвокатская контора</font></B></center>'
-'<center><img src = "pic\pic\advokat.jpg" ></center>'
+set minut = minut + 5
+'<center><B><font color=maroon>Адвокатская контора</font></B></center>'
+'<center><img src="pic\pic\advokat.jpg" ></center>'
 'Время работы с 9 до 21, выходной суббота воскресенье'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-     if hour >= 9 and hour <= 21 and week < 6: 
-         act 'Зайти в адвокатскую контору': 
-         gt 'advokat','1'
+     if hour >= 9 and hour <= 21 and week < 6:
+         act 'Зайти в адвокатскую контору':
+         gt'advokat','1'
          end
      
      end
 
-     act 'ВЫЙТИ': 
+     act 'ВЫЙТИ':
      cla
-      minut = minut + 5
-     gt 'down'
+     set minut = minut + 5
+     gt'down'
      end
      
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-'<center><B><font color = maroon>Адвокатская контора</font></B></center>'
-'<center><img src = "pic\pic\advokat1.jpg" ></center>'
+set minut = minut + 5
+'<center><B><font color=maroon>Адвокатская контора</font></B></center>'
+'<center><img src="pic\pic\advokat1.jpg" ></center>'
 'Нанять адвоката стоит 1 млн'
-if advokat = 1: 'Вас обвиняют в <<otkat>> откатах.'
-if sud > 0: 'Вас обвиняют в умышленном банкротстве.'
+if advokat = 1:'Вас обвиняют в <<otkat>> откатах.'
+if sud > 0:'Вас обвиняют в умышленном банкротстве.'
 clr
-gs 'stat'
-     act 'Уйти из адвокатской конторы': gt 'advokat','start'
+gs'stat'
+     act 'Уйти из адвокатской конторы':gt'advokat','start'
      
-     if money>= 1000000 and pol = 0 and otkat > 0 and sud = 0: 
-		 act 'Нанять адвоката для отмыва откатов 1млн': 
+     if money>= 1000000 and pol = 0 and otkat > 0 and sud = 0:
+		 act 'Нанять адвоката для отмыва откатов 1млн':
 		 cla
-		 money = money-1000000
-		 otkat = 0
+		 money=money-1000000
+		 otkat=0
 		 'Адвокат взял оплату и обещал подчистить следы ваших откатов.'
-		 act 'Уйти из адвокатской конторы': gt 'advokat','1'
+		 act 'Уйти из адвокатской конторы':gt'advokat','1'
 		 end
      end
      
-     if money>= 1000000 and pol = 0 and sud > 0 and advokat = 0: 
-		 act 'Нанять адвоката для защиты в суде 1млн': 
+     if money>= 1000000 and pol = 0 and sud > 0 and advokat = 0:
+		 act 'Нанять адвоката для защиты в суде 1млн':
 		 cla
-		 money = money-1000000
+		 money=money-1000000
 		 advokat = 1
 		 'Адвокат взял оплату и обещал защищать вас в суде.'
-		 act 'Уйти из адвокатской конторы': gt 'advokat','1'
+		 act 'Уйти из адвокатской конторы':gt'advokat','1'
 		 end
      end
 

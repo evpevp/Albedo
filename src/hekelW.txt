@@ -2,225 +2,225 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 *clr
-'<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
-if hour>= 10 and hour<= 19 and hekelQW = 2: 
+'<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
+if hour>=10 and hour<= 19 and hekelQW=2:
 'Мне больше нечему тебя учить.'
-act 'Уйти': GOTO $locP, $metkaP
+act 'Уйти':GOTO $locP, $metkaP
 end
 
-if hour>= 10 and hour<= 19 and hkdefeat = 2 and hekelday!day: 
+if hour>=10 and hour<= 19 and hkdefeat=2 and hekelday!day:
 !Эвент Хекель. Автор текста Girenok
 'Ну что <<$name>>, будем учиться?'
-if HecGamanDay = Day: 'Хекель возбуждена и ее щеки красны после того как вы подмешали ей гаман в еду.'
-     act 'Учиться': 
+if HecGamanDay=Day:'Хекель возбуждена и ее щеки красны после того как вы подмешали ей гаман в еду.'
+     act 'Учиться':
      cla
      *clr
-     '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
-     hekelday = day
-     exp = exp+RAND(lvl,lvl*2)
+     '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
+     hekelday=day
+     exp=exp+RAND(lvl,lvl*2)
          
-         if ironskinStile>= 100: 
-             if ironFist>= 100: 
-                 if ironHealth>= 100: 
-                     if ironGrab>= 100: 
-                         if ironChin>= 100: 
+         if ironskinStile>=100:
+             if ironFist>=100:
+                 if ironHealth>=100:
+                     if ironGrab>=100:
+                         if ironChin>=100:
                          'Мне больше нечему тебя учить.'
                          end
-                         if ironChin<100: 
-                         ironChin = ironChin+RAND(10,30)
-                         if ironChin>100: ironChin = 100 & hekelQW = 2
+                         if ironChin<100:
+                         ironChin=ironChin+RAND(10,30)
+                         if ironChin>100:ironChin=100&hekelQW=2
                          'Хекель вас обучала стряхивать с себя любое оцепенение во время боя.'
                          'Вы усвоили на <<ironChin>>%'
                          end
                      end
-                     if ironGrab<100: 
-                     ironGrab = ironGrab+RAND(10,30)
-                         if ironGrab>100: ironGrab = 100
+                     if ironGrab<100:
+                     ironGrab=ironGrab+RAND(10,30)
+                         if ironGrab>100:ironGrab=100
                      'Хекель вас учила проводить захват, обездвиживая противника на краткое время, а потом наносить сокрушающий удар.'
                      'Вы усвоили на <<ironGrab>>%'
                      end
                  end
-                 if ironHealth<100: 
-                 ironHealth = ironHealth+RAND(10,30)
-                     if ironHealth>100: ironHealth = 100
+                 if ironHealth<100:
+                 ironHealth=ironHealth+RAND(10,30)
+                     if ironHealth>100:ironHealth=100
                  'Хекель учит вас восстанавливать здоровье во время боя при помощи энергии Чи.'
                  'Вы усвоили на <<ironHealth>>%'
                  end
              end
-             if ironFist<100: 
-             ironFist = ironFist+RAND(10,30)
-                 if ironFist>100: ironFist = 100
+             if ironFist<100:
+             ironFist=ironFist+RAND(10,30)
+                 if ironFist>100:ironFist=100
              'Хекель учила вас наносить удары кулаками по твердой поверхности, вырабатывая у вас стальной кулак.'
              'Вы усвоили на <<ironFist>>%'
              end
          
          end
-         if ironskinStile<100: 
-         ironskinStile = ironskinStile+RAND(10,30)
-             if ironskinStile>100: ironskinStile = 100
+         if ironskinStile<100:
+         ironskinStile=ironskinStile+RAND(10,30)
+             if ironskinStile>100:ironskinStile=100
          'Хекель наносила вам несильные удары по телу, а вы должны были, используя энергию Чи, выдерживать ее удары без ущерба.'
          'Вы усвоили на <<ironskinStile>>%'
          end
          
-     act 'Уйти': GOTO $locP, $metkaP
-         if HecGamanDay = Day and penis>0: 
-             act 'Предложить сходить в душ': 
+     act 'Уйти':GOTO $locP, $metkaP
+         if HecGamanDay=Day and penis>0:
+             act 'Предложить сходить в душ':
              cla
              *clr
-             if hekelSex = 0: hekelSex = 1 & futa = futa+1
-			 sexm = sexm+1
-			 sweat = -3
-			 horny = 0
-			 DOM = DOM+1
-			 '<center><img src = "pic/EvedonTA/hkshowertease.jpg" ></center>'
+             if hekelSex=0:hekelSex=1&futa=futa+1
+			 sexm=sexm+1
+			 sweat=-3
+			 horny=0
+			 DOM=DOM+1
+			 '<center><img src="pic/EvedonTA/hkshowertease.jpg" ></center>'
 			 'Вы вошли в душ с красной как рак от возбуждения Хекель. Она не выдержала и принялась ласкать руками ваш член, после чего она практически запрыгнула на ваш член и скакала на нем, крича от возбуждения и оргазма, до тех пор пока не кончила.'
-			 act 'Уйти': GOTO $locP, $metkaP
+			 act 'Уйти':GOTO $locP, $metkaP
              end
          end
      end
 end
 
-if hour>= 10 and hour<= 19 and hekelQW = 1 and hekelday!day and hkdefeat!2: 
+if hour>=10 and hour<= 19 and hekelQW=1 and hekelday!day and hkdefeat!2:
 'Ну что соска, будем учиться?'
-     act 'Учиться': 
+     act 'Учиться':
      cla
      *clr
-     '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
-     hekelday = day
-     exp = exp+RAND(lvl,lvl*2)
+     '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
+     hekelday=day
+     exp=exp+RAND(lvl,lvl*2)
          
-         if ironskinStile>= 100: 
-             if ironFist>= 100: 
-                 if ironHealth>= 100: 
-                     if ironGrab>= 100: 
-                         if ironChin>= 100: 
+         if ironskinStile>=100:
+             if ironFist>=100:
+                 if ironHealth>=100:
+                     if ironGrab>=100:
+                         if ironChin>=100:
                          'Мне больше нечему тебя учить.'
                          end
-                         if ironChin<100: 
-                         ironChin = ironChin+RAND(10,30)
-                         if ironChin>100: ironChin = 100 & hekelQW = 2
+                         if ironChin<100:
+                         ironChin=ironChin+RAND(10,30)
+                         if ironChin>100:ironChin=100&hekelQW=2
                          'Хекель вас обучала стряхивать с себя любое оцепенение во время боя.'
                          'Вы усвоили на <<ironChin>>%'
                          end
                      end
-                     if ironGrab<100: 
-                     ironGrab = ironGrab+RAND(10,30)
-                         if ironGrab>100: ironGrab = 100
+                     if ironGrab<100:
+                     ironGrab=ironGrab+RAND(10,30)
+                         if ironGrab>100:ironGrab=100
                      'Хекель вас учила проводить захват, обездвиживая противника на краткое время, а потом наносить сокрушающий удар.'
                      'Вы усвоили на <<ironGrab>>%'
                      end
                  end
-                 if ironHealth<100: 
-                 ironHealth = ironHealth+RAND(10,30)
-                     if ironHealth>100: ironHealth = 100
+                 if ironHealth<100:
+                 ironHealth=ironHealth+RAND(10,30)
+                     if ironHealth>100:ironHealth=100
                  'Хекель учит вас восстанавливать здоровье во время боя при помощи энергии Чи.'
                  'Вы усвоили на <<ironHealth>>%'
                  end
              end
-             if ironFist<100: 
-             ironFist = ironFist+RAND(10,30)
-                 if ironFist>10: ironFist = 100
+             if ironFist<100:
+             ironFist=ironFist+RAND(10,30)
+                 if ironFist>10:ironFist=100
              'Хекель учила вас наносить удары кулаками по твердой поверхности, вырабатывая у вас стальной кулак.'
              'Вы усвоили на <<ironFist>>%'
              end
          
          end
-         if ironskinStile<100: 
-         ironskinStile = ironskinStile+RAND(10,30)
-             if ironskinStile>100: ironskinStile = 100
+         if ironskinStile<100:
+         ironskinStile=ironskinStile+RAND(10,30)
+             if ironskinStile>100:ironskinStile=100
          'Хекель наносила вам несильные удары по телу, а вы должны были, используя энергию Чи, выдерживать ее удары без ущерба.'
          'Вы усвоили на <<ironskinStile>>%'
          end
-     '<center><img src = "pic/EvedonTA\hekelvid.jpg" ></center>'
+     '<center><img src="pic/EvedonTA\hekelvid.jpg" ></center>'
      'Ну а теперь отрабатывай урок.'
-         act 'Встать на колени.': 
+         act 'Встать на колени.':
          cla
          *clr
-         SUB = SUB+1
+         SUB=SUB+1
          'Вы встали перед Хекель на колени и сказали: "Разрешите отблагодарить вас за урок, Госпожа."'
          'Хекель потрепала вас по щеке и вынула из своих спортивных шорт здоровенный член. Поработай ротиком, соска.'
-             act 'Отсасывать': 
+             act 'Отсасывать':
              cla
              *clr
-             bj = bj+1
-             cumlip = cumlip+1
-             swallow = swallow+1
-             face = face+1
-			 hand = hand+1
-			 brist = brist+1
-			 tit = tit+1
-			 hekrand = RAND(0,8)
-             if hekrand = 0: '<center><img src = "pic/EvedonTA/hekel.jpg" ></center>'
-             if hekrand = 1: '<center><img src = "pic/EvedonTA/hekel1.jpg" ></center>'
-             if hekrand = 2: '<center><img src = "pic/EvedonTA/hekel2.jpg" ></center>'
-             if hekrand = 3: '<center><img src = "pic/EvedonTA/hekel3.jpg" ></center>'
-             if hekrand = 4: '<center><img src = "pic/EvedonTA/hekel4.jpg" ></center>'
-             if hekrand = 5: '<center><img src = "pic/EvedonTA/hekel5.jpg" ></center>'
-             if hekrand = 6: '<center><img src = "pic/EvedonTA/hekel6.jpg" ></center>'
-             if hekrand = 7: '<center><img src = "pic/EvedonTA/hekel7.jpg" ></center>'
-             if hekrand = 8: '<center><img src = "pic/EvedonTA/hekel8.jpg" ></center>'
+             bj=bj+1
+             cumlip=cumlip+1
+             swallow=swallow+1
+             face=face+1
+			 hand=hand+1
+			 brist=brist+1
+			 tit=tit+1
+			 hekrand=RAND(0,8)
+             if hekrand=0:'<center><img src="pic/EvedonTA/hekel.jpg" ></center>'
+             if hekrand=1:'<center><img src="pic/EvedonTA/hekel1.jpg" ></center>'
+             if hekrand=2:'<center><img src="pic/EvedonTA/hekel2.jpg" ></center>'
+             if hekrand=3:'<center><img src="pic/EvedonTA/hekel3.jpg" ></center>'
+             if hekrand=4:'<center><img src="pic/EvedonTA/hekel4.jpg" ></center>'
+             if hekrand=5:'<center><img src="pic/EvedonTA/hekel5.jpg" ></center>'
+             if hekrand=6:'<center><img src="pic/EvedonTA/hekel6.jpg" ></center>'
+             if hekrand=7:'<center><img src="pic/EvedonTA/hekel7.jpg" ></center>'
+             if hekrand=8:'<center><img src="pic/EvedonTA/hekel8.jpg" ></center>'
              'Вы встали на колени перед Хекель и начали сосать ее член. Вы старались как могли, отсасывая и облизывая ее елду, и когда она кончила вам в рот, вы не желая ее раздражать лишний раз, слизали всю ее сперму и проглотили.'
-             gs 'cumslut'
+             gs'cumslut'
              'Хекель посмотрела на вас, ладно, можешь быть свободна.'
-             act 'Уйти': GOTO $locP, $metkaP
+             act 'Уйти':GOTO $locP, $metkaP
              end
          end
      end
 end
 
-if hour>= 10 and hour<= 19 and hekelday = day: 
+if hour>=10 and hour<= 19 and hekelday=day:
 'Мы уже занимались сегодня. Таким вещам нужно обучаться постепенно, а то тело не выдержит.'
-act 'Уйти': GOTO $locP, $metkaP
+act 'Уйти':GOTO $locP, $metkaP
 end
 
 
-if hour>= 10 and hour<= 19 and hekelQW = 0 and hkdefeat<2: 
+if hour>=10 and hour<= 19 and hekelQW=0 and hkdefeat<2:
 !тренеруется
 'Не видишь я тренируюсь. Отстань.'
-act 'Уйти': GOTO $locP, $metkaP
-     if ebiQW>0: 
-         act 'Научи меня стилю железной рубашки': 
+act 'Уйти':GOTO $locP, $metkaP
+     if ebiQW>0:
+         act 'Научи меня стилю железной рубашки':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
+         '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
          'Хекель с интересом посмотрела на вас. "Это чего это я должна тратить на тебя свое время?"'
-             if femin<200 or vidage>38: 
+             if femin<200 or vidage>38:
              '"Отвали! Тебе меня нечем заинтересовать!"'
-             act 'Уйти': GOTO $locP, $metkaP
+             act 'Уйти':GOTO $locP, $metkaP
              end
-             if femin>= 200 and vidage<= 38: 
+             if femin>=200 and vidage<=38:
              '"Хмм, а знаешь что. Ты достаточно симпатичная. Я могу тебя взять себе в ученицы. Если ты будешь достаточно покорная."'
-             act 'Уйти': GOTO $locP, $metkaP
-                 act 'Я буду покорной ученицей': 
+             act 'Уйти':GOTO $locP, $metkaP
+                 act 'Я буду покорной ученицей':
                  cla
                  *clr
                  'Хекель ухмыльнулась и села на гимнастическую лавку. "Ты должна разговаривать со мной, только стоя передо мной на коленях и обращаться ко мне не иначе как госпожа. Понятно?"'
-                 act 'Уйти': GOTO $locP, $metkaP
-                     act 'Встать на колени.': 
+                 act 'Уйти':GOTO $locP, $metkaP
+                     act 'Встать на колени.':
                      cla
                      *clr
-                     '<center><img src = "pic/EvedonTA/hekelvid.jpg" ></center>'
-                     SUB = SUB+1
+                     '<center><img src="pic/EvedonTA/hekelvid.jpg" ></center>'
+                     SUB=SUB+1
                      'Вы встали перед Хекель на колени и сказали: "Я буду покорной ученицей, Госпожа."'
                      'Хекель потрепала вас по щеке и вынула из своих спортивных шорт здоровенный член. Поработай ротиком, убеди меня.'
-                     act 'Уйти': GOTO $locP, $metkaP
-                         act 'Отсасывать': 
+                     act 'Уйти':GOTO $locP, $metkaP
+                         act 'Отсасывать':
                          cla
                          *clr
-                         bj = bj+1
-                         if hekelSex = 0: hekelSex = 1 & futa = futa+1
-                         hekelQW = 1
-                         cumlip = cumlip+1
-                         swallow = swallow+1
-                         face = face+1
-						 hand = hand+1
-						 brist = brist+1
-						 tit = tit+1
-                         '<center><img src = "pic/EvedonTA/hekel.jpg" ></center>'
+                         bj=bj+1
+                         if hekelSex=0:hekelSex=1&futa=futa+1
+                         hekelQW=1
+                         cumlip=cumlip+1
+                         swallow=swallow+1
+                         face=face+1
+						 hand=hand+1
+						 brist=brist+1
+						 tit=tit+1
+                         '<center><img src="pic/EvedonTA/hekel.jpg" ></center>'
                          'Вы встали на колени перед Хекель и начали сосать ее член. Вы старались как могли и она кончила вам в рот, вы не желая ее раздражать лишний раз, слизали всю ее сперму и проглотили.'
-                         gs 'cumslut'
+                         gs'cumslut'
                          'Хекель посмотрела на вас, ну чтож, пойдет, теперь ты будешь моей ученицей.'
-                         act 'Уйти': GOTO $locP, $metkaP
+                         act 'Уйти':GOTO $locP, $metkaP
                          end
                      end
                  end 
@@ -229,78 +229,78 @@ act 'Уйти': GOTO $locP, $metkaP
      end
 end
 
-if hour<10 and hekelQW = 0 or hour> 19 and hekelQW = 0: 
+if hour<10 and hekelQW=0 or hour> 19 and hekelQW=0:
 
 !ест в трактире
-     if hkdefeat = 2 and penis>0: 
+     if hkdefeat=2 and penis>0:
      'Привет <<$name>>. Как жизнь молодая?'
-     act 'Уйти': GOTO $locP, $metkaP
-         act 'Поболтать с Хекель': 
+     act 'Уйти':GOTO $locP, $metkaP
+         act 'Поболтать с Хекель':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
-         minut += 30
+         '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
+         minut=minut+30
          'Вы сели с Хекель и она начала рассказывать о своей прошлой жизни до того как ее заколдовала Сераф.'
-         act 'Уйти': GOTO $locP, $metkaP
-             if gaman>0: 
-                 act 'Подлить гаман в еду Хекель': 
+         act 'Уйти':GOTO $locP, $metkaP
+             if gaman>0:
+                 act 'Подлить гаман в еду Хекель':
                  cla
                  *clr
-                 '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
-                 gaman = gaman-1
-                 HecGamanDay = Day
+                 '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
+                 gaman=gaman-1
+                 HecGamanDay=Day
                  'Пока Хекель разговаривала с трактирщицей вы подлили ей гаман в еду. Хекель съела, вроде не заметив подвоха. Ее щеки вспыхнули и она тяжело задышала. "Черт, что-то я перевозбудилась."'
-                 act 'Уйти': GOTO $locP, $metkaP
+                 act 'Уйти':GOTO $locP, $metkaP
                  end
                  
              end
          end
      end
      
-     if penis>0 and hkdefeat<2: 
+     if penis>0 and hkdefeat<2:
 	 'Хекель бросила с гневом ложку в тарелку и рявкнула на вас.'
 	 'Отвали! А то сейчас кости переломаю!'
-	 act 'Уйти': GOTO $locP, $metkaP
-		 act 'Да я тебе сейчас самой переломаю': 
+	 act 'Уйти':GOTO $locP, $metkaP
+		 act 'Да я тебе сейчас самой переломаю':
 		 cla
 		 *clr
-		 monster = 18
-		 minut += 80
-		 $nameV = 'Хекель'
-		 lvlv = 130
-		 strenV = 360
-		 speedV = 150
-		 agilV = 110
-		 vitalV = 360
-		 intelv = 110
-		 willv = 10
-		 program = 7
-		 healthV = vitalV*10
-		 mannaV = intelV*10
-		 wipoV = willV*10
+		 monster=18
+		 minut=minut+80
+		 $nameV='Хекель'
+		 lvlv=130
+		 strenV=360
+		 speedV=150
+		 agilV=110
+		 vitalV=360
+		 intelv=110
+		 willv=10
+		 program=7
+		 healthV=vitalV*10
+		 mannaV=intelV*10
+		 wipoV=willV*10
 		 'Хекель отшвырнула стол в сторону как пушинку и встала на ноги сверкая взглядом. "Ну все, карачун тебе!"'
-		 act 'Драться': gt 'before'
+		 act 'Драться':gt'before'
 		 end
      end
-     if penis = 0: 
+     if penis=0:
      'Хекель с интересом посмотрела на вас. Чего тебе?'
-     act 'Уйти': GOTO $locP, $metkaP
-         if ebiQW>0: 
-             act 'Научи меня стилю железной рубашки': 
+     act 'Уйти':GOTO $locP, $metkaP
+         if ebiQW>0:
+             act 'Научи меня стилю железной рубашки':
              cla
              *clr
-             '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
+             '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
              'Научи меня стилю железной рубашки. Хекель оценивающе посмотрела на вас. Приходи в спортзал, там и поговорим.'
-             act 'Уйти': GOTO $locP, $metkaP
+             act 'Уйти':GOTO $locP, $metkaP
              end
          end
      end
 end
 
-if hour<10 and hekelQW>0 or hour> 19 and hekelQW>0: 
+if hour<10 and hekelQW>0 or hour> 19 and hekelQW>0:
 'Хекель посмотрела на вас. Подойдешь когда я буду в зале, а сейчас оставь меня.'
 
-act 'Уйти': GOTO $locP, $metkaP
+act 'Уйти':GOTO $locP, $metkaP
 
 end
 --- hekelW ---------------------------------

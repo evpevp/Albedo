@@ -1,28 +1,28 @@
 # cumslut
-if serafLip = 1: 
- health = vital*10
- manna = intel*10+intel*magika
- wipo = will*10
+if serafLip=1:
+ health=vital*10
+ manna=intel*10+intel*magika
+ wipo=will*10
 'Ваши губы как пылесос обсасывают член на всю длину и все ваше тело охватывает истома, ваши силы тут же восстанавливаются.'
 end
 
-if horny+SUB>= 100 and cumslut<10: 
-horny = 0
-SUB = SUB+1
-cumslut = cumslut+1
-     if penis>0: 'Вы застонали и из вашего члена начали вылетать струи спермы, сотрясая вас в оргазме.'
-     if penis = 0: 'Вы застонали и вас сотряс мощнейший оргазм.'
-     if vagina>0: orgasm = orgasm+1
+if horny+SUB>=100 and cumslut<10:
+horny=0
+SUB=SUB+1
+cumslut=cumslut+1
+     if penis>0:'Вы застонали и из вашего члена начали вылетать струи спермы, сотрясая вас в оргазме.'
+     if penis=0:'Вы застонали и вас сотряс мощнейший оргазм.'
+     if vagina>0:orgasm=orgasm+1
 end
-if cumslut>= 10: 
-horny = 0
-cumslut = cumslut+1
-     if penis>0: 'Вы застонали и из вашего члена начали вылетать струи спермы, сотрясая вас в оргазме.'
-     if penis = 0: 'Вы застонали и вас сотряс мощнейший оргазм.'
-     if vagina>0: orgasm = orgasm+1
+if cumslut>=10:
+horny=0
+cumslut=cumslut+1
+     if penis>0:'Вы застонали и из вашего члена начали вылетать струи спермы, сотрясая вас в оргазме.'
+     if penis=0:'Вы застонали и вас сотряс мощнейший оргазм.'
+     if vagina>0:orgasm=orgasm+1
 end
 
 
-if mop>0: mop = -1
+if mop>0:mop=-1
 --- cumslut ---------------------------------
 

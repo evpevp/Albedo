@@ -5,33 +5,33 @@ $loc = $CURLOC
 $metkaGame = $ARGS[0]
 $locGame = $CURLOC
 clr
-gs 'stat'
-'<center><img src = "pic/EvedonNarod/karavanchiki.jpg" ></center>'
+gs'stat'
+'<center><img src="pic/EvedonNarod/karavanchiki.jpg" ></center>'
 'Караванщики оторвались от игры и посмотрели на вас.'
-if whoreKD<10: 
-	 if femin>200: 
+if whoreKD<10:
+	 if femin>200:
 	 'Один из караванщиков ухмыльнулся. "Гляди братва какая конфетка к нам пожаловала".'
 	 end
-	 if femin<= 200: 
+	 if femin<=200:
 	 'Один из караванщиков ухмыльнулся "Может в кости перекинемся?"'
-		 act 'Играть в кости с караванщиками': 
-		 stavkaGame = 100
-		 gt 'kosti','start'
+		 act 'Играть в кости с караванщиками':
+		 stavkaGame=100
+		 gt'kosti','start'
 		 end
 		 
-		 act 'Играть в баккару с караванщиками': 
-		 stavkaGame = 100
-		 gt 'bakkara','start'
+		 act 'Играть в баккару с караванщиками':
+		 stavkaGame=100
+		 gt'bakkara','start'
 		 end
 	 end
 else
 'Эй <<$name>>! Ты глотаешь или сплевываешь?'
 end
 
-if cumface>0: SUB = SUB+1 & whoreKD = whoreKD+1 & 'Караванщики начали ухмыляться, разглядывая следы спермы на вашем лице.'
-if cumlip>0: SUB = SUB+1 & whoreKD = whoreKD+1 & 'Караванщики начали ухмыляться, разглядывая следы спермы на ваших губах.'
+if cumface>0:SUB=SUB+1&whoreKD=whoreKD+1&'Караванщики начали ухмыляться, разглядывая следы спермы на вашем лице.'
+if cumlip>0:SUB=SUB+1&whoreKD=whoreKD+1&'Караванщики начали ухмыляться, разглядывая следы спермы на ваших губах.'
 
 
-act 'Отойти': gt 'foTraktir'
+act 'Отойти':gt'foTraktir'
 --- foKaravanMan ---------------------------------
 

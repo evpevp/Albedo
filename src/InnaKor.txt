@@ -1,29 +1,29 @@
 # InnaKor
 *clr
-minut += 1
+minut=minut+1
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 '<center><H4>КОРИДОР Инны</H4></center>'
-'<center><img src = "pic\room\KorI.jpg" ></center>'
+'<center><img src="pic\room\KorI.jpg" ></center>'
 clr
-gs 'stat'
+gs'stat'
 'В коридоре на стене висит ((зеркало|mirror))'
 
 
-act 'Спальня Инны': gt 'Innabedroom'
-act 'Ванная': gt 'InnaVannaya'
-act 'Комната': gt 'Innalivingroom'
+act 'Спальня Инны':gt'Innabedroom'
+act 'Ванная':gt'InnaVannaya'
+act 'Комната':gt'Innalivingroom'
 
-if slot > 0: 
-	 act 'НА УЛИЦУ': 
-	 minut += 5
-	 gt 'down'
+if slot > 0:
+	 act 'НА УЛИЦУ':
+	 minut=minut+5
+	 gt'down'
 	 end
 end
 --- InnaKor ---------------------------------

@@ -1,160 +1,160 @@
 # spTEHNO
 dynamic $battlemain
 clr
-gs 'stat'
-if RocketTEH>0: 'У вас <<RocketTEH>> ракет в боезапасе'
-if RocketTEH>0: 'У вас <<RocketTEHzar>> ракет заряжено'
-if BulletTEH>0: 'У вас <<BulletTEH>> патрон'
-if ShildTEH>0: 'У вас <<ShildTEH>> батарей для энергощитов'
+gs'stat'
+if RocketTEH>0:'У вас <<RocketTEH>> ракет в боезапасе'
+if RocketTEH>0:'У вас <<RocketTEHzar>> ракет заряжено'
+if BulletTEH>0:'У вас <<BulletTEH>> патрон'
+if ShildTEH>0:'У вас <<ShildTEH>> батарей для энергощитов'
 
-if RocketTEH>0 and RocketTEHzar = 0: 
-     act 'Зарядить ракетную установку (не более 4х ракет)': 
+if RocketTEH>0 and RocketTEHzar=0:
+     act 'Зарядить ракетную установку (не более 4х ракет)':
      cla
-         act '1 ракета': 
-         RocketTEH = RocketTEH-1
-         RocketTEHzar = 1
-         xgt 'fight','1'
+         act '1 ракета':
+         RocketTEH=RocketTEH-1
+         RocketTEHzar=1
+         xgt'fight','1'
          end
          
-         if RocketTEH>= 2: 
-             act '2 ракеты': 
-			 RocketTEH = RocketTEH-2
-			 RocketTEHzar = 2
-			 xgt 'fight','1'
+         if RocketTEH>=2:
+             act '2 ракеты':
+			 RocketTEH=RocketTEH-2
+			 RocketTEHzar=2
+			 xgt'fight','1'
 			 end
          end
          
-         if RocketTEH>= 3: 
-             act '3 ракеты': 
-			 RocketTEH = RocketTEH-3
-			 RocketTEHzar = 3
-			 xgt 'fight','1'
+         if RocketTEH>=3:
+             act '3 ракеты':
+			 RocketTEH=RocketTEH-3
+			 RocketTEHzar=3
+			 xgt'fight','1'
 			 end
          end
          
-         if RocketTEH>= 4: 
-             act '4 ракеты': 
-			 RocketTEH = RocketTEH-4
-			 RocketTEHzar = 4
-			 xgt 'fight','1'
+         if RocketTEH>=4:
+             act '4 ракеты':
+			 RocketTEH=RocketTEH-4
+			 RocketTEHzar=4
+			 xgt'fight','1'
 			 end
          end
      end
 end
 
-if RocketTEHzar>0: 
-     act 'Выстрелить ракетами': 
-         if RocketTEHzar>0: 
-         RocketTEHzar = RocketTEHzar-1
-         damage = RAND(1000,2000)
-         damageT = RAND(4000,6000)
-         '<font color = green>Из вашей руки вылетела ракета</font>'
-         $tipuronaT = 'Ракета'
-         gs 'defenceV'
-         gs 'defenceTV'
+if RocketTEHzar>0:
+     act 'Выстрелить ракетами':
+         if RocketTEHzar>0:
+         RocketTEHzar=RocketTEHzar-1
+         damage=RAND(1000,2000)
+         damageT=RAND(4000,6000)
+         '<font color=green>Из вашей руки вылетела ракета</font>'
+         $tipuronaT='Ракета'
+         gs'defenceV'
+         gs'defenceTV'
          end
-         if RocketTEHzar>0: 
-         RocketTEHzar = RocketTEHzar-1
-         damage = RAND(1000,2000)
-         damageT = RAND(4000,6000)
-         '<font color = green>Из вашей руки вылетела ракета</font>'
-         $tipuronaT = 'Ракета'
-         gs 'defenceV'
-         gs 'defenceTV'
+         if RocketTEHzar>0:
+         RocketTEHzar=RocketTEHzar-1
+         damage=RAND(1000,2000)
+         damageT=RAND(4000,6000)
+         '<font color=green>Из вашей руки вылетела ракета</font>'
+         $tipuronaT='Ракета'
+         gs'defenceV'
+         gs'defenceTV'
          end
-         if RocketTEHzar>0: 
-         RocketTEHzar = RocketTEHzar-1
-         damage = RAND(1000,2000)
-         damageT = RAND(4000,6000)
-         '<font color = green>Из вашей руки вылетела ракета</font>'
-         $tipuronaT = 'Ракета'
-         gs 'defenceV'
-         gs 'defenceTV'
+         if RocketTEHzar>0:
+         RocketTEHzar=RocketTEHzar-1
+         damage=RAND(1000,2000)
+         damageT=RAND(4000,6000)
+         '<font color=green>Из вашей руки вылетела ракета</font>'
+         $tipuronaT='Ракета'
+         gs'defenceV'
+         gs'defenceTV'
          end
-         if RocketTEHzar>0: 
-         RocketTEHzar = RocketTEHzar-1
-         damage = RAND(1000,2000)
-         damageT = RAND(4000,6000)
-         '<font color = green>Из вашей руки вылетела ракета</font>'
-         $tipuronaT = 'Ракета'
-         gs 'defenceV'
-         gs 'defenceTV'
+         if RocketTEHzar>0:
+         RocketTEHzar=RocketTEHzar-1
+         damage=RAND(1000,2000)
+         damageT=RAND(4000,6000)
+         '<font color=green>Из вашей руки вылетела ракета</font>'
+         $tipuronaT='Ракета'
+         gs'defenceV'
+         gs'defenceTV'
          end
-     RocketTEHzar = 0
-     xgt 'fight','1'
+     RocketTEHzar=0
+     xgt'fight','1'
      end
 end
 
-if BulletTEH>0: 
-     act 'Выстрелить из пулемета': 
-     '<font color = green>Вы всаживаете очередь в <<$nameV>> из пулемета</font>'
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+if BulletTEH>0:
+     act 'Выстрелить из пулемета':
+     '<font color=green>Вы всаживаете очередь в <<$nameV>> из пулемета</font>'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
-         if BulletTEH>0: 
-         BulletTEH = BulletTEH-1
-         damage = RAND(800,1200)
-         gs 'defenceV'
+         if BulletTEH>0:
+         BulletTEH=BulletTEH-1
+         damage=RAND(800,1200)
+         gs'defenceV'
          end
      
-     xgt 'fight','1'
+     xgt'fight','1'
      end
 end
 
-if ShildTEH>0: 
-     act 'Поставить щит': 
-     '<font color = green>Вы создаете энерго щит</font>'
-     ShildTEH = ShildTEH-1
-     defence = defence+10000
-     defenceT = defenceT+10000
-     defenceW = defenceW+10000
-     xgt 'fight','1'
+if ShildTEH>0:
+     act 'Поставить щит':
+     '<font color=green>Вы создаете энерго щит</font>'
+     ShildTEH=ShildTEH-1
+     defence=defence+10000
+     defenceT=defenceT+10000
+     defenceW=defenceW+10000
+     xgt'fight','1'
      end
 end
 
-     act 'Пропустить ход': xgt 'fight','1'
+     act 'Пропустить ход':xgt'fight','1'
 
 
 

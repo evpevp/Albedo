@@ -1,25 +1,25 @@
 # samiraOnsen
 *clr
-'<center><img src = "pic/EvedonNarod/samira.jpg"></center>'
+'<center><img src="pic/EvedonNarod/samira.jpg"></center>'
 
-minut += 60
-sweat = -5
-manna+= 500
-wipo+= 500
-gs 'stat'
+minut=minut+60
+sweat=-5
+manna+=500
+wipo+=500
+gs'stat'
 
 'Вы зашли в отдельный номер с парной вместе с Самирой. Она намылила мочалку и начала вам тереть спинку.'
 
 
-act 'Уйти': gt 'onsenW'
+act 'Уйти':gt'onsenW'
 
-     act 'Предложить секс': 
+     act 'Предложить секс':
      cla
-	 $namev = 'Самира'
-	 dom+= 1
-	 gem- = tempshop
-	 if samiraSex = 0: samiraSex = 1 & girl+= 1
-	 gt 'sexsisteman','vibor'
+	 $namev='Самира'
+	 dom+=1
+	 gem-=tempshop
+	 if samiraSex=0:samiraSex=1&girl+=1
+	 gt'sexsisteman','vibor'
 	 end
 --- samiraOnsen ---------------------------------
 

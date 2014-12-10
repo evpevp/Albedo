@@ -1,21 +1,21 @@
 # casino
-*PL '<right><img src = "pic/casino\zdcasino.jpg" ></right>'
+*PL '<right><img src="pic/casino\zdcasino.jpg" ></right>'
 *PL 'Вы стоите перед дверью огромного здания казино.'
-ACT 'Войти в казино': 
-	 gt 'холл'
+ACT 'Войти в казино':
+	gt 'холл'
 END
-ACT 'Вернуться в северный район': 
-	 gt 'nord'
+ACT 'Вернуться в северный район':
+	gt 'nord'
 END
 USEHTML = 1
 
 clr
-gs 'stat'
- minut = minut + 10
+gs'stat'
+set minut=minut + 10
 
 !ТЕСТ
 
-!if tobiQW < 1000: tobiQW = 1000
+!if tobiQW < 1000:tobiQW = 1000
 
 
 

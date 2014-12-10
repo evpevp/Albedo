@@ -1,72 +1,72 @@
 # urtaW
 $metka = $ARGS[0]
 $loc = $CURLOC
-!'if urtaQW>= 20: 
-urtaday = day
+!'if urtaQW>=20:
+urtaday=day
 '"Привет." Сказала Урта и пригласила вас присесть к ней. "Выпьем по чуть-чуть?".'
-if cumface>0: SUB = SUB+1 & 'Это так сексуально разгуливать со спермой на лице. У вас вспыхнули щеки после этого замечания.'
-if cumlip>0: SUB = SUB+1 & 'Ха, детка, у тебя уже кто-то побывал во рту? Оттуда несет спермой. У вас вспыхнули щеки после этого замечания.'
-act 'Отойти от стола': gt 'tabarW'
-     act 'Сесть за стол к Урте': 
+if cumface>0:SUB=SUB+1&'Это так сексуально разгуливать со спермой на лице. У вас вспыхнули щеки после этого замечания.'
+if cumlip>0:SUB=SUB+1&'Ха, детка, у тебя уже кто-то побывал во рту? Оттуда несет спермой. У вас вспыхнули щеки после этого замечания.'
+act 'Отойти от стола':gt'tabarW'
+     act 'Сесть за стол к Урте':
 	 cla
 	 *clr
-	 minut += 5
-	 alko = alko+10
-	 manna = manna+20
-	 wipo = wipo+20
+	 minut=minut+5
+	 alko=alko+10
+	 manna=manna+20
+	 wipo=wipo+20
 	 clr
-	 gs 'stat'
+	 gs'stat'
 	 'Вы выпили вискаря с Уртой и она заметно повеселела. "А ты горячая штучка. Может отсосешь у меня прямо тут? Залезешь под стол и соснешь пока никто не видит?"'
-	     act 'Ээ, нет, я пожалуй откажусь': 
+	     act 'Ээ, нет, я пожалуй откажусь':
 	     cla
 	     *clr
-	     minut += 5
+	     minut=minut+5
 	     'Урта погрустнела "Ну тогда может домой ко мне сходим? Я сделаю тебе массаж! Ха ха, внутренний!"'
-	     act 'У меня появились дела': gt 'tabarW'
-	         act 'Идти к Урте домой': 
+	     act 'У меня появились дела':gt'tabarW'
+	         act 'Идти к Урте домой':
 	         cla
 	         *clr
-	         minut += 5
+	         minut=minut+5
 	         'Урта бросила монету трактрщице и повела вас к себе домой. Идти оказалось недалеко. Оглядев ее комнату вы заметили как у нее грязно и захламлено. Вероятно у нее редко бывают гости, да и она не склонна к уборке.'
 	         'Не дав вам времени на размышления Урта подошла к вам и обняла вас. "Иди ко мне детка."'
-	             if urtaQW>= 12: 
-                 act 'Встать на колени перед Уртой и достать ее член': gt 'urtasexW','bj'
+	             if urtaQW>=12:
+                 act 'Встать на колени перед Уртой и достать ее член':gt'urtasexW','bj'
                  end
                  
-                 act 'Ждать, что будет делать Урта': gt 'urtasexW','pass'
+                 act 'Ждать, что будет делать Урта':gt'urtasexW','pass'
 	         end
 	         
 	     end
 	     
-	     act 'Лезть под стол': 
+	     act 'Лезть под стол':
 	     cla
 	     *clr
-	     minut += 5
-	     under_table = under_table+1
-	     '<center><img src = "EvedonTA\desk.jpg" ></center>'
+	     minut=minut+5
+	     under_table=under_table+1
+	     '<center><img src="EvedonTA\desk.jpg" ></center>'
 	     'Вы осмотрели трактир, но на вас вроде никто не смотрит. Затем медленно и плавно спустились под стол. Там уже вас ожидал стоящий колом член Урты.'
 	     'Вы распахнули рот и начали сосать ее член, стараясь поменьше чавкать, чтобы в трактире вас никто не слышал.'
-	     swallow = swallow+1
-		 cumlip = cumlip+1
-		 face = face+1
-		 hand = hand+1
-		 brist = brist+1
-		 tit = tit+1
+	     swallow=swallow+1
+		 cumlip=cumlip+1
+		 face=face+1
+		 hand=hand+1
+		 brist=brist+1
+		 tit=tit+1
 		 'Урта тихонечко застонала и целый поток спермы ударил вам в горло, вы давились но глотали ее сладковато терпкую сперму.'
-		 gs 'cumslut'
-		     act 'Вылезти из-под стола': 
+		 gs'cumslut'
+		     act 'Вылезти из-под стола':
 		     cla
-		     utrand = RAND(0,100)
-		         if under_table>utrand: 
+		     utrand=RAND(0,100)
+		         if under_table>utrand:
 		         !спалили
-		         SUB = SUB+1
-		         whore = whore+1
+		         SUB=SUB+1
+		         whore=whore+1
 		         'На вас косятся посетители трактира. Кажется все поняли, чем вы тут занимались.'
-		         act 'Отойти от стола': gt 'tabarW'
+		         act 'Отойти от стола':gt'tabarW'
 		         end
-		         if under_table<= utrand: 
+		         if under_table<=utrand:
 		         'Вы спокойно вылезли из-под стола и кажется никто не заметил, чем вы там занимались.'
-		         act 'Отойти от стола': gt 'tabarW'
+		         act 'Отойти от стола':gt'tabarW'
 		         end
 		     end
 	     end
@@ -74,206 +74,206 @@ act 'Отойти от стола': gt 'tabarW'
 	 end
 end
 
-if urtaQW>= 10 and urtaQW<20: 
-urtaday = day
+if urtaQW>=10 and urtaQW<20:
+urtaday=day
 '"Привет." Сказала Урта и пригласила вас присесть к ней. "Выпьем по чуть-чуть?".'
-act 'Отойти от стола': gt 'tabarW'
-     act 'Сесть за стол к Урте': 
+act 'Отойти от стола':gt'tabarW'
+     act 'Сесть за стол к Урте':
 	 cla
 	 *clr
-	 minut += 5
-	 alko = alko+10
-	 manna = manna+20
-	 wipo = wipo+20
+	 minut=minut+5
+	 alko=alko+10
+	 manna=manna+20
+	 wipo=wipo+20
 	 clr
-	 gs 'stat'
+	 gs'stat'
 	 'Вы выпили вискаря с Уртой и она заметно повеселела. "Пойдем ко мне домой."'
-	     act 'Пойдем': 
+	     act 'Пойдем':
 	     cla
 	     *clr
-	     minut += 5
+	     minut=minut+5
 	     'Урта бросила монету трактрщице и повела вас к себе домой. Идти оказалось недалеко. Оглядев ее комнату вы заметили как у нее грязно и захламлено. Вероятно у нее редко бывают гости, да и она не склонна к уборке.'
 	     'Не дав вам времени на размышления Урта подошла к вам и обняла вас. "Иди ко мне детка."'
-	         if urtaQW>= 12: 
-                 act 'Встать на колени перед Уртой и достать ее член': gt 'urtasexW','bj'
+	         if urtaQW>=12:
+                 act 'Встать на колени перед Уртой и достать ее член':gt'urtasexW','bj'
              end
              
-          act 'Ждать, что будет делать Урта': gt 'urtasexW','pass'
+          act 'Ждать, что будет делать Урта':gt'urtasexW','pass'
 	     end
 	   
-	 act 'У меня появились дела': gt 'tabarW'
+	 act 'У меня появились дела':gt'tabarW'
 	 end
 end'
 
 *clr
-'<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
-if urtaQW>= 10: 
-     if urtaQW>= 15: '"Привет <<$name>>." Сказала Урта и пригласила вас присесть к ней за стол.'
-     if urtaQW<15: '"Привет." Сказала Урта и пригласила вас присесть к ней за стол.'
-if cumface>0: SUB = SUB+1 & 'Это так сексуально разгуливать со спермой на лице. У вас вспыхнули щеки после этого замечания.'
-if cumlip>0: SUB = SUB+1 & 'Ха, детка, у тебя уже кто-то побывал во рту? Оттуда несет спермой. У вас вспыхнули щеки после этого замечания.'
+'<center><img src="pic/EvedonNarod/urta.jpg"></center>'
+if urtaQW>=10:
+     if urtaQW>=15:'"Привет <<$name>>." Сказала Урта и пригласила вас присесть к ней за стол.'
+     if urtaQW<15:'"Привет." Сказала Урта и пригласила вас присесть к ней за стол.'
+if cumface>0:SUB=SUB+1&'Это так сексуально разгуливать со спермой на лице. У вас вспыхнули щеки после этого замечания.'
+if cumlip>0:SUB=SUB+1&'Ха, детка, у тебя уже кто-то побывал во рту? Оттуда несет спермой. У вас вспыхнули щеки после этого замечания.'
 
-act 'Отойти от стола': gt 'tabarW'
-act 'Сесть за стол': gt 'urtaBAR','0'
+act 'Отойти от стола':gt'tabarW'
+act 'Сесть за стол':gt'urtaBAR','0'
 end
 
-if urtaQW = 1: 
-urtaday = day
+if urtaQW=1:
+urtaday=day
 '"А это ты." Сказала Урта и злобно на вас посмотрела. Проваливай пока ноги держат.'
-act 'Отойти от стола': gt 'tabarW'
-     act 'Извини что так получилось на заднем дворе': 
+act 'Отойти от стола':gt'tabarW'
+     act 'Извини что так получилось на заднем дворе':
      cla
      *clr
-     minut += 15
+     minut=minut+15
      'Вы начали извинятся перед Уртой, но она прервала вас словами "Пойдем выйдем"'
-         act 'Идти с Уртой': 
+         act 'Идти с Уртой':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
+         '<center><img src="pic/EvedonNarod/urta.jpg"></center>'
          'Вы вышли с Уртой во двор. И она высказала вам, что вы ее обидели и если не хотите с ней иметь дело, то она и не заставляет.'
-         act 'Уйти обратно в бар': gt 'tabarW'
-             act 'Успокоить Урту': 
+         act 'Уйти обратно в бар':gt'tabarW'
+             act 'Успокоить Урту':
              cla
              *clr
-             '<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
+             '<center><img src="pic/EvedonNarod/urta.jpg"></center>'
              'Вы начали успокаивать Урту и ней в глазах загорелся не хороший огонек. Она ухмыльнулась и достала член из-под юбки "Может отсосешь прощение? <<$name>>"'
-             act 'Уйти обратно в бар': gt 'tabarW'
-                 act 'Сосать прощение': 
+             act 'Уйти обратно в бар':gt'tabarW'
+                 act 'Сосать прощение':
                  cla
                  *clr
-                 bj = bj+1
-				 cumlip = cumlip+1
-				 swallow = swallow+1
-				 face = face+1
-				 hand = hand+1
-				 brist = brist+1
-				 tit = tit+1
-				 urtaQW = 10
-				 futa = futa+1
-				 hekrand = RAND(0,8)
-				 if hekrand = 0: '<center><img src = "pic/EvedonTA/hekel.jpg" ></center>'
-				 if hekrand = 1: '<center><img src = "pic/EvedonTA/hekel1.jpg" ></center>'
-				 if hekrand = 2: '<center><img src = "pic/EvedonTA/hekel2.jpg" ></center>'
-				 if hekrand = 3: '<center><img src = "pic/EvedonTA/hekel3.jpg" ></center>'
-				 if hekrand = 4: '<center><img src = "pic/EvedonTA/hekel4.jpg" ></center>'
-				 if hekrand = 5: '<center><img src = "pic/EvedonTA/hekel5.jpg" ></center>'
-				 if hekrand = 6: '<center><img src = "pic/EvedonTA/hekel6.jpg" ></center>'
-				 if hekrand = 7: '<center><img src = "pic/EvedonTA/hekel7.jpg" ></center>'
-				 if hekrand = 8: '<center><img src = "pic/EvedonTA/hekel8.jpg" ></center>'
+                 bj=bj+1
+				 cumlip=cumlip+1
+				 swallow=swallow+1
+				 face=face+1
+				 hand=hand+1
+				 brist=brist+1
+				 tit=tit+1
+				 urtaQW=10
+				 futa=futa+1
+				 hekrand=RAND(0,8)
+				 if hekrand=0:'<center><img src="pic/EvedonTA/hekel.jpg" ></center>'
+				 if hekrand=1:'<center><img src="pic/EvedonTA/hekel1.jpg" ></center>'
+				 if hekrand=2:'<center><img src="pic/EvedonTA/hekel2.jpg" ></center>'
+				 if hekrand=3:'<center><img src="pic/EvedonTA/hekel3.jpg" ></center>'
+				 if hekrand=4:'<center><img src="pic/EvedonTA/hekel4.jpg" ></center>'
+				 if hekrand=5:'<center><img src="pic/EvedonTA/hekel5.jpg" ></center>'
+				 if hekrand=6:'<center><img src="pic/EvedonTA/hekel6.jpg" ></center>'
+				 if hekrand=7:'<center><img src="pic/EvedonTA/hekel7.jpg" ></center>'
+				 if hekrand=8:'<center><img src="pic/EvedonTA/hekel8.jpg" ></center>'
 				 'Вы встали на колени перед Уртой и начали сосать ее член. Вы старались как могли отсасывая и облизывая ее елду, и когда она кончила вам в рот, вы не желая ее раздражать лишний раз, слизали всю ее сперму и проглотили.'
-				 gs 'cumslut'
+				 gs'cumslut'
 				 'Урта посмотрела на вас, "А ты ничего, может мы и подружимся".'
-				 act 'Уйти обратно в бар': gt 'tabarW'
+				 act 'Уйти обратно в бар':gt'tabarW'
                  end
              end
          end
      end
 end
 
-if urtaQW = 0: 
-urtaday = day
+if urtaQW=0:
+urtaday=day
 'Привет. Выпьешь со мной? Я угощаю.'
 
-act 'Отойти от стола': gt 'tabarW'
+act 'Отойти от стола':gt'tabarW'
 
 
-	 act 'Сесть за стол к Урте': 
+	 act 'Сесть за стол к Урте':
 	 cla
 	 *clr
-	 minut += 5
-	 alko = alko+10
-	 manna = manna+20
-	 wipo = wipo+20
+	 minut=minut+5
+	 alko=alko+10
+	 manna=manna+20
+	 wipo=wipo+20
 	 clr
-	 gs 'stat'
-	 '<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
+	 gs'stat'
+	 '<center><img src="pic/EvedonNarod/urta.jpg"></center>'
 	 'Вы сели за стол к Урте и она налила вам стакан пустынного виски. Вы выпили его залпом, вслед за молчащей Уртой. Урта поставила стакан и предложила вам еще.'
-	 act 'Отойти от стола': gt 'tabarW'
-		 act 'Выпить еще': 
+	 act 'Отойти от стола':gt'tabarW'
+		 act 'Выпить еще':
 		 cla
 		 *clr
-		 minut += 5
-		 alko = alko+10
-		 manna = manna+20
-		 wipo = wipo+20
+		 minut=minut+5
+		 alko=alko+10
+		 manna=manna+20
+		 wipo=wipo+20
 		 clr
-		 gs 'stat'
+		 gs'stat'
 		 'Вы выпили еще вискаря с Уртой. Она немного порозовела и стала выглядеть гораздо расслабленней. "Проклятые демоны. Знаешь, я уже родилась при демонах, они тут так долго, что мне дед еще про них рассказывал. Вот только в моем детстве кругом были луга и леса, а сейчас все сожрала пустыня. Они медленно, но неуклонно, подминают под себя мир. И знаешь что самое поганое? Нет никакой армии демонов. Был бы четкий противник, мы бы собрали войско и атаковали, либо победили бы, либо погибли в борьбе. Но нет, демоны так не действуют, вздумаешь их атаковать, они исчезают и издеваются над армией. Уничтожают колодцы, насылают песчаные бури и суккубов на изголодавшихся солдат. Но действуют они превосходно, к каждому находят ключики и атакуют нас всех по одиночке, разобщая и властвуя. Сначала изменяют тело, потом душу, а потом человек просто пропадает." Урта с силой сжала бутылку и налила еще стакан.'
-		 act 'Отойти от стола': gt 'tabarW'
-		     act 'Выпить еще': 
+		 act 'Отойти от стола':gt'tabarW'
+		     act 'Выпить еще':
 			 cla
 			 *clr
-			 minut += 5
-			 alko = alko+10
-			 manna = manna+20
-			 wipo = wipo+20
+			 minut=minut+5
+			 alko=alko+10
+			 manna=manna+20
+			 wipo=wipo+20
 			 clr
-			 '<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
-			 gs 'stat'
+			 '<center><img src="pic/EvedonNarod/urta.jpg"></center>'
+			 gs'stat'
 			 'Вы выпили еще по стакану с Уртой. Она довольно сильно захмелела и стала выглядеть расслабленной. "А ты ничего, главное ты не демон. Эти твари не могут пить это пойло. Оно освященное, да и вообще алкоголь демоны плохо переносят, теряют концентрацию и даже у самой матерой суккубихи вся маскировка спадает. Ладно, давай еще по одной и хватит, а то мне на пост еще после обеда заступать." Урта разлила остатки виски по стаканам.'
-			 act 'Отойти от стола': gt 'tabarW'
-			     act 'Выпить с Уртой': 
+			 act 'Отойти от стола':gt'tabarW'
+			     act 'Выпить с Уртой':
 				 cla
 				 *clr
-				 minut += 5
-				 alko = alko+10
-				 manna = manna+20
-				 wipo = wipo+20
+				 minut=minut+5
+				 alko=alko+10
+				 manna=manna+20
+				 wipo=wipo+20
 				 clr
-				 '<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
-				 gs 'stat'
+				 '<center><img src="pic/EvedonNarod/urta.jpg"></center>'
+				 gs'stat'
 				 'Вы выпили еще по стакану с Уртой. Она очень сильно опьянела и стала развязано ухмылятся. "Пойду во двор отлить." Урта встала из-за стола и вышла через задние двери трактира.'
-				 act 'Отойти от стола': gt 'tabarW'
-				     act 'Идти на задний двор вслед за Уртой': 
+				 act 'Отойти от стола':gt'tabarW'
+				     act 'Идти на задний двор вслед за Уртой':
 				     cla
 				     *clr
-				     minut += 5
+				     minut=minut+5
 				     clr
-				     gs 'stat'
-				     '<center><img src = "pic/EvedonTA/upiss.jpg" ></center>'
+				     gs'stat'
+				     '<center><img src="pic/EvedonTA/upiss.jpg" ></center>'
 				     'Вы поднялись на ноги и шатающейся походкой вышли вслед за Уртой во двор. В углу пустынного дворика вы увидели Урту, к вашему удивлению она писала стоя, держа в руках здоровенный стоячий член сантиметров 25 не меньше. Наконец струя лившаяся из ее члена кончилась и Урта начала стряхивать. Постепенно ее стряхивание превратилось в мастурбацию и она начала постанывая дрочить свой огромный член. Вас немного пошатнуло и вы зашумев выдали себя. Урта оглянулась и увидела вас. Она заухмылялась и пошла к вам со стоячим членом на перевес. "Иди сюда сладенькая моя."'
-				         act 'Сбежать в ужасе': 
-				         urtaQW = 1
-				         gt 'teladareW'
+				         act 'Сбежать в ужасе':
+				         urtaQW=1
+				         gt'teladareW'
 				         end
 				         
-				         act 'Глупо хихикать': 
+				         act 'Глупо хихикать':
 				         cla
 				         *clr
-				         minut += 5
+				         minut=minut+5
 						 clr
-						 gs 'stat'
-				         '<center><img src = "pic/EvedonTA/kiss.jpg" ></center>'
+						 gs'stat'
+				         '<center><img src="pic/EvedonTA/kiss.jpg" ></center>'
 				         'Урта подошла к вам и страстно обняв вас впилась в ваши губы, ее язык практически насиловал ваш рот когда вы целовались. Наконец она вынула язык из вашего рта и резко развернула вас спиной к себе.'
-				             act '...': 
+				             act '...':
 							 cla
 							 *clr
-							 minut += 5
-							 !anus = anus+1
+							 minut=minut+5
+							 !anus=anus+1
 							 clr
-							 gs 'stat'
-							 if penis>0: '<center><img src = "pic/EvedonTA/anilingus.jpg" ></center>'
-							 if penis = 0: '<center><img src = "pic/EvedonTA/anilingusf.jpg" ></center>'
+							 gs'stat'
+							 if penis>0:'<center><img src="pic/EvedonTA/anilingus.jpg" ></center>'
+							 if penis=0:'<center><img src="pic/EvedonTA/anilingusf.jpg" ></center>'
 							 'Развернув вас, Урта стянула с вас штаны и села на корточки. Вы почувствовали как ее горячий и мокрый язык начал ласкать ваш анус. Она засовывала в вас свой язык и разрабатывала ваше очко. Наконец она вынула свой язык из вашего ставшим мокрым очка и встала позади вас.'
-							     act '...': 
+							     act '...':
 								 cla
 								 *clr
-								 futa = futa+1
-								 anal = anal+1
-								 minut += 5
-								 cumanus = cumanus+1
-								 urtaQW = 10
-								 ass = ass+5
-								 SUB = SUB+1
+								 futa=futa+1
+								 anal=anal+1
+								 minut=minut+5
+								 cumanus=cumanus+1
+								 urtaQW=10
+								 ass=ass+5
+								 SUB=SUB+1
 								 clr
-								 gs 'stat'
-								 if penis>0: '<center><img src = "pic/EvedonTA/anal.jpg" ></center>'
-								 if penis = 0: '<center><img src = "pic/EvedonTA/analf.jpg" ></center>'
+								 gs'stat'
+								 if penis>0:'<center><img src="pic/EvedonTA/anal.jpg" ></center>'
+								 if penis=0:'<center><img src="pic/EvedonTA/analf.jpg" ></center>'
 								 'Вы вскрикнули от неожиданности и боли когда твердый член Урты вошел в ваш анус. Она начала сначала медленно двигаться в вас, потом все быстрее и быстрей и наконец начала яростно долбить вас в жопу и бить вам руками по ягодицам. "Да, сучка, я как только увидела тебя сразу поняла, что ты шлюха." Наконец она кончила вам в зад и горячее тепло наполнило ваш кишечник.'
-								 gs 'analslut'
-								 anus = anus+5
+								 gs'analslut'
+								 anus=anus+5
 								 'Урта вынула свой член из вашей натруженной задницы и вытерла его об ваши ягодицы. Она встала, помогла вам подняться на ноги, которые плохо слушались от пережитого и чмокнула вас в губы. "Спасибо. Мне было это так нужно."'
-								 act 'Уйти': gt 'teladareW'
+								 act 'Уйти':gt'teladareW'
 								 end
 							 
 							 end

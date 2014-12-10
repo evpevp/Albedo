@@ -3,11 +3,11 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 clr
-gs 'stat'
+gs'stat'
 !Келдара
-'<center><img src = "pic/EvedonNarod/demonologbar.jpg" ></center>'
+'<center><img src="pic/EvedonNarod/demonologbar.jpg" ></center>'
 'Девушка обворожительно улыбнулась вам.'
-if demonologMember = 0: 
+if demonologMember=0:
 'Привет, путник, хочешь покушать домашней еды? Или выпить чего покрепче?'
 end
 
@@ -16,82 +16,82 @@ end
 'Виски 10 гемов.'
 !'Комната стоит 50 гемов в сутки'
 clr
-gs 'stat'
+gs'stat'
 
-act 'Отойти от стойки': gt 'DemonologLogovo'
+act 'Отойти от стойки':gt'DemonologLogovo'
 
-     act 'Поболтать': 
+     act 'Поболтать':
      cla
      *clr
-     minut += 15
-     '<center><img src = "pic/EvedonNarod/demonologbar.jpg" ></center>'
+     minut=minut+15
+     '<center><img src="pic/EvedonNarod/demonologbar.jpg" ></center>'
      'Вы завязываете разговор с девушкой. Она рассказывает вам, что после атаки демона Резчика в Мон Крике никто не живет, город разрушен, но на постоялом дворе, все же останавливаются путники.'
-     act 'Хмм, надо же.': gt $CURLOC
+     act 'Хмм, надо же.':gt $CURLOC
      end
      
      
-	 if gem>= 2: 
-		 act 'Еды': 
+	 if gem>=2:
+		 act 'Еды':
 		 cla
 		 *clr
-		 minut += 15
-		 gem = gem-2
-		 gs 'eda'
+		 minut=minut+15
+		 gem=gem-2
+		 gs'eda'
 		 'Девушка достала вам тарелку, до верху наполненную едой.'
-		 gs 'eat'
-		     if marpeozaQW = 0: 
-		     marpeozaQW = 1
+		 gs'eat'
+		     if marpeozaQW=0:
+		     marpeozaQW=1
 		     'Какой то странный вкус.'
-		     act 'Уснуть': gt 'MarpeozaCave'
+		     act 'Уснуть':gt'MarpeozaCave'
 		     exit
 		     end
-		 act 'Отойти от стойки': gt $CURLOC
+		 act 'Отойти от стойки':gt $CURLOC
 		 end
 	 end
 
-	 if gem>= 5: 
-		 act 'Пива': 
+	 if gem>=5:
+		 act 'Пива':
 		 cla
-		 minut += 15
-		 gem = gem-5
-		 fat = fat+1
-		 alko = alko+2
-		 golod = golod+3
-		 manna = manna+10
-		 wipo = wipo+10
-		 horny = horny+5
+		 minut=minut+15
+		 gem=gem-5
+		 fat=fat+1
+		 alko=alko+2
+		 golod=golod+3
+		 manna=manna+10
+		 wipo=wipo+10
+		 horny=horny+5
 	     *clr
-         '<center><img src = "pic/EvedonOd/beer.jpg"></center>'
+         '<center><img src="pic/EvedonOd/beer.jpg"></center>'
 		 'Девушка достала вам кружку, наполненную пенящимся пивом и вы быстренько ее выпили.'
-		 	 if marpeozaQW = 0: 
-		     marpeozaQW = 1
+		 	 if marpeozaQW=0:
+		     marpeozaQW=1
 		     'Какой-то странный вкус.'
-		     act 'Уснуть': gt 'MarpeozaCave'
+		     act 'Уснуть':gt'MarpeozaCave'
 		     exit
 		     end
-		 act 'Отойти от стойки': gt $CURLOC
+		 act 'Отойти от стойки':gt $CURLOC
 		 end
 	 end
 
-	 if gem>= 10: 
-		 act 'Виски': 
+	 if gem>=10:
+		 act 'Виски':
 		 cla
-		 minut += 15
-		 gem = gem-10
-		 alko = alko+5
-		 manna = manna+20
-		 wipo = wipo+20
-		 horny = horny+10
+		 minut=minut+15
+		 gem=gem-10
+		 alko=alko+5
+		 manna=manna+20
+		 wipo=wipo+20
+		 horny=horny+10
 	     *clr
-         '<center><img src = "pic/EvedonOd/wiskey.jpg"></center>'
+         '<center><img src="pic/EvedonOd/wiskey.jpg"></center>'
 		 'Девушка достала вам стакан, наполненный вонючим пойлом, вы залпом его выпили.'
-		 	 if marpeozaQW = 0: 
-		     marpeozaQW = 1
+		 	 if marpeozaQW=0:
+		     marpeozaQW=1
 		     'Какой то странный вкус.'
-		     act 'Уснуть': gt 'MarpeozaCave'
+		     act 'Уснуть':gt'MarpeozaCave'
 		     exit
 		     end
-		 act 'Отойти от стойки': gt $CURLOC
+		 act 'Отойти от стойки':gt $CURLOC
 		 end
 	 end
 	 

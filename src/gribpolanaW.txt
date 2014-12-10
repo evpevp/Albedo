@@ -7,62 +7,62 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Грибная поляна</H4></center>'
-'<center><img src = "pic/Evedon/df28.jpg" ></center>'
+'<center><img src="pic/Evedon/df28.jpg" ></center>'
 'Вся земля усеяна разнообразными грибами, большей частью старыми. Между грибов лениво ползают гигантские улитки.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-act 'Отойти': 
-minut += 5
- gt 'df2_8'
+act 'Отойти':
+minut=minut+5
+gt'df2_8'
 end
 
-if farmstam>0: 
-	act 'Собирать грибы 1 час': 
+if farmstam>0:
+	act 'Собирать грибы 1 час':
 	cla
-	farmstam- = 1
-	lesnik = lesnik+1
-	minut += 60
-	gribrand = RAND(0,intel+lesnik)
-		 if gribrand<50: 
+	farmstam-=1
+	lesnik=lesnik+1
+	minut=minut+60
+	gribrand=RAND(0,intel+lesnik)
+		 if gribrand<50:
 		 'Вы только зря потратили время. Стоит встать на месте и оглянуться, кругом одни грибы, а как только протягиваешь руку, оказывается, что и гриба никакого под рукой нет.'
 		 end
-		 if gribrand>= 50: 
+		 if gribrand>=50:
 		 'С этой поляной, что-то не чисто, стоит остановиться и посмотреть, все вокруг заполнено грибами, но наклонишься за грибом, а его и нет.'
-		 gribtiprand = RAND(0,6)
-			 if gribtiprand = 0: 
-			 grib = grib+1
+		 gribtiprand=RAND(0,6)
+			 if gribtiprand=0:
+			 grib=grib+1
 			 'Но на этот раз вам повезло, вам удалось найти гриб.'
 			 'Разглядев вы обнаружили что он крепкий, вытянутый и с багровой шляпкой.'
 			 end
-			 if gribtiprand = 1: 
-			 grib2 = grib2+1
+			 if gribtiprand=1:
+			 grib2=grib2+1
 			 'Но на этот раз вам повезло, вам удалось найти гриб.'
 			 'Разглядев вы обнаружили что он мягкий с крупной, мясистой красной шляпкой.'
 			 end
-			 if gribtiprand = 2: 
-			 grib3 = grib3+1
+			 if gribtiprand=2:
+			 grib3=grib3+1
 			 'Но на этот раз вам повезло, вам удалось найти гриб.'
 			 'Разглядев вы обнаружили что он мягкий коричневатый и странно пахнет.'
 			 end
-			 if gribtiprand = 3: 
-			 grib4 = grib4+1
+			 if gribtiprand=3:
+			 grib4=grib4+1
 			 'Но на этот раз вам повезло, вам удалось найти гриб.'
 			 'Разглядев вы обнаружили что он короткий и широкий.'
 			 end
-			 if gribtiprand = 4: 
-			 grib5 = grib5+1
+			 if gribtiprand=4:
+			 grib5=grib5+1
 			 'Но на этот раз вам повезло, вам удалось найти гриб.'
 			 'Разглядев вы обнаружили что у него на шляпке разноцветные пятна.'
 			 end
-			 if gribtiprand = 5: 
-			 grib6 = grib6+1
+			 if gribtiprand=5:
+			 grib6=grib6+1
 			 'Но на этот раз вам повезло, вам удалось найти гриб.'
 			 'Разглядев вы обнаружили что он плоский как доска.'
 			 end
 		 end
-	act 'Отойти': gt 'gribpolanaW'
+	act 'Отойти':gt'gribpolanaW'
 	end
 end
 

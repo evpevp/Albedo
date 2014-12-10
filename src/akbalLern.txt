@@ -1,8 +1,8 @@
 # akbalLern
 *clr
-'<center><img src = "pic/EvedonMonsters/akbal.jpg"></center>'
+'<center><img src="pic/EvedonMonsters/akbal.jpg"></center>'
 
-akbalernday = day
+akbalernday=day
 $metka = $ARGS[0]
 $loc = $CURLOC
 
@@ -10,44 +10,44 @@ $loc = $CURLOC
 
 
 
-if DemonMorf = 0: 
+if DemonMorf=0:
 'Сначала тебе нужно накопить достаточно скверны, чтобы начать впитывать в себя демоническую силу.'
-	 act 'Согласиться': gt 'akbalSex'
+	 act 'Согласиться':gt'akbalSex'
 end
 
 
-if DemonMorf>= 1: 
+if DemonMorf>=1:
 'Ты достаточно осквернена, чтобы начать обучение.'
-	 if spMindPress<100: 
-	     act 'Изучать давление на разум': 
+	 if spMindPress<100:
+	     act 'Изучать давление на разум':
 	     cla
 	     *clr
-	     minut += 60
-	     exp = exp+RAND(lvl/4,lvl/2)
-		 spMindPress = spMindPress+10
-		 if spMindPress>100: spMindPress = 100
+	     minut=minut+60
+	     exp=exp+RAND(lvl/4,lvl/2)
+		 spMindPress=spMindPress+10
+		 if spMindPress>100:spMindPress=100
 	     'Вы изучили заклинание на <<spMindPress>>%'
-	     act 'Секс с Акбалом': gt 'akbalSex'
+	     act 'Секс с Акбалом':gt'akbalSex'
 	     end
 	 
 	 end
 	 
-	 if spMindPress>= 100: 
-	 	 if spMindShild<100: 
-			 act 'Изучать щит разума': 
+	 if spMindPress>=100:
+	 	 if spMindShild<100:
+			 act 'Изучать щит разума':
 			 cla
 			 *clr
-			 minut += 60
-			 exp = exp+RAND(lvl/4,lvl/2)
-			 spMindShild = spMindShild+10
-			 if spMindShild>100: spMindShild = 100
+			 minut=minut+60
+			 exp=exp+RAND(lvl/4,lvl/2)
+			 spMindShild=spMindShild+10
+			 if spMindShild>100:spMindShild=100
 			 'Вы изучили заклинание на <<spMindShild>>%'
-			 act 'Секс с Акбалом': gt 'akbalSex'
+			 act 'Секс с Акбалом':gt'akbalSex'
 			 end
 		 end
 	 end
 	 
-	 act 'Секс с Акбалом': gt 'akbalSex'
+	 act 'Секс с Акбалом':gt'akbalSex'
 end
 --- akbalLern ---------------------------------
 

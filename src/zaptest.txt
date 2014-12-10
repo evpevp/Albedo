@@ -1,246 +1,246 @@
 # zaptest
 !электро
-     if klonv<= 0 and mannav>= 500 and notHereV<= 0 and defencev<= 0: 
-     mannav = mannav-500
-     klonv = klonv+5
-     '<B><font color = red><<$namev>> колдует что то не понятное.</font></B>'
-     xgt 'fight','2'
+     if klonv<=0 and mannav>=500 and notHereV<=0 and defencev<= 0:
+     mannav=mannav-500
+     klonv=klonv+5
+     '<B><font color=red><<$namev>> колдует что то не понятное.</font></B>'
+     xgt'fight','2'
      exit
      end
      
-     if shokDefV<= 0 and mannav>= 150 or defencev<= 0 and mannav>= 150: 
-     mannav = mannav-150
-     defencev = defencev+6500
-     defenceHV = defenceHV+2000
-     shokDefV = 10
-     '<B><font color = red><<$namev>> колдует и создает физическую защиту сотканную из электричества.</font></B>'
-     xgt 'fight','2'
+     if shokDefV<= 0 and mannav>=150 or defencev<=0 and mannav>=150:
+     mannav=mannav-150
+     defencev=defencev+6500
+     defenceHV=defenceHV+2000
+     shokDefV=10
+     '<B><font color=red><<$namev>> колдует и создает физическую защиту сотканную из электричества.</font></B>'
+     xgt'fight','2'
      exit
      end
      
-     if mannav>200: 
-         if zerkalo>0 or fint>0 or tuman>0: 
-         mannav = mannav-200
-		 '<B><font color = red><<$namev>> создает электро поле вокруг себя.</font></B>'
-		 if zerkalo>0: zerkalo = 0 & '<B><font color = red>От электрического поля все ваши зеркала разлетаются.</font></B>'
-		 if fint>0: fint = 0 & '<B><font color = red>Из за электрического поля невозможно применить смещение.</font></B>'
-		 if tuman>0: tuman = 0 & '<B><font color = red>Электрическое поле воздействует на ваш туман уничтожая его.</font></B>'
-		 xgt 'fight','2'
+     if mannav>200:
+         if zerkalo>0 or fint>0 or tuman>0:
+         mannav=mannav-200
+		 '<B><font color=red><<$namev>> создает электро поле вокруг себя.</font></B>'
+		 if zerkalo>0:zerkalo=0&'<B><font color=red>От электрического поля все ваши зеркала разлетаются.</font></B>'
+		 if fint>0:fint=0&'<B><font color=red>Из за электрического поля невозможно применить смещение.</font></B>'
+		 if tuman>0:tuman=0&'<B><font color=red>Электрическое поле воздействует на ваш туман уничтожая его.</font></B>'
+		 xgt'fight','2'
 		 exit
          end
      end
      
-	 if mannav>= 250 and defence>0 and zerkalo<= 0 and fint<= 0 and tuman<= 0: 
-	 '<B><font color = red><<$namev>> заряжает электричеством руку и атакует вас.</font></B>'
-     mannav = mannav-250
-     '<B><font color = red><<$namev>> электричеством легко прошивает вашу защиту насквозь.</font></B>'
-     defence = 0
-     tipatkv = 1
-	 gs 'udarv','1'
-	 gs 'popadv'
-	 xgt 'fight','2'
+	 if mannav>=250 and defence>0 and zerkalo<=0 and fint<=0 and tuman<=0:
+	 '<B><font color=red><<$namev>> заряжает электричеством руку и атакует вас.</font></B>'
+     mannav=mannav-250
+     '<B><font color=red><<$namev>> электричеством легко прошивает вашу защиту насквозь.</font></B>'
+     defence=0
+     tipatkv=1
+	 gs'udarv','1'
+	 gs'popadv'
+	 xgt'fight','2'
 	 exit
 	 end
 	 
 	 
-	 if mannav>= 200: 
-     '<B><font color = red><<$namev>> колдует и создает мощную молнию.</font></B>'
-     mannav = mannav-200
-	 shokdamv = RAND(100,300)
-	 damagev = RAND(1500,4500)
-	 gs 'defence'
-     xgt 'fight','2'
+	 if mannav>=200:
+     '<B><font color=red><<$namev>> колдует и создает мощную молнию.</font></B>'
+     mannav=mannav-200
+	 shokdamv=RAND(100,300)
+	 damagev=RAND(1500,4500)
+	 gs'defence'
+     xgt'fight','2'
      exit
      end
 	 
-	 if BATpotionV>0: 
-	 BATpotionV = BATpotionV-1
-	 '<B><font color = red><<$namev>> открывает бутылку и пьет из нее</font></B>'
-	 mannav = mannav+500
-	 wipov = wipov+500
-	 healthv = vitalv*10
-	 xgt 'fight','2'
+	 if BATpotionV>0:
+	 BATpotionV=BATpotionV-1
+	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
+	 mannav=mannav+500
+	 wipov=wipov+500
+	 healthv=vitalv*10
+	 xgt'fight','2'
 	 exit
 	 end
 	 
-	 if BATpotionV<= 0: 
-	 tipatkv = 2
-	 '<B><font color = red><<$namev>> пинает вас ногой.</font></B>'
-	 gs 'udarv','1'
-	 gs 'popadv'
-	 xgt 'fight','2'
+	 if BATpotionV<=0:
+	 tipatkv=2
+	 '<B><font color=red><<$namev>> пинает вас ногой.</font></B>'
+	 gs'udarv','1'
+	 gs'popadv'
+	 xgt'fight','2'
 	 exit
 	 end
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!ВОДА 
  
-	 if mannav>= 1000 and potopV<= 0: 
-     '<B><font color = red><<$namev>> колдует и вода затапливает округу.</font></B>'
-     defencev = 3500
-     defenceTV = 2500
-     defenceWV = 2500
-     waterDefv = 12
-     mannav = mannav-1000
-     damageMV = RAND(300,500)
-     gs 'defenceM'
-     potopV = 10
-	 waterdamV = waterdamV+RAND(500,1000)
-	 damagev = damagev+RAND(500,1000)
-	 gs 'defence'
-     xgt 'fight','2'
+	 if mannav>=1000 and potopV<=0:
+     '<B><font color=red><<$namev>> колдует и вода затапливает округу.</font></B>'
+     defencev=3500
+     defenceTV=2500
+     defenceWV=2500
+     waterDefv=12
+     mannav=mannav-1000
+     damageMV=RAND(300,500)
+     gs'defenceM'
+     potopV=10
+	 waterdamV=waterdamV+RAND(500,1000)
+	 damagev=damagev+RAND(500,1000)
+	 gs'defence'
+     xgt'fight','2'
      exit
      end
      
-     if mannav>= 500 and potopV>0: 
-     '<B><font color = red><<$namev>> колдует и вода начинает разрушать вашу ману.</font></B>'
-     defencev = 3500
-     defenceTV = 2500
-     defenceWV = 2500
-     waterDefv = 12
-     mannav = mannav-500
-     damageMV = RAND(500,800)
-     gs 'defenceM'
-     xgt 'fight','2'
+     if mannav>=500 and potopV>0:
+     '<B><font color=red><<$namev>> колдует и вода начинает разрушать вашу ману.</font></B>'
+     defencev=3500
+     defenceTV=2500
+     defenceWV=2500
+     waterDefv=12
+     mannav=mannav-500
+     damageMV=RAND(500,800)
+     gs'defenceM'
+     xgt'fight','2'
      exit
      end
      
-     if mannav>= 100 and potopV>0: 
-     '<B><font color = red><<$namev>> создает водяных акул которые нападают на вас.</font></B>'
-     mannav = mannav-100
-     damageMV = RAND(500,800)
-     waterdamV = waterdamV+RAND(500,1000)
-	 damagev = damagev+RAND(2000,3000)
-	 gs 'defence'
-     gs 'defenceM'
-     xgt 'fight','2'
+     if mannav>=100 and potopV>0:
+     '<B><font color=red><<$namev>> создает водяных акул которые нападают на вас.</font></B>'
+     mannav=mannav-100
+     damageMV=RAND(500,800)
+     waterdamV=waterdamV+RAND(500,1000)
+	 damagev=damagev+RAND(2000,3000)
+	 gs'defence'
+     gs'defenceM'
+     xgt'fight','2'
      exit
      end
      
-     if mannav>= 100: 
-     '<B><font color = red><<$namev>> колдует и распыляет воду в воздухе.</font></B>'
-     mannav = mannav-100
-	 waterdamV = RAND(50,80)
-	 damagev = RAND(200,700)
-	 gs 'defence'
-	 waterdamv = RAND(50,80)
-	 damagev = RAND(200,700)
-	 gs 'defence'
-	 waterdamv = RAND(50,80)
-	 damagev = RAND(200,700)
-	 gs 'defence'
-	 waterdamv = RAND(50,80)
-	 damagev = RAND(200,700)
-	 gs 'defence'
-	 waterdamv = RAND(50,80)
-	 damagev = RAND(200,700)
-	 gs 'defence'
-	 waterdamv = RAND(50,80)
-	 damagev = RAND(200,700)
-     gs 'defence'
-     xgt 'fight','2'
+     if mannav>=100:
+     '<B><font color=red><<$namev>> колдует и распыляет воду в воздухе.</font></B>'
+     mannav=mannav-100
+	 waterdamV=RAND(50,80)
+	 damagev=RAND(200,700)
+	 gs'defence'
+	 waterdamv=RAND(50,80)
+	 damagev=RAND(200,700)
+	 gs'defence'
+	 waterdamv=RAND(50,80)
+	 damagev=RAND(200,700)
+	 gs'defence'
+	 waterdamv=RAND(50,80)
+	 damagev=RAND(200,700)
+	 gs'defence'
+	 waterdamv=RAND(50,80)
+	 damagev=RAND(200,700)
+	 gs'defence'
+	 waterdamv=RAND(50,80)
+	 damagev=RAND(200,700)
+     gs'defence'
+     xgt'fight','2'
      exit
      end
 	 
-	 if BATpotionV>0: 
-	 BATpotionV = BATpotionV-1
-	 '<B><font color = red><<$namev>> открывает бутылку и пьет из нее</font></B>'
-	 mannav = mannav+500
-	 wipov = wipov+500
-	 healthv = vitalv*10
-	 xgt 'fight','2'
+	 if BATpotionV>0:
+	 BATpotionV=BATpotionV-1
+	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
+	 mannav=mannav+500
+	 wipov=wipov+500
+	 healthv=vitalv*10
+	 xgt'fight','2'
 	 exit
 	 end
 	 
-	 if BATpotionV<= 0: 
-	 tipatkv = 2
-	 '<B><font color = red><<$namev>> пинает вас ногой.</font></B>'
-	 gs 'udarv','1'
-	 gs 'popadv'
-	 xgt 'fight','2'
+	 if BATpotionV<=0:
+	 tipatkv=2
+	 '<B><font color=red><<$namev>> пинает вас ногой.</font></B>'
+	 gs'udarv','1'
+	 gs'popadv'
+	 xgt'fight','2'
 	 exit
 	 end
 	 
 !
 !старший магистр ордена четырехлиcтника
 !земля
-     if defencev<= 0 and mannav>= 500: 
-     mannav = mannav-500
-     defenceV = defenceV+10000
-     defenceTV = defenceTV+3500
-     defenceWV = defenceWV+3500
-     '<B><font color = red><<$namev>> колдует и создает защиту из песка.</font></B>'
-     xgt 'fight','2'
+     if defencev<= 0 and mannav>=500:
+     mannav=mannav-500
+     defenceV=defenceV+10000
+     defenceTV=defenceTV+3500
+     defenceWV=defenceWV+3500
+     '<B><font color=red><<$namev>> колдует и создает защиту из песка.</font></B>'
+     xgt'fight','2'
      exit
      end
      
-     if InGroundV<= 0 and mannav>= 500 and klonv<= 0: 
-     mannav = mannav-500
-     InGroundV = InGroundV+5
-     '<B><font color = red><<$namev>> плавно погружается в землю.</font></B>'
-     xgt 'fight','2'
+     if InGroundV<=0 and mannav>=500 and klonv<=0:
+     mannav=mannav-500
+     InGroundV=InGroundV+5
+     '<B><font color=red><<$namev>> плавно погружается в землю.</font></B>'
+     xgt'fight','2'
      exit
      end
      
      
-	 if mannav>= 50 and sandstormv<30: 
-     '<B><font color = red><<$namev>> поднимает вокруг себя песчаную бурю.</font></B>'
-     mannav = mannav-50
-     sandstormv = sandstormv+30
-     xgt 'fight','2'
+	 if mannav>=50 and sandstormv<30:
+     '<B><font color=red><<$namev>> поднимает вокруг себя песчаную бурю.</font></B>'
+     mannav=mannav-50
+     sandstormv=sandstormv+30
+     xgt'fight','2'
      exit
      end
 	 
-	 if mannav>= 150: 
-	 randatk = RAND(0,2)
-	     if randatk = 0: 
-		 '<B><font color = red><<$namev>> колдует и метает в вас песок.</font></B>'
-		 mannav = mannav-150
-		 if fint>0: fint = 0
-		 if zerkalo>0: zerkalo = 0 & '<B><font color = red>Ваши зеркала лопнули.</font></B>'
-		 $tipuronaV = 'Песчаный удар'
-		 damageV = RAND(300,1000)
-		 gs 'defence'
-		 xgt 'fight','2'
+	 if mannav>=150:
+	 randatk=RAND(0,2)
+	     if randatk=0:
+		 '<B><font color=red><<$namev>> колдует и метает в вас песок.</font></B>'
+		 mannav=mannav-150
+		 if fint>0:fint=0
+		 if zerkalo>0:zerkalo=0&'<B><font color=red>Ваши зеркала лопнули.</font></B>'
+		 $tipuronaV='Песчаный удар'
+		 damageV=RAND(300,1000)
+		 gs'defence'
+		 xgt'fight','2'
 		 exit
 		 end
 		 
-		 if randatk = 1: 
-		 '<B><font color = red><<$namev>> погружается в землю.</font></B>'
-		 mannav = mannav-150
-		 damageV = RAND(strenV,strenV*2)
-		 UnAtkV = 1
-		 gs 'defence'
-		 xgt 'fight','2'
+		 if randatk=1:
+		 '<B><font color=red><<$namev>> погружается в землю.</font></B>'
+		 mannav=mannav-150
+		 damageV=RAND(strenV,strenV*2)
+		 UnAtkV=1
+		 gs'defence'
+		 xgt'fight','2'
 		 exit
 		 end
 		 
-		 if randatk = 2: 
-		 '<B><font color = red><<$namev>> поднимает две плиты из земли которые схлопываются.</font></B>'
-		 mannav = mannav-150
-		 $tipuronaV = 'Удар земляными плитами'
-		 damageV = RAND(800,1200)
-		 gs 'defence'
-		 xgt 'fight','2'
+		 if randatk=2:
+		 '<B><font color=red><<$namev>> поднимает две плиты из земли которые схлопываются.</font></B>'
+		 mannav=mannav-150
+		 $tipuronaV='Удар земляными плитами'
+		 damageV=RAND(800,1200)
+		 gs'defence'
+		 xgt'fight','2'
 		 exit
 		 end
      end
 	 
-	 if BATpotionV>0: 
-	 BATpotionV = BATpotionV-1
-	 '<B><font color = red><<$namev>> открывает бутылку и пьет из нее</font></B>'
-	 mannav = mannav+500
-	 wipov = wipov+500
-	 healthv = vitalv*10
-	 xgt 'fight','2'
+	 if BATpotionV>0:
+	 BATpotionV=BATpotionV-1
+	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
+	 mannav=mannav+500
+	 wipov=wipov+500
+	 healthv=vitalv*10
+	 xgt'fight','2'
 	 exit
 	 end
 	 
-	 if BATpotionV<= 0: 
-	 tipatkv = 2
-	 '<B><font color = red><<$namev>> пинает вас ногой.</font></B>'
-	 gs 'udarv','1'
-	 gs 'popadv'
-	 xgt 'fight','2'
+	 if BATpotionV<=0:
+	 tipatkv=2
+	 '<B><font color=red><<$namev>> пинает вас ногой.</font></B>'
+	 gs'udarv','1'
+	 gs'popadv'
+	 xgt'fight','2'
 	 exit
 	 end
 
@@ -251,100 +251,100 @@
 !старший магистр ордена четырехличтника
 !воздух
 
-     !'if klonv<= 0 and mannav>= 500 and notHereV<= 0 and defencev<= 0: 
-     mannav = mannav-500
-     klonv = klonv+50
-     '<B><font color = red><<$namev>> колдует что то не понятное.</font></B>'
-     xgt 'fight','2'
+     !'if klonv<=0 and mannav>=500 and notHereV<=0 and defencev<= 0:
+     mannav=mannav-500
+     klonv=klonv+50
+     '<B><font color=red><<$namev>> колдует что то не понятное.</font></B>'
+     xgt'fight','2'
      exit
      end
      
-     if defencev<= 1000 and mannav>= 100: 
-     mannav = mannav-100
-     defencev = defencev+8000
-     defenceWV = defenceWV+8000
-     '<B><font color = red><<$namev>> колдует и создает физическую защиту из воздуха.</font></B>'
-     xgt 'fight','2'
+     if defencev<= 1000 and mannav>=100:
+     mannav=mannav-100
+     defencev=defencev+8000
+     defenceWV=defenceWV+8000
+     '<B><font color=red><<$namev>> колдует и создает физическую защиту из воздуха.</font></B>'
+     xgt'fight','2'
      exit
      end'
      
-     if notHereV<= 0 and mannaV>= 500: 
-     notHereV = 6
-     mannaV = mannaV-500
-     '<B><font color = red><<$namev>> колдует и его поднимает в небо вихрь воздуха.</font></B>'
-     xgt 'fight','2'
+     if notHereV<=0 and mannaV>=500:
+     notHereV=6
+     mannaV=mannaV-500
+     '<B><font color=red><<$namev>> колдует и его поднимает в небо вихрь воздуха.</font></B>'
+     xgt'fight','2'
      exit
      end
      
      
      
-	 if mannav>= 150: 
-	 tiprand = RAND(0,2)
-	     if tiprand = 0: 
-		 '<B><font color = red><<$namev>> колдует и стреляет градом вакуумных пуль.</font></B>'
-		 mannav = mannav-150
-		 damageWV = RAND(250,500)
-		 $tipuronaW = 'Вакуумные пули'
-		 gs 'defenceW'
-		 damageWV = RAND(250,500)
-		 $tipuronaW = 'Вакуумные пули'
-		 gs 'defenceW'
-		 damageWV = RAND(250,500)
-		 $tipuronaW = 'Вакуумные пули'
-		 gs 'defenceW'
-		 damageWV = RAND(250,500)
-		 $tipuronaW = 'Вакуумные пули'
-		 gs 'defenceW'
-		 damageWV = RAND(250,500)
-		 $tipuronaW = 'Вакуумные пули'
-		 gs 'defenceW'
-		 xgt 'fight','2'
+	 if mannav>=150:
+	 tiprand=RAND(0,2)
+	     if tiprand=0:
+		 '<B><font color=red><<$namev>> колдует и стреляет градом вакуумных пуль.</font></B>'
+		 mannav=mannav-150
+		 damageWV=RAND(250,500)
+		 $tipuronaW='Вакуумные пули'
+		 gs'defenceW'
+		 damageWV=RAND(250,500)
+		 $tipuronaW='Вакуумные пули'
+		 gs'defenceW'
+		 damageWV=RAND(250,500)
+		 $tipuronaW='Вакуумные пули'
+		 gs'defenceW'
+		 damageWV=RAND(250,500)
+		 $tipuronaW='Вакуумные пули'
+		 gs'defenceW'
+		 damageWV=RAND(250,500)
+		 $tipuronaW='Вакуумные пули'
+		 gs'defenceW'
+		 xgt'fight','2'
 		 exit
          end
          
-         if tiprand = 1: 
-		 '<B><font color = red><<$namev>> колдует и создает перепад давления.</font></B>'
-		 mannav = mannav-150
-		 PerepadV = 1
-		 damageWV = RAND(1000,1500)
-		 $tipuronaW = 'Перепад давления'
-		 gs 'defenceW'
-		 xgt 'fight','2'
+         if tiprand=1:
+		 '<B><font color=red><<$namev>> колдует и создает перепад давления.</font></B>'
+		 mannav=mannav-150
+		 PerepadV=1
+		 damageWV=RAND(1000,1500)
+		 $tipuronaW='Перепад давления'
+		 gs'defenceW'
+		 xgt'fight','2'
 		 exit
          end
          
-         if tiprand = 2: 
-		 '<B><font color = red><<$namev>> колдует и создает вихрь в своей ладони.</font></B>'
-		 	 if fint>0: fint = 0
-		     if zerkalo>0: zerkalo = 0 & '<B><font color = red>Ваши зеркала лопнули.</font></B>'
-		     if tuman>0: tuman = 0 & '<B><font color = red>Вихрь порвал ваш туман в клочья.</font></B>'
-		     if sandstorm>0: sandstorm = 0 & '<B><font color = red>Вихрь уничтожил ваш туман.</font></B>'
-		 mannav = mannav-150
-		 damageV = RAND(3000,4500)
-		 tipatkv = 1
-		 gs 'popadV'
-		 xgt 'fight','2'
+         if tiprand=2:
+		 '<B><font color=red><<$namev>> колдует и создает вихрь в своей ладони.</font></B>'
+		 	 if fint>0:fint=0
+		     if zerkalo>0:zerkalo=0&'<B><font color=red>Ваши зеркала лопнули.</font></B>'
+		     if tuman>0:tuman=0&'<B><font color=red>Вихрь порвал ваш туман в клочья.</font></B>'
+		     if sandstorm>0:sandstorm=0&'<B><font color=red>Вихрь уничтожил ваш туман.</font></B>'
+		 mannav=mannav-150
+		 damageV=RAND(3000,4500)
+		 tipatkv=1
+		 gs'popadV'
+		 xgt'fight','2'
 		 exit
          end
      end
 	 
 	 
-	 if BATpotionV>0: 
-	 BATpotionV = BATpotionV-1
-	 '<B><font color = red><<$namev>> открывает бутылку и пьет из нее</font></B>'
-	 mannav = mannav+500
-	 wipov = wipov+500
-	 healthv = vitalv*10
-	 xgt 'fight','2'
+	 if BATpotionV>0:
+	 BATpotionV=BATpotionV-1
+	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
+	 mannav=mannav+500
+	 wipov=wipov+500
+	 healthv=vitalv*10
+	 xgt'fight','2'
 	 exit
 	 end
 	 
-	 if BATpotionV<= 0: 
-	 tipatkv = 2
-	 '<B><font color = red><<$namev>> пинает вас ногой.</font></B>'
-	 gs 'udarv','1'
-	 gs 'popadv'
-	 xgt 'fight','2'
+	 if BATpotionV<=0:
+	 tipatkv=2
+	 '<B><font color=red><<$namev>> пинает вас ногой.</font></B>'
+	 gs'udarv','1'
+	 gs'popadv'
+	 xgt'fight','2'
 	 exit
 	 end
 
@@ -354,11 +354,11 @@
 
 
 
-     if notHere>0 or gostbody>0: 
+     if notHere>0 or gostbody>0:
      
      else
-         if defence>0: 
-             if tuman>0 or sandstorm>0: 
+         if defence>0:
+             if tuman>0 or sandstorm>0:
              
              else
              

@@ -8,104 +8,104 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Пивоварня Лигербрау</H4></center>'
-'<center><img src = "pic/Evedon/pivovarnia.jpg" ></center>'
+'<center><img src="pic/Evedon/pivovarnia.jpg" ></center>'
 'Полутемное помещение пивоварни.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-act 'Уйти': 
-minut += 5
- gt 'suburbiaW'
+act 'Уйти':
+minut=minut+5
+gt'suburbiaW'
 end
 
-if hour>= 10 and hour<20: 
-     if gorodovQW = 0: 
+if hour>=10 and hour<20:
+     if gorodovQW=0:
      *clr
-     '<center><img src = "pic/EvedonNarod/dochvernona.jpg"></center>'
+     '<center><img src="pic/EvedonNarod/dochvernona.jpg"></center>'
      'За стойкой стоит молоденькая грустная девушка, дочь пивовара.'
-		 if gorodovQW>0 and pivdochQW = 0: 
+		 if gorodovQW>0 and pivdochQW=0:
 		 *clr
-		 '<center><img src = "pic/EvedonNarod/vernon.jpg"></center>'
+		 '<center><img src="pic/EvedonNarod/vernon.jpg"></center>'
 		 'За прилавком сидит расстроенный пивовар.'
-			 act 'Спросить у пивовара что случилось': 
+			 act 'Спросить у пивовара что случилось':
 			 cla
-			 minut += 15
-			 pivdochQW = 1
+			 minut=minut+15
+			 pivdochQW=1
 			 '(Вы) - Что случилось?'
 			 '(Пивовар) - Дочь пропала. Опять. Уже во второй раз. Что-то стряслось. Надо было уехать отсюда.'
-				 act 'Расскажи подробней.': 
+				 act 'Расскажи подробней.':
 				 cla
-				 minut += 15
+				 minut=minut+15
 				 '(Вы) - Расскажи подробней.'
 				 '(Пивовар) - Зашел посыльный из гильдии караванщиков. Попросил срочно отгрузить товар и доставить его к каравану стоящему около озера. Я был занят и попросил дочь отвести ослика с грузом к озеру.'
 				 '(Пивовар) - ослик пришел обратно один, с нетронутым грузом. Дочери нет нигде.'
-					 act 'Как выглядел посыльный?': 
+					 act 'Как выглядел посыльный?':
 					 cla
-					 minut += 15
+					 minut=minut+15
 					 'Ну как, здоровенный мужик в грязных, грубых ботинках, простой одежде и да, у него нос разбит был.'
 					 'Эх, я старый дуралей не верил ей. Думал загуляла девка.'
 					 'Крепкий пивовар зарыдал как младенец после этих слов.'
-					 act 'Хмм, надо же.': gt $CURLOC
+					 act 'Хмм, надо же.':gt $CURLOC
 					 end
 				 end
 			 end
 		 end
 	 end
 
-     if lostpeopleQW = 2 and gorodovQW = 0: 
-         act 'Спросить у дочки пивовара куда она пропадала': 
+     if lostpeopleQW=2 and gorodovQW=0:
+         act 'Спросить у дочки пивовара куда она пропадала':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod/dochvernona.jpg"></center>'
-         minut += 15
-         lostpeopleQW = 3
+         '<center><img src="pic/EvedonNarod/dochvernona.jpg"></center>'
+         minut=minut+15
+         lostpeopleQW=3
          '(Вы) - Говорят ты куда-то пропадала?'
          '(Дочь пивовара) - Да замучили уже расспросами. Я действительно ничего не помню. Пошла на цветочный луг возле ферм. Не помню даже пришла я туда или нет. Как отрезало. Потом очнулась уже около дома.'
-         act 'Хмм, надо же.': gt $CURLOC
+         act 'Хмм, надо же.':gt $CURLOC
          end
      end
-     if lostpeopleQW = 4 and gorodovQW = 0: 
-         act 'Спросить у дочки пивовара про найденный платок': 
+     if lostpeopleQW=4 and gorodovQW=0:
+         act 'Спросить у дочки пивовара про найденный платок':
          cla
          *clr
-         '<center><img src = "pic/EvedonNarod/dochvernona.jpg"></center>'
-         minut += 15
-         lostpeopleQW = 5
+         '<center><img src="pic/EvedonNarod/dochvernona.jpg"></center>'
+         minut=minut+15
+         lostpeopleQW=5
          '(Вы) - Мне удалось на цветочной поляне найти этот платок'
          '(Дочь пивовара) - Да это мой платок. Но я не помню была я вообще на этой поляне или нет. И кхм...'
-             act 'Что?': 
+             act 'Что?':
 			 cla
-			 minut += 15
+			 minut=minut+15
 			 '(Вы) - Что?'
 			 '(Дочь пивовара) - Хмм, стыдно говорить, но у меня груди болят. Больше я действительно ничего не знаю.'
-             act 'Хмм, надо же.': gt $CURLOC
+             act 'Хмм, надо же.':gt $CURLOC
              end
          end
      end
      
-     if karverWantBeer = 1: 
-		 act 'Мне бочонок самого лучшего пива.': 
+     if karverWantBeer=1:
+		 act 'Мне бочонок самого лучшего пива.':
 		 cla
 		 *clr
-         '<center><img src = "pic/EvedonNarod/vernon.jpg"></center>'
-		 minut += 15
+         '<center><img src="pic/EvedonNarod/vernon.jpg"></center>'
+		 minut=minut+15
 		 '(Вы) - Мне бочонок самого лучшего пива.'
 		 '(Пивовар) - Хмм, вообще-то у нас самое лучшее пиво "Герцогское" изготавливается по спец заказу и стоит бешеных денег. Бочонок 5000 гемов.'
-		 act 'Охереть! 5000 гемов за бочонок пойла, да вы с ума сошли!': gt $CURLOC
-		     if gem>= 5000: 
-		     	 act 'Ладно, беру.': 
+		 act 'Охереть! 5000 гемов за бочонок пойла, да вы с ума сошли!':gt $CURLOC
+		     if gem>=5000:
+		     	 act 'Ладно, беру.':
 		         cla
-		         gem- = 5000
-		         karverWantBeer = 2
+		         gem-=5000
+		         karverWantBeer=2
 		         'Вам выкатили пузатый бочонок самого лучшего пива и вы отдали 5000 гемов за него.'
-		         act 'Уйти.': gt $CURLOC
+		         act 'Уйти.':gt $CURLOC
 		         end
 		     end
 		 end

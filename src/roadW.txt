@@ -5,115 +5,115 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Эведонский тракт</H4></center>'
-if hour>= 7 and hour<= 19: '<center><img src = "pic/Evedon/road.jpg" ></center>'
-if hour<7 and hour>= 5 or hour>19 and hour <22: '<center><img src = "pic/Evedon\road1.jpg" ></center>'
-if hour<5 or hour>= 22: '<center><img src = "pic/Evedon/road2.jpg" ></center>'
+if hour>=7 and hour<=19:'<center><img src="pic/Evedon/road.jpg" ></center>'
+if hour<7 and hour>=5 or hour>19 and hour <22:'<center><img src="pic/Evedon\road1.jpg" ></center>'
+if hour<5 or hour>=22:'<center><img src="pic/Evedon/road2.jpg" ></center>'
 '.'
 'На столбике грубо намалевано <<roadMark>>я верста'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-robrand = RAND(0,100)
-if robrand>= 80: 
-     if roratimes<= 0: 
-	 gs 'robberW'
-	 mortalv = RAND(3,7)
-	 roratimes = 1
+robrand=RAND(0,100)
+if robrand>=80:
+     if roratimes<=0:
+	 gs'robberW'
+	 mortalv=RAND(3,7)
+	 roratimes=1
 	 'Из леса рядом с дорогой вышел <<$namev>>, он ухмыльнулся и стал доставать оружие "Кошелек или жизнь?" вы увидели что следом выходят еще несколько вооруженных разбойников.'
-	 act 'Драться': gt 'before'
+	 act 'Драться':gt'before'
 	 exit
 	 end
 
-	 if roratimes>0: roratimes = roratimes-1
+	 if roratimes>0:roratimes=roratimes-1
 
 end
 
 
-!if desertMark>0: 
-	 act 'Идти в сторону Эведона(1 час)': 
+!if desertMark>0:
+	 act 'Идти в сторону Эведона(1 час)':
 	 cla
-	 minut += 60
-     roadMark = roadMark-1
+	 minut=minut+60
+     roadMark=roadMark-1
      'Вы идете по пустынной дороге.'
-         act 'Передохнуть': 
-             if roadMark<= 0: gt 'fishW'
-             if roadMark>0: gt 'roadW'
+         act 'Передохнуть':
+             if roadMark<=0:gt'fishW'
+             if roadMark>0:gt'roadW'
          end
 	 end
 	 
 	 
-	 act 'Идти в сторону форта Каэр Дум(1 час)': 
+	 act 'Идти в сторону форта Каэр Дум(1 час)':
 	 cla
-	 minut += 60
-	 roadMark = roadMark+1
+	 minut=minut+60
+	 roadMark=roadMark+1
 	 'Вы идете по пустынной дороге.'
-         act 'Передохнуть': 
-             if roadMark>= 10: gt 'fortW'
-             if roadMark<10: gt 'roadW'
+         act 'Передохнуть':
+             if roadMark>=10:gt'fortW'
+             if roadMark<10:gt'roadW'
          end
 	 end
 	 
 	 
-	 if missionBdata = 10: 
-		 act 'Искать банду': 
-		 minut += 60
-		 missionBdata = 20
-		     if missionData = 120: 
-		     barierV = 70
-			 healthAmuletV = 15
-			 windGranadV = 10
-		     $nameV = '<<$nameBandit>>'
-			 lvlv = 180
-			 strenV = 200
-			 speedV = 200
-			 agilV = 200
-			 vitalV = 550
-			 intelv = 10
-			 willv = 120
-			 program = 10
-			 healthV = vitalV*10
-			 mannaV = intelV*10
-			 wipoV = willV*10
-			 ShilDefv = 30
-			 weaponv = 1
-			 armorDefv = 600
-			 wepAtkV = 100
-			 mortalv = 15
-			 NORUN = 1
-			 '<center><img src = "pic/EvedonMonsters/banda.jpg"></center>'
+	 if missionBdata=10:
+		 act 'Искать банду':
+		 minut=minut+60
+		 missionBdata=20
+		     if missionData=120:
+		     barierV=70
+			 healthAmuletV=15
+			 windGranadV=10
+		     $nameV='<<$nameBandit>>'
+			 lvlv=180
+			 strenV=200
+			 speedV=200
+			 agilV=200
+			 vitalV=550
+			 intelv=10
+			 willv=120
+			 program=10
+			 healthV=vitalV*10
+			 mannaV=intelV*10
+			 wipoV=willV*10
+			 ShilDefv=30
+			 weaponv=1
+			 armorDefv=600
+			 wepAtkV=100
+			 mortalv=15
+			 NORUN=1
+			 '<center><img src="pic/EvedonMonsters/banda.jpg"></center>'
 			 'Из леса вышла банда и от них отделился главарь. "Посмотрите ребята, нас ищут эти полудурки из ордена."'
 		     end
 		     
-		 missionData = 0
-		 act 'Драться': gs 'before'
+		 missionData=0
+		 act 'Драться':gs'before'
 		 end
 	 end
 	 
-	 if missionBdata = 20 and health>10: 
-	 missionB+= 1
-	 missionBdata = 0
-	 kredit = kredit+500
+	 if missionBdata=20 and health>10:
+	 missionB+=1
+	 missionBdata=0
+	 kredit=kredit+500
 	 '<B>Вы выполнили миссию</B>'
 	 end
 	 
-	 if missionBdata = 20 and health<= 10: 
-	 missionBdata = 0
+	 if missionBdata=20 and health<=10:
+	 missionBdata=0
 	 '<B>Вы провалили миссию</B>'
 	 end
 	 
 	 
 	 
 	 
-if roadmark>8 and kladQW = 6: 
-     act 'Поджечь траву чтобы отвлечь стражу': 
+if roadmark>8 and kladQW=6:
+     act 'Поджечь траву чтобы отвлечь стражу':
      cls
-     kladQW = 7
-     minut+= 30
-     'Сказано - сделано.  И вот уже трава полыхает вовсю, самое время бежать к болоту. Но около форта вы слышите приказ: "Утроить все посты. Привести всех в полную боевую готовность". После этих слов идти к болоту как-то сразу резко расхотелось. "Так и этот план провалился", - сокрушенно подумали вы.
+     kladQW=7
+     minut+=30
+     'Сказано - сделано.  И вот уже трава полыхает вовсю, самое время бежать к болоту. Но около форта вы слышите приказ:"Утроить все посты. Привести всех в полную боевую готовность". После этих слов идти к болоту как-то сразу резко расхотелось. "Так и этот план провалился", - сокрушенно подумали вы.
 Позже, размышляя над тем, что же предпринять, были отброшены варианты с цирковым представлением(собственно, нет нигде ни цирка, ни актёров), с наймом бандитов и отвлекающей атаке с другой стороны форта (прямой путь на плаху, хотя мысль и интересная), зачаровать стражу тоже не получится (орденские сразу спалят), подмешать в еду или воду стражникам сонное зелье если и получится, то вас быстро вычислят, ждать пока над болотом будет густой туман тоже не получится(искать клад будет невозможно). Ломая голову над вариантами действий вы пришли к выводу, что спокойно искать клад получится только с разрешения начальника стражи. Ещё подумав, вы решили, что камешками и гемами можно и поделиться, а об артефакте начальнику знать не обязательно. '
      
-     act 'Уйти': gt 'fortW'
+     act 'Уйти':gt'fortW'
      end
 
 
@@ -124,7 +124,7 @@ end
 
 
 ''
-if vampireMorf>= 1: 'Зарыться в <a href = "exec: gt ''vampGrave''">землю</a>'
+if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
 
 
 

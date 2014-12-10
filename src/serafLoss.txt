@@ -1,49 +1,49 @@
 # serafLoss
-monster = 0
+monster=0
 'Вы пали к ногам Сераф. Она встала горделиво около вас и усмехнулась "Я же говорила тебе. Меня ты не пройдешь. А сейчас очередь моей веселой шутки."'
 
-if serafLip = 0: 
+if serafLip=0:
 'Сераф достала из под юбки свой огромный, стоячий член и улыбнулась "Открой ротик, теперь ты жить не сможешь без хорошего хуя во рту."'
 
-     act 'Послушно открыть рот': 
+     act 'Послушно открыть рот':
      cls
-     serafbattleQW = 0
-     serafLip = 1
+     serafbattleQW=0
+     serafLip=1
      minut = minut + 15
-	 bj+= 1
-	 if SexStatA = 1: frendA+= 5
-	 if SexStatB = 1: frendB+= 5
-	 if SexStatC = 1: frendC+= 5
+	 bj+=1
+	 if SexStatA=1:frendA+=5
+	 if SexStatB=1:frendB+=5
+	 if SexStatC=1:frendC+=5
 	 clr
-	 gs 'stat'
-	 picrand = RAND(0,11)
-	 if picrand = 0: '<center><img src = "pic/EvedonSex/bj.jpg" ></center>'
-	 if picrand = 1: '<center><img src = "pic/EvedonSex/bj1.jpg" ></center>'
-	 if picrand = 2: '<center><img src = "pic/EvedonSex/bj2.jpg" ></center>'
-	 if picrand = 3: '<center><img src = "pic/EvedonSex/bj3.jpg" ></center>'
-	 if picrand = 4: '<center><img src = "pic/EvedonSex/bj4.jpg" ></center>'
-	 if picrand = 5: '<center><img src = "pic/EvedonSex/bj5.jpg" ></center>'
-	 if picrand = 6: '<center><img src = "pic/EvedonSex/bj6.jpg" ></center>'
-	 if picrand = 7: '<center><img src = "pic/EvedonSex/bj7.jpg" ></center>'
-	 if picrand = 8: '<center><img src = "pic/EvedonSex/bj8.jpg" ></center>'
-	 if picrand = 9: '<center><img src = "pic/EvedonSex/bj9.jpg" ></center>'
-	 if picrand = 10: '<center><img src = "pic/EvedonSex/bj10.jpg" ></center>'
-	 if picrand = 11: '<center><img src = "pic/EvedonSex/bj11.jpg" ></center>'
+	 gs'stat'
+	 picrand=RAND(0,11)
+	 if picrand=0:'<center><img src="pic/EvedonSex/bj.jpg" ></center>'
+	 if picrand=1:'<center><img src="pic/EvedonSex/bj1.jpg" ></center>'
+	 if picrand=2:'<center><img src="pic/EvedonSex/bj2.jpg" ></center>'
+	 if picrand=3:'<center><img src="pic/EvedonSex/bj3.jpg" ></center>'
+	 if picrand=4:'<center><img src="pic/EvedonSex/bj4.jpg" ></center>'
+	 if picrand=5:'<center><img src="pic/EvedonSex/bj5.jpg" ></center>'
+	 if picrand=6:'<center><img src="pic/EvedonSex/bj6.jpg" ></center>'
+	 if picrand=7:'<center><img src="pic/EvedonSex/bj7.jpg" ></center>'
+	 if picrand=8:'<center><img src="pic/EvedonSex/bj8.jpg" ></center>'
+	 if picrand=9:'<center><img src="pic/EvedonSex/bj9.jpg" ></center>'
+	 if picrand=10:'<center><img src="pic/EvedonSex/bj10.jpg" ></center>'
+	 if picrand=11:'<center><img src="pic/EvedonSex/bj11.jpg" ></center>'
 	 '<<$namev>> достала свой член и вы обхватили его губами начав сосать.'
-	 cumslut = 100000
-	 gs 'cumslut'
+	 cumslut=100000
+	 gs'cumslut'
 	 'Наконец <<$namev>> начала кончать вам в рот.'
-	 swallow = swallow+1
-	 cumlip = cumlip+1
+	 swallow=swallow+1
+	 cumlip=cumlip+1
      'Ваши губы охватило жжение и они как будто опухли.'
      
-     act 'Уйти': gt 'telaW'
+     act 'Уйти':gt'telaW'
      end
 end
 
-if serafLip = 1: 
+if serafLip=1:
 'Ты мне надоела "Посажу ка я тебя в коровник, хоть какая то польза будет от такой бездарности как ты."'
-     act 'Послушно открыть рот': 
+     act 'Послушно открыть рот':
      cls
      'Сераф заковала вас в цепи и поставила в доильную, где вас нескончаемо трахало дилдо и доили молоко из ваших грудей.'
      'Это конец.'

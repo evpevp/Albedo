@@ -1,131 +1,131 @@
 # ender
-if $ARGS[0] = 'win': 
+if $ARGS[0]='win':
 'Вы победили'
-win = win+1
-exp = exp+lvlv
-     if GraveDog>= 100 and arenafight = 0: GraveDogPowerM = GraveDogPowerMMAX+(willMAXV/10) & 'Ваша могильная собака поглатила волю противника расширив свой уровень силы.'
-     if GraveDog>= 100 and arenafight>0: GraveDogPowerM = GraveDogPowerMMAX
-     if prize>0: 
-     prizrand = RAND(lvlv/6,lvlv/4)
-     gem = gem+prizrand
+win=win+1
+exp=exp+lvlv
+     if GraveDog>=100 and arenafight=0:GraveDogPowerM=GraveDogPowerMMAX+(willMAXV/10)&'Ваша могильная собака поглатила волю противника расширив свой уровень силы.'
+     if GraveDog>=100 and arenafight>0:GraveDogPowerM=GraveDogPowerMMAX
+     if prize>0:
+     prizrand=RAND(lvlv/6,lvlv/4)
+     gem=gem+prizrand
      'Вы получили <<prizrand>> гемов.'
      end
      
-     if arenafight = 1: arenawin = arenawin+1 & 'Публика хлопает в ладоши и скандирует <<$arenaname>> <<$arenaname>> <<$arenaname>>. Распорядитель лично вручил вам призовые <<arenaQW*100>> гемов и с горячими поздравлениями пожал вашу руку.' & gem = gem+arenaQW*100 & arenaQW = arenaQW+1
+     if arenafight=1:arenawin=arenawin+1&'Публика хлопает в ладоши и скандирует <<$arenaname>> <<$arenaname>> <<$arenaname>>. Распорядитель лично вручил вам призовые <<arenaQW*100>> гемов и с горячими поздравлениями пожал вашу руку.'&gem=gem+arenaQW*100&arenaQW=arenaQW+1
      
-     if otkazfight = 1: otkaz = otkaz+1 & вор = вор+1 & otkazIzbit = 0
-gs 'nill'
-     !if jugoQW = 1: 
-     if monster>0: 
-         if monster = 1: xgt 'tentaklwin'
-         if monster = 2: xgt 'impwin'
-         if monster = 3: xgt 'hellhoundwin'
-         if monster = 4: xgt 'hellbullwin'
-         if monster = 5: xgt 'minowin'
-         if monster = 6: xgt 'spiderwin'
-         if monster = 7: xgt 'sandwitchWin'
-         if monster = 8: xgt 'demonWin'
-         if monster = 9: xgt 'nagaWin'
-         if monster = 10: xgt 'aukaWin'
-         if monster = 11: xgt 'werewolfWin'
-         if monster = 12: xgt 'kovenW'
-         if monster = 13: xgt 'sandemonWin'
-         if monster = 14: xgt 'insectWin'
-         if monster = 15: xgt 'tumanWin'
-         if monster = 16: xgt 'elvenWin'
-         if monster = 17: xgt 'akbalWin'
-         if monster = 18: xgt 'hekelWin'
-         if monster = 19: xgt 'poliWin'
-         if monster = 20: xgt 'kervolWin'
-         if monster = 21: xgt 'karverWin'
-         if monster = 22: xgt 'dominikaWin'
-         if monster = 23: xgt 'malgunWin'
-         if monster = 24: xgt 'satirWin'
-         if monster = 25: xgt 'zombieWin'
-         if monster = 26: xgt 'demonologWin'
-         if monster = 27: xgt 'serafWin'
-         if monster = 28: xgt 'vampirWin'
-         if monster = 29: xgt 'oblavaWin'
-         if monster = 30: xgt 'mehanikWin'
-         if monster = 31: xgt 'solundorWin'
-         if monster = 32: xgt 'astarotWin'
-         if monster = 33: xgt 'GameWin'
+     if otkazfight=1:otkaz=otkaz+1&вор=вор+1&otkazIzbit=0
+gs'nill'
+     !if jugoQW=1:
+     if monster>0:
+         if monster=1:xgt'tentaklwin'
+         if monster=2:xgt'impwin'
+         if monster=3:xgt'hellhoundwin'
+         if monster=4:xgt'hellbullwin'
+         if monster=5:xgt'minowin'
+         if monster=6:xgt'spiderwin'
+         if monster=7:xgt'sandwitchWin'
+         if monster=8:xgt'demonWin'
+         if monster=9:xgt'nagaWin'
+         if monster=10:xgt'aukaWin'
+         if monster=11:xgt'werewolfWin'
+         if monster=12:xgt'kovenW'
+         if monster=13:xgt'sandemonWin'
+         if monster=14:xgt'insectWin'
+         if monster=15:xgt'tumanWin'
+         if monster=16:xgt'elvenWin'
+         if monster=17:xgt'akbalWin'
+         if monster=18:xgt'hekelWin'
+         if monster=19:xgt'poliWin'
+         if monster=20:xgt'kervolWin'
+         if monster=21:xgt'karverWin'
+         if monster=22:xgt'dominikaWin'
+         if monster=23:xgt'malgunWin'
+         if monster=24:xgt'satirWin'
+         if monster=25:xgt'zombieWin'
+         if monster=26:xgt'demonologWin'
+         if monster=27:xgt'serafWin'
+         if monster=28:xgt'vampirWin'
+         if monster=29:xgt'oblavaWin'
+         if monster=30:xgt'mehanikWin'
+         if monster=31:xgt'solundorWin'
+         if monster=32:xgt'astarotWin'
+         if monster=33:xgt'GameWin'
      exit
      end
-     if manmob>0: 
-         if manmob = 1: xgt 'robberWin'
+     if manmob>0:
+         if manmob=1:xgt'robberWin'
      exit
      end
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
 
-if $ARGS[0] = 'loss': 
+if $ARGS[0]='loss':
 
-if VoronKlon>0: 
-VoronKlon- = 1
-horny = 0
- health = vital*10
- wipo = will*10
+if VoronKlon>0:
+VoronKlon-=1
+horny=0
+ health=vital*10
+ wipo=will*10
 '<b>Ваша магия вороньего клона сработала и ваше тело разлетелось воронами, вы же сами восстали как будто с вами ничего и не было.</b>'
-act 'Восстать': gt 'fight','0'
+act 'Восстать':gt'fight','0'
 exit
 end
 
 'Вы проиграли'
-loss = loss+1
-if monster = 0 and arenafight = 0: money = 0 & gem = 0
-health = 10
-     if otkazfight = 1: otkazIzbit = otkazIzbit+1
-     if arenafight = 1: arenaloss = arenaloss+1 & arenaQW = arenaQW-1 & 'Зрители свистят и улюлюкают издеваясь над вами. Охрана арены под хохот толпы схватила вас за ноги выволокла за пределы арены вышвырнув вас на мостовую под хохот толпы.'
-gs 'nill'
+loss=loss+1
+if monster=0 and arenafight=0:money=0&gem=0
+health=10
+     if otkazfight=1:otkazIzbit=otkazIzbit+1
+     if arenafight=1:arenaloss=arenaloss+1&arenaQW=arenaQW-1&'Зрители свистят и улюлюкают издеваясь над вами. Охрана арены под хохот толпы схватила вас за ноги выволокла за пределы арены вышвырнув вас на мостовую под хохот толпы.'
+gs'nill'
 
-     if jugoQW = 1: 
-     jugoQW = 2
+     if jugoQW=1:
+     jugoQW=2
      'Сознание стало ускользать от вас и вас окутала темнота.'
-     act 'ВЫЙТИ': gt 'karinPRE'
+     act 'ВЫЙТИ':gt'karinPRE'
      exit
      end
-     if monster>0: 
-         if monster = 1: xgt 'tentakloss'
-         if monster = 2: xgt 'imploss'
-         if monster = 3: xgt 'hellhoundloss'
-         if monster = 4: xgt 'hellbullLoss'
-         if monster = 5: xgt 'minoloss'
-         if monster = 6: xgt 'spiderloss'
-         if monster = 7: xgt 'sandwitchLoss'
-         if monster = 8: xgt 'demonLoss'
-         if monster = 9: xgt 'nagaLoss'
-         if monster = 10: xgt 'aukaLoss'
-         if monster = 11: xgt 'werewolfLoss'
-         if monster = 12: xgt 'slaveStart'
-         if monster = 13: xgt 'sandemonLoss'
-         if monster = 14: xgt 'insectLoss'
-         if monster = 15: xgt 'tumanLoss'
-         if monster = 16: xgt 'elvenLoss'
-         if monster = 17: xgt 'akbalLoss'
-         if monster = 18: xgt 'hekelLoss'
-         if monster = 19: xgt 'poliLoss'
-         if monster = 20: xgt 'kervolLoss'
-         if monster = 21: gt 'overdm','1'
-         if monster = 22: xgt 'dominikaLoss'
-         if monster = 23: xgt 'malgunLoss'
-         if monster = 24: xgt 'satirLoss'
-         if monster = 25: xgt 'zombieLoss'
-         if monster = 26: xgt 'demonologLoss'
-         if monster = 27: xgt 'serafLoss'
-         if monster = 28: xgt 'vampirLoss'
-         if monster = 29: xgt 'oblavaLoss'
-         if monster = 30: xgt 'mehanikLoss'
-         if monster = 31: xgt 'solundorLoss'
-         if monster = 32: xgt 'astarotLoss'
-         if monster = 33: xgt 'astarotLoss'
+     if monster>0:
+         if monster=1:xgt'tentakloss'
+         if monster=2:xgt'imploss'
+         if monster=3:xgt'hellhoundloss'
+         if monster=4:xgt'hellbullLoss'
+         if monster=5:xgt'minoloss'
+         if monster=6:xgt'spiderloss'
+         if monster=7:xgt'sandwitchLoss'
+         if monster=8:xgt'demonLoss'
+         if monster=9:xgt'nagaLoss'
+         if monster=10:xgt'aukaLoss'
+         if monster=11:xgt'werewolfLoss'
+         if monster=12:xgt'slaveStart'
+         if monster=13:xgt'sandemonLoss'
+         if monster=14:xgt'insectLoss'
+         if monster=15:xgt'tumanLoss'
+         if monster=16:xgt'elvenLoss'
+         if monster=17:xgt'akbalLoss'
+         if monster=18:xgt'hekelLoss'
+         if monster=19:xgt'poliLoss'
+         if monster=20:xgt'kervolLoss'
+         if monster=21:gt'overdm','1'
+         if monster=22:xgt'dominikaLoss'
+         if monster=23:xgt'malgunLoss'
+         if monster=24:xgt'satirLoss'
+         if monster=25:xgt'zombieLoss'
+         if monster=26:xgt'demonologLoss'
+         if monster=27:xgt'serafLoss'
+         if monster=28:xgt'vampirLoss'
+         if monster=29:xgt'oblavaLoss'
+         if monster=30:xgt'mehanikLoss'
+         if monster=31:xgt'solundorLoss'
+         if monster=32:xgt'astarotLoss'
+         if monster=33:xgt'astarotLoss'
      exit
      end
-     if manmob>0: 
-         if manmob = 1: xgt 'robberLoss'
+     if manmob>0:
+         if manmob=1:xgt'robberLoss'
      exit
      end
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
 --- ender ---------------------------------
 

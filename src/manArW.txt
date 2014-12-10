@@ -1,300 +1,300 @@
 # manArW
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/armor.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/armorf.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/armor.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/armorf.jpg" ></center>'
 'Легкий доспех.'
 'Защита 50'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if armor = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if armor = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  armor = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set armor = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 100
-			  armor = 2
-			 armorDef = 50
+			 gs'clonil'
+			 set slot = 100
+			 set armor = 2
+			 armorDef=50
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/armor2.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/armor2f.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/armor2.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/armor2f.jpg" ></center>'
 'Средний доспех.'
 'Защита 100'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if armor2 = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if armor2 = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  armor2 = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set armor2 = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 101
-			  armor2 = 2
-			 armorDef = 100
+			 gs'clonil'
+			 set slot = 101
+			 set armor2 = 2
+			 armorDef=100
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
 
-if $ARGS[0] = '3': 
+if $ARGS[0]='3':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/armor3.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/armor3f.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/armor3.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/armor3f.jpg" ></center>'
 'Тяжелый доспех.'
 'Защита 200'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if armor3 = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if armor3 = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  armor3 = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set armor3 = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 102
-			  armor3 = 2
-			 armorDef = 200
+			 gs'clonil'
+			 set slot = 102
+			 set armor3 = 2
+			 armorDef=200
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
 
-if $ARGS[0] = '4': 
+if $ARGS[0]='4':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/armor4.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/armor4f.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/armor4.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/armor4f.jpg" ></center>'
 'Пустынный доспех.'
 'Защита 110'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if armor4 = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if armor4 = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  armor4 = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set armor4 = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 101
-			  armor4 = 2
-			 armorDef = 110
+			 gs'clonil'
+			 set slot = 101
+			 set armor4 = 2
+			 armorDef=110
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '5': 
+if $ARGS[0]='5':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/robe.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/robef.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/robe.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/robef.jpg" ></center>'
 'Роба послушника ордена четырехлистника.'
 'Защита 100'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if robe = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if robe = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  robe = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set robe = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 200
-			  robe = 2
-			 armorDef = 100
+			 gs'clonil'
+			 set slot = 200
+			 set robe = 2
+			 armorDef=100
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '6': 
+if $ARGS[0]='6':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/robe2.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/robe2f.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/robe2.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/robe2f.jpg" ></center>'
 'Роба младшего магистра ордена четырехлистника.'
 'Защита 200'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if robe2 = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if robe2 = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  robe2 = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set robe2 = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 200
-			  robe2 = 2
-			 armorDef = 200
+			 gs'clonil'
+			 set slot = 200
+			 set robe2 = 2
+			 armorDef=200
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
 
-if $ARGS[0] = '7': 
+if $ARGS[0]='7':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/robe3.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/robe3f.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/robe3.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/robe3f.jpg" ></center>'
 'Роба старшего магистра ордена четырехлистника.'
 'Защита 300'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if robe3 = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if robe3 = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  robe3 = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set robe3 = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 200
-			  robe3 = 2
-			 armorDef = 300
+			 gs'clonil'
+			 set slot = 200
+			 set robe3 = 2
+			 armorDef=300
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '8': 
+if $ARGS[0]='8':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/robeGrand.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/robe3f.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/robeGrand.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/robe3f.jpg" ></center>'
 'Роба великого магистра ордена четырехлистника.'
 'Защита 800'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if robeGrand = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if robeGrand = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  robeGrand = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set robeGrand = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 200
-			  robeGrand = 2
-			 armorDef = 800
+			 gs'clonil'
+			 set slot = 200
+			 set robeGrand = 2
+			 armorDef=800
 			 GOTO $locP, $metkaP
 			 end
      end
 end
 
-if $ARGS[0] = '9': 
+if $ARGS[0]='9':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-if tits<= 0: '<center><img src = "pic/EvedonOd/armor5.jpg" ></center>'
-if tits>0: '<center><img src = "pic/EvedonOd/armor5f.jpg" ></center>'
+if tits<=0:'<center><img src="pic/EvedonOd/armor5.jpg" ></center>'
+if tits>0:'<center><img src="pic/EvedonOd/armor5f.jpg" ></center>'
 'Доспех стражи Эведона.'
 'Защита 110'
-act 'Убрать вещь.': GOTO $locP, $metkaP
-     if armor5 = 0 and mag = 1: 
+act 'Убрать вещь.':GOTO $locP, $metkaP
+     if armor5 = 0 and mag = 1:
      'Цена <<payclo>>'
-         if gem >= payclo: 
-			 act 'Купить': 
+         if gem >= payclo:
+			 act 'Купить':
 			 cla
-			  gem = gem - payclo
-			  armor5 = 1
-			 ! kostumB = bedra
+			 set gem = gem - payclo
+			 set armor5 = 1
+			 !set kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.': GOTO $locP, $metkaP
+			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0: 
-			 act 'Надеть': 
+	 elseif mag = 0:
+			 act 'Надеть':
 			 cla
-			 gs 'clonil'
-			  slot = 103
-			  armor5 = 2
-			 armorDef = 200
+			 gs'clonil'
+			 set slot = 103
+			 set armor5 = 2
+			 armorDef=200
 			 GOTO $locP, $metkaP
 			 end
      end

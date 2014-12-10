@@ -1,74 +1,74 @@
 # $menu_mam
-if $selobj = 'Персонаж': 
-     if pol = 0 and world = 0: VIEW 'pic\body\man.jpg'
-     if pol>0 and world = 0: 
-          if musle >= salo*2: 
+if $selobj='Персонаж':
+     if pol=0 and world=0:VIEW 'pic\body\man.jpg'
+     if pol>0 and world=0:
+          if musle >= salo*2:
 		 !мускулистый тип
-			 if bedra < 60: 
+			 if bedra < 60:
 			 VIEW 'pics\picb\fit.jpg'
 			 end
-			 if bedra >= 60 and bedra < 70: 
+			 if bedra >= 60 and bedra < 70:
 			 VIEW 'pics\picb\fit1.jpg'
 			 end
-			 if bedra >= 70 and bedra < 80: 
+			 if bedra >= 70 and bedra < 80:
 			 VIEW 'pics\picb\fit2.jpg'
 			 end
-			 if bedra >= 80 and bedra < 90: 
+			 if bedra >= 80 and bedra < 90:
 			 VIEW 'pics\picb\fit3.jpg'
 			 end
-			 if bedra >= 90 and bedra < 100: 
+			 if bedra >= 90 and bedra < 100:
 			 VIEW 'pics\picb\fit4.jpg'
 			 end
-			 if bedra >= 100 and bedra < 110: 
+			 if bedra >= 100 and bedra < 110:
 			 VIEW 'pics\picb\fit5.jpg'
 			 end
-			 if bedra >= 110 and bedra < 120: 
+			 if bedra >= 110 and bedra < 120:
 			 VIEW 'pics\picb\fit6.jpg'
 			 end
-			 if bedra >= 120: 
+			 if bedra >= 120:
 			 VIEW 'pics\picb\fit7.jpg'
 			 end
 		 end
-		 if musle < salo*2: 
+		 if musle < salo*2:
 		 !жирный тип
-			 if bedra < 60: 
+			 if bedra < 60:
 			 VIEW 'pics\picb\fat.jpg'
 			 end
-			 if bedra >= 60 and bedra < 70: 
+			 if bedra >= 60 and bedra < 70:
 			 VIEW 'pics\picb\fat1.jpg'
 			 end
-			 if bedra >= 70 and bedra < 80: 
+			 if bedra >= 70 and bedra < 80:
 			 VIEW 'pics\picb\fat2.jpg'
 			 end
-			 if bedra >= 80 and bedra < 90: 
+			 if bedra >= 80 and bedra < 90:
 			 VIEW 'pics\picb\fat3.jpg'
 			 end
-			 if bedra >= 90 and bedra < 100: 
+			 if bedra >= 90 and bedra < 100:
 			 VIEW 'pics\picb\fat4.jpg'
 			 end
-			 if bedra >= 100 and bedra < 110: 
+			 if bedra >= 100 and bedra < 110:
 			 VIEW 'pics\picb\fat5.jpg'
 			 end
-			 if bedra >= 110 and bedra < 120: 
+			 if bedra >= 110 and bedra < 120:
 			 VIEW 'pics\picb\fat6.jpg'
 			 end
-			 if bedra >= 120: 
+			 if bedra >= 120:
 			 VIEW 'pics\picb\fat7.jpg'
 			 end
 		 end
      end
      
-     if DemonMorf>= 10: VIEW 'pic\EvedonFace\DemonMorf2.jpg'
-	 if DemonMorf>= 5 and DemonMorf<10: VIEW 'pic\EvedonFace\DemonMorf.jpg'
-	 if DemonMorf<5: 
-		 if femin<50 and world = 1: VIEW 'pic\EvedonFace\manbody.jpg'
-		 if femin>= 50 and femin<200 and world = 1: VIEW 'pic\EvedonFace\manbody1.jpg'
-		 if femin>= 200 and world = 1: 
-			 if fat<100: VIEW 'pic\EvedonFace\woman.jpg'
-			 if fat >= 100 and fat < 200: VIEW 'pic\EvedonFace\woman1.jpg'
-			 if fat <= 400 and fat >= 200: VIEW 'pic\EvedonFace\woman2fat.jpg'
-			 if fat > 400 and fat <= 600: VIEW 'pic\EvedonFace\woman2fat1.jpg'
-			 if fat > 600: VIEW 'pic\EvedonFace\woman2fat2.jpg'
+     if DemonMorf>=10:VIEW 'pic\EvedonFace\DemonMorf2.jpg'
+	 if DemonMorf>=5 and DemonMorf<10:VIEW 'pic\EvedonFace\DemonMorf.jpg'
+	 if DemonMorf<5:
+		 if femin<50 and world=1:VIEW 'pic\EvedonFace\manbody.jpg'
+		 if femin>=50 and femin<200 and world=1:VIEW 'pic\EvedonFace\manbody1.jpg'
+		 if femin>=200 and world=1:
+			 if fat<100:VIEW 'pic\EvedonFace\woman.jpg'
+			 if fat >= 100 and fat < 200:VIEW 'pic\EvedonFace\woman1.jpg'
+			 if fat <= 400 and fat >=200:VIEW 'pic\EvedonFace\woman2fat.jpg'
+			 if fat > 400 and fat <= 600:VIEW 'pic\EvedonFace\woman2fat1.jpg'
+			 if fat > 600:VIEW 'pic\EvedonFace\woman2fat2.jpg'
 		 end
      end
 end

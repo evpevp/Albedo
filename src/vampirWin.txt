@@ -1,12 +1,12 @@
 # vampirWin
-monster = 0
+monster=0
 'Вампир сгорел обратившись в прах.'
-deadgem = RAND(lvl,lvl*4)
+deadgem=RAND(lvl,lvl*4)
 'Вы подобрали из его праха <<deadgem>> гем'
-gem+= deadgem
+gem+=deadgem
 'И собрали прах в бутылочку'
-vampireDust+= 1
+vampireDust+=1
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 --- vampirWin ---------------------------------
 

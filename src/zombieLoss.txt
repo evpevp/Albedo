@@ -1,25 +1,25 @@
 # zombieLoss
-monster = 0
+monster=0
 'Мертвец победил вас.'
 
-act 'Далее': 
+act 'Далее':
 cla
 *clr
-SUB = SUB+1
-minut += 60
-anus = anus+1
-anal = anal+1
-if vagina>0: sex = sex+1
-monst = monst+1
-skverna = skverna+10
+SUB=SUB+1
+minut=minut+60
+anus=anus+1
+anal=anal+1
+if vagina>0:sex=sex+1
+monst=monst+1
+skverna=skverna+10
 
-zornd = rand(0,1)
-if zornd = 0: '<center><img src = "pic/EvedonMonsters/zombiesex.jpg" ></center>'
-if zornd = 1: '<center><img src = "pic/EvedonMonsters/zombiesex1.jpg" ></center>'
+zornd=rand(0,1)
+if zornd=0:'<center><img src="pic/EvedonMonsters/zombiesex.jpg" ></center>'
+if zornd=1:'<center><img src="pic/EvedonMonsters/zombiesex1.jpg" ></center>'
 
 'Обессилив, вы упали на спину. Мертвец подполз и ожесточенно начал пихать в вас, смердя трупной вонью. Несомненно одно - ебаться с зомби ночью на кладбище  противно, холодно и негигиенично. Именно такой вывод зделали вы, когда спустя некоторое время, живой труп спустил в вас и отвалил.'
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
 --- zombieLoss ---------------------------------
 

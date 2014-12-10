@@ -1,62 +1,62 @@
 # STONEBOX
 clr
-gs 'stat'
+gs'stat'
 !'Усталость <<SCstamina>>'
-picrand = RAND(0,2)
-if picrand = 0: '<center><img src = "pic/EvedonSC/box.jpg" ></center>'
-if picrand = 1: '<center><img src = "pic/EvedonSC/box1.jpg" ></center>'
-if picrand = 2: '<center><img src = "pic/EvedonSC/box2.jpg" ></center>'
+picrand=RAND(0,2)
+if picrand=0:'<center><img src="pic/EvedonSC/box.jpg" ></center>'
+if picrand=1:'<center><img src="pic/EvedonSC/box1.jpg" ></center>'
+if picrand=2:'<center><img src="pic/EvedonSC/box2.jpg" ></center>'
 'Ремни закреплены на внутренних углах ящика таким образом чтобы вы не могли ни на миллиметр сдвинутся в сторону, только вверх и вниз. Потолок низковат и вы упираясь в него головой вынуждены стоять на согнутых ногах.'
 'Между ног установлено большое дилдо направленное вам точно в анус, дилдо хорошо смазано лубрикантом с возбудителем.'
-if SCdick>20: SCdick = 20
-if SCdick<0: SCdick = 0
-if SCdick = 0: 'Большое черное дилдо слегка касается вашего ануса'
-if SCdick>0: 'Большое черное дилдо погрузилось в ваш анус на <<SCdick>> см'
+if SCdick>20:SCdick=20
+if SCdick<0:SCdick=0
+if SCdick=0:'Большое черное дилдо слегка касается вашего ануса'
+if SCdick>0:'Большое черное дилдо погрузилось в ваш анус на <<SCdick>> см'
 
-if SCdick<20: 
+if SCdick<20:
 
-	 act 'Встать': 
+	 act 'Встать':
 	 cla
 	 *clr
-	 wipo- = 10
-	     if wipo>0: 
-         SCdick = SCdick-5
-         wipo = wipo+10
-         manna = manna-10
+	 wipo-=10
+	     if wipo>0:
+         SCdick=SCdick-5
+         wipo=wipo+10
+         manna=manna-10
 	     'Вам удается устоять на согнутых ногах в течение часа.'
 	     end
-	     if wipo<= 0: 
-         SCdick = SCdick+RAND(1,5)
-         anus = anus+5
-         manna = manna-50
-         horny+= 25
+	     if wipo<=0:
+         SCdick=SCdick+RAND(1,5)
+         anus=anus+5
+         manna=manna-50
+         horny+=25
 	     'Вы слишком устали, ноги трясутся и не слушаются, вы чувствуете как дилдо проникает в ваш анус, но ничего не можете сделать..'
-	     gs 'analslut'
-	     anus = anus+5
+	     gs'analslut'
+	     anus=anus+5
 	     end
-	 act 'Далее': gt 'STONEBOX'
+	 act 'Далее':GT 'STONEBOX'
 	 end
 
-	 act 'Дать ногам отдохнуть': 
+	 act 'Дать ногам отдохнуть':
 	 cla
 	 *clr
-	 wipo+= 5
-	 SCdick = SCdick+RAND(1,5)
-	 anus = anus+5
-     manna = manna-50
-     horny+= 25
+	 wipo+=5
+	 SCdick=SCdick+RAND(1,5)
+	 anus=anus+5
+     manna=manna-50
+     horny+=25
 	 'Вы даете отдохнуть ногам и чувствуете как большой дилдо проникает вам в зад'
-	 gs 'analslut'
-	 anus = anus+5
-	 act 'Далее': gt 'STONEBOX'
+	 gs'analslut'
+	 anus=anus+5
+	 act 'Далее':GT 'STONEBOX'
 	 end
 
 end
 
-if SCdick>= 20: 
+if SCdick>=20:
 '"Я думаю ты достаточно наказана", - говорит Вапула, выпуская вас.'
-     act '.....': 
-	 gt 'SLAVECELL'
+     act '.....':
+	 GT 'SLAVECELL'
 	 end
 end
 --- STONEBOX ---------------------------------

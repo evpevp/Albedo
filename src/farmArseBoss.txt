@@ -6,53 +6,53 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Мистер Толинвуд</H4></center>'
-'<center><img src = "pic/EvedonNarod/mrtolinvud.jpg"></center>'
+'<center><img src="pic/EvedonNarod/mrtolinvud.jpg"></center>'
 'Стареющий лысоватый мужчина в хорошей одежде кивает вам в знак приветствия.'
 clr
-gs 'stat'
+gs'stat'
 
 
 
-act 'Уйти': 
-minut += 5
- gt 'farmArs'
+act 'Уйти':
+minut=minut+5
+gt'farmArs'
 end
 
-act 'Купить ослика': 
+act 'Купить ослика':
 cla
 *clr
-minut += 5
+minut=minut+5
 'Вы предложили Толинвуду купить ослика. Он кивнул головой и сказал "Тысяча гемов. Только не забывай, осликов надо кормить и содержать в чистом хлеву, иначе околеет."'
-act 'Уйти': gt 'farmArs'
-     if gem>= 1000 and barnMY>= 100: 
-         act 'Купить ослика': 
+act 'Уйти':gt'farmArs'
+     if gem>=1000 and barnMY>=100:
+         act 'Купить ослика':
          cla
          *clr
-         gem- = 1000
-         oslik+= 1
-         oslikormday = daystart
+         gem-=1000
+         oslik+=1
+         oslikormday=daystart
          gt $curloc
          end
      end
-     if barnMY = 0: 
-         act 'А где взять хлев?': 
+     if barnMY=0:
+         act 'А где взять хлев?':
          cla
          *clr
          'Вы почесали голову и спросили где вам взять хлев, на что Толинвуд хмыкнул "Гениальный вопрос. Купи 100 бревен на лесопилке и там же можешь порядить плотников, только они лентяи и будут бездельничать если за ними не смотреть."'
-         act 'Уйти': gt $curloc
+         act 'Уйти':gt $curloc
          end
      
      end
 end
 
-if gem>= 350: 
-	 act 'Купить рассаду за 350 гем': 
+if gem>=350:
+	 act 'Купить рассаду за 350 гем':
 	 cla
 	 *clr
-	 gem- = 350
-	 rassada+= 1
+	 gem-=350
+	 rassada+=1
 	 gt $curloc
 	 end
 end

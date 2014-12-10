@@ -6,31 +6,31 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Судоверфь</H4></center>'
-'<center><img src = "pic/Evedon/portyard.jpg" ></center>'
+'<center><img src="pic/Evedon/portyard.jpg" ></center>'
 'На судоверфи множество плотников собирают корабли и прямо тут, по бревнам спускают их на воду.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
 
-act 'Выйти в порт': minut += 15 & gt 'portW'
+act 'Выйти в порт':minut=minut+15&gt'portW'
 
 
-if hour>= 8 and hour<= 20: 
+if hour>=8 and hour<=20:
 
-	 if gem>= 10000 and fishbarkas = 0: 
-	 	 act 'Купить рыболовецкий баркас за 10000': 
+	 if gem>=10000 and fishbarkas=0:
+	 	 act 'Купить рыболовецкий баркас за 10000':
 	 	 cls
-		 minut += 5
-         fishbarkas = 100
-         boatmark = 1
+		 minut=minut+5
+         fishbarkas=100
+         boatmark=1
          $barkasname = input ("Как назвать рыболовецкий баркас?")
-             if $barkasname<= 0: $barkasname = 'Одинокая звезда'
-         gem- = 10000
+             if $barkasname<=0:$barkasname='Одинокая звезда'
+         gem-=10000
          'Вы оплатили баркас и вам сказали что он вас будет ожидать на причале в порту Эведона.'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
 		 end
 	 end
 

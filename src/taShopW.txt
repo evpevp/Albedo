@@ -8,10 +8,10 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Торговка Гесса</H4></center>'
-'<center><img src = "pic/Evedon/storage.jpg" ></center>'
+'<center><img src="pic/Evedon/storage.jpg" ></center>'
 'Домик забит самым разнообразным хламом.'
 'Щелок для мытья 10 гем 10 порций'
 'Зеркало для модниц 150 гемов.'
@@ -24,23 +24,23 @@ mag = 1
 'Щит 3 тыс гемов'
 'Пустынный доспех 5 тыс гемов'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if hour>= 7 and hour<= 21 and hour!12: 
+if hour>=7 and hour<= 21 and hour!12:
 
-     if gem>= 100 and spSve>= 100: 
-         act 'Купить пачку швейных игл': 
-		 minut += 5
+     if gem>=100 and spSve>=100:
+         act 'Купить пачку швейных игл':
+		 minut=minut+5
 		 tempshop = input ("Сколько вы хотите купить пачек игл (1 пачка 100 гем)?")
-             if tempshop*100>gem or tempshop<0 : 
+             if tempshop*100>gem or tempshop<0 :
              msg'У вас нет такого количества гемов.'
 			 gt $CURLOC
              else
-			 gem = gem-tempshop*100
-			 nospIgla = nospIgla+tempshop 		 
+			 gem=gem-tempshop*100
+			 nospIgla=nospIgla+tempshop 		 
 			 msg'Вы купили <<tempshop>> пачек игл.'
 		     end
 		 gt $CURLOC
@@ -49,96 +49,96 @@ if hour>= 7 and hour<= 21 and hour!12:
 
 
    
-	 if gem>= 10: 
-		 act 'Купить щелок': 
-		 minut += 5
+	 if gem>=10:
+		 act 'Купить щелок':
+		 minut=minut+5
 		 tempshop = input ("Сколько вы хотите купить щелока (1 пачка 10 гем)?")
-             if tempshop*10 > gem or tempshop<0 : 
+             if tempshop*10 > gem or tempshop<0 :
              msg'У вас недостаточно гемов.'
 			 else
-			 gem = gem-tempshop*10
-			 shelok = shelok+tempshop		 
+			 gem=gem-tempshop*10
+			 shelok=shelok+tempshop		 
 			 msg'Вы купили <<tempshop>> щелока.'
 		     end
 		 gt $CURLOC
 		 end
 		 
-		 if lezvie = 0: 
-			 act 'Купить бритву': 
-			 minut += 5
-			 gem = gem-10
-			 lezvie = 1
+		 if lezvie=0:
+			 act 'Купить бритву':
+			 minut=minut+5
+			 gem=gem-10
+			 lezvie=1
 			 gt $CURLOC
 			 end
 		 end
 	 end
 	 
-	 if gem>= 150 and mirr = 0: 
-	 	 act 'Купить зеркало': 
-		 minut += 5
-		 gem = gem-150
-		 mirr = 1
+	 if gem>=150 and mirr=0:
+	 	 act 'Купить зеркало':
+		 minut=minut+5
+		 gem=gem-150
+		 mirr=1
 		 gt $CURLOC
 		 end
 	 end
 	 
-	 if gem>= 1000: 
-	 	 act 'Купить макияжные краски': 
-		 minut += 5
-		 gem = gem-1000
-		 makekit = makekit+50
+	 if gem>=1000:
+	 	 act 'Купить макияжные краски':
+		 minut=minut+5
+		 gem=gem-1000
+		 makekit=makekit+50
 		 gt $CURLOC
 		 end
 	 end
 	 
 	 
-	 if gem>= 25: 
-	 	 act 'Купить вяленого мяса': 
-		 minut += 5
+	 if gem>=25:
+	 	 act 'Купить вяленого мяса':
+		 minut=minut+5
           tempshop = input ("Сколько вы хотите купить вяленого мяса (1 кусок 25 гем)?")
-             if tempshop*25 > gem or tempshop<0 : 
+             if tempshop*25 > gem or tempshop<0 :
              msg'У вас недостаточно гемов.'
 			 else
-			 gem = gem-tempshop*25
-			 edaw = edaw+tempshop	      		 
+			 gem=gem-tempshop*25
+			 edaw=edaw+tempshop	      		 
 			 msg'Вы купили <<tempshop>> вяленого мяса.'
 		     end
 		  gt $CURLOC
 		 end
 	 end
 	 
-	 act 'Крестьянская одежда Тель Адре': 
-	 payclo = 300
-	 gt 'manodW','6'
+	 act 'Крестьянская одежда Тель Адре':
+	 payclo=300
+	 gt'manodW','6'
 	 end
 
-	 act 'Одежда горожанина Тель Адре': 
-	 payclo = 800
-	 gt 'manodW','7'
+	 act 'Одежда горожанина Тель Адре':
+	 payclo=800
+	 gt'manodW','7'
 	 end
 	 
-	 act 'Пустынный меч': 
-	 payclo = 7000
-	 gt 'manSwW','6'
+	 act 'Пустынный меч':
+	 payclo=7000
+	 gt'manSwW','6'
 	 end
 	 
-	 act 'Пустынный доспех': 
-	 payclo = 5000
-	 gt 'manArW','4'
+	 act 'Пустынный доспех':
+	 payclo=5000
+	 gt'manArW','4'
 	 end
 	 
-	 act 'Щит': 
-	 payclo = 3000
-	 gt 'manShW','1'
+	 act 'Щит':
+	 payclo=3000
+	 gt'manShW','1'
 	 end
 else
 'Закрыто.'
 end
 
 
-act 'Уйти': 
-minut += 5
- gt 'teladareW'
+act 'Уйти':
+minut=minut+5
+gt'teladareW'
 end
 --- taShopW ---------------------------------
 

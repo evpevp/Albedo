@@ -1,12 +1,12 @@
 # skgrib4
 clr
-gs 'stat'
+gs'stat'
 !гриб коротун
-horny = 0
-grib5 = grib5-1
-hcol = RAND(0,3)
-glacol = RAND(0,3)
-skverna = skverna+1
+horny=0
+grib5=grib5-1
+hcol=RAND(0,3)
+glacol=RAND(0,3)
+skverna=skverna+1
 'Стоило вам только проглотить кусок гриба, как волосы на голове зашевелились и в глазах зарябило. Но эти странные ощущения быстро прошли.'
 
 --- skgrib4 ---------------------------------

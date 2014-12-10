@@ -3,171 +3,171 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Служанка Маша</H4></center>'
-picrand = RAND(0,3)
-if picrand = 0: '<center><img src = "pic\fam\masha.jpg" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\masha1.jpg" ></center>'
-if picrand = 2: '<center><img src = "pic\fam\masha2.jpg" ></center>'
-if picrand = 3: '<center><img src = "pic\fam\masha3.jpg" ></center>'
+picrand=RAND(0,3)
+if picrand=0:'<center><img src="pic\fam\masha.jpg" ></center>'
+if picrand=1:'<center><img src="pic\fam\masha1.jpg" ></center>'
+if picrand=2:'<center><img src="pic\fam\masha2.jpg" ></center>'
+if picrand=3:'<center><img src="pic\fam\masha3.jpg" ></center>'
 
 clr
-gs 'stat'
+gs'stat'
 'Маша ваша служанка. Она жгучая брюнетка и единственный человек, который заботится о доме.'
 *nl
 'Игорь Генрихович, есть хотите? Я уже все приготовила, можете садиться за стол.'
 
-	if mashaQW<= 0 and mashaday!day: 
+	if mashaQW<=0 and mashaday!day:
 		cla
 		*clr
-		picrand = RAND(0,3)
-		if picrand = 0: '<center><img src = "pic\fam\masha.jpg" ></center>'
-		if picrand = 1: '<center><img src = "pic\fam\masha1.jpg" ></center>'
-		if picrand = 2: '<center><img src = "pic\fam\masha2.jpg" ></center>'
-		if picrand = 3: '<center><img src = "pic\fam\masha3.jpg" ></center>'
+		picrand=RAND(0,3)
+		if picrand=0:'<center><img src="pic\fam\masha.jpg" ></center>'
+		if picrand=1:'<center><img src="pic\fam\masha1.jpg" ></center>'
+		if picrand=2:'<center><img src="pic\fam\masha2.jpg" ></center>'
+		if picrand=3:'<center><img src="pic\fam\masha3.jpg" ></center>'
 		'Заметив вас, Маша вздрагивает'
 		'Здравствуйте, Игорь Генрихович'
-		mashaQW = mashaQW+1
+		mashaQW=mashaQW+1
 		mashaday = day
-		act 'Улыбнуться и поздороваться': GOTO $locM, $metkaM
+		act 'Улыбнуться и поздороваться':GOTO $locM, $metkaM
 	end
 
-	if slot<>0 and mashaQW<15: 
-		act 'Отойти': GOTO $locM, $metkaM
+	if slot<>0 and mashaQW<15:
+		act 'Отойти':GOTO $locM, $metkaM
 	end
-	if mashaQW>= 15 and horny<30: 
-		act 'Отойти': GOTO $locM, $metkaM
+	if mashaQW>=15 and horny<30:
+		act 'Отойти':GOTO $locM, $metkaM
 	end
-	if mashaday = day: 
-		act 'Отойти': GOTO $locM, $metkaM
+	if mashaday=day:
+		act 'Отойти':GOTO $locM, $metkaM
 	end
 	
-	if slot = 0 and mashaQW<5 and mashaQW>0 and mashaday!day: 
+	if slot=0 and mashaQW<5 and mashaQW>0 and mashaday!day:
 		cla
 		*clr
-		'<center><img src = "pic\fam\masha3.jpg" ></center>'
+		'<center><img src="pic\fam\masha3.jpg" ></center>'
 		'Заметив, что вы не одеты, Маша краснеет. Она постоянно бросает на вас взгляды, и смущенно отводит взгляд в сторону. Кажется, она заинтересована.'
-		act 'Вы ловите её взгляд и улыбаетесь': 
+		act 'Вы ловите её взгляд и улыбаетесь':
 			cla
 			*clr
-			'<center><img src = "pic\fam\masha3.jpg" ></center>'
+			'<center><img src="pic\fam\masha3.jpg" ></center>'
 			'Засмущавшись, Маша выбежала из кухни'
-			mashaQW = mashaQW+1
+			mashaQW=mashaQW+1
 			mashaday = day
-			minut += 5
-			act '...': GOTO $locM, $metkaM
+			minut=minut+5
+			act '...':GOTO $locM, $metkaM
 		end
-		act 'Отойти': GOTO $locM, $metkaM
+		act 'Отойти':GOTO $locM, $metkaM
 	end
     
-    if slot = 0 and mashaQW = 5 and mashaday!day: 
+    if slot=0 and mashaQW=5 and mashaday!day:
 		cla
 		*clr
-		'<center><img src = "pic\fam\masha4.jpg" ></center>'
+		'<center><img src="pic\fam\masha4.jpg" ></center>'
 		'Маша, кажется, стала вести себя с вами более раскованно. Она уже не скрываясь разглядывает вас.' 
 		'Вы замечаете как она проводит руками по волосам и шее, хлопоча по кухне, и аппетитно выставляет попку.'
-		horny = horny+10
-		act 'Шлёпнуть Машу по попке': 
+		horny=horny+10
+		act 'Шлёпнуть Машу по попке':
 			cla
 			*clr
-			'<center><img src = "pic\pic\pos.png" ></center>'
+			'<center><img src="pic\pic\pos.png" ></center>'
 			'Й-И-и-и!'
 			'Развернувшись, Маша дает вам звонкую пощёчину'
 			'Ой, простите Игорь Генрихович!'
 			'Потупив взгляд, Маша выбегает мимо вас из кухни'
 			mashaday = day
-				act 'Поймать Машу за руку': 
+				act 'Поймать Машу за руку':
 					cla
 					*clr
-					'<center><img src = "pic\fam\masha1.jpg" ></center>'
+					'<center><img src="pic\fam\masha1.jpg" ></center>'
 					'Маша тихо стоит перед вами и вот-вот заплачет. Кажется, она боится, вашей реакции.'
-						act 'Дать пощечину': 
+						act 'Дать пощечину':
 							cla
 							*clr
-							'<center><img src = "pic\pic\pos1.jpg" ></center>'
+							'<center><img src="pic\pic\pos1.jpg" ></center>'
 							'Вы наотмашь бьёте Машу по лицу'
 							'Залившись слезами, Маша убегает'
-							mashaQW = -10
-							minut += 5
-							act 'Выйти': gt 'koridor1'
+							mashaQW=-10
+							minut=minut+5
+							act 'Выйти':gt'koridor1'
 						end
-						act 'Успокоить Машу': 
+						act 'Успокоить Машу':
 							cla
 							*clr
-							'<center><img src = "pic\fam\masha3.jpg" ></center>'
+							'<center><img src="pic\fam\masha3.jpg" ></center>'
 							'Вы: Маш, прости, это моя вина.'
 							'Маша: Всё в порядке Игорь Генрихович'
 							'Стрельнув на вас глазками, Маша возвращается к работе.'
-							mashaQW = mashaQW+1
-							minut += 5
-							act 'Отойти': GOTO $locM, $metkaM
+							mashaQW=mashaQW+1
+							minut=minut+5
+							act 'Отойти':GOTO $locM, $metkaM
 						end
 				end
-				act 'Позволить Маше убежать': gt 'koridor1'
+				act 'Позволить Маше убежать':gt'koridor1'
 		end
-		act 'Отойти': GOTO $locM, $metkaM
+		act 'Отойти':GOTO $locM, $metkaM
 	end
     
-    if mashaQW = 6 and mashaday!day: 
+    if mashaQW=6 and mashaday!day:
 		cla
 		*clr
-		'<center><img src = "pic\fam\masha4.jpg" ></center>'
+		'<center><img src="pic\fam\masha4.jpg" ></center>'
 		'Маша улыбается, когда вы заходите на кухню.' 
 		'Кажется она специально показывает вам свою аппетитную попку.'
-		horny = horny+10
-		act 'Шлёпнуть Машу по попке': 
+		horny=horny+10
+		act 'Шлёпнуть Машу по попке':
 			cla
 			*clr
-			'<center><img src = "pic\fam\masha3.jpg" ></center>'
+			'<center><img src="pic\fam\masha3.jpg" ></center>'
 			'Засмущавшись Маша выбежала из кухни, у двери стрельнув глазками'
-			mashaQW = mashaQW+1
-			minut += 5
-			mashaday = day
-			act '...': GOTO $locM, $metkaM
+			mashaQW=mashaQW+1
+			minut=minut+5
+			mashaday=day
+			act '...':GOTO $locM, $metkaM
 		end
-		act 'Отойти': GOTO $locM, $metkaM
+		act 'Отойти':GOTO $locM, $metkaM
 	end
 		
     
-    if mashaQW>6 and mashaQW<10 and mashaday!day: 
+    if mashaQW>6 and mashaQW<10 and mashaday!day:
 		cla
 		*clr
-		'<center><img src = "pic\fam\masha4.jpg" ></center>'
+		'<center><img src="pic\fam\masha4.jpg" ></center>'
 		'Маша, кажется, стала вести себя с вами более раскованно. Она уже не скрываясь разглядывает вас.' 
 		'Вы замечаете как она проводит руками по волосам и шее, хлопоча по кухне, и аппетитно выставляет попку.'
-		horny = horny+10
-		act 'Шлёпнуть Машу по попке': 
+		horny=horny+10
+		act 'Шлёпнуть Машу по попке':
 			cla
 			*clr
-			'<center><img src = "pic\fam\masha4.jpg" ></center>'
+			'<center><img src="pic\fam\masha4.jpg" ></center>'
 			'Маша улыбается и немного краснеет. Интересно, о чем она думает?'
-			mashaQW = mashaQW+1
-			minut += 5
-			mashaday = day
-			act '...': GOTO $locM, $metkaM
+			mashaQW=mashaQW+1
+			minut=minut+5
+			mashaday=day
+			act '...':GOTO $locM, $metkaM
 		end
-		act 'Отойти': GOTO $locM, $metkaM
+		act 'Отойти':GOTO $locM, $metkaM
 	end
     
-    if mashaQW = 10 and mashaday!day: 
+    if mashaQW=10 and mashaday!day:
 		cla
 		*clr
-		picrand = RAND(0,3)
-		if picrand = 0: '<center><img src = "pic\fam\masha.jpg" ></center>'
-		if picrand = 1: '<center><img src = "pic\fam\masha1.jpg" ></center>'
-		if picrand = 2: '<center><img src = "pic\fam\masha2.jpg" ></center>'
-		if picrand = 3: '<center><img src = "pic\fam\masha3.jpg" ></center>'
+		picrand=RAND(0,3)
+		if picrand=0:'<center><img src="pic\fam\masha.jpg" ></center>'
+		if picrand=1:'<center><img src="pic\fam\masha1.jpg" ></center>'
+		if picrand=2:'<center><img src="pic\fam\masha2.jpg" ></center>'
+		if picrand=3:'<center><img src="pic\fam\masha3.jpg" ></center>'
 		'Маша, кажется, волнуется и хочет вам что-то сказать.'
 		'Игорь Генрихович, можно с вами поговорить наедине?'
-		act 'Поговорить с Машей': 
+		act 'Поговорить с Машей':
 			cla
 			*clr
-			'<center><img src = "pic\room\kabA.jpg" ></center>'
+			'<center><img src="pic\room\kabA.jpg" ></center>'
 			'Вы проводите Машу в свой кабинет и прикрываете дверь. Маша явно чем-то расстроена, видимо разговор важный. А жаль.. поговорить бы о её вкусных "булочках".'
 			'Присаживайся. Здесь нас не побеспокоят.'
-			mashaday = day
-			act 'О чем ты хотела поговорить?': 
+			mashaday=day
+			act 'О чем ты хотела поговорить?':
 				cla
 				*clr
-				'<center><img src = "pic\fam\masha5.jpg" ></center>'
+				'<center><img src="pic\fam\masha5.jpg" ></center>'
 				'Маша внезапно начинает плакать'
 				'Вы: Ну что ты Маш, что случилось?'
 				'Маша: Игорь Генрихович, вы же знаете какое у меня положение. Я работаю у вас и еще в одном месте. Мать болеет и все деньги уходят на лекарства.'
@@ -178,460 +178,460 @@ gs 'stat'
 				'Вы: Можешь не продолжать. Я прекрасно знаю, какая сука моя жена.'
 				'Маша: Прошу Вас, Игорь Генрихович. Я отплачу. Я для Вас всё-всё сделаю.'
 				
-				if bankfond<200000: 
-					act 'Извини Маш, кризис сейчас. Денег нет.': gt 'koridor1'
+				if bankfond<200000:
+					act 'Извини Маш, кризис сейчас. Денег нет.':gt'koridor1'
 				end
-				if bankfond>= 200000: 
-					act 'Я мог бы помочь, если ты действительно готова на всё...': 
+				if bankfond>=200000:
+					act 'Я мог бы помочь, если ты действительно готова на всё...':
 						cla
 						*clr
-						'<center><img src = "pic\fam\masha6.jpg" ></center>'
+						'<center><img src="pic\fam\masha6.jpg" ></center>'
 						'Маша кивает, кажется она поняла чего вы хотите.'
 						'Она быстро раздевается. И покорно ждет пока вы разглядываете её ладную фигурку.'
-						act 'Убеди меня, Маш': 
+						act 'Убеди меня, Маш':
 							cla
 							*clr	
-							'<center><img src = "pic\fam\mashaBJ5.jpg" ></center>'
+							'<center><img src="pic\fam\mashaBJ5.jpg" ></center>'
 							'Маша садится и протягивает руки к вашему органу. Достав ваш член Маша начала умело работать язычком, облизывая головку'
-							act 'Не отлынивай': 
+							act 'Не отлынивай':
 								cla
 								*clr
-								'<center><img src = "pic\fam\mashaBJ1.jpg" ></center>'
+								'<center><img src="pic\fam\mashaBJ1.jpg" ></center>'
 								'Маша взяла ваш член в рот, левой рукой лаская ваши яйца. Умело работая губами и язычком, она быстро довела вас до пика наслаждения.'
-								act 'Кончить в рот': 
+								act 'Кончить в рот':
 									cla
 									*clr
-									'<center><img src = "pic\fam\mashaBJ3.jpg" ></center>'
+									'<center><img src="pic\fam\mashaBJ3.jpg" ></center>'
 									'Чувствуя, что сейчас кончите, вы загоняете свой член глубже в рот Маше. Потоки спермы извергаются прямо в глотку, заставляя Машу проглотить всё до капли.'
 									'Кажется она совсем не против. Облизав ваш член дочиста, Маша улыбается.'
-									mashaQW = 15
-									bankfond = bankfond-200000
-									minut += 30
-									girl = girl+1
-									sexm = sexm+1
-									horny = 0
-									manna = manna+50
-									mashainnaroom = 1
-									act 'Умница Маша, сегодня же получишь деньги для мамы.': gt 'kabroom'
+									mashaQW=15
+									bankfond=bankfond-200000
+									minut=minut+30
+									girl=girl+1
+									sexm=sexm+1
+									horny=0
+									manna=manna+50
+									mashainnaroom=1
+									act 'Умница Маша, сегодня же получишь деньги для мамы.':gt'kabroom'
 								end
-								act 'Спустить на лицо': 
+								act 'Спустить на лицо':
 									cla
 									*clr
-									'<center><img src = "pic\fam\mashaBJ4.jpg" ></center>'
+									'<center><img src="pic\fam\mashaBJ4.jpg" ></center>'
 									'Чувствуя, что сейчас кончите, вы вытаскиваете свой член изо рта Маши. Потоки спермы извергаются прямо на лицо Маши.'
 									'Кажется она совсем не против. Маша открывает ротик и ловит летящие капли. Облизав ваш член дочиста, Маша улыбается'
-									mashaQW = 15
-									bankfond = bankfond-200000
-									minut += 30
-									girl = girl+1
-									sexm = sexm+1
-									horny = 0
-									manna = manna+50
-									mashainnaroom = 1
-									act 'Умница Маша, сегодня же получишь деньги для мамы.': gt 'kabroom'
+									mashaQW=15
+									bankfond=bankfond-200000
+									minut=minut+30
+									girl=girl+1
+									sexm=sexm+1
+									horny=0
+									manna=manna+50
+									mashainnaroom=1
+									act 'Умница Маша, сегодня же получишь деньги для мамы.':gt'kabroom'
 								end
 							end
 						end
 					end
-					act 'Ну что ты Маш, не плачь. Конечно же я помогу.': 
+					act 'Ну что ты Маш, не плачь. Конечно же я помогу.':
 						cla
 						*clr
-						'<center><img src = "pic\fam\masha1.jpg" ></center>'
+						'<center><img src="pic\fam\masha1.jpg" ></center>'
 						'Маша улыбается, кажется, она не может до конца поверить.'
 						'Игорь Генрихович, Вы... Вы.. Спасибо огромное. Я.. Позвольте мне поблагодарить Вас.'
-						mashaQW = 15
-						bankfond = bankfond-200000
-						act 'Позволить': 
+						mashaQW=15
+						bankfond=bankfond-200000
+						act 'Позволить':
 							cla
 							*clr
-							'<center><img src = "pic\fam\masha6.jpg" ></center>'
+							'<center><img src="pic\fam\masha6.jpg" ></center>'
 							'Маша медленно раздевается перед вами. Поворачивается и проводит руками по телу, пока вы разглядываете её ладную фигурку.'
-							act 'Секс': 
+							act 'Секс':
 								cla
 								*clr
-								'<center><img src = "pic\fam\mashaBJ5.jpg" ></center>'
+								'<center><img src="pic\fam\mashaBJ5.jpg" ></center>'
 								'Маша садится и протягивает руки к вашему органу. Достав ваш член, Маша начала умело работать язычком, облизывая головку'
-								act 'Секс на диване': 
+								act 'Секс на диване':
 									cla
 									*clr
-									'<center><img src = "pic\fam\mashasex1.jpg" ></center>'
+									'<center><img src="pic\fam\mashasex1.jpg" ></center>'
 									'Маша ложится спиной на диванчик в кабинете и раздвигает ножки. Её дырочка уже достаточно увлажнена, кажется, Маша действительно хочет вас.' 
 									'Вы медленно входите в киску Маши. Внутри довольно узко, молодая вагина девушки сильно давит на головку члена. Вы с силой засовываете член глубже, достав до матки.'
 									'Маша закусывает губу, но вскоре уже тихо стонет, вторя вашим движениям.'
-									act 'Кончить': 
+									act 'Кончить':
 										cla
 										*clr
-										'<center><img src = "pic\fam\mashaCP1.jpg" ></center>'
+										'<center><img src="pic\fam\mashaCP1.jpg" ></center>'
 										'Почувствовав, как киска девушки начинает сокращаться, вы наращиваете темп. Каждым ударом вы выплескиваете сперму внутрь Маши.'
 										'Тяжело дыша, Маша продолжает лежать на спине. Довольный, вы смотрите, как из её киски медленно вытекает ваша сперма.'
-										minut += 30
-										girl = girl+1
-										sexm = sexm+1
-										horny = 0
-										manna = manna+50
-										mashainnaroom = 1
-										act 'Выйти': gt 'koridor1'
+										minut=minut+30
+										girl=girl+1
+										sexm=sexm+1
+										horny=0
+										manna=manna+50
+										mashainnaroom=1
+										act 'Выйти':gt'koridor1'
 									end
 								end
-								act 'Стань рачком, Маш': 
+								act 'Стань рачком, Маш':
 									cla
 									*clr
-									'<center><img src = "pic\fam\mashasex3.jpg" ></center>'
+									'<center><img src="pic\fam\mashasex3.jpg" ></center>'
 									'Маша встает раком, аппетитно выставив попку. Её дырочка уже достаточно увлажнена, кажется, Маша действительно хочет вас.' 
 									'Вы медленно входите в киску Маши. Внутри довольно узко, молодая вагина девушки сильно давит на головку члена. Вы с силой засовываете член глубже, достав до матки.'
 									'Маша закусывает губу, но вскоре уже тихо стонет, вторя вашим движениям.'
-									act 'Кончить': 
+									act 'Кончить':
 										cla
 										*clr
-										'<center><img src = "pic\fam\mashaCP2.jpg" ></center>'
+										'<center><img src="pic\fam\mashaCP2.jpg" ></center>'
 										'Почувствовав, как киска девушки начинает сокращаться, вы наращиваете темп, каждым ударом выплескиваясь внутри Маши.'
 										'Довольный, вы смотрите, как из её киски медленно вытекает ваша сперма.'
-										minut += 30
-										girl = girl+1
-										sexm = sexm+1
-										horny = 0
-										manna = manna+50
-										mashainnaroom = 1
-										act 'Выйти': gt 'koridor1'
+										minut=minut+30
+										girl=girl+1
+										sexm=sexm+1
+										horny=0
+										manna=manna+50
+										mashainnaroom=1
+										act 'Выйти':gt'koridor1'
 									end
 								end
 							end
 						end
-						act 'Всё в порядке, Маш. Не стоит заставлять себя.': 
-							mashaQW = 15
-							bankfond = bankfond-200000
-							 gt 'koridor1'
+						act 'Всё в порядке, Маш. Не стоит заставлять себя.':
+							mashaQW=15
+							bankfond=bankfond-200000
+							gt'koridor1'
 						end
 					end
-					act 'Извини Маш, кризис сейчас. Денег нет.': gt 'koridor1'
+					act 'Извини Маш, кризис сейчас. Денег нет.':gt'koridor1'
 				end
 			end
 		end	
-		act 'Не сейчас, Маш': GOTO $locM, $metkaM
+		act 'Не сейчас, Маш':GOTO $locM, $metkaM
     end
     
     
-	if horny>= 30 and mashaQW>= 15 and mashainnaroom!2 and mashainnaroom!4 and mashainnaroom!6: 
+	if horny>= 30 and mashaQW>=15 and mashainnaroom!2 and mashainnaroom!4 and mashainnaroom!6:
 		cla
 		*clr
-		picrand = RAND(0,3)
-		if picrand = 0: '<center><img src = "pic\fam\masha.jpg" ></center>'
-		if picrand = 1: '<center><img src = "pic\fam\masha1.jpg" ></center>'
-		if picrand = 2: '<center><img src = "pic\fam\masha2.jpg" ></center>'
-		if picrand = 3: '<center><img src = "pic\fam\masha3.jpg" ></center>'
+		picrand=RAND(0,3)
+		if picrand=0:'<center><img src="pic\fam\masha.jpg" ></center>'
+		if picrand=1:'<center><img src="pic\fam\masha1.jpg" ></center>'
+		if picrand=2:'<center><img src="pic\fam\masha2.jpg" ></center>'
+		if picrand=3:'<center><img src="pic\fam\masha3.jpg" ></center>'
 		'Маш, привет'
 		'Маша улыбается вам: Привет..'
-		act 'Маш, поможешь расслабится?': 
+		act 'Маш, поможешь расслабится?':
          cla
          *clr
-         sexm = sexm+1
-         minut += 30
-         horny = 0
-         manna = manna+50
-         picrand = RAND(0,2)
-		 if picrand = 0: '<center><img src = "pic\fam\mablow.jpg" ></center>'
-		 if picrand = 1: '<center><img src = "pic\fam\mashaBJ2.jpg" ></center>'
-		 if picrand = 2: '<center><img src = "pic\fam\mashaBJ5.jpg" ></center>'
-		 if picrand = 3: '<center><img src = "pic\fam\mashaBJ6.jpg" ></center>' 
+         sexm=sexm+1
+         minut=minut+30
+         horny=0
+         manna=manna+50
+         picrand=RAND(0,2)
+		 if picrand=0:'<center><img src="pic\fam\mablow.jpg" ></center>'
+		 if picrand=1:'<center><img src="pic\fam\mashaBJ2.jpg" ></center>'
+		 if picrand=2:'<center><img src="pic\fam\mashaBJ5.jpg" ></center>'
+		 if picrand=3:'<center><img src="pic\fam\mashaBJ6.jpg" ></center>' 
 		 'Бросив быстрый взгляд на дверь, Маша встала перед вами на колени и начала отсасывать ваш член, преданно смотря на вас снизу.'
              act 'Кончить ей в рот': 
 				cla
 				*clr
-				picrand = RAND(0,2)
-				if picrand = 0: '<center><img src = "pic\fam\mashaBJ3.jpg" ></center>'
-				if picrand = 1: '<center><img src = "pic\fam\mashaBJ4.jpg" ></center>'
-				if picrand = 2: '<center><img src = "pic\fam\mashaBJ7.jpg" ></center>'
+				picrand=RAND(0,2)
+				if picrand=0:'<center><img src="pic\fam\mashaBJ3.jpg" ></center>'
+				if picrand=1:'<center><img src="pic\fam\mashaBJ4.jpg" ></center>'
+				if picrand=2:'<center><img src="pic\fam\mashaBJ7.jpg" ></center>'
 				'Маша ласкает ваш член язычком и своими мягкими губами. Когда нарастающее чувство блаженства достигло пика, вы кончили ей в рот.'
-				act 'Отойти': GOTO $locM, $metkaM
+				act 'Отойти':GOTO $locM, $metkaM
              end
              act 'Трахнуть ее': 
 				cla
 				*clr
-				'<center><img src = "pic\fam\masha6.jpg" ></center>'
+				'<center><img src="pic\fam\masha6.jpg" ></center>'
 				'Вы сказали Маше, что хотите большего. Кивнув, Маша начала медленно раздеваться перед вами.'
-				act '...': 
+				act '...':
 					cla
 					*clr
-					picrand = RAND(0,1)
-					if picrand = 0: 
-						'<center><img src = "pic\fam\mashasex4.jpg" ></center>'
+					picrand=RAND(0,1)
+					if picrand=0:
+						'<center><img src="pic\fam\mashasex4.jpg" ></center>'
 						'Вы поставили Машу раком и вогнали ей член до упора, Маша тихонько взвизгнула, когда ваш член уперся ей в матку.'
 						'Молодая киска плотно обхватывает ваш орган'
 						'Вы начинаете трахать Машу, загоняя член по самые яйца, в ее влажную дырку.'
 						'Стоны Маши постепенно переходят от еле слышных вздохов до громких криков'
 					end
-					if picrand = 1: 
-						'<center><img src = "pic\fam\mashasex1.jpg" ></center>'
+					if picrand=1:
+						'<center><img src="pic\fam\mashasex1.jpg" ></center>'
 						'Вы укладываете Машу на диванчик и вгоняете ей член до упора, Маша тихонько взвизгивает, когда ваш член упирается ей в матку.'
 						'Молодая киска плотно обхватывает ваш орган'
 						'Вы начинаете трахать Машу, загоняя член по самые яйца, в ее влажную дырку.'
 						'Стоны Маши постепенно переходят от еле слышных вздохов до громких криков'
 					end
-					act 'Кончить': 
+					act 'Кончить':
 						cla
 						*clr
-						if picrand = 0: '<center><img src = "pic\fam\mashaCP2.jpg" ></center>'
-						if picrand = 1: '<center><img src = "pic\fam\mashaCP1.jpg" ></center>'
+						if picrand=0:'<center><img src="pic\fam\mashaCP2.jpg" ></center>'
+						if picrand=1:'<center><img src="pic\fam\mashaCP1.jpg" ></center>'
 						'Чувствуя, что больше не выдержите, вы заливаете киску Маши своей горячей спермой.'
-						act 'Любоваться Машей': 
+						act 'Любоваться Машей':
 							cla
 							*clr
-							minut += 30
-							horny = 10
-							sexm = sexm+1
-							manna = manna+50
-							'<center><img src = "pic\fam\mashaCP3.jpg" ></center>'
+							minut=minut+30
+							horny=10
+							sexm=sexm+1
+							manna=manna+50
+							'<center><img src="pic\fam\mashaCP3.jpg" ></center>'
 							'Маша выглядит очень довольной. Встав, она что-то делает на кухне. Маше определённо нравится, как вы любуетесь её формами.'
 							'Густая сперма медленно вытекает из её киски, стекая по ноге.'
 							'Кажется, Маша вовсе не собирается одеваться. Хорошо, что Альбина уже года два не появлялась на кухне. После её памятной "утки" вы два дня маялись животом.'
-							act 'Одеться и выйти': gt 'koridor1'
+							act 'Одеться и выйти':gt'koridor1'
 						end
-						act 'Одеться и выйти': gt 'koridor1'
+						act 'Одеться и выйти':gt'koridor1'
 					end
 				end
 			end
          end
-         act 'Отойти': GOTO $locM, $metkaM
+         act 'Отойти':GOTO $locM, $metkaM
 	end
 	
-	if mashainnaroom = 2: 
+	if mashainnaroom=2:
 		cla
 		*clr
-		'<center><img src = "pic\fam\masha1.jpg" ></center>'
+		'<center><img src="pic\fam\masha1.jpg" ></center>'
 		'Маша выглядит удивленной, но не испуганной. Кажется, она выбирала какие-то вещи Инны.'
 		'Вы: Маша. Что ты здесь делаешь?.' 
 		'Маша: Ой, Игорь Генрихович. Я только хотела подобрать что-нибудь из старых вещей вашей дочери.'
 		'Маша хитренько улыбается: И сделать Вам сюрприз.'
-		horny = horny+10
-		mashaday = day
-		act 'Я очень люблю сюрпризы': 
+		horny=horny+10
+		mashaday=day
+		act 'Я очень люблю сюрпризы':
 			cla
 			*clr
-			'<center><img src = "pic\fam\masha1.jpg" ></center>'
+			'<center><img src="pic\fam\masha1.jpg" ></center>'
 			'Я сейчас'
 			'Маша скрывается где-то в недрах шкафа и некоторое время возится там с вещами.'
 			'Маша хихикает, видимо найдя что-то подходящее, и просит вас закрыть глаза'
-			minut += 10
-			act 'Закрыть глаза': 
+			minut=minut+10
+			act 'Закрыть глаза':
 				cla
 				*clr
-				'<center><img src = "pic\fam\masha7.jpg" ></center>'
+				'<center><img src="pic\fam\masha7.jpg" ></center>'
 				'Открыв глаза вы видите Машу сидящую в пол-оборота на мягкой кушетке. Она одела майку, шортики и чулочки Инны.'
 				'Маша смотрит на вас, ожидая реакции.'
-				minut += 10
-				act 'Красивый топик': 
+				minut=minut+10
+				act 'Красивый топик':
 					cla
 					*clr
-					'<center><img src = "pic\fam\masha8.jpg" ></center>'
+					'<center><img src="pic\fam\masha8.jpg" ></center>'
 					'Спасибо - улыбается Маша.'
 					'Она поворачивается к вам, чтобы вы смогли осмотреть маечку полностью.'
 					'Ткань совсем тонкая, вы видите торчащие соски. Кажется, детка завелась.'
-					horny = horny+10
-					act 'Шортики тоже ничего': 
+					horny=horny+10
+					act 'Шортики тоже ничего':
 						cla
 						*clr
-						'<center><img src = "pic\fam\masha9.jpg" ></center>'
+						'<center><img src="pic\fam\masha9.jpg" ></center>'
 						'Спасибо - улыбается Маша.'
 						'Она поворачивается к вам попкой, чтобы вы смогли осмотреть шортики.'
 						'Какие, к черту, шорты! Это скорее трусики. Ткань плотно облегает попку Маши, совсем не скрывая её аппетитной формы.'
-						horny = horny+10
-						act 'Эти трусики классно на тебе сидят': 
+						horny=horny+10
+						act 'Эти трусики классно на тебе сидят':
 							cla
 							*clr
-							'<center><img src = "pic\fam\masha10.jpg" ></center>'
+							'<center><img src="pic\fam\masha10.jpg" ></center>'
 							'Cловно угадав ваши мысли, Маша оттопыривает попку, виляя перед вашим лицом.'
 							'Не выдержав, вы протягиваете руки, через трусики, касаясь её похотливой киски.'
 							'Смеясь, Маша выскальзывает из ваших рук. Впрочем, она не собирается долго томить вас игрой. Быстро избавившись от лишнего, Маша садится на ковер.'
-							horny = horny+10
-							act 'Хочешь сладенького?': 
+							horny=horny+10
+							act 'Хочешь сладенького?':
 								cla
 								*clr
-								'<center><img src = "pic\fam\masha11.jpg" ></center>'
+								'<center><img src="pic\fam\masha11.jpg" ></center>'
 								'Маша медленно подходит к вам на четвереньках и расстегивает ширинку.'
-								act 'Продолжить': 
+								act 'Продолжить':
 									cla
 									*clr
-									'<center><img src = "pic\fam\masha12.jpg" ></center>'
+									'<center><img src="pic\fam\masha12.jpg" ></center>'
 									'Маша умело делает вам минет, обхватывая головку мягкими губками и облизывая член язычком.'
 									'Ого! Маша сделала пирсинг. Необычные ощущения.'
-									act 'Кончить': 
+									act 'Кончить':
 										cla
 										*clr
-										zpmaid = zpmaid+25000
-										mashainnaroom = 3
-										sexm = sexm+1
-										horny = 0
-										manna = manna+50
-										'<center><img src = "pic\fam\masha13.jpg" ></center>'
+										zpmaid=zpmaid+25000
+										mashainnaroom=3
+										sexm=sexm+1
+										horny=0
+										manna=manna+50
+										'<center><img src="pic\fam\masha13.jpg" ></center>'
 										'Доведя вас до грани, Маша заглатывает головку члена, ловя каждую каплю.'
 										'Это было великолепно. Надо будет не забыть поднять Маше зарплату.'
-										act 'Одеть штаны и выйти': gt 'koridor1'
+										act 'Одеть штаны и выйти':gt'koridor1'
 									end
 								end
 							end
 						end
 					end
 				end
-				act 'Милые шортики': 
+				act 'Милые шортики':
 					cla
 					*clr
-					'<center><img src = "pic\fam\masha9.jpg" ></center>'
+					'<center><img src="pic\fam\masha9.jpg" ></center>'
 					'Спасибо - улыбается Маша.'
 					'Она поворачивается к вам попкой, чтобы вы смогли осмотреть шортики.'
 					'Какие, к черту, шорты! Это скорее трусики. Ткань плотно облегает попку Маши, совсем не скрывая её аппетитной формы.'
-					horny = horny+10
-					act 'Топик тоже симпатичный': 
+					horny=horny+10
+					act 'Топик тоже симпатичный':
 						cla
 						*clr
-						'<center><img src = "pic\fam\masha8.jpg" ></center>'
+						'<center><img src="pic\fam\masha8.jpg" ></center>'
 						'Спасибо - улыбается Маша.'
 						'Она поворачивается к вам, чтобы вы смогли осмотреть маечку полностью.'
 						'Ткань совсем тонкая, вы видите торчащие соски. Кажется, детка завелась.'
-						horny = horny+10
-						act 'Попросить показать больше': 
+						horny=horny+10
+						act 'Попросить показать больше':
 							cla
 							*clr
-							'<center><img src = "pic\fam\masha10.jpg" ></center>'
+							'<center><img src="pic\fam\masha10.jpg" ></center>'
 							'Хихикнув, Маша оттопыривает попку, виляя перед вашим лицом.'
 							'Не выдержав, вы протягиваете руки, через трусики, касаясь её похотливой киски.'
 							'Смеясь, Маша выскальзывает из ваших рук. Впрочем, она не собирается долго томить вас игрой. Быстро избавившись от лишнего, Маша садится на ковер.'
-							horny = horny+10
-							act 'Хочешь сладенького?': 
+							horny=horny+10
+							act 'Хочешь сладенького?':
 								cla
 								*clr
-								'<center><img src = "pic\fam\masha11.jpg" ></center>'
+								'<center><img src="pic\fam\masha11.jpg" ></center>'
 								'Маша медленно подходит к вам на четвереньках и расстегивает ширинку.'
-								act 'Продолжить': 
+								act 'Продолжить':
 									cla
 									*clr
-									'<center><img src = "pic\fam\masha12.jpg" ></center>'
+									'<center><img src="pic\fam\masha12.jpg" ></center>'
 									'Маша умело делает вам минет, обхватывая головку мягкими губками и облизывая член язычком.'
 									'Ого! Маша сделала пирсинг. Необычные ощущения.'
-									act 'Кончить': 
+									act 'Кончить':
 										cla
 										*clr
-										zpmaid = zpmaid+25000
-										mashainnaroom = 3
-										horny = 0
-										sexm = sexm+1
-										manna = manna+50
-										'<center><img src = "pic\fam\masha13.jpg" ></center>'
+										zpmaid=zpmaid+25000
+										mashainnaroom=3
+										horny=0
+										sexm=sexm+1
+										manna=manna+50
+										'<center><img src="pic\fam\masha13.jpg" ></center>'
 										'Доведя вас до грани, Маша заглатывает головку члена, ловя каждую каплю.'
 										'Это было великолепно. Надо будет не забыть поднять Маше зарплату.'
-										act 'Одеть штаны и выйти': gt 'koridor1'
+										act 'Одеть штаны и выйти':gt'koridor1'
 									end
 								end
 							end
 						end
 					end
 				end
-				act 'Тебе это совсем не идет': 
+				act 'Тебе это совсем не идет':
 					cla
 					*clr
-					mashainnaroom = 5
-					'<center><img src = "pic\fam\masha14.jpg" ></center>'
+					mashainnaroom=5
+					'<center><img src="pic\fam\masha14.jpg" ></center>'
 					'Вы грубо срываете с Маши одежду дочери и усаживаете её на пол рядом с собой.'
-					act 'Приказать отсосать': 
+					act 'Приказать отсосать':
 						cla
 						*clr
-						'<center><img src = "pic\fam\masha15.jpg" ></center>'
+						'<center><img src="pic\fam\masha15.jpg" ></center>'
 						'Маша, кажется, совсем не рада, но покорно заглатывает ваш член. Она совсем не старается, но её мягкие губки и ощущение власти над Машей, быстро подводят вас к пику наслаждения.'
-						act 'Кончить': 
+						act 'Кончить':
 							cla
 							*clr
-							sexm = sexm+1
-							horny = 0
-							manna = manna+50
-							'<center><img src = "pic\fam\masha13.jpg" ></center>'
+							sexm=sexm+1
+							horny=0
+							manna=manna+50
+							'<center><img src="pic\fam\masha13.jpg" ></center>'
 							'Вы кончаете Маше в рот, приказав проглотить вашу сперму.'
-							act 'Одеть штаны и выйти': gt 'koridor1'
+							act 'Одеть штаны и выйти':gt'koridor1'
 						end
 					end
 				end
 			end
 		end
-		act 'Не сейчас Маш, дела.': 
-			mashainnaroom = 1
+		act 'Не сейчас Маш, дела.':
+			mashainnaroom=1
 			GOTO $locM, $metkaM
 		end
 	end
 	
-	if mashainnaroom = 4: 
+	if mashainnaroom=4:
 		cla
 		*clr
-		'<center><img src = "pic\fam\masha16.jpg" ></center>'
+		'<center><img src="pic\fam\masha16.jpg" ></center>'
 		'Раздвинув ножки Маша мастурбирует небольшим вибратором. Это что же, вибратор Инны? Вряд ли Маша принесла его с собой.'
 		'Вы чувствуете себя уязвленным. Маша предпочитает ваш член какой-то машинке? Ну, сейчас я ей покажу!' 
 		'Зайдя в комнату, вы достали свой член и легли рядом с Машей.'
-		mashaday = day
-		act 'Разве эта штука не больше?': 
+		mashaday=day
+		act 'Разве эта штука не больше?':
 			cla
 			*clr
-			'<center><img src = "pic\fam\masha17.jpg" ></center>'
+			'<center><img src="pic\fam\masha17.jpg" ></center>'
 			'Вы демонстрируете Маше свой член.'
 			'Маша выглядит виноватой. Закусив губу, она растерянно смотрит на вас.'
-			act 'Показать мастер-класс': 
+			act 'Показать мастер-класс':
 				cla
 				*clr
-				minut += 10
-				'<center><img src = "pic\fam\masha18.jpg" ></center>'
+				minut=minut+10
+				'<center><img src="pic\fam\masha18.jpg" ></center>'
 				'Уложив Машу на спину, вы впиваетесь ртом в истекающую влагой киску.'
 				'Маша стонет, умоляя вас не останавливаться.'
 				'Вы облизываете каждый миллиметр киски, не забывая о клиторе и дырочке.'
 				'Через несколько минут, вы награждаетесь громкими стонами оргазма.'
-				minut += 10
-				act 'Продолжить': 
+				minut=minut+10
+				act 'Продолжить':
 					cla
 					*clr
-					minut += 10
-					'<center><img src = "pic\fam\masha19.gif" ></center>'
+					minut=minut+10
+					'<center><img src="pic\fam\masha19.gif" ></center>'
 					'Маша тяжело дышит, пытаясь восстановить дыхание. Но вы не намеренны останавливаться'
 					'Ваша мужская гордость уязвлена. Член стоит как каменный, и вы тут же погружаете его в киску Маши по самые яйца.'
-					act 'Оттрахать Машу': 
+					act 'Оттрахать Машу':
 						cla
 						*clr
-						minut += 10
-						'<center><img src = "pic\fam\masha19.jpg" ></center>'
+						minut=minut+10
+						'<center><img src="pic\fam\masha19.jpg" ></center>'
 						'Вы жестко долбите дырку Маши несколько минут.'
 						'Еще не оправившись от первого оргазма, Маша, кажется, готова кончать снова.'
-						act 'Сменить позу': 
+						act 'Сменить позу':
 							cla
 							*clr
-							minut += 10
-							'<center><img src = "pic\fam\masha20.jpg" ></center>'
+							minut=minut+10
+							'<center><img src="pic\fam\masha20.jpg" ></center>'
 							'Вы усаживаете Машу раком и вогнав свой член, снова продолжаете марафон.'
 							'Чувствуя, что больше не выдержите, вы вынимаете свой член.'
-							act '...': 
+							act '...':
 								cla
 								*clr
-								minut += 10
-								'<center><img src = "pic\fam\masha21.jpg" ></center>'
+								minut=minut+10
+								'<center><img src="pic\fam\masha21.jpg" ></center>'
 								'Решив передохнуть, вы предоставляете инициативу Маше.'
 								'Повалив вас на кровать, Маша буквально нанизывается киской на ваш член.'
-								act 'Кончить': 
+								act 'Кончить':
 									cla
 									*clr
-									minut += 10
-									'<center><img src = "pic\fam\masha22.gif" ></center>'
+									minut=minut+10
+									'<center><img src="pic\fam\masha22.gif" ></center>'
 									'Неистовая скачка продолжается несколько минут. Почувствовав, как киска Маши сжимается от оргазма, вы выплескиваете внутрь всё накопленное.'
-									act 'Встать': 
+									act 'Встать':
 										cla
 										*clr
-										minut += 10
-										vital = vital+1
-										stamina = stamina+1
-										stren = stren+1
+										minut=minut+10
+										vital=vital+1
+										stamina=stamina+1
+										stren=stren+1
 										hapri = 0
-										golod = golod-5
-										sweat = 3
-										mashainnaroom = 5
-										sexm = sexm+1
-										horny = 0
-										manna = manna+50
-										'<center><img src = "pic\fam\masha22.jpg" ></center>'
+										golod=golod-5
+										sweat=3
+										mashainnaroom=5
+										sexm=sexm+1
+										horny=0
+										manna=manna+50
+										'<center><img src="pic\fam\masha22.jpg" ></center>'
 										'Полежав немного, вы вынимаете свой член из киски и встаете, аккуратно переложив Машу на спину. Маша тяжело дышит. Её пальчики скользят по киске, размазывая вытекающую сперму.'
 										'В глазах светится счастье. Надо полагать, теперь Маша навсегда забудет о вибраторах. Вы чувствуете себя настоящим мачо.'
-										act 'Одеться и выйти': gt 'koridor1'
+										act 'Одеться и выйти':gt'koridor1'
 									end
 								end
 							end
@@ -642,120 +642,120 @@ gs 'stat'
 		end
 	end
 
-	if mashainnaroom = 6: 
+	if mashainnaroom=6:
 		cla
 		*clr
-		minut += 10
-		mashainnaroom = 5
-		'<center><img src = "pic\fam\masha23.jpg" ></center>'
+		minut=minut+10
+		mashainnaroom=5
+		'<center><img src="pic\fam\masha23.jpg" ></center>'
 		'Маша снова примеряла какие-то вещи Инны и сейчас почти не одета.'
 		'Увидев вас, Маша улыбается и соблазнительно выставляет попку.'
-		act 'Покажи попку': 
+		act 'Покажи попку':
 			cla
 			*clr
-			'<center><img src = "pic\fam\masha24.jpg" ></center>'
+			'<center><img src="pic\fam\masha24.jpg" ></center>'
 			'Сняв трусики, Маша становится раком на диванчик.'
-			act 'Подойти': 
+			act 'Подойти':
 				cla
 				*clr
-				minut += 10
-				'<center><img src = "pic\fam\masha25.jpg" ></center>'
+				minut=minut+10
+				'<center><img src="pic\fam\masha25.jpg" ></center>'
 				'Вы подходите ближе, рассматривая аппетитную попку. Если Маша хотела вас соблазнить, она своего добилась.'
-				act 'Долбить киску': 
+				act 'Долбить киску':
 					cla
 					*clr
-					minut += 20
-					'<center><img src = "pic\fam\masha28.gif" ></center>'
+					minut=minut+20
+					'<center><img src="pic\fam\masha28.gif" ></center>'
 				    'Повалив Машу, вы начинаете неистово долбить её дырку. Маша громко стонет под вашим натиском, пальчиками она ласкает попку.'
-					act 'Кончить': 
+					act 'Кончить':
 						cla
 						*clr
-						minut += 5
-						sexm = sexm+1
-						horny = 0
-						manna = manna+50
-						'<center><img src = "pic\fam\masha28.jpg" ></center>'
+						minut=minut+5
+						sexm=sexm+1
+						horny=0
+						manna=manna+50
+						'<center><img src="pic\fam\masha28.jpg" ></center>'
 						'После нескольких минут активного секса, вы спускаете в Машу свою сперму.'
-						act 'Одеться и выйти': gt 'koridor1'
+						act 'Одеться и выйти':gt'koridor1'
 					end	
 				end
-				act 'Маша сверху': 
+				act 'Маша сверху':
 					cla
 					*clr
-					minut += 20
-					'<center><img src = "pic\fam\masha29.gif" ></center>'
+					minut=minut+20
+					'<center><img src="pic\fam\masha29.gif" ></center>'
 				    'Маша садится попкой на ваш член и плавно начинает насаживаться на него.'
-				    act 'Сменить позу': 
+				    act 'Сменить позу':
 				        cla
 					    *clr
-					    minut += 5
-					    '<center><img src = "pic\fam\masha38.jpg" ></center>'
+					    minut=minut+5
+					    '<center><img src="pic\fam\masha38.jpg" ></center>'
 					    'Перед тем как кончить вы решаете еще немного поиметь ее в другой позе.'
-					    act 'Кончить': 
+					    act 'Кончить':
 						    cla
 						    *clr
-						    minut += 5
-						    sexm = sexm+1
-						    horny = 0
-						    manna = manna+50
-						    '<center><img src = "pic\fam\masha38.gif" ></center>'
+						    minut=minut+5
+						    sexm=sexm+1
+						    horny=0
+						    manna=manna+50
+						    '<center><img src="pic\fam\masha38.gif" ></center>'
 						'После нескольких минут активного секса, вы кончаете в Машину попку.'
-						act 'Одеться и выйти': gt 'koridor1'
+						act 'Одеться и выйти':gt'koridor1'
 					end	
 				end
 			end
 		end
-		act 'Покажи киску': 
+		act 'Покажи киску':
 			cla
 			*clr
-			'<center><img src = "pic\fam\masha26.jpg" ></center>'
+			'<center><img src="pic\fam\masha26.jpg" ></center>'
 			'Сняв трусики, Маша легла на диванчик и раздвинула ножки.'
-			act 'Рассматривать': 
+			act 'Рассматривать':
 				cla
 				*clr
-				minut += 10
-				'<center><img src = "pic\fam\masha27.jpg" ></center>'
+				minut=minut+10
+				'<center><img src="pic\fam\masha27.jpg" ></center>'
 				'Вы подходите ближе, рассматривая аппетитную дырочку. Если Маша хотела вас соблазнить, она своего добилась.'
-				act 'Долбить киску': 
+				act 'Долбить киску':
 					cla
 					*clr
-					minut += 20
-					'<center><img src = "pic\fam\masha28.gif" ></center>'
+					minut=minut+20
+					'<center><img src="pic\fam\masha28.gif" ></center>'
 				    'Повалив Машу, вы начинаете неистово долбить её дырку. Маша громко стонет под вашим натиском, пальчиками она ласкает попку.'
-					act 'Кончить': 
+					act 'Кончить':
 						cla
 						*clr
-						minut += 5
-						sexm = sexm+1
-						horny = 0
-						manna = manna+50
-						'<center><img src = "pic\fam\masha28.jpg" ></center>'
+						minut=minut+5
+						sexm=sexm+1
+						horny=0
+						manna=manna+50
+						'<center><img src="pic\fam\masha28.jpg" ></center>'
 						'После нескольких минут активного секса, вы спускаете в Машу свою сперму.'
-						act 'Одеться и выйти': gt 'koridor1'
+						act 'Одеться и выйти':gt'koridor1'
 					end	
 				end
-				act 'Маша сверху': 
+				act 'Маша сверху':
 					cla
 					*clr
-					minut += 20
-					'<center><img src = "pic\fam\masha29.gif" ></center>'
+					minut=minut+20
+					'<center><img src="pic\fam\masha29.gif" ></center>'
 				    'Маша садится попкой на ваш член и плавно начинает насаживаться на него.'
-				     act 'Сменить позу': 
+				     act 'Сменить позу':
 				            cla
 					        *clr
-					        minut += 5
-					        '<center><img src = "pic\fam\masha38.jpg" ></center>'
+					        minut=minut+5
+					        '<center><img src="pic\fam\masha38.jpg" ></center>'
 					        'Перед тем как кончить вы решаете еще немного поиметь ее в другой позе.'
-					        act 'Кончить': 
+					        act 'Кончить':
 						        cla
 						        *clr
-						        minut += 5
-						        sexm = sexm+1
-						        horny = 0
-						        manna = manna+50
-						        '<center><img src = "pic\fam\masha38.gif" ></center>'
+						        minut=minut+5
+						        sexm=sexm+1
+						        horny=0
+						        manna=manna+50
+						        '<center><img src="pic\fam\masha38.gif" ></center>'
 						    'После нескольких минут активного секса, вы кончаете в Машину попку.'
-						    act 'Одеться и выйти': gt 'koridor1'
+						    act 'Одеться и выйти':gt'koridor1'
 						 end	
 					end	 
 				end

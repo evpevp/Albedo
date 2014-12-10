@@ -1,28 +1,28 @@
 # werewolfWin
-monster = 0
-demonwin = demonwin+1
+monster=0
+demonwin=demonwin+1
 'Поверженный оборотень падает на землю.'
 
 
-act 'Далее': 
+act 'Далее':
 cla
 *clr
-if gem>0: gem = gem-1 & demonSoul = demonSoul+1 & 'В один из гемов вошла душа демонической твари.'
+if gem>0:gem=gem-1&demonSoul=demonSoul+1&'В один из гемов вошла душа демонической твари.'
 
-farand = RAND(0,2)
-     if farand = 0: 
-     letherdemon = letherdemon+1
+farand=RAND(0,2)
+     if farand=0:
+     letherdemon=letherdemon+1
      'Вы нашли кусок кожи демона.'
      end
-     if farand = 1: 
-     horndemon = horndemon+1
+     if farand=1:
+     horndemon=horndemon+1
      'Вы нашли демонический рог.'
      end
-     if farand = 2: 
-     bloodemon = bloodemon+1
+     if farand=2:
+     bloodemon=bloodemon+1
      'Вы собрали крови демона.'
      end
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
 --- werewolfWin ---------------------------------
 

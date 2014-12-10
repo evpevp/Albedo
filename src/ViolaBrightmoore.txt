@@ -3,35 +3,35 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Виола Брайтмур</H4></center>'
-'<center><img src = "pic/EvedonNarod/ViolaBrightmoore.jpg" ></center>'
-if StefanQW>= 1: 
+'<center><img src="pic/EvedonNarod/ViolaBrightmoore.jpg" ></center>'
+if StefanQW>=1:
 'Ваша младшая сестра милая и добрая девушка.'
 'Отношение Виолы к вам <<StefanViola>>'
 else
 'Симпатичная молодая девушка.'
 end
 clr
-gs 'stat'
+gs'stat'
 
 
-act 'Уйти': gt $locFight,$metkaFight
+act 'Уйти':gt $locFight,$metkaFight
 
-act 'Болтать': 
+act 'Болтать':
 cla
-minut+= 15
-gs 'stat'
-     if StefanQW>= 1: 
+minut+=15
+gs'stat'
+     if StefanQW>=1:
      'Привет брат.'
      else
-     	 if femin>200: 
+     	 if femin>200:
 		 'Привет путница, откуда путь держишь?'
 		 end
-		 if femin<= 200: 
+		 if femin<=200:
 		 'Привет путник, откуда путь держишь?'
 		 end
      end
      ''
-act 'Уйти': gt $locFight,$metkaFight
+act 'Уйти':gt $locFight,$metkaFight
 end
 --- ViolaBrightmoore ---------------------------------
 

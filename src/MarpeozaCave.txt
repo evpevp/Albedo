@@ -11,96 +11,96 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Тайная обитель демонологов</H4></center>'
-'<center><img src = "pic/Evedon/obiteldemon.jpg" ></center>'
+'<center><img src="pic/Evedon/obiteldemon.jpg" ></center>'
 'Просторная пещера с факелами, стены и пол покрыты богохульными символами и демоническими печатями.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if marpeozaQW>1: 
+if marpeozaQW>1:
 cls
-horny = 100
-futa+= 30
-if vagina = 0: vagina = 1
-if penis<= 0: penis = 20
-'<center><img src = "pic/EvedonKD/marpeozaorgy.jpg" ></center>'
+horny=100
+futa+=30
+if vagina=0:vagina=1
+if penis<=0:penis=20
+'<center><img src="pic/EvedonKD/marpeozaorgy.jpg" ></center>'
 'Началась оргия, в ходе которой Демонологи футы трахали вас во все дыры. Марпеоза присоединилась к вам и тоже оттрахала вас.'
-gs 'cumslut'
-horny = 100
-gs 'femorg'
-horny = 100
-gs 'analslut'
-anus+= 10
-cumlip+= 10
-cumanus+= 10
-cumbelly+= 10
-cumpussy+= 10
-cumass+= 10
-cumface+= 10
-tit = 90
-face = 100
-hand = 100
-brist = 100
-ass = 100
-thight = 100
-leg = 100
-if marpeozaQW!100: magika = 1 & magikaExp = 0
-if DemonMorf = 0: skverna = 100
-bj+= 10
-sex+= 10
-anal+= 10
+gs'cumslut'
+horny=100
+gs'femorg'
+horny=100
+gs'analslut'
+anus+=10
+cumlip+=10
+cumanus+=10
+cumbelly+=10
+cumpussy+=10
+cumass+=10
+cumface+=10
+tit=90
+face=100
+hand=100
+brist=100
+ass=100
+thight=100
+leg=100
+if marpeozaQW!100:magika=1&magikaExp=0
+if DemonMorf=0:skverna=100
+bj+=10
+sex+=10
+anal+=10
 
 'Постепенно, во время секса с демоницей, ваше тело изменяется.'
-     act 'потерять сознание': 
-		 if marpeozaQW = 100: 
-		     if OrdenRang>0: OrdenRang = -1
-		 gt 'demlogroom'
+     act 'потерять сознание':
+		 if marpeozaQW=100:
+		     if OrdenRang>0:OrdenRang=-1
+		 gt'demlogroom'
 		 else
-		 gt 'mountW'
+		 gt'mountW'
 		 end
      end
 exit
 end
 
-if marpeozaQW = 1: 
+if marpeozaQW=1:
 'Вы очнулись на полу, посередине начертанной пентаграммы, руки и ноги не хотят слушаться. Вокруг вас стоят культистки демонологи и хором поют заклинание, в котором ничего нельзя разобрать кроме слов "Мать Марпеоза приди к нам."'
 'Один из символов на стене начинает светиться и вскоре смотреть на этот символ становится невозможно. Раздался громкий звук, исходящий от символа.'
-     act 'Смотреть на источник звука': 
+     act 'Смотреть на источник звука':
      cls
-     '<center><img src = "pic/EvedonKD/marpeoza.jpg" ></center>'
+     '<center><img src="pic/EvedonKD/marpeoza.jpg" ></center>'
      'В портал шагнула огромная красная демоница с рогами и гигантским стоячим членом. Демоница молча села на трон.'
      'Демонологи взвыли "Славься мать Марпеоза предвестница нового мира."'
-         if demonmorf<= 0: 
+         if demonmorf<=0:
 		 'Демонесса сделала жест рукой и культистки замолчали. Она приблизила свое лицо к вам и облизнулась раздвоенным языком.'
-			 if pol>1: 
+			 if pol>1:
 			 'Ты совершенство. Желаешь ли ты пойти со мной и поклониться мне? Все вместе мы построим новый мир.'
 			 else
 			 'Убогое создание лишенное половины бытия, желаешь ли ты стать совершенством и поклониться мне? Все вместе мы построим новый мир.'
 			 end
 			 
-			 act 'Я поклонюсь тебе великая мать Марпеоза!': 
+			 act 'Я поклонюсь тебе великая мать Марпеоза!':
 			 cls
-			 marpeozaQW = 100
+			 marpeozaQW=100
 			 gt $curloc
 			 end
 			 
-			 act 'Нет!': 
+			 act 'Нет!':
 			 cls
-			 marpeozaQW = 2
+			 marpeozaQW=2
 			 gt $curloc
 			 end
          end
-         if demonmorf>0: 
+         if demonmorf>0:
          'Демонесса осмотрела вас и злобно поглядела на демонологов "Вы что ослепли? Это же демономорф? Человек, ставший демоном, таких тут не нужно! Выкиньте ее на мороз!"'
-         	 act 'Облом': 
+         	 act 'Облом':
 			 cls
-			 marpeozaQW = 2
-			 gt 'mountW'
+			 marpeozaQW=2
+			 gt'mountW'
 			 end
          end
      

@@ -1,34 +1,34 @@
 # bedroom1
 *clr
-minut += 1
+minut=minut+1
 $metkaBed = $ARGS[0]
 $locBed = $CURLOC
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>СПАЛЬНАЯ КОМНАТА</H4></center>'
-'<center><img src = "pic/room/bedrA.jpg" ></center>'
+'<center><img src="pic/room/bedrA.jpg" ></center>'
 clr
-gs 'stat'
+gs'stat'
 'Центральное место в комнате занимает двухспальная ((кровать|bed)), рядом находится громоздкий ((шкаф|loker)) в котором хранится одежда.'
-if hour <= 12: 'На кровати лежит ваша жена ((Альбина|albina)).'
+if hour <= 12:'На кровати лежит ваша жена ((Альбина|albina)).'
 !!!!! Подстава
 
-if hour>12 and innapodstava!1 and innavag = 1 and innaQW<200: 
+if hour>12 and innapodstava!1 and innavag=1 and innaQW<200:
 	 'На тумбочке стоит сумочка Альбины'
-	 act 'Заглянуть в сумочку': gt 'innasex','podstava'
+	 act 'Заглянуть в сумочку':gt'innasex','podstava'
 end
 
-if hour>= 18 and hour<= 20 and innapodstava = 1 and innaporka!1: 
+if hour>=18 and hour<=20 and innapodstava=1 and innaporka!1:
 	 'В комнате вы застаёте жену в скверном настроении'
-	 act 'Поговорить с женой': gt 'innasex','razgovoralbina'
+	 act 'Поговорить с женой':gt'innasex','razgovoralbina'
 end
 
-act 'Коридор': gt 'koridor1'
+act 'Коридор':gt'koridor1'
 dynamic $act_GetNaked
 --- bedroom1 ---------------------------------
 

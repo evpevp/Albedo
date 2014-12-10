@@ -10,30 +10,30 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Постоялый двор "Сон рыбака"</H4></center>'
-'<center><img src = "pic/Evedon/foTraktir.jpg" ></center>'
+'<center><img src="pic/Evedon/foTraktir.jpg" ></center>'
 'Постоялый двор выглядит чистым и ухоженным, хотя с очень простой обстановкой из грубых деревянных столов и струганных лавок.'
-if roomWMO>0: 'У вас оплачено <<roomWMO>> дней проживания.'
+if roomWMO>0:'У вас оплачено <<roomWMO>> дней проживания.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if hour>= 6 and hour<= 23: '<a href = "exec: gt ''MotelGirl''">Пухлощекая, шебутная трактирщица суетится за прилавком.</a>'
-if hour>= 7 and hour<= 21: '<a href = "exec: gt ''posetit''">За столами сидят посетители постоялого двора.</a>'
-if hour>= 8 and hour<= 12 and loksiQW = 0: '<a href = "exec: gt ''loksi''">За столом сидит симпатичная эльфийка в кожаной одежде.</a>'
-if hour>= 8 and hour<= 12 and loksiQW = 1: '<a href = "exec: gt ''loksi''">За столом сидит Локси. Симпатичная девушка в кожаной одежде.</a>'
+if hour>=6 and hour<=23:'<a href="exec: gt''MotelGirl''">Пухлощекая, шебутная трактирщица суетится за прилавком.</a>'
+if hour>=7 and hour<=21:'<a href="exec: gt''posetit''">За столами сидят посетители постоялого двора.</a>'
+if hour>=8 and hour<=12 and loksiQW=0:'<a href="exec: gt''loksi''">За столом сидит симпатичная эльфийка в кожаной одежде.</a>'
+if hour>=8 and hour<=12 and loksiQW=1:'<a href="exec: gt''loksi''">За столом сидит Локси. Симпатичная девушка в кожаной одежде.</a>'
 
-act 'Уйти': minut += 5 & gt 'fishW'
+act 'Уйти':minut=minut+5&gt'fishW'
 
 
-if roomWMO>0: 
-     act 'Идти в свою комнату': 
-	 minut += 5
-	 gt 'MotelRoom'
+if roomWMO>0:
+     act 'Идти в свою комнату':
+	 minut=minut+5
+	 gt'MotelRoom'
 	 end
 end
 --- fiMotel ---------------------------------

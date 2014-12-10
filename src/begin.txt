@@ -3,13 +3,13 @@
 
 
 
-act 'ИГРАТЬ': 
-music_on = 0
+act 'ИГРАТЬ':
+music_on=0
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
- gt 'bedroom1'
+gt'bedroom1'
 end
 --- begin ---------------------------------
 

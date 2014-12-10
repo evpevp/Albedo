@@ -6,29 +6,29 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Арена</H4></center>'
-'<center><img src = "pic/Evedon/arena.jpg" ></center>'
+'<center><img src="pic/Evedon/arena.jpg" ></center>'
 'Большая арена, где проводятся бои между желающими заработать деньжат. Но только победитель получает приз.'
 clr
-gs 'stat'
-gs 'time'
-if hour>= 9 and hour<= 21: 
-'У входа в арену стоит <a href = "exec: gt ''arenamanW''">распорядитель</a>.'
+gs'stat'
+gs'time'
+if hour>=9 and hour<=21:
+'У входа в арену стоит <a href="exec:GT ''arenamanW''">распорядитель</a>.'
 end
 
 
-act 'Выйти на центральную улицу': 
-minut += 5
- gt 'townW'
+act 'Выйти на центральную улицу':
+minut=minut+5
+gt'townW'
 end
 
-if gem>= 100 and hour>= 9 and hour<= 21: 
-     act 'Купить билет на арену 100 гемов': 
+if gem>=100 and hour>=9 and hour<=21:
+     act 'Купить билет на арену 100 гемов':
      cla
      *clr
-     gem- = 100
-     gt 'arenaVieW'
+     gem-=100
+     gt'arenaVieW'
      end
 
 end

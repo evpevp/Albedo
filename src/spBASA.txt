@@ -1,73 +1,73 @@
 # spBASA
 dynamic $battlemain
 clr
-gs 'stat'
+gs'stat'
 
- if spZerkalo>= 100 and manna>= 10: 
-	 act 'Применить заклинание зеркал 10 маны': 
+ if spZerkalo>=100 and manna>=10:
+	 act 'Применить заклинание зеркал 10 маны':
 	 cla
-	 manna = manna-10
-	 ZerkaloExp = ZerkaloExp+1
-	 zerkalo = zerkalo+1+(ZerkaloExp/10)
-	 if zerkalo>50: zerkalo = 50
-	 '<font color = green>Вы создаете <<zerkalo>> зеркал</font>'
-	 xgt 'fight','1'
+	 manna=manna-10
+	 ZerkaloExp=ZerkaloExp+1
+	 zerkalo=zerkalo+1+(ZerkaloExp/10)
+	 if zerkalo>50:zerkalo=50
+	 '<font color=green>Вы создаете <<zerkalo>> зеркал</font>'
+	 xgt'fight','1'
 	 end
  end
  
  
- if spMags hild>= 100 and manna>= 50: 
-	 act 'Применить заклинание щита мага 50 маны': 
+ if spMagShild>=100 and manna>=50:
+	 act 'Применить заклинание щита мага 50 маны':
 	 cla
-	 Mags hildExp = Mags hildExp+1
-	 manna = manna-50
-	 defence = defence+300+(Mags hildExp*10)
-	 '<font color = green>Вы колдуете и вас защищает щит от физических воздействий прочностью <<defence>> едениц</font>'
-	 xgt 'fight','1'
+	 MagShildExp=MagShildExp+1
+	 manna=manna-50
+	 defence=defence+300+(MagShildExp*10)
+	 '<font color=green>Вы колдуете и вас защищает щит от физических воздействий прочностью <<defence>> едениц</font>'
+	 xgt'fight','1'
 	 end
  end
  
- if spSmeshenie>= 100: 
- mannaNeedS = 100-spSmeshenieExp
-	 if mannaNeedS<10: mannaNeedS = 10
+ if spSmeshenie>=100:
+ mannaNeedS=100-spSmeshenieExp
+	 if mannaNeedS<10:mannaNeedS=10
  end
  
- if spSmeshenie>= 100 and manna>= 100: 
-	 act 'Применить заклинание смещения <<mannaNeedS>> маны': 
+ if spSmeshenie>=100 and manna>=100:
+	 act 'Применить заклинание смещения <<mannaNeedS>> маны':
 	 cla
-	 spSmeshenieExp = spSmeshenieExp+1
-	 manna = manna-mannaNeedS
-	 fint = fint+3+(spSmeshenieExp/10)
-	 '<font color = green>Вы колдуете заклинание смещения и теперь вы сможете с легкостью избежать <<fint>> ударов</font>'
-	 xgt 'fight','1'
+	 spSmeshenieExp=spSmeshenieExp+1
+	 manna=manna-mannaNeedS
+	 fint=fint+3+(spSmeshenieExp/10)
+	 '<font color=green>Вы колдуете заклинание смещения и теперь вы сможете с легкостью избежать <<fint>> ударов</font>'
+	 xgt'fight','1'
 	 end
  end
  
- if spTuman>= 100 and manna>= 150: 
- 	 act 'Создать туман 150 маны': 
+ if spTuman>=100 and manna>=150:
+ 	 act 'Создать туман 150 маны':
 	 cla
-	 spTumanExp = spTumanExp+1
-	 manna = manna-150
-	 tuman = tuman+20+(spTumanExp/10)
-	 '<font color = green>Вы колдуете заклинание тумана и туман наплывая на поле боя закрывает обзор противнику</font>'
-	 xgt 'fight','1'
+	 spTumanExp=spTumanExp+1
+	 manna=manna-150
+	 tuman=tuman+20+(spTumanExp/10)
+	 '<font color=green>Вы колдуете заклинание тумана и туман наплывая на поле боя закрывает обзор противнику</font>'
+	 xgt'fight','1'
 	 end
  end
  
-  if spKlon>= 100 and manna>= 500 and cooldownSpell<= 0: 
- 	 act 'Создать клона 500 маны': 
+  if spKlon>=100 and manna>=500 and cooldownSpell<=0:
+ 	 act 'Создать клона 500 маны':
 	 cla
-	 spKlonExp = spKlonExp+1
-	 manna = manna-500
-	 cooldownSpell = 2
-	 klon = klon+1+(spKlonExp/100)
-	 '<font color = green>Вы колдуете создавая клона</font>'
-	 xgt 'fight','1'
+	 spKlonExp=spKlonExp+1
+	 manna=manna-500
+	 cooldownSpell=2
+	 klon=klon+1+(spKlonExp/100)
+	 '<font color=green>Вы колдуете создавая клона</font>'
+	 xgt'fight','1'
 	 end
  end
  
  
  
- act 'Пропустить ход': xgt 'fight','1'
+ act 'Пропустить ход':xgt'fight','1'
 --- spBASA ---------------------------------
 

@@ -1,7 +1,7 @@
 # $menu_invC
-if $selobj = 'Инвентарь': 
+if $selobj='Инвентарь':
 mobila = input ("По какому номеру позвонить")
-     if mobila > 0: 'Никто не отвечает.'
+     if mobila > 0:'Никто не отвечает.'
 end
 
 unselect

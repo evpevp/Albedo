@@ -1,14 +1,14 @@
 # WeapNill
-sword = 0
-wepAtk = 0
-weapon = 0
+sword=0
+wepAtk=0
+weapon=0
 
 !оружие
-if vorknife = 2: vorknife = 1
-if vordubina = 2: vordubina = 1
-if mech = 2: mech = 1
-if mech2 = 2: mech2 = 1
-if mech3 = 2: mech3 = 1
-if desertSword = 2: desertSword = 1
+if vorknife = 2:vorknife = 1
+if vordubina=2:vordubina=1
+if mech = 2:mech = 1
+if mech2 = 2:mech2 = 1
+if mech3 = 2:mech3 = 1
+if desertSword=2:desertSword=1
 --- WeapNill ---------------------------------
 

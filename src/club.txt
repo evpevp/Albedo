@@ -1,37 +1,37 @@
 # club
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-'<center><B><font color = maroon>Ночной клуб</font></B></center>'
-'<center><img src = "pic\pic\club.jpg" ></center>'
+set minut = minut + 5
+'<center><B><font color=maroon>Ночной клуб</font></B></center>'
+'<center><img src="pic\pic\club.jpg" ></center>'
 'Время работы ночного клуба с 16 до 3х, выходной понедельник. Входной билет 500 руб'
 'У входа в клуб полно молодежи, кто то вышел подбухать в кустах, кого то бьют, кто то трахаеться. У входа стоят бугаи охранники и проверяют билеты. Билет стоит 500 рублей.'
 
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-     act 'ВЫЙТИ ИЗ КЛУБА': 
+     act 'ВЫЙТИ ИЗ КЛУБА':
      cla
-      minut = minut + 5
-     gt 'down'
+     set minut = minut + 5
+     gt'down'
      end
 
 
-     if week > 1: 
-		 if pol = 0 and hour >= 16: 
-			 if slot<= 2 and hapri = 1 and sweat<1: 
-				 if money >= 500: 
-					 act 'Войти в клуб (500 руб)': 
+     if week > 1:
+		 if pol = 0 and hour >= 16:
+			 if slot<=2 and hapri=1 and sweat<1:
+				 if money >= 500:
+					 act 'Войти в клуб (500 руб)':
 					 cla
-					  minut = minut + 5
-					  money = money - 500
-					 gt 'club','inside'
+					 set minut = minut + 5
+					 set money = money - 500
+					 gt'club','inside'
 					 end
 				 end
 			 else
@@ -42,45 +42,45 @@ LCOLOR = rgb(106,90,205)
 
 end
 
-if $ARGS[0] = 'inside': 
+if $ARGS[0]='inside':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-'<center><B><font color = maroon>Ночной клуб</font></B></center>'
-'<center><img src = "pic\pic\club2.jpg" ></center>'
+set minut = minut + 5
+'<center><B><font color=maroon>Ночной клуб</font></B></center>'
+'<center><img src="pic\pic\club2.jpg" ></center>'
 'Грохот музыки заглушает даже мысли, в полумраке разрезаемом вспышками стробоскопов и лазеров танцует толпа народу.'
  
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-	 if music_on = 0: 
+	 if music_on=0:
 		 inited = 1
-		 music_on = 1
+		 music_on=1
 		 volume = 50
-		 club = 1
+		 club=1
 		 $music_theme = 'club'
 		 gs 'init_music'
 	 end
 volume = 50
-     if hour <= 3 or hour >= 15: 
-     act 'Туалет': gt 'club','toi'
+     if hour <= 3 or hour >= 15:
+     act 'Туалет':gt'club','toi'
      
-     act 'Танцпол': gt 'club','dance'
+     act 'Танцпол':gt'club','dance'
      
-     act 'Бар': gt 'club','bar'
+     act 'Бар':gt'club','bar'
      end
 
-     act 'УЙТИ ИЗ КЛУБА': 
+     act 'УЙТИ ИЗ КЛУБА':
      cla
-      drunk = 0
-     music_on = 0
-      minut = minut + 5
-     gt 'down'
+     set drunk = 0
+     music_on=0
+     set minut = minut + 5
+     gt'down'
      end
 
 
@@ -88,30 +88,30 @@ volume = 50
 end
 
 
-if $ARGS[0] = 'toi': 
+if $ARGS[0]='toi':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-'<center><B><font color = maroon>Туалет</font></B></center>'
-'<center><img src = "pic\pic\club3.jpg" ></center>'
+set minut = minut + 5
+'<center><B><font color=maroon>Туалет</font></B></center>'
+'<center><img src="pic\pic\club3.jpg" ></center>'
 ''
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 volume = 30
 
-act 'Выйти из туалета': gt 'club','inside'
+act 'Выйти из туалета':gt'club','inside'
 
-     if hapri = 0: 
-         act 'Причесаться': 
+     if hapri = 0:
+         act 'Причесаться':
          cla
-          minut = minut + 3
-          hapri = 1
-         act 'Посмотреть результат': gt 'club','toi'
+         set minut = minut + 3
+         set hapri = 1
+         act 'Посмотреть результат':gt'club','toi'
          end
      end
 
@@ -121,136 +121,136 @@ end
 
 
 
-if $ARGS[0] = 'dance': 
+if $ARGS[0]='dance':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-'<center><B><font color = maroon>Танцпол</font></B></center>'
-'<center><img src = "pic\pic\club2.jpg" ></center>'
+'<center><B><font color=maroon>Танцпол</font></B></center>'
+'<center><img src="pic\pic\club2.jpg" ></center>'
 'Клуб до отказа заполнен веселящейся молодежью танцующей под ритмы современной музыки.'
 clr
-gs 'stat'
+gs'stat'
 volume = 100
-act 'Выйти': gt 'club','inside'
-     if hour <= 3 and pol = 0 or hour >= 16 and pol = 0: 
-         act 'Танцевать 30 мин': 
+act 'Выйти':gt'club','inside'
+     if hour <= 3 and pol=0 or hour >= 16 and pol=0:
+         act 'Танцевать 30 мин':
          cla
          *clr
-          minut = minut + 30
-         horny = horny+10
-         '<center><img src = "pic\pic\club4.jpg" ></center>'
+         set minut = minut + 30
+         horny=horny+10
+         '<center><img src="pic\pic\club4.jpg" ></center>'
          'Вы танцуете на танцплощадке.'
          
          !!Ивент с Инной!!
          
-         Innaclubmeet = RAND(0,6)
-         if week>= 5 and week<= 6 and Innaclubmeet = 5 and DayInnaClubMeet!day and hour>= 16 and hour<= 23: 
+         Innaclubmeet=RAND(0,6)
+         if week>=5 and week<=6 and Innaclubmeet=5 and DayInnaClubMeet!day and hour>=16 and hour<=23:
 			 'Среди танцующих ребят вы замечаете вашу дочь'
-			 act 'Сделать вид, что не заметил её': gt 'club','dance' 
-			 if innavag = 1 and money>= 5000 and horny>= 20: 
-				 act 'Подойти к дочке': 
+			 act 'Сделать вид, что не заметил её':gt'club','dance' 
+			 if innavag=1 and money>= 5000 and horny>=20:
+				 act 'Подойти к дочке':
 					 gt 'innasex','innaclub'
 				 end
 			 end
 		 end
-         act 'Уйти с танцпола': gt 'club','dance'
+         act 'Уйти с танцпола':gt'club','dance'
          end
          
          if money>= 5000:   
-             act 'Заказать столик в VIP зоне 5 тыр': 
+             act 'Заказать столик в VIP зоне 5 тыр':
 			 cla
 			 *clr
-			  minut = minut + 60
+			 set minut = minut + 60
 			 wipo = wipo + 10
-			 manna = manna+10
-			 money = money-5000
-			 '<center><img src = "pic\pic\clubvip.jpg" ></center>'
+			 manna=manna+10
+			 money=money-5000
+			 '<center><img src="pic\pic\clubvip.jpg" ></center>'
 			 'Вы заказали шампанского и место в вип зоне, отдали бармену 5 тысяч и сели на кожанный диванчик.'
-			 act 'Уйти': gt 'club','dance'
+			 act 'Уйти':gt'club','dance'
 			    if money>= 5000: 
-			        act 'Пригласить телок 5 тыр': 
+			        act 'Пригласить телок 5 тыр':
 			         cla
 			         *clr
-			         money = money-5000
+			         money=money-5000
 			         minut = minut + 60
 					 wipo = wipo + 10
-					 manna = manna+10
-					 horny = horny+10
-					 picrand = RAND(0,6)
-					 if picrand = 0: '<center><img src = "pic\club\telki.jpg" ></center>'
-					 if picrand = 1: '<center><img src = "pic\club\1telki.jpg" ></center>'
-					 if picrand = 2: '<center><img src = "pic\club\2telki.jpg" ></center>'
-					 if picrand = 3: '<center><img src = "pic\club\3telki.jpg" ></center>'
-					 if picrand = 4: '<center><img src = "pic\club\4telki.jpg" ></center>'
-					 if picrand = 5: '<center><img src = "pic\club\5telki.jpg" ></center>'
-					 if picrand = 6: '<center><img src = "pic\club\6telki.jpg" ></center>'	
+					 manna=manna+10
+					 horny=horny+10
+					 picrand=RAND(0,6)
+					 if picrand=0:'<center><img src="pic\club\telki.jpg" ></center>'
+					 if picrand=1:'<center><img src="pic\club\1telki.jpg" ></center>'
+					 if picrand=2:'<center><img src="pic\club\2telki.jpg" ></center>'
+					 if picrand=3:'<center><img src="pic\club\3telki.jpg" ></center>'
+					 if picrand=4:'<center><img src="pic\club\4telki.jpg" ></center>'
+					 if picrand=5:'<center><img src="pic\club\5telki.jpg" ></center>'
+					 if picrand=6:'<center><img src="pic\club\6telki.jpg" ></center>'	
 			         'К вам подсели телочки и вы заказали им дорогих коктейлей.'
-			         act 'Уйти': gt 'club','dance'
-			             if money>= 5000 and horny>= 50: 
-			             	act 'Трахать телок 5 тыр': 
+			         act 'Уйти':gt'club','dance'
+			             if money>= 5000 and horny>=50:
+			             	act 'Трахать телок 5 тыр':
 							 cla
 							 *clr
-							 money = money-5000
+							 money=money-5000
 							 minut = minut + 60
 							 wipo = wipo + 10
-							 manna = manna+10
-							 horny = horny+10
-							 girl = girl+2
-							 sexm = sexm+1
-							 '<center><img src = "pic\club\foreplay.gif" ></center>'
+							 manna=manna+10
+							 horny=horny+10
+							 girl=girl+2
+							 sexm=sexm+1
+							 '<center><img src="pic\club\foreplay.gif" ></center>'
 							 'Вы приобняли двух блондинок и стали лапать их, пока они ласкали ваш член своими ручками.'
-							     act 'Продолжить..': 
+							     act 'Продолжить..':
 							     cla
 							     *clr
 							     minut = minut + 20
-							     picrand = RAND(0,1)
-							     if picrand = 0: '<center><img src = "pic\club\bj1.gif" ></center>'
-							     if picrand = 1: '<center><img src = "pic\club\bj4.gif" ></center>'
+							     picrand=RAND(0,1)
+							     if picrand=0:'<center><img src="pic\club\bj1.gif" ></center>'
+							     if picrand=1:'<center><img src="pic\club\bj4.gif" ></center>'
 							     'Затем они опустились на колени, приспустили вам штаны и стали ласкать его своими губками.'
-							     	 act 'Трахать телок в рот': 
+							     	 act 'Трахать телок в рот':
 									 cla
 									 *clr
 									 minut = minut + 20
-									 '<center><img src = "pic\club\bj2.gif" ></center>'
+									 '<center><img src="pic\club\bj2.gif" ></center>'
 									 'Вы положили руку на затылок одной из блондинок и стали трахать её в рот.'
-									 	 act 'Секс': 
+									 	 act 'Секс':
 										 cla
 										 *clr
 										 minut = minut + 20
-										 picrand = RAND(0,3)
-										 if picrand = 0: '<center><img src = "pic\club\sex1.gif" ></center>'
-										 if picrand = 1: '<center><img src = "pic\club\sex2.gif" ></center>'
-										 if picrand = 2: '<center><img src = "pic\club\sex3.gif" ></center>'
-										 if picrand = 3: '<center><img src = "pic\club\sex4.gif" ></center>'
+										 picrand=RAND(0,3)
+										 if picrand=0:'<center><img src="pic\club\sex1.gif" ></center>'
+										 if picrand=1:'<center><img src="pic\club\sex2.gif" ></center>'
+										 if picrand=2:'<center><img src="pic\club\sex3.gif" ></center>'
+										 if picrand=3:'<center><img src="pic\club\sex4.gif" ></center>'
 										 'Вы стали по очереди насаживать тёлок на свой горячий член.'
-											 act 'Продолжить..': 
+											 act 'Продолжить..':
 											 cla
 											 *clr
 											 minut = minut + 20
-											 picrand = RAND(0,2)
-											 if picrand = 0: '<center><img src = "pic\club\sex5.gif" ></center>'
-											 if picrand = 1: '<center><img src = "pic\club\sex6.gif" ></center>'	
-											 if picrand = 2: '<center><img src = "pic\club\sex7.gif" ></center>'	
+											 picrand=RAND(0,2)
+											 if picrand=0:'<center><img src="pic\club\sex5.gif" ></center>'
+											 if picrand=1:'<center><img src="pic\club\sex6.gif" ></center>'	
+											 if picrand=2:'<center><img src="pic\club\sex7.gif" ></center>'	
 											 'Трахая вторую вы поняли что уже близки к финишу.'
-												 act 'Встать': 
+												 act 'Встать':
 												 cla
 												 *clr
 												 minut = minut + 20
-												 picrand = RAND(0,1)
-												 if picrand = 0: '<center><img src = "pic\club\bj3.gif" ></center>'
-												 if picrand = 1: '<center><img src = "pic\club\bj5.gif" ></center>'	
-												 if picrand = 2: '<center><img src = "pic\club\bj6.gif" ></center>'
+												 picrand=RAND(0,1)
+												 if picrand=0:'<center><img src="pic\club\bj3.gif" ></center>'
+												 if picrand=1:'<center><img src="pic\club\bj5.gif" ></center>'	
+												 if picrand=2:'<center><img src="pic\club\bj6.gif" ></center>'
 												 'Вы встали и тёлки вдвоём стали доводить ваш член до оргазма.'
-													 act 'Кончить им на лица': 
+													 act 'Кончить им на лица':
 													 cla
 													 *clr
 													 minut = minut + 30
-													 horny = 0
-													 manna = manna+50
-													 '<center><img src = "pic\club\cum1.gif" ></center>'
+													 horny=0
+													 manna=manna+50
+													 '<center><img src="pic\club\cum1.gif" ></center>'
 													 'Достигнув пика вы спустили им на похотливые лица.'
-													        act 'Уйти': gt 'club','dance'
+													        act 'Уйти':gt'club','dance'
 													        end
 														end
 													end							
@@ -268,33 +268,33 @@ act 'Выйти': gt 'club','inside'
      end
 end
 
-if $ARGS[0] = 'bar': 
+if $ARGS[0]='bar':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-'<center><B><font color = maroon>Бар</font></B></center>'
-'<center><img src = "pic\pic\club5.jpg" ></center>'
+set minut = minut + 5
+'<center><B><font color=maroon>Бар</font></B></center>'
+'<center><img src="pic\pic\club5.jpg" ></center>'
 clr
-gs 'stat'
+gs'stat'
 volume = 50
-act 'Выйти': gt 'club','inside'
+act 'Выйти':gt'club','inside'
 
-     if money >= 300: 
+     if money >= 300:
      
-		 act 'Купить выпивку 300 руб': 
+		 act 'Купить выпивку 300 руб':
 		 cla
 		 *clr
-		  minut = minut + 30
-		  fat = fat + 1
-		  manna = manna + 10
-		  wipo = wipo + 10
-		  money = money - 300
-		 alko = alko+3
-		 '<center><img src = "pic\pic\club6.jpg" ></center>'
+		 set minut = minut + 30
+		 set fat = fat + 1
+		 set manna = manna + 10
+		 set wipo = wipo + 10
+		 set money = money - 300
+		 alko=alko+3
+		 '<center><img src="pic\pic\club6.jpg" ></center>'
 		 'Вы нашли свободное место возле бара и сели на него, заказали коктейль и бармен быстро его смешав подала вам.'
-         act 'Встать': gt 'club','bar'
+         act 'Встать':gt'club','bar'
 		 end
      end  
 end

@@ -1,45 +1,45 @@
 # poliLoss
-monster = 0
+monster=0
 
 'Тварь свалила вас и обратилась опять в черную, вязкую как гудрон жижу.'
 
-     act '.....': 
+     act '.....':
      cla
      *clr
-     SUB = SUB+1
-     minut += 15
-     if magika>0: magika = magika/2
-     if skverna<100: skverna = 100
-     face = face+30
-     tit = tit+20
-     hand = hand+20
-     brist = brist+20
-     ass = ass+20
-     thight = thight+20
-     leg = leg+20
-     monst = monst+1
-     if rost>160: rost = rost-1
+     SUB=SUB+1
+     minut=minut+15
+     if magika>0:magika=magika/2
+     if skverna<100:skverna=100
+     face=face+30
+     tit=tit+20
+     hand=hand+20
+     brist=brist+20
+     ass=ass+20
+     thight=thight+20
+     leg=leg+20
+     monst=monst+1
+     if rost>160:rost=rost-1
      
      
-     if pol = 0: 
-     '<center><img src = "pic/EvedonMonsters/polimorfsex.jpg" ></center>'
+     if pol=0:
+     '<center><img src="pic/EvedonMonsters/polimorfsex.jpg" ></center>'
      'Тварь облепила вас и присосалась к вашему телу заполняя все складки и отверстия. Черная и густая жижа начала заливаться вам в рот и проникать в анус.'
      'Вы почувствовали как вам в член проникает эта жижа и пробирается в глубь вашего тела.'
      end
      
-     if pol>0: 
-     '<center><img src = "pic/EvedonTA/poli.jpg" ></center>'
+     if pol>0:
+     '<center><img src="pic/EvedonTA/poli.jpg" ></center>'
      'Тварь облепила вас и присосалась к вашему телу заполняя все складки и отверстия. Черная и густая жижа начала заливаться вам в рот и проникать в анус.'
 	 'Черная жижа раздвинула ваше влагалище и проникла в него, наполняя вас.'
-	 gs 'femorg'
-	 vag = vag+5
+	 gs'femorg'
+	 vag=vag+5
 	 end
 	 
-     gs 'analslut'
-     anus = anus+5
+     gs'analslut'
+     anus=anus+5
      'Ваши кишки начали набиваться черной жижей, переполняя вас и болезненно расширяя анус и оскверняя вас.'
      'Мерзкая тварь залепила вам глаза и уши своей жижей и оставила вам только нос для дыхания. Вы начали задыхаться и было уже подумали что это конец, как тварь внезапно отпустила вас и просто исчезла.'
-     act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+     act 'ВЫЙТИ':GOTO $locFight, $metkaFight
      end
 
 

@@ -1,36 +1,36 @@
 # амрул
 *PL 'Вы склонились над столом.'
-*P '<center><img src = "pic/casino/amrul.gif" ></center>'
-ACT 'Сделать ставку': 
+*P '<center><img src="pic/casino/amrul.gif" ></center>'
+ACT 'Сделать ставку':
 	st_1 = input 'Введите сумму'
-	if money<st_1: 
+	if money<st_1:
 		msg 'У вас недостаточно денег'
-		 gt 'рулетка'
+		gt 'рулетка'
 	end
-	if st_1<0: 
+	if st_1<0:
 		msg 'Неправильно, попробуй еще раз'
-		 gt 'амрул'
+		gt 'амрул'
 	end
-	if st_1>1000: 
+	if st_1>1000:
 		msg 'Максимальная ставка 1000 рублей'
-		 gt 'амрул'
+		gt 'амрул'
 	end
-	 money = money-st_1
-	 gt 'ставка'
+	set money=money-st_1
+	gt 'ставка'
 END
-ACT 'отойти от стола': 
-	 gt 'рулетка'
+ACT 'отойти от стола':
+	gt 'рулетка'
 END
-кч = 0
-чнч = 0
-мб = 0
-дю = 0
-ряд = 0
-чи = 100
-x_rul = 100
+кч=0
+чнч=0
+мб=0
+дю=0
+ряд=0
+чи=100
+x_rul=100
 
 clr
-gs 'stat'
- minut = minut + 5
+gs'stat'
+set minut=minut + 5
 --- амрул ---------------------------------
 

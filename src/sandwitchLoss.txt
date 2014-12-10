@@ -1,71 +1,71 @@
 # sandwitchLoss
 
-if monster>0: 
-!monster = 0
+if monster>0:
+!monster=0
 'Вы проиграли пустынной ведьме и она стала накладывать на вас какое-то заклинание.'
 end
-if monster = 0: 
+if monster=0:
 'Вы согласились с предложением ведьмы и она стала накладывать на вас заклинание.'
 end
-!'if sandQW>= 6: 
-sandQW = sandQW+1
+!'if sandQW>=6:
+sandQW=sandQW+1
 
 end
-if sandQW = 5: 
-sandQW = sandQW+1
+if sandQW=5:
+sandQW=sandQW+1
 
 end'
-if sandQW>= 4: 
-sandQW = sandQW+1
-lakt = lakt+5
-tits = tits+10
+if sandQW>=4:
+sandQW=sandQW+1
+lakt=lakt+5
+tits=tits+10
 'Из груди брызнуло молоко после заклинания ведьмы'
 end
-if sandQW = 3: 
-sandQW = sandQW+1
-tits = tits+30
-lakt = lakt+5
+if sandQW=3:
+sandQW=sandQW+1
+tits=tits+30
+lakt=lakt+5
 'Вы чувствуете как у вас растет грудь и из сосков начало капать молоко.'
 end
-if sandQW = 2: 
-sandQW = sandQW+1
-hand = hand+50
-brist = brist+50
+if sandQW=2:
+sandQW=sandQW+1
+hand=hand+50
+brist=brist+50
 'Вы чувствуете как заклинание охватывает верх тела и видите как ваши руки становятся более женственными и более отчетливо проступает талия.'
 end
-if sandQW = 1: 
-sandQW = sandQW+1
-ass = ass+50
-leg = leg+50
+if sandQW=1:
+sandQW=sandQW+1
+ass=ass+50
+leg=leg+50
 'Вы чувствуете как заклинание охватывает нижнюю половину тела и выидите что ваша попа и ноги стали более женственными.'
 end
-if sandQW = 0: 
-sandQW = sandQW+1
-face = face+50
+if sandQW=0:
+sandQW=sandQW+1
+face=face+50
 hcol = 3
 'Вы чувствуете как заклинание начинает менять ваше лицо и волосы. Ваше лицо стало более женственным, а волосы светлыми'
 end
 
-if monster = 0: 
+if monster=0:
 'Удовлетворенная проделанной работой, ведьма удаляется.'
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 end
-if monster>0: 
-monster = 0
+if monster>0:
+monster=0
 'После этого ведьма уронила вас на землю и села вам на лицо свое киской.'
-     act 'Обслужить ведьму языком': 
+     act 'Обслужить ведьму языком':
      cla
      *clr
-     SUB = SUB+1
-     minut += 15
-     girl = girl+1
-     sexm = sexm+1
-     horny = horny+SUB
+     SUB=SUB+1
+     minut=minut+15
+     girl=girl+1
+     sexm=sexm+1
+     horny=horny+SUB
      clr
-     gs 'stat'
-     '<center><img src = "pic/EvedonTA\sandw.jpg" ></center>'
+     gs'stat'
+     '<center><img src="pic/EvedonTA\sandw.jpg" ></center>'
      'Вы околдованы и послушно вылизываете истекающую киску ведьмы. Наконец ее охватывает оргазм и она уходит.'
-     act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+     act 'ВЫЙТИ':GOTO $locFight, $metkaFight
      end
 end
 

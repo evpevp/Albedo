@@ -7,18 +7,18 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Огород</H4></center>'
-'<center><img src = "pic/Evedon/df24.jpg" ></center>'
+'<center><img src="pic/Evedon/df24.jpg" ></center>'
 'Почти весь огород засажен лимонными деревцами.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-!'За стойкой стоит скучает <a href = "exec: gt ''tagirlW''">трактирщица</a>.'
+!'За стойкой стоит скучает <a href="exec:GT ''tagirlW''">трактирщица</a>.'
 
 
-act 'Выйти': 
-minut += 5
- gt 'df2_4'
+act 'Выйти':
+minut=minut+5
+gt'df2_4'
 end
 --- robotOgW ---------------------------------
 

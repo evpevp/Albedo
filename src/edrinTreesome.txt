@@ -1,211 +1,211 @@
 # edrinTreesome
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
+set minut = minut + 5
 'Мужчина обнимает одной рукой Эдрин, а другой хочет обнять вас.'
-act 'Уйти': gt 'teladareW'
-     act 'Позволить себя обнять.': 
+act 'Уйти':gt'teladareW'
+     act 'Позволить себя обнять.':
      cla
      *clr
-     '<center><img src = "pic/EvedonTA/ktedrin.jpg" ></center>'
+     '<center><img src="pic/EvedonTA/ktedrin.jpg" ></center>'
      'Мужчина вас обеих обнимает. Потом Эдрин повернулась попкой к мужчине и вы сделали то же самое.'
      'Вы подставили свои попки похотливому мужику, который начал сквозь одежду ласкать ваши киски.'
      '(Мужчина) - Ну что девчонки. Пойдем ко мне. Каждой дам по 300 гемов.'
      
-     act 'Уйти': gt 'teladareW'
+     act 'Уйти':gt'teladareW'
      
-         act 'Согласиться': 
-         whore = whore+1
-         gem = gem+300
-         gt 'edrinTreesome','1'
+         act 'Согласиться':
+         whore=whore+1
+         gem=gem+300
+         gt'edrinTreesome','1'
          end
      end
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 5
-bj = bj+1
-guy = guy+1
-gang = gang+1
-horny = horny+(whore*2)
-picrand = RAND(0,4)
-if picrand = 0: '<center><img src = "pic/EvedonTA/ktedrinBJ.jpg" ></center>'
-if picrand = 1: '<center><img src = "pic/EvedonTA/ktedrinBJ2.jpg" ></center>'
-if picrand = 2: '<center><img src = "pic/EvedonTA/ktedrinBJ3.jpg" ></center>'
-if picrand = 3: '<center><img src = "pic/EvedonTA/ktedrinBJ4.jpg" ></center>'
-if picrand = 4: '<center><img src = "pic/EvedonTA/ktedrinBJ5.jpg" ></center>'
+set minut = minut + 5
+bj=bj+1
+guy=guy+1
+gang=gang+1
+horny=horny+(whore*2)
+picrand=RAND(0,4)
+if picrand=0:'<center><img src="pic/EvedonTA/ktedrinBJ.jpg" ></center>'
+if picrand=1:'<center><img src="pic/EvedonTA/ktedrinBJ2.jpg" ></center>'
+if picrand=2:'<center><img src="pic/EvedonTA/ktedrinBJ3.jpg" ></center>'
+if picrand=3:'<center><img src="pic/EvedonTA/ktedrinBJ4.jpg" ></center>'
+if picrand=4:'<center><img src="pic/EvedonTA/ktedrinBJ5.jpg" ></center>'
 'Вы пошли втроем к мужчине в его съемную комнату. Там вы с Эдрин начали вдвоем ротиками обрабатывать член мужчины иногда целуясь друг с другом.'
-     act '.......': 
+     act '.......':
      cla
      *clr
-     horny = horny+(whore*2)
-     picrand = RAND(0,1)
-	 if picrand = 0: '<center><img src = "pic/EvedonTA/ktedrinButt.jpg" ></center>'
-	 if picrand = 1: '<center><img src = "pic/EvedonTA/ktedrinButt2.jpg" ></center>'
+     horny=horny+(whore*2)
+     picrand=RAND(0,1)
+	 if picrand=0:'<center><img src="pic/EvedonTA/ktedrinButt.jpg" ></center>'
+	 if picrand=1:'<center><img src="pic/EvedonTA/ktedrinButt2.jpg" ></center>'
      'Мужчина лег на спину и вы с Эдрин зажав его член между своих задниц начали ласкать его член своими попками.'
-         act '.......': 
+         act '.......':
 		 cla
 		 *clr 
-		 tiprand = RAND(0,12)
-		     if tiprand = 0: 
-		     sex = sex+1
-		     vag = vag+3
-		     '<center><img src = "pic/EvedonTA/ktedrinSex.jpg" ></center>'
+		 tiprand=RAND(0,12)
+		     if tiprand=0:
+		     sex=sex+1
+		     vag=vag+3
+		     '<center><img src="pic/EvedonTA/ktedrinSex.jpg" ></center>'
 		     'Мужик поставил вас раком, а Эдрин подставила вам свою киску. Вас начали трахать в киску, а вы тыкались носом и губами в мягкую и истекающую вагину Эдрин.'
-		     gs 'femorg'
+		     gs'femorg'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 1: 
-		     lesb = lesb+1
-		     horny = horny+(vagina*10)
-		     '<center><img src = "pic/EvedonTA/ktedrinSex.jpg" ></center>'
+		     if tiprand=1:
+		     lesb=lesb+1
+		     horny=horny+(vagina*10)
+		     '<center><img src="pic/EvedonTA/ktedrinSex.jpg" ></center>'
 		     'Мужчина поставил раком Эдрин, вы раздвинули свои ноги и Эдрин начала ласкать вас своим язычком между ног.'
-		         if horny>= 50: 
-		         horny = 0
-		         orgasm = orgasm+1
+		         if horny>=50:
+		         horny=0
+		         orgasm=orgasm+1
 		         'От умелых движений язычка Эдрин вас охватывает оргазм.'
 		         end
-		         if horny<50: 
+		         if horny<50:
 		         'Вам очень приятно от движений язычка Эдрин, но оргазма нет.'
 		         end
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 2: 
-		     sex = sex+1
-		     vag = vag+3
-		     '<center><img src = "pic/EvedonTA/ktedrinSex1.jpg" ></center>'
+		     if tiprand=2:
+		     sex=sex+1
+		     vag=vag+3
+		     '<center><img src="pic/EvedonTA/ktedrinSex1.jpg" ></center>'
 		     'Мужчина сел на кровать, вы своей киской сели ему на член и начали прыгать, пока Эдрин целовалась с мужчиной.'
-		     gs 'femorg'
+		     gs'femorg'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
-		     if tiprand = 3: 
-		     '<center><img src = "pic/EvedonTA/ktedrinSex1.jpg" ></center>'
+		     if tiprand=3:
+		     '<center><img src="pic/EvedonTA/ktedrinSex1.jpg" ></center>'
 		     'Эдрин села на член мужчины и начала прыгать пока вы целовались с ним.'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 4: 
-		     horny = horny+(tit*2)
-		     '<center><img src = "pic/EvedonTA/ktedrinSex2.jpg" ></center>'
+		     if tiprand=4:
+		     horny=horny+(tit*2)
+		     '<center><img src="pic/EvedonTA/ktedrinSex2.jpg" ></center>'
 		     'Эдрин и мужчина впились губами в ваши груди и начали их сосать, Эдрин ручкой ласкала член мужчины.'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 5: 
-		     sex = sex+1
-		     vag = vag+3
-		     horny = horny+30
-		     '<center><img src = "pic/EvedonTA/ktedrinSex3.jpg" ></center>'
+		     if tiprand=5:
+		     sex=sex+1
+		     vag=vag+3
+		     horny=horny+30
+		     '<center><img src="pic/EvedonTA/ktedrinSex3.jpg" ></center>'
 		     'Вы легли на спину, а Эдрин легла на вас сверху и начала вас целовать. Мужчина зашел между ваших ног и начал трахать вас по очереди в ваши разгоряченные киски.'
-		     gs 'femorg'
+		     gs'femorg'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		        
 		     
-		     if tiprand = 6: 
-		     lesb = lesb+1
-		     teabag = teabag+1
-		     horny = horny+(vagina*10)
-		     '<center><img src = "pic/EvedonTA/ktedrinSex4.jpg" ></center>'
+		     if tiprand=6:
+		     lesb=lesb+1
+		     teabag=teabag+1
+		     horny=horny+(vagina*10)
+		     '<center><img src="pic/EvedonTA/ktedrinSex4.jpg" ></center>'
 		     'Вы легли на пол, а Эдрин легла сверху начав лизать вашу киску, мужчина подошел к вашему лицу и вы увидели как его член вошел в ее киску, он ее трахал иногда опуская свои яйца вам в рот, чтобы вы могли поласкать их язычком. Вы по очереди вылизывали клитор Эдрин и яйца не знакомого мужика, пока Эдрин со стонами от ударов члена вылизывала вашу киску.'
-		     	 if horny>= 50: 
-		         horny = 0
-		         orgasm = orgasm+1
+		     	 if horny>=50:
+		         horny=0
+		         orgasm=orgasm+1
 		         'От умелых движений язычка Эдрин вас охватывает оргазм.'
 		         end
-		         if horny<50: 
+		         if horny<50:
 		         'Вам очень приятно от движений язычка Эдрин, но оргазма нет.'
 		         end
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 7: 
-		     lesb = lesb+1
-		     sex = sex+1
-		     vag = vag+3
-		     horny = horny+30
-		     '<center><img src = "pic/EvedonTA/ktedrinSex4.jpg" ></center>'
+		     if tiprand=7:
+		     lesb=lesb+1
+		     sex=sex+1
+		     vag=vag+3
+		     horny=horny+30
+		     '<center><img src="pic/EvedonTA/ktedrinSex4.jpg" ></center>'
 		     'Эдрин легла на пол, а вы легли на нее начав вылизывать ее киску. Вы почувствовали горячий язычок Эдрин на своем клиторе, в тот же момент, раздвигая ваши нижние розовые губки в ваше лоно ворвался твердый член. Мужик трахал вас, пока вы лизали у Эдрин, а она лизала вашу киску и яйца мужика.'
-		     gs 'femorg'
+		     gs'femorg'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 8: 
-		     sex = sex+1
-		     vag = vag+3
-		     horny = horny+30
-		     '<center><img src = "pic/EvedonTA/ktedrinSex5.jpg" ></center>'
+		     if tiprand=8:
+		     sex=sex+1
+		     vag=vag+3
+		     horny=horny+30
+		     '<center><img src="pic/EvedonTA/ktedrinSex5.jpg" ></center>'
 		     'Вы легли на пол, а Эдрин легла на вас сверху и вы начали целоваться. Мужчина подошел между ваших ног и стал по очереди трахать ваши киски.'
-		     gs 'femorg'
+		     gs'femorg'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 9: 
-		     sex = sex+1
-		     vag = vag+3
-		     '<center><img src = "pic/EvedonTA/ktedrinSex6.jpg" ></center>'
+		     if tiprand=9:
+		     sex=sex+1
+		     vag=vag+3
+		     '<center><img src="pic/EvedonTA/ktedrinSex6.jpg" ></center>'
 		     'Мужик поставил вас раком, а Эдрин подставила вам свою киску. Вас начали трахать в киску, а вы тыкались носом и губами в мягкую и истекающую вагину Эдрин.'
-		     gs 'femorg'
+		     gs'femorg'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 10: 
-		     lesb = lesb+1
-		     horny = horny+(vagina*10)
-		     '<center><img src = "pic/EvedonTA/ktedrinSex6.jpg" ></center>'
+		     if tiprand=10:
+		     lesb=lesb+1
+		     horny=horny+(vagina*10)
+		     '<center><img src="pic/EvedonTA/ktedrinSex6.jpg" ></center>'
 		     'Мужчина поставил раком Эдрин, вы раздвинули свои ноги и Эдрин начала ласкать вас своим язычком между ног.'
-		         if horny>= 50: 
-		         horny = 0
-		         orgasm = orgasm+1
+		         if horny>=50:
+		         horny=0
+		         orgasm=orgasm+1
 		         'От умелых движений язычка Эдрин вас охватывает оргазм.'
 		         end
-		         if horny<50: 
+		         if horny<50:
 		         'Вам очень приятно от движений язычка Эдрин, но оргазма нет.'
 		         end
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 11: 
-		     sex = sex+1
-		     vag = vag+3
-		     '<center><img src = "pic/EvedonTA/ktedrinSex7.jpg" ></center>'
+		     if tiprand=11:
+		     sex=sex+1
+		     vag=vag+3
+		     '<center><img src="pic/EvedonTA/ktedrinSex7.jpg" ></center>'
 		     'Мужчина лег на кровать, вы своей киской сели ему на член и начали прыгать, пока Эдрин ласкала грудь мужчины.'
-		     gs 'femorg'
+		     gs'femorg'
 		     'Мужчина закряхтел и кажется готов кончить. Он встал и начал дрочить член.'
 		     end
 		     
-		     if tiprand = 12: 
-		     '<center><img src = "pic/EvedonTA/ktedrinSex7.jpg" ></center>'
+		     if tiprand=12:
+		     '<center><img src="pic/EvedonTA/ktedrinSex7.jpg" ></center>'
 		     'Мужчина лег на кровать, а Эдрин забралась ему на член и начала прыгать. Вы в это время легли рядом и начали ласкать соски мужчины губами и языком.'
 		     end
 		     
-		     act 'Встать вместе Эдрин на колени перед мужиком.': 
+		     act 'Встать вместе Эдрин на колени перед мужиком.':
 			 cla
 			 *clr
-			 facial = facial+1
-			 cumface = cumface+1
-			 '<center><img src = "pic/EvedonTA/ktedrinEnd.jpg" ></center>'
+			 facial=facial+1
+			 cumface=cumface+1
+			 '<center><img src="pic/EvedonTA/ktedrinEnd.jpg" ></center>'
 			 'Вы встали на колени перед мужиком, а он в это время продолжал дрочить член перед вашими лицами. Наконец горячие струи спермы стали бить вам по лицам.'
-			 gs 'cumslut'
+			 gs'cumslut'
 			 'Эдрин хочет вас поцеловать своим набитым спермой ртом.'
-			     act 'Целоваться с Эдрин, обмениваясь спермой': 
+			     act 'Целоваться с Эдрин, обмениваясь спермой':
 			     cla
 			     *clr
-			     cumswap = cumswap+1
-			     cumlip = cumlip+1
-			     '<center><img src = "pic/EvedonTA/ktedrinEnd.jpg" ></center>'
+			     cumswap=cumswap+1
+			     cumlip=cumlip+1
+			     '<center><img src="pic/EvedonTA/ktedrinEnd.jpg" ></center>'
 			     'Вы страстно целуетесь с Эдрин обмениваясь и смакуя терпкую мужскую сперму.'
-			     gs 'cumslut'
-			     act 'Уйти': gt 'teladareW'
+			     gs'cumslut'
+			     act 'Уйти':gt'teladareW'
 			     end
 			 end
 		 end

@@ -7,60 +7,60 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Северная горная дорога</H4></center>'
-'<center><img src = "pic/Evedon/monroad.jpg" ></center>'
+'<center><img src="pic/Evedon/monroad.jpg" ></center>'
 'Дорога вьется в горном лесу, то поднимаясь в горы, то опускаясь в низины.'
 'На столбике грубо намалевано <<roadMonMark>>я верста'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 ''
-if vampireMorf>= 1: 'Зарыться в <a href = "exec: gt ''vampGrave''">землю</a>'
+if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
 
-!'robrand = RAND(0,100)
-if robrand>= 80: 
-     if roratimes<= 0: 
-	 roratimes = 1
+!'robrand=RAND(0,100)
+if robrand>=80:
+     if roratimes<=0:
+	 roratimes=1
 	 '.'
-	 act 'Драться': gt 'before'
+	 act 'Драться':gt'before'
 	 exit
 	 end
 
-	 if roratimes>0: roratimes = roratimes-1
+	 if roratimes>0:roratimes=roratimes-1
 
 end'
 
 
-if roadMonMark = 30: 
-'Возле дороги виднеются <a href = "exec: gt ''monTraMel''">Трактир "Мельоран"</a>. На дорожном указателе написано, что Мондюваль находится на севере.'
+if roadMonMark=30:
+'Возле дороги виднеются <a href="exec: gt''monTraMel''">Трактир "Мельоран"</a>. На дорожном указателе написано, что Мондюваль находится на севере.'
 end
 
-if roadMonMark = 44: 
-'Возле дороги виднеются <a href = "exec: gt ''monShaht''">Шахты Мондюваля</a>. На дорожном указателе написано, что Мондюваль севернее, а шахтерская деревня южнее.'
+if roadMonMark=44:
+'Возле дороги виднеются <a href="exec: gt''monShaht''">Шахты Мондюваля</a>. На дорожном указателе написано, что Мондюваль севернее, а шахтерская деревня южнее.'
 end
-if roadMonMark = 43: 
-'Около дороги вбит столбик на котором написано "Шахты Мондюваля на север". Чуть в стороне от дороги виднеется <a href = "exec: gt ''monDorf''">Шахтерская деревня</a>.'
+if roadMonMark=43:
+'Около дороги вбит столбик на котором написано "Шахты Мондюваля на север". Чуть в стороне от дороги виднеется <a href="exec: gt''monDorf''">Шахтерская деревня</a>.'
 end
 
-!if desertMark>0: 
-	 act 'Идти на север(1 час)': 
+!if desertMark>0:
+	 act 'Идти на север(1 час)':
 	 cla
-	 minut += 60
-	 roadMonMark+= 1
+	 minut=minut+60
+	 roadMonMark+=1
 	 'Вы идете по пустынной дороге.'
-         act 'Передохнуть': 
-             if roadMonMark<45: gt $curloc 
-             if roadMonMark>= 45: gt 'monduval'
+         act 'Передохнуть':
+             if roadMonMark<45:gt $curloc 
+             if roadMonMark>=45:gt 'monduval'
          end
 	 end
 	 
-	 act 'Идти на юг(1 час)': 
+	 act 'Идти на юг(1 час)':
 	 cla
-	 minut += 60
-     roadMonMark- = 1
+	 minut=minut+60
+     roadMonMark-=1
      'Вы идете по пустынной дороге.'
-         act 'Передохнуть': 
-             if roadMonMark<= 0: gt 'mountW'
-             if roadMonMark>0: gt $curloc 
+         act 'Передохнуть':
+             if roadMonMark<=0:gt'mountW'
+             if roadMonMark>0:gt $curloc 
          end
 	 end
 	 

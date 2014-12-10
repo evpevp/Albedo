@@ -1,15 +1,15 @@
 # ввод
-if $usrtxt = 'деньги': 
- money = money + 1000
+if $usrtxt='деньги':
+set money = money + 1000
 clr
-gs 'stat'
+gs'stat'
 cmdclear
 end
 
-if $usrtxt = 'много денег': 
- money = money + 100000
+if $usrtxt='много денег':
+set money = money + 100000
 clr
-gs 'stat'
+gs'stat'
 cmdclear
 end
 --- ввод ---------------------------------

@@ -6,45 +6,45 @@ $metkaBed = $ARGS[0]
 $locBed = $CURLOC
 $metkaP = $ARGS[0]
 $locP = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Гроб</H4></center>'
-'<center><img src = "pic/Evedon/grob.jpg" ></center>'
+'<center><img src="pic/Evedon/grob.jpg" ></center>'
 'Вы лежите в гробу. Безопасное время для вас с 21 до 5'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 
-'<a href = "exec: gt ''bed''">спать</a>.'
-'<a href = "exec: gt ''lokerW''">одежда</a>.'
+'<a href="exec:GT ''bed''">спать</a>.'
+'<a href="exec:GT ''lokerW''">одежда</a>.'
 
 
-if slot = 0: 
+if slot=0:
 *nl
 'Без одежды нельзя вылезти из гроба.'
 end
 
-if slot>0: 
-     if hour>= 21 or hour <6: 
-	 act 'Выйти из гроба': GOTO $locFight, $metkaFight
+if slot>0:
+     if hour>=21 or hour <6:
+	 act 'Выйти из гроба':GOTO $locFight, $metkaFight
 	 else
 	 'Сейчас день и вы погибните, если увидите дневной свет'
 	 end
 end
 
-     act 'Ждать': 
+     act 'Ждать':
      cls
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120: 
-          minut = minut + 15
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120: 
-          minut = minut + waiting
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
          end
-     act 'Посмотреть на часы': gt curloc
+     act 'Посмотреть на часы':gt curloc
      end
 
 

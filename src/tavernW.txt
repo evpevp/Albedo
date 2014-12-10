@@ -8,65 +8,65 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Таверна</H4></center>'
 '<center>Альдемор</center>'
-'<center><img src = "pic/Evedon/tavern.jpg" ></center>'
+'<center><img src="pic/Evedon/tavern.jpg" ></center>'
 'Просторная и уютная таверна с чистенькими столиками, большим жарким камином, вкусными запахами жареного мяса.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-'За стойкой стоит скучает <a href = "exec: gt ''tagirlW''">трактирщица</a>.'
-if hour>= 18 and hour<= 22 and elisQW>0: 'За столом сидит <a href = "exec: gt ''eliscapt1''">капитан стражи Элиз</a>.'
+'За стойкой стоит скучает <a href="exec:GT ''tagirlW''">трактирщица</a>.'
+if hour>=18 and hour<=22 and elisQW>0:'За столом сидит <a href="exec:GT ''eliscapt1''">капитан стражи Элиз</a>.'
 
-act 'Выйти': 
-minut += 5
- gt 'pereulokW'
+act 'Выйти':
+minut=minut+5
+gt'pereulokW'
 end
 
-if roomW> 0: 
+if roomW> 0:
 'Комната снята на <<roomW>> дней'
-	 act 'Идти в свою комнату': 
-	 minut += 5
-	 gt 'roomW'
+	 act 'Идти в свою комнату':
+	 minut=minut+5
+	 gt'roomW'
 	 end
 end
 
 
-if zaertQW = 4 and zaertday<daystart and zeartguyonce2 = 0 and hour>= 20: 
+if zaertQW=4 and zaertday<daystart and zeartguyonce2=0 and hour>=20:
 cla
 *clr
-zeartguyonce2 = 1
-zeartactiv+= 1
+zeartguyonce2=1
+zeartactiv+=1
 'Зайдя в таверну и оглядев зал, вы замечаете ту самую незнакомку. Еда и выпивка мгновенно отходят на второй план, тем более что к блондинке уже пристаёт группа каких-то уродов. Вы сходу вмешиваетесь в их разговор и начинаете на них наезжать, требуя оставить девушку в покое. Обозленные "уроды" предлагают вам выйти и поговорить на улице. Вам ничего не остаётся как согласиться.'
-$nameV = 'Моральный урод'
-lvlv = 110
-strenV = 80
-speedV = 100
-agilV = 100
-vitalV = 90
-intelv = 10
-willv = 70
-program = 10
-healthV = vitalV*10
-mannaV = intelV*10
-wipoV = willV*10
-ShilDefv = 50
-weaponv = RAND(1,2)
-armorDefv = 200
-wepAtkV = 90
-mortalv = RAND(3,7)
-manmob = 1
- act 'Драться': gt 'before'
+$nameV='Моральный урод'
+lvlv=110
+strenV=80
+speedV=100
+agilV=100
+vitalV=90
+intelv=10
+willv=70
+program=10
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
+ShilDefv=50
+weaponv=RAND(1,2)
+armorDefv=200
+wepAtkV=90
+mortalv=RAND(3,7)
+manmob=1
+ act 'Драться':gt'before'
 exit 
 end
 
-if zeartguyonce2 = 1: 
+if zeartguyonce2=1:
 cla
 *clr
-zeartguyonce2 = 2
+zeartguyonce2=2
 'Вернувшись в таверну, вы не обнаруживаете незнакомки в зале.'
-act 'Выйти на улицу': minut += 5 & gt 'pereulokW'
+act 'Выйти на улицу':minut=minut+5&gt'pereulokW'
 end
 --- tavernW ---------------------------------
 

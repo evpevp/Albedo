@@ -1,190 +1,190 @@
 # urtaBAR
-if $ARGS[0] = '0': 
+if $ARGS[0]='0':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-'<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
- minut = minut + 15
+'<center><img src="pic/EvedonNarod/urta.jpg"></center>'
+set minut = minut + 15
 clr
-gs 'stat'
+gs'stat'
 'Вы сели за стол к Урте. И она предложила вам выпить.'
-act 'Отойти от стола': gt 'tabarW'
-     act 'Выпить с Уртой': gt 'urtaBAR','3'
+act 'Отойти от стола':gt'tabarW'
+     act 'Выпить с Уртой':gt'urtaBAR','3'
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
+gs'stat'
 !уже пил с Уртой
 
 end
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
+gs'stat'
 !Урта в стельку
 
 end
 
-if $ARGS[0] = '3': 
+if $ARGS[0]='3':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-alko = alko+10
-manna = manna+20
-wipo = wipo+20
- minut = minut + 15
+alko=alko+10
+manna=manna+20
+wipo=wipo+20
+set minut = minut + 15
 clr
-gs 'stat'
+gs'stat'
 !пить с уртой
-'<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
+'<center><img src="pic/EvedonNarod/urta.jpg"></center>'
 'Вы проглотили ядреное пойло и вам стало немного веселее. Урта тоже выпила и зарумянилась.'
-     if urtaQW = 10: 
-     if penis>0: $urtaText = 'очень понравился'
-     if penis = 0: $urtaText = 'очень понравилась'
+     if urtaQW=10:
+     if penis>0:$urtaText='очень понравился'
+     if penis=0:$urtaText='очень понравилась'
      'Урта почесала голову и сказала вам. Ты извини, что так вышло у нас. Я когда напьюсь совсем дикая становлюсь. А ты мне <<$urtaText>> вот я и не сдержалась. Может повторим у меня в квартире?'
      end
-     if urtaQW<15 and urtaQW>10: 
+     if urtaQW<15 and urtaQW>10:
      'Урта промурлыкала, пожирая вас глазами: "Пойдем ко мне домой сахарок. Повеселимся."'
      end
-     if urtaQW>= 15: 
-     'Урта положила свою мягкую ладошку на вашу руку и нежным голосом сказала: "Малыш, пойдем ко мне домой."'
-         if SUB>0: 
+     if urtaQW>=15:
+     'Урта положила свою мягкую ладошку на вашу руку и нежным голосом сказала:"Малыш, пойдем ко мне домой."'
+         if SUB>0:
          'Или может прямо тут развлечемся?'
-         act 'Прямо тут?': gt 'urtaBAR','5'
+         act 'Прямо тут?':gt'urtaBAR','5'
          end
      end
-     act 'Идти домой к Урте': gt 'urtaBAR','4'
-     act 'Извини. Мне пора. Отойти от стола': gt 'tabarW'
+     act 'Идти домой к Урте':gt'urtaBAR','4'
+     act 'Извини. Мне пора. Отойти от стола':gt'tabarW'
 end
 
-if $ARGS[0] = '4': 
+if $ARGS[0]='4':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
+gs'stat'
 'Урта бросила монету трактирщице и повела вас к себе домой. Идти оказалось недалеко. Оглядев ее комнату вы заметили как у нее грязно и захламлено. Вероятно у нее редко бывают гости, да и она не склонна к уборке.'
 'Не дав вам времени на размышления Урта подошла к вам и обняла вас. "Иди ко мне детка."'
-	 if urtaQW>= 12: 
-		 act 'Встать на колени перед Уртой и достать ее член': gt 'urtasexW','bj'
+	 if urtaQW>=12:
+		 act 'Встать на колени перед Уртой и достать ее член':gt'urtasexW','bj'
 	 end
 	 
-  act 'Ждать, что будет делать Урта': gt 'urtasexW','pass'
+  act 'Ждать, что будет делать Урта':gt'urtasexW','pass'
   
-     if DOM>10 and penis>0: 
-     act 'Поставить ее раком': gt 'urtasexW','4'
+     if DOM>10 and penis>0:
+     act 'Поставить ее раком':gt'urtasexW','4'
      end
 end
 
-if $ARGS[0] = '5': 
+if $ARGS[0]='5':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
-'<center><img src = "pic/EvedonNarod/urta.jpg"></center>'
+gs'stat'
+'<center><img src="pic/EvedonNarod/urta.jpg"></center>'
 'Ну да, залезь потихонечку под стол и отсоси у меня.'
-     act 'Залезть под стол': gt 'urtaBAR','6'
-     act 'Не, пойдем лучше к тебе домой': gt 'urtaBAR','4'
-     act 'Да ну тебя нафиг, я ухожу': gt 'tabarW'
+     act 'Залезть под стол':gt'urtaBAR','6'
+     act 'Не, пойдем лучше к тебе домой':gt'urtaBAR','4'
+     act 'Да ну тебя нафиг, я ухожу':gt'tabarW'
 end
 
-if $ARGS[0] = '6': 
+if $ARGS[0]='6':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
- under_table = under_table+1
- '<center><img src = "pic/EvedonTA/desk.jpg" ></center>'
+gs'stat'
+ under_table=under_table+1
+ '<center><img src="pic/EvedonTA/desk.jpg" ></center>'
  'Вы осмотрели трактир, но на вас вроде никто не смотрит. Затем медленно и плавно спустились под стол. Там уже вас ожидал стоящий колом член Урты.'
  'Вы распахнули рот и начали сосать ее член, стараясь поменьше чавкать, чтобы в трактире вас никто не слышал.'
- swallow = swallow+1
- cumlip = cumlip+1
- face = face+1
- hand = hand+1
- brist = brist+1
- tit = tit+1
+ swallow=swallow+1
+ cumlip=cumlip+1
+ face=face+1
+ hand=hand+1
+ brist=brist+1
+ tit=tit+1
  'Урта тихонечко застонала и целый поток спермы ударил вам в горло, вы давились но глотали ее сладковато терпкую сперму.'
- gs 'cumslut'
-	 act 'Вылезти из-под стола': gt 'urtaBAR','7'
+ gs'cumslut'
+	 act 'Вылезти из-под стола':gt'urtaBAR','7'
 
 end
 
-if $ARGS[0] = '7': 
+if $ARGS[0]='7':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
- utrand = RAND(0,100)
-	 if under_table>utrand: 
+gs'stat'
+ utrand=RAND(0,100)
+	 if under_table>utrand:
 	 !спалили
-	 SUB = SUB+1
-	 whore = whore+1
+	 SUB=SUB+1
+	 whore=whore+1
 	 'На вас косятся посетители трактира. Кажется все поняли, чем вы тут занимались.'
-	 act 'Отойти от стола': gt 'tabarW'
+	 act 'Отойти от стола':gt'tabarW'
 	 end
-	 if under_table<= utrand: 
+	 if under_table<=utrand:
 	 'Вы спокойно вылезли из-под стола и кажется никто не заметил, чем вы там занимались.'
-	 act 'Отойти от стола': gt 'tabarW'
+	 act 'Отойти от стола':gt'tabarW'
 	 end
 
 end
 
-if $ARGS[0] = '8': 
+if $ARGS[0]='8':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
+gs'stat'
 
 
 end
 
-if $ARGS[0] = '9': 
+if $ARGS[0]='9':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
+gs'stat'
 
 
 end
 
-if $ARGS[0] = '10': 
+if $ARGS[0]='10':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
- minut = minut + 15
+set minut = minut + 15
 clr
-gs 'stat'
+gs'stat'
 
 
 end

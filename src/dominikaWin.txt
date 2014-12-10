@@ -1,27 +1,27 @@
 # dominikaWin
-monster = 0
+monster=0
 'Доминика упала на заплеванный пол трактира и стала молить вас о пощаде.'
 '(Доминика) - Нет <<$name>>, умоляю, не убивай меня.'
 
 
 	 act 'Добить ее': 
 	 cla
-	 missionData = 0
-	 missionA = 1
-	 kredit = kredit+1000
-	 dominicaDed = 1
+	 missionData=0
+	 missionA=1
+	 kredit=kredit+1000
+	 dominicaDed=1
 	 'Вы, невзирая на мольбы, добили Доминику.'
-	 act 'Уйти': GOTO $locP, $metkaP
+	 act 'Уйти':GOTO $locP, $metkaP
 	 end
 	 
 	 
 	 act 'Ладно, я не стану тебя убивать. Уходи.': 
 	 cla
-	 missionData = 0
-	 OrdenRang = -1
-	 dominicaDed = 200
+	 missionData=0
+	 OrdenRang=-1
+	 dominicaDed=200
 	 'Доминика с трудом встала и вышла из трактира.'
-	 act 'Уйти': GOTO $locP, $metkaP
+	 act 'Уйти':GOTO $locP, $metkaP
 	 end
 --- dominikaWin ---------------------------------
 

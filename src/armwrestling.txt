@@ -1,318 +1,318 @@
 # armwrestling
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
 minut = minut + 1
 cla
 clr
-gs 'stat'
-strenARM = stren
-vitalARM = vital
-staminaARM = wipo
+gs'stat'
+strenARM=stren
+vitalARM=vital
+staminaARM=wipo
 'Вы записались в участники соревнований.'
 'У вас <<armwin>> побед и <<armloss>> поражений'
-if armRazrad = 0: $armRazrad = 'У вас нет разряда по армрестлингу' & 'У вас нет разряда по армрестлингу'
-if armRazrad = 1: $armRazrad = 'У вас 3й разряд по армрестлингу' & 'У вас 3й разряд по армрестлингу'
-if armRazrad = 2: $armRazrad = 'У вас 2й разряд по армрестлингу' & 'У вас 2й разряд по армрестлингу'
-if armRazrad = 3: $armRazrad = 'У вас 1й разряд по армрестлингу' & 'У вас 1й разряд по армрестлингу'
-if armRazrad = 4: $armRazrad = 'Вы КМС по армрестлингу' & 'Вы КМС по армрестлингу'
-if armRazrad = 5: $armRazrad = 'Вы мастер спорта по армрестлингу' & 'Вы мастер спорта по армрестлингу'
-if armRazrad = 6: $armRazrad = 'Вы мастер спорта международного класса по армрестлингу' & 'Вы мастер спорта международного класса по армрестлингу'
+if armRazrad=0:$armRazrad='У вас нет разряда по армрестлингу'&'У вас нет разряда по армрестлингу'
+if armRazrad=1:$armRazrad='У вас 3й разряд по армрестлингу'&'У вас 3й разряд по армрестлингу'
+if armRazrad=2:$armRazrad='У вас 2й разряд по армрестлингу'&'У вас 2й разряд по армрестлингу'
+if armRazrad=3:$armRazrad='У вас 1й разряд по армрестлингу'&'У вас 1й разряд по армрестлингу'
+if armRazrad=4:$armRazrad='Вы КМС по армрестлингу'&'Вы КМС по армрестлингу'
+if armRazrad=5:$armRazrad='Вы мастер спорта по армрестлингу'&'Вы мастер спорта по армрестлингу'
+if armRazrad=6:$armRazrad='Вы мастер спорта международного класса по армрестлингу'&'Вы мастер спорта международного класса по армрестлингу'
 
-     act 'Уйти.': 
+     act 'Уйти.':
      GOTO 'kachalka'
      end
      
-     if armwresLewel = 0: 
-		 act 'Соревноваться.': 
-		 armPoint = 3
-		 armEnemy = 3
-		 newFight = 1
-		 strenV = RAND(100,200)
-		 vitalV = RAND(100,200)
-		 wipoV = RAND(500,1000)
-		 strenV1 = RAND(150,250)
-		 vitalV1 = RAND(150,250)
-		 wipoV1 = RAND(500,1000)
-		 strenV2 = RAND(200,300)
-		 vitalV2 = RAND(200,300)
-		 wipoV2 = RAND(500,1000)
-		 gt 'armwrestling','0'
+     if armwresLewel=0:
+		 act 'Соревноваться.':
+		 armPoint=3
+		 armEnemy=3
+		 newFight=1
+		 strenV=RAND(100,200)
+		 vitalV=RAND(100,200)
+		 wipoV=RAND(500,1000)
+		 strenV1=RAND(150,250)
+		 vitalV1=RAND(150,250)
+		 wipoV1=RAND(500,1000)
+		 strenV2=RAND(200,300)
+		 vitalV2=RAND(200,300)
+		 wipoV2=RAND(500,1000)
+		 gt'armwrestling','0'
 		 end
      end
      
-     if armwresLewel = 1: 
-		 act 'Соревноваться.': 
-		 armPoint = 3
-		 armEnemy = 3
-		 newFight = 1
-		 strenV = RAND(250,300)
-		 vitalV = RAND(250,300)
-		 wipoV = RAND(500,1000)
-		 strenV1 = RAND(300,350)
-		 vitalV1 = RAND(300,350)
-		 wipoV1 = RAND(500,1000)
-		 strenV2 = RAND(350,400)
-		 vitalV2 = RAND(350,400)
-		 wipoV2 = RAND(500,1000)
-		 gt 'armwrestling','0'
+     if armwresLewel=1:
+		 act 'Соревноваться.':
+		 armPoint=3
+		 armEnemy=3
+		 newFight=1
+		 strenV=RAND(250,300)
+		 vitalV=RAND(250,300)
+		 wipoV=RAND(500,1000)
+		 strenV1=RAND(300,350)
+		 vitalV1=RAND(300,350)
+		 wipoV1=RAND(500,1000)
+		 strenV2=RAND(350,400)
+		 vitalV2=RAND(350,400)
+		 wipoV2=RAND(500,1000)
+		 gt'armwrestling','0'
 		 end
      end
      
-     if armwresLewel = 2: 
-		 act 'Соревноваться.': 
-		 armPoint = 3
-		 armEnemy = 3
-		 newFight = 1
-		 strenV = RAND(400,450)
-		 vitalV = RAND(400,450)
-		 wipoV = RAND(500,1000)
-		 strenV1 = RAND(450,500)
-		 vitalV1 = RAND(450,500)
-		 wipoV1 = RAND(500,1000)
-		 strenV2 = RAND(500,550)
-		 vitalV2 = RAND(500,550)
-		 wipoV2 = RAND(500,1000)
-		 gt 'armwrestling','0'
+     if armwresLewel=2:
+		 act 'Соревноваться.':
+		 armPoint=3
+		 armEnemy=3
+		 newFight=1
+		 strenV=RAND(400,450)
+		 vitalV=RAND(400,450)
+		 wipoV=RAND(500,1000)
+		 strenV1=RAND(450,500)
+		 vitalV1=RAND(450,500)
+		 wipoV1=RAND(500,1000)
+		 strenV2=RAND(500,550)
+		 vitalV2=RAND(500,550)
+		 wipoV2=RAND(500,1000)
+		 gt'armwrestling','0'
 		 end
      end
      
-     if armwresLewel = 3: 
-		 act 'Соревноваться.': 
-		 armPoint = 3
-		 armEnemy = 3
-		 newFight = 1
-		 strenV = RAND(550,600)
-		 vitalV = RAND(550,600)
-		 wipoV = RAND(500,1000)
-		 strenV1 = RAND(600,650)
-		 vitalV1 = RAND(600,650)
-		 wipoV1 = RAND(500,1000)
-		 strenV2 = RAND(650,700)
-		 vitalV2 = RAND(650,700)
-		 wipoV2 = RAND(500,1000)
-		 gt 'armwrestling','0'
+     if armwresLewel=3:
+		 act 'Соревноваться.':
+		 armPoint=3
+		 armEnemy=3
+		 newFight=1
+		 strenV=RAND(550,600)
+		 vitalV=RAND(550,600)
+		 wipoV=RAND(500,1000)
+		 strenV1=RAND(600,650)
+		 vitalV1=RAND(600,650)
+		 wipoV1=RAND(500,1000)
+		 strenV2=RAND(650,700)
+		 vitalV2=RAND(650,700)
+		 wipoV2=RAND(500,1000)
+		 gt'armwrestling','0'
 		 end
      end
      
-     if armwresLewel = 4: 
-		 act 'Соревноваться.': 
-		 armPoint = 3
-		 armEnemy = 3
-		 newFight = 1
-		 strenV = RAND(700,750)
-		 vitalV = RAND(700,750)
-		 wipoV = RAND(500,1000)
-		 strenV1 = RAND(750,800)
-		 vitalV1 = RAND(750,800)
-		 wipoV1 = RAND(500,1000)
-		 strenV2 = RAND(800,900)
-		 vitalV2 = RAND(800,900)
-		 wipoV2 = RAND(500,1000)
-		 gt 'armwrestling','0'
+     if armwresLewel=4:
+		 act 'Соревноваться.':
+		 armPoint=3
+		 armEnemy=3
+		 newFight=1
+		 strenV=RAND(700,750)
+		 vitalV=RAND(700,750)
+		 wipoV=RAND(500,1000)
+		 strenV1=RAND(750,800)
+		 vitalV1=RAND(750,800)
+		 wipoV1=RAND(500,1000)
+		 strenV2=RAND(800,900)
+		 vitalV2=RAND(800,900)
+		 wipoV2=RAND(500,1000)
+		 gt'armwrestling','0'
 		 end
      end
      
-     if armwresLewel = 5: 
-		 act 'Соревноваться.': 
-		 armPoint = 3
-		 armEnemy = 3
-		 newFight = 1
-		 strenV = RAND(900,1000)
-		 vitalV = RAND(900,1000)
-		 wipoV = RAND(500,1000)
-		 strenV1 = RAND(1000,1100)
-		 vitalV1 = RAND(1000,1100)
-		 wipoV1 = RAND(500,1000)
-		 strenV2 = RAND(1100,1200)
-		 vitalV2 = RAND(1100,1200)
-		 wipoV2 = RAND(500,1000)
-		 gt 'armwrestling','0'
+     if armwresLewel=5:
+		 act 'Соревноваться.':
+		 armPoint=3
+		 armEnemy=3
+		 newFight=1
+		 strenV=RAND(900,1000)
+		 vitalV=RAND(900,1000)
+		 wipoV=RAND(500,1000)
+		 strenV1=RAND(1000,1100)
+		 vitalV1=RAND(1000,1100)
+		 wipoV1=RAND(500,1000)
+		 strenV2=RAND(1100,1200)
+		 vitalV2=RAND(1100,1200)
+		 wipoV2=RAND(500,1000)
+		 gt'armwrestling','0'
 		 end
      end
      
-     if armwresLewel = 5: 
-		 act 'Соревноваться.': 
-		 armPoint = 3
-		 armEnemy = 3
-		 newFight = 1
-		 strenV = RAND(1200,1400)
-		 vitalV = RAND(1200,1400)
-		 wipoV = RAND(500,1000)
-		 strenV1 = RAND(1400,1600)
-		 vitalV1 = RAND(1400,1600)
-		 wipoV1 = RAND(500,1000)
-		 strenV2 = RAND(1600,2000)
-		 vitalV2 = RAND(1600,2000)
-		 wipoV2 = RAND(500,1000)
-		 gt 'armwrestling','0'
+     if armwresLewel=5:
+		 act 'Соревноваться.':
+		 armPoint=3
+		 armEnemy=3
+		 newFight=1
+		 strenV=RAND(1200,1400)
+		 vitalV=RAND(1200,1400)
+		 wipoV=RAND(500,1000)
+		 strenV1=RAND(1400,1600)
+		 vitalV1=RAND(1400,1600)
+		 wipoV1=RAND(500,1000)
+		 strenV2=RAND(1600,2000)
+		 vitalV2=RAND(1600,2000)
+		 wipoV2=RAND(500,1000)
+		 gt'armwrestling','0'
 		 end
      end
 
 end
 
-if $ARGS[0] = '0': 
+if $ARGS[0]='0':
 $metka = $ARGS[0]
 $loc = $CURLOC
 minut = minut + 1
 cla
 clr
-gs 'stat'
-armWres = 1
-     !if armwresLewel = 0: 
-         if armEnemy = 3: 
-         strenEn = strenV
-         vitalEn = vitalV
-         staminaEn = wipoV
+gs'stat'
+armWres=1
+     !if armwresLewel=0:
+         if armEnemy=3:
+         strenEn=strenV
+         vitalEn=vitalV
+         staminaEn=wipoV
          end
-         if armEnemy = 2: 
-         strenEn = strenV1
-         vitalEn = vitalV1
-         staminaEn = wipoV1
+         if armEnemy=2:
+         strenEn=strenV1
+         vitalEn=vitalV1
+         staminaEn=wipoV1
          end
-         if armEnemy = 1: 
-         strenEn = strenV2
-         vitalEn = vitalV2
-         staminaEn = wipoV2
+         if armEnemy=1:
+         strenEn=strenV2
+         vitalEn=vitalV2
+         staminaEn=wipoV2
          end
      
-     gt 'armwrestling','1'
+     gt'armwrestling','1'
      !end
 
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 minut = minut + 1
 cla
 clr
-gs 'stat'
+gs'stat'
 'Схватка длится <<armWres>> секунд'
-if armPoint = 0: armloss+= 1 & newFight = 0 & armWres = 0 & '<center><img src = "pic\kachalka\07.jpg" ></center>''Поражение'
-if armPoint = 1: '<center><img src = "pic\kachalka\01.jpg" ></center>''Противник вот вот вас положит'
-if armPoint = 2: '<center><img src = "pic\kachalka\02.jpg" ></center>''Противник вас продавливает'
-if armPoint = 3: '<center><img src = "pic\kachalka\03.jpg" ></center>''Ваши руки по середине'
-if armPoint = 4: '<center><img src = "pic\kachalka\04.jpg" ></center>''Вы продавливаете противника'
-if armPoint = 5: '<center><img src = "pic\kachalka\05.jpg" ></center>''Вы вот вот положите противника'
-if armPoint = 6: armEnemy- = 1 & armwin+= 1 & newFight = 1 & armWres = 0 & '<center><img src = "pic\kachalka\06.jpg" ></center>''Победа'
+if armPoint=0:armloss+=1&newFight=0&armWres=0&'<center><img src="pic\kachalka\07.jpg" ></center>''Поражение'
+if armPoint=1:'<center><img src="pic\kachalka\01.jpg" ></center>''Противник вот вот вас положит'
+if armPoint=2:'<center><img src="pic\kachalka\02.jpg" ></center>''Противник вас продавливает'
+if armPoint=3:'<center><img src="pic\kachalka\03.jpg" ></center>''Ваши руки по середине'
+if armPoint=4:'<center><img src="pic\kachalka\04.jpg" ></center>''Вы продавливаете противника'
+if armPoint=5:'<center><img src="pic\kachalka\05.jpg" ></center>''Вы вот вот положите противника'
+if armPoint=6:armEnemy-=1&armwin+=1&newFight=1&armWres=0&'<center><img src="pic\kachalka\06.jpg" ></center>''Победа'
 
-strenARMK = RAND(strenARM-(strenARM*20/100),strenARM+(strenARM*20/100))
-strenEnK = RAND(strtenEn-(strenEn*20/100),strenEn+(strenEn*20/100))
-vitalARMK = RAND(vitalARM-(vitalARM*20/100),vitalARM+(vitalARM*20/100))
-vitalEnK = RAND(vitalEn-(vitalEn*20/100),vitalEn+(vitalEn*20/100))
-     if newFight = 0: 
-		 act 'Уйти.': 
+strenARMK=RAND(strenARM-(strenARM*20/100),strenARM+(strenARM*20/100))
+strenEnK=RAND(strtenEn-(strenEn*20/100),strenEn+(strenEn*20/100))
+vitalARMK=RAND(vitalARM-(vitalARM*20/100),vitalARM+(vitalARM*20/100))
+vitalEnK=RAND(vitalEn-(vitalEn*20/100),vitalEn+(vitalEn*20/100))
+     if newFight=0:
+		 act 'Уйти.':
 		 GOTO 'kachalka'
 		 end
      end
      
-     if newFight = 1 and armEnemy>0 and armWres = 0: 
-         act 'Новая схватка.': 
-         armPoint = 3
-         gt 'armwrestling','0'
+     if newFight=1 and armEnemy>0 and armWres=0:
+         act 'Новая схватка.':
+         armPoint=3
+         gt'armwrestling','0'
          end
      end
      
-     if newFight = 1 and armEnemy<= 0: 
-     act 'Новая схватка.': gt 'armwrestling','win'
+     if newFight=1 and armEnemy<=0:
+     act 'Новая схватка.':gt'armwrestling','win'
      end
      
-     if armPoint<3 and armWres>= 1: 
-     	 act 'Сопротивляться.': 
-		 armWres+= 1
-		 staminaARM- = 50
-		 staminaEn- = 50
-		 	 if staminaARM>0 and staminaEn>0: 
-				 if vitalARMK>strenEnK: 
-				 armPoint+= 1
+     if armPoint<3 and armWres>=1:
+     	 act 'Сопротивляться.':
+		 armWres+=1
+		 staminaARM-=50
+		 staminaEn-=50
+		 	 if staminaARM>0 and staminaEn>0:
+				 if vitalARMK>strenEnK:
+				 armPoint+=1
 				 end
-				 if vitalARMK<strenEnK: 
-				 armPoint- = 1
+				 if vitalARMK<strenEnK:
+				 armPoint-=1
 				 end
-		     elseif staminaARM<= 0: 
-		     armPoint- = 1
+		     elseif staminaARM<=0:
+		     armPoint-=1
 		     else
-		     armPoint+= 1
+		     armPoint+=1
 		     end
-		 gt 'armwrestling','1'
+		 gt'armwrestling','1'
 		 end
      end
      
-     if armPoint>3 and armWres>= 1: 
-     	 act 'Давить.': 
-     	 armWres+= 1
-		 staminaARM- = 50
-		 staminaEn- = 50
-		     if staminaARM>0 and staminaEn>0: 
-				 if strenARMK>vitalEnK: 
-				 armPoint+= 1
+     if armPoint>3 and armWres>=1:
+     	 act 'Давить.':
+     	 armWres+=1
+		 staminaARM-=50
+		 staminaEn-=50
+		     if staminaARM>0 and staminaEn>0:
+				 if strenARMK>vitalEnK:
+				 armPoint+=1
 				 end
-				 if strenARMK<vitalEnK: 
-				 armPoint- = 1
+				 if strenARMK<vitalEnK:
+				 armPoint-=1
 				 end
-		     elseif staminaARM<= 0: 
-		     armPoint- = 1
+		     elseif staminaARM<=0:
+		     armPoint-=1
 		     else
-		     armPoint+= 1
+		     armPoint+=1
 		     end
-		 gt 'armwrestling','1'
+		 gt'armwrestling','1'
 		 end
      end
      
-     if armPoint = 3 and armWres>= 1: 
-		 act 'Бороться.': 
-     	 armWres+= 1
-		 staminaARM- = 50
-		 staminaEn- = 50
-		     if staminaARM>0 and staminaEn>0: 
-				 if strenARMK>strenEnK: 
-				 armPoint+= 1
+     if armPoint=3 and armWres>=1:
+		 act 'Бороться.':
+     	 armWres+=1
+		 staminaARM-=50
+		 staminaEn-=50
+		     if staminaARM>0 and staminaEn>0:
+				 if strenARMK>strenEnK:
+				 armPoint+=1
 				 end
-				 if strenARMK<strenEnK: 
-				 armPoint- = 1
+				 if strenARMK<strenEnK:
+				 armPoint-=1
 				 end
-		     elseif staminaARM<= 0: 
-		     armPoint- = 1
+		     elseif staminaARM<=0:
+		     armPoint-=1
 		     else
-		     armPoint+= 1
+		     armPoint+=1
 		     end
-		 gt 'armwrestling','1'
+		 gt'armwrestling','1'
 		 end
      end
 
 end
 
-if $ARGS[0] = 'win': 
+if $ARGS[0]='win':
 $metka = $ARGS[0]
 $loc = $CURLOC
 minut = minut + 1
 cla
 clr
-gs 'stat'
-stren = stren+RAND(3,5)
-vital = vital+RAND(3,5)
-newFight = 0
-armWres = 0
-sorevArmWin+= 1
-if armRazrad = 5 and armwin>= 100: armRazrad = 6 & 'Вам присвоили звание Мастера Спорта международного класса'
-if armRazrad = 4 and armwin>= 55: armRazrad = 5 & 'Вам присвоили звание Мастера Спорта'
-if armRazrad = 3 and armwin>= 25: armRazrad = 4 & 'Вам присвоили звание Кандидата в Мастера Спорта'
-if armRazrad = 2 and armwin>= 15: armRazrad = 3 & 'Вам присвоили 1й разряд'
-if armRazrad = 1 and armwin>= 10: armRazrad = 2 & 'Вам присвоили 2й разряд'
-if armRazrad = 0 and armwin>= 5: armRazrad = 1 & 'Вам присвоили 3й разряд'
+gs'stat'
+stren=stren+RAND(3,5)
+vital=vital+RAND(3,5)
+newFight=0
+armWres=0
+sorevArmWin+=1
+if armRazrad=5 and armwin>=100:armRazrad=6&'Вам присвоили звание Мастера Спорта международного класса'
+if armRazrad=4 and armwin>=55:armRazrad=5&'Вам присвоили звание Мастера Спорта'
+if armRazrad=3 and armwin>=25:armRazrad=4&'Вам присвоили звание Кандидата в Мастера Спорта'
+if armRazrad=2 and armwin>=15:armRazrad=3&'Вам присвоили 1й разряд'
+if armRazrad=1 and armwin>=10:armRazrad=2&'Вам присвоили 2й разряд'
+if armRazrad=0 and armwin>=5:armRazrad=1&'Вам присвоили 3й разряд'
 
-if armRazrad = 0: $armRazrad = 'У вас нет разряда по армрестлингу'
-if armRazrad = 1: $armRazrad = 'У вас 3й разряд по армрестлингу'
-if armRazrad = 2: $armRazrad = 'У вас 2й разряд по армрестлингу'
-if armRazrad = 3: $armRazrad = 'У вас 1й разряд по армрестлингу'
-if armRazrad = 4: $armRazrad = 'Вы КМС по армрестлингу'
-if armRazrad = 5: $armRazrad = 'Вы мастер спорта по армрестлингу'
-if armRazrad = 6: $armRazrad = 'Вы мастер спорта международного класса по армрестлингу'
+if armRazrad=0:$armRazrad='У вас нет разряда по армрестлингу'
+if armRazrad=1:$armRazrad='У вас 3й разряд по армрестлингу'
+if armRazrad=2:$armRazrad='У вас 2й разряд по армрестлингу'
+if armRazrad=3:$armRazrad='У вас 1й разряд по армрестлингу'
+if armRazrad=4:$armRazrad='Вы КМС по армрестлингу'
+if armRazrad=5:$armRazrad='Вы мастер спорта по армрестлингу'
+if armRazrad=6:$armRazrad='Вы мастер спорта международного класса по армрестлингу'
 
 
 'Вам вручили почетную грамоту за победу на соревнованиях.'
-	 act 'Уйти.': 
+	 act 'Уйти.':
 	 GOTO 'kachalka'
 	 end
 

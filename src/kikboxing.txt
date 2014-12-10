@@ -2,188 +2,188 @@
 !ОСНОВНОЙ ЭКРАН КИКБОКСИНГА
 !ОСНОВНОЙ ЭКРАН БОКСА
 !НАЧАЛО БОЯ
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 cla
 *clr
 $metka = $ARGS[0]
 $loc = $CURLOC
-gs 'pokaz'
+gs'pokaz'
 
-if stamina <= 0: 
-'<font color = red>Вы так устали, что больше не в состоянии продолжать бой.</font>'
-xgt 'BattleEnder','loss'
+if stamina <= 0:
+'<font color=red>Вы так устали, что больше не в состоянии продолжать бой.</font>'
+xgt'BattleEnder','loss'
 exit
 end
-if chin <= 0: 
-'<font color = red>Пол ушел из под ног и больно ударил вас по лицу, вы не в состоянии продолжать бой.</font>'
-xgt 'BattleEnder','loss'
+if chin <= 0:
+'<font color=red>Пол ушел из под ног и больно ударил вас по лицу, вы не в состоянии продолжать бой.</font>'
+xgt'BattleEnder','loss'
 exit
 end
-if staminaV <= 0: 
-'<font color = green>Противник не может продолжать бой.</font>'
-     if FightTip = 0: 
+if staminaV <= 0:
+'<font color=green>Противник не может продолжать бой.</font>'
+     if FightTip = 0:
      !
      end
-     if FightTip = 1: 
-         if amature = 0: BOXKO = BOXKO + 1
-         if amature = 1: BOXKOp = BOXKOp + 1
+     if FightTip = 1:
+         if amature = 0:set BOXKO = BOXKO + 1
+         if amature = 1:set BOXKOp = BOXKOp + 1
      end
-     if FightTip = 2: 
-         if amature = 0: KIKKO = KIKKO + 1
-         if amature = 1: KIKKOp = KIKKOp + 1
+     if FightTip = 2:
+         if amature = 0:set KIKKO = KIKKO + 1
+         if amature = 1:set KIKKOp = KIKKOp + 1
      end
-     if FightTip = 3: 
+     if FightTip = 3:
      !
      end
-     if FightTip = 4: 
-      MMAKO = MMAKO + 1
+     if FightTip = 4:
+     set MMAKO = MMAKO + 1
      end
-xgt 'BattleEnder','win'
+xgt'BattleEnder','win'
 exit
 end
-if chinV <= 0: 
-'<font color = green>Противник не может продолжать бой.</font>'
-     if FightTip = 0: 
+if chinV <= 0:
+'<font color=green>Противник не может продолжать бой.</font>'
+     if FightTip = 0:
      !
      end
-     if FightTip = 1: 
-         if amature = 0: BOXKO = BOXKO + 1
-         if amature = 1: BOXKOp = BOXKOp + 1
+     if FightTip = 1:
+         if amature = 0:set BOXKO = BOXKO + 1
+         if amature = 1:set BOXKOp = BOXKOp + 1
      end
-     if FightTip = 2: 
-         if amature = 0: KIKKO = KIKKO + 1
-         if amature = 1: KIKKOp = KIKKOp + 1
+     if FightTip = 2:
+         if amature = 0:set KIKKO = KIKKO + 1
+         if amature = 1:set KIKKOp = KIKKOp + 1
      end
-     if FightTip = 3: 
+     if FightTip = 3:
      !
      end
-     if FightTip = 4: 
-      MMAKO = MMAKO + 1
+     if FightTip = 4:
+     set MMAKO = MMAKO + 1
      end
-xgt 'BattleEnder','win'
+xgt'BattleEnder','win'
 exit
 end
 
 
 
-'Раунд <<round>>. Время <<minu>>: <<second>>'
-if amature = 0: 'Ваши очки <<point>>'
-if amature = 0: 'Очки противницы <<pointV>>'
-if amature = 1: 'Ваши очки <<pointProf>> : <<pointProfV>>'
-'<B>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = <=/B>'
+'Раунд <<round>>. Время <<minu>>:<<second>>'
+if amature = 0:'Ваши очки <<point>>'
+if amature = 0:'Очки противницы <<pointV>>'
+if amature = 1:'Ваши очки <<pointProf>> : <<pointProfV>>'
+'<B>==========================================================</B>'
 '<<$stamV>>'
 '<<$stunV>>'
 '<<$cutV>>'
-'<B>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = <=/B>'
+'<B>==========================================================</B>'
 '<<$stam>>'
 '<<$stun>>'
 '<<$cut>>'
-'<B>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = <=/B>'
-gs 'init'
-     if hod = 0: 
-		 act 'Джеб': 
-		 '<font color = green>Вы наносите быстрый джеб с шагом вперед.</font>'
-		 gs 'jab','start'
-		   xgt 'kikboxing','sta' 
+'<B>==========================================================</B>'
+gs'init'
+     if hod = 0:
+		 act 'Джеб':
+		 '<font color=green>Вы наносите быстрый джеб с шагом вперед.</font>'
+		 gs'jab','start'
+		   xgt'kikboxing','sta' 
 		 end
 		 
-		 act 'Силовой удар в голову': 
-		 '<font color = green>Вы наносите мощный удар рукой в голову.</font>'
-		 gs 'punch','start'
-		   xgt 'kikboxing','sta' 
+		 act 'Силовой удар в голову':
+		 '<font color=green>Вы наносите мощный удар рукой в голову.</font>'
+		 gs'punch','start'
+		   xgt'kikboxing','sta' 
 		 end
 		 
-		 act 'Силовой удар по корпусу': 
-		 '<font color = green>Вы наносите мощный удар рукой по корпусу.</font>'
-		 gs 'punch1','start'
-		   xgt 'kikboxing','sta' 
+		 act 'Силовой удар по корпусу':
+		 '<font color=green>Вы наносите мощный удар рукой по корпусу.</font>'
+		 gs'punch1','start'
+		   xgt'kikboxing','sta' 
 		 end
 		 
-		 act 'Удар ногой в голову': 
-		 '<font color = green>Вы наносите мощный пинок в голову.</font>'
-		 gs 'kik','start'
-		   xgt 'kikboxing','sta' 
+		 act 'Удар ногой в голову':
+		 '<font color=green>Вы наносите мощный пинок в голову.</font>'
+		 gs'kik','start'
+		   xgt'kikboxing','sta' 
 		 end
 		 
-		 act 'Удар ногой по корпусу': 
-		 '<font color = green>Вы наносите мощный пинок по корпусу.</font>'
-		 gs 'kik1','start'
-		   xgt 'kikboxing','sta' 
+		 act 'Удар ногой по корпусу':
+		 '<font color=green>Вы наносите мощный пинок по корпусу.</font>'
+		 gs'kik1','start'
+		   xgt'kikboxing','sta' 
 		 end
 		 
-		 act 'Передвигаться по рингу без ударов': 
-		 '<font color = green>Вы передвигаетесь по рингу, пытаясь немного отдохнуть</font>'
-             if stamina+10 <= staminaMAX: stamina = stamina + 15
+		 act 'Передвигаться по рингу без ударов':
+		 '<font color=green>Вы передвигаетесь по рингу, пытаясь немного отдохнуть</font>'
+             if stamina+10 <= staminaMAX:set stamina = stamina + 15
          staminaV = staminaV + 5
-		   xgt 'kikboxing','sta' 
+		   xgt'kikboxing','sta' 
 		 end
      end
-     if hod = 1: 
-     gs 'enemykikBoxing','start'
+     if hod = 1:
+     gs'enemykikBoxing','start'
      end
 end
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!ИТОГИ ОБМЕНА УДАРАМИ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-if $ARGS[0] = 'sta': 
+if $ARGS[0]='sta':
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
- iniOnce = 0
-gs 'chiner'
+set iniOnce = 0
+gs'chiner'
 !'<<hodtime>> : <<hodtimeV>>'
 !'<<point>> - <<pointV>>'
-     if endround = 0: 
-		 act 'Далее': 
-		   gt 'kikboxing','start' 
+     if endround = 0:
+		 act 'Далее':
+		   gt'kikboxing','start' 
 		 end
      end
-     if endround = 1: 
-      round = round + 1
-      minu = 0
-      second = 0
-      endround = 0
-      stamina = stamina + 50
-      staminaV = staminaV + 50
-      chin = chinMax
-      chinV = chinMAXV 
-         if point > pointV and amature = 1 and profOnce = 0: profOnce = 1 & pointProf = pointProf + 10 & pointProfV = pointProfV + 9 & point = 0 & pointV = 0
-         if point < pointV and amature = 1 and profOnce = 0: profOnce = 1 & pointProf = pointProf + 9 & pointProfV = pointProfV + 10 & point = 0 & pointV = 0
-         if point = pointV and amature = 1 and profOnce = 0: profOnce = 1 & pointProf = pointProf + 10 & pointProfV = pointProfV + 10 & point = 0 & pointV = 0
+     if endround = 1:
+     set round = round + 1
+     set minu = 0
+     set second = 0
+     set endround = 0
+     set stamina = stamina + 50
+     set staminaV = staminaV + 50
+     set chin = chinMax
+     set chinV = chinMAXV 
+         if point > pointV and amature = 1 and profOnce = 0:set profOnce = 1&set pointProf = pointProf + 10&set pointProfV = pointProfV + 9&set point = 0&set pointV = 0
+         if point < pointV and amature = 1 and profOnce = 0:set profOnce = 1&set pointProf = pointProf + 9&set pointProfV = pointProfV + 10&set point = 0&set pointV = 0
+         if point = pointV and amature = 1 and profOnce = 0:set profOnce = 1&set pointProf = pointProf + 10&set pointProfV = pointProfV + 10&set point = 0&set pointV = 0
      'ГОНГ'
-      profOnce = 0
+     set profOnce = 0
      'Вы идете в свой угол и отдыхаете.'
-         if round <= formula: 
+         if round <= formula:
          'Звучит гонг означающий новый раунд.'
-         	 act 'В ринг': 
-			   gt 'kikboxing','start' 
+         	 act 'В ринг':
+			   gt'kikboxing','start' 
 			 end
          end
-         if round > formula: 
+         if round > formula:
          'Вы выходите на середину ринга для объявления победителя.'
-             if point > pointV and amature = 0: 
-             '<font color = green>Вы победили по очкам.</font>'
-             xgt 'BattleEnder','win'
+             if point > pointV and amature = 0:
+             '<font color=green>Вы победили по очкам.</font>'
+             xgt'BattleEnder','win'
              end
-             if point < pointV and amature = 0: 
-             '<font color = red>Вы проиграли по очкам.</font>'
-             xgt 'BattleEnder','loss'
+             if point < pointV and amature = 0:
+             '<font color=red>Вы проиграли по очкам.</font>'
+             xgt'BattleEnder','loss'
              end
-             if point = pointV and amature = 0: 
-             '<font color = red>В этом бою была объявлена ничья.</font>'
-             xgt 'BattleEnder','draw'
+             if point = pointV and amature = 0:
+             '<font color=red>В этом бою была объявлена ничья.</font>'
+             xgt'BattleEnder','draw'
              end
-             if pointProf > pointProfV and amature = 1: 
-             '<font color = green>Вы победили по очкам.</font>'
-             xgt 'BattleEnder','win'
+             if pointProf > pointProfV and amature = 1:
+             '<font color=green>Вы победили по очкам.</font>'
+             xgt'BattleEnder','win'
              end
-             if pointProf < pointProfV and amature = 1: 
-             '<font color = red>Вы проиграли по очкам.</font>'
-             xgt 'BattleEnder','loss'
+             if pointProf < pointProfV and amature = 1:
+             '<font color=red>Вы проиграли по очкам.</font>'
+             xgt'BattleEnder','loss'
              end
-             if pointProf = pointProfV and amature = 1: 
-             '<font color = red>В этом бою была объявлена ничья.</font>'
-             xgt 'BattleEnder','draw'
+             if pointProf = pointProfV and amature = 1:
+             '<font color=red>В этом бою была объявлена ничья.</font>'
+             xgt'BattleEnder','draw'
              end
          end
      end

@@ -1,10 +1,10 @@
 # vampirLoss
-monster = 0
-vampireMorf = 1
-vampirePower = 10
+monster=0
+vampireMorf=1
+vampirePower=10
 'Вампир присосался к вашей шее и все померкло.'
 
 
-act '....': GOTO 'vampGrave'
+act '....':GOTO 'vampGrave'
 --- vampirLoss ---------------------------------
 

@@ -1,21 +1,21 @@
 # HouseRoom1
 *clr
- minut += 1
+set minut=minut+1
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
 showinput 0
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>Комната</H4></center>'
-'<center><img src = "pic\housew\room1.jpg" ></center>'
+'<center><img src="pic\housew\room1.jpg" ></center>'
 clr
-gs 'stat'
+gs'stat'
 
 'В комнате на диване сидит ((Линель|Linel))' 
 
-act 'Коридор': gt 'HouseKor'
+act 'Коридор':gt'HouseKor'
 --- HouseRoom1 ---------------------------------
 

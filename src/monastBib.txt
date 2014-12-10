@@ -9,35 +9,35 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Орденская библиотека</H4></center>'
-'<center><img src = "pic/Evedon/monastBib.jpg" ></center>'
+'<center><img src="pic/Evedon/monastBib.jpg" ></center>'
 'Огромная библиотека, набитая книгами и магическими артефактами.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
-if hour>= 16 and hour<21: '((За столом читает книгу настоятельница|nastoyat|minut += 5))'
+if hour>=16 and hour<21:'((За столом читает книгу настоятельница|nastoyat|minut=minut+5))'
 
-	 act 'Изучать книги 1 час': 
+	 act 'Изучать книги 1 час':
 	 cla
 	 *clr
-	 minut += 60
-	 exp = exp+RAND(10,15)
+	 minut=minut+60
+	 exp=exp+RAND(10,15)
 	 'Вы достали книгу и приступили к чтению.'
-	 act 'Отойти от стола': gt $CURLOC
+	 act 'Отойти от стола':gt $CURLOC
 	 end
 
-	 act 'Уйти': 
-	 minut += 5
-	 gt 'monastIn'
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'monastIn'
 	 end
 	 
 	 
-if forlistQW = 0 and hour = 23: 
+if forlistQW=0 and hour=23:
 cla
 'В библиотеке поползли странные тени и ее начала окутывать необычная тьма, вы почувствовали чье-то присутствие в библиотеке.'
-     act 'Осмотреться': gt 'forlist'
+     act 'Осмотреться':gt'forlist'
 end
 --- monastBib ---------------------------------
 

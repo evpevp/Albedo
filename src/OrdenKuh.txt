@@ -9,74 +9,74 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>столовая</H4></center>'
-'<center><img src = "pic/Evedon\ordenKuh.jpg" ></center>'
+'<center><img src="pic/Evedon\ordenKuh.jpg" ></center>'
 'Просторная и наполненная аппетитными запахами кухня.'
 'Еда стоит 1 орденский кредит.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-     if kredit>= 1 and hour>= 5: 
-		 act 'Есть 1 час': 
+     if kredit>=1 and hour>=5:
+		 act 'Есть 1 час':
 		 cla
 		 *clr
-		 gs 'eda'
-		 minut += 60
-		 kredit = kredit-1
-		 ilrand = RAND(0,2)
-		 lidiad = RAND(0,5)
-		 gs 'eat'
-		     if pol = 0 or ilrand = 0: 
+		 gs'eda'
+		 minut=minut+60
+		 kredit=kredit-1
+		 ilrand=RAND(0,2)
+		 lidiad=RAND(0,5)
+		 gs'eat'
+		     if pol=0 or ilrand=0:
 		     'Кухарка достала еды и поставила на стол для вас.'
 		     end
-		     if pol = 0 and lidiad = 1: 
-		     gs 'lidiaTeme'
+		     if pol=0 and lidiad=1:
+		     gs'lidiaTeme'
 		     end
-		     if pol >=1 and ilrand = 2 and ilranQW>0: 
-		     '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
+		     if pol=>1 and ilrand=2 and ilranQW>0:
+		     '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
 		     'Пока вы сидели ели, к вам подошел нагловатый послушник Ильран и завел разговор с вами.'
 		     'Эй детка, как поживаешь? Может сходим куда-нибудь? Например в мою комнату?'
-		     act 'Отстань': gt 'OrdenKuh'
-		         act 'Пошли, шалун': 
+		     act 'Отстань':gt'OrdenKuh'
+		         act 'Пошли, шалун':
 		         cla
 		         *clr
-		         '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
-		         ilranQW = 3
+		         '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
+		         ilranQW=3
 		         'Ильран обнял вас и повел в свою комнату'
-		         act '....': gt 'ilranRoom'
+		         act '....':gt'ilranRoom'
 		         end
 		     end
-		     if pol >=1 and ilrand = 1 and ilranQW = 0: 
-		     '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
+		     if pol=>1 and ilrand=1 and ilranQW=0:
+		     '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
 		     'Пока вы ели, к вам подсел один из послушников и представился Ильраном.'
-                 act 'Я <<$name>>': 
+                 act 'Я <<$name>>':
                  cla
                  *clr
-                 '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
+                 '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
                  'Вы представились, Ильран заулыбался и обнял вас за плечи, прошептав на ухо, "Детка, пойдем ко мне в комнату, обещаю, скучно не будет."'
                  
-                 act 'Я не такая': 
+                 act 'Я не такая':
 	             cla
 	             *clr
-	             '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
-	             ilranQW = 2
+	             '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
+	             ilranQW=2
 	             'Вы решили с ним никуда не идти'
-	             act '....': gt 'OrdenKuh'
+	             act '....':gt'OrdenKuh'
 	             end
 	             
-                 act 'Пошли, шалун': 
+                 act 'Пошли, шалун':
                  cla
                  *clr
-                 '<center><img src = "pic/EvedonNarod\ilran.jpg" ></center>'
-                 ilranQW = 3
+                 '<center><img src="pic/EvedonNarod\ilran.jpg" ></center>'
+                 ilranQW=3
                  'Ильран обнял вас и повел в свою комнату'
-                 act '....': gt 'ilranRoom'
+                 act '....':gt'ilranRoom'
                  end
                  end
              end
-         act 'Отойти от стола': gt $CURLOC
+         act 'Отойти от стола':gt $CURLOC
 		 end
 		 end
 	 end
@@ -84,22 +84,22 @@ end
 
 
 
-	 if posudOrday!day and hour>= 5: 
-		 act 'Мыть посуду 1 час за 20 кредитов': 
+	 if posudOrday!day and hour>=5:
+		 act 'Мыть посуду 1 час за 20 кредитов':
 		 cla
 		 *clr
-		 minut += 60
-		 kredit = kredit+20
-		 posudOrday = day
+		 minut=minut+60
+		 kredit=kredit+20
+		 posudOrday=day
 		 'Вы мыли посуду на кухне в течение часа за 20 кредитов.'
-		 act 'Передохнуть': gt $CURLOC
+		 act 'Передохнуть':gt $CURLOC
 		 end
 	 end
 end
 
-act 'Уйти': 
-minut += 5
- gt 'foOrden'
+act 'Уйти':
+minut=minut+5
+gt'foOrden'
 end
 
 --- OrdenKuh ---------------------------------

@@ -3,34 +3,34 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Ванная</H4></center>'
 clr
-gs 'stat'
+gs'stat'
 
 
-	 shampoo = 5
-	 '<center><img src = "pic\room\VanaI.jpg" ></center>'
-	 if shampoo > 0: 'На углу ванной стоит бутылка шампуня, его хватит на <<shampoo>> раз.'
-	 if shampoo = 0: 'У вас нет шампуня.'
+	 shampoo=5
+	 '<center><img src="pic\room\VanaI.jpg" ></center>'
+	 if shampoo > 0:'На углу ванной стоит бутылка шампуня, его хватит на <<shampoo>> раз.'
+	 if shampoo = 0:'У вас нет шампуня.'
 	 act 'Вылезти из ванной': gt 'InnaKor'
 
-	 if shampoo > 0: 
-		 act 'Залезть в душ (15 мин)': 
+	 if shampoo > 0:
+		 act 'Залезть в душ (15 мин)':
 		 cla
 		 *clr
-		 minut += 15
-		 shampoo = shampoo-1
-		 hapri = 0
-		 if pol = 0: sweat = -3
+		 minut=minut+15
+		 shampoo=shampoo-1
+		 hapri=0
+		 if pol = 0:set sweat= -3
 		 'Вы моетесь под душем.'
 		 act 'Вытерется и выйти из душа': gt 'InnaKor'
 		 end
 
-		 act 'Залезть в ванную (1 час)': 
+		 act 'Залезть в ванную (1 час)':
 			 cla
 			 *clr
-			 hapri = 0
-			 minut += 60
-			 shampoo = shampoo-1
-			 if pol = 0: sweat = -3
+			 hapri=0
+			 minut=minut+60
+			 shampoo=shampoo-1
+			 if pol = 0:set sweat= -3
 			 'Вы моетесь в ванной.'
 			 act 'Вытерется и выйти из ванной': gt 'InnaKor'
 		 end

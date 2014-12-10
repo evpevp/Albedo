@@ -8,47 +8,47 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Бронник</H4></center>'
-'<center><img src = "pic/Evedon/rinok3.jpg" ></center>'
+'<center><img src="pic/Evedon/rinok3.jpg" ></center>'
 '1000 гемов легкий доспех'
 '3000 гемов средний доспех'
 '7000 гемов тяжелый доспех'
 '3000 гемов щит'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
 
-	 act 'Легкий доспех': 
-	 payclo = 1000
-	 gt 'manArW','1'
+	 act 'Легкий доспех':
+	 payclo=1000
+	 gt'manArW','1'
 	 end
 
-	 act 'Средний доспех': 
-	 payclo = 3000
-	 gt 'manArW','2'
-	 end
-	 
-	 act 'Тяжелый доспех': 
-	 payclo = 7000
-	 gt 'manArW','3'
+	 act 'Средний доспех':
+	 payclo=3000
+	 gt'manArW','2'
 	 end
 	 
-	 act 'Щит': 
-	 payclo = 3000
-	 gt 'manShW','1'
+	 act 'Тяжелый доспех':
+	 payclo=7000
+	 gt'manArW','3'
 	 end
 	 
-	 act 'Переодеться': 
-	 gt 'lokerW'
+	 act 'Щит':
+	 payclo=3000
+	 gt'manShW','1'
+	 end
+	 
+	 act 'Переодеться':
+	 gt'lokerW'
 	 end
 
 
-act 'Отойти': 
-minut += 5
- gt 'rinokW'
+act 'Отойти':
+minut=minut+5
+gt'rinokW'
 end
 --- armorW ---------------------------------
 

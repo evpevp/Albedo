@@ -1,8 +1,8 @@
 # ShildNill
 shild = 0
-ShilDef = 0
+ShilDef=0
 
 !щиты
-if dershi = 2: dershi = 1
+if dershi = 2:dershi = 1
 --- ShildNill ---------------------------------
 

@@ -1,21 +1,21 @@
 # nagaW
 *clr
-'<center><img src = "pic/EvedonMonsters/naga.jpg"></center>'
+'<center><img src="pic/EvedonMonsters/naga.jpg"></center>'
 
-monster = 9
+monster=9
 
 
-$nameV = 'Пустынная Нага'
-lvlv = 100
-strenV = 110
-speedV = 160
-agilV = 160
-vitalV = 110
-intelv = 10
-willv = 10
-program = 19
-healthV = vitalV*10
-mannaV = intelV*10
-wipoV = willV*10
+$nameV='Пустынная Нага'
+lvlv=100
+strenV=110
+speedV=160
+agilV=160
+vitalV=110
+intelv=10
+willv=10
+program=19
+healthV=vitalV*10
+mannaV=intelV*10
+wipoV=willV*10
 --- nagaW ---------------------------------
 

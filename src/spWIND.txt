@@ -1,130 +1,130 @@
 # spWIND
 dynamic $battlemain
 clr
-gs 'stat'
+gs'stat'
 
-if round>= 2: 
-	 if spWindUd>= 100 and manna>= 50: 
-		 act 'Удар воздухом 50 маны': 
+if round>=2: 
+	 if spWindUd>=100 and manna>=50:
+		 act 'Удар воздухом 50 маны':
 		 cla
-		 spWindUdExp = spWindUdExp+1
-		 manna = manna-50
-		 '<font color = green>Вы собрали энергию в руку и преобразовали ее в удар воздухом</font>'
-		     if zerkalov>0: zerkalov = 0 & '<B><font color = green>От давления воздуха все зеркала противника разлетаются.</font></B>'
-		 damage = RAND(50,100+spWindUdExp)
-		 gs 'defenceV'
-		 damagew = RAND(50,100+spWindUdExp)
-		 $tipuronaW = 'Удар воздухом'
-		 gs 'defenceWV'
-		 xgt 'fight','1'
+		 spWindUdExp=spWindUdExp+1
+		 manna=manna-50
+		 '<font color=green>Вы собрали энергию в руку и преобразовали ее в удар воздухом</font>'
+		     if zerkalov>0:zerkalov=0&'<B><font color=green>От давления воздуха все зеркала противника разлетаются.</font></B>'
+		 damage=RAND(50,100+spWindUdExp)
+		 gs'defenceV'
+		 damagew=RAND(50,100+spWindUdExp)
+		 $tipuronaW='Удар воздухом'
+		 gs'defenceWV'
+		 xgt'fight','1'
 		 end
 	 end
 end 
 
-if round>= 3: 
-	 if spVacuum>= 100 and manna>= 100: 
-		 act 'Вакуум 100 маны': 
+if round>=3: 
+	 if spVacuum>=100 and manna>=100:
+		 act 'Вакуум 100 маны':
 		 cla
-		 spVacuumExp = spVacuumExp+1
-		 manna = manna-100
-		 '<font color = green>Вы собрали энергию в руку и стали откачивать воздух</font>'
-		     if zerkalov>0: zerkalov = 0 & '<B><font color = green>От давления воздуха все зеркала противника разлетаются.</font></B>'
-		 damagew = damagew+50+RAND(spVacuumExp,spVacuumExp*2)
-		 $tipuronaWV = 'Вакуум'
-		 gs 'defenceWV'
-		 xgt 'fight','1'
+		 spVacuumExp=spVacuumExp+1
+		 manna=manna-100
+		 '<font color=green>Вы собрали энергию в руку и стали откачивать воздух</font>'
+		     if zerkalov>0:zerkalov=0&'<B><font color=green>От давления воздуха все зеркала противника разлетаются.</font></B>'
+		 damagew=damagew+50+RAND(spVacuumExp,spVacuumExp*2)
+		 $tipuronaWV='Вакуум'
+		 gs'defenceWV'
+		 xgt'fight','1'
 		 end
 	 end
 end
 
-if round>= 4: 
-	 if spVacShild>= 100 and manna>= 150: 
-		 act 'Атмосферный щит 150 маны': 
+if round>=4: 
+	 if spVacShild>=100 and manna>=150:
+		 act 'Атмосферный щит 150 маны':
 		 cla
-		 spVacShildExp = spVacShildExp+1
-		 manna = manna-150
-		 '<font color = green>Вы собрали энергию в руку и стали откачивать воздух создавая вокург себя щит</font>'
-         defence = defence+1000+spVacShildExp
-         defenceW = defenceW+2000+(spVacShildExp*10)
-		 xgt 'fight','1'
+		 spVacShildExp=spVacShildExp+1
+		 manna=manna-150
+		 '<font color=green>Вы собрали энергию в руку и стали откачивать воздух создавая вокург себя щит</font>'
+         defence=defence+1000+spVacShildExp
+         defenceW=defenceW+2000+(spVacShildExp*10)
+		 xgt'fight','1'
 		 end
 	 end
 end 
 
-if round>= 5: 
-	 if spVacBullet>= 100 and manna>= 150: 
-		 act 'Вакуумные пули 150 маны': 
+if round>=5: 
+	 if spVacBullet>=100 and manna>=150:
+		 act 'Вакуумные пули 150 маны':
 		 cla
-		 manna = manna-150
-		 '<font color = green>Вы собрали энергию в руку и создав множество маленьких центров вакуума метнули их в противника с дикой скоростью</font>'
-         damageW = RAND(250,500)
-		 $tipuronaWV = 'Вакуумные пули'
-		 gs 'defenceWV'
-		 damageW = RAND(250,500)
-		 $tipuronaWV = 'Вакуумные пули'
-		 gs 'defenceWV'
-		 damageW = RAND(250,500)
-		 $tipuronaWV = 'Вакуумные пули'
-		 gs 'defenceWV'
-		 damageW = RAND(250,500)
-		 $tipuronaWV = 'Вакуумные пули'
-		 gs 'defenceWV'
-		 damageW = RAND(250,500)
-		 $tipuronaWV = 'Вакуумные пули'
-		 gs 'defenceWV'
-		 xgt 'fight','1'
+		 manna=manna-150
+		 '<font color=green>Вы собрали энергию в руку и создав множество маленьких центров вакуума метнули их в противника с дикой скоростью</font>'
+         damageW=RAND(250,500)
+		 $tipuronaWV='Вакуумные пули'
+		 gs'defenceWV'
+		 damageW=RAND(250,500)
+		 $tipuronaWV='Вакуумные пули'
+		 gs'defenceWV'
+		 damageW=RAND(250,500)
+		 $tipuronaWV='Вакуумные пули'
+		 gs'defenceWV'
+		 damageW=RAND(250,500)
+		 $tipuronaWV='Вакуумные пули'
+		 gs'defenceWV'
+		 damageW=RAND(250,500)
+		 $tipuronaWV='Вакуумные пули'
+		 gs'defenceWV'
+		 xgt'fight','1'
 		 end
 	 end
 	 
-	 if spVacPerepad>= 100 and manna>= 150: 
+	 if spVacPerepad>=100 and manna>=150:
 	 
-	     act 'Перепад давления 150 маны': 
+	     act 'Перепад давления 150 маны':
 		 cla
-	 	 '<font color = green>Вы собрали энергию в руку и стали изменять давление воздуха вызывая его перепады</font>'
-		 manna = manna-150
-		 Perepad = 1
-		 damageW = RAND(1000,1500)
-		 $tipuronaWV = 'Перепад давления'
-		 gs 'defenceWV'
-		 xgt 'fight','1'
+	 	 '<font color=green>Вы собрали энергию в руку и стали изменять давление воздуха вызывая его перепады</font>'
+		 manna=manna-150
+		 Perepad=1
+		 damageW=RAND(1000,1500)
+		 $tipuronaWV='Перепад давления'
+		 gs'defenceWV'
+		 xgt'fight','1'
 		 exit
          end
      end
      
-     if spVacVih>= 100 and manna>= 150: 
-         act 'Ярость шторма 150 маны': 
+     if spVacVih>=100 and manna>=150:
+         act 'Ярость шторма 150 маны':
 		 cla
-     	 '<B><font color = green>Вы колдуете и создает вихрь в своей ладони.</font></B>'
-     	 '<B><font color = green>Вы атакуете противника пытаясь ударить его рукой в которой сосредоточена ярость шторма.</font></B>'
-		 	 if fintv>0: fintv = 0
-		     if zerkalov>0: zerkalov = 0 & '<B><font color = green>Зеркала противника лопнули.</font></B>'
-		     if tumanv>0: tumanv = 0 & '<B><font color = green>Вихрь порвал туман противника в клочья.</font></B>'
-		     if sandstormv>0: sandstormv = 0 & '<B><font color = green>Вихрь уничтожил туман противника.</font></B>'
-		 manna = manna-150
-		 damage = RAND(3000,4500)
-		 tipatk = 1
-		 gs 'popad'
-		 xgt 'fight','1'
+     	 '<B><font color=green>Вы колдуете и создает вихрь в своей ладони.</font></B>'
+     	 '<B><font color=green>Вы атакуете противника пытаясь ударить его рукой в которой сосредоточена ярость шторма.</font></B>'
+		 	 if fintv>0:fintv=0
+		     if zerkalov>0:zerkalov=0&'<B><font color=green>Зеркала противника лопнули.</font></B>'
+		     if tumanv>0:tumanv=0&'<B><font color=green>Вихрь порвал туман противника в клочья.</font></B>'
+		     if sandstormv>0:sandstormv=0&'<B><font color=green>Вихрь уничтожил туман противника.</font></B>'
+		 manna=manna-150
+		 damage=RAND(3000,4500)
+		 tipatk=1
+		 gs'popad'
+		 xgt'fight','1'
 		 exit
          end
      end
 end 
 
-if round>= 6: 
-     if spVacPolet>= 100 and manna>= 500 and cooldownSpell<= 0: 
-         act 'Полет 500 маны': 
+if round>=6: 
+     if spVacPolet>=100 and manna>=500 and cooldownSpell<=0:
+         act 'Полет 500 маны':
 		 cla
-     	 '<B><font color = green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
-		 manna = manna-500
-		 notHere = 6
-		 cooldownSpell = 8
-		 xgt 'fight','1'
+     	 '<B><font color=green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
+		 manna=manna-500
+		 notHere=6
+		 cooldownSpell=8
+		 xgt'fight','1'
 		 exit
          end
      end
 end
 
-     act 'Пропустить ход': xgt 'fight','1'
+     act 'Пропустить ход':xgt'fight','1'
 
 
 

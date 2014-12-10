@@ -10,192 +10,192 @@ $locFight = $CURLOC
 cla
 *clr
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Спальное помещение отряда №2</B></center>'
 '<center>Черный барак</center>'
-'<center><img src = "pic/jail/barak.jpg" ></center>'
+'<center><img src="pic/jail/barak.jpg" ></center>'
 'Еда <<balabas>>, мыло <<milo>>, бритвенный станок <<stanok>>'
 
-if zoneWar = 13: 
-!health = vital*10
-!manna = intel*10+intel*magika
-!wipo = will*10
+if zoneWar=13:
+!health=vital*10
+!manna=intel*10+intel*magika
+!wipo=will*10
 'Открылась дверь, в отряд через порог шагнул огромный, бритый на лысо атлет. Следом за ним вошли высокий худощавый парень и небольшой азиат'
 'Атлет огляделся и сказал "Эй смотрящий, твоя хата зафоршмачена." и смачно харкнул на пол.'
-     act 'Ты у меня сейчас кровью смоешь свою харчу!': gt 'barakFight'
+     act 'Ты у меня сейчас кровью смоешь свою харчу!':gt'barakFight'
 exit
 end
 
-if hour>= 22 or hour<6: 
-     act 'Лечь на шконарь.': gt 'bed'
+if hour>=22 or hour<6:
+     act 'Лечь на шконарь.':gt 'bed'
 end
 
-if hour>= 6 and hour<19: 
-     act 'Выйти на построение.': gt 'itk'
+if hour>=6 and hour<19:
+     act 'Выйти на построение.':gt 'itk'
 end
 
-if hour>= 19 and hour<22: 
+if hour>= 19 and hour<22:
 
-     if health < vital*10 or wipo<will*10: 
-         act 'Идти в лазарет.': 
+     if health < vital*10 or wipo<will*10:
+         act 'Идти в лазарет.':
          cla
-          minut = minut + 60
+         set minut = minut + 60
          'Врачиха нехотя осмотрела вас и обозвала симулянтом.'
-         act 'Уйти.': gt $CURLOC
-             if money>= 100: 
-                 act 'Дать ей сотню.': 
+         act 'Уйти.':gt $CURLOC
+             if money>=100:
+                 act 'Дать ей сотню.':
                  cla
-                 money = money-100
+                 money=money-100
                  health = vital*10
-				 manna = intel*10+intel*magika
-				 wipo = will*10
+				 manna=intel*10+intel*magika
+				 wipo=will*10
 				 'Врачиха проворно забрала сотню и дала вам таблеток, от которых вы сразу почувствовали себя лучше.'
-				 act 'Уйти.': gt $CURLOC
+				 act 'Уйти.':gt $CURLOC
 				 end
              end
          end
      end
         
-     act 'Отдыхать час.': 
-      minut = minut + 60
-     manna = manna+will
+     act 'Отдыхать час.':
+     set minut = minut + 60
+     manna=manna+will
      gt $CURLOC
      end
      
-     if money>0: 
-         act 'Заныкать деньги.': 
-		  minut = minut + 60
-		 moneyNik = moneyNik+money
-		 money = 0
+     if money>0:
+         act 'Заныкать деньги.':
+		 set minut = minut + 60
+		 moneyNik=moneyNik+money
+		 money=0
 		 gt $CURLOC
 		 end
      end
      
-     if moneyNik > 0: 
-         act 'Забрать деньги из нычки.': 
-		  minut = minut + 60
-		 money = money+moneyNik
-		 moneyNik = 0
+     if moneyNik > 0:
+         act 'Забрать деньги из нычки.':
+		 set minut = minut + 60
+		 money=money+moneyNik
+		 moneyNik=0
 		 gt $CURLOC
 		 end
      end
      
-     act 'Идти в туалет.': gt 'tualet'
+     act 'Идти в туалет.':gt 'tualet'
      
-     act 'Играть в блэк джек 1 час': 
-	 minut += 60
-	 gt 'blackjack','0'
+     act 'Играть в блэк джек 1 час':
+	 minut=minut+60
+	 gt'blackjack','0'
 	 end
 	 
-	 if wipo<10: 
-         act 'Плакать': 
+	 if wipo<10:
+         act 'Плакать':
          cla
-         вор = 0
-         мужик = мужик+1
-         minut += 15
-         manna = manna+10
-         wipo = wipo+30
+         вор=0
+         мужик=мужик+1
+         minut=minut+15
+         manna=manna+10
+         wipo=wipo+30
          'Вы не выдержали и начали плакать.'
-          act 'Умытся.': gt $CURLOC
+          act 'Умытся.':gt $CURLOC
          end
      end
      
-     if jailfitday ! day and петух = 0: 
-         act 'Заниматься спортом 1 час': 
+     if jailfitday ! day and петух = 0:
+         act 'Заниматься спортом 1 час':
 	     cla
 		 *clr
 		 jailfitday = day
-		  minut = minut + 60
-		 sweat = sweat+3
-		  exp = exp+RAND(1,3)
-		 fat = fat-1
-		 manna = manna-15
+		 set minut = minut + 60
+		 sweat=sweat+3
+		 set exp=exp+RAND(1,3)
+		 fat=fat-1
+		 manna=manna-15
 		 'Вы в течении часа выполняли разнообразные физические упражнения.'
-		 act 'Далее': gt $CURLOC
+		 act 'Далее':gt $CURLOC
 		 end
      end
      
-     if balabas > 0: 
-         act 'Есть еду из запасов 1 час.': 
+     if balabas > 0:
+         act 'Есть еду из запасов 1 час.':
          cla
-         minut += 60
-         balabas = balabas-1
-         golod = golod+10
-         manna = manna+5
+         minut=minut+60
+         balabas=balabas-1
+         golod=golod+10
+         manna=manna+5
          'Вы балабасили, сидя на своем шконаре.'
-         act 'Убрать остатки.': gt $CURLOC
+         act 'Убрать остатки.':gt $CURLOC
          end
      end
      
-     if shnirday ! day and mast<10: 
-	     act 'Шнырять за 100руб 1 час.': 
-		  minut = minut + 60
-		 шнырь = шнырь+1
-		 money = money+100
+     if shnirday ! day and mast<10:
+	     act 'Шнырять за 100руб 1 час.':
+		 set minut = minut + 60
+		 шнырь=шнырь+1
+		 money=money+100
 		 shnirday = day
 		 gt $CURLOC
 		 end
 	 end
 	 
-	 act 'Покупать 1 час.': 
-	  minut = minut + 60
+	 act 'Покупать 1 час.':
+	 set minut = minut + 60
 	 gt 'sizomagaz'
 	 end
 	 
-	 if mast>= 10 and smotrday ! day and zoneWar>0: 
-	     act 'Собирать деньги с мужиков на общак.': 
+	 if mast>=10 and smotrday ! day and zoneWar>0:
+	     act 'Собирать деньги с мужиков на общак.':
 	     cla
 	     smotrday = day
-	     minut += 60
-	     вор = вор+1
-	     obrand = RAND(0,100)
-	         if obrand<= 75: 
-	         obsrand = RAND(500,1000)
-	         money = money+obsrand
+	     minut=minut+60
+	     вор=вор+1
+	     obrand=RAND(0,100)
+	         if obrand<=75: 
+	         obsrand=RAND(500,1000)
+	         money=money+obsrand
 	         'Вы собирали деньги с мужиков на общак, кто-то давал деньги без разговоров, кто-то возмущался, но вы собрали со всех и получили <<obsrand>> рублей.'
-	         act 'Уйти.': gt $CURLOC
+	         act 'Уйти.':gt $CURLOC
 	         end
-	         if obrand>75: 
-	         obsrand = RAND(500,1000)
-	         money = money+obsrand
+	         if obrand>75:
+	         obsrand=RAND(500,1000)
+	         money=money+obsrand
 	         'Вы собрали с мужиков <<obsrand>> рублей, но один из мужиков возмутился и вы решили отбить ему желание возмущаться.'
-	         gs 'genitk'
-	         act 'Дратся': gt 'before'
+	         gs'genitk'
+	         act 'Дратся':gt'before'
 	         end
 	     end
 	 end
 	 
 	 
-	 if mast >= 7 and smotrday ! day and zoneWar = 0: 
-	     act 'Подойти к Смотрящему отряда.': 
+	 if mast >= 7 and smotrday ! day and zoneWar=0:
+	     act 'Подойти к Смотрящему отряда.':
 	     cla
 	     *clr
-	     '<center><img src = "pic/jail/mogol.jpg" ></center>'
+	     '<center><img src="pic/jail/mogol.jpg" ></center>'
 	     smotrday = day
-	     minut += 60
-	         if mast = 7: money = money+100
-			 if mast = 8: money = money+300
-			 if mast = 9: money = money+500
-			 if mast = 10: money = money+1000
+	     minut=minut+60
+	         if mast = 7:money=money+100
+			 if mast = 8:money=money+300
+			 if mast = 9:money=money+500
+			 if mast = 10:money=money+1000
 		 'Смотрящий отряда по кличке Могол дал вам денег из общака и поблагодарил вас за то, что вы страдаете за общее дело.'
-	     act 'Уйти.': gt $CURLOC
+	     act 'Уйти.':gt $CURLOC
 	     end
 	 end
 	 
-	 if petrqw >0 and petrmonth ! month: 
+	 if petrqw >0 and petrmonth ! month:
 	 cla
-	 petrqw = petrqw-1
+	 petrqw=petrqw-1
 	 petrmonth = month
 	 'Вошел начальник отряда и выдал вам посылку'
-	 stanok = stanok+20
-	 balabas = balabas+30
-	 milo = milo+30
-	 money = money+1000
+	 stanok=stanok+20
+	 balabas=balabas+30
+	 milo=milo+30
+	 money=money+1000
 	 'Вы достали письмо из посылки и прочитали короткое послание от вашего сына Пети. "Держись папань."'
-	 act 'Забрать посылку.': gt $CURLOC
+	 act 'Забрать посылку.':gt $CURLOC
 	 exit
 	 end
 

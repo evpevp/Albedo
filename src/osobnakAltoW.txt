@@ -9,129 +9,129 @@ $locFight = $CURLOC
 $metkaBed = $ARGS[0]
 $locBed = $CURLOC
 '<center><H4>Особняк великого магистра ордена четырехлистника</H4></center>'
-'<center><img src = "pic/Evedon/mansion.jpg" ></center>'
+'<center><img src="pic/Evedon/mansion.jpg" ></center>'
 'Роскошный и богатый особняк являющийся настоящим шедевром архитектуры.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if OrdenRang = 7: 
+if OrdenRang=7:
 ''
-if edaWF>0: 'Еды для приготовления <<edaWF>> штук'
-if drova>0: 'Дров для очага <<drova>> охапок'
-if shelok>0: 'Склянок со щелоком для мытья <<shelok>> штук'
+if edaWF>0:'Еды для приготовления <<edaWF>> штук'
+if drova>0:'Дров для очага <<drova>> охапок'
+if shelok>0:'Склянок со щелоком для мытья <<shelok>> штук'
 ''
 ''
-'Застеленная, чистая <a href = "exec: gt ''bed''">кровать</a>.'
-'Большая деревянная кадушка <a href = "exec: gt ''kadka''">для мытья</a>.'
-'Резной <a href = "exec: gt ''lokerW''">шкаф</a> из красного дерева.'
-'Уютный <a href = "exec: gt ''divanW''">диван</a> обитый дорогой тканью.'
-'<a href = "exec: gt ''mirrW''">Зеркало</a>'
-if brakW>0: '<a href = "exec: gt ''marryWorld''"><<$namefrendM>></a>'
-	 if slot = 0: 
+'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
+'Резной <a href="exec:GT ''lokerW''">шкаф</a> из красного дерева.'
+'Уютный <a href="exec:GT ''divanW''">диван</a> обитый дорогой тканью.'
+'<a href="exec:GT ''mirrW''">Зеркало</a>'
+if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+	 if slot=0:
 	 *nl
 	 'Без одежды нельзя выходить на улицу.'
 	 end
 	 
-	 if edaWF>0 and drova>0: 
-		 act 'Приготовить еду 30мин': 
+	 if edaWF>0 and drova>0:
+		 act 'Приготовить еду 30мин':
 		 cla
 		 *clr
-		 minut += 30
-		 edaWF = edaWF-1
-		 drova = drova-1
-		 manna = manna+20
-		 wipo = wipo+20
-		 gs 'eda'
+		 minut=minut+30
+		 edaWF=edaWF-1
+		 drova=drova-1
+		 manna=manna+20
+		 wipo=wipo+20
+		 gs'eda'
 		 'Вы истопили очаг дровами и поставили еду на огонь. Через полчаса все было готово и вы приступили к трапезе.'
-		 gs 'eat'
-		 act 'Убрать посуду': gt $CURLOC
+		 gs'eat'
+		 act 'Убрать посуду':gt $CURLOC
 		 end
 	 end
 end
 
-     if missionData = 12: 
-         act 'Отдать письмо': 
+     if missionData=12:
+         act 'Отдать письмо':
          cla
          *clr
-         missionData = 0
-         kredit = kredit+100
-         missionC+= 1
-         '<center><img src = "pic/Photo/License.jpg" ></center>'
+         missionData=0
+         kredit=kredit+100
+         missionC+=1
+         '<center><img src="pic/Photo/License.jpg" ></center>'
          'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
          end
      end
 
 
-if slot>0: 
-	 act 'Уйти (5 мин)': 
-	 minut += 5
-	 gt 'reachW'
+if slot>0:
+	 act 'Уйти (5 мин)':
+	 minut=minut+5
+	 gt'reachW'
 	 end
 end
 
-if OrdenRangPiper = 1: 
+if OrdenRangPiper=1:
 cla
 *clr
-'<center><img src = "pic/EvedonNarod/altotron.jpg"></center>'
-OrdenRangPiper = 0
-OrdenRang = 3
-if dvoranRang = 0: dvoranRang = 1
-gs 'clonil'
+'<center><img src="pic/EvedonNarod/altotron.jpg"></center>'
+OrdenRangPiper=0
+OrdenRang=3
+if dvoranRang=0:dvoranRang=1
+gs'clonil'
 slot = 200
 robe3 = 2
-armorDef = 300
-gs 'ornil'
+armorDef=300
+gs'ornil'
 'Вас уже ждали в особняке и один и провели в большую комнату, где на троне восседал великий магистр Альтотрон.'
 'Альтотрон худой, бородатый старик взглянул на вас из-под кустистых бровей и сильным голосом сказал.'
 'Поздравляю дитя. Теперь ты старший магистр. Это величайшая честь - служить ордену в столь печальные дни для всего человечества.'
 'Кроме того. Всякий старший магистр по законам Эведона еще и дворянин. Если у тебя не было дворянского звания, то теперь есть.'
 'Как ты уже имел возможность убедиться, орден стоит выше человеческой морали и ценностей. Это все ради нашей высокой цели. Чтобы побороть демонов, мы должны быть сильными и несгибаемыми. Демоны хитры и только не имеющий слабостей может противостоять им.'
 'Твое обучение не заканчивается на этом. Теперь ты можешь выбрать себе вторую магическую школу для изучения.'
-     if scolElectro = 0: 
-		 act 'Школа электричества': 
+     if scolElectro=0:
+		 act 'Школа электричества':
 		 cla
 		 *clr
-		 scolElectro = 1
-		 raspredOrden = 1
+		 scolElectro=1
+		 raspredOrden=1
 		 'Вы выбрали электричество и великий магистр подал вам документ отпустив вас.'
-		 act 'Уйти': gt 'reachW'
+		 act 'Уйти':gt'reachW'
 		 end
 	 end
 	 
-	 if scolWater = 0: 
-		 act 'Школа воды': 
+	 if scolWater=0:
+		 act 'Школа воды':
 		 cla
 		 *clr
-		 scolWater = 1
-		 raspredOrden = 2
+		 scolWater=1
+		 raspredOrden=2
 		 'Вы выбрали воду и великий магистр подал вам документ отпустив вас.'
-		 act 'Уйти': gt 'reachW'
+		 act 'Уйти':gt'reachW'
 		 end
 	 end
 	 
-	 if scolGround = 0: 
-		 act 'Школа земли': 
+	 if scolGround=0:
+		 act 'Школа земли':
 		 cla
 		 *clr
-		 scolGround = 1
-		 raspredOrden = 3
+		 scolGround=1
+		 raspredOrden=3
 		 'Вы выбрали землю и великий магистр подал вам документ отпустив вас.'
-		 act 'Уйти': gt 'reachW'
+		 act 'Уйти':gt'reachW'
 		 end
 	 end
 	 
-	 if scolWind = 0: 
-		 act 'Школа воздуха': 
+	 if scolWind=0:
+		 act 'Школа воздуха':
 		 cla
 		 *clr
-		 scolWind = 1
-		 raspredOrden = 4
+		 scolWind=1
+		 raspredOrden=4
 		 'Вы выбрали воздух и великий магистр подал вам документ отпустив вас.'
-		 act 'Уйти': gt 'reachW'
+		 act 'Уйти':gt'reachW'
 		 end
 	 end
 

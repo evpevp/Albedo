@@ -1,33 +1,33 @@
 # akbalSex
-if akbalSex = 0: akbalSex = 1 & monst+= 1
-skverna = skverna+10
-$namev = 'Акбал'
- minut = minut + 15
-anal+= 1
+if akbalSex=0:akbalSex=1&monst+=1
+skverna=skverna+10
+$namev='Акбал'
+set minut = minut + 15
+anal+=1
 clr
-gs 'stat'
-picrand = RAND(0,10)
-if picrand = 0: '<center><img src = "pic/EvedonSex/anal.jpg" ></center>'
-if picrand = 1: '<center><img src = "pic/EvedonSex/anal1.jpg" ></center>'
-if picrand = 2: '<center><img src = "pic/EvedonSex/anal2.jpg" ></center>'
-if picrand = 3: '<center><img src = "pic/EvedonSex/anal3.jpg" ></center>'
-if picrand = 4: '<center><img src = "pic/EvedonSex/anal4.jpg" ></center>'
-if picrand = 5: '<center><img src = "pic/EvedonSex/anal5.jpg" ></center>'
-if picrand = 6: '<center><img src = "pic/EvedonSex/anal6.jpg" ></center>'
-if picrand = 7: '<center><img src = "pic/EvedonSex/anal7.jpg" ></center>'
-if picrand = 8: '<center><img src = "pic/EvedonSex/anal8.jpg" ></center>'
-if picrand = 9: '<center><img src = "pic/EvedonSex/anal9.jpg" ></center>'
-if picrand = 10: '<center><img src = "pic/EvedonSex/anal10.jpg" ></center>'
+gs'stat'
+picrand=RAND(0,10)
+if picrand=0:'<center><img src="pic/EvedonSex/anal.jpg" ></center>'
+if picrand=1:'<center><img src="pic/EvedonSex/anal1.jpg" ></center>'
+if picrand=2:'<center><img src="pic/EvedonSex/anal2.jpg" ></center>'
+if picrand=3:'<center><img src="pic/EvedonSex/anal3.jpg" ></center>'
+if picrand=4:'<center><img src="pic/EvedonSex/anal4.jpg" ></center>'
+if picrand=5:'<center><img src="pic/EvedonSex/anal5.jpg" ></center>'
+if picrand=6:'<center><img src="pic/EvedonSex/anal6.jpg" ></center>'
+if picrand=7:'<center><img src="pic/EvedonSex/anal7.jpg" ></center>'
+if picrand=8:'<center><img src="pic/EvedonSex/anal8.jpg" ></center>'
+if picrand=9:'<center><img src="pic/EvedonSex/anal9.jpg" ></center>'
+if picrand=10:'<center><img src="pic/EvedonSex/anal10.jpg" ></center>'
 '<<$namev>> вошел в вашу попку и начал трахать ее своим членом.'
-gs 'analslut'
-anus = anus+3
+gs'analslut'
+anus=anus+3
 'Наконец <<$namev>> кончил в вас.'
-cumanus+= 1
+cumanus+=1
 
 
-if skverna>= 100 and DemonMorf = 0: DemonMorf = 1 & 'Ваше тело преобразовывается в демоническое.'
+if skverna>=100 and DemonMorf=0:DemonMorf=1&'Ваше тело преобразовывается в демоническое.'
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 
 --- akbalSex ---------------------------------
 

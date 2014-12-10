@@ -7,19 +7,19 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Заброшенный дом</H4></center>'
-'<center><img src = "pic/Evedon/frdom.jpg" ></center>'
+'<center><img src="pic/Evedon/frdom.jpg" ></center>'
 'В заброшенном доме, стоит старая покрытая пылью и пропитанная сыростью мебель. В темных углах раскинули свои сети пауки.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 
 
-act 'Выйти': 
-minut += 5
- gt 'df0_0'
+act 'Выйти':
+minut=minut+5
+gt'df0_0'
 end
 --- frdomW ---------------------------------
 

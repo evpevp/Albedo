@@ -1,48 +1,48 @@
 # hellhoundW
 *clr
-'<center><img src = "pic/EvedonMonsters/pes.jpg"></center>'
+'<center><img src="pic/EvedonMonsters/pes.jpg"></center>'
 
-monster = 3
-
-
-strenV = 9
-speedV = 9
-agilV = 9
-vitalV = 8
-
-besrand = RAND(0,6)
-if besrand = 0: lvlg = 30 & $nameV = 'Тощий адский пес'
-if besrand = 1: lvlg = 35 & $nameV = 'Адский пес'
-if besrand = 2: lvlg = 40 & $nameV = 'Матерый адский пес'
-if besrand = 3: lvlg = 45 & $nameV = 'Адская гончая'
-if besrand = 4: lvlg = 50 & $nameV = 'Матерая адская гончая'
-if besrand = 5: lvlg = 55 & $nameV = 'Демоническая гончая'
-if besrand = 6: lvlg = 60 & $nameV = 'Огромная демоническая гончая'
+monster=3
 
 
+strenV=9
+speedV=9
+agilV=9
+vitalV=8
 
-lvlv = lvlg
- spg = lvlv*5
+besrand=RAND(0,6)
+if besrand=0:lvlg = 30&$nameV='Тощий адский пес'
+if besrand=1:lvlg = 35&$nameV='Адский пес'
+if besrand=2:lvlg = 40&$nameV='Матерый адский пес'
+if besrand=3:lvlg = 45&$nameV='Адская гончая'
+if besrand=4:lvlg = 50&$nameV='Матерая адская гончая'
+if besrand=5:lvlg = 55&$nameV='Демоническая гончая'
+if besrand=6:lvlg = 60&$nameV='Огромная демоническая гончая'
 
 
 
-: loopgenig
-if spg > 0: 
-randsp = RAND(1,4)
+lvlv=lvlg
+set spg=lvlv*5
 
-     if randsp = 1: strenV = strenV+1 & spg = spg-1 & JUMP'loopgenig'
-     if randsp = 2: speedV = speedV+1 & spg = spg-1 & JUMP'loopgenig'
-     if randsp = 3: agilV = agilV+1 & spg = spg-1 & JUMP'loopgenig'
-     if randsp = 4: vitalV = vitalV+1 & spg = spg-1 & JUMP'loopgenig'
+
+
+:loopgenig
+if spg > 0:
+randsp=RAND(1,4)
+
+     if randsp=1:strenV=strenV+1&spg=spg-1&JUMP'loopgenig'
+     if randsp=2:speedV=speedV+1&spg=spg-1&JUMP'loopgenig'
+     if randsp=3:agilV=agilV+1&spg=spg-1&JUMP'loopgenig'
+     if randsp=4:vitalV=vitalV+1&spg=spg-1&JUMP'loopgenig'
 
 
 else
-intelV = 10
-willV = 10
-program = 12
-healthV = vitalV*25
-mannaV = intelV*10
-wipoV = willV*10
+intelV=10
+willV=10
+program=12
+healthV=vitalV*25
+mannaV=intelV*10
+wipoV=willV*10
 end
 
 --- hellhoundW ---------------------------------

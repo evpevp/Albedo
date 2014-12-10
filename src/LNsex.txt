@@ -1,1157 +1,1157 @@
 # LNsex
-if $ARGS[0] = 'Lstrip': 
+if $ARGS[0]='Lstrip':
 	 cla
 	 *clr
-	 RandStrip = Rand(0,1)
-	 if RandStrip = 0: 
+	 RandStrip=Rand(0,1)
+	 if RandStrip=0:
 		 cla
 		 *clr
 		 'Нимфа озера: Возможно вид моего обнаженного тела пробудит в тебе желание!'
 		 'Вы: Это было бы замечательно!!!'
 		 'Нимфа отошла к скалам и стала снимать с себя одежду, исполняя этакий стриптиз'
-		  '<center><img src = "pic\forestevent\LakeNimf\LNstrip001.jpg" ></center>'
+		  '<center><img src="pic\forestevent\LakeNimf\LNstrip001.jpg" ></center>'
 		 wait 2000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip002.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip002.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip003.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip003.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip004.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip004.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip005.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip005.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip006.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip006.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip007.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip007.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip008.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip008.jpg" ></center>'
 		 wait 1000
 		 *clr
 		 'Устроившись поудобнее - нимфа начала дрочить свою киску, издавая при этом томные звуки.'
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip009.jpg" ></center>'
-		 NLpussy = NLpussy+5
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip009.jpg" ></center>'
+		 NLpussy=NLpussy+5
 		 wait 3000
 		 *clr
 		 'Подрочив минут 5, нимфа вдруг останавливается и спрашивает вас: "Так и будешь смотреть за "соло" любовью или присоединишься ко мне, а?"'
 		 'Вы: как после такого я могу отказаться???'
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip010.jpg" ></center>'
-		 horny = 100
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip010.jpg" ></center>'
+		 horny=100
 		 act 'Секс': gt 'LNsex','start'
 	 end
-	 if RandStrip = 1: 
+	 if RandStrip=1:
 		 cla
 		 *clr
 		 'Нимфа озера: Возможно вид моего обнаженного тела пробудит в тебе желание! Я недолго побалуюсь в воде, а там посмотрим, что будет дальше...'
 		 'Вы: Это было бы замечательно!!!'
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip201.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip201.jpg" ></center>'
 		 wait 2000
 		 *clr
 		 'Нимфа, освободившись от одежды подошла к воде и присела на берегу.'
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip202.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip202.jpg" ></center>'
 		 wait 2000
 		 *clr
 		 'Спустя пару минут - нимфа озера стала баловаться в воде! Какое милое, голое баловство.'
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip203.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip203.jpg" ></center>'
 		 wait 2000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip204.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip204.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip205.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip205.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip206.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip206.jpg" ></center>'
 		 wait 1000
 		 *clr
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip207.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip207.jpg" ></center>'
 		 wait 1000
 		 *clr
 		 'Став на колени - нимфа вертит перед вами своими прелестями...'
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip208.jpg" ></center>'
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip208.jpg" ></center>'
 		 wait 2000
 		 *clr
 		 '...Нимфа: Ну что? Созрел? Займёмся любовью?'
 		 'Вы: как после такого я могу отказаться???'
-		 '<center><img src = "pic\forestevent\LakeNimf\LNstrip209.jpg" ></center>'
-		 horny = 100
+		 '<center><img src="pic\forestevent\LakeNimf\LNstrip209.jpg" ></center>'
+		 horny=100
 		 act 'Секс': gt 'LNsex','start'
 	 end
 end
 
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 	 cla
 	 *clr
-	 if LakeNimfaSex!1: 
-		 LakeNimfaSex = 1
-		  girl = girl + 1
+	 if LakeNimfaSex!1:
+		 LakeNimfaSex=1
+		 set girl = girl + 1
 	 end
-	 check = 0
-	 picrand = rand(0,2)
-	 if picrand = 0: '<center><img src = "pic\forestevent\LakeNimf\start1.jpg" ></center>'
-	 if picrand = 1: '<center><img src = "pic\forestevent\LakeNimf\start2.jpg" ></center>'
-	 if picrand = 2: '<center><img src = "pic\forestevent\LakeNimf\start3.jpg" ></center>'
+	 check=0
+	 picrand=rand(0,2)
+	 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\start1.jpg" ></center>'
+	 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\start2.jpg" ></center>'
+	 if picrand=2:'<center><img src="pic\forestevent\LakeNimf\start3.jpg" ></center>'
 	 'В ту же минуту нимфа помогает вам освободиться от одежды и начинает ласкать ваш член.'
-	 NLcock = NLcock+10
+	 NLcock=NLcock+10
 	 CLR
 	 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-	 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-	 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-	 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-	 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-	 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+	 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+	 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+	 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+	 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+	 if (NLcock>=100): PL 'Вы достигли оргазма!'
 	 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-	 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-	 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-	 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-	 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-	 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-	 act 'Попросить нимфу продолжать сосать ваш член': 
+	 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+	 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+	 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+	 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+	 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+	 act 'Попросить нимфу продолжать сосать ваш член':
 		 gt 'LNsex','blowjob'
 	 end
-	 act 'Ублажать нимфу языком': 
+	 act 'Ублажать нимфу языком':
 		 gt 'LNsex','cunni'
 	 end
-	 if (NLcock>= 20): 
-		 act 'Поза "Reverse CowGirl"': 
+	 if (NLcock>=20):
+		 act 'Поза "Reverse CowGirl"':
 			 gt 'LNsex','ReverseCowGirl'
 		 end
-		 act 'Трахать нимфу раком': 
+		 act 'Трахать нимфу раком':
 			 gt 'LNsex','69'
 		 end
-		 act 'Миссионерская поза': 
+		 act 'Миссионерская поза':
 			 gt 'LNsex','Missionary'
 		 end
 	 end
 end
 
-if $ARGS[0] = 'End': 
+if $ARGS[0]='End':
 	 cla
 	 *clr
 	 CLR
-	 '<center><img src = "pic\forestevent\spin.jpg" ></center>'
+	 '<center><img src="pic\forestevent\spin.jpg" ></center>'
 	 'Мир вокруг вас завертелся чудесным образом. Вы стали ощущать прилив сил.'
-	 if LOmassage = 1: 
-		 money = money+50000
+	 if LOmassage=1: 
+		 money=money+50000
 		 'В вашей голове звучит голос нимфы: "За то, что был щедр в любви - я одарю тебя в придачу еще и деньгами!"'
 	 end
-	 intel = intel+1
-	 will = will+1
-	 speed = speed+1
-	  health = vital*10
-	  minut = minut + 60
-	 manna = manna+50
-     wipo = wipo+rand(25,50)
-     sexm = sexm+1
-	 nark = 0
-	 horny = 0
-	 NLcock = 0
-	 NLpussy = 0
-	 LOmassage = 0
-	 act '...': gt 'lake'
+	 intel=intel+1
+	 will=will+1
+	 speed=speed+1
+	 set health = vital*10
+	 set minut = minut + 60
+	 manna=manna+50
+     wipo=wipo+rand(25,50)
+     sexm=sexm+1
+	 nark=0
+	 horny=0
+	 NLcock=0
+	 NLpussy=0
+	 LOmassage=0
+	 act '...':gt'lake'
 end
 
-if $ARGS[0] = 'blowjob': 
-	 check = 0
-	 if NLcock<100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+if $ARGS[0]='blowjob':
+	 check=0
+	 if NLcock<100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 if NLcock<= 65: NLcock = NLcock+5
-		 if NLcock>65: NLcock = NLcock+10
-		 if NLpussy<= 65: NLpussy = NLpussy-2
-		 if NLpussy>65: NLpussy = NLpussy-5
-		 picrand = Rand(0,1)
-		 if picrand = 0: '<center><img src = "pic\forestevent\LakeNimf\LNBJ1.jpg" ></center>' 
-		 if picrand = 1: '<center><img src = "pic\forestevent\LakeNimf\LNBJ2.jpg" ></center>' 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 if NLcock<=65:NLcock=NLcock+5
+		 if NLcock>65:NLcock=NLcock+10
+		 if NLpussy<=65:NLpussy=NLpussy-2
+		 if NLpussy>65:NLpussy=NLpussy-5
+		 picrand=Rand(0,1)
+		 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\LNBJ1.jpg" ></center>' 
+		 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\LNBJ2.jpg" ></center>' 
 		 'Нимфа заглатывает ваш член полносью и обрабатывает его своим языком.'
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock>= 100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
-		 check = 1
+		 check=1
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 '<center><img src = "pic\forestevent\LakeNimf\LNbjORG.jpg" ></center>' 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 '<center><img src="pic\forestevent\LakeNimf\LNbjORG.jpg" ></center>' 
 		 'Нимфа предчувствуя ваш оргазм - пытается достать ваш член из рта, но вы ей в этом препятствуете и кончаете прямо в глотку. После того как все кончилось - вы медленно вынимаете ваш член, наблюдая за образовавшимся "мостиком" спермы между ротиком нимфы и вашим членом. Прекрасное зрелище!'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
 end
 
-if $ARGS[0] = 'cunni': 
-	 check = 0
-	 if NLpussy<100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+if $ARGS[0]='cunni':
+	 check=0
+	 if NLpussy<100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 if NLcock<= 65: NLcock = NLcock-2
-		 if NLcock>65: NLcock = NLcock-5
-		 if NLpussy<= 70: NLpussy = NLpussy+10
-		 if NLpussy>70 and NLpussy<90: NLpussy = NLpussy+5
-		 if NLpussy>= 90: NLpussy = NLpussy+2
-		 '<center><img src = "pic\forestevent\LakeNimf\LNcunni.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 if NLcock<=65:NLcock=NLcock-2
+		 if NLcock>65:NLcock=NLcock-5
+		 if NLpussy<=70: NLpussy=NLpussy+10
+		 if NLpussy>70 and NLpussy<90: NLpussy=NLpussy+5
+		 if NLpussy>=90: NLpussy=NLpussy+2
+		 '<center><img src="pic\forestevent\LakeNimf\LNcunni.jpg" ></center>'
 		 'Вы активно вылизываете киску нимфы, особенно клитор. Нимфе это явно нравится!'
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLpussy>= 100 and LOmassage = 0 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLpussy>=100 and LOmassage=0 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
-		 check = 1
+		 check=1
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 if NLcock<= 65: NLcock = NLcock-2
-		 if NLcock>65: NLcock = NLcock-5
-		 '<center><img src = "pic\forestevent\LakeNimf\LNcunniORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 if NLcock<=65:NLcock=NLcock-2
+		 if NLcock>65:NLcock=NLcock-5
+		 '<center><img src="pic\forestevent\LakeNimf\LNcunniORG.jpg" ></center>'
 		 'Вдруг киска нимфы пустила "сок", а из уст сказочной дамы стали слышны звуки удовольствия! Вы довели нимфу до оргазма! Теперь вам можно расслабиться полностью!.'
-		 LOmassage = 1
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 LOmassage=1
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	  if NLpussy>= 100 and LOmassage = 1 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	  if NLpussy>=100 and LOmassage=1 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 if NLcock<= 65: NLcock = NLcock-2
-		 if NLcock>65: NLcock = NLcock-5
-		 NLpussy = NLpussy+2
-		 '<center><img src = "pic\forestevent\LakeNimf\LNcunni.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 if NLcock<=65:NLcock=NLcock-2
+		 if NLcock>65:NLcock=NLcock-5
+		 NLpussy=NLpussy+2
+		 '<center><img src="pic\forestevent\LakeNimf\LNcunni.jpg" ></center>'
 		 'Вы ублажает нимфу под её легкие, сладкие стоны'
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
 end
 
-if $ARGS[0] = 'ReverseCowGirl': 
-	 check = 0
-	 if NLcock<100 and NLpussy<100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+if $ARGS[0]='ReverseCowGirl':
+	 check=0
+	 if NLcock<100 and NLpussy<100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
-		 if NLpussy>= 20: 'Усевшись на ваш член, спиной к вам, - нимфа начинает ритмично "скакать". С каждой минутой всё быстрее и быстрее.'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
+		 if NLpussy>=20: 'Усевшись на ваш член, спиной к вам, - нимфа начинает ритмично "скакать". С каждой минутой всё быстрее и быстрее.'
 		 if NLpussy<20: 'Усадив нимфу на свой член, вы подталкиваете её то вверх - то вниз, ваши проникновения доставляют ей неприятные ощущения.'
-		 NLcock = NLcock+10
-		 if NLpussy<20: NLpussy = NLpussy-2
-		 if NLpussy>= 45: NLpussy = NLpussy+10
-		 if NLpussy<45: NLpussy = NLpussy+5
+		 NLcock=NLcock+10
+		 if NLpussy<20: NLpussy=NLpussy-2
+		 if NLpussy>=45: NLpussy=NLpussy+10
+		 if NLpussy<45: NLpussy=NLpussy+5
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock<100 and NLpussy>= 100 and LOmassage = 0 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock<100 and NLpussy>=100 and LOmassage=0 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 LOmassage = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 LOmassage=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
 		 'Нимфа кричит и скачет как сумасшедшая на вашем члене. Волна оргазма "накрыла её с головй"!'
-		 NLcock = NLcock+10
-		 NLpussy = NLpussy+5
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 NLcock=NLcock+10
+		 NLpussy=NLpussy+5
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock<100 and LOmassage = 1 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock<100 and LOmassage=1 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
 		 'Нимфа неторопливо прыгает на вашем члене и тихо стонет.'
-		 NLpussy = NLpussy+5
-		 NLcock = NLcock+10
+		 NLpussy=NLpussy+5
+		 NLcock=NLcock+10
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock>= 100 and NLpussy>= 100 and LOmassage = 0 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and NLpussy>=100 and LOmassage=0 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 LOmassage = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 LOmassage=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
 		 'Вы достигаете обоюдного оргазма и отправляете поток своего семени в вагину партнерши. Спустя мгновение вы любуетесь смесью "вагинального сока" и спермы вытекающей из киски нимфочки.'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>= 100 and LOmassage = 1 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and LOmassage=1 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
 		 'Вы достигаете оргазма и отправляете поток своего семени в вагину партнерши.'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>= 100 and NLpussy<100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and NLpussy<100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
 		 'Не в состоянии больше противиться оргазму, вы кончаете прямо в киску нимфы!'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
 end
 
-if $ARGS[0] = '69': 
-	 check = 0
-	 if NLcock<100 and NLpussy<100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+if $ARGS[0]='69':
+	 check=0
+	 if NLcock<100 and NLpussy<100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 picrand = Rand(0,3)
-		 if picrand = 0: '<center><img src = "pic\forestevent\LakeNimf\LN691.jpg" ></center>'
-		 if picrand = 1: '<center><img src = "pic\forestevent\LakeNimf\LN692.jpg" ></center>'
-		 if picrand = 2: '<center><img src = "pic\forestevent\LakeNimf\LN693.jpg" ></center>'
-		 if picrand = 3: '<center><img src = "pic\forestevent\LakeNimf\LN694.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 picrand=Rand(0,3)
+		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LN691.jpg" ></center>'
+		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LN692.jpg" ></center>'
+		 if picrand=2: '<center><img src="pic\forestevent\LakeNimf\LN693.jpg" ></center>'
+		 if picrand=3: '<center><img src="pic\forestevent\LakeNimf\LN694.jpg" ></center>'
 		 if NLpussy<20: 'Нимфа стонет, но явно не от радости, при ваших врывах в её киску. Ваши проникновения доставляют ей неприятные ощущения.'
-		 if NLpussy>= 20: 'Наклонив нимфу озера, вы трахаете её сзади. Нимфа стонет в ритм ваших движений!'
-		 if NLcock>= 70: NLcock = NLcock+10
-		 if NLcock<70: NLcock = NLcock+5
-		 if NLpussy<20: NLpussy = NLpussy-2
-		 if NLpussy>= 45: NLpussy = NLpussy+10
-		 if NLpussy<45: NLpussy = NLpussy+5
+		 if NLpussy>=20:'Наклонив нимфу озера, вы трахаете её сзади. Нимфа стонет в ритм ваших движений!'
+		 if NLcock>=70: NLcock=NLcock+10
+		 if NLcock<70: NLcock=NLcock+5
+		 if NLpussy<20: NLpussy=NLpussy-2
+		 if NLpussy>=45: NLpussy=NLpussy+10
+		 if NLpussy<45: NLpussy=NLpussy+5
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock<100 and NLpussy>= 100 and LOmassage = 0 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock<100 and NLpussy>=100 and LOmassage=0 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 LOmassage = 1
-		 picrand = Rand(0,3)
-		 if picrand = 0: '<center><img src = "pic\forestevent\LakeNimf\LN691.jpg" ></center>'
-		 if picrand = 1: '<center><img src = "pic\forestevent\LakeNimf\LN692.jpg" ></center>'
-		 if picrand = 2: '<center><img src = "pic\forestevent\LakeNimf\LN693.jpg" ></center>'
-		 if picrand = 3: '<center><img src = "pic\forestevent\LakeNimf\LN694.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 LOmassage=1
+		 picrand=Rand(0,3)
+		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LN691.jpg" ></center>'
+		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LN692.jpg" ></center>'
+		 if picrand=2: '<center><img src="pic\forestevent\LakeNimf\LN693.jpg" ></center>'
+		 if picrand=3: '<center><img src="pic\forestevent\LakeNimf\LN694.jpg" ></center>'
 		 'Нимфа: Да! Ох...как же хорошо...как же я ЭТО не испытывала'
 		 'Нимфа кончила. Еще одна удовлетворенная женщина на вашем счету!'
-		 if NLcock>= 70: NLcock = NLcock+10
-		 if NLcock<70: NLcock = NLcock+5
-		 NLpussy = NLpussy+5
+		 if NLcock>=70: NLcock=NLcock+10
+		 if NLcock<70: NLcock=NLcock+5
+		 NLpussy=NLpussy+5
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock<100 and LOmassage = 1 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock<100 and LOmassage=1 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 picrand = Rand(0,3)
-		 if picrand = 0: '<center><img src = "pic\forestevent\LakeNimf\LN691.jpg" ></center>'
-		 if picrand = 1: '<center><img src = "pic\forestevent\LakeNimf\LN692.jpg" ></center>'
-		 if picrand = 2: '<center><img src = "pic\forestevent\LakeNimf\LN693.jpg" ></center>'
-		 if picrand = 3: '<center><img src = "pic\forestevent\LakeNimf\LN694.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 picrand=Rand(0,3)
+		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LN691.jpg" ></center>'
+		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LN692.jpg" ></center>'
+		 if picrand=2: '<center><img src="pic\forestevent\LakeNimf\LN693.jpg" ></center>'
+		 if picrand=3: '<center><img src="pic\forestevent\LakeNimf\LN694.jpg" ></center>'
 		 'Нимфа слегка попискивает во время ваших проникновений.'
-		 if NLcock>= 70: NLcock = NLcock+10
-		 if NLcock<70: NLcock = NLcock+5
-		 NLpussy = NLpussy+5
+		 if NLcock>=70: NLcock=NLcock+10
+		 if NLcock<70: NLcock=NLcock+5
+		 NLpussy=NLpussy+5
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock>= 100 and NLpussy>= 100 and LOmassage = 0 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and NLpussy>=100 and LOmassage=0 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 LOmassage = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 LOmassage=1
+		 '<center><img src="pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
 		 'Вы достигаете обоюдного оргазма и отправляете поток своего семени на попку партнерши.'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>= 100 and LOmassage = 1 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and LOmassage=1 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 '<center><img src="pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
 		 'Вы достигаете оргазма и отправляете поток своего семени на попку партнерши.'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>= 100 and NLpussy<100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and NLpussy<100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 '<center><img src="pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
 		 'Не в состоянии больше противиться оргазму, вы кончаете на попку нимфы!'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
 end
 
-if $ARGS[0] = 'Missionary': 
-	 check = 0
-	 if NLcock<100 and NLpussy<100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+if $ARGS[0]='Missionary':
+	 check=0
+	 if NLcock<100 and NLpussy<100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 picrand = Rand(0,3)
-		 if picrand = 0: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
-		 if picrand = 1: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary2.jpg" ></center>'
-		 if picrand = 2: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary3.jpg" ></center>'
-		 if picrand = 3: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary4.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 picrand=Rand(0,3)
+		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
+		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LNMissionary2.jpg" ></center>'
+		 if picrand=2: '<center><img src="pic\forestevent\LakeNimf\LNMissionary3.jpg" ></center>'
+		 if picrand=3: '<center><img src="pic\forestevent\LakeNimf\LNMissionary4.jpg" ></center>'
 		 if NLpussy<20: 'Нимфа стонет, но явно не от радости, при ваших врывах в её киску. Ваши проникновения доставляют ей неприятные ощущения.'
-		 if NLpussy>= 20: 'Вы активно дрючите нимфу лежа на боку. Её киска охотно принимает ваши проникновения.'
-		 if NLcock>= 65: NLcock = NLcock+10
-		 if NLcock<65: NLcock = NLcock+5
-		 if NLpussy<20: NLpussy = NLpussy-2
-		 if NLpussy>= 70: NLpussy = NLpussy+15
-		 if NLpussy<70: NLpussy = NLpussy+10
+		 if NLpussy>=20:'Вы активно дрючите нимфу лежа на боку. Её киска охотно принимает ваши проникновения.'
+		 if NLcock>=65: NLcock=NLcock+10
+		 if NLcock<65: NLcock=NLcock+5
+		 if NLpussy<20: NLpussy=NLpussy-2
+		 if NLpussy>=70: NLpussy=NLpussy+15
+		 if NLpussy<70: NLpussy=NLpussy+10
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock<100 and NLpussy>= 100 and LOmassage = 0 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock<100 and NLpussy>=100 and LOmassage=0 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 LOmassage = 1
-		 picrand = Rand(0,3)
-		 if picrand = 0: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
-		 if picrand = 1: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary2.jpg" ></center>'
-		 if picrand = 2: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary3.jpg" ></center>'
-		 if picrand = 3: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary4.jpg" ></center>'
-		 'Нифа покраснела и забилась в конвульсиях! Оргазм доставлен по адресу : )'
-		 if NLcock>= 65: NLcock = NLcock+10
-		 if NLcock<65: NLcock = NLcock+5
-		 NLpussy = NLpussy+5
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 LOmassage=1
+		 picrand=Rand(0,3)
+		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
+		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LNMissionary2.jpg" ></center>'
+		 if picrand=2: '<center><img src="pic\forestevent\LakeNimf\LNMissionary3.jpg" ></center>'
+		 if picrand=3: '<center><img src="pic\forestevent\LakeNimf\LNMissionary4.jpg" ></center>'
+		 'Нифа покраснела и забилась в конвульсиях! Оргазм доставлен по адресу :)'
+		 if NLcock>=65: NLcock=NLcock+10
+		 if NLcock<65: NLcock=NLcock+5
+		 NLpussy=NLpussy+5
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock<100 and LOmassage = 1 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock<100 and LOmassage=1 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 picrand = Rand(0,3)
-		 if picrand = 0: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
-		 if picrand = 1: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary2.jpg" ></center>'
-		 if picrand = 2: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary3.jpg" ></center>'
-		 if picrand = 3: '<center><img src = "pic\forestevent\LakeNimf\LNMissionary4.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 picrand=Rand(0,3)
+		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
+		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LNMissionary2.jpg" ></center>'
+		 if picrand=2: '<center><img src="pic\forestevent\LakeNimf\LNMissionary3.jpg" ></center>'
+		 if picrand=3: '<center><img src="pic\forestevent\LakeNimf\LNMissionary4.jpg" ></center>'
 		 'Обессиленная от оргазма нимфа реагирует на ваше движение легкими стонами.'
-		 if NLcock>= 65: NLcock = NLcock+10
-		 if NLcock<65: NLcock = NLcock+5
-		 NLpussy = NLpussy+5
+		 if NLcock>=65: NLcock=NLcock+10
+		 if NLcock<65: NLcock=NLcock+5
+		 NLpussy=NLpussy+5
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 act 'Попросить нимфу продолжать сосать ваш член': 
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 act 'Попросить нимфу продолжать сосать ваш член':
 			 gt 'LNsex','blowjob'
 		 end
-		 act 'Ублажать нимфу языком': 
+		 act 'Ублажать нимфу языком':
 			 gt 'LNsex','cunni'
 		 end
-		 if (NLcock>= 20): 
-			 act 'Поза "Reverse CowGirl"': 
+		 if (NLcock>=20):
+			 act 'Поза "Reverse CowGirl"':
 				 gt 'LNsex','ReverseCowGirl'
 			 end
-			 act 'Трахать нимфу раком': 
+			 act 'Трахать нимфу раком':
 				 gt 'LNsex','69'
 			 end
-			 act 'Миссионерская поза': 
+			 act 'Миссионерская поза':
 				 gt 'LNsex','Missionary'
 			 end
 		 end
 	 end
-	 if NLcock>= 100 and NLpussy>= 100 and LOmassage = 0 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and NLpussy>=100 and LOmassage=0 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 LOmassage = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 LOmassage=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
 		 'Вы достигаете обоюдного оргазма и отправляете поток своего семени в вагину партнерши. Спустя мгновение вы любуетесь смесью "вагинального сока" и спермы вытекающей из киски нимфочки.'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>= 100 and LOmassage = 1 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and LOmassage=1 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
 		 'Вы достигаете оргазма и отправляете поток своего семени в вагину партнерши.'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>= 100 and NLpussy<100 and check = 0: 
-		 if NLcock<0: NLcock = 0
-		 if NLpussy<0: NLpussy = 0
+	 if NLcock>=100 and NLpussy<100 and check=0:
+		 if NLcock<0:NLcock=0
+		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
-		 if (NLcock>= 20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
-		 if (NLcock>= 40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
-		 if (NLcock>= 65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
-		 if (NLcock>= 85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
-		 if (NLcock>= 100): PL 'Вы достигли оргазма!'
+		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
+		 if (NLcock>=40 and NLcock<65): PL 'Вы сильно возбуждены. У вас мощный стояк.'
+		 if (NLcock>=65 and NLcock<85): PL 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+		 if (NLcock>=85 and NLcock<100): PL 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+		 if (NLcock>=100): PL 'Вы достигли оргазма!'
 		 if (NLpussy<20): PL 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
-		 if (NLpussy>= 20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
-		 if (NLpussy>= 40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
-		 if (NLpussy>= 65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
-		 if (NLpussy>= 85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
-		 if (NLpussy>= 100): PL 'Нимфа во власти оргазма!'
-		 check = 1
-		 '<center><img src = "pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
+		 if (NLpussy>=20 and NLpussy<40): PL 'Нимфа возбуждена. Её влагалище увлажнилось.'
+		 if (NLpussy>=40 and NLpussy<65): PL 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
+		 check=1
+		 '<center><img src="pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
 		 'Не в состоянии больше противиться оргазму, вы кончаете прямо в глубь киски нимфы!'
-		 act '...': 
+		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end

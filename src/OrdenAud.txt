@@ -8,63 +8,63 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-if hour = 9 or hour = 11 or hour = 13 or hour = 15: lektia = 1
-if hour = 8 or hour = 10 or hour = 12 or hour = 14: lektia = 2
-if hour<8 or hour>15: lektia = 0
+if hour=9 or hour=11 or hour=13 or hour=15:lektia=1
+if hour=8 or hour=10 or hour=12 or hour=14:lektia=2
+if hour<8 or hour>15:lektia=0
 '<center><H4>Лекционная аудитория</H4></center>'
-if lektia = 0: '<center><img src = "pic/Evedon/ordenAud.jpg" ></center>'
-if lektia = 1: '<center><img src = "pic/Evedon/ordenAud1.jpg" ></center>'
-if lektia = 2: '<center><img src = "pic/Evedon/ordenAud2.jpg" ></center>'
+if lektia=0:'<center><img src="pic/Evedon/ordenAud.jpg" ></center>'
+if lektia=1:'<center><img src="pic/Evedon/ordenAud1.jpg" ></center>'
+if lektia=2:'<center><img src="pic/Evedon/ordenAud2.jpg" ></center>'
 'Вы прослушали <<lektion>> лекций'
-if lektia = 0: 'В классе тихо и пусто. Никого нет.'
+if lektia=0:'В классе тихо и пусто. Никого нет.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 !ильран
 
-     if lektia = 1 and lektion<50: 
+     if lektia=1 and lektion<50:
      'В классе во всю идет урок. Преподаватель из младших магистров что-то чертит на доске и тычет туда указкой.'
-         act 'Сесть за парту': 
+         act 'Сесть за парту':
          cla
-         hour = hour+1
-         minut = 0
-         exp = exp+RAND(20,30)
-         kredit = kredit+5
-         lektion = lektion+1
-         son = son-1
-         golod = golod-1
+         hour=hour+1
+         minut=0
+         exp=exp+RAND(20,30)
+         kredit=kredit+5
+         lektion=lektion+1
+         son=son-1
+         golod=golod-1
          'Вы сели за парту и стали слушать учителя.'
-         gs 'lekteme'
+         gs'lekteme'
          'В конце урока вы подумали "Боже, какая нудятина, хорошо хоть за посещение лекций дают кредиты."'
-         act 'Встать': gt $CURLOC
+         act 'Встать':gt $CURLOC
          end
      end
      
-     if lektia = 2: 
+     if lektia=2:
      'Перемена. Половина учеников вышла из класса по своим делам. Учителя тоже нет.'
-         act 'Бездельничать в классе': 
+         act 'Бездельничать в классе':
          cla
-         hour = hour+1
-         minut = 0
-         son = son-1
-         golod = golod-1
-         ilrand = RAND(0,1)
-             if penis>0 or ilrand = 0: 
+         hour=hour+1
+         minut=0
+         son=son-1
+         golod=golod-1
+         ilrand=RAND(0,1)
+             if penis>0 or ilrand=0:
              'Вы пробездельничали в классе целый час.'
              end
-             if penis<= 0 and ilrand = 1: 
-             gs 'ilranTeme'
+             if penis<=0 and ilrand=1:
+             gs'ilranTeme'
              exit
              end
-         act '.......': gt $CURLOC
+         act '.......':gt $CURLOC
          end
      end
 
-	 act 'Уйти': 
-	 minut += 5
-	 gt 'foOrden'
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'foOrden'
 	 end
 --- OrdenAud ---------------------------------
 

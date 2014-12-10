@@ -6,117 +6,117 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 
 '<center><H4>Ковен Вапулы</H4></center>'
-'<center><img src = "pic/Evedon/vapuladungeon.jpg" ></center>'
+'<center><img src="pic/Evedon/vapuladungeon.jpg" ></center>'
 'Мрачная и навевающая ужас пещера, в которой обитают пустынные ведьмы. В пещере пустынно и тихо. Но вы чувствуете в пещере, что-то живое потрясающей мощности и оно вас заметило и следит за вами.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 
-if vapulaFight = 0: 
-	 act 'Уйти': 
-	 minut += 5
-	 gt 'desertW1'
+if vapulaFight=0:
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'desertW1'
 	 end
 
-	 act 'Идти в глубь пещеры': 
+	 act 'Идти в глубь пещеры':
 	 cla
 	 *clr
-	 '<center><img src = "pic/Evedon/vapuladungeon.jpg" ></center>'
+	 '<center><img src="pic/Evedon/vapuladungeon.jpg" ></center>'
 	 'В пещере раздается мощный женский голос "Я вижу смертное существо само идет ко мне, ну что же иди к своей будущей хозяйке, животное."'
-		 act 'Дать деру из пещеры': gt 'desertW1'
+		 act 'Дать деру из пещеры':gt'desertW1'
 		 
-		 act 'Идти дальше.': 
+		 act 'Идти дальше.':
 		 cla
 		 *clr
 		 '<center><H4>Зал Вапулы</H4></center>'
-		 '<center><img src = "pic/EvedonTA/vapula.jpg" ></center>'
+		 '<center><img src="pic/EvedonTA/vapula.jpg" ></center>'
 		 'В просторном зале на стоящей на четвереньках ведьме сидит прекрасная женщина и смотрит на вас куря трубку.'
 		 'Она произносит сильным голосом, "Я Вапула. А тебе должно знать свое место, животное. Упади на колени и умоляй меня о прощении, за то что побеспокоил меня."'
 		 'Вы чувствуете как страшная сила наваливается на ваш разум, пытаясь сломать вас.(проверка на уровень, магичность и волю)'
-			 vma = lvl+(magika*3)+(will*2) 
-             if vma<110: 
+			 vma=lvl+(magika*3)+(will*2) 
+             if vma<110:
 			 'Она так величественна и прекрасна, думаете вы, каким же надо было быть дураком, чтобы хотя бы подумать о том, чтобы бросить ей вызов. Вы с готовностью падаете на колени и ползете к Вапуле умоляя ее в слезах о прощении.'
-			     act 'Молить о пощаде': gt 'SLAVECELL'
+			     act 'Молить о пощаде':gt'SLAVECELL'
 			 end
-			 if vma>= 110: 
+			 if vma>=110:
 			 'Ваш разум выдерживает первый натиск Вапулы. Вы качаете головой, как бы пытаясь стряхнуть дрему навеянную Вапулой. Она ухмыляется и встает со спины ведьмы, служащей ей чем то вроде кресла. "Ну чтож, тем интересней будет тебя сломать, животное."'
-			     act 'Драться с Вапулой': 
+			     act 'Драться с Вапулой':
 			     cla
-			     vapulaFight = 1
-			     $nameV = 'Суккуб Вапула'
-			     lvlv = 550
-				 strenV = 100
-				 speedV = 200
-				 agilV = 200
-				 vitalV = 1000
-				 intelv = 1000
-				 willv = 230
-				 program = 22
-				 healthV = vitalV*10
-				 mannaV = intelV*10+intel*20
-				 wipoV = willV*10
-				 monster = 12
-				 NORUN = 1
-			     gt 'before'
+			     vapulaFight=1
+			     $nameV='Суккуб Вапула'
+			     lvlv=550
+				 strenV=100
+				 speedV=200
+				 agilV=200
+				 vitalV=1000
+				 intelv=1000
+				 willv=230
+				 program=22
+				 healthV=vitalV*10
+				 mannaV=intelV*10+intel*20
+				 wipoV=willV*10
+				 monster=12
+				 NORUN=1
+			     gt'before'
 			     end 
 			 end
 		 end
 	end
 end
 
-if vapulaFight = 1: 
-vapulabain = 1
+if vapulaFight=1:
+vapulabain=1
 'Вапула повержена и лежит на полу без сил. "Не может быть! Ты всего лишь человек, как ты сумел победить меня?"'
 
-	 act 'Где логово Сераф?': 
+	 act 'Где логово Сераф?':
 	 cla
 	 *clr
-	 vapulaFight = 2
-	 minut += 5
-	 DOM = DOM+1
+	 vapulaFight=2
+	 minut=minut+5
+	 DOM=DOM+1
 	 'Вы наступили суккубихе на горло и спросили где логово Сераф.'
 	 '(Вапула) - так тебе Сераф нужна? Я все скажу, только обещай не убивать меня.'
-	     act 'Говори тварь. Я обещаю не убивать тебя если признаешься.': 
+	     act 'Говори тварь. Я обещаю не убивать тебя если признаешься.':
 	     cla
 	     *clr
-	     DOM = DOM+1
+	     DOM=DOM+1
 	     '(Вы) - Говори тварь. Я обещаю не убивать тебя если признаешься.'
 	     '(Вапула) - Оно прямо под павшей статуей Мары около Тель Адре. Пожалуйста, я все что знала сказала, не убивай меня а?'
-	         act 'Отпустить': 
+	         act 'Отпустить':
 	         cla
 	         *clr
 	         'Вы дали смачного пенделя по округлым ягодицам суккуба и плюнули на нее, "проваливай тварь"'
-             act 'Уйти': gt 'desertW1'
+             act 'Уйти':gt'desertW1'
              end
              
-             act 'Убить': 
+             act 'Убить':
 	         cla
 	         *clr
-	         vapulaFight = 100
+	         vapulaFight=100
 	         'Вы наступили ей ногой на горло по сильнее, она задохнулась и начала пытаться убрать вашу ногу со своего горла. Через некоторое время Вапула умерла.'
-             act 'Уйти': gt 'desertW1'
+             act 'Уйти':gt'desertW1'
              end
              
-             if penis>0: 
-				 act 'Изнасиловать': 
+             if penis>0:
+				 act 'Изнасиловать':
 				 cla
 				 *clr
-				 vapulaFight = 3
-				 girl = girl+1
-				 sexm = sexm+1
-				 DOM = DOM+1
-				 '<center><img src = "pic/EvedonTA/vapulaOver.jpg" ></center>'
+				 vapulaFight=3
+				 girl=girl+1
+				 sexm=sexm+1
+				 DOM=DOM+1
+				 '<center><img src="pic/EvedonTA/vapulaOver.jpg" ></center>'
 				 'Вы грубо оттрахали Вапулу которая была раздавлена своим поражением и не сопротивлялась. После изнасилования вам пришла в голову идея наказать Вапулу ее же средствами. Вы взяли ее за волосы и оттащили в одну из комнат где стоял доильный аппарат.'
-				 	 act 'Наказать Вапулу': 
+				 	 act 'Наказать Вапулу':
 					 cla
 					 *clr
-					 '<center><img src = "pic/EvedonTA/vapulaOver2.jpg" ></center>'
+					 '<center><img src="pic/EvedonTA/vapulaOver2.jpg" ></center>'
 					 'Вы приковали Вапулу к ее же доильному аппарату и подключили его. Аппарат начал трахать и доить Вапулу, а та могла только стонать от боли и наслаждения и кончать.'
 					 
-					 act 'Уйти': gt 'desertW1'
+					 act 'Уйти':gt'desertW1'
 					 end
 				 end
              end
@@ -126,37 +126,37 @@ vapulabain = 1
 end
 
 
-if vapulaFight = 2 or vapulaFight = 100: 
+if vapulaFight=2 or vapulaFight=100:
 'После уничтожения ковена, в пещере явно никто не живет.'
 
-	 act 'Уйти': 
-	 minut += 5
-	 gt 'desertW1'
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'desertW1'
 	 end
 
 end
 
-if vapulaFight = 3: 
+if vapulaFight=3:
 'В пещере слышатся стоны наказанной вами суккуба Вапулы.'
 
-	 act 'Уйти': 
-	 minut += 5
-	 gt 'desertW1'
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'desertW1'
 	 end
 	 
-	 if vapulaMilkDay!day: 
-		 act 'Проведать Вапулу': 
+	 if vapulaMilkDay!day:
+		 act 'Проведать Вапулу':
 		 cla
 		 *clr
-		 minut += 30
-		 vaprand = RAND(3,5)
-		 sucmilk = sucmilk+vaprand
-		 DOM = DOM+1
-		 vapulaMilkDay = day
-		 '<center><img src = "pic/EvedonTA/vapulaOver2.jpg" ></center>'
+		 minut=minut+30
+		 vaprand=RAND(3,5)
+		 sucmilk=sucmilk+vaprand
+		 DOM=DOM+1
+		 vapulaMilkDay=day
+		 '<center><img src="pic/EvedonTA/vapulaOver2.jpg" ></center>'
 		 'Зайдя к Вапуле вы увидели, что она как и всегда может только кончать и мычать. За время вашего отсутствия аппарат надоил из Вапулы <<vaprand>> молока суккуба.'
 		 
-		 act 'Уйти': gt 'desertW1'
+		 act 'Уйти':gt'desertW1'
 		 end
 	 
 	 

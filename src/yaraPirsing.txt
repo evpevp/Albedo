@@ -8,1403 +8,1403 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-'<center><img src = "pic/EvedonNarod/iara.jpg"></center>'
+'<center><img src="pic/EvedonNarod/iara.jpg"></center>'
 'Вы пришли домой к Яре. Там действительно стоит прочное кресло и разные иглы для пирсинга.'
 'Она говорит вам "Запомни. Пирсинг сделать ты можешь только один раз. Я не вытащу его обратно. Поэтому выбирай тщательно."'
 'У пирсинга есть один недостаток, любой пирсинг увеличивает покорность.'
 
-act 'Уйти': 
-minut += 5
- gt 'teladareW'
+act 'Уйти':
+minut=minut+5
+gt'teladareW'
 end
 
-     if pirsingLip = 0: 
-		 act 'Пирсинг губ': 
+     if pirsingLip=0:
+		 act 'Пирсинг губ':
 		 cla
 		 *clr
 		 'Проколоть губу можно кольцом или штангой, разница только эстетическая, все заклинания одинаковые, 5 к навыку или 1 к магичности.'
-			 act 'Кольцо в губу': 
+			 act 'Кольцо в губу':
 			 cla
 			 *clr
 			 'Я могу вставить тебе кольцо в губу за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-				 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+				 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingLip = 1
-				     stren = stren+5
-				     pirsingLipN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=1
+				     stren=stren+5
+				     pirsingLipN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingLip = 1
-				     speed = speed+5
-				     pirsingLipN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=1
+				     speed=speed+5
+				     pirsingLipN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingLip = 1
-				     agil = agil+5
-				     pirsingLipN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=1
+				     agil=agil+5
+				     pirsingLipN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingLip = 1
-				     vital = vital+5
-				     pirsingLipN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=1
+				     vital=vital+5
+				     pirsingLipN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingLip = 1
-				     intel = intel+5
-				     pirsingLipN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=1
+				     intel=intel+5
+				     pirsingLipN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingLip = 1
-				     will = will+5
-				     pirsingLipN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=1
+				     will=will+5
+				     pirsingLipN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingLip = 1
-				     magika = magika+1
-				     pirsingLipN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=1
+				     magika=magika+1
+				     pirsingLipN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 
 			 end
 			 
-			 act 'Штангу в губу': 
+			 act 'Штангу в губу':
 			 cla
 			 *clr
 			 'Я могу вставить тебе штангу в губу за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-			 	 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+			 	 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingLip = 2
-				     stren = stren+5
-				     pirsingLipN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=2
+				     stren=stren+5
+				     pirsingLipN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingLip = 2
-				     speed = speed+5
-				     pirsingLipN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=2
+				     speed=speed+5
+				     pirsingLipN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingLip = 2
-				     agil = agil+5
-				     pirsingLipN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=2
+				     agil=agil+5
+				     pirsingLipN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingLip = 2
-				     vital = vital+5
-				     pirsingLipN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=2
+				     vital=vital+5
+				     pirsingLipN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingLip = 2
-				     intel = intel+5
-				     pirsingLipN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=2
+				     intel=intel+5
+				     pirsingLipN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingLip = 2
-				     will = will+5
-				     pirsingLipN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=2
+				     will=will+5
+				     pirsingLipN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingLip = 2
-				     magika = magika+1
-				     pirsingLipN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLip=2
+				     magika=magika+1
+				     pirsingLipN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам губу. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 end
 			 
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 		 end
      end
      
      
      
-     if pirsin gt onk = 0: 
-		 act 'Пирсинг языка': 
+     if pirsingTonk=0:
+		 act 'Пирсинг языка':
 		 cla
 		 *clr
 		 'Проколоть язык можно только штангой, заклинания одинаковой силы, 5 к навыку или 1 к магичности.'
-			 act 'Штангу в язык': 
+			 act 'Штангу в язык':
 			 cla
 			 *clr
 			 'Я могу вставить тебе штангу в язык за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-			 	 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+			 	 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsin gt onk = 1
-				     stren = stren+5
-				     pirsin gt onkN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingTonk=1
+				     stren=stren+5
+				     pirsingTonkN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам язык. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsin gt onk = 1
-				     speed = speed+5
-				     pirsin gt onkN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingTonk=1
+				     speed=speed+5
+				     pirsingTonkN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам язык. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsin gt onk = 1
-				     agil = agil+5
-				     pirsin gt onkN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingTonk=1
+				     agil=agil+5
+				     pirsingTonkN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам язык. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsin gt onk = 1
-				     vital = vital+5
-				     pirsin gt onkN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingTonk=1
+				     vital=vital+5
+				     pirsingTonkN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам язык. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsin gt onk = 1
-				     intel = intel+5
-				     pirsin gt onkN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingTonk=1
+				     intel=intel+5
+				     pirsingTonkN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам язык. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsin gt onk = 1
-				     will = will+5
-				     pirsin gt onkN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingTonk=1
+				     will=will+5
+				     pirsingTonkN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам язык. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsin gt onk = 1
-				     magika = magika+1
-				     pirsin gt onkN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingTonk=1
+				     magika=magika+1
+				     pirsingTonkN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам язык. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 end
 			 
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 		 end
      end
 
 
-     if pirsingBrow = 0: 
-		 act 'Пирсинг брови': 
+     if pirsingBrow=0:
+		 act 'Пирсинг брови':
 		 cla
 		 *clr
 		 'Проколоть бровь можно кольцом или штангой, разница только эстетическая, все заклинания одинаковые, 5 к навыку или 1 к магичности.'
-			 act 'Кольцо в бровь': 
+			 act 'Кольцо в бровь':
 			 cla
 			 *clr
 			 'Я могу вставить тебе кольцо в бровь за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-				 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+				 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingBrow = 1
-				     stren = stren+5
-				     pirsingBrowN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=1
+				     stren=stren+5
+				     pirsingBrowN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingBrow = 1
-				     speed = speed+5
-				     pirsingBrowN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=1
+				     speed=speed+5
+				     pirsingBrowN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingBrow = 1
-				     agil = agil+5
-				     pirsingBrowN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=1
+				     agil=agil+5
+				     pirsingBrowN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingBrow = 1
-				     vital = vital+5
-				     pirsingBrowN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=1
+				     vital=vital+5
+				     pirsingBrowN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingBrow = 1
-				     intel = intel+5
-				     pirsingBrowN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=1
+				     intel=intel+5
+				     pirsingBrowN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingBrow = 1
-				     will = will+5
-				     pirsingBrowN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=1
+				     will=will+5
+				     pirsingBrowN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingBrow = 1
-				     magika = magika+1
-				     pirsingBrowN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=1
+				     magika=magika+1
+				     pirsingBrowN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 
 			 end
 			 
-			 act 'Штангу в бровь': 
+			 act 'Штангу в бровь':
 			 cla
 			 *clr
 			 'Я могу вставить тебе штангу в бровь за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-			 	 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+			 	 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingBrow = 2
-				     stren = stren+5
-				     pirsingBrowN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=2
+				     stren=stren+5
+				     pirsingBrowN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingBrow = 2
-				     speed = speed+5
-				     pirsingBrowN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=2
+				     speed=speed+5
+				     pirsingBrowN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingBrow = 2
-				     agil = agil+5
-				     pirsingBrowN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=2
+				     agil=agil+5
+				     pirsingBrowN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingBrow = 2
-				     vital = vital+5
-				     pirsingBrowN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=2
+				     vital=vital+5
+				     pirsingBrowN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingBrow = 2
-				     intel = intel+5
-				     pirsingBrowN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=2
+				     intel=intel+5
+				     pirsingBrowN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingBrow = 2
-				     will = will+5
-				     pirsingBrowN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=2
+				     will=will+5
+				     pirsingBrowN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingBrow = 2
-				     magika = magika+1
-				     pirsingBrowN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingBrow=2
+				     magika=magika+1
+				     pirsingBrowN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 end
 			 
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 		 end
      end
 
 
-     if pirsingEar = 0: 
-		 act 'Сережки в уши': 
+     if pirsingEar=0:
+		 act 'Сережки в уши':
 		 cla
 		 *clr
 		 'Проколоть уши можно сержками, все заклинания одинаковые, 5 к навыку или 1 к магичности.'
-			 act 'Проколоть уши': 
+			 act 'Проколоть уши':
 			 cla
 			 *clr
 			 'Я могу вставить тебе кольцо в ухо за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-				 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+				 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingEar = 1
-				     stren = stren+5
-				     pirsingEarN = 1
-				     SUB = SUB+1
-				     gem = gem-5000
+				     pirsingEar=1
+				     stren=stren+5
+				     pirsingEarN=1
+				     SUB=SUB+1
+				     gem=gem-5000
 				     'Яра взяла иглу и проколола вам уши. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingEar = 1
-				     speed = speed+5
-				     pirsingEarN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingEar=1
+				     speed=speed+5
+				     pirsingEarN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам уши. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingEar = 1
-				     agil = agil+5
-				     pirsingEarN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingEar=1
+				     agil=agil+5
+				     pirsingEarN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам уши. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingEar = 1
-				     vital = vital+5
-				     pirsingEarN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingEar=1
+				     vital=vital+5
+				     pirsingEarN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам уши. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingEar = 1
-				     intel = intel+5
-				     pirsingEarN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingEar=1
+				     intel=intel+5
+				     pirsingEarN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам уши. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingEar = 1
-				     will = will+5
-				     pirsingEarN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingEar=1
+				     will=will+5
+				     pirsingEarN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам уши. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingEar = 1
-				     magika = magika+1
-				     pirsingEarN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingEar=1
+				     magika=magika+1
+				     pirsingEarN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам уши. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 
 			 end
 			 
 			 
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 		 end
      end
      
      
-     if pirsingNipple = 0: 
-		 act 'Пирсинг сосков': 
+     if pirsingNipple=0:
+		 act 'Пирсинг сосков':
 		 cla
 		 *clr
 		 'Проколоть соски можно кольцом или штангой, разница только эстетическая, все заклинания одинаковые, 5 к навыку или 1 к магичности.'
-			 act 'Кольцо в соски': 
+			 act 'Кольцо в соски':
 			 cla
 			 *clr
 			 'Я могу вставить тебе кольца в соски за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-				 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+				 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingNipple = 1
-				     stren = stren+5
-				     pirsingNippleN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=1
+				     stren=stren+5
+				     pirsingNippleN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingNipple = 1
-				     speed = speed+5
-				     pirsingNippleN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=1
+				     speed=speed+5
+				     pirsingNippleN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingNipple = 1
-				     agil = agil+5
-				     pirsingNippleN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=1
+				     agil=agil+5
+				     pirsingNippleN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingNipple = 1
-				     vital = vital+5
-				     pirsingNippleN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=1
+				     vital=vital+5
+				     pirsingNippleN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingNipple = 1
-				     intel = intel+5
-				     pirsingNippleN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=1
+				     intel=intel+5
+				     pirsingNippleN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingNipple = 1
-				     will = will+5
-				     pirsingNippleN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=1
+				     will=will+5
+				     pirsingNippleN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingNipple = 1
-				     magika = magika+1
-				     pirsingNippleN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=1
+				     magika=magika+1
+				     pirsingNippleN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 
 			 end
 			 
-			 act 'Штангу в соски': 
+			 act 'Штангу в соски':
 			 cla
 			 *clr
 			 'Я могу вставить тебе штангу в бровь за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-			 	 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+			 	 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingNipple = 2
-				     stren = stren+5
-				     pirsingNippleN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=2
+				     stren=stren+5
+				     pirsingNippleN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingNipple = 2
-				     speed = speed+5
-				     pirsingNippleN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=2
+				     speed=speed+5
+				     pirsingNippleN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingNipple = 2
-				     agil = agil+5
-				     pirsingNippleN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=2
+				     agil=agil+5
+				     pirsingNippleN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingNipple = 2
-				     vital = vital+5
-				     pirsingNippleN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=2
+				     vital=vital+5
+				     pirsingNippleN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingNipple = 2
-				     intel = intel+5
-				     pirsingNippleN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=2
+				     intel=intel+5
+				     pirsingNippleN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingNipple = 2
-				     will = will+5
-				     pirsingNippleN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=2
+				     will=will+5
+				     pirsingNippleN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingNipple = 2
-				     magika = magika+1
-				     pirsingNippleN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingNipple=2
+				     magika=magika+1
+				     pirsingNippleN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 end
 			 
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 		 end
      end
      
      
-     if pirsingLabia = 0: 
-		 act 'Пирсинг пупка': 
+     if pirsingLabia=0:
+		 act 'Пирсинг пупка':
 		 cla
 		 *clr
 		 'Проколоть пупок можно кольцом или штангой, разница только эстетическая, все заклинания одинаковые, 5 к навыку или 1 к магичности.'
-			 act 'Кольцо в пупок': 
+			 act 'Кольцо в пупок':
 			 cla
 			 *clr
 			 'Я могу вставить тебе кольцо в пупок за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-				 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+				 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingLabia = 1
-				     stren = stren+5
-				     pirsingLabiaN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=1
+				     stren=stren+5
+				     pirsingLabiaN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingLabia = 1
-				     speed = speed+5
-				     pirsingLabiaN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=1
+				     speed=speed+5
+				     pirsingLabiaN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingLabia = 1
-				     agil = agil+5
-				     pirsingLabiaN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=1
+				     agil=agil+5
+				     pirsingLabiaN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingLabia = 1
-				     vital = vital+5
-				     pirsingLabiaN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=1
+				     vital=vital+5
+				     pirsingLabiaN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingLabia = 1
-				     intel = intel+5
-				     pirsingLabiaN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=1
+				     intel=intel+5
+				     pirsingLabiaN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingLabia = 1
-				     will = will+5
-				     pirsingLabiaN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=1
+				     will=will+5
+				     pirsingLabiaN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingLabia = 1
-				     magika = magika+1
-				     pirsingLabiaN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=1
+				     magika=magika+1
+				     pirsingLabiaN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 
 			 end
 			 
-			 act 'Штангу в пупок': 
+			 act 'Штангу в пупок':
 			 cla
 			 *clr
 			 'Я могу вставить тебе штангу в пупок за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-			 	 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+			 	 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingLabia = 2
-				     stren = stren+5
-				     pirsingLabiaN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=2
+				     stren=stren+5
+				     pirsingLabiaN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingLabia = 2
-				     speed = speed+5
-				     pirsingLabiaN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=2
+				     speed=speed+5
+				     pirsingLabiaN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingLabia = 2
-				     agil = agil+5
-				     pirsingLabiaN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=2
+				     agil=agil+5
+				     pirsingLabiaN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingLabia = 2
-				     vital = vital+5
-				     pirsingLabiaN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=2
+				     vital=vital+5
+				     pirsingLabiaN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingLabia = 2
-				     intel = intel+5
-				     pirsingLabiaN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=2
+				     intel=intel+5
+				     pirsingLabiaN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingLabia = 2
-				     will = will+5
-				     pirsingLabiaN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=2
+				     will=will+5
+				     pirsingLabiaN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingLabia = 2
-				     magika = magika+1
-				     pirsingLabiaN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingLabia=2
+				     magika=magika+1
+				     pirsingLabiaN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам бровь. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 end
 			 
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 		 end
      end
 
 
-     if pirsingPussy = 0 and vagina>0: 
-		 act 'Пирсинг клитора': 
+     if pirsingPussy=0 and vagina>0:
+		 act 'Пирсинг клитора':
 		 cla
 		 *clr
 		 'Проколоть клитор можно кольцом или штангой, разница только эстетическая, все заклинания одинаковые, 5 к навыку или 1 к магичности.'
-			 act 'Кольцо в клитор': 
+			 act 'Кольцо в клитор':
 			 cla
 			 *clr
 			 'Я могу вставить тебе кольцо в клитор за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-				 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+				 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingPussy = 1
-				     stren = stren+5
-				     pirsingPussyN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=1
+				     stren=stren+5
+				     pirsingPussyN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingPussy = 1
-				     speed = speed+5
-				     pirsingPussyN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=1
+				     speed=speed+5
+				     pirsingPussyN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingPussy = 1
-				     agil = agil+5
-				     pirsingPussyN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=1
+				     agil=agil+5
+				     pirsingPussyN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingPussy = 1
-				     vital = vital+5
-				     pirsingPussyN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=1
+				     vital=vital+5
+				     pirsingPussyN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingPussy = 1
-				     intel = intel+5
-				     pirsingPussyN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=1
+				     intel=intel+5
+				     pirsingPussyN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingPussy = 1
-				     will = will+5
-				     pirsingPussyN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=1
+				     will=will+5
+				     pirsingPussyN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingPussy = 1
-				     magika = magika+1
-				     pirsingPussyN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=1
+				     magika=magika+1
+				     pirsingPussyN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 
 			 end
 			 
-			 act 'Штангу в клитор': 
+			 act 'Штангу в клитор':
 			 cla
 			 *clr
 			 'Я могу вставить тебе штангу в клитор за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-			 	 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+			 	 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingPussy = 2
-				     stren = stren+5
-				     pirsingPussyN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=2
+				     stren=stren+5
+				     pirsingPussyN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingPussy = 2
-				     speed = speed+5
-				     pirsingPussyN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=2
+				     speed=speed+5
+				     pirsingPussyN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingPussy = 2
-				     agil = agil+5
-				     pirsingPussyN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=2
+				     agil=agil+5
+				     pirsingPussyN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingPussy = 2
-				     vital = vital+5
-				     pirsingPussyN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=2
+				     vital=vital+5
+				     pirsingPussyN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingPussy = 2
-				     intel = intel+5
-				     pirsingPussyN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=2
+				     intel=intel+5
+				     pirsingPussyN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingPussy = 2
-				     will = will+5
-				     pirsingPussyN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=2
+				     will=will+5
+				     pirsingPussyN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingPussy = 2
-				     magika = magika+1
-				     pirsingPussyN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingPussy=2
+				     magika=magika+1
+				     pirsingPussyN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам капюшон над клитором. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 end
 			 
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 		 end
      end
      
      
-     if pirsingDick = 0 and penis>0: 
-		 act 'Пирсинг члена': 
+     if pirsingDick=0 and penis>0:
+		 act 'Пирсинг члена':
 		 cla
 		 *clr
 		 'Проколоть член можно кольцом или штангой, разница только эстетическая, все заклинания одинаковые, 5 к навыку или 1 к магичности.'
-			 act 'Кольцо в член': 
+			 act 'Кольцо в член':
 			 cla
 			 *clr
 			 'Я могу вставить тебе кольцо в член за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-				 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+				 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingDick = 1
-				     stren = stren+5
-				     pirsingDickN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=1
+				     stren=stren+5
+				     pirsingDickN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingDick = 1
-				     speed = speed+5
-				     pirsingDickN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=1
+				     speed=speed+5
+				     pirsingDickN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingDick = 1
-				     agil = agil+5
-				     pirsingDickN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=1
+				     agil=agil+5
+				     pirsingDickN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingDick = 1
-				     vital = vital+5
-				     pirsingDickN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=1
+				     vital=vital+5
+				     pirsingDickN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingDick = 1
-				     intel = intel+5
-				     pirsingDickN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=1
+				     intel=intel+5
+				     pirsingDickN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingDick = 1
-				     will = will+5
-				     pirsingDickN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=1
+				     will=will+5
+				     pirsingDickN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingDick = 1
-				     magika = magika+1
-				     pirsingDickN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=1
+				     magika=magika+1
+				     pirsingDickN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол колечко.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 
 			 end
 			 
-			 act 'Штангу в член': 
+			 act 'Штангу в член':
 			 cla
 			 *clr
 			 'Я могу вставить тебе штангу в член за 1000 гем'
 			 'Есть пирсинг на увеличение силы, скорости, ловкости, выносливости, интеллекта, воли и магичности. Выбирай.'
-			 	 if gem>= 1000: 
-				     act 'Пирсинг увеличения силы': 
+			 	 if gem>=1000:
+				     act 'Пирсинг увеличения силы':
 				     cla
 				     *clr
-				     pirsingDick = 2
-				     stren = stren+5
-				     pirsingDickN = 1
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=2
+				     stren=stren+5
+				     pirsingDickN=1
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения скорости': 
+				     act 'Пирсинг увеличения скорости':
 				     cla
 				     *clr
-				     pirsingDick = 2
-				     speed = speed+5
-				     pirsingDickN = 2
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=2
+				     speed=speed+5
+				     pirsingDickN=2
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения ловкости': 
+				     act 'Пирсинг увеличения ловкости':
 				     cla
 				     *clr
-				     pirsingDick = 2
-				     agil = agil+5
-				     pirsingDickN = 3
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=2
+				     agil=agil+5
+				     pirsingDickN=3
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения выносливости': 
+				     act 'Пирсинг увеличения выносливости':
 				     cla
 				     *clr
-				     pirsingDick = 2
-				     vital = vital+5
-				     pirsingDickN = 4
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=2
+				     vital=vital+5
+				     pirsingDickN=4
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения интеллекта': 
+				     act 'Пирсинг увеличения интеллекта':
 				     cla
 				     *clr
-				     pirsingDick = 2
-				     intel = intel+5
-				     pirsingDickN = 5
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=2
+				     intel=intel+5
+				     pirsingDickN=5
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения воли': 
+				     act 'Пирсинг увеличения воли':
 				     cla
 				     *clr
-				     pirsingDick = 2
-				     will = will+5
-				     pirsingDickN = 6
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=2
+				     will=will+5
+				     pirsingDickN=6
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				     
-				     act 'Пирсинг увеличения магичности': 
+				     act 'Пирсинг увеличения магичности':
 				     cla
 				     *clr
-				     pirsingDick = 2
-				     magika = magika+1
-				     pirsingDickN = 7
-				     SUB = SUB+1
-				     gem = gem-1000
+				     pirsingDick=2
+				     magika=magika+1
+				     pirsingDickN=7
+				     SUB=SUB+1
+				     gem=gem-1000
 				     'Яра взяла иглу и проколола вам кожу на члене. Потом быстренько вставила в кровоточащий прокол штангу.'
-				     act 'Уйти': gt 'yaraPirsing'
+				     act 'Уйти':gt'yaraPirsing'
 				     end
 				 end
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 			 end
 			 
-			 act 'Уйти': gt 'yaraPirsing'
+			 act 'Уйти':gt'yaraPirsing'
 		 end
      end
 

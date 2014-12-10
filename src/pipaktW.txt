@@ -1,47 +1,47 @@
 # pipaktW
 $metka = $ARGS[0]
 $loc = $CURLOC
-pipvidrand = RAND(0,agil+stelth)
-pogonarand = RAND(0,10)
+pipvidrand=RAND(0,agil+stelth)
+pogonarand=RAND(0,10)
 
 '<<$ffemprop>> <<$frenclo>>'
 
 
-if pipvidrand< 50: 
+if pipvidrand< 50:
 !гг замечен
-     if manpip>= 6: 
+     if manpip>=6:
      'Кажется <<$namevv>> заметила вас и обернулась. <<$fface>>'
      end
-     if manpip<6: 
+     if manpip<6:
      'Кажется <<$namevv>> заметил вас и обернулся. <<$fface>>'
      end
      
-     act 'Окликнуть': 
-     gt 'dialogW'
+     act 'Окликнуть':
+     gt'dialogW'
      end
 end
 
-if pipvidrand>= 50: 
+if pipvidrand>= 50:
 !гг не замечен
-     if manpip>= 6: 
+     if manpip>=6:
      'Кажется <<$namevv>> не заметила вас.'
      end
-     if manpip<6: 
+     if manpip<6:
      'Кажется <<$namevv>> не заметил вас.'
      end
      
-     act 'Окликнуть': 
-     gt 'dialogW'
+     act 'Окликнуть':
+     gt'dialogW'
      end
      
-     act 'Подкрасться': 
-     stelth = stelth+1
-     gt 'stelthW'
+     act 'Подкрасться':
+     stelth=stelth+1
+     gt'stelthW'
      end
 end
 
-act 'Отойти': 
-minut += 1
+act 'Отойти':
+minut=minut+1
 GOTO $locFight, $metkaFight
 end
 

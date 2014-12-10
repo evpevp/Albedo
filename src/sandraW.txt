@@ -8,88 +8,88 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-'<center><img src = "pic/EvedonNarod/sandra.jpg"></center>'
+'<center><img src="pic/EvedonNarod/sandra.jpg"></center>'
 'Сандра подняла свои бездонные черные глаза на вас.'
-if elesiaQW>0: 'Привет <<$name>>, как дела?'
-if elesiaQW = 0: 'Привет, как дела?'
+if elesiaQW>0:'Привет <<$name>>, как дела?'
+if elesiaQW=0:'Привет, как дела?'
 
-act 'Уйти': 
-minut += 5
- gt 'taBarW'
+act 'Уйти':
+minut=minut+5
+gt'taBarW'
 end
 
-if horny<100 or narkota = 0: 
-	 act 'Поболтать': 
+if horny<100 or narkota=0:
+	 act 'Поболтать':
 	 cla
 	 *clr
-	 '<center><img src = "pic/EvedonNarod/sandra.jpg"></center>'
-	 minut += 10
-		 if narkoman = 0: 
-		 gamPay = 10
-		 if sandraQW<10: 'Вы болтаете с Сандрой, но она какая-то отстраненная. Внезапно она приближает свое лицо к вашему и шепчет. "<<$name>> хочешь Гамана? У меня есть немного, могу продать по дешевке. Отдам за 10 гемов"'
-		     if sandraQW>= 10: 
-		     zodayPay = 100
+	 '<center><img src="pic/EvedonNarod/sandra.jpg"></center>'
+	 minut=minut+10
+		 if narkoman=0:
+		 gamPay=10
+		 if sandraQW<10:'Вы болтаете с Сандрой, но она какая-то отстраненная. Внезапно она приближает свое лицо к вашему и шепчет. "<<$name>> хочешь Гамана? У меня есть немного, могу продать по дешевке. Отдам за 10 гемов"'
+		     if sandraQW>=10:
+		     zodayPay=100
 		     'Сандра ухмыльнулась при вашем появлении "Привет <<$name>>, опять за гаманом? Или может быть хочешь Зодай, он мощнее в разы. Гаман я отдам за 10 гемов, зодай сотня."'
 		     
 		     end
 		 end
-		 if narkoman = 1: 
-		 gamPay = 500
+		 if narkoman=1:
+		 gamPay=500
 		 'Сандра ухмыляется. Гаман нужен? У меня есть, только вот стоит он 500 гемов'
 		 end
      
-		 act 'Уйти': gt 'taBarW'
+		 act 'Уйти':gt'taBarW'
 		 
-		 if gem>= gamPay: 
-			 act 'Купить гаман': 
+		 if gem>=gamPay:
+			 act 'Купить гаман':
 			 cla
 			 *clr
-			 '<center><img src = "pic/EvedonNarod/sandra.jpg"></center>'
-			 gem = gem-gamPay
-			 minut += 10
-			 gaman = gaman+1
-			 sandraQW+= 1
+			 '<center><img src="pic/EvedonNarod/sandra.jpg"></center>'
+			 gem=gem-gamPay
+			 minut=minut+10
+			 gaman=gaman+1
+			 sandraQW+=1
 			 'Вы дали деньги Сандре и она протянула вам маленький флакончик с жидкостью.'
-			 act 'Уйти': gt 'taBarW'
+			 act 'Уйти':gt'taBarW'
 			 end
 		 end
 		 
-		 if sandraQW>= 10 and gem>= zodayPay: 
-		 	 act 'Купить зодай': 
+		 if sandraQW>=10 and gem>=zodayPay:
+		 	 act 'Купить зодай':
 			 cla
 			 *clr
-			 '<center><img src = "pic/EvedonNarod/sandra.jpg"></center>'
-			 gem = gem-zodayPay
-			 minut += 10
-			 zoday+= 1
-			 sandraQW+= 1
+			 '<center><img src="pic/EvedonNarod/sandra.jpg"></center>'
+			 gem=gem-zodayPay
+			 minut=minut+10
+			 zoday+=1
+			 sandraQW+=1
 			 'Вы дали деньги Сандре и она протянула вам маленький флакончик с жидкостью.'
-			 act 'Уйти': gt 'taBarW'
+			 act 'Уйти':gt'taBarW'
 			 end
 		 end
 		 
-		 if narkoman = 1 and gem<gamPay: 
-		     act 'Клянчить гаман в долг': 
+		 if narkoman=1 and gem<gamPay:
+		     act 'Клянчить гаман в долг':
 			 cla
 			 *clr
-			 '<center><img src = "pic/EvedonNarod/sandra.jpg"></center>'
-			 minut += 10
+			 '<center><img src="pic/EvedonNarod/sandra.jpg"></center>'
+			 minut=minut+10
 			 'Вы начали упрашивать Сандру дать вам гаман в долг. Но Сандра только смеется над вами.'
-			 act 'Уйти': gt 'taBarW'
+			 act 'Уйти':gt'taBarW'
 			 end
 		 end
 	 
 	 end
 end
 
-if horny>= 100 and narkota>0: 
-     act 'Поболтать': 
+if horny>=100 and narkota>0:
+     act 'Поболтать':
 	 cla
 	 *clr
-	 '<center><img src = "pic/EvedonNarod/sandra.jpg"></center>'
-	 minut += 10
+	 '<center><img src="pic/EvedonNarod/sandra.jpg"></center>'
+	 minut=minut+10
 	 'Сандра ухмыляется, эк тебя развезло.'
-	 act 'Уйти': gt 'taBarW'
+	 act 'Уйти':gt'taBarW'
 	 end
 end
 

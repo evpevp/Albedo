@@ -8,55 +8,55 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Портной</H4></center>'
-'<center><img src = "pic/Evedon/rinok5.jpg" ></center>'
+'<center><img src="pic/Evedon/rinok5.jpg" ></center>'
 '100 гемов крестьянская одежда'
 '500 гемов одежда горожанина'
 '1000 гемов дворянская одежда'
 '5000 гемов роскошная дворянская одежда'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
 
-	 act 'Крестьянская одежда': 
-	 payclo = 100
-	 gt 'manodW','2'
+	 act 'Крестьянская одежда':
+	 payclo=100
+	 gt'manodW','2'
 	 end
 
-	 act 'Одежда горожанина': 
-	 payclo = 500
-	 gt 'manodW','3'
-	 end
-	 
-	 act 'Дворянская одежда': 
-	 payclo = 1000
-	 gt 'manodW','4'
+	 act 'Одежда горожанина':
+	 payclo=500
+	 gt'manodW','3'
 	 end
 	 
-	 act 'Роскошная дворянская одежда': 
-	 payclo = 5000
-	 gt 'manodW','5'
+	 act 'Дворянская одежда':
+	 payclo=1000
+	 gt'manodW','4'
 	 end
 	 
-	 act 'Переодеться': 
-	 gt 'lokerW'
+	 act 'Роскошная дворянская одежда':
+	 payclo=5000
+	 gt'manodW','5'
+	 end
+	 
+	 act 'Переодеться':
+	 gt'lokerW'
 	 end
 
 
-act 'Отойти': 
-minut += 5
- gt 'rinokW'
+act 'Отойти':
+minut=minut+5
+gt'rinokW'
 end
 
 
-if gruz>0: 
-     act 'Продать груз': 
-     gruzMark = 2
-     tor gt ip = 2
-     gt 'GRUZ'
+if gruz>0:
+     act 'Продать груз':
+     gruzMark=2
+     torgTip=2
+     gt'GRUZ'
      end
 end
 --- portnoiW ---------------------------------

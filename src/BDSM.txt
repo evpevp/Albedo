@@ -4,458 +4,458 @@ $loc = $CURLOC
 cla
 *clr 
 clr
-gs 'stat'
-'<center><img src = "pic\studiа\bdsm_01.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\studiа\bdsm_01.jpg" ></center>'
 'К вам пришла девушка для съёмок жёсткого БСМД ...' 
 'Она показала вам вашу визитку ... Я такую давал девчонке в туалете секс шопа ...'
 'Лицо знакомое, но это вроде не она ... Возможно это её подруга ...'
 'Да какая разница!!! Самое главное она пришла и готова сниматься!!!'
-     act 'Начать сьёмку': gt 'BDSM','1'
+     act 'Начать сьёмку': gt'BDSM','1'
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 minut = minut + 5
 cla
 *clr 
 clr
-gs 'stat'
- '<center><img src = "pic\studiа\bdsm_02.jpg" ></center>'
+gs'stat'
+ '<center><img src="pic\studiа\bdsm_02.jpg" ></center>'
 'Актриса готова к съёмкам нужно выбрать место'
 
-	 if BDSMsten = 0: 
-		 act 'Приковать к стене': gt 'BDSM','2'
+	 if BDSMsten=0: 
+		 act 'Приковать к стене': gt'BDSM','2'
 	 end	 
 	 
-	 if BDSMstan = 0: 
-		 act 'Разложить на садо-станке': gt 'BDSM','3'
+	 if BDSMstan=0: 
+		 act 'Разложить на садо-станке': gt'BDSM','3'
 	 end	 
 	 
-	 if BDSMsvaz = 0: 
-		 act 'Связать': gt 'BDSM','4'
+	 if BDSMsvaz=0: 
+		 act 'Связать': gt'BDSM','4'
 	 end
 !end	 	
 
-     if BDSMsten = 1 and BDSMstan = 1 and BDSMsvaz = 1: 
+     if BDSMsten=1 and BDSMstan=1 and BDSMsvaz=1:
 		 act 'Закончить съёмку': 
-		 film = film+1
-		 BDSMfilm = BDSMfilm+1
-		 filmpart = filmpart+1
+		 film=film+1
+		 BDSMfilm=BDSMfilm+1
+		 filmpart=filmpart+1
 		 castig = 0 
 		 actris = 0
-		 BDSMactress = BDSMactress-1
-		 BDSMsten = 0
-		 BDSMsten1 = 0
-		 BDSMsten2 = 0
-		 BDSMsten3 = 0
-		 BDSMsten4 = 0
-		 BDSMsten5 = 0
-		 BDSMsten6 = 0
-		 BDSMsten7 = 0
-		 BDSMsten8 = 0
-		 BDSMstan = 0
-		 BDSMstan1 = 0
-		 BDSMstan2 = 0
-		 BDSMstan3 = 0
-		 BDSMstan4 = 0
-		 BDSMstan5 = 0
-		 BDSMstan6 = 0
-		 BDSMsvaz = 0
-		 BDSMsvaz1 = 0
-		 BDSMsvaz2 = 0
-		 BDSMsvaz3 = 0
-		 BDSMsvaz4 = 0
-		 BDSMsvaz5 = 0
-		 BDSMsvaz6 = 0
-		 BDSMsvaz7 = 0
-		 BDSMsvaz8 = 0
+		 BDSMactress=BDSMactress-1
+		 BDSMsten=0
+		 BDSMsten1=0
+		 BDSMsten2=0
+		 BDSMsten3=0
+		 BDSMsten4=0
+		 BDSMsten5=0
+		 BDSMsten6=0
+		 BDSMsten7=0
+		 BDSMsten8=0
+		 BDSMstan=0
+		 BDSMstan1=0
+		 BDSMstan2=0
+		 BDSMstan3=0
+		 BDSMstan4=0
+		 BDSMstan5=0
+		 BDSMstan6=0
+		 BDSMsvaz=0
+		 BDSMsvaz1=0
+		 BDSMsvaz2=0
+		 BDSMsvaz3=0
+		 BDSMsvaz4=0
+		 BDSMsvaz5=0
+		 BDSMsvaz6=0
+		 BDSMsvaz7=0
+		 BDSMsvaz8=0
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_03.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_03.jpg" ></center>'
 		 'Актриса устала, но счастлива  ... Видно ей нравится БДСМ'
 		 'ЭХ!!! Побольше бы таких актрис ...'
-		     act 'Всем спасибо! До встречи на следующей неделе!': gt 'pornstudio','start'
+		     act 'Всем спасибо! До встречи на следующей неделе!': gt'pornstudio','start'
 	     end	
      end	 
 end
 
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr 
 clr
-gs 'stat'
-BDSMsten = 1
-'<center><img src = "pic\studiа\bdsm_stena_1.jpg" ></center>'
+gs'stat'
+BDSMsten=1
+'<center><img src="pic\studiа\bdsm_stena_1.jpg" ></center>'
 'Вы приковали шлюшку к стенке кандалами и решаете что с ней сделать ...'
-	 if BDSMsten1 = 0: 
-		 act 'Сильно сжать груди': 
-		 BDSMsten1 = 1
+	 if BDSMsten1=0: 
+		 act 'Сильно сжать груди':
+		 BDSMsten1=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stena_2.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stena_2.jpg" ></center>'
          'Актёр подошёл к ней сзади и стал сильно сжимать груди.'
          'Она громко стонала и просила прекратить ...'
-             act '......': gt 'BDSM','2'
+             act '......': gt'BDSM','2'
 	     end
 	 end
 	 
-	 if BDSMsten2 = 0: 
-		 act 'Ущипнуть за соски': 
-		 BDSMsten2 = 1
+	 if BDSMsten2=0: 
+		 act 'Ущипнуть за соски':
+		 BDSMsten2=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stena_3.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stena_3.jpg" ></center>'
          'Актёр схватил соски пальцами и сжал их как клешнями.'
          'Шлюшка громко взвизгнула ...'
-             act '......': gt 'BDSM','2'
+             act '......': gt'BDSM','2'
 	     end
 	 end 
 	 	
-	 if BDSMsten3 = 0: 
-		 act 'Укусить сосок': 
-		 BDSMsten3 = 1
+	 if BDSMsten3=0: 
+		 act 'Укусить сосок':
+		 BDSMsten3=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stena_4.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stena_4.jpg" ></center>'
          'Актёр сильно сжал грудь и стал кусать сосок.'
          'Она громко кричала от боли ...'
-             act '......': gt 'BDSM','2'
+             act '......': gt'BDSM','2'
 	     end
 	 end
 	 
-	 if BDSMsten4 = 0: 
-		 act 'Бить плёткой по грудям': 
-		 BDSMsten4 = 1
+	 if BDSMsten4=0: 
+		 act 'Бить плёткой по грудям':
+		 BDSMsten4=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stena_5.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stena_5.jpg" ></center>'
          'Актёр хлёстко бил плёткой по грудям.'
          'Она тихо стонала и молила о пощаде ...'
-             act '......': gt 'BDSM','2'
+             act '......': gt'BDSM','2'
 	     end
 	 end	 
 	 
-	 if BDSMsten5 = 0: 
-		 act 'Бить плёткой по лицу': 
-		 BDSMsten5 = 1
+	 if BDSMsten5=0: 
+		 act 'Бить плёткой по лицу':
+		 BDSMsten5=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stena_6.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stena_6.jpg" ></center>'
          'Актёр хлёстко бил плёткой по лицу.'
          'Она тихо стонала и молила о пощаде ...'
-             act '......': gt 'BDSM','2'
+             act '......': gt'BDSM','2'
 	     end
 	 end		 
 	 
-	 if BDSMsten6 = 0: 
-		 act 'Отшлёпать плёткой по киске': 
-		 BDSMsten6 = 1
+	 if BDSMsten6=0: 
+		 act 'Отшлёпать плёткой по киске':
+		 BDSMsten6=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stena_7.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stena_7.jpg" ></center>'
          'Актёр развёл шлюшке ноги и бил в промежность стараясь попасть по половым губам.'
          'При каждом ударе она тихо вскрикивала ...'
-             act '......': gt 'BDSM','2'
+             act '......': gt'BDSM','2'
 	     end
 	 end	 
 	 
-	 if BDSMsten7 = 0: 
-		 act 'Заткнуть рот': 
-		 BDSMsten7 = 1
+	 if BDSMsten7=0: 
+		 act 'Заткнуть рот':
+		 BDSMsten7=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stena_8.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stena_8.jpg" ></center>'
          'Устав от непрерывных стонов и криков ей заткнули рот хуем.'
          'Шлюха сосала и тихо мычала ...'
-             act '......': gt 'BDSM','2'
+             act '......': gt'BDSM','2'
 	     end
 	 end	 
 	 
 	 
-	 if BDSMsten8 = 0: 
-		 act 'Отъебать стоя': 
-		 BDSMsten8 = 1
+	 if BDSMsten8=0: 
+		 act 'Отъебать стоя':
+		 BDSMsten8=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stena_9.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stena_9.jpg" ></center>'
          'Приковав её руками к стене актёр взял её грубо сзади.'
          'Под ритмичными толчками, она тихо постанывала ... '
-             act '......': gt 'BDSM','2'
+             act '......': gt'BDSM','2'
 	     end
 	 end
 	 
-     if BDSMsten1 = 1 and BDSMsten2 = 1 and BDSMsten3 = 1 and BDSMsten4 = 1 and BDSMsten5 = 1 and BDSMsten6 = 1 and BDSMsten7 = 1 and BDSMsten8 = 1: 
-         act 'Перейти к следующему этапу съёмок': gt 'BDSM','1'
+     if BDSMsten1=1 and BDSMsten2=1 and BDSMsten3=1 and BDSMsten4=1 and BDSMsten5=1 and BDSMsten6=1 and BDSMsten7=1 and BDSMsten8=1:
+         act 'Перейти к следующему этапу съёмок': gt'BDSM','1'
      end
 end	  
  
-if $ARGS[0] = '3': 
+if $ARGS[0]='3': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr 
 clr
-gs 'stat'
-BDSMstan = 1
-'<center><img src = "pic\studiа\bdsm_stan_1.jpg" ></center>'
+gs'stat'
+BDSMstan=1
+'<center><img src="pic\studiа\bdsm_stan_1.jpg" ></center>'
 'Вы распяли шлюшку на станке и вставили ей в рот расширитель ...'
-	 if BDSMstan1 = 0: 
-		 act 'Бить плёткой': 
-		 BDSMstan1 = 1
+	 if BDSMstan1=0: 
+		 act 'Бить плёткой':
+		 BDSMstan1=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stan_2.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stan_2.jpg" ></center>'
          'Актёр бил плёткой распятое тело, периодично охаживая то груди, то промежность ...'
          'Расширитель во рту мешал, но она гортанно кричала после каждого удара...'
-             act '......': gt 'BDSM','3'
+             act '......': gt'BDSM','3'
 	     end
 	 end
 	 
-	 if BDSMstan2 = 0: 
-		 act 'Засунуть пальцы в рот': 
-		 BDSMstan2 = 1
+	 if BDSMstan2=0: 
+		 act 'Засунуть пальцы в рот':
+		 BDSMstan2=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stan_3.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stan_3.jpg" ></center>'
          'Актёр сунул пальцы в рот по самые гланды'
          'Тело скрючило в конвульсиях от рвотного рефлекса ...'
-             act '......': gt 'BDSM','3'
+             act '......': gt'BDSM','3'
 	     end
 	 end 
 	 	
-	 if BDSMstan3 = 0: 
-		 act 'Жёстко оттрахать': 
-		 BDSMstan3 = 1
+	 if BDSMstan3=0: 
+		 act 'Жёстко оттрахать':
+		 BDSMstan3=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stan_4.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stan_4.jpg" ></center>'
          'Актёр начал с силой вгонять свой порошень ей в киску, одновременно сжимая пальцами клитор.'
          'Из открытого рта раздавалось невнятное мычание ...'
-             act '......': gt 'BDSM','3'
+             act '......': gt'BDSM','3'
 	     end
 	 end
 	 
-	 if BDSMstan4 = 0: 
-		 act 'Подрочить киску руками': 
-		 BDSMstan4 = 1
+	 if BDSMstan4=0: 
+		 act 'Подрочить киску руками':
+		 BDSMstan4=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stan_5.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stan_5.jpg" ></center>'
          'Актёр засунул пальцы в киску и начал массировать точку G ...'
          'Она тихо застонала и по телу пробежала дрожь от оргазма ...'
-             act '......': gt 'BDSM','3'
+             act '......': gt'BDSM','3'
 	     end
 	 end	 
 	 
-	 if BDSMstan5 = 0: 
-		 act 'Трахать с вибратором': 
-		 BDSMstan5 = 1
+	 if BDSMstan5=0: 
+		 act 'Трахать с вибратором':
+		 BDSMstan5=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stan_6.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stan_6.jpg" ></center>'
          'Актёр всаживал свой кол в киску одновременно стимулируя клитор вибратором .'
          'Она громко кричала, содрогаясь в конвульсиях оргазма...'
-             act '......': gt 'BDSM','3'
+             act '......': gt'BDSM','3'
 	     end
 	 end		 
 	 
-	 if BDSMstan6 = 0: 
-		 act 'Облить горящим воском': 
-		 BDSMstan6 = 1
+	 if BDSMstan6=0: 
+		 act 'Облить горящим воском':
+		 BDSMstan6=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\bdsm_stan_7.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\bdsm_stan_7.jpg" ></center>'
          'Актёр поднёс горящую свечу и начал поливать шлющку горящим воском ...'
          'Её тело вздрагивало при падении каждой капли расплавленного воска ...'
-             act '......': gt 'BDSM','3'
+             act '......': gt'BDSM','3'
 	     end
 	 end	 
 	 
-     if BDSMstan1 = 1 and BDSMstan2 = 1 and BDSMstan3 = 1 and BDSMstan4 = 1 and BDSMstan5 = 1 and BDSMstan6 = 1: 
-         act 'Перейти к следующему этапу съёмок': gt 'BDSM','1'
+     if BDSMstan1=1 and BDSMstan2=1 and BDSMstan3=1 and BDSMstan4=1 and BDSMstan5=1 and BDSMstan6=1:
+         act 'Перейти к следующему этапу съёмок': gt'BDSM','1'
      end
 end	  
 
-if $ARGS[0] = '4': 
+if $ARGS[0]='4':
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr 
 clr
-gs 'stat'
-BDSMsvaz = 1
-'<center><img src = "pic\studiа\BDSM_svaz_1.jpg" ></center>'
+gs'stat'
+BDSMsvaz=1
+'<center><img src="pic\studiа\BDSM_svaz_1.jpg" ></center>'
 'Вы связали шлюшку и решаете что с ней сделать ...'
-	 if BDSMsvaz1 = 0: 
-		 act 'Отодрать рачком': 
-		 BDSMsvaz1 = 1
+	 if BDSMsvaz1=0: 
+		 act 'Отодрать рачком':
+		 BDSMsvaz1=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\BDSM_svaz_2.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\BDSM_svaz_2.jpg" ></center>'
          'Актёр поставил шлюшку раком и с силой начал её долбить.'
          'Она громко стонала и по стонам можно было понять, что ей это нравится ...'
-             act '......': gt 'BDSM','4'
+             act '......': gt'BDSM','4'
 	     end
 	 end
 	 
-	 if BDSMsvaz2 = 0: 
-		 act 'Дать пососать': 
-		 BDSMsvaz2 = 1
+	 if BDSMsvaz2=0: 
+		 act 'Дать пососать':
+		 BDSMsvaz2=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\BDSM_svaz_3.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\BDSM_svaz_3.jpg" ></center>'
          'Жадно схватив член губами, она глубоко засасывая его, страстно мычала ...'
-             act '......': gt 'BDSM','4'
+             act '......': gt'BDSM','4'
 	     end
 	 end 
 	 	
-	 if BDSMsvaz3 = 0: 
-		 act 'Посадить сверху': 
-		 BDSMsvaz3 = 1
+	 if BDSMsvaz3=0: 
+		 act 'Посадить сверху':
+		 BDSMsvaz3=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\BDSM_svaz_4.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\BDSM_svaz_4.jpg" ></center>'
          'Актёр посадил шлюшку сверху и начал долбить её снизу.'
          'Периодически сотрясаясь в конвульсиях от оргазмов, она падала без сил ...'
-             act '......': gt 'BDSM','4'
+             act '......': gt'BDSM','4'
 	     end
 	 end
 	 
-	 if BDSMsvaz4 = 0: 
-		 act 'Помассировать вибратором': 
-		 BDSMsvaz4 = 1
+	 if BDSMsvaz4=0: 
+		 act 'Помассировать вибратором':
+		 BDSMsvaz4=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\BDSM_svaz_5.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\BDSM_svaz_5.jpg" ></center>'
          'Широко разведя ноги, актёр массировал клитор вибратором.'
          'Она сотрясалась от нескончаемой череды оргазмов ...'
-             act '......': gt 'BDSM','4'
+             act '......': gt'BDSM','4'
 	     end
 	 end	 
 	 
-	 if BDSMsvaz5 = 0: 
-		 act 'Бить плёткой по грудям': 
-		 BDSMsvaz5 = 1
+	 if BDSMsvaz5=0: 
+		 act 'Бить плёткой по грудям':
+		 BDSMsvaz5=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\BDSM_svaz_6.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\BDSM_svaz_6.jpg" ></center>'
          'Актёр хлёстко бил плёткой по грудям ...'
          'Она тихо стонала и молила о пощаде ...'
-             act '......': gt 'BDSM','4'
+             act '......': gt'BDSM','4'
 	     end
 	 end		 
 	 
-	 if BDSMsvaz6 = 0: 
-		 act 'Отшлёпать плёткой по жопе': 
-		 BDSMsvaz6 = 1
+	 if BDSMsvaz6=0: 
+		 act 'Отшлёпать плёткой по жопе':
+		 BDSMsvaz6=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\BDSM_svaz_7.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\BDSM_svaz_7.jpg" ></center>'
          'Актёр поставил шлюшку раком и бил в промежность стараясь попасть по половым губам.'
          'При каждом ударе она тихо вскрикивала ...'
-             act '......': gt 'BDSM','4'
+             act '......': gt'BDSM','4'
 	     end
 	 end	 
 	 
-	 if BDSMsvaz7 = 0: 
-		 act 'Покусать': 
-		 BDSMsvaz7 = 1
+	 if BDSMsvaz7=0: 
+		 act 'Покусать':
+		 BDSMsvaz7=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\BDSM_svaz_8.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\BDSM_svaz_8.jpg" ></center>'
          'Актёр стал кусать шлюхе руки и ноги.'
          'Сквозь стоны были слышны мольбы о пощаде ...'
-             act '......': gt 'BDSM','4'
+             act '......': gt'BDSM','4'
 	     end
 	 end	 
 	 
 	 
-	 if BDSMsvaz8 = 0: 
-		 act 'Укусить за сосок': 
-		 BDSMsvaz8 = 1
+	 if BDSMsvaz8=0: 
+		 act 'Укусить за сосок':
+		 BDSMsvaz8=1
 		 minut = minut + 25
 		 cla
          *clr 
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic\studiа\BDSM_svaz_9.jpg" ></center>'
+		 gs'stat'
+		 '<center><img src="pic\studiа\BDSM_svaz_9.jpg" ></center>'
          'Актёр засосал сосок и стал его прикусывать.'
          'Она тихо и измученно постанывала ... '
-             act '......': gt 'BDSM','4'
+             act '......': gt'BDSM','4'
 	     end
 	 end
 	 
-     if BDSMsvaz1 = 1 and BDSMsvaz2 = 1 and BDSMsvaz3 = 1 and BDSMsvaz4 = 1 and BDSMsvaz5 = 1 and BDSMsvaz6 = 1 and BDSMsvaz7 = 1 and BDSMsvaz8 = 1: 
-         act 'Перейти к следующему этапу съёмок': gt 'BDSM','1'
+     if BDSMsvaz1=1 and BDSMsvaz2=1 and BDSMsvaz3=1 and BDSMsvaz4=1 and BDSMsvaz5=1 and BDSMsvaz6=1 and BDSMsvaz7=1 and BDSMsvaz8=1:
+         act 'Перейти к следующему этапу съёмок': gt'BDSM','1'
      end
 end	  
 

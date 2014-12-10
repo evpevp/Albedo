@@ -2,7 +2,7 @@
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 
-gs 'level'
+gs'level'
 '<<win>> - <<loss>>'
 'Уровень <<lvl>>'
 'Опыт <<exp>> Необходимо опыта для повышения уровня <<lvl*10>>'
@@ -17,26 +17,26 @@ gs 'level'
 'Мана <<manna>>'
 'Сила воли <<wipo>>'
 
-act 'Лечится': 
-health = vital*10
-manna = intel*10
-wipo = will*10
- gt 'test'
+act 'Лечится':
+health=vital*10
+manna=intel*10
+wipo=will*10
+gt'test'
 end
 
-act 'опыт': 
-exp = exp+10
- gt 'test'
+act 'опыт':
+exp=exp+10
+gt'test'
 end
 
-act 'Генератор проверка': 
-gs 'generator'
- gt 'прверкагенератора'
+act 'Генератор проверка':
+gs'generator'
+gt'прверкагенератора'
 end
 
-act 'Генератор бой': 
-gs 'generator'
- gt 'before'
+act 'Генератор бой':
+gs'generator'
+gt'before'
 end
 
 

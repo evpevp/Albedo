@@ -5,58 +5,58 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Дворянская школа</H4></center>'
-'<center><img src = "pic/Evedon/dvorsh.jpg" ></center>'
+'<center><img src="pic/Evedon/dvorsh.jpg" ></center>'
 'Школа в которой преподают множество разных дисциплин.'
-if spSwordDancer<100: 'За 5ть тысяч гемов в течение пары часов опытный инструктор вас обучит танцу мечей.'
+if spSwordDancer<100:'За 5ть тысяч гемов в течение пары часов опытный инструктор вас обучит танцу мечей.'
 'Тренер магичности может обучать вас магичности если она меньше 9ти (1000 гемов за урок)'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-     if gem>= 5000 and spSwordDancer<100 and hour>= 9 and hour<21: 
-         act 'Обучиться танцу мечей 5 тысяч гемов': 
+     if gem>=5000 and spSwordDancer<100 and hour>=9 and hour<21:
+         act 'Обучиться танцу мечей 5 тысяч гемов':
          cla
          *clr
-         spSwordDancer = 100
-         gem- = 5000
-         minut+= 120
+         spSwordDancer=100
+         gem-=5000
+         minut+=120
          'Вы отдали деньги и тренер научил вас танцу мечей.'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
          end
      end
      
-     if magika<9 and gem>= 1000 and hour>= 9 and hour<21: 
-         act 'Обучиться магичности (1000 гемов)': 
+     if magika<9 and gem>=1000 and hour>=9 and hour<21:
+         act 'Обучиться магичности (1000 гемов)':
          cla
          *clr
-         magikExp+= 10
-         gem- = 1000
-         minut+= 120
+         magikExp+=10
+         gem-=1000
+         minut+=120
          'Вы отдали деньги и тренер начал обучать вас, развивая магичность.'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
          end
      end
      
-     if gem>= 500 and hour>= 9 and hour<21: 
-         act 'Тренироваться (500 гемов)': 
+     if gem>=500 and hour>=9 and hour<21:
+         act 'Тренироваться (500 гемов)':
          cla
          *clr
-         exp = exp+RAND(lvl/2,lvl)
-         gem- = 500
-         minut+= 120
-         noble+= 1
+         exp=exp+RAND(lvl/2,lvl)
+         gem-=500
+         minut+=120
+         noble+=1
          'Вы отдали деньги и тренер начал обучать вас атлетизму в обществе других дворян.'
-         act 'Уйти': gt $CURLOC
+         act 'Уйти':gt $CURLOC
          end
      end
 
 
 
-	 act 'Уйти (5 мин)': 
-	 minut += 5
-	 gt 'reachW'
+	 act 'Уйти (5 мин)':
+	 minut=minut+5
+	 gt'reachW'
 	 end
 --- dvschoolW ---------------------------------
 

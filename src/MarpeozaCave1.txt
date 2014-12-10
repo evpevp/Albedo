@@ -11,57 +11,57 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Тайная обитель демонологов</H4></center>'
-'<center><img src = "pic/Evedon/obiteldemon.jpg" ></center>'
+'<center><img src="pic/Evedon/obiteldemon.jpg" ></center>'
 'Просторная пещера с факелами, стены и пол покрыты богохульными символами и демоническими печатями.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 'Осталось <<spMarpeozaBuff>> благословений Марпеозы'
 
-     if marpeozaday!day: 
-         act 'Взывать к Марпеозе за благословением': 
+     if marpeozaday!day:
+         act 'Взывать к Марпеозе за благословением':
          cls
-         minut+= 60
-         marpeozaday = day
-         '<center><img src = "pic/EvedonKD/marpeoza.jpg" ></center>'
+         minut+=60
+         marpeozaday=day
+         '<center><img src="pic/EvedonKD/marpeoza.jpg" ></center>'
          'Марпеоза отозвалась на ваши мольбы и шагнула в портал. Она позвала вас "Иди ко мне дитя, ты испьешь моего семени и это станет твоим благословением на время битвы."'
-             act 'Принять благословение от Марпеозы': 
+             act 'Принять благословение от Марпеозы':
 			 cls
-			 bj+= 1
-			 spMarpeozaBuff+= 10
-			 skverna = 100
-			 if vagina = 0: vagina = 1
-             if penis<= 0: penis = 20
-			 '<center><img src = "pic/EvedonKD/marpeozasex.jpg" ></center>'
+			 bj+=1
+			 spMarpeozaBuff+=10
+			 skverna=100
+			 if vagina=0:vagina=1
+             if penis<=0:penis=20
+			 '<center><img src="pic/EvedonKD/marpeozasex.jpg" ></center>'
 			 'Вы обхватили губами член Марпеозы и начали его страстно сосать.'
-			 gs 'cumslut'
+			 gs'cumslut'
 			 'Мать Марпеоза кончила вам в рот и вы глотали ее семя.'
-			 cumlip+= 1
-			 act 'Уйти': minut += 5 & gt 'DemonologLogovo'
+			 cumlip+=1
+			 act 'Уйти':minut=minut+5&gt'DemonologLogovo'
 			 end
          end
      
      end
      
-     if marpeozaspermday!day: 
-         act 'Испить из фонтана семени Марпеозы': 
+     if marpeozaspermday!day:
+         act 'Испить из фонтана семени Марпеозы':
          cls
-         minut+= 60
-         marpeozaspermday = day
-         health = vital*10
-		 manna = intel*10+intel*magika
-		 wipo = will*10
-		 exp = exp+RAND(lvl/4,lvl/2)
-		 magikExp = magikExp+RAND(magika*2,magika*4)
-         '<center><img src = "pic/EvedonKD/marpeozacum.jpg" ></center>'
+         minut+=60
+         marpeozaspermday=day
+         health=vital*10
+		 manna=intel*10+intel*magika
+		 wipo=will*10
+		 exp=exp+RAND(lvl/4,lvl/2)
+		 magikExp=magikExp+RAND(magika*2,magika*4)
+         '<center><img src="pic/EvedonKD/marpeozacum.jpg" ></center>'
          'Вы зачерпнули бокал спермы из источника и выпили ее. Ваша сила и здоровье моментально восстановились.'
-		 cumlip+= 1
-		 act 'Уйти': minut += 5 & gt 'DemonologLogovo'
+		 cumlip+=1
+		 act 'Уйти':minut=minut+5&gt'DemonologLogovo'
          end
      
      end
@@ -70,7 +70,7 @@ LCOLOR = rgb(106,90,205)
      
 
 
-	 act 'Уйти': minut += 5 & gt 'DemonologLogovo'
+	 act 'Уйти':minut=minut+5&gt'DemonologLogovo'
 
 
 --- MarpeozaCave1 ---------------------------------

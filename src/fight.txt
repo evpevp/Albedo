@@ -1,158 +1,158 @@
 # fight
-if $ARGS[0] = '0': 
+if $ARGS[0]='0':
 $metka = $ARGS[0]
 $loc = $CURLOC
-gs 'batledynek'
+gs'batledynek'
 
-if OrotimaruFinalQW = 2 and DemonTimer<= 0: gt 'ender','win'
-if OrotimaruFinalQW = 2 and DemonTimer>0: DemonTimer- = 1
+if OrotimaruFinalQW=2 and DemonTimer<=0:gt'ender','win'
+if OrotimaruFinalQW=2 and DemonTimer>0:DemonTimer-=1
 
 
-if VibroTravma>0: 
-if VibroTravma = 1: VibroTravma = 2
-VibroTravma = VibroTravma*VibroTravma
+if VibroTravma>0:
+if VibroTravma=1:VibroTravma=2
+VibroTravma=VibroTravma*VibroTravma
 !разрыв внутренних органов гг
-'<B><font color = red>Внутри все горит и страшная боль не дает вам двигатся.</font></B>'
-health- = VibroTravma*VibroTravma
-manna- = (VibroTravma*VibroTravma)*2
-wipo- = VibroTravma*VibroTravma
-'<B><font color = red>Боль наносит урон вашему здоровью в <<VibroTravma*VibroTravma>> едениц.</font></B>'
+'<B><font color=red>Внутри все горит и страшная боль не дает вам двигатся.</font></B>'
+health-=VibroTravma*VibroTravma
+manna-=(VibroTravma*VibroTravma)*2
+wipo-=VibroTravma*VibroTravma
+'<B><font color=red>Боль наносит урон вашему здоровью в <<VibroTravma*VibroTravma>> едениц.</font></B>'
 end
 
-if VibroTravmaV>0: 
-if VibroTravmaV = 1: VibroTravmaV = 2
-VibroTravmaV = VibroTravmaV*VibroTravmaV
+if VibroTravmaV>0:
+if VibroTravmaV=1:VibroTravmaV=2
+VibroTravmaV=VibroTravmaV*VibroTravmaV
 !разрыв внутренних органов нпс
-'<B><font color = green><<$namev>> скрючился от боли. Кажется у него разорваны внутренности</font></B>'
-healthv- = VibroTravmav*VibroTravmav
-mannav- = (VibroTravmav*VibroTravmav)*2
-wipov- = VibroTravmav*VibroTravmav
+'<B><font color=green><<$namev>> скрючился от боли. Кажется у него разорваны внутренности</font></B>'
+healthv-=VibroTravmav*VibroTravmav
+mannav-=(VibroTravmav*VibroTravmav)*2
+wipov-=VibroTravmav*VibroTravmav
 end
 
-if elektroluza>0: 
-'<B><font color = green>Вода на земле бьет молниями во все стороны.</font></B>'
- manna = manna-100
- damageM = RAND(300,500)
- gs 'defenceMV'
- shokdam = RAND(100,300)
- damage = RAND(500,1000)
- gs 'defenceV'
+if elektroluza>0:
+'<B><font color=green>Вода на земле бьет молниями во все стороны.</font></B>'
+ manna=manna-100
+ damageM=RAND(300,500)
+ gs'defenceMV'
+ shokdam=RAND(100,300)
+ damage=RAND(500,1000)
+ gs'defenceV'
 end
 
-if elektostorm>0: 
-'<B><font color = green>Вихрь бьет молниями и сильным ветром противника.</font></B>'
-     if fintv>0: fintv = 0
-     if zerkalov>0: zerkalov = 0 & '<B><font color = green>Зеркала противника лопнули.</font></B>'
-     if tumanv>0: tumanv = 0 & '<B><font color = green>Вихрь порвал туман противника в клочья.</font></B>'
-     if sandstormv>0: sandstormv = 0 & '<B><font color = green>Вихрь уничтожил туман противника.</font></B>'
-Perepad = 1
-damageW = RAND(500,1000)
-$tipuronaWv = 'Перепад давления'
-gs 'defenceWV'
-shokdam = RAND(100,300)
-damage = RAND(500,1000)
-gs 'defenceV'
+if elektostorm>0:
+'<B><font color=green>Вихрь бьет молниями и сильным ветром противника.</font></B>'
+     if fintv>0:fintv=0
+     if zerkalov>0:zerkalov=0&'<B><font color=green>Зеркала противника лопнули.</font></B>'
+     if tumanv>0:tumanv=0&'<B><font color=green>Вихрь порвал туман противника в клочья.</font></B>'
+     if sandstormv>0:sandstormv=0&'<B><font color=green>Вихрь уничтожил туман противника.</font></B>'
+Perepad=1
+damageW=RAND(500,1000)
+$tipuronaWv='Перепад давления'
+gs'defenceWV'
+shokdam=RAND(100,300)
+damage=RAND(500,1000)
+gs'defenceV'
 end
 
-if elektoground>0: 
-'<B><font color = green>Из земли бьют молнии.</font></B>'
-shokdam = RAND(100,300)
-damage = RAND(500,1000)
-gs 'defenceV'
+if elektoground>0:
+'<B><font color=green>Из земли бьют молнии.</font></B>'
+shokdam=RAND(100,300)
+damage=RAND(500,1000)
+gs'defenceV'
 end
 
-if waterstorm>0: 
-'<B><font color = green>Ваш вихрь распыляет вокруг себя воду.</font></B>'
- if fintv>0: fintv = 0
- if zerkalov>0: zerkalov = 0 & '<B><font color = green>Зеркала противника лопнули.</font></B>'
- if tumanv>0: tumanv = 0 & '<B><font color = green>Вихрь порвал туман противника в клочья.</font></B>'
- if sandstormv>0: sandstormv = 0 & '<B><font color = green>Вихрь уничтожил туман противника.</font></B>'
-damageM = RAND(300,500)
-gs 'defenceMV'
-shokdam = RAND(100,300)
-damage = RAND(500,1000)
-gs 'defenceV'
+if waterstorm>0:
+'<B><font color=green>Ваш вихрь распыляет вокруг себя воду.</font></B>'
+ if fintv>0:fintv=0
+ if zerkalov>0:zerkalov=0&'<B><font color=green>Зеркала противника лопнули.</font></B>'
+ if tumanv>0:tumanv=0&'<B><font color=green>Вихрь порвал туман противника в клочья.</font></B>'
+ if sandstormv>0:sandstormv=0&'<B><font color=green>Вихрь уничтожил туман противника.</font></B>'
+damageM=RAND(300,500)
+gs'defenceMV'
+shokdam=RAND(100,300)
+damage=RAND(500,1000)
+gs'defenceV'
 end
 
-if waterground>0: 
-'<B><font color = green>Грязь заставляет противника вязнуть и вытягивает ману.</font></B>'
-damageM = RAND(800,1000)
-gs 'defenceMV'
+if waterground>0:
+'<B><font color=green>Грязь заставляет противника вязнуть и вытягивает ману.</font></B>'
+damageM=RAND(800,1000)
+gs'defenceMV'
 end
 
-if windstorm>0: 
-'<B><font color = green>Ваш вихрь метает вокруг себя огромные валуны.</font></B>'
-  if fintv>0: fintv = 0
- if zerkalov>0: zerkalov = 0 & '<B><font color = green>Зеркала противника лопнули.</font></B>'
- if tumanv>0: tumanv = 0 & '<B><font color = green>Вихрь порвал туман противника в клочья.</font></B>'
- if sandstormv>0: sandstormv = 0 & '<B><font color = green>Вихрь уничтожил туман противника.</font></B>'
-damage = RAND(2500,3000)
-gs 'defenceV'
+if windstorm>0:
+'<B><font color=green>Ваш вихрь метает вокруг себя огромные валуны.</font></B>'
+  if fintv>0:fintv=0
+ if zerkalov>0:zerkalov=0&'<B><font color=green>Зеркала противника лопнули.</font></B>'
+ if tumanv>0:tumanv=0&'<B><font color=green>Вихрь порвал туман противника в клочья.</font></B>'
+ if sandstormv>0:sandstormv=0&'<B><font color=green>Вихрь уничтожил туман противника.</font></B>'
+damage=RAND(2500,3000)
+gs'defenceV'
 end
 
-if klon>0: 
-manna- = klon*10
-'<font color = green>На поддержание клонов вы тратите <<klon*10>> едениц маны</font>'
+if klon>0:
+manna-=klon*10
+'<font color=green>На поддержание клонов вы тратите <<klon*10>> едениц маны</font>'
 end
-if klonv>0: 
-mannav- = klonv*10
+if klonv>0:
+mannav-=klonv*10
 end
 
-mannaPredel = (intel*10+intel*magika)*2
-mannaPredelv = (intelv*10+intelv*32)*2
+mannaPredel=(intel*10+intel*magika)*2
+mannaPredelv=(intelv*10+intelv*32)*2
 
- if manna>mannaPredel: 
- stupor+= 3
- manna- = 100
- '<font color = red>Вы взяли маны гораздо больше, чем можете удержать и из за этого вы не в состоянии двигатся пока лишняя мана не развеится.</font>'
+ if manna>mannaPredel:
+ stupor+=3
+ manna-=100
+ '<font color=red>Вы взяли маны гораздо больше, чем можете удержать и из за этого вы не в состоянии двигатся пока лишняя мана не развеится.</font>'
  end
- if mannav>mannaPredelv: 
- stuporV+= 3
- mannaV- = 100
- '<font color = green><<$namev>> взял маны больше, чем может удержать и из за этого противник не может двигатся пока не развеется лишняя мана</font>'
+ if mannav>mannaPredelv:
+ stuporV+=3
+ mannaV-=100
+ '<font color=green><<$namev>> взял маны больше, чем может удержать и из за этого противник не может двигатся пока не развеется лишняя мана</font>'
  end
 
-if firewall>0: 
-firewall- = 1
-'<font color = green>Пламя вашей стены огня продолжает гореть.</font>'
- $tipuronaT = 'Стена огня'
- damageT = RAND(firewall*100,firewall*200)
- gs 'defenceTV'
+if firewall>0:
+firewall-=1
+'<font color=green>Пламя вашей стены огня продолжает гореть.</font>'
+ $tipuronaT='Стена огня'
+ damageT=RAND(firewall*100,firewall*200)
+ gs'defenceTV'
 end
-if firewallv>0: 
-firewallv- = 1
-'<font color = red>Пламя стены огня противника продолжает гореть.</font>'
- $tipuronaTv = 'Стена огня'
- damageTv = RAND(firewallv*100,firewallv*200)
- gs 'defenceT'
+if firewallv>0:
+firewallv-=1
+'<font color=red>Пламя стены огня противника продолжает гореть.</font>'
+ $tipuronaTv='Стена огня'
+ damageTv=RAND(firewallv*100,firewallv*200)
+ gs'defenceT'
 end
 
 dynamic $befbatdin
 dynamic $battlemain
 
-!act 'Сбежать': GOTO $locFight, $metkaFight
-     if cooldown>0 and stupor = 0: 
-     '<B><font color = red>Вы не cможете колдовать еще <<cooldown>> ходов</font></B>'
-         act 'Пропустить ход': xgt 'fight','1'
+!act 'Сбежать':GOTO $locFight, $metkaFight
+     if cooldown>0 and stupor=0:
+     '<B><font color=red>Вы не cможете колдовать еще <<cooldown>> ходов</font></B>'
+         act 'Пропустить ход':xgt'fight','1'
          
-         if MarpeozaShadow>0: 
-         '<B><font color = blue>Тень Марпеозы будет вас защищать еще <<MarpeozaShadow>> ходов</font></B>'
+         if MarpeozaShadow>0:
+         '<B><font color=blue>Тень Марпеозы будет вас защищать еще <<MarpeozaShadow>> ходов</font></B>'
          
-             if manna>= 500: 
-				 act 'Удар тени МАРПЕОЗЫ (500 маны)': 
+             if manna>=500:
+				 act 'Удар тени МАРПЕОЗЫ (500 маны)':
 				 cla
-				 manna- = 500
-				 damage = RAND(8000,12000)
-				 gs 'defenceV'
-				 xgt 'fight','1'
+				 manna-=500
+				 damage=RAND(8000,12000)
+				 gs'defenceV'
+				 xgt'fight','1'
 				 end
 			 end
-			 if wipo>= 50: 
-			 	 act 'Молитва в тени МАРПЕОЗЫ (50 воли)': 
+			 if wipo>=50:
+			 	 act 'Молитва в тени МАРПЕОЗЫ (50 воли)':
 				 cla
-				 wipo- = 50
-				 manna+= 1000
-				 xgt 'fight','1'
+				 wipo-=50
+				 manna+=1000
+				 xgt'fight','1'
 				 end
 			 
              end
@@ -161,44 +161,44 @@ dynamic $battlemain
          
          end
          
-         if CoolPlace>0: 
+         if CoolPlace>0:
          'Магия звука охраняет вас от урона но не дает применить большую часть магии.'
-              if manna>= 25000 and magika>= 10 and spellSound5>= 100: 
-				 act 'Мерцающий удар (25000 маны)': 
+              if manna>=25000 and magika>=10 and spellSound5>=100:
+				 act 'Мерцающий удар (25000 маны)':
 				 cla
-				 shimmerStrikeExp+= 1
-				 manna- = 25000
-				 '<font color = green>Окружив вибрациями воздуха свою руку вы ударили ей.</font>'
-				 Vizor = 1
-				 tipatk = 1
-				 damage = RAND((stren/2)+sonarExp+zerkSoundExp+SoundBurExp+SoundKolExp+soundCoolExp+(shimmerStrikeExp*2),stren+sonarExp+zerkSoundExp+SoundBurExp+SoundKolExp+soundCoolExp+(shimmerStrikeExp*2)+500)
-				 gs 'popad'
-				 xgt 'fight','1'
+				 shimmerStrikeExp+=1
+				 manna-=25000
+				 '<font color=green>Окружив вибрациями воздуха свою руку вы ударили ей.</font>'
+				 Vizor=1
+				 tipatk=1
+				 damage=RAND((stren/2)+sonarExp+zerkSoundExp+SoundBurExp+SoundKolExp+soundCoolExp+(shimmerStrikeExp*2),stren+sonarExp+zerkSoundExp+SoundBurExp+SoundKolExp+soundCoolExp+(shimmerStrikeExp*2)+500)
+				 gs'popad'
+				 xgt'fight','1'
 				 end
 			 end
          
          end
          
-         if elvenmeditation>0: 
-             if wipo>= 500: 
-				 act 'Призывать силу природы (500 воли)': 
+         if elvenmeditation>0:
+             if wipo>=500:
+				 act 'Призывать силу природы (500 воли)':
 				 cla
-				 wipo- = 500
-				 elvenmeditation+= 1
-					 if elvenmeditation>= 3: 
-					 manna = manna*2
-					 cooldown = 0
-					 elvenmeditation = 0
-					 '<font color = green>Ваша энергия удвоилась.</font>'
+				 wipo-=500
+				 elvenmeditation+=1
+					 if elvenmeditation>=3:
+					 manna=manna*2
+					 cooldown=0
+					 elvenmeditation=0
+					 '<font color=green>Ваша энергия удвоилась.</font>'
 					 end
-				 xgt 'fight','1'
+				 xgt'fight','1'
 				 end
 			 end
 			 
-			 act 'Отменить призыв силы природы': 
+			 act 'Отменить призыв силы природы':
 			 cla
-			 elvenmeditation = 0
-			 xgt 'fight','1'
+			 elvenmeditation=0
+			 xgt'fight','1'
 			 end
          
          end
@@ -206,776 +206,776 @@ dynamic $battlemain
      end
      
      
-     if stun = 0 and stupor = 0: 
+     if stun = 0 and stupor=0:
      
-         if cooldown<= 0: 
+         if cooldown<=0:
          
-             if priziv>0 and manna>= 1000: 
-             	 act 'Поток жизни существа (1000 вашей маны даст 1000жизни существу)': 
+             if priziv>0 and manna>=1000:
+             	 act 'Поток жизни существа (1000 вашей маны даст 1000жизни существу)':
 				 cla
-				 manna- = 1000
-				 phealth+= 1000
-				 '<B><font color = green>Вы передали энергию своему помощнику</font></B>'
-				 xgt 'fight','1'
+				 manna-=1000
+				 phealth+=1000
+				 '<B><font color=green>Вы передали энергию своему помощнику</font></B>'
+				 xgt'fight','1'
 				 end
 				 
-				 act 'Поток энергии существа (1000 вашей маны даст 1000 маны существу)': 
+				 act 'Поток энергии существа (1000 вашей маны даст 1000 маны существу)':
 				 cla
-				 manna- = 1000
-				 pmanna+= 1000
-				 '<B><font color = green>Вы передали энергию своему помощнику</font></B>'
-				 xgt 'fight','1'
+				 manna-=1000
+				 pmanna+=1000
+				 '<B><font color=green>Вы передали энергию своему помощнику</font></B>'
+				 xgt'fight','1'
 				 end
 				 
-				 act 'Поток управления существом (1000 вашей маны даст 1000 воли существу)': 
+				 act 'Поток управления существом (1000 вашей маны даст 1000 воли существу)':
 				 cla
-				 manna- = 1000
-				 pwipo+= 1000
-				 '<B><font color = green>Вы передали энергию своему помощнику</font></B>'
-				 xgt 'fight','1'
+				 manna-=1000
+				 pwipo+=1000
+				 '<B><font color=green>Вы передали энергию своему помощнику</font></B>'
+				 xgt'fight','1'
 				 end
              
              end
          
          
-			 if spell>0 and stileMark<0: 
-			 act 'Выбрать магию': gt 'spell'
+			 if spell>0 and stileMark<0:
+			 act 'Выбрать магию':gt'spell'
 			 end
 			 
-			 !'if round>1: 
-				 act 'ШКОЛА РЕШЕТОК И ЗЕРКАЛ': gt 'spREZ'
+			 !'if round>1:
+				 act 'ШКОЛА РЕШЕТОК И ЗЕРКАЛ':gt'spREZ'
 			 end
 			 
-			 if round>1: 
-				 act 'ШКОЛА ЗЕЛЕНЫХ ЛУН': gt 'spMOON'
+			 if round>1:
+				 act 'ШКОЛА ЗЕЛЕНЫХ ЛУН':gt'spMOON'
 			 end'
 			 
-			 if round>1 and spellSound>= 100 and manna>= 5000: 
-				 act 'ШКОЛА ЗВУКА': gt 'spSOUND'
+			 if round>1 and spellSound>=100 and manna>=5000:
+				 act 'ШКОЛА ЗВУКА':gt'spSOUND'
 			 end
 			 
-			 if round>1 and spellElf>= 100 and manna>= 300: 
-				 act 'ШКОЛА ПРИРОДЫ': gt 'spELFEN'
+			 if round>1 and spellElf>=100 and manna>=300:
+				 act 'ШКОЛА ПРИРОДЫ':gt'spELFEN'
 			 end
 			 
-			 if round>5 and sboMagik = 1 and manna>= 1000: 
-				 act 'ШКОЛА СОВМЕЩЕНИЯ СТИХИЙ': gt 'spSBO'
+			 if round>5 and sboMagik=1 and manna>=1000:
+				 act 'ШКОЛА СОВМЕЩЕНИЯ СТИХИЙ':gt'spSBO'
 			 end
 			 
-			 if GraveDog>= 100 and GraveDogPower>0 and round>1: 
-				 act 'ШКОЛА МОГИЛЬНОЙ СОБАКИ': gt 'spGRAVEDOG'
+			 if GraveDog>=100 and GraveDogPower>0 and round>1:
+				 act 'ШКОЛА МОГИЛЬНОЙ СОБАКИ':gt'spGRAVEDOG'
 			 end
 			 
-			 if vampireMorf>= 1 and vampirePower>0: 
-				 act 'ВАМПИРСКИЕ СИЛЫ': gt 'spVAMP'
+			 if vampireMorf>=1 and vampirePower>0:
+				 act 'ВАМПИРСКИЕ СИЛЫ':gt'spVAMP'
 			 end
 			 
-			 if DemonMorf>0: 
-				 act 'ДЕМОНИЧЕСКИЕ СИЛЫ': gt 'spDEMON'
+			 if DemonMorf>0:
+				 act 'ДЕМОНИЧЕСКИЕ СИЛЫ':gt'spDEMON'
 			 end
 			 
-			 if spMarpeozaBuff>0 and vagina>0 and penis>0: 
-				 act 'ВОЗЗВАТЬ К СИЛЕ МАРПЕОЗЫ': gt 'spMARPEOZA'
+			 if spMarpeozaBuff>0 and vagina>0 and penis>0:
+				 act 'ВОЗЗВАТЬ К СИЛЕ МАРПЕОЗЫ':gt'spMARPEOZA'
 			 end
 			 
-			 if spTEHNO>0 and round>1: 
-				 act 'ТЕХНОЛОГИИ': gt 'spTEHNO'
+			 if spTEHNO>0 and round>1:
+				 act 'ТЕХНОЛОГИИ':gt'spTEHNO'
 			 end
 			 
-			 if spReinkornMal>= 100 and round>1: 
-				 act 'ШКОЛА МАЛЬГАНА': gt 'spMALGUN'
+			 if spReinkornMal>=100 and round>1:
+				 act 'ШКОЛА МАЛЬГАНА':gt'spMALGUN'
 			 end
 			 
-			 if scolElectro = 1 and manna>= 100 and round>= 2: 
-				 act 'ШКОЛА ЭЛЕКТРИЧЕСТВА': gt 'spELECTRO'
+			 if scolElectro=1 and manna>=100 and round>=2:
+				 act 'ШКОЛА ЭЛЕКТРИЧЕСТВА':gt'spELECTRO'
 			 end
 			 
-			 if scolWater = 1 and manna>= 100 and round>= 2: 
-				 act 'ШКОЛА ВОДЫ': gt 'spWATER'
+			 if scolWater=1 and manna>=100 and round>=2:
+				 act 'ШКОЛА ВОДЫ':gt'spWATER'
 			 end
 			 
-			 if scolGround = 1 and manna>= 100 and round>= 2: 
-				 act 'ШКОЛА ЗЕМЛИ': gt 'spGROUND'
+			 if scolGround=1 and manna>=100 and round>=2:
+				 act 'ШКОЛА ЗЕМЛИ':gt'spGROUND'
 			 end
 			 
-			 if scolWind = 1 and manna>= 100 and round>= 2: 
-				 act 'ШКОЛА ВОЗДУХА': gt 'spWIND'
+			 if scolWind=1 and manna>=100 and round>=2:
+				 act 'ШКОЛА ВОЗДУХА':gt'spWIND'
 			 end
 			 
-			 if spZerkalo>= 100 and manna>= 10: 
-				 act 'БАЗОВАЯ ШКОЛА': gt 'spBASA'
+			 if spZerkalo>=100 and manna>=10:
+				 act 'БАЗОВАЯ ШКОЛА':gt'spBASA'
 			 end
 			 
-			 if spFist>= 100 and manna>= 10: 
-				 act 'ШКОЛА ДОМИНИКИ': gt 'spDominik'
+			 if spFist>=100 and manna>=10:
+				 act 'ШКОЛА ДОМИНИКИ':gt'spDominik'
 			 end
 			 
-			 if tai>= 100 and wipo>= 10: 
-			     act 'ШКОЛА МИМИКО': gt 'spMimiko'
+			 if tai>=100 and wipo>=10:
+			     act 'ШКОЛА МИМИКО':gt'spMimiko'
 			 end
 			 
-			 if serafVoronPower>0 and manna>= 25000 and VoronKlon = 0: 
-				 act 'Создать вороньего клона Сераф (25000 маны)': 
-				 '<font color = green>Вы активировали силу вороньего клона</font>'
-				 VoronKlon = 1
-				 manna- = 25000
-				 xgt 'fight','1'
+			 if serafVoronPower>0 and manna>=25000 and VoronKlon=0:
+				 act 'Создать вороньего клона Сераф (25000 маны)':
+				 '<font color=green>Вы активировали силу вороньего клона</font>'
+				 VoronKlon=1
+				 manna-=25000
+				 xgt'fight','1'
 				 end
 			 end
          end
          
-         if vapulabain>0 and manna>= 50 and vapulabainpunch<5: 
-             act 'Огненный шестиконечный хлыст Вапулы (50 маны, не более 5ти ударов)': 
-			 '<font color = green>Вы взмахнули огненным хлыстом Вапулы и ударили противника</font>'
-			 manna = manna-50
-			 vapulabainpunch+= 1
-             $tipuronaT = 'Огненный хлыст'
-			 damageT = RAND(50,100)
-			 damage = RAND(150,300)
-			 gs 'defencev'
-			 gs 'defenceTv'
-			 $tipuronaT = 'Огненный хлыст'
-			 damageT = RAND(50,100)
-			 damage = RAND(150,300)
-			 gs 'defencev'
-			 gs 'defenceTv'
-			 $tipuronaT = 'Огненный хлыст'
-			 damageT = RAND(50,100)
-			 damage = RAND(150,300)
-			 gs 'defencev'
-			 gs 'defenceTv'
-			 $tipuronaT = 'Огненный хлыст'
-			 damageT = RAND(50,100)
-			 damage = RAND(150,300)
-			 gs 'defencev'
-			 gs 'defenceTv'
-			 $tipuronaT = 'Огненный хлыст'
-			 damageT = RAND(50,100)
-			 damage = RAND(150,300)
-			 gs 'defencev'
-			 gs 'defenceTv'
-			 $tipuronaT = 'Огненный хлыст'
-			 damageT = RAND(50,100)
-			 damage = RAND(150,300)
-			 gs 'defencev'
-			 gs 'defenceTv'
-			 xgt 'fight','1'
+         if vapulabain>0 and manna>=50 and vapulabainpunch<5:
+             act 'Огненный шестиконечный хлыст Вапулы (50 маны, не более 5ти ударов)':
+			 '<font color=green>Вы взмахнули огненным хлыстом Вапулы и ударили противника</font>'
+			 manna=manna-50
+			 vapulabainpunch+=1
+             $tipuronaT='Огненный хлыст'
+			 damageT=RAND(50,100)
+			 damage=RAND(150,300)
+			 gs'defencev'
+			 gs'defenceTv'
+			 $tipuronaT='Огненный хлыст'
+			 damageT=RAND(50,100)
+			 damage=RAND(150,300)
+			 gs'defencev'
+			 gs'defenceTv'
+			 $tipuronaT='Огненный хлыст'
+			 damageT=RAND(50,100)
+			 damage=RAND(150,300)
+			 gs'defencev'
+			 gs'defenceTv'
+			 $tipuronaT='Огненный хлыст'
+			 damageT=RAND(50,100)
+			 damage=RAND(150,300)
+			 gs'defencev'
+			 gs'defenceTv'
+			 $tipuronaT='Огненный хлыст'
+			 damageT=RAND(50,100)
+			 damage=RAND(150,300)
+			 gs'defencev'
+			 gs'defenceTv'
+			 $tipuronaT='Огненный хлыст'
+			 damageT=RAND(50,100)
+			 damage=RAND(150,300)
+			 gs'defencev'
+			 gs'defenceTv'
+			 xgt'fight','1'
 			 exit
 			 end
          end
          
          
-         if weapon>0: 
-             if weapon = 1: $weapon = 'мечем'
-             if weapon = 2: $weapon = 'булавой'
+         if weapon>0:
+             if weapon=1:$weapon='мечем'
+             if weapon=2:$weapon='булавой'
          
-             act 'Ударить <<$weapon>>': 
-			 tipatk = 1
-			 stileMark = 7
-			 stile = 10
-			 conterBat = 2
-			 countBatRound = round
-			 conterBatTime = 3
-			 '<font color = green>Вы бьете <<$weapon>></font>'
-			     if weapon = 2: stunMark = 1
-			 gs 'udar','3'
-			 gs 'popad'
-			 xgt 'fight','1'
+             act 'Ударить <<$weapon>>':
+			 tipatk=1
+			 stileMark=7
+			 stile=10
+			 conterBat=2
+			 countBatRound=round
+			 conterBatTime=3
+			 '<font color=green>Вы бьете <<$weapon>></font>'
+			     if weapon=2:stunMark=1
+			 gs'udar','3'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
 			 
-			 if stileMark = 7 and weapon = 1 and wipo>= 50 and spSwordDancer>= 100: 
-			     act 'Танец мечей (50 воли)': 
-			     wipo = wipo-50
-			     conterBat = 2
-				 countBatRound = round
-				 conterBatTime = 3
-				 '<font color = green>Вы крутитесь и стараетесь нанести несколько ударов мечем</font>'
-				 tipatk = 1
-				 gs 'udar','3'
-				 gs 'popad'
-				 tipatk = 1
-				 gs 'udar','3'
-				 gs 'popad'
-				 tipatk = 1
-				 gs 'udar','3'
-				 gs 'popad'
-				 xgt 'fight','1'
+			 if stileMark=7 and weapon=1 and wipo>=50 and spSwordDancer>=100:
+			     act 'Танец мечей (50 воли)':
+			     wipo=wipo-50
+			     conterBat=2
+				 countBatRound=round
+				 conterBatTime=3
+				 '<font color=green>Вы крутитесь и стараетесь нанести несколько ударов мечем</font>'
+				 tipatk=1
+				 gs'udar','3'
+				 gs'popad'
+				 tipatk=1
+				 gs'udar','3'
+				 gs'popad'
+				 tipatk=1
+				 gs'udar','3'
+				 gs'popad'
+				 xgt'fight','1'
 				 end
 			 
 			 end
 			 
-			 if shild>0 and stileMark = 7: 
-			     act 'Закрыватся щитом (10 воли)': 
-			     wipo = wipo-10
-				 stileMark = 6
-				 stile = 3
-				 bronik = armorDef+ShilDef
-				 '<font color = green>Вы закрываетесь щитом</font>'
-				 xgt 'fight','1'
+			 if shild>0 and stileMark=7:
+			     act 'Закрыватся щитом (10 воли)':
+			     wipo=wipo-10
+				 stileMark=6
+				 stile=3
+				 bronik=armorDef+ShilDef
+				 '<font color=green>Вы закрываетесь щитом</font>'
+				 xgt'fight','1'
 				 end
 			 
 			 end
          end
          
-         if cursed = 1 and cursedTime = 0: 
-             act 'Печать Оротимару 1й уровень (полное востановление всех статистик)': 
-             cursedExp = cursedExp+1
-             cursedTime = 1
-             health = vital*10
-			 manna = intel*10+intel*magika
-			 wipo = will*10
-			 horny = 0
+         if cursed=1 and cursedTime=0:
+             act 'Печать Оротимару 1й уровень (полное востановление всех статистик)':
+             cursedExp=cursedExp+1
+             cursedTime=1
+             health=vital*10
+			 manna=intel*10+intel*magika
+			 wipo=will*10
+			 horny=0
 			 
 			 'Вы активировали печать Оротимару на шее и почувствовали как чужая сила полностью восстанавливает организм.'
-			 xgt 'fight','1'
+			 xgt'fight','1'
              end
          end
          
-         if cursed = 1 and cursedTime = 1 and cursedExp>= 20: 
-             act 'Печать Оротимару 2й уровень (полное востановление всех статистик и их удвоение) Эта печать изнашивает организм.': 
-             cursedExp = cursedExp+1
-             cursedTime = 2
-             health = (vital*10)*2
-			 manna = (intel*10+intel*magika)*2
-			 wipo = (will*10)*2
-			 horny = 0
-			 if filosofkam = 0: vidage = vidage + 1
+         if cursed=1 and cursedTime=1 and cursedExp>=20:
+             act 'Печать Оротимару 2й уровень (полное востановление всех статистик и их удвоение) Эта печать изнашивает организм.':
+             cursedExp=cursedExp+1
+             cursedTime=2
+             health=(vital*10)*2
+			 manna=(intel*10+intel*magika)*2
+			 wipo=(will*10)*2
+			 horny=0
+			 if filosofkam=0:vidage = vidage + 1
 			 'Вы активировали печать Оротимару на шее и почувствовали как чужая сила полностью восстанавливает организм и укрепляет его.'
-			 xgt 'fight','1'
+			 xgt'fight','1'
              end
          end
          
-         if cursed = 1 and cursedTime = 2 and cursedExp>= 40 and stileMark = 0: 
-             act 'Печать Оротимару 3й уровень (полное усиление тела) Эта печать сильно изнашивает организм.': 
-             cursedExp = cursedExp+1
-             cursedTime = 3
-			 horny = 0
-			 stileMark = 5
-			 stile = 10
-			 stren = stren+cursedExp
-			 speed = speed+cursedExp
-			 agil = agil+cursedExp
-			 vital = vital+cursedExp
-			 intel = intel+cursedExp
-			 will = will+cursedExp
-			 health = (vital*10)*2
-			 manna = (intel*10+intel*magika)*2
-			 wipo = (will*10)*2
-			 if filosofkam = 0: vidage = vidage + 2
+         if cursed=1 and cursedTime=2 and cursedExp>=40 and stileMark = 0:
+             act 'Печать Оротимару 3й уровень (полное усиление тела) Эта печать сильно изнашивает организм.':
+             cursedExp=cursedExp+1
+             cursedTime=3
+			 horny=0
+			 stileMark=5
+			 stile=10
+			 stren=stren+cursedExp
+			 speed=speed+cursedExp
+			 agil=agil+cursedExp
+			 vital=vital+cursedExp
+			 intel=intel+cursedExp
+			 will=will+cursedExp
+			 health=(vital*10)*2
+			 manna=(intel*10+intel*magika)*2
+			 wipo=(will*10)*2
+			 if filosofkam=0:vidage = vidage + 2
 			 'Вы активировали печать Оротимару на шее и почувствовали как чужая сила охватывает тело придавая ему не бывалую мощь.'
-			 xgt 'fight','1'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 5 and manna>= 50: 
-             act 'Вложить силу печати в удар (50 маны) изнашивает организм': 
-             manna = manna-50
-             tipatk = 1
-             damage = stren+cursedExp
-             if filosofkam = 0: vidage = vidage + 1
-             '<font color = green>Вы бьете кулаком</font>'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 5 and manna>=50:
+             act 'Вложить силу печати в удар (50 маны) изнашивает организм':
+             manna=manna-50
+             tipatk=1
+             damage=stren+cursedExp
+             if filosofkam=0:vidage = vidage + 1
+             '<font color=green>Вы бьете кулаком</font>'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 5 and manna>= 100: 
-             act 'Схватить рукой при помощи силы печати (100 маны) изнашивает организм': 
-             manna = manna-100
-             tipatk = 1
-             damage = stren+cursedExp
-             if filosofkam = 0: vidage = vidage + 1
-			 gs 'zahvat'
-             tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 5 and manna>=100:
+             act 'Схватить рукой при помощи силы печати (100 маны) изнашивает организм':
+             manna=manna-100
+             tipatk=1
+             damage=stren+cursedExp
+             if filosofkam=0:vidage = vidage + 1
+			 gs'zahvat'
+             tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 5 and manna>= 500: 
-             act 'Град ударов при помощи силы печати (500 маны) изнашивает организм': 
-             manna = manna-500
-             tipatk = 1
-             damage = stren+cursedExp
-             if filosofkam = 0: vidage = vidage + 1
-			 tipatk = 1
-			 '<font color = green>Вы наносите град ударов кулаками</font>'
-			 gs 'udar','0'
-			 gs 'popad'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 5 and manna>=500:
+             act 'Град ударов при помощи силы печати (500 маны) изнашивает организм':
+             manna=manna-500
+             tipatk=1
+             damage=stren+cursedExp
+             if filosofkam=0:vidage = vidage + 1
+			 tipatk=1
+			 '<font color=green>Вы наносите град ударов кулаками</font>'
+			 gs'udar','0'
+			 gs'popad'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
      
-         if JuravelStile>= 100 and stileMark = 0 and manna>10: 
-             act 'Применить стиль журавля (10 маны)': 
-             stileMark = 4
-             stile = 3
-             manna = manna-10
-             speed = speed+akrobat
-             agil = agil+akrobat
-             aktivdef = 1
-             tipatk = 2
-			 gs 'udar','1'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if JuravelStile>=100 and stileMark = 0 and manna>10:
+             act 'Применить стиль журавля (10 маны)':
+             stileMark=4
+             stile=3
+             manna=manna-10
+             speed=speed+akrobat
+             agil=agil+akrobat
+             aktivdef=1
+             tipatk=2
+			 gs'udar','1'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 4 and manna>= 50 and vertushka>= 100: 
-             act 'Применить вертушку (50 маны)': 
-             manna = manna-50
-             tipatk = 2
-			 gs 'udar','2'
-			 gs 'popad'
-			 tipatk = 2
-			 gs 'udar','2'
-			 gs 'popad'
-			 tipatk = 2
-			 gs 'udar','2'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 4 and manna>=50 and vertushka>=100:
+             act 'Применить вертушку (50 маны)':
+             manna=manna-50
+             tipatk=2
+			 gs'udar','2'
+			 gs'popad'
+			 tipatk=2
+			 gs'udar','2'
+			 gs'popad'
+			 tipatk=2
+			 gs'udar','2'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 4 and manna>= 50 and podsek>= 100: 
-             act 'Применить подсечку (50 маны)': 
-             manna = manna-50
-             gs 'podsek'
-             tipatk = 2
-			 gs 'udar','2'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 4 and manna>=50 and podsek>=100:
+             act 'Применить подсечку (50 маны)':
+             manna=manna-50
+             gs'podsek'
+             tipatk=2
+			 gs'udar','2'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 4 and manna>= 50 and flykik>= 100: 
-             act 'Применить удар с прыжка (50 маны)': 
-             manna = manna-50
-             stren = stren+(ves+akrobat)
-             flymark = 1
-             tipatk = 2
-			 gs 'udar','2'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 4 and manna>=50 and flykik>=100:
+             act 'Применить удар с прыжка (50 маны)':
+             manna=manna-50
+             stren=stren+(ves+akrobat)
+             flymark=1
+             tipatk=2
+			 gs'udar','2'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
          
-         if ironskinStile>= 100 and stileMark = 0 and manna>10: 
-             act 'Применить стиль железной рубашки (10 маны)': 
-             stileMark = 3
-             stile = 3
-             manna = manna-10
-             ironskin = vital
-             tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if ironskinStile>=100 and stileMark = 0 and manna>10:
+             act 'Применить стиль железной рубашки (10 маны)':
+             stileMark=3
+             stile=3
+             manna=manna-10
+             ironskin=vital
+             tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 3 and manna>= 50 and ironFist>= 100: 
-             act 'Применить стальной кулак (50 маны)': 
-             manna = manna-50
-             stren = stren+vital
-             stunMark = 1
-             tipatk = 1
-             '<font color = green>Вы бьете кулаком</font>'
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 3 and manna>=50 and ironFist>=100:
+             act 'Применить стальной кулак (50 маны)':
+             manna=manna-50
+             stren=stren+vital
+             stunMark=1
+             tipatk=1
+             '<font color=green>Вы бьете кулаком</font>'
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 3 and manna>= 50 and ironHealth>= 100: 
-             act 'Применить выздоровление (50 маны, востанавливает 200 здоровья)': 
-             manna = manna-50
-             health = health+200
-             tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 3 and manna>=50 and ironHealth>=100:
+             act 'Применить выздоровление (50 маны, востанавливает 200 здоровья)':
+             manna=manna-50
+             health=health+200
+             tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if stileMark = 3 and manna>= 50 and ironGrab>= 100: 
-             act 'Применить стальной захват (50 маны)': 
-             manna = manna-50
-             speed = speed+vital
-             gs 'zahvat'
-             tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 3 and manna>=50 and ironGrab>=100:
+             act 'Применить стальной захват (50 маны)':
+             manna=manna-50
+             speed=speed+vital
+             gs'zahvat'
+             tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
              end
          end
          
-         if boxings tile >= 100 and stileMark = 0 and wipo>10: 
-         	 act 'Применить стиль бокса (10 воли)': 
-			 '<B><font color = green>Вы применили СТИЛЬ БОКСА</font></B>'
-			 wipo = wipo-10
-			 stileMark = 2
-			 stile = 3
-			 agil = agil+40
-			 fint = fint+1
-			 tipatk = 1
-			 '<font color = green>Вы бьете бьете джеб</font>'
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if boxingStile >= 100 and stileMark = 0 and wipo>10:
+         	 act 'Применить стиль бокса (10 воли)':
+			 '<B><font color=green>Вы применили СТИЛЬ БОКСА</font></B>'
+			 wipo=wipo-10
+			 stileMark=2
+			 stile=3
+			 agil=agil+40
+			 fint=fint+1
+			 tipatk=1
+			 '<font color=green>Вы бьете бьете джеб</font>'
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
          end
          
-         if stileMark = 2 and wipo>= 50 and boxingFint>= 100: 
-             act 'Применять финты (50 воли)': 
-			 '<B><font color = green>Вы применили ФИНТЫ</font></B>'
-			 wipo = wipo-50
-			 fint = fint+3
-			 tipatk = 1
-			 '<font color = green>Вы бьете джеб</font>'
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 2 and wipo>=50 and boxingFint>=100:
+             act 'Применять финты (50 воли)':
+			 '<B><font color=green>Вы применили ФИНТЫ</font></B>'
+			 wipo=wipo-50
+			 fint=fint+3
+			 tipatk=1
+			 '<font color=green>Вы бьете джеб</font>'
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
          end
          
-         if stileMark = 2 and wipo>= 50 and boxingPow>= 100: 
-             act 'Нанести силовой удар (50 воли)': 
-			 '<B><font color = green>Вы нанесли СИЛОВОЙ УДАР</font></B>'
-			 wipo = wipo-50
-			 stren = stren+40
-			 stunMark = 1
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 2 and wipo>=50 and boxingPow>=100:
+             act 'Нанести силовой удар (50 воли)':
+			 '<B><font color=green>Вы нанесли СИЛОВОЙ УДАР</font></B>'
+			 wipo=wipo-50
+			 stren=stren+40
+			 stunMark=1
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
          end
          
-         if stileMark = 2 and wipo>= 50 and boxings eria>= 100: 
-             act 'Нанести серию ударов (50 воли)': 
-			 '<B><font color = green>Вы нанесли СЕРИЮ УДАРОВ</font></B>'
-			 wipo = wipo-50
-			 !stren = stren+40
-			 !stunMark = 1
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+         if stileMark = 2 and wipo>=50 and boxingSeria>=100:
+             act 'Нанести серию ударов (50 воли)':
+			 '<B><font color=green>Вы нанесли СЕРИЮ УДАРОВ</font></B>'
+			 wipo=wipo-50
+			 !stren=stren+40
+			 !stunMark=1
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
          end
          
-		 if tigerStile >= 100 and stileMark = 0 and manna>10: 
-			 act 'Применить стиль тигра (10 маны)': 
-			 '<B><font color = green>Вы применили СТИЛЬ ТИГРА</font></B>'
-			 manna = manna-10
-			 stileMark = 1
-			 stile = 3
-			 stren = stren+40
-			 speed = speed+40
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
-			 end
-		 end
-		 if tigerClaw >= 100 and manna>= 50 and stileMark = 1: 
-			 act 'Атаковать приемом Коготь тигра парализующим противника (50 маны)': 
-			 tipatk = 1
-			 stunMark = 1
-			 manna = manna-50
-			 '<B><font color = green>Вы атаковали приемом КОГОТЬ ТИГРА</font></B>'
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+		 if tigerStile >= 100 and stileMark = 0 and manna>10:
+			 act 'Применить стиль тигра (10 маны)':
+			 '<B><font color=green>Вы применили СТИЛЬ ТИГРА</font></B>'
+			 manna=manna-10
+			 stileMark=1
+			 stile=3
+			 stren=stren+40
+			 speed=speed+40
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
 		 end
-		 if tigerFury >= 100 and manna>= 50 and stileMark = 1: 
-		 	 act 'Атаковать приемом Ярость тигра наносящим множественные удары(50 маны)': 
-			 tipatk = 1
-			 manna = manna-50
-			 '<B><font color = green>Вы атаковали приемом ЯРОСТЬ ТИГРА</font></B>'
-			 gs 'udar','0'
-			 gs 'popad'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+		 if tigerClaw >= 100 and manna>= 50 and stileMark=1:
+			 act 'Атаковать приемом Коготь тигра парализующим противника (50 маны)':
+			 tipatk=1
+			 stunMark=1
+			 manna=manna-50
+			 '<B><font color=green>Вы атаковали приемом КОГОТЬ ТИГРА</font></B>'
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
 		 end
-		 if tigerWill >= 100 and wipo>= 50 and stileMark = 1: 
-		 	 act 'Воля тигра регенирирует ману и здоровье(50 воли)': 
-			 manna = manna+100
-			 health = health+100
-			 wipo = wipo-50
-			 '<B><font color = green>Вы применили ВОЛЮ ТИГРА</font></B>'
-			 xgt 'fight','1'
+		 if tigerFury >= 100 and manna>=50 and stileMark=1:
+		 	 act 'Атаковать приемом Ярость тигра наносящим множественные удары(50 маны)':
+			 tipatk=1
+			 manna=manna-50
+			 '<B><font color=green>Вы атаковали приемом ЯРОСТЬ ТИГРА</font></B>'
+			 gs'udar','0'
+			 gs'popad'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
+			 end
+		 end
+		 if tigerWill >= 100 and wipo>=50 and stileMark=1:
+		 	 act 'Воля тигра регенирирует ману и здоровье(50 воли)':
+			 manna=manna+100
+			 health=health+100
+			 wipo=wipo-50
+			 '<B><font color=green>Вы применили ВОЛЮ ТИГРА</font></B>'
+			 xgt'fight','1'
 			 end
 		 end
 		 
-		 if weapon<= 0: 
+		 if weapon<=0:
 		 
-			 act 'Ударить кулаком': 
-			 '<font color = green>Вы бьете кулаком</font>'
-			 tipatk = 1
-			 gs 'udar','0'
-			 gs 'popad'
-			 xgt 'fight','1'
+			 act 'Ударить кулаком':
+			 '<font color=green>Вы бьете кулаком</font>'
+			 tipatk=1
+			 gs'udar','0'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
 			 
-			 act 'Пнуть ногой': 
-			 tipatk = 2
-			 gs 'udar','1'
-			 gs 'popad'
-			 xgt 'fight','1'
+			 act 'Пнуть ногой':
+			 tipatk=2
+			 gs'udar','1'
+			 gs'popad'
+			 xgt'fight','1'
 			 end
 		 end
      end
-     if stun>0 or stupor>0: 
-     '<B><font color = red>Вы не можете двигатся</font></B>'
-         act 'Пропустить ход': xgt 'fight','1'
+     if stun>0 or stupor>0:
+     '<B><font color=red>Вы не можете двигатся</font></B>'
+         act 'Пропустить ход':xgt'fight','1'
          
-         if ironChin>= 100 and manna>= 10 and stupor = 0: 
-             act 'Сбросить стан (10 маны)': 
-             stun = 0
-             manna = manna-10
-             xgt 'fight','0'
+         if ironChin>=100 and manna>=10 and stupor=0:
+             act 'Сбросить стан (10 маны)':
+             stun=0
+             manna=manna-10
+             xgt'fight','0'
              end
          end
      end
      
-     if world = 1 and wipo>= 10 and NORUN = 0 and stun = 0 and stupor = 0: 
-         act 'Попытаться сбежать (10 воли)': 
+     if world=1 and wipo>=10 and NORUN=0 and stun=0 and stupor=0:
+         act 'Попытаться сбежать (10 воли)':
          cla
-         wipo = wipo-10
-         beg = beg+1
-             if speed<speedv: 
+         wipo=wipo-10
+         beg=beg+1
+             if speed<speedv:
              'Бесполезно, <<$namev>> слишком быстрый для вас.'
-             xgt 'fight','1'
+             xgt'fight','1'
              end
              
-             if speed>= speedv: 
-		      porand = RAND(0,speed+beg-(fat/10))
-		         if porand>= 50: 
-		             if monster>0: monster = 0
-		         gs 'nill'
+             if speed>=speedv:
+		      porand=RAND(0,speed+beg-(fat/10))
+		         if porand>=50:
+		             if monster>0:monster=0
+		         gs'nill'
 		         'Кажется вам удалось оторватся и <<$namev>> остался далеко позади.'
-		         act 'Передохнуть': GOTO $locFight, $metkaFight
+		         act 'Передохнуть':GOTO $locFight, $metkaFight
 		         end
 		         
-		         if porand<50: 
+		         if porand<50:
 		         'Эх, не удалось, <<$namev>> отрезал вам пути к отступлению.'
-		         xgt 'fight','1'
+		         xgt'fight','1'
 		         end
              end
          end
      end
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
 !
 
-gs 'Priziv'
+gs'Priziv'
 
 DELOBJ 'Инвентарь'
-     if healthV>0: 
-		 if stunV = 0 or monster>0: 
-		 gs 'enemy','0'
+     if healthV>0:
+		 if stunV = 0 or monster>0:
+		 gs'enemy','0'
 		 end
-		 if stunV>0 and monster = 0: 
-		 stunV = stunV-1
-		 '<B><font color = green><<$namev>> не в состоянии двигатся.</font></B>'
-		 xgt 'fight','2'
+		 if stunV>0 and monster=0:
+		 stunV=stunV-1
+		 '<B><font color=green><<$namev>> не в состоянии двигатся.</font></B>'
+		 xgt'fight','2'
 		 end
-		 if stuporV>0: 
-		 '<B><font color = green><<$namev>> не в состоянии двигатся.</font></B>'
-		 xgt 'fight','2'
+		 if stuporV>0:
+		 '<B><font color=green><<$namev>> не в состоянии двигатся.</font></B>'
+		 xgt'fight','2'
 		 end
      end
-     if healthV<= 0: 
-     '<B><font color = green><<$namev>> рухнул на землю.</font></B>'
-     xgt 'fight','2'
+     if healthV<=0:
+     '<B><font color=green><<$namev>> рухнул на землю.</font></B>'
+     xgt'fight','2'
      end
 end
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-gs 'batleenddin'
-wepAtk = 0
-wepAtkV = 0
+gs'batleenddin'
+wepAtk=0
+wepAtkV=0
 
-     if gostbodyv>0: gostbodyv- = 1
-     if gostbody>0: gostbody- = 1
-     if gostfist>0: gostfist = 0
-     if gostfistv>0: gostfistv = 0
+     if gostbodyv>0:gostbodyv-=1
+     if gostbody>0:gostbody-=1
+     if gostfist>0:gostfist=0
+     if gostfistv>0:gostfistv=0
 
-     if stileMark = 5: health = health+cursedExp & 'Печать Оротимару регенерирует ваше здоровье.'
-     if stun>0: stun = stun-1
-     if stunv>0: stunv = stunv-1
-     if flymark = 1: flymark = 0 & stren = strenMAX
-     if flymarkv = 1: flymarkv = 0 & strenv = strenMAXV
-     stunMark = 0
-     stunMarkV = 0
-     if stileMark>= 1 and stile <= 0: stilev = 0 & stileMark = 0 & stren = strenMAX & speed = speedMAX & agil = agilMAX & vital = vitalMAX & intel = intelMAX & will = willMAX & aktivdef = 0 & bronik = armorDef
-     if stileMark>= 1 and stile > 0: stile = stile-1
+     if stileMark=5:health=health+cursedExp&'Печать Оротимару регенерирует ваше здоровье.'
+     if stun>0:stun=stun-1
+     if stunv>0:stunv=stunv-1
+     if flymark=1:flymark=0&stren=strenMAX
+     if flymarkv=1:flymarkv=0&strenv=strenMAXV
+     stunMark=0
+     stunMarkV=0
+     if stileMark>=1 and stile <= 0:stilev=0&stileMark=0&stren=strenMAX&speed=speedMAX&agil=agilMAX&vital=vitalMAX&intel=intelMAX&will=willMAX&aktivdef=0&bronik=armorDef
+     if stileMark>=1 and stile > 0:stile=stile-1
      
-     if stilevMark>= 1 and stilev <= 0: stilev = 0 & stilevMark = 0 & strenv = strenMAXV & speedV = speedMAXV & agilV = agilMAXV & vitalv = vitalMAXV & intevl = intelMAXV & willv = willMAXV & aktivdefV = 0 & bronikv = armorDefv
-     if stilevMark>= 1 and stilev > 0: stilev = stilev-1
+     if stilevMark>=1 and stilev <= 0:stilev=0&stilevMark=0&strenv=strenMAXV&speedV=speedMAXV&agilV=agilMAXV&vitalv=vitalMAXV&intevl=intelMAXV&willv=willMAXV&aktivdefV=0&bronikv=armorDefv
+     if stilevMark>=1 and stilev > 0:stilev=stilev-1
      
      
-     if skul>0: skul = skul-1
-     if skul = 0 and skulMark>0: skulMark = 0
-     if skulv>0: skulv = skulv-1
-     if skulv = 0 and skulMarkv>0: skulMarkv = 0
+     if skul>0:skul=skul-1
+     if skul=0 and skulMark>0:skulMark=0
+     if skulv>0:skulv=skulv-1
+     if skulv=0 and skulMarkv>0:skulMarkv=0
      
-     if monster>0 and horny>= 100 and DemonMorf = 0: 
+     if monster>0 and horny>=100 and DemonMorf=0:
      'Вы так возбужденны, что не можете больше сопротивлятся и падаете на колени.'
-     xgt 'ender','loss'
+     xgt'ender','loss'
      exit
      end
      
      dynamic $hunterfordemondin
      
-     if healthv <= 0 and mortalv>0: 
-     mortalv = mortalv-1
+     if healthv <= 0 and mortalv>0:
+     mortalv=mortalv-1
      '<<$namev>> упал и его место занял новый противник.'
-		 if OtradStraga = 0: 
-		 healthV = vitalV*10
-		 mannaV = intelV*10+intelV*5
-		 wipoV = willV*10
-		 blood = 0
+		 if OtradStraga=0:
+		 healthV=vitalV*10
+		 mannaV=intelV*10+intelV*5
+		 wipoV=willV*10
+		 blood=0
 		 end
-		 if OtradStraga = 1: 
-		 blood = 0
-		 gs 'stragaW'
+		 if OtradStraga=1:
+		 blood=0
+		 gs'stragaW'
 		 end
-     act 'Далее': gt 'fight','0'
+     act 'Далее':gt'fight','0'
      end
      
-     dynamic $progs eraf
+     dynamic $progseraf
      
-     if elektostormv>0: elektostormv- = 1
-     if elektostorm>0: elektostorm- = 1
-     if elektogroundv>0: elektogroundv- = 1
-     if elektoground>0: elektoground- = 1
-     if waterstormv>0: waterstormv- = 1
-     if waterstorm>0: waterstorm- = 1
-     if watergroundv>0: watergroundv- = 1
-     if waterground>0: waterground- = 1
-     if windstormv>0: windstormv- = 1
-     if windstorm>0: windstorm- = 1
-     if ShinraTensei>0: ShinraTensei- = 1
-     if ShinraTenseiV>0: ShinraTenseiV- = 1
-     if Gakido>0: Gakido- = 1
-     if GakidoV>0: GakidoV- = 1
-     if MirrorMagik>0: MirrorMagik- = 1
-     if MirrorMagikV>0: MirrorMagikV- = 1
-     if StopMagik>0: StopMagik- = 1
-     if StopMagikV>0: StopMagikV- = 1
-     if cooldown>0: cooldown- = 1
-	 if MarpeozaShadow>0: MarpeozaShadow- = 1 & manna- = 100
-	 if cooldownV>0: cooldownV- = 1
-	 if MarpeozaShadowV>0: MarpeozaShadowV- = 1 & mannav- = 100
-	 if cooldownSpell>0: cooldownSpell- = 1
-	 if cooldownSpellV>0: cooldownSpellV- = 1
-     if stuporV>0: stuporV- = 1
-     if stupor>0: stupor- = 1
-     if	priziv>0: prizivTimes- = 1
-     if	prizivv>0: prizivTimesv- = 1
-     if elektroluza>0: elektroluza- = 1
-     if sonar>0: sonar- = 1
-     if sonarv>0: sonarv- = 1
-     if CoolPlace>0: CoolPlace- = 1
-     if CoolPlaceV>0: CoolPlaceV- = 1
+     if elektostormv>0:elektostormv-=1
+     if elektostorm>0:elektostorm-=1
+     if elektogroundv>0:elektogroundv-=1
+     if elektoground>0:elektoground-=1
+     if waterstormv>0:waterstormv-=1
+     if waterstorm>0:waterstorm-=1
+     if watergroundv>0:watergroundv-=1
+     if waterground>0:waterground-=1
+     if windstormv>0:windstormv-=1
+     if windstorm>0:windstorm-=1
+     if ShinraTensei>0:ShinraTensei-=1
+     if ShinraTenseiV>0:ShinraTenseiV-=1
+     if Gakido>0:Gakido-=1
+     if GakidoV>0:GakidoV-=1
+     if MirrorMagik>0:MirrorMagik-=1
+     if MirrorMagikV>0:MirrorMagikV-=1
+     if StopMagik>0:StopMagik-=1
+     if StopMagikV>0:StopMagikV-=1
+     if cooldown>0:cooldown-=1
+	 if MarpeozaShadow>0:MarpeozaShadow-=1&manna-=100
+	 if cooldownV>0:cooldownV-=1
+	 if MarpeozaShadowV>0:MarpeozaShadowV-=1&mannav-=100
+	 if cooldownSpell>0:cooldownSpell-=1
+	 if cooldownSpellV>0:cooldownSpellV-=1
+     if stuporV>0:stuporV-=1
+     if stupor>0:stupor-=1
+     if	priziv>0:prizivTimes-=1
+     if	prizivv>0:prizivTimesv-=1
+     if elektroluza>0:elektroluza-=1
+     if sonar>0:sonar-=1
+     if sonarv>0:sonarv-=1
+     if CoolPlace>0:CoolPlace-=1
+     if CoolPlaceV>0:CoolPlaceV-=1
      
-     Vizor = 0
-     VizorV = 0
+     Vizor=0
+     VizorV=0
      
-     if forestPrisonTime>0 and priziv<= 0: forestPrisonTime = 0
+     if forestPrisonTime>0 and priziv<=0:forestPrisonTime=0
      
-     if strenBAF>0: 
-     strenBAF- = 1
-         if strenBAF<= 0: stren = strenMAX
+     if strenBAF>0:
+     strenBAF-=1
+         if strenBAF<=0:stren=strenMAX
      end
-     if speedBAF>0: 
-     speedBAF- = 1
-         if speedBAF<= 0: speed = speedMAX
+     if speedBAF>0:
+     speedBAF-=1
+         if speedBAF<=0:speed=speedMAX
      end
-     if agilBAF>0: 
-     agilBAF- = 1
-         if agilBAF<= 0: agil = agilMAX
+     if agilBAF>0:
+     agilBAF-=1
+         if agilBAF<=0:agil=agilMAX
      end
-     if intelBAF>0: 
-     intelBAF- = 1
-         if intelBAF<= 0: intel = intelMAX
+     if intelBAF>0:
+     intelBAF-=1
+         if intelBAF<=0:intel=intelMAX
      end
-     if willBAF>0: 
-     willBAF- = 1
-         if willBAF<= 0: will = willMAX
-     end
-     
-     if strenBAFv>0: 
-     strenBAFv- = 1
-         if strenBAFv<= 0: strenv = strenMAXv
-     end
-     if speedBAFv>0: 
-     speedBAFv- = 1
-         if speedBAFv<= 0: speedv = speedMAXv
-     end
-     if agilBAFv>0: 
-     agilBAFv- = 1
-         if agilBAFv<= 0: agilv = agilMAXv
-     end
-     if intelBAFv>0: 
-     intelBAFv- = 1
-         if intelBAFv<= 0: intelv = intelMAXv
-     end
-     if willBAFv>0: 
-     willBAFv- = 1
-         if willBAFv<= 0: willv = willMAXv
+     if willBAF>0:
+     willBAF-=1
+         if willBAF<=0:will=willMAX
      end
      
-     if tentakNumber>0 and healthv <= 0: 
-     tentakNumber = tentakNumber-1
-     healthV = vitalV*10
-	 mannaV = intelV*10+intelV*5
-	 wipoV = willV*10
-	 blood = 0
+     if strenBAFv>0:
+     strenBAFv-=1
+         if strenBAFv<=0:strenv=strenMAXv
+     end
+     if speedBAFv>0:
+     speedBAFv-=1
+         if speedBAFv<=0:speedv=speedMAXv
+     end
+     if agilBAFv>0:
+     agilBAFv-=1
+         if agilBAFv<=0:agilv=agilMAXv
+     end
+     if intelBAFv>0:
+     intelBAFv-=1
+         if intelBAFv<=0:intelv=intelMAXv
+     end
+     if willBAFv>0:
+     willBAFv-=1
+         if willBAFv<=0:willv=willMAXv
+     end
+     
+     if tentakNumber>0 and healthv <= 0:
+     tentakNumber=tentakNumber-1
+     healthV=vitalV*10
+	 mannaV=intelV*10+intelV*5
+	 wipoV=willV*10
+	 blood=0
 	 'Чудовище страшно завопило потеряв щупальце.'
-     act 'Далее': gt 'fight','0'
+     act 'Далее':gt'fight','0'
      end
 !
-     if health > 0 and healthv > 0: 
-     act 'Далее': gt 'fight','0'
-     elseif health <= 0: 
-     xgt 'ender','loss'
-     elseif healthv <= 0: 
-     xgt 'ender','win'
+     if health > 0 and healthv > 0:
+     act 'Далее':gt'fight','0'
+     elseif health <= 0:
+     xgt'ender','loss'
+     elseif healthv <= 0:
+     xgt'ender','win'
      end
 end
 --- fight ---------------------------------

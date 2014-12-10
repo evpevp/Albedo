@@ -1,24 +1,24 @@
 # sonorotimaru
-gs 'stat'
-OrotimaruFinalOnce = 1
-cursed = 0
-'<center><img src = "pic/Final/orotimaru.jpg" ></center>'
+gs'stat'
+OrotimaruFinalOnce=1
+cursed=0
+'<center><img src="pic/Final/orotimaru.jpg" ></center>'
 'Вы почувствовали как в ваше сознание ворвалось что то чужое и сильное. Перед лицом возникло змеиное лицо Оротимару'
 'Вы поначалу немного опешили, но тут же сообразили, как и говорил Астарот, дух Оротимару притянуло к его печати.'
 'Змей зашептал вам "Привет Игорь, как поживаешь?"'
 
-act 'Да ничего так.': 
+act 'Да ничего так.':
 cls
-gs 'stat'
-'<center><img src = "pic/Final/orotimaru.jpg" ></center>'
+gs'stat'
+'<center><img src="pic/Final/orotimaru.jpg" ></center>'
 'Вы постарались как можно спокойней ответь "Да ничего так."'
 'Оротимару зашептал настойчиво вам в голову отчего вас начало мутить. "Мне нужно твое тело что бы воплотится, отдай его мне."'
-     if SUB>0: 
-         act 'Конечно господин': 
+     if SUB>0:
+         act 'Конечно господин':
          cls
-         gs 'stat'
+         gs'stat'
          '<center><H4>Плохое окончание игры</H4></center>'
-         '<center><img src = "pic/Final/orotimaru.jpg" ></center>'
+         '<center><img src="pic/Final/orotimaru.jpg" ></center>'
          'Вы хотели возразить, но воля Оротимару вас молниеносно сломала и вы сумели только промямлить "Конечно господин."'
          'Оротимару улыбнулся еще шире и вы почувствовали как чужие знания, чужие воспоминания и чужая сила хлынула в вас.'
          'Вы вспомнили множество битв в которых учавствовали будучи еще молодым Оротимару, вспомнили об изнании за изучение запретных техник, вспомнили об изгнании из ордена рассвета за нападение на члена ордена с целью заполучить тело.'
@@ -27,55 +27,55 @@ gs 'stat'
          'Так и осталось навсегда. Вы стали частью Оротимару, а он стал вами, пока не износил ваше тело и оно не умерло подарив вам наконец долгожданный покой.'
          end
      else
-         act 'Да хрен тебе': 
+         act 'Да хрен тебе':
          cls
-         gs 'stat'
-         '<center><img src = "pic/Final/orotimaru.jpg" ></center>'
+         gs'stat'
+         '<center><img src="pic/Final/orotimaru.jpg" ></center>'
          'Вас возмутило что этот засранец хочет завладеть вашим телом и вам удалось сбросив оцепенение от его шопота послать его куда подальше.'
          'Змей удивился "Надо же. У тебя есть воля что бы сопротивлятся мне. Ладно. Давай тогда обсудим наше положение. Я кое что почувствовал, а именно тот факт что демон Астарот заинтересовался мной и хочет меня получить. Скажу прямо, меня это не устраивает, я хочу слинять из этого мира как можно быстрей."'
-             act 'Астарот обещал меня отправить домой': 
+             act 'Астарот обещал меня отправить домой':
 			 cls
-			 gs 'stat'
-			 '<center><img src = "pic/Final/orotimaru.jpg" ></center>'
+			 gs'stat'
+			 '<center><img src="pic/Final/orotimaru.jpg" ></center>'
 			 'Астарот обещал меня отправить домой если я ему тебя выдам. На эту вашу фразу Оротимару расхохотался "Браво, святая невинность, даже если эта старая падла и пошевелится отправив тебя домой, то там тебя будет ожидать орден рассвета в полном составе. Отпусти меня, и мы как нибудь уладим проблему с демоном, а когда вернемся в свой мир вдвоем, то заставим рассвет считатся с нами."'
-			     act 'Я тебя все равно не выпущу': 
+			     act 'Я тебя все равно не выпущу':
 				 cls
-				 OrotimaruFinalQW = 10
-				 gs 'stat'
-				 '<center><img src = "pic/Final/orotimaru.jpg" ></center>'
+				 OrotimaruFinalQW=10
+				 gs'stat'
+				 '<center><img src="pic/Final/orotimaru.jpg" ></center>'
 				 'Я тебя все равно не выпущу, сказали вы. Оротимару злобно зашипел "Это большая ошибка, ссорится со мной!"'
-				     act 'Проснутся': 
-					 NowSleep = 0
-					 gs 'clonil'
-					 gs 'WeapNill'
-					 gs 'ShildNill'
-					 gs 'clostar'
-					 farmstam = stren/10
-					  hapri = 0
-						 if world = 0 and sizo>0: GOTO $locBed, $metkaBed
-						 if world = 0 and sizo = 0: gt 'loker'
-						 if world = 1: gt 'lokerW'
+				     act 'Проснутся':
+					 NowSleep=0
+					 gs'clonil'
+					 gs'WeapNill'
+					 gs'ShildNill'
+					 gs'clostar'
+					 farmstam=stren/10
+					 set hapri = 0
+						 if world=0 and sizo>0:GOTO $locBed, $metkaBed
+						 if world=0 and sizo=0:gt'loker'
+						 if world=1:gt'lokerW'
 					 end
 				 end
 				 
-				 act 'Ладно, я выпущу тебя': 
+				 act 'Ладно, я выпущу тебя':
 				 cls
-				 gs 'stat'
-				 OrotimaruFinalQW = 1
-				 '<center><img src = "pic/Final/orotimaru.jpg" ></center>'
+				 gs'stat'
+				 OrotimaruFinalQW=1
+				 '<center><img src="pic/Final/orotimaru.jpg" ></center>'
 				 'Вы разрешили Оротимару выйти из вашего тела. В ответ на это у вас страшно зажгло печать и она начала рости. Вы заорали от боли и в глазах потемнело. После того как чувства вернулись к вам, вы открыв глаза увидели возле кровати Оротимару.'
 				 'Оротимару довольно ухмылялся глядя на вас. "Встретишь меня около Астарота. Вдвоем мы сможем прорватся сквозь его заслон. Ты готовься пока и приходи." После этого Оротимару прошмыгнул за дверь.'
-				     act 'Встать с кровати.': 
-					 NowSleep = 0
-					 gs 'clonil'
-					 gs 'WeapNill'
-					 gs 'ShildNill'
-					 gs 'clostar'
-					 farmstam = stren/10
-					  hapri = 0
-						 if world = 0 and sizo>0: GOTO $locBed, $metkaBed
-						 if world = 0 and sizo = 0: gt 'loker'
-						 if world = 1: gt 'lokerW'
+				     act 'Встать с кровати.':
+					 NowSleep=0
+					 gs'clonil'
+					 gs'WeapNill'
+					 gs'ShildNill'
+					 gs'clostar'
+					 farmstam=stren/10
+					 set hapri = 0
+						 if world=0 and sizo>0:GOTO $locBed, $metkaBed
+						 if world=0 and sizo=0:gt'loker'
+						 if world=1:gt'lokerW'
 					 end
 				 end
 			 end

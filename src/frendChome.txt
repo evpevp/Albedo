@@ -1,45 +1,45 @@
 # frendChome
 *P '		'
-$manitogiC = {
- if Csex = 0: 
-	 act 'Лапать ее': 
+$manitogiC={
+ if Csex=0:
+	 act 'Лапать ее':
 	 cla
-	 act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
-		 if frendC<50: 
-		 frendC = 1
+	 act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
+		 if frendC<50:
+		 frendC=1
 		 '<<$namefrendC>> разозлилась на ваше поведение. "Я не такая!"'
 		 
 		 else
 		 '<<$namefrendC>> хихикает и краснеет. "Ну не здесь, пойдем ко мне домой."'
-		 frendC+= 10
-			 act 'Идти к ней домой': 
-			 $namev = $namefrendC
-			 if Csex = 0: Csex = 1 & girl+= 1
-			 pointSS = 0
-			 SexStatC = 1
-			 gt 'sexsisteman','vibor'
+		 frendC+=10
+			 act 'Идти к ней домой':
+			 $namev=$namefrendC
+			 if Csex=0:Csex=1&girl+=1
+			 pointSS=0
+			 SexStatC=1
+			 gt'sexsisteman','vibor'
 			 end
 		 end
 	 
 	 end
  else
  
-	 act 'Сказать что хотите ее': 
+	 act 'Сказать что хотите ее':
 	 cla
-	 act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
-		 if frendC<50: 
-		 frendC = 1
+	 act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
+		 if frendC<50:
+		 frendC=1
 		 '<<$namefrendC>> разозлилась на ваше поведение. "Тебе лишь бы потрахаться."'
 		 
 		 else
 		 '<<$namefrendC>> хихикает и краснеет. "Ну не здесь, пойдем ко мне домой."'
-		 frendC+= 10
-			 act 'Идти к ней домой': 
-			 $namev = $namefrendC
-			 if Csex = 0: Csex = 1 & girl+= 1
-			 pointSS = 0
-			 SexStatC = 1
-			 gt 'sexsisteman','vibor'
+		 frendC+=10
+			 act 'Идти к ней домой':
+			 $namev=$namefrendC
+			 if Csex=0:Csex=1&girl+=1
+			 pointSS=0
+			 SexStatC=1
+			 gt'sexsisteman','vibor'
 			 end
 		 end
 	 
@@ -47,20 +47,20 @@ $manitogiC = {
  end
 }
 
-$femitogiC = {
-	 act 'Идти к нему домой': 
-	 $namev = $namefrendC
-	 if Csex = 0: Csex = 1 & guy+= 1
-	 pointSS = 0
-	 SexStatC = 1
-	 gt 'sexsistem','before'
+$femitogiC={
+	 act 'Идти к нему домой':
+	 $namev=$namefrendC
+	 if Csex=0:Csex=1&guy+=1
+	 pointSS=0
+	 SexStatC=1
+	 gt'sexsistem','before'
 	 end
 
-act 'Уйти (5 мин)': frendC- = 5 & minut += 5 & gt 'slumsW'
-if Csex = 0: 
+act 'Уйти (5 мин)':frendC-=5&minut=minut+5&gt'slumsW'
+if Csex=0:
 '<<$namefrendC>> целует вас и шепчет "пойдем ко мне."'
 else
-     if frendC<50: 
+     if frendC<50:
      '<<$namefrendC>> хлопает вам по жопе, ну ладно, повеселились, пойдем ко мне.'
      else
      '<<$namefrendC>> целует вас и шепчет "пойдем ко мне."'
@@ -74,130 +74,130 @@ end
 
 
 
-if frendCday!day: 
-frendCday = day
-frendC+= 1
+if frendCday!day:
+frendCday=day
+frendC+=1
 'Навстречу вам выходит <<$namefrendC>>'
 '<<$frencloC>> <<$fempropC>> <<$faceC>>'
 
 
-act 'Уйти (5 мин)': frendC- = 1 & minut += 5 & gt 'slumsW'
-     if cpol = 0: 
-     aktrand = RAND(0,1)
-         if aktrand = 0: 
+act 'Уйти (5 мин)':frendC-=1&minut=minut+5&gt'slumsW'
+     if cpol=0:
+     aktrand=RAND(0,1)
+         if aktrand=0:
          '<<$namefrendC>> приглашает вас выпить с ним.'
-             act 'Идти в трактир': 
+             act 'Идти в трактир':
              cla
-             frendC+= 10
+             frendC+=10
              'В трактире <<$namefrendC>> заказывает вина и еды. Вы выпиваете вместе с парнем и разговариваете.'
              ''
              dynamic $femitogiC
              end
          end
-         if aktrand = 1: 
+         if aktrand=1:
          '<<$namefrendC>> приглашает вас погулять.'
-             act 'Идти на прогулку': 
+             act 'Идти на прогулку':
              cla
-             frendC+= 10
+             frendC+=10
              '<<$namefrendC>> травит байки о жизни в трущобах.'
              ''
              dynamic $femitogiC
              end
          end
      end
-     if cpol = 1: 
+     if cpol=1:
      
-         if marryMeC = 1 and marryMeCday+12<= daystart: 
+         if marryMeC=1 and marryMeCday+12<=daystart:
          '<<$namefrendC>> напоминает вам, что вы обещали на ней жениться к этой дате.'
-             act 'Отказаться': 
+             act 'Отказаться':
              cla
-             frendC = 0
+             frendC=0
              'Вы посмеялись над ее нелепыми идеями и сказали, что вас и так все устраивает.'
              '<<$namefrendC>> обиделась на вас и сказала, чтоб вас больше не было на пороге ее дома.'
-             act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
+             act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
              end
              
-             act 'Жениться': 
+             act 'Жениться':
              cla
-             frendC = 0
-             brakW = 1
-             Mpol = cpol
-			 $namefrendM = $namefrendC
-			 msalo = csalo
-			 mhlong = chlong
-			 mtan = ctan
-			 mhcol = chcol
-			 mglacol = cglacol
-			 mfage = cfage
-			 mvagina = cvagina
-			 mpenis = cpenis
-			 mface = cface
-			 mhand = chand
-			 mbrist = cbrist
-			 mass = cass
-			 mthight = cthight
-			 mleg = cleg
-			 mtit = ctit
-			 mrost = crost
-			 $frencloM = $frencloC
-			 $fempropM = $fempropC
-			 $faceM = $faceC
+             frendC=0
+             brakW=1
+             Mpol=cpol
+			 $namefrendM=$namefrendC
+			 msalo=csalo
+			 mhlong=chlong
+			 mtan=ctan
+			 mhcol=chcol
+			 mglacol=cglacol
+			 mfage=cfage
+			 mvagina=cvagina
+			 mpenis=cpenis
+			 mface=cface
+			 mhand=chand
+			 mbrist=cbrist
+			 mass=cass
+			 mthight=cthight
+			 mleg=cleg
+			 mtit=ctit
+			 mrost=crost
+			 $frencloM=$frencloC
+			 $fempropM=$fempropC
+			 $faceM=$faceC
              'Теперь <<$namefrendM>> ваша жена и будет жить у вас дома.'
-             act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
+             act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
              end
              
          exit
          end
      
-         if frendC>= 100 and marryMeC = 0: 
+         if frendC>=100 and marryMeC=0:
          '<<$namefrendC>> заводит крайне неприятный разговор о будущей свадьбе.'
          
-             if brakW = 0: 
-				 act 'Отказаться': 
+             if brakW=0:
+				 act 'Отказаться':
 				 cla
-				 frendC = 1
+				 frendC=1
 				 'Вы посмеялись над ее нелепыми идеями и сказали, что вас и так все устраивает.'
 				 '<<$namefrendC>> обиделась на вас.'
-				 act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
+				 act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
 				 end
 				 
 				 
-				 act 'Пообещать': 
+				 act 'Пообещать':
 				 cla
-				 frendC+= 100
-				 marryMeC = 1
-				 marryMeCday = daystart
+				 frendC+=100
+				 marryMeC=1
+				 marryMeCday=daystart
 				 'Вы наболтали с три короба, что через дюжину дней вы точно женитесь на ней.'
 				 '<<$namefrendC>> воодушевлена и тянет вас в койку.'
-					 act 'Секс': 
-					 $namev = $namefrendC
-					 if Csex = 0: Csex = 1 & girl+= 1
-					 pointSS = 0
-					 SexStatC = 1
-					 gt 'sexsisteman','vibor'
+					 act 'Секс':
+					 $namev=$namefrendC
+					 if Csex=0:Csex=1&girl+=1
+					 pointSS=0
+					 SexStatC=1
+					 gt'sexsisteman','vibor'
 					 end
 				 end
              else
-                 act 'Извини, я уже женат': 
+                 act 'Извини, я уже женат':
 				 cla
-				 frendC = 0
+				 frendC=0
 				 'Вы рассказали что у вас уже есть жена.'
 				 '<<$namefrendC>> обиделась на вас и сказала, чтоб вас больше не было на пороге ее дома.'
-				 act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
+				 act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
 				 end
              end
          exit
          end
      
-         if gem>= 100: 
-             act 'Пригласить в трактир выпить': 
+         if gem>=100:
+             act 'Пригласить в трактир выпить':
              cla
-             gem- = 100
-             frendC+= 20
+             gem-=100
+             frendC+=20
              'Вы зашли в местный кабак и кинув сто гемов на стол заказали всяких яств.'
-				 act 'Проводить до дома': 
+				 act 'Проводить до дома':
 				 cla
-					 if frendC<20: 
+					 if frendC<20:
 					 '<<$namefrendC>> махает вам рукой. "До встречи!"'
 					 
 					 else
@@ -205,20 +205,20 @@ act 'Уйти (5 мин)': frendC- = 1 & minut += 5 & gt 'slumsW'
 					 end
 					 
 				 dynamic $manitogiC
-				 act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
+				 act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
 				 end
 					
                  dynamic $manitogiC
              end
          end
          
-		 act 'Пригласить погулять': 
+		 act 'Пригласить погулять':
 		 cla
-		 frendC+= 5
+		 frendC+=5
 		 'Вы пошли гулять по набережной. <<$namefrendC>> весело щебетала о пустяках всю дорогу'
-			 act 'Проводить до дома': 
+			 act 'Проводить до дома':
 			 cla
-				 if frendC<20: 
+				 if frendC<20:
 				 '<<$namefrendC>> махает вам рукой. "До встречи!"'
 				 
 				 else
@@ -226,22 +226,22 @@ act 'Уйти (5 мин)': frendC- = 1 & minut += 5 & gt 'slumsW'
 				 end
 				 
 			 dynamic $manitogiC
-			 act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
+			 act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
 			 end
 				
 			 dynamic $manitogiC
 		 end
      end
      
-     act 'Прощайте, я не желаю больше знать вас': frendC = 0 & minut += 5 & gt 'slumsW'
+     act 'Прощайте, я не желаю больше знать вас':frendC=0&minut=minut+5&gt'slumsW'
      
 exit
 end
 
 
-if frendCday = day: 
+if frendCday=day:
 'Никого нет дома.'
-act 'Уйти (5 мин)': minut += 5 & gt 'slumsW'
+act 'Уйти (5 мин)':minut=minut+5&gt'slumsW'
 exit
 end
 --- frendChome ---------------------------------

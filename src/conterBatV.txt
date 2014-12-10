@@ -1,25 +1,25 @@
 # conterBatV
-if conterBatTimeV<= 0 and conterBatV>0: conterBatTimeV = 0 & conterBatV = 0
-if conterBatTime<= 0 and conterBat>0: conterBatTime = 0 & conterBat = 0
+if conterBatTimeV<=0 and conterBatV>0:conterBatTimeV=0&conterBatV=0
+if conterBatTime<=0 and conterBat>0:conterBatTime=0&conterBat=0
 
 
 
-if conterBatV = 1 and countBatRoundV!round: 
-countBatRoundV = round
-conterBatTimeV = conterBatTimeV-1
-'<B><font color = red><<$namev>> наносит КОНТРУДАР.</font></B>'
- damageV = RAND(strenV/2,strenV)
- tipatkv = 1
- gs 'popadV'
+if conterBatV=1 and countBatRoundV!round:
+countBatRoundV=round
+conterBatTimeV=conterBatTimeV-1
+'<B><font color=red><<$namev>> наносит КОНТРУДАР.</font></B>'
+ damageV=RAND(strenV/2,strenV)
+ tipatkv=1
+ gs'popadV'
 end
 
-if conterBatV = 2 and countBatRoundV!round: 
-countBatRoundV = round
-conterBatTimeV = conterBatTimeV-1
-'<B><font color = red><<$namev>> наносит КОНТРУДАР мечом.</font></B>'
-tipatkv = 1
- gs 'udarv','3'
- gs 'popadv'
+if conterBatV=2 and countBatRoundV!round:
+countBatRoundV=round
+conterBatTimeV=conterBatTimeV-1
+'<B><font color=red><<$namev>> наносит КОНТРУДАР мечом.</font></B>'
+tipatkv=1
+ gs'udarv','3'
+ gs'popadv'
 end
 --- conterBatV ---------------------------------
 

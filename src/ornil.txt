@@ -1,10 +1,10 @@
 # ornil
-if OrdenRang = 1 and dvoranRang<4: gem = 0 & bankhran = 0
-if OrdenRang<3 and dvoranRang<4: GRtkan = 0
-if OrdenRang<3 and dvoranRang<4: GRkraska = 0
-if OrdenRang<3 and dvoranRang<4: gruz = 0
-if OrdenRang<3 and dvoranRang<4: Licens = 0
-if OrdenRang<3 and dvoranRang<4: HomeSlums = 0 & farmland = 0 & fishhouse = 0 & HomeLord = 0
+if OrdenRang=1 and dvoranRang<4:gem=0&bankhran=0
+if OrdenRang<3 and dvoranRang<4:GRtkan=0
+if OrdenRang<3 and dvoranRang<4:GRkraska=0
+if OrdenRang<3 and dvoranRang<4:gruz=0
+if OrdenRang<3 and dvoranRang<4:Licens=0
+if OrdenRang<3 and dvoranRang<4:HomeSlums=0&farmland=0&fishhouse=0&HomeLord=0
 
 
 

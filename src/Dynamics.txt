@@ -1,57 +1,57 @@
 # Dynamics
 $act_GetNaked = {
-	if slot ! 0: 
-		act 'Раздеться': 
+	if slot ! 0:
+		act 'Раздеться':
 			gs 'clonil'
 			minut += 5
 			gs 'stat'
-			 gt $CURLOC
+			gt $CURLOC
 		end
 	end
 }
 
-$act_GetShaved = {
-	if pol = 0: 
-		if stanok > 0 and berd > 0: 
-			act 'Брить щетину': 
+$act_GetShaved ={
+	if pol = 0:
+		if stanok > 0 and berd > 0:
+			act 'Брить щетину':
 				cla
-				stanok = stanok-1
-				 berd = -1
+				stanok=stanok-1
+				set berd = -1
 				'Вы сбрили щетину.'
 				minut += 5
 				gs 'stat'
-				act 'Отложить бритву': gt $CURLOC
+				act 'Отложить бритву':gt $CURLOC
 			end
 		end
 	end
 }
 
-$act_Wash = {
-	if milo > 0 and sweat>0: 
-		act 'Умываться (5 мин)': 
+$act_Wash ={
+	if milo > 0 and sweat>0:
+		act 'Умываться (5 мин)':
 			cla
 			*clr
-			minut += 5
-			milo = milo-1
-			sweat = sweat-1
+			minut=minut+5
+			milo=milo-1
+			sweat=sweat-1
 			'Вы умылись с мылом.'
 			gs 'stat'
-			act 'Вытерется полотенцем': gt $CURLOC
+			act 'Вытерется полотенцем':gt $CURLOC
 		end
 	end
 }
 
-$act_DoHair = {
-	if hapri = 0: 
-		act 'Причесаться (5 мин)': 
+$act_DoHair={
+	if hapri = 0:
+		act 'Причесаться (5 мин)':
 			cla
 			*clr
-			minut += 5
-			hapri = 1
-			if pol = 0: 
-				if berd <= 0: '<center><img src = "pic\body\face.jpg" ></center>'
-				if berd > 0 and berd < 5: '<center><img src = "pic\body\face2.jpg" ></center>'
-				if berd >= 5: '<center><img src = "pic\body\face3.jpg" ></center>'
+			minut=minut+5
+			hapri=1
+			if pol = 0:
+				if berd <= 0:'<center><img src="pic\body\face.jpg" ></center>'
+				if berd > 0 and berd < 5:'<center><img src="pic\body\face2.jpg" ></center>'
+				if berd >= 5:'<center><img src="pic\body\face3.jpg" ></center>'
 				'В зеркале вы видите <<$berd>>'
 			end
 			gs 'stat'

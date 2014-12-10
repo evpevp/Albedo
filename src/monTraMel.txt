@@ -10,12 +10,12 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 mag = 1
 '<center><H4>Трактир "Мельоран"</H4></center>'
-'<center><img src = "pic/Evedon/mdTraMel.jpg" ></center>'
+'<center><img src="pic/Evedon/mdTraMel.jpg" ></center>'
 'Большой трактир с простой обстановкой. Крепкими деревянными столами и массивными лавками. От каменного очага потрескивающего дровами исходит приятное тепло.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
@@ -23,9 +23,9 @@ LCOLOR = rgb(106,90,205)
 
 
 
-	 act 'Уйти': 
-	 minut += 5
-	 gt 'MonNordRoad'
+	 act 'Уйти':
+	 minut=minut+5
+	 gt'MonNordRoad'
 	 end
 --- monTraMel ---------------------------------
 

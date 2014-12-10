@@ -11,6 +11,6 @@
 'Мана <<mannav>>'
 'Сила воли <<wipov>>'
 
-act 'ВЫЙТИ': GOTO $locFight, $metkaFight
+act 'ВЫЙТИ':GOTO $locFight, $metkaFight
 --- прверкагенератора ---------------------------------
 

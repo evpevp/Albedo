@@ -8,60 +8,60 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>ГОРОД ЭВЕДОН</H4></center>'
 '<center>Вход в дворец Лорда Ворнхорста</center>'
-'<center><img src = "pic/Evedon/court.jpg" ></center>'
+'<center><img src="pic/Evedon/court.jpg" ></center>'
 'Белоснежный замок с развивающимися на ветру стягами расположен на небольшом искусственном островке и к нему ведет лишь один длинный каменный мостик.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-if DemonMorf>= 10: 
- atkrand = RAND(0,100)
-     if atkrand>= 90: 
+if DemonMorf>=10:
+ atkrand=RAND(0,100)
+     if atkrand>=90:
      cls
 	 *clr
-     '<center><img src = "pic/EvedonMonsters/guards.jpg"></center>'
-	 pogonarand = RAND(5,10)
+     '<center><img src="pic/EvedonMonsters/guards.jpg"></center>'
+	 pogonarand=RAND(5,10)
 	 'Разгуливать в облике демона опасно, стража вас обнаружила и атаковала.'
-		 act 'Убегать.': 
-		 minut += 1
-		 crime = 1
-		 gt 'runW'
+		 act 'Убегать.':
+		 minut=minut+1
+		 crime=1
+		 gt'runW'
 		 end
      exit
      end
 end
 
-'((Высокий квартал|reachW|minut += 15))'
+'((Высокий квартал|reachW|minut=minut+15))'
 
-if slot = 15 or OrdenRang = 7: 
+if slot=15 or OrdenRang=7:
 !вход во дворец
-act 'Войти во дворец': gt 'dvorecLord'
+act 'Войти во дворец':gt 'dvorecLord'
 else
 !
 'Стража перегораживает вам путь в дворец. "К его сиятельству Лорду нельзя идти в таком виде!"'
 end
 
-     if missionData = 10: 
-         act 'У меня письмо': 
+     if missionData=10:
+         act 'У меня письмо':
          cla
          *clr
          'Стража осмотрела ваши документы и пропустила вас.'
-         act 'Идти во дворец': gt 'dvorecLord'
+         act 'Идти во дворец':gt 'dvorecLord'
          end
      end
 
 
 
-     act 'Ждать': 
+     act 'Ждать':
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120: 
-          minut = minut + 15
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120: 
-          minut = minut + waiting
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
          end
-     act 'Посмотреть на часы': gt curloc
+     act 'Посмотреть на часы':gt curloc
      end
 --- courtW ---------------------------------
 

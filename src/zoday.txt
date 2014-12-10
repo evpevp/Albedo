@@ -1,22 +1,22 @@
 # zoday
-horny = 100
-zoday- = 1
-zodayEffect+= 5
-health = vital*10
-manna = intel*10+intel*magika
-wipo = will*10
-son = 20
-golod = 20
-     if narkoman = 0: narkota = narkota+5
-     if narkota>= 10 and narkoman = 1: narkota = narkota+7
-     if narkota<10 and narkoman = 1: 
-     narkota = 15
-     SUB = SUB+1
-     will = will-1
-     if will<1: will = 1
-     '<B><font color = red>Вы приняли наркотик, чтобы облегчить ломку и почувствовали себя безвольной тряпкой.</font></B>'
+horny=100
+zoday-=1
+zodayEffect+=5
+health=vital*10
+manna=intel*10+intel*magika
+wipo=will*10
+son=20
+golod=20
+     if narkoman=0:narkota=narkota+5
+     if narkota>=10 and narkoman=1:narkota=narkota+7
+     if narkota<10 and narkoman=1:
+     narkota=15
+     SUB=SUB+1
+     will=will-1
+     if will<1:will=1
+     '<B><font color=red>Вы приняли наркотик, чтобы облегчить ломку и почувствовали себя безвольной тряпкой.</font></B>'
      end
 clr
-gs 'stat'
+gs'stat'
 --- zoday ---------------------------------
 

@@ -7,19 +7,19 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Дом эльфийского мага</H4></center>'
-'<center><img src = "pic/Evedon/elfmagdom.jpg" ></center>'
+'<center><img src="pic/Evedon/elfmagdom.jpg" ></center>'
 'Внутри дома просторно и чисто. Воздух наполнен ароматами цветов и луговых трав, в воздухе порхают светлячки.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 'В домике никого нет.'
 
-act 'Выйти': 
-minut += 5
- gt 'df0_6'
+act 'Выйти':
+minut=minut+5
+gt'df0_6'
 end
 --- elfmagdomW ---------------------------------
 

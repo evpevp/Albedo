@@ -1,279 +1,279 @@
 # albinasex
-!http: //www.definefetish.com/gallery/1o2/nikita-von-james/
-!http: //bdsmqueens.com/gallery4426/huge-tits-blonde-in-bondage
+!http://www.definefetish.com/gallery/1o2/nikita-von-james/
+!http://bdsmqueens.com/gallery4426/huge-tits-blonde-in-bondage
 
-if $ARGS[0] = 'start': 
+if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-if albinasex = 0: albinasex = 1 & girl = girl + 1
- sexm = sexm+1
-'<center><img src = "pic\fam\albinasex.jpg" ></center>'
+gs'stat'
+if albinasex=0:set albinasex=1&set girl = girl + 1
+set sexm=sexm+1
+'<center><img src="pic\fam\albinasex.jpg" ></center>'
 '(Альбина) - Ну что, развлечемся?'
-     act 'Предоставить инициативу': gt 'albinasex','1'
-     act 'Взять инициативу': gt 'albinasex','2'
+     act 'Предоставить инициативу':gt'albinasex','1'
+     act 'Взять инициативу':gt'albinasex','2'
 end
 
-if $ARGS[0] = '1': 
+if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_lick_1.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albina_lick_1.gif" ></center>'
 'Альбина повалила вас на кровать и уселась вам на лицо своей истекающей соками киской. Вы начали вылизывать у нее.'
 
-act 'Дальше': gt 'albinasex','11'
+act 'Дальше':gt'albinasex','11'
 end
 
-if $ARGS[0] = '11': 
+if $ARGS[0]='11':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\albpass1.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\fam\albpass1.jpg" ></center>'
 'Альбина кончила и слезла с вас, начав ласкать своими пальчиками ваш член. '
 
-act 'Дальше': gt 'albinasex','12'
+act 'Дальше':gt'albinasex','12'
 end
 
-if $ARGS[0] = '12': 
+if $ARGS[0]='12':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_bj_2.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albina_bj_2.gif" ></center>'
 'Когда он немного затвердел, Альбина взяла его в рот и начала активно обрабатывать. '
 
-act 'Дальше': gt 'albinasex','13'
+act 'Дальше':gt'albinasex','13'
 end
 
-if $ARGS[0] = '13': 
+if $ARGS[0]='13':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\Albinafuck_8.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\Albinafuck_10.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\Albinafuck_8.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\Albinafuck_10.gif" ></center>'
 'Когда ваш член приобрел положенную ему твердость, Альбина села на него сверху и начала скакать.'
-act 'Дальше': gt 'albinasex','14'
+act 'Дальше':gt'albinasex','14'
 end
 
-if $ARGS[0] = '14': 
+if $ARGS[0]='14':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-sweat = sweat+5
-horny = 0
-manna = manna+50
+set minut = minut + 5
+sweat=sweat+5
+horny=0
+manna=manna+50
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\Albina_kiskacum_3.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\Albina_kiskacum_5.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\Albina_kiskacum_3.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\Albina_kiskacum_5.gif" ></center>'
 'Через несколько минут вы кончили прямо в киску Альбине.'
-act 'Отойти': GOTO $locM, $metkaM
+act 'Отойти':GOTO $locM, $metkaM
 end
 
-if $ARGS[0] = '2': 
+if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_bj_1.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albina_bj_1.gif" ></center>'
 'Вы достали член и провели им по губам Альбины, она с готовностью открыла рот и начала сосать.'
 
-     act 'кончить в рот': gt 'albinasex','3'
-     act 'трахнуть': gt 'albinasex','4'
+     act 'кончить в рот':gt'albinasex','3'
+     act 'трахнуть':gt'albinasex','4'
      
-     if albinaQW = 1: 
-     act 'анал': gt 'albinasex','5'
+     if albinaQW = 1:
+     act 'анал':gt'albinasex','5'
      end
      
-     if albinaQW > 1: 
-     act 'анал': gt 'albinasex','6'
+     if albinaQW > 1:
+     act 'анал':gt'albinasex','6'
      end
 end
 
-if $ARGS[0] = '3': 
+if $ARGS[0]='3':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-sweat = sweat+5
-horny = 0
-manna = manna+50
+set minut = minut + 5
+sweat=sweat+5
+horny=0
+manna=manna+50
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_facecum_9.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albina_facecum_9.gif" ></center>'
 'Вы кончили в рот Альбине и она слизала всю сперму до капли.'
-act 'Отойти': GOTO $locM, $metkaM
+act 'Отойти':GOTO $locM, $metkaM
 end
 
-if $ARGS[0] = '4': 
+if $ARGS[0]='4':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\Albina_tityfuck_1.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\Albina_tityfuck_2.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\Albina_tityfuck_1.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\Albina_tityfuck_2.gif" ></center>'
 'Достав изо рта Альбины обильно смазанный член вы поместили его в ложбинку между её замечательных сисек, и устроившись поудобнее стали активно трахать.'
-act 'Дальше': gt 'albinasex','40'
+act 'Дальше':gt'albinasex','40'
 end
 
-if $ARGS[0] = '40': 
+if $ARGS[0]='40':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_fingering_1.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albina_fingering_1.gif" ></center>'
 'Затем немного раззадорив Альбину..'
-act 'Дальше': gt 'albinasex','41'
+act 'Дальше':gt'albinasex','41'
 end
 
-if $ARGS[0] = '41': 
+if $ARGS[0]='41':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\Albinafuck_9.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\Albinafuck_3.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\Albinafuck_9.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\Albinafuck_3.gif" ></center>'
 'Вы вошли в ее горячую и влажную киску.'
-act 'Дальше': gt 'albinasex','42'
+act 'Дальше':gt'albinasex','42'
 end
 
-if $ARGS[0] = '42': 
+if $ARGS[0]='42':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\Albinafuck_4.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\Albinafuck_5.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\Albinafuck_4.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\Albinafuck_5.gif" ></center>'
 'Затем вы решили сменить позу и поставили Альбину раком'
-act 'Дальше': gt 'albinasex','43'
+act 'Дальше':gt'albinasex','43'
 end
 
-if $ARGS[0] = '43': 
+if $ARGS[0]='43':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\Albinafuck_6.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\Albinafuck_7.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\Albinafuck_6.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\Albinafuck_7.gif" ></center>'
 'Затем вы одним движением перевернули Альбину, положив на себя. И стали более активно насаживать её на свой член, чувствуя, что близки к финалу. '
-act 'Дальше': gt 'albinasex','44'
+act 'Дальше':gt'albinasex','44'
 end
 
-if $ARGS[0] = '44': 
+if $ARGS[0]='44':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-sweat = sweat+5
-horny = 0
-manna = manna+50
+set minut = minut + 5
+sweat=sweat+5
+horny=0
+manna=manna+50
 clr
-gs 'stat'
-picrand = RAND(0,1)
-if picrand = 0: '<center><img src = "pic\fam\Albina_pussy_cum_1.gif" ></center>'
-if picrand = 1: '<center><img src = "pic\fam\Albina_pussy_cum_2.gif" ></center>'
+gs'stat'
+picrand=RAND(0,1)
+if picrand=0:'<center><img src="pic\fam\Albina_pussy_cum_1.gif" ></center>'
+if picrand=1:'<center><img src="pic\fam\Albina_pussy_cum_2.gif" ></center>'
 'Достигнув предела вы ни чуть не сдерживая себя обильно кончили прямо Альбине в киску.'
-act 'Отойти': GOTO $locM, $metkaM
+act 'Отойти':GOTO $locM, $metkaM
 end
 
-if $ARGS[0] = '5': 
+if $ARGS[0]='5':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\albpass1.jpg" ></center>'
+gs'stat'
+'<center><img src="pic\fam\albpass1.jpg" ></center>'
 'Ты сдурел? Знаешь, же, что я терпеть этого не могу. Ну если только ты мне денег на порш кайен дашь, перечисли с нашего личного счета пять лямов, тогда так и быть, придется потерпеть.'
-     act 'Дать ей в рот': gt 'albinasex','2'
+     act 'Дать ей в рот':gt'albinasex','2'
      
-     if bankfond >= 5000000 and albinaQW = 1: 
-         act 'Ладно, будет тебе Кайен.': 
+     if bankfond >= 5000000 and albinaQW = 1:
+         act 'Ладно, будет тебе Кайен.':
          cla
          albinaQW = 2
-         bankfond = bankfond-5000000
+         bankfond=bankfond-5000000
          'Вы согласились дать жене деньги на новую машину.'
-         act 'анал': gt 'albinasex','6'
+         act 'анал':gt'albinasex','6'
          end
      
      end
 end
 
-if $ARGS[0] = '6': 
+if $ARGS[0]='6':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albinafuck_11.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albinafuck_11.gif" ></center>'
 'Перед тем как войти в Альбинину задницу вы решили немного раззадорить её и смазать член в соках её киски.'
-act 'Дальше': gt 'albinasex','60'
+act 'Дальше':gt'albinasex','60'
 end
 
-if $ARGS[0] = '60': 
+if $ARGS[0]='60':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_anal.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albina_anal.gif" ></center>'
 'Затем вы приставили головку члена к манящему анусу жены и медленно вошли в него.'
-act 'Дальше': gt 'albinasex','61'
+act 'Дальше':gt'albinasex','61'
 end
 
-if $ARGS[0] = '61': 
+if $ARGS[0]='61':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_anal_1.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albina_anal_1.gif" ></center>'
 'Альбина застонала, вы подождали не много и начали трахать ее в задницу не обращая внимания на ее стоны.'
-act 'Дальше': gt 'albinasex','62'
+act 'Дальше':gt'albinasex','62'
 end
 
-if $ARGS[0] = '62': 
+if $ARGS[0]='62':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
+set minut = minut + 5
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_anal_3.gif" ></center>'
-'Затем вы расположили Альбинину задницу поудобнее, посадив на стул. Рывком вошли в неё и стали наращивать темп, думая про себя: "Будешь знать сучка, как деньги за любовь выпрашивать"'
-act 'Дальше': gt 'albinasex','63'
+gs'stat'
+'<center><img src="pic\fam\Albina_anal_3.gif" ></center>'
+'Затем вы расположили Альбинину задницу поудобнее, посадив на стул. Рывком вошли в неё и стали наращивать темп, думая про себя:"Будешь знать сучка, как деньги за любовь выпрашивать"'
+act 'Дальше':gt'albinasex','63'
 end
 
-if $ARGS[0] = '63': 
+if $ARGS[0]='63':
 $metka = $ARGS[0]
 $loc = $CURLOC
- minut = minut + 5
-sweat = sweat+5
-horny = 0
-manna = manna+150
+set minut = minut + 5
+sweat=sweat+5
+horny=0
+manna=manna+150
 clr
-gs 'stat'
-'<center><img src = "pic\fam\Albina_anal_cum_1.gif" ></center>'
+gs'stat'
+'<center><img src="pic\fam\Albina_anal_cum_1.gif" ></center>'
 'После пары минут дикого темпа вы кончили Альбине прямо в зад.'
 
-act 'Отойти': GOTO $locM, $metkaM
+act 'Отойти':GOTO $locM, $metkaM
 end
 
 

@@ -1,75 +1,75 @@
 # UndegraunATk
 
 
-if UnAtkV>0 and damageV>0: 
-!tipatkv = 1
-UnAtkV = UnAtkV-1
-'<B><font color = red><<$namev>> выскакивает из земли нанося вам удар.</font></B>'
-!gs 'udarv','1'
-     if levitation>0: 
-     damageV = 0
-     '<B><font color = green>ВЫ ВНЕ ЗОНЫ АТАКИ</font></B>'
+if UnAtkV>0 and damageV>0:
+!tipatkv=1
+UnAtkV=UnAtkV-1
+'<B><font color=red><<$namev>> выскакивает из земли нанося вам удар.</font></B>'
+!gs'udarv','1'
+     if levitation>0:
+     damageV=0
+     '<B><font color=green>ВЫ ВНЕ ЗОНЫ АТАКИ</font></B>'
      end
      
-     if levitation<= 0: 
-     gs 'klonDef'
-         if damageV>0: 
-         	 if bronik = 0 and ironskin = 0 and aktivdef = 0 and damagev>0: 
-			 health = health-damagev
-				 if weaponv = 1 and wepAtkv>0 or beast = 1: 
-				 bloodv = bloodv+RAND(1,3)
-				 health = health-BloodV
-				 '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+     if levitation<=0:
+     gs'klonDef'
+         if damageV>0:
+         	 if bronik=0 and ironskin=0 and aktivdef=0 and damagev>0:
+			 health=health-damagev
+				 if weaponv=1 and wepAtkv>0 or beast=1:
+				 bloodv=bloodv+RAND(1,3)
+				 health=health-BloodV
+				 '<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
 				 end
-			 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+			 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
 			 end
 			 
-			 if bronik>0 and damagev>0: 
-				 if bronik >= damagev: 
-				 '<B><font color = green>Доспех полностью погасил нанесенный урон</font></B>'
+			 if bronik>0 and damagev>0:
+				 if bronik >= damagev:
+				 '<B><font color=green>Доспех полностью погасил нанесенный урон</font></B>'
 				 end
-				 if bronik < damagev: 
-				 '<B><font color = green>Доспех частично погасил нанесенный урон</font></B>'
-				 damagev = damagev-bronik
-				 health = health-damagev
-					 if weaponv = 1 and wepAtkv>0 or beast = 1: 
-					 bloodv = bloodv+RAND(1,3)
-					 health = health-BloodV
-					 '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+				 if bronik < damagev:
+				 '<B><font color=green>Доспех частично погасил нанесенный урон</font></B>'
+				 damagev=damagev-bronik
+				 health=health-damagev
+					 if weaponv=1 and wepAtkv>0 or beast=1:
+					 bloodv=bloodv+RAND(1,3)
+					 health=health-BloodV
+					 '<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
 					 end
-				 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
-				 end
-			 end
-			 
-			 if ironskin>0 and damagev>0: 
-				 if ironskin >= damagev: 
-				 '<B><font color = green>Защита полностью погасила нанесенный урон</font></B>'
-				 end
-				 if ironskin < damagev: 
-				 '<B><font color = green>Защита частично погасила нанесенный урон</font></B>'
-				 damagev = damagev-ironskin
-				 health = health-damagev
-				 ironskin = 0
-					 if weaponv = 1 and wepAtkv>0 or beast = 1: 
-					 bloodv = bloodv+RAND(1,3)
-					 health = health-BloodV
-					 '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
-					 end
-				 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+				 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
 				 end
 			 end
 			 
-			 if aktivdef>0 and damagev>0: 
-				 '<B><font color = green>Активная защита ослабляет нанесенный урон</font></B>'
-				 stun = 0
-				 damagev = damagev/4
-				 health = health-damagev
-					 if weaponv = 1 and wepAtkv>0 or beast = 1: 
-					 bloodv = bloodv+RAND(1,3)
-					 health = health-BloodV
-					 '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+			 if ironskin>0 and damagev>0:
+				 if ironskin >= damagev:
+				 '<B><font color=green>Защита полностью погасила нанесенный урон</font></B>'
+				 end
+				 if ironskin < damagev:
+				 '<B><font color=green>Защита частично погасила нанесенный урон</font></B>'
+				 damagev=damagev-ironskin
+				 health=health-damagev
+				 ironskin=0
+					 if weaponv=1 and wepAtkv>0 or beast=1:
+					 bloodv=bloodv+RAND(1,3)
+					 health=health-BloodV
+					 '<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
 					 end
-				 '<font color = red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+				 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
+				 end
+			 end
+			 
+			 if aktivdef>0 and damagev>0:
+				 '<B><font color=green>Активная защита ослабляет нанесенный урон</font></B>'
+				 stun=0
+				 damagev=damagev/4
+				 health=health-damagev
+					 if weaponv=1 and wepAtkv>0 or beast=1:
+					 bloodv=bloodv+RAND(1,3)
+					 health=health-BloodV
+					 '<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+					 end
+				 '<font color=red>Вам нанесли урон <B><<damagev>></B> едениц</font>'
 			 end
          end
      end

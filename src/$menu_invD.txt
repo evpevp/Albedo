@@ -1,5 +1,5 @@
 # $menu_invD
-if $selobj = 'Инвентарь': 
+if $selobj='Инвентарь':
 clr
 pl'<center>Записная книжка</center>'
 end

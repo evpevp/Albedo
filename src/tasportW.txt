@@ -8,138 +8,138 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut += 5
+minut=minut+5
 mag = 1
 '<center><H4>Спортивный зал</H4></center>'
-'<center><img src = "pic/Evedon/tasport.jpg" ></center>'
+'<center><img src="pic/Evedon/tasport.jpg" ></center>'
 'Просторный зал с различными спортивными снарядами. Занятия стоят 10 гемов за час.'
 clr
-gs 'stat'
-fcolor = rgb(0,0,0)
-bcolor = rgb(255,255,255)
+gs'stat'
+fcolor=rgb(0,0,0)
+bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 
-if hour>= 7 and hour<= 21:  
-if gem>= 10 and sportday!day: 
-     act 'Упражняться 10 гемов': 
+if hour>=7 and hour<= 21:  
+if gem>=10 and sportday!day:
+     act 'Упражняться 10 гемов':
      cla
      *clr
-     minut += 60
-     gem = gem-10
-     exp = exp+RAND((lvl/2),lvl)
-     sweat = 5
-     sportday = day
+     minut=minut+60
+     gem=gem-10
+     exp=exp+RAND((lvl/2),lvl)
+     sweat=5
+     sportday=day
      clr
-     gs 'stat'
+     gs'stat'
      'Вы упражнялись в спорт зале, тренируя свое тело.'
-         act 'Идти в душ': gt 'tashowerW'
+         act 'Идти в душ':gt'tashowerW'
      end
      
-     act 'Бегать по дорожке 10 гемов': 
+     act 'Бегать по дорожке 10 гемов':
      cla
      *clr
-     minut += 60
-     gem = gem-10
-     exp = exp+RAND((lvl/4),(lvl/2))
-     beg = beg+10
-     fat = fat-5
-     sweat = 5
-     sportday = day
+     minut=minut+60
+     gem=gem-10
+     exp=exp+RAND((lvl/4),(lvl/2))
+     beg=beg+10
+     fat=fat-5
+     sweat=5
+     sportday=day
      clr
-     gs 'stat'
+     gs'stat'
      'Вы бегали по дорожке в спорт зале тренируя дыхалку.'
-         act 'Идти в душ': gt 'tashowerW'
+         act 'Идти в душ':gt'tashowerW'
      end
 end
 
-if hour>= 7 and hour<= 12: 
+if hour>=7 and hour<= 12:
 'Вы видите как в зале тренируется симпатичная белокурая Коттон, сержант стражи Тель Адре'
-     if sportday!day: 
-		 act 'Подойти к Коттон': 
+     if sportday!day:
+		 act 'Подойти к Коттон':
 		 cla
 		 *clr
-		 '<center><img src = "pic/EvedonNarod/kotton.jpg"></center>'
+		 '<center><img src="pic/EvedonNarod/kotton.jpg"></center>'
 		 'Коттон весело посмотрела на вас "Привет <<$name>>. Урок как всегда стоит 50 гемов. Со мной твои навыки будут развиваться быстрее."'
-			 if gem>= 50: 
-			     act 'Тренироваться вместе с Коттон (50 гемов)': 
+			 if gem>=50:
+			     act 'Тренироваться вместе с Коттон (50 гемов)':
 			     cla
 			     *clr
-			     gem = gem-50
-			     minut += 60
-			     sportday = day
-			     fat = fat-5
-			     sweat = 5
-			     exp = exp+RAND(lvl,lvl*2)
+			     gem=gem-50
+			     minut=minut+60
+			     sportday=day
+			     fat=fat-5
+			     sweat=5
+			     exp=exp+RAND(lvl,lvl*2)
 			     clr
-			     gs 'stat'
-			     '<center><img src = "pic/EvedonNarod/kotton.jpg"></center>'
+			     gs'stat'
+			     '<center><img src="pic/EvedonNarod/kotton.jpg"></center>'
 			     'Вы заплатили Коттон и она начала вас тренировать, инструктируя и показывая как правильно делать упражнение. Через час вы взмокли и устали.'
 			     'Коттон предложила вам вместе сходить в душ.'
-			         act 'Идти в душ без Коттон': gt 'tashowerW'
+			         act 'Идти в душ без Коттон':gt'tashowerW'
 			         
-			         act 'Идти в душ вместе с Коттон': 
+			         act 'Идти в душ вместе с Коттон':
 			         cla
 			         *clr
-			         minut += 10
-			         sweat = -5
-			         gs 'bassW'
-			         '<center><img src = "pic/EvedonNarod/kotton.jpg"></center>'
+			         minut=minut+10
+			         sweat=-5
+			         gs'bassW'
+			         '<center><img src="pic/EvedonNarod/kotton.jpg"></center>'
 			         'Вы прошли в душевые, разделись и вошли в кабинку, следом за вами вошла Коттон.'
-			             if cottonSex>= 0: 
+			             if cottonSex>=0:
 			             'Когда в кабинку вошла Коттон вы против своей воли уставились на нее, огромная пышная грудь и между ног большой член. Коттон заметила ваше внимание. "Ну как <<$name>>? Нравится. Хочешь помыть моего дружка?"'
-			                 if penis>0: 
-			                     act 'А может ты моего дружка желаешь помыть?': 
+			                 if penis>0:
+			                     act 'А может ты моего дружка желаешь помыть?':
 			                     cla
 			                     *clr
-			                     dom = dom+1
-			                     minut += 10
-			                     horny = horny+60
+			                     dom=dom+1
+			                     minut=minut+10
+			                     horny=horny+60
 			                     clr
-			                     gs 'stat'
+			                     gs'stat'
 			                     'Вы предложили Коттон помыть вашего дружка, Коттон взяла ваш член в руки и начала его мыть. Вы почувствовали как ваш член встает в руках блондинки.'
-			                         act 'Дать Коттон в рот': 
+			                         act 'Дать Коттон в рот':
 			                         cla
 			                         *clr
-			                         minut += 10
-			                         if cottonSex = 0: cottonSex = 1 & futa = futa+1
-			                         sexm = sexm+1
-			                         horny = 0
-			                         manna = manna+30
-			                         '<center><img src = "pic/EvedonTA/cottonBJ.jpg" ></center>'
+			                         minut=minut+10
+			                         if cottonSex=0:cottonSex=1&futa=futa+1
+			                         sexm=sexm+1
+			                         horny=0
+			                         manna=manna+30
+			                         '<center><img src="pic/EvedonTA/cottonBJ.jpg" ></center>'
 			                         'Коттон стала тщательно вылизывать ваш член, потом заглотила его до самого основания и начала сосать игриво глядя вам в глаза. Наконец вы не выдержали и кончили ей в рот, она не вынимая члена изо рта все тщательно проглотила и собрала язычком.'
-			                         act 'Уйти': gt $CURLOC
+			                         act 'Уйти':gt $CURLOC
 			                         end
 			                         
-			                         if penis>= 8: 
-										 act 'Трахнуть Коттон в киску': 
+			                         if penis>=8:
+										 act 'Трахнуть Коттон в киску':
 										 cla
 										 *clr
-										 minut += 10
-										 if cottonSex = 0: cottonSex = 1 & futa = futa+1
-										 sexm = sexm+1
-										 horny = 0
-										 manna = manna+15
-										 wipo = wipo+15
-										 '<center><img src = "pic/EvedonTA/cottonSex.jpg" ></center>'
+										 minut=minut+10
+										 if cottonSex=0:cottonSex=1&futa=futa+1
+										 sexm=sexm+1
+										 horny=0
+										 manna=manna+15
+										 wipo=wipo+15
+										 '<center><img src="pic/EvedonTA/cottonSex.jpg" ></center>'
 										 'Вы поставили Коттон на четвереньки и раздвинули ее булки, между анусом и членом красовалось истекающее соками розовое влагалище. Вы не долго думая всадили туда член и начали трахать Коттон, через некоторое время вы не выдержали и достав член из блондинки кончили ей на попку.'
-										 act 'Уйти': gt $CURLOC
+										 act 'Уйти':gt $CURLOC
 										 
 										 end 
 			                         end
 			                         
-			                         if penis>= 12: 
-										 act 'Трахнуть Коттон в попу': 
+			                         if penis>=12:
+										 act 'Трахнуть Коттон в попу':
 										 cla
 										 *clr
-										 minut += 10
-										 if cottonSex = 0: cottonSex = 1 & futa = futa+1
-										 sexm = sexm+1
-										 horny = 0
-										 wipo = wipo+30
-										 '<center><img src = "pic/EvedonTA/cottonAnal.jpg" ></center>'
+										 minut=minut+10
+										 if cottonSex=0:cottonSex=1&futa=futa+1
+										 sexm=sexm+1
+										 horny=0
+										 wipo=wipo+30
+										 '<center><img src="pic/EvedonTA/cottonAnal.jpg" ></center>'
 										 'Вы положили Коттон на спину и раздвинули ей ноги, нащупав ее маленькое, тугое очко, вы стали засовывать туда свой стоячий член, наконец вам удалось затолкать в тугое очко Коттон свой член и начать ее трахать, Коттон стонала и закатывала глаза, вы не могли больше сдерживаться и кончили ей в попку.'
-										 act 'Уйти': gt $CURLOC
+										 act 'Уйти':gt $CURLOC
 										 end 
 			                         end
 			                         
@@ -147,68 +147,68 @@ if hour>= 7 and hour<= 12:
 			                     end
 			                 end
 			                 
-			                 act 'Мыть ее член': 
+			                 act 'Мыть ее член':
 			                 cla
 			                 *clr
-			                 sub = sub+1
-			                 minut += 10
-			                 horny = horny+25
+			                 sub=sub+1
+			                 minut=minut+10
+			                 horny=horny+25
 			                 'Вы начали мыть член Коттон и он начал вставать прямо в ваших руках, наливаясь силой.'
-			                     act 'Отсосать': 
+			                     act 'Отсосать':
 								 cla
 								 *clr
-								 minut += 10
-								 if cottonSex = 0: cottonSex = 1 & futa = futa+1
-								 bj = bj+1
-								 '<center><img src = "pic/EvedonTA/cottonBJ2.jpg" ></center>'
+								 minut=minut+10
+								 if cottonSex=0:cottonSex=1&futa=futa+1
+								 bj=bj+1
+								 '<center><img src="pic/EvedonTA/cottonBJ2.jpg" ></center>'
 								 'Вы встали на колени перед Коттон и взяли ее член в рот, начав его сосать и ласкать язычком.'
-								 gs 'cumslut'
+								 gs'cumslut'
 								 'Наконец Коттон, достав свой член из вашего рта, начала кончать вам на лицо.'
-								 facial = facial+1
-								 cumface = cumface+1
-								 gs 'passeffect'
-								     act 'Уйти': 
-								     gs 'bassW'
+								 facial=facial+1
+								 cumface=cumface+1
+								 gs'passeffect'
+								     act 'Уйти':
+								     gs'bassW'
                                      gt $CURLOC
                                      end
 								 end
 								 
-								 act 'Дать в попу': 
+								 act 'Дать в попу':
 								 cla
 								 *clr
-								 minut += 10
-								 if cottonSex = 0: cottonSex = 1 & futa = futa+1
-								 anal = anal+1
-								 anus = anus+3
-								 if penis>0: '<center><img src = "pic/EvedonTA/cottonAnal2f.jpg" ></center>'
-								 if penis = 0: '<center><img src = "pic/EvedonTA/cottonAnal2.jpg" ></center>'
+								 minut=minut+10
+								 if cottonSex=0:cottonSex=1&futa=futa+1
+								 anal=anal+1
+								 anus=anus+3
+								 if penis>0:'<center><img src="pic/EvedonTA/cottonAnal2f.jpg" ></center>'
+								 if penis=0:'<center><img src="pic/EvedonTA/cottonAnal2.jpg" ></center>'
 								 'Вы наклонились и раздвинули ягодицы, Коттон подошла к вам сзади, обхватив вас руками за бедра, вы почувствовали как ее член входит в вашу попку. После этого Коттон немного подождала, чтобы ваша попка приспособилась и начала вас трахать.'
-								 gs 'analslut'
+								 gs'analslut'
 								 'Вы почувствовали как горячие струи спермы наполняют ваш анус приятным теплом.'
-								 cumanus = cumanus+1
-								 gs 'passeffect'
-								 	 act 'Уйти': 
-								     gs 'bassW'
+								 cumanus=cumanus+1
+								 gs'passeffect'
+								 	 act 'Уйти':
+								     gs'bassW'
                                      gt $CURLOC
                                      end
 								 end
 								 
-								 if vagina>0: 
-									 act 'Принять в киску': 
+								 if vagina>0:
+									 act 'Принять в киску':
 									 cla
 									 *clr
-									 minut += 10
-								     if cottonSex = 0: cottonSex = 1 & futa = futa+1
-								     sex = sex+1
-								     vag = vag+3
-								     '<center><img src = "pic/EvedonTA/cottonSex2.jpg" ></center>'
+									 minut=minut+10
+								     if cottonSex=0:cottonSex=1&futa=futa+1
+								     sex=sex+1
+								     vag=vag+3
+								     '<center><img src="pic/EvedonTA/cottonSex2.jpg" ></center>'
 									 'Вы встали на четвереньки и Коттон уперевшись вам в спину руками вошла в вашу Киску, ее член начал долбить вас'
-									 gs 'femorg'
+									 gs'femorg'
 									 'Коттон застонала и вы почувствовали как струя спермы ударила вам в матку, затем еще раз и еще.'
-									 cumpussy = cumpussy+1
-									 gs 'passeffect'
-									 	 act 'Уйти': 
-										 gs 'bassW'
+									 cumpussy=cumpussy+1
+									 gs'passeffect'
+									 	 act 'Уйти':
+										 gs'bassW'
 										 gt $CURLOC
 										 end
 									 end
@@ -220,115 +220,115 @@ if hour>= 7 and hour<= 12:
 			         
 			     end
 			 end
-		 act 'Уйти': gt $CURLOC
+		 act 'Уйти':gt $CURLOC
 		 end
      end
 end 
 
-if sportday!day: 
-     if inurishower>0 and inuriBJ>0 and inurishowerday!day: 
-         act 'Тренировать акробатику вместе с Инури (1 час) бесплатно': 
+if sportday!day:
+     if inurishower>0 and inuriBJ>0 and inurishowerday!day:
+         act 'Тренировать акробатику вместе с Инури (1 час) бесплатно':
 		 cla
 		 *clr
-		 minut += 60
-		 inuritrain = inuritrain+1
-		 horny = horny+inurishower+inuriBJ
-		 gem = gem-10
-		 exp = exp+RAND((lvl),lvl*2)
-		 akrobat = akrobat+5
-		 sportday = day
+		 minut=minut+60
+		 inuritrain=inuritrain+1
+		 horny=horny+inurishower+inuriBJ
+		 gem=gem-10
+		 exp=exp+RAND((lvl),lvl*2)
+		 akrobat=akrobat+5
+		 sportday=day
 		 clr
-		 gs 'stat'
-		 '<center><img src = "pic/EvedonNarod/inuri.jpg"></center>'
+		 gs'stat'
+		 '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
 		 'Вы тренировались вместе с Инури. Она показывала вам упражнения и дотрагивалась своими мягкими касаниями до вашего тела во время упражнений, страхуя вас.'
-			 act 'Идти в душ вместе с Инури': gt 'tashowerW'
+			 act 'Идти в душ вместе с Инури':gt'tashowerW'
 		 end
 		 
-		 if akrobat>= 30 and JuravelStile<100: 
-		     act 'Изучать стиль журавля вместе с Инури (1 час) бесплатно': 
+		 if akrobat>=30 and JuravelStile<100:
+		     act 'Изучать стиль журавля вместе с Инури (1 час) бесплатно':
 			 cla
 			 *clr
-			 minut += 60
-			 inuritrain = inuritrain+1
-			 horny = horny+inurishower+inuriBJ
-			 gem = gem-10
-			 exp = exp+RAND((lvl),lvl*2)
-			 akrobat = akrobat+5
-			 sportday = day
+			 minut=minut+60
+			 inuritrain=inuritrain+1
+			 horny=horny+inurishower+inuriBJ
+			 gem=gem-10
+			 exp=exp+RAND((lvl),lvl*2)
+			 akrobat=akrobat+5
+			 sportday=day
 			 clr
-			 gs 'stat'
-			 JuravelStile = JuravelStile+RAND(10,25)
-			     if JuravelStile>100: JuravelStile = 100
-			 '<center><img src = "pic/EvedonNarod/inuri.jpg"></center>'
+			 gs'stat'
+			 JuravelStile=JuravelStile+RAND(10,25)
+			     if JuravelStile>100:JuravelStile=100
+			 '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
 			 'Вы тренировались вместе с Инури. Она показывала вам упражнения и дотрагивалась своими мягкими касаниями до вашего тела во время упражнений, страхуя вас. Стиль журавля, учила вас Инури, это удары ногами и сила этого стиля в акробатике.'
 			 'Вы изучили на <<JuravelStile>>%'
-				 act 'Идти в душ вместе с Инури': gt 'tashowerW'
+				 act 'Идти в душ вместе с Инури':gt'tashowerW'
 			 end
 		 end
 		 
-		 if akrobat>= 30 and JuravelStile = 100 and vertushka<100: 
-		     act 'Изучать вертушку вместе с Инури (1 час) бесплатно': 
+		 if akrobat>=30 and JuravelStile=100 and vertushka<100:
+		     act 'Изучать вертушку вместе с Инури (1 час) бесплатно':
 			 cla
 			 *clr
-			 minut += 60
-			 inuritrain = inuritrain+1
-			 horny = horny+inurishower+inuriBJ
-			 gem = gem-10
-			 exp = exp+RAND((lvl),lvl*2)
-			 akrobat = akrobat+5
-			 sportday = day
+			 minut=minut+60
+			 inuritrain=inuritrain+1
+			 horny=horny+inurishower+inuriBJ
+			 gem=gem-10
+			 exp=exp+RAND((lvl),lvl*2)
+			 akrobat=akrobat+5
+			 sportday=day
 			 clr
-			 gs 'stat'
-			 vertushka = vertushka+RAND(10,25)
-			     if vertushka>100: vertushka = 100
-			 '<center><img src = "pic/EvedonNarod/inuri.jpg"></center>'
+			 gs'stat'
+			 vertushka=vertushka+RAND(10,25)
+			     if vertushka>100:vertushka=100
+			 '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
 			 'Вы тренировались вместе с Инури. Она показывала вам упражнения и дотрагивалась своими мягкими касаниями до вашего тела во время упражнений, страхуя вас. Вертушка, это три удара ногами в развороте, учила вас Инури.'
 			 'Вы изучили на <<vertushka>>%'
-				 act 'Идти в душ вместе с Инури': gt 'tashowerW'
+				 act 'Идти в душ вместе с Инури':gt'tashowerW'
 			 end
 		 end
 		 
-		 if akrobat>= 30 and JuravelStile = 100 and vertushka = 100 and podsek<100: 
-		     act 'Изучать подсечку вместе с Инури (1 час) бесплатно': 
+		 if akrobat>=30 and JuravelStile=100 and vertushka=100 and podsek<100:
+		     act 'Изучать подсечку вместе с Инури (1 час) бесплатно':
 			 cla
 			 *clr
-			 minut += 60
-			 inuritrain = inuritrain+1
-			 horny = horny+inurishower+inuriBJ
-			 gem = gem-10
-			 exp = exp+RAND((lvl),lvl*2)
-			 akrobat = akrobat+5
-			 sportday = day
+			 minut=minut+60
+			 inuritrain=inuritrain+1
+			 horny=horny+inurishower+inuriBJ
+			 gem=gem-10
+			 exp=exp+RAND((lvl),lvl*2)
+			 akrobat=akrobat+5
+			 sportday=day
 			 clr
-			 gs 'stat'
-			 podsek = podsek+RAND(10,25)
-			     if podsek>100: podsek = 100
-			 '<center><img src = "pic/EvedonNarod/inuri.jpg"></center>'
+			 gs'stat'
+			 podsek=podsek+RAND(10,25)
+			     if podsek>100:podsek=100
+			 '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
 			 'Вы тренировались вместе с Инури. Она показывала вам упражнения и дотрагивалась своими мягкими касаниями до вашего тела во время упражнений, страхуя вас. Подсечка это попытка сбить противника с ног, чтобы следующий удар был точным и гораздо мощнее обыкновенного удара, учила вас Инури.'
 			 'Вы изучили на <<podsek>>%'
-				 act 'Идти в душ вместе с Инури': gt 'tashowerW'
+				 act 'Идти в душ вместе с Инури':gt'tashowerW'
 			 end
 		 end
 		 
-		 if akrobat>= 30 and JuravelStile = 100 and vertushka = 100 and podsek = 100 and flykik<100: 
-		     act 'Изучать удар в прыжке вместе с Инури (1 час) бесплатно': 
+		 if akrobat>=30 and JuravelStile=100 and vertushka=100 and podsek=100 and flykik<100:
+		     act 'Изучать удар в прыжке вместе с Инури (1 час) бесплатно':
 			 cla
 			 *clr
-			 minut += 60
-			 inuritrain = inuritrain+1
-			 horny = horny+inurishower+inuriBJ
-			 gem = gem-10
-			 exp = exp+RAND((lvl),lvl*2)
-			 akrobat = akrobat+5
-			 sportday = day
+			 minut=minut+60
+			 inuritrain=inuritrain+1
+			 horny=horny+inurishower+inuriBJ
+			 gem=gem-10
+			 exp=exp+RAND((lvl),lvl*2)
+			 akrobat=akrobat+5
+			 sportday=day
 			 clr
-			 gs 'stat'
-			 flykik = flykik+RAND(10,25)
-			     if flykik>100: flykik = 100
-			 '<center><img src = "pic/EvedonNarod/inuri.jpg"></center>'
+			 gs'stat'
+			 flykik=flykik+RAND(10,25)
+			     if flykik>100:flykik=100
+			 '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
 			 'Вы тренировались вместе с Инури. Она показывала вам упражнения и дотрагивалась своими мягкими касаниями до вашего тела во время упражнений, страхуя вас. Удар в прыжке очень мощный удар, во время этого удара для нанесения урона используется не только сила, но и вес тела и конечно же акробатика, учила вас Инури.'
 			 'Вы изучили на <<flykik>>%'
-				 act 'Идти в душ вместе с Инури': gt 'tashowerW'
+				 act 'Идти в душ вместе с Инури':gt'tashowerW'
 			 end
 		 end
      
@@ -337,109 +337,109 @@ end
 
 
 'В зале вы видите тренирующуюся девушку, к которой все обращаются как к Инури, она хозяйка спорт зала.'
-if hour>= 10 and hour<= 19: 
-if hkdefeat!1: 'Качает мускулы полуголая <a href = "exec: gt ''hekelW''">Хэкель</a>, вы можете разглядеть ее литые будто бы вылитые из стали мышцы и какой-то странный бугор в промежности.'
-     if hkdefeat = 1: 
+if hour>=10 and hour<= 19:
+if hkdefeat!1:'Качает мускулы полуголая <a href="exec:GT ''hekelW''">Хэкель</a>, вы можете разглядеть ее литые будто бы вылитые из стали мышцы и какой-то странный бугор в промежности.'
+     if hkdefeat=1:
      'Очевидно весть о вчерашних событиях облетела весь городок, так как по углам толпятся кучки людей. За ночь центр зала очистили от тренажеров, достаточно, чтобы хватило места для поединка. '
-     	 act 'Подойти к Хекель и разобраться': 
+     	 act 'Подойти к Хекель и разобраться':
 		 cla
 		 *clr
-		 monster = 18
-		 minut += 80
-		 $nameV = 'Хекель'
-		 lvlv = 130
-		 strenV = 400
-		 speedV = 150
-		 agilV = 110
-		 vitalV = 400
-		 intelv = 110
-		 willv = 10
-		 program = 7
-		 healthV = vitalV*10
-		 mannaV = intelV*10
-		 wipoV = willV*10
-		 '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
+		 monster=18
+		 minut=minut+80
+		 $nameV='Хекель'
+		 lvlv=130
+		 strenV=400
+		 speedV=150
+		 agilV=110
+		 vitalV=400
+		 intelv=110
+		 willv=10
+		 program=7
+		 healthV=vitalV*10
+		 mannaV=intelV*10
+		 wipoV=willV*10
+		 '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
 		 'Вы видите Хэкель, судя по ее взгляду, драться сегодня она будет до последнего.'
-		 act 'Драться': gt 'before'
+		 act 'Драться':gt'before'
 		 end
      end
 end
-     act 'Поговорить с Инури': 
+     act 'Поговорить с Инури':
      cla
      *clr
-     minut += 5
-     '<center><img src = "pic/EvedonNarod/inuri.jpg"></center>'
+     minut=minut+5
+     '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
      'Инури оказалась веселой и приветливой девушкой, любящей спорт и боевые искуства.'
-     inuriQW = inuriQW+inurishower+inuriBJ
+     inuriQW=inuriQW+inurishower+inuriBJ
      'Отношения <<inuriQW>>'
-         if cumlip>0 and hekelQW>0 and inurishower>0 and inuribjday!day: 
-         SUB = SUB+1
-         whore = whore+1
+         if cumlip>0 and hekelQW>0 and inurishower>0 and inuribjday!day:
+         SUB=SUB+1
+         whore=whore+1
          'Дорогуша, у тебя изо рта спермой пахнет. Это Хекель что ли постаралась? Вы покраснели как рак после этого замечания.'
-             act 'Хекель меня так учит боевым искусствам.': 
+             act 'Хекель меня так учит боевым искусствам.':
              cla
              *clr
-             '<center><img src = "pic/EvedonNarod/inuri.jpg"></center>'
-             minut += 1
+             '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
+             minut=minut+1
              'Вы попытались объяснить Инури, что Хекель учит вас боевым искусствам, а вы платите ей минетами. Инури послушала вас и повела в свой кабинет. Там она села в кресло и достала большой член из штанов.'
              'Ну же детка. Поработай ротиком, покажи мне что ты умеешь. '
-                 act 'Уйти': gt $CURLOC
+                 act 'Уйти':gt $CURLOC
                  
-                 act 'Опуститься перед Инури на колени и отсосать': 
+                 act 'Опуститься перед Инури на колени и отсосать':
                  cla
                  *clr
-                 SUB = SUB+1
-                 bj = bj+1
-                 cumlip = cumlip+1
-                 swallow = swallow+1
-                 face = face+10
-                 if inurisex = 0: inurisex = 1 & futa = futa+1
-                 inuriBJ = inuriBJ+1
-                 inuribjday = day
-                 '<center><img src = "pic/EvedonTA/inuri.jpg" ></center>'
+                 SUB=SUB+1
+                 bj=bj+1
+                 cumlip=cumlip+1
+                 swallow=swallow+1
+                 face=face+10
+                 if inurisex=0:inurisex=1&futa=futa+1
+                 inuriBJ=inuriBJ+1
+                 inuribjday=day
+                 '<center><img src="pic/EvedonTA/inuri.jpg" ></center>'
                  'Вы сели на колени перед Инури и обхватили ее член губами начав сосать, Инури схватила вас за голову и начала насаживать на свой член, она играла своим членом в вашем рту, пытаясь завести его вам за щеку.'
-                 gs 'cumslut'
+                 gs'cumslut'
                  'Наконец Инури обильно кончила вам в рот, заставив все это проглотить.'
-                 gs 'passeffect'
-                 act 'Уйти': gt $CURLOC
+                 gs'passeffect'
+                 act 'Уйти':gt $CURLOC
                  end
              end
          end
          
-         act 'Отойти': gt $CURLOC
+         act 'Отойти':gt $CURLOC
          
-         if inurishower>0: 
-             act 'Попроситься сходить в душ': gt 'tashowerW'
+         if inurishower>0:
+             act 'Попроситься сходить в душ':gt'tashowerW'
          end
          
-         if inurishowerday!day and inurishower>0: 
-             act 'Предложить Инури сходить в душ вместе': gt 'showerevent','inuri'
+         if inurishowerday!day and inurishower>0:
+             act 'Предложить Инури сходить в душ вместе':gt'showerevent','inuri'
          end
          
-		 if polsportday!day: 	
-			 act 'Подрабатывать моя пол': 
+		 if polsportday!day:	
+			 act 'Подрабатывать моя пол':
 			 cla
-			 minut += 60
-			 manna = manna-20
-			 gem = gem+20
-			 polsportday = day
-			 exp = exp+1
-			 inuriQW = inuriQW+1
+			 minut=minut+60
+			 manna=manna-20
+			 gem=gem+20
+			 polsportday=day
+			 exp=exp+1
+			 inuriQW=inuriQW+1
 			 'Инури показала вам ведро и тряпку. Вы взяли их и начали мыть полы в спорт зале. Наконец через час полы были уже в приличном виде и хозяйка дала вам за работу 20 гемов.'
-			 act 'Отойти': gt $CURLOC
+			 act 'Отойти':gt $CURLOC
 			 end
 		 end
-		 if watersportday!day: 	
-			 act 'Подрабатывать таская воду в бак для душа': 
+		 if watersportday!day:	
+			 act 'Подрабатывать таская воду в бак для душа':
 			 cla
-			 minut += 60
-			 manna = manna-20
-			 gem = gem+5
-			 watersportday = day
-			 exp = exp+1
-			 inuriQW = inuriQW+1
+			 minut=minut+60
+			 manna=manna-20
+			 gem=gem+5
+			 watersportday=day
+			 exp=exp+1
+			 inuriQW=inuriQW+1
 			 'Инури показала вам ведра и приказала натаскать воды в огромный бак к которому подключен душ, чтобы посетители могли помыться после тренировок. Вы взяли ведра и начали таскать воду из колодца. Наконец через час вы заполнили баки водой и Инури дала вам за работу 20 гемов.'
-			 act 'Отойти от стойки': gt $CURLOC
+			 act 'Отойти от стойки':gt $CURLOC
 			 end
 		 end
 	 end
@@ -447,9 +447,9 @@ end
 end
 
 
-act 'Уйти': 
-minut += 5
- gt 'teladareW'
+act 'Уйти':
+minut=minut+5
+gt'teladareW'
 end
 --- tasportW ---------------------------------
 

@@ -8,31 +8,31 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-'<center><img src = "pic/EvedonNarod/iara.jpg"></center>'
+'<center><img src="pic/EvedonNarod/iara.jpg"></center>'
 'Яра посмотрела на вас и улыбнулась, поблескивая своим пирсингом в ушах и носу.'
 'Привет <<$name>>, как дела?'
 
 
-act 'Уйти': 
-minut += 5
- gt 'taPekarW'
+act 'Уйти':
+minut=minut+5
+gt'taPekarW'
 end
 
-act 'Спросить о пирсинге': 
+act 'Спросить о пирсинге':
 cla
 *clr
-'<center><img src = "pic/EvedonNarod/iara.jpg"></center>'
-minut += 15
+'<center><img src="pic/EvedonNarod/iara.jpg"></center>'
+minut=minut+15
 'Вы поинтересовались о пирсинге на лице Яры. Она ухмыльнулась и сказала. Когда в Тель Адре было больше народу чем сейчас, я владела салоном пирсинга. Инструмент у меня еще сохранился, а вот клиентов нет. Я ставлю волшебный пирсинг, от него не выйдет избавиться, но он может усилить человека. Никто не хочет делать пирсинг, чтобы не привлекать к себе излишнего внимания. Да к тому же мои услуги дорого стоят, 5000 любой пирсинг.'
 
-act 'Уйти': gt 'taPekarW'
-	 act 'Покажи образцы пирсинга': 
+act 'Уйти':gt'taPekarW'
+	 act 'Покажи образцы пирсинга':
 	 cla
 	 *clr
-	 '<center><img src = "pic/EvedonNarod/iara.jpg"></center>'
-	 minut += 15
+	 '<center><img src="pic/EvedonNarod/iara.jpg"></center>'
+	 minut=minut+15
 	 'Вы попросили Яру показать образцы. Она усмехнулась. Пойдем ко мне домой.'
-		 act 'Идти к Яре': gt 'yaraPirsing'
+		 act 'Идти к Яре':gt'yaraPirsing'
      end
 end
 --- yaraW ---------------------------------

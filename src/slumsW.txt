@@ -8,99 +8,99 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut += 5
+minut=minut+5
 '<center><H4>Трущобы</H4></center>'
-'<center><img src = "pic\Evedon\slums.jpg" ></center>'
+'<center><img src="pic\Evedon\slums.jpg" ></center>'
 'В трущобах стоят покосившиеся домики, никогда не знавшие ремонта. Между смердящими мусорными кучами бродят нищие и воры. Трущобы заполняют смрад и сырость, приносимые ветром с болот.'
 clr
-gs 'stat'
-gs 'time'
+gs'stat'
+gs'time'
 
-if DemonMorf>= 10: 
- atkrand = RAND(0,100)
-     if atkrand>= 90: 
+if DemonMorf>=10:
+ atkrand=RAND(0,100)
+     if atkrand>=90:
      cls
 	 *clr
-     '<center><img src = "pic\EvedonMonsters\guards.jpg"></center>'
-	 pogonarand = RAND(5,10)
+     '<center><img src="pic\EvedonMonsters\guards.jpg"></center>'
+	 pogonarand=RAND(5,10)
 	 'Разгуливать в облике демона опасно, стража вас обнаружила и атаковала.'
-		 act 'Убегать.': 
-		 minut += 1
-		 crime = 1
-		 gt 'runW'
+		 act 'Убегать.':
+		 minut=minut+1
+		 crime=1
+		 gt'runW'
 		 end
      exit
      end
 end
 
-!'Каменный ((мост|mostW|minut += 15)) ведущий на другую сторону бухты.'
-'Местная покосившаяся <a href = "exec: gt ''nochW''">ночлежка</a> для бродяг и бездомных.'
-'Вход в мерзкий <a href = "exec: gt ''pritonW''">притон на вывеске</a> которого грубо намалеван спящий лис.'
-'Идти в <a href = "exec: gt ''slums_corner''">Темный угол</a>.'
-if HomeSlums = 1: '((Ваш дом|homeSlums|minut += 5))'
-if missionData = 220: '((Дом грузчика, чью семью вам поручили вырезать|gruzhome|minut += 5))'
-if frendC>= 1: '<a href = "exec: gt ''frendChome''">В одной из лачуг живет <<$namefrendC>>.</a>'
-if vor>0: '((Гильдия воров|vorgildia|minut += 5))'
+!'Каменный ((мост|mostW|minut=minut+15)) ведущий на другую сторону бухты.'
+'Местная покосившаяся <a href="exec:GT ''nochW''">ночлежка</a> для бродяг и бездомных.'
+'Вход в мерзкий <a href="exec:GT ''pritonW''">притон на вывеске</a> которого грубо намалеван спящий лис.'
+'Идти в <a href="exec:GT ''slums_corner''">Темный угол</a>.'
+if HomeSlums=1:'((Ваш дом|homeSlums|minut=minut+5))'
+if missionData=220:'((Дом грузчика, чью семью вам поручили вырезать|gruzhome|minut=minut+5))'
+if frendC>=1:'<a href="exec: gt''frendChome''">В одной из лачуг живет <<$namefrendC>>.</a>'
+if vor>0:'((Гильдия воров|vorgildia|minut=minut+5))'
 
-if hour >= 6 and hour<= 21: 
+if hour >= 6 and hour<=21:
 *nl
-piprand = RAND(0,100)
-     if piprand < 50: 
+piprand=RAND(0,100)
+     if piprand < 50:
      'На улице никого нет.'
      end
-     if piprand >= 50: 
-     manpip = RAND(1,10)
-         if manpip = 4 or manpip = 5: manpip = 1
-         if manpip = 9 or manpip = 10: manpip = 6
-     gs 'pippleW'
-     'По улице идет ((<<$pipl>>|pipaktW|minut += 1))'
+     if piprand >= 50:
+     manpip=RAND(1,10)
+         if manpip=4 or manpip = 5:manpip=1
+         if manpip=9 or manpip = 10:manpip=6
+     gs'pippleW'
+     'По улице идет ((<<$pipl>>|pipaktW|minut=minut+1))'
      end
      
-     if slot>12: 
+     if slot>12:
      *nl
      'Вас окружили беспризорники и начали клянчить деньги.'
-     goprand = RAND(0,100)
-         if goprand>= 95: 
-             if gem>1000: 
-             gopSlums+= 1
-             gem- = RAND(500,1000)
+     goprand=RAND(0,100)
+         if goprand>=95:
+             if gem>1000:
+             gopSlums+=1
+             gem-=RAND(500,1000)
              end
          end
      end
      
 end
 
-     act 'Выйти на мост, ведущий в порт': 
-	 minut += 15
-	 gt 'mostW'
+     act 'Выйти на мост, ведущий в порт':
+	 minut=minut+15
+	 gt'mostW'
 	 end
 
-if hour >= 6 and hour<= 21: 
-     act 'Выйти из города в рыбацкую деревню (1 час)': 
-	 minut += 60
-	 gt 'fishW'
+if hour >= 6 and hour<=21:
+     act 'Выйти из города в рыбацкую деревню (1 час)':
+	 minut=minut+60
+	 gt'fishW'
 	 end
      
 end
 
 
 
-     act 'Ждать': 
+     act 'Ждать':
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120: 
-          minut = minut + 15
+         if waiting <= 0 or waiting > 120:
+         set minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120: 
-          minut = minut + waiting
+         if waiting > 0 and waiting <= 120:
+         set minut = minut + waiting
          end
-     act 'Посмотреть на часы': gt curloc
+     act 'Посмотреть на часы':gt curloc
      end
      
      
-     if V_Roziske>0 and V_RoziskeDay!day: 
-     randroz = RAND(0,100)
-         if randroz>= 98: gt 'Rozisk'
+     if V_Roziske>0 and V_RoziskeDay!day:
+     randroz=RAND(0,100)
+         if randroz>=98:gt'Rozisk'
      end
 
 
