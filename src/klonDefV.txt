@@ -1,33 +1,33 @@
 # klonDefV
-	 if notHereV>0 and sonar=0:
-	     if damage>0 or damageT>0 or damageW>0 or damageH>0 or damageM>0:
-		 damage=0
-		 damageT=0
-		 damageW=0
-		 damageH=0
-		 damageM=0
-		 Perepad=0
-		 mannaStump=0
-		 '<font color=green>Вы не видите противника.</font>'
+	 if notHereV>0 and sonar = 0: 
+	     if damage>0 or damageT>0 or damageW>0 or damageH>0 or damageM>0: 
+		 damage = 0
+		 damageT = 0
+		 damageW = 0
+		 damageH = 0
+		 damageM = 0
+		 Perepad = 0
+		 mannaStump = 0
+		 '<font color = green>Вы не видите противника.</font>'
 	     end
 	 end
 	 
-	 if klonv>0 and sonar=0:
-	     if damage>0 or damageT>0 or damageW>0 or damageH>0 or damageM>0:
-		 klonv=klonv-1
-		 notHereV=notHereV+1
-		 '<font color=green>Вы попали в противника и он внезапно просто растворился. Это был иллюзорный клон.</font>'
-			 if shokdam>0:
-			 notHereV=0
-			 '<font color=green>Ваш электроудар обнаружил противника.</font>'
+	 if klonv>0 and sonar = 0: 
+	     if damage>0 or damageT>0 or damageW>0 or damageH>0 or damageM>0: 
+		 klonv = klonv-1
+		 notHereV = notHereV+1
+		 '<font color = green>Вы попали в противника и он внезапно просто растворился. Это был иллюзорный клон.</font>'
+			 if shokdam>0: 
+			 notHereV = 0
+			 '<font color = green>Ваш электроудар обнаружил противника.</font>'
 			 else
-			 damage=0
-			 damageT=0
-			 damageW=0
-			 damageH=0
-			 damageM=0
-			 Perepad=0
-			 mannaStump=0
+			 damage = 0
+			 damageT = 0
+			 damageW = 0
+			 damageH = 0
+			 damageM = 0
+			 Perepad = 0
+			 mannaStump = 0
 			 end 
 	     end
 	 end

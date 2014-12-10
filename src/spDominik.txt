@@ -1,108 +1,108 @@
 # spDominik
 dynamic $battlemain
 clr
-gs'stat'
-if spIgla>0:pl'<<spIgla>> упаковок игл Каллена необходимых для одноименного заклинания.'
-if demonSoul>0 and spSozh>=100:pl'<<demonSoul>> гемов с душой демона необходимых для заклинания разлом'
+gs 'stat'
+if spIgla>0: pl'<<spIgla>> упаковок игл Каллена необходимых для одноименного заклинания.'
+if demonSoul>0 and spSozh>= 100: pl'<<demonSoul>> гемов с душой демона необходимых для заклинания разлом'
 
  
- if spFist>=100:
- mannaNeed=100-spFistExp
-	 if mannaNeed<10:mannaNeed=10
+ if spFist>= 100: 
+ mannaNeed = 100-spFistExp
+	 if mannaNeed<10: mannaNeed = 10
  end
  
- if spFist>=100 and manna>=mannaNeed:
-	 act 'Применить заклинание кулак грома (<<mannaNeed>> маны)':
-	 manna=manna-mannaNeed
-	 tipatk=1
-	 spFistExp=spFistExp+1
-	 damage=RAND((stren)+spFistExp,(stren*2)+(spFistExp*2))
-	 '<font color=green>Вы вложили свою магическую силу в кулак и нанесли мощнейший удар</font>'
-		 if damage>(manna/4):damage=(manna/4)&'<font color=green>Вы могли бы ударить сильнее, но с вашей магической силой это предел.</font>'
-	 gs'popad'
-	 xgt'fight','1'
+ if spFist>= 100 and manna>= mannaNeed: 
+	 act 'Применить заклинание кулак грома (<<mannaNeed>> маны)': 
+	 manna = manna-mannaNeed
+	 tipatk = 1
+	 spFistExp = spFistExp+1
+	 damage = RAND((stren)+spFistExp,(stren*2)+(spFistExp*2))
+	 '<font color = green>Вы вложили свою магическую силу в кулак и нанесли мощнейший удар</font>'
+		 if damage>(manna/4): damage = (manna/4) & '<font color = green>Вы могли бы ударить сильнее, но с вашей магической силой это предел.</font>'
+	 gs 'popad'
+	 xgt 'fight','1'
 	 end
  end
 
-if round>=2:
+if round>= 2: 
 !2й уровень магичности 
-	 if spSphera>=100 and manna>=250:
-		 act 'Применить сферическую защиту 250 маны':
+	 if spSphera>= 100 and manna>= 250: 
+		 act 'Применить сферическую защиту 250 маны': 
 		 cla
-		 spSpheraExp=spSpheraExp+1
-		 if spSpheraExp>500:spSpheraExp=500
-		 manna=manna-250
-		 defence=defence+500+spSpheraExp
-		 defenceT=defenceT+500+spSpheraExp
-		 defenceW=defenceW+500+spSpheraExp
-		 defenceH=defenceH+500+spSpheraExp
-		 '<font color=green>Вы колдуете и вас окружает защитная сфера</font>'
-		 xgt'fight','1'
+		 spSpheraExp = spSpheraExp+1
+		 if spSpheraExp>500: spSpheraExp = 500
+		 manna = manna-250
+		 defence = defence+500+spSpheraExp
+		 defenceT = defenceT+500+spSpheraExp
+		 defenceW = defenceW+500+spSpheraExp
+		 defenceH = defenceH+500+spSpheraExp
+		 '<font color = green>Вы колдуете и вас окружает защитная сфера</font>'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
  !3й уровень магичности
 
-if round>=3: 
-	 if spIgla>0 and spSve>=100 and manna>=100:
-		 act 'Применить иглы Каллена 100 маны':
+if round>= 3: 
+	 if spIgla>0 and spSve>= 100 and manna>= 100: 
+		 act 'Применить иглы Каллена 100 маны': 
 		 cla
-		 spIgla=spIgla-1
-		 manna=manna-100
-		 '<font color=green>Вы достаете иглы Каллена и швыряете их в противника</font>'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 damage=RAND(10,25)
-		 gs'defenceV'
-		 xgt'fight','1'
+		 spIgla = spIgla-1
+		 manna = manna-100
+		 '<font color = green>Вы достаете иглы Каллена и швыряете их в противника</font>'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 damage = RAND(10,25)
+		 gs 'defenceV'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=4: 
-	 if demonSoul>0 and spSozh>=100 and manna>=100 and defenceV>0:
-		 act 'Применить ритуал Разлома 100 маны':
+if round>= 4: 
+	 if demonSoul>0 and spSozh>= 100 and manna>= 100 and defenceV>0: 
+		 act 'Применить ритуал Разлома 100 маны': 
 		 cla
-		 demonSoul=demonSoul-1
-		 manna=manna-100
-		 '<font color=green>Вы переламываете гем с душой демона и проводите ритуал ломающий физическую защиту противника</font>'
-         defenceV=defenceV/2
-		 xgt'fight','1'
+		 demonSoul = demonSoul-1
+		 manna = manna-100
+		 '<font color = green>Вы переламываете гем с душой демона и проводите ритуал ломающий физическую защиту противника</font>'
+         defenceV = defenceV/2
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=5: 
-	 if sera>0 and spAcid>=100 and manna>=250:
-		 act 'Применить ритуал Кислотного дыхания 250 маны':
+if round>= 5: 
+	 if sera>0 and spAcid>= 100 and manna>= 250: 
+		 act 'Применить ритуал Кислотного дыхания 250 маны': 
 		 cla
-		 acidExp=acidExp+1
-		 if acidExp>300:acidExp=300
-		 sera=sera-1
-		 acid=acid+5+(acidExp/100)
-		 manna=manna-250
-		 '<font color=green>Вы берете демоническую серу и проводите над ней ритуал кислотного дыхания наполняя воздух кислотой.</font>'
-		 xgt'fight','1'
+		 acidExp = acidExp+1
+		 if acidExp>300: acidExp = 300
+		 sera = sera-1
+		 acid = acid+5+(acidExp/100)
+		 manna = manna-250
+		 '<font color = green>Вы берете демоническую серу и проводите над ней ритуал кислотного дыхания наполняя воздух кислотой.</font>'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
  
-     act 'Пропустить ход':xgt'fight','1'
+     act 'Пропустить ход': xgt 'fight','1'
 --- spDominik ---------------------------------
 

@@ -6,70 +6,70 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 '<center><H4>Лес</H4></center>'
-'<center><img src="pic/Evedon/forest.jpg" ></center>'
+'<center><img src = "pic/Evedon/forest.jpg" ></center>'
 'Древние могучие деревья оплетают своими корнями покрытые мхом камни. Около тропинки стоит указатель, Эведон на север, Озеро на запад'
 'Около тропки ведущий в глубину леса стоит камень с высеченной на нем надписью "Осторожно путник, дремучий лес это территория Эльфов, фей и прочих нелюдей."'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 
 !!!дома
-'((Лесопилка|lesopilka|minut=minut+30))'
-if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
+'((Лесопилка|lesopilka|minut += 30))'
+if vampireMorf>= 1: 'Зарыться в <a href = "exec: gt ''vampGrave''">землю</a>'
 
 
 
 !!!
 
-	 act 'Идти к пригороду (1 час)':
-	 minut=minut+60
-	 gt'suburbiaW'
+	 act 'Идти к пригороду (1 час)': 
+	 minut += 60
+	 gt 'suburbiaW'
 	 end
 	 
 	 
-	 act 'Идти к озеру (1 час)':
-	 minut=minut+60
-	 gt'lakeW'
+	 act 'Идти к озеру (1 час)': 
+	 minut += 60
+	 gt 'lakeW'
 	 end
 	 
-	 act 'Идти глубже в лес (30 мин)':
-	 minut=minut+30
-	 tiprand=RAND(0,9)
-	     if tiprand=0:gt'df0_0'
-	     if tiprand=1:gt'df0_1'
-	     if tiprand=2:gt'df0_2'
-	     if tiprand=3:gt'df0_3'
-	     if tiprand=4:gt'df0_4'
-	     if tiprand=5:gt'df0_5'
-	     if tiprand=6:gt'df0_6'
-	     if tiprand=7:gt'df0_7'
-	     if tiprand=8:gt'df0_8'
-	     if tiprand=9:gt'df0_9'
+	 act 'Идти глубже в лес (30 мин)': 
+	 minut += 30
+	 tiprand = RAND(0,9)
+	     if tiprand = 0: gt 'df0_0'
+	     if tiprand = 1: gt 'df0_1'
+	     if tiprand = 2: gt 'df0_2'
+	     if tiprand = 3: gt 'df0_3'
+	     if tiprand = 4: gt 'df0_4'
+	     if tiprand = 5: gt 'df0_5'
+	     if tiprand = 6: gt 'df0_6'
+	     if tiprand = 7: gt 'df0_7'
+	     if tiprand = 8: gt 'df0_8'
+	     if tiprand = 9: gt 'df0_9'
 	 end
 
-     act 'Ждать':
+     act 'Ждать': 
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         if waiting <= 0 or waiting > 120: 
+          minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         if waiting > 0 and waiting <= 120: 
+          minut = minut + waiting
          end
-     act 'Посмотреть на часы':gt curloc
+     act 'Посмотреть на часы': gt curloc
      end
      
      
      
-if zeartactiv>=3 and zaertQW<10:
+if zeartactiv>= 3 and zaertQW<10: 
 cls
-zaertQW=10
-minut+=60
-'На полянке вы заметили свою незнакомку, которая сдирала шкуру с оборотня. "Похоже, это вторая близняшка", - подумали вы, - "с ней надо аккуратней". Подойдя поближе, вы вежливо поздоровались и предложили помочь. На что получили грубый ответ:"Иди куда шел". Не желая её злить, вы не стали продолжать разговор. Вместо этого у вас родилась идея проследить за незнакомкой до её дома. Поначалу всё складывалось удачно, но стоило ей войти в город, как вы тут же потеряли её в хитросплетениях улиц.'
-act 'Осмотреться':gt'townW'
+zaertQW = 10
+minut+= 60
+'На полянке вы заметили свою незнакомку, которая сдирала шкуру с оборотня. "Похоже, это вторая близняшка", - подумали вы, - "с ней надо аккуратней". Подойдя поближе, вы вежливо поздоровались и предложили помочь. На что получили грубый ответ: "Иди куда шел". Не желая её злить, вы не стали продолжать разговор. Вместо этого у вас родилась идея проследить за незнакомкой до её дома. Поначалу всё складывалось удачно, но стоило ей войти в город, как вы тут же потеряли её в хитросплетениях улиц.'
+act 'Осмотреться': gt 'townW'
 end
 --- forestW ---------------------------------
 

@@ -1,55 +1,55 @@
 # zapr
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
+gs 'stat'
 $metka = $ARGS[0]
 $loc = $CURLOC
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>АЗС</B></center>'
-'<center><img src="pic\pic\zapr.jpg" ></center>'
+'<center><img src = "pic\pic\zapr.jpg" ></center>'
 'Объявление, в связи с особенностями устройства бензоколонок, все автомобили заправляются до полного бака.'
 'Стоимость 1 литра бензина 30 рублей.'
-if car > 0 and cardrive = 6:
-set cardrive = 6
-'На заправке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+if car > 0 and cardrive = 6: 
+ cardrive = 6
+'На заправке стоит <a href = "exec: gs ''car'',''start''">ваш <<$car>></a>.'
 end
 
-set zprbenz = 40 - benz
+ zprbenz = 40 - benz
 
-     if benz < 40 and car > 0:
-     set zprbenz = 40 - benz
-         if zprbenz*30 <= money:
-             act 'Заправить бензин':
+     if benz < 40 and car > 0: 
+      zprbenz = 40 - benz
+         if zprbenz*30 <= money: 
+             act 'Заправить бензин': 
              cla
              *clr
-             set benz = 40
-             set zprpay = zprbenz*30
-             set money = money - zprpay
+              benz = 40
+              zprpay = zprbenz*30
+              money = money - zprpay
              'Вы залили полный бак и оплатили <<zprpay>> рублей.'
-             act 'Убрать пистолет':gt 'zapr','start'
+             act 'Убрать пистолет': gt 'zapr','start'
              end
          else
          'У вас не хватает денег на заправку.'
          end
      end
 
-     if car > 0:
-		 act 'Купить канистру с 5ю литрами бензина 150 руб':
+     if car > 0: 
+		 act 'Купить канистру с 5ю литрами бензина 150 руб': 
 		 cla
-		 set kanistra = kanistra + 1
-		 set money = money - 150
+		  kanistra = kanistra + 1
+		  money = money - 150
 		 'Вы купили канистру бензина. (она автоматически добавится в багажник)'
-		 act 'Убрать пистолет':gt 'zapr','start'  
+		 act 'Убрать пистолет': gt 'zapr','start'  
 		 end
      end
 
 
-act 'Уйти':gt 'nord'
+act 'Уйти': gt 'nord'
 end
 --- zapr ---------------------------------
 

@@ -1,321 +1,321 @@
 # lekteme
-if lektion=1:
+if lektion = 1: 
 '(Учитель) - Сегодня у нас вводная лекция, поговорим о технике безопасности при работе с магией. Самое главное правило, не находитесь в зоне действия заклинаний даже своих друзей. Заклинания не различают где свой, где чужой. Поэтому бои магов имеют индивидуальный характер, сражаться группой, это означает, что все будут бить всех. Еще необходимо помнить, что атаковать сразу же при входе в бой, это фактически потеря инициативы, много урона не нанесешь, но пропустишь возможность защититься. Да, еще забыл уточнить, всего курс лекций рассчитан на 50 занятий и за этот курс вы изучите все базовые заклинания.'
 end
-if lektion=2:
+if lektion = 2: 
 '(Учитель) - Сегодня поговорим и принципе магического боя. Самое главное в бою, это защита. Сперва думай о защите, а уж потом атакуй. Кто знает насколько мощно бьет противник, лучше подстраховаться и защитить себя несколькими типами защиты. И только удерживая защиту уже можно начинать атаковать. Опять же, смотрите как защищается противник. Если он предпочитает зеркала, то самым лучшим выбором атаки будет множественные, пусть и слабые атаки, у них больше шансов сбить зеркала.'
 end
-if lektion=3:
+if lektion = 3: 
 '(Учитель) - Сейчас у нас будет продолжение лекции о принципах магического боя. Если противник защищается туманом, то для атак магией это не имеет никакого значения. Туман лишает возможности атаковать физической силой, но у тумана есть слабость, каждый физ удар в туман ослабляет его и туман можно сбить несколькими удачными ударами.'
 end
-if lektion=4:
+if lektion = 4: 
 '(Учитель) - Сейчас у нас будет продолжение лекции о принципах магического боя. Поговорим о защите клонами. Клоны очень эффективная защита, попав в клона ваш противник потеряет вас из виду, правда клоны очень энергозатратные и некоторые демоны способны видеть истинное положение вещей и клонами их не возьмешь, но повторюсь, клоны потрясающе эффективная защита.'
 end
-if lektion=5:
+if lektion = 5: 
 '(Учитель) - Сейчас у нас будет лекция о типах магического урона. Самые широко распространенные типы урона это физ урон, урон температурный, урон воздушный и удары по разуму. Защититься от урона можно только защитой соответствующего типа. Но, конечно, есть виды защит, которые изменяют направление урона и урон идет мимо мага. Такие виды защит - зеркала и клоны.'
 end
-if lektion=6:
+if lektion = 6: 
 '(Учитель) - Сейчас у нас будет лекция о специфике физического урона. Защититься от рукопашных атак - это основа магии. Ее элементарная часть. Конечно не стоит недооценивать физическую мощь некоторых противников, они могут пробить защиту и нанести урон. Так же к физ урону относятся взрывы, наносящие температурный и физ урон, электроудары, удары водой и прочие ударные атаки.'
 end
-if lektion=7:
+if lektion = 7: 
 '(Учитель) - Сейчас у нас будет лекция о специфике электроударов. Электроудар кажется обыкновенным физ ударом, но у него есть своя особенность. Пропущенный электроудар наносит повреждения воле, которые никак нельзя отразить. Причем, даже если защита погасит большую часть электроудара и до противника дойдет совсем немного, то удар по воле не изменится и ударит противника со всей мощностью.'
 end
-if lektion=8:
+if lektion = 8: 
 '(Учитель) - Сейчас у нас будет лекция о специфике ударов водой. Удар водой схож с электроударом и помимо физического урона может наносить еще и специальный урон. Пропущенный удар водой наносит повреждения магической энергии противника. И от этого повреждения как и в случае электроудара абсолютно нельзя защититься. Даже малая часть пропущенного урона нанесет урон магии в полном объеме.'
 end
-if lektion=9:
+if lektion = 9: 
 '(Учитель) - Сегодня мы будем проходить базовую магию. Заклинание зеркал. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spZerkalo=100:ZerkaloExp=ZerkaloExp+5
-     if spZerkalo<100:spZerkalo=spZerkalo+25
-     if spZerkalo>100:spZerkalo=100
+     if spZerkalo = 100: ZerkaloExp = ZerkaloExp+5
+     if spZerkalo<100: spZerkalo = spZerkalo+25
+     if spZerkalo>100: spZerkalo = 100
 'Вы знаете зеркала на <<spZerkalo>>%'
 end
-if lektion=10:
+if lektion = 10: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание зеркал. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spZerkalo=100:ZerkaloExp=ZerkaloExp+5
-     if spZerkalo<100:spZerkalo=spZerkalo+25
-     if spZerkalo>100:spZerkalo=100
+     if spZerkalo = 100: ZerkaloExp = ZerkaloExp+5
+     if spZerkalo<100: spZerkalo = spZerkalo+25
+     if spZerkalo>100: spZerkalo = 100
 'Вы знаете зеркала на <<spZerkalo>>%'
 end
-if lektion=11:
+if lektion = 11: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание зеркал. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spZerkalo=100:ZerkaloExp=ZerkaloExp+5
-     if spZerkalo<100:spZerkalo=spZerkalo+25
-     if spZerkalo>100:spZerkalo=100
+     if spZerkalo = 100: ZerkaloExp = ZerkaloExp+5
+     if spZerkalo<100: spZerkalo = spZerkalo+25
+     if spZerkalo>100: spZerkalo = 100
 'Вы знаете зеркала на <<spZerkalo>>%'
 end
-if lektion=12:
+if lektion = 12: 
 '(Учитель) - Сегодня мы закончим изучать заклинание зеркал. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spZerkalo=100:ZerkaloExp=ZerkaloExp+5
-     if spZerkalo<100:spZerkalo=spZerkalo+25
-     if spZerkalo>100:spZerkalo=100
+     if spZerkalo = 100: ZerkaloExp = ZerkaloExp+5
+     if spZerkalo<100: spZerkalo = spZerkalo+25
+     if spZerkalo>100: spZerkalo = 100
 'Вы знаете зеркала на <<spZerkalo>>%'
 end
-if lektion=13:
+if lektion = 13: 
 '(Учитель) - Сегодня мы будем изучать щит мага. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spMagShild=100:MagShildExp=MagShildExp+50
-     if spMagShild<100:spMagShild=spMagShild+25
-     if spMagShild>100:spMagShild=100
-'Вы знаете щит мага на <<spMagShild>>%'
+     if spMags hild = 100: Mags hildExp = Mags hildExp+50
+     if spMags hild<100: spMags hild = spMags hild+25
+     if spMags hild>100: spMags hild = 100
+'Вы знаете щит мага на <<spMags hild>>%'
 end
-if lektion=14:
+if lektion = 14: 
 '(Учитель) - Сегодня мы продолжим изучать щит мага. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spMagShild=100:MagShildExp=MagShildExp+50
-     if spMagShild<100:spMagShild=spMagShild+25
-     if spMagShild>100:spMagShild=100
-'Вы знаете щит мага на <<spMagShild>>%'
+     if spMags hild = 100: Mags hildExp = Mags hildExp+50
+     if spMags hild<100: spMags hild = spMags hild+25
+     if spMags hild>100: spMags hild = 100
+'Вы знаете щит мага на <<spMags hild>>%'
 end
-if lektion=15:
+if lektion = 15: 
 '(Учитель) - Сегодня мы продолжим изучать щит мага. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spMagShild=100:MagShildExp=MagShildExp+50
-     if spMagShild<100:spMagShild=spMagShild+25
-     if spMagShild>100:spMagShild=100
-'Вы знаете щит мага на <<spMagShild>>%'
+     if spMags hild = 100: Mags hildExp = Mags hildExp+50
+     if spMags hild<100: spMags hild = spMags hild+25
+     if spMags hild>100: spMags hild = 100
+'Вы знаете щит мага на <<spMags hild>>%'
 end
-if lektion=16:
+if lektion = 16: 
 '(Учитель) - Сегодня мы закончим изучать щит мага. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spMagShild=100:MagShildExp=MagShildExp+50
-     if spMagShild<100:spMagShild=spMagShild+25
-     if spMagShild>100:spMagShild=100
-'Вы знаете щит мага на <<spMagShild>>%'
+     if spMags hild = 100: Mags hildExp = Mags hildExp+50
+     if spMags hild<100: spMags hild = spMags hild+25
+     if spMags hild>100: spMags hild = 100
+'Вы знаете щит мага на <<spMags hild>>%'
 end
-if lektion=17:
+if lektion = 17: 
 '(Учитель) - Сегодня мы будем изучать заклинание смещения. Смещение отличная защита против любителей атаковать физической силой. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spSmeshenie=100:spSmeshenieExp=spSmeshenieExp+5
-     if spSmeshenie<100:spSmeshenie=spSmeshenie+25
-     if spSmeshenie>100:spSmeshenie=100
+     if spSmeshenie = 100: spSmeshenieExp = spSmeshenieExp+5
+     if spSmeshenie<100: spSmeshenie = spSmeshenie+25
+     if spSmeshenie>100: spSmeshenie = 100
 'Вы знаете смещение на <<spSmeshenie>>%'
 end
-if lektion=18:
+if lektion = 18: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание смещения. Смещение отличная защита против любителей атаковать физической силой. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spSmeshenie=100:spSmeshenieExp=spSmeshenieExp+5
-     if spSmeshenie<100:spSmeshenie=spSmeshenie+25
-     if spSmeshenie>100:spSmeshenie=100
+     if spSmeshenie = 100: spSmeshenieExp = spSmeshenieExp+5
+     if spSmeshenie<100: spSmeshenie = spSmeshenie+25
+     if spSmeshenie>100: spSmeshenie = 100
 'Вы знаете смещение на <<spSmeshenie>>%'
 end
-if lektion=19:
+if lektion = 19: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание смещения. Смещение отличная защита против любителей атаковать физической силой. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spSmeshenie=100:spSmeshenieExp=spSmeshenieExp+5
-     if spSmeshenie<100:spSmeshenie=spSmeshenie+25
-     if spSmeshenie>100:spSmeshenie=100
+     if spSmeshenie = 100: spSmeshenieExp = spSmeshenieExp+5
+     if spSmeshenie<100: spSmeshenie = spSmeshenie+25
+     if spSmeshenie>100: spSmeshenie = 100
 'Вы знаете смещение на <<spSmeshenie>>%'
 end
-if lektion=20:
+if lektion = 20: 
 '(Учитель) - Сегодня мы закончим изучать заклинание смещения. Смещение отличная защита против любителей атаковать физической силой. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spSmeshenie=100:spSmeshenieExp=spSmeshenieExp+5
-     if spSmeshenie<100:spSmeshenie=spSmeshenie+25
-     if spSmeshenie>100:spSmeshenie=100
+     if spSmeshenie = 100: spSmeshenieExp = spSmeshenieExp+5
+     if spSmeshenie<100: spSmeshenie = spSmeshenie+25
+     if spSmeshenie>100: spSmeshenie = 100
 'Вы знаете смещение на <<spSmeshenie>>%'
 end
-if lektion=21:
+if lektion = 21: 
 '(Учитель) - Сегодня мы начнем изучать заклинание тумана. Это трудное заклинание и на его изучение мы потратим 10 часов. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=22:
+if lektion = 22: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=23:
+if lektion = 23: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=24:
+if lektion = 24: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=25:
+if lektion = 25: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=26:
+if lektion = 26: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=27:
+if lektion = 27: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=28:
+if lektion = 28: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=29:
+if lektion = 29: 
 '(Учитель) - Сегодня мы продолжим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
-if lektion=30:
+if lektion = 30: 
 '(Учитель) - Сегодня мы закончим изучать заклинание тумана. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spTuman=100:spTumanExp=spTumanExp+5
-     if spTuman<100:spTuman=spTuman+10
-     if spTuman>100:spTuman=100
+     if spTuman = 100: spTumanExp = spTumanExp+5
+     if spTuman<100: spTuman = spTuman+10
+     if spTuman>100: spTuman = 100
 'Вы знаете туман на <<spTuman>>%'
 end
 !!!!!!!!!!!!!!
-if lektion=31:
+if lektion = 31: 
 '(Учитель) - Сегодня мы приступим к изучению очень сложного и энергозатратного заклинания клонирования. На обучение нам понадобится 20 часов. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=32:
+if lektion = 32: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=33:
+if lektion = 33: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=34:
+if lektion = 34: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=35:
+if lektion = 35: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=36:
+if lektion = 36: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=37:
+if lektion = 37: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=38:
+if lektion = 38: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=39:
+if lektion = 39: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=40:
+if lektion = 40: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=41:
+if lektion = 41: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=42:
+if lektion = 42: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=43:
+if lektion = 43: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=44:
+if lektion = 44: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=45:
+if lektion = 45: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=46:
+if lektion = 46: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=47:
+if lektion = 47: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=48:
+if lektion = 48: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=49:
+if lektion = 49: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
-if lektion=50:
+if lektion = 50: 
 '(Учитель) - Сегодня мы продолжим изучение заклинания клонирования. Те кто уже знает это заклинание все равно записывайте. Может чему-нибудь научитесь.'
-     if spKlon=100:spKlonExp=spKlonExp+5
-     if spKlon<100:spKlon=spKlon+5
-     if spKlon>100:spKlon=100
+     if spKlon = 100: spKlonExp = spKlonExp+5
+     if spKlon<100: spKlon = spKlon+5
+     if spKlon>100: spKlon = 100
 'Вы знаете клонирование на <<spKlon>>%'
 end
 

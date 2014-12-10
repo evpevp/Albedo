@@ -1,72 +1,72 @@
 # RACE
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
-set minut = minut + 1
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+ minut = minut + 1
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if car = 1:set $showcar='<center><img src="pic\picar\salon.jpg" ></center>'
-if car = 2:set $showcar='<center><img src="pic\picar\salon2.jpg" ></center>'
-if car = 3:set $showcar='<center><img src="pic\picar\salon3.jpg" ></center>'
-if car = 4:set $showcar='<center><img src="pic\picar\salon4.jpg" ></center>'
-if car = 5:set $showcar='<center><img src="pic\picar\salon5.jpg" ></center>'
-if car = 6:set $showcar='<center><img src="pic\picar\salon6.jpg" ></center>'
-if car = 7:set $showcar='<center><img src="pic\picar\salon7.jpg" ></center>'
-if car = 8:set $showcar='<center><img src="pic\picar\salon8.jpg" ></center>'
-if car = 9:set $showcar='<center><img src="pic\picar\salon9.jpg" ></center>'
-if car = 10:set $showcar='<center><img src="pic\picar\salon10.jpg" ></center>'
-if car = 11:set $showcar='<center><img src="pic\picar\salon11.jpg" ></center>'
-if car = 12:set $showcar='<center><img src="pic\picar\salon12.jpg" ></center>'
-if car = 13:set $showcar='<center><img src="pic\picar\salon13.jpg" ></center>'
-if car = 14:set $showcar='<center><img src="pic\picar\salon14.jpg" ></center>'
-if car = 15:set $showcar='<center><img src="pic\picar\salon15.jpg" ></center>'
-if car = 16:set $showcar='<center><img src="pic\picar\salon16.jpg" ></center>'
-if car = 17:set $showcar='<center><img src="pic\picar\salon17.jpg" ></center>'
-if car = 18:set $showcar='<center><img src="pic\picar\salon18.jpg" ></center>'
-if car = 19:set $showcar='<center><img src="pic\picar\salon19.jpg" ></center>'
-if car = 20:set $showcar='<center><img src="pic\picar\salon20.jpg" ></center>'
-if car = 21:set $showcar='<center><img src="pic\picar\salon21.jpg" ></center>'
-if car = 22:set $showcar='<center><img src="pic\picar\salon22.jpg" ></center>'
-if car = 23:set $showcar='<center><img src="pic\picar\salon23.jpg" ></center>'
-if car = 24:set $showcar='<center><img src="pic\picar\salon24.jpg" ></center>'
-if car = 25:set $showcar='<center><img src="pic\picar\salon25.jpg" ></center>'
-if car = 26:set $showcar='<center><img src="pic\picar\salon26.jpg" ></center>'
-if car = 27:set $showcar='<center><img src="pic\picar\salon27.jpg" ></center>'
-if car = 28:set $showcar='<center><img src="pic\picar\salon28.jpg" ></center>'
-if car = 29:set $showcar='<center><img src="pic\picar\salon29.jpg" ></center>'
-if car = 30:set $showcar='<center><img src="pic\picar\salon30.jpg" ></center>'
-if car = 95:set $showcar='<center><img src="pic\picar\salon95.jpg" ></center>'
-if car = 96:set $showcar='<center><img src="pic\picar\salon96.jpg" ></center>'
-if car = 97:set $showcar='<center><img src="pic\picar\salon97.jpg" ></center>'
-if car = 98:set $showcar='<center><img src="pic\picar\salon98.jpg" ></center>'
-if car = 99:set $showcar='<center><img src="pic\picar\salon99.jpg" ></center>'
-if car = 100:set $showcar='<center><img src="pic\picar\salon100.jpg" ></center>'
+if car = 1: $showcar = '<center><img src = "pic\picar\salon.jpg" ></center>'
+if car = 2: $showcar = '<center><img src = "pic\picar\salon2.jpg" ></center>'
+if car = 3: $showcar = '<center><img src = "pic\picar\salon3.jpg" ></center>'
+if car = 4: $showcar = '<center><img src = "pic\picar\salon4.jpg" ></center>'
+if car = 5: $showcar = '<center><img src = "pic\picar\salon5.jpg" ></center>'
+if car = 6: $showcar = '<center><img src = "pic\picar\salon6.jpg" ></center>'
+if car = 7: $showcar = '<center><img src = "pic\picar\salon7.jpg" ></center>'
+if car = 8: $showcar = '<center><img src = "pic\picar\salon8.jpg" ></center>'
+if car = 9: $showcar = '<center><img src = "pic\picar\salon9.jpg" ></center>'
+if car = 10: $showcar = '<center><img src = "pic\picar\salon10.jpg" ></center>'
+if car = 11: $showcar = '<center><img src = "pic\picar\salon11.jpg" ></center>'
+if car = 12: $showcar = '<center><img src = "pic\picar\salon12.jpg" ></center>'
+if car = 13: $showcar = '<center><img src = "pic\picar\salon13.jpg" ></center>'
+if car = 14: $showcar = '<center><img src = "pic\picar\salon14.jpg" ></center>'
+if car = 15: $showcar = '<center><img src = "pic\picar\salon15.jpg" ></center>'
+if car = 16: $showcar = '<center><img src = "pic\picar\salon16.jpg" ></center>'
+if car = 17: $showcar = '<center><img src = "pic\picar\salon17.jpg" ></center>'
+if car = 18: $showcar = '<center><img src = "pic\picar\salon18.jpg" ></center>'
+if car = 19: $showcar = '<center><img src = "pic\picar\salon19.jpg" ></center>'
+if car = 20: $showcar = '<center><img src = "pic\picar\salon20.jpg" ></center>'
+if car = 21: $showcar = '<center><img src = "pic\picar\salon21.jpg" ></center>'
+if car = 22: $showcar = '<center><img src = "pic\picar\salon22.jpg" ></center>'
+if car = 23: $showcar = '<center><img src = "pic\picar\salon23.jpg" ></center>'
+if car = 24: $showcar = '<center><img src = "pic\picar\salon24.jpg" ></center>'
+if car = 25: $showcar = '<center><img src = "pic\picar\salon25.jpg" ></center>'
+if car = 26: $showcar = '<center><img src = "pic\picar\salon26.jpg" ></center>'
+if car = 27: $showcar = '<center><img src = "pic\picar\salon27.jpg" ></center>'
+if car = 28: $showcar = '<center><img src = "pic\picar\salon28.jpg" ></center>'
+if car = 29: $showcar = '<center><img src = "pic\picar\salon29.jpg" ></center>'
+if car = 30: $showcar = '<center><img src = "pic\picar\salon30.jpg" ></center>'
+if car = 95: $showcar = '<center><img src = "pic\picar\salon95.jpg" ></center>'
+if car = 96: $showcar = '<center><img src = "pic\picar\salon96.jpg" ></center>'
+if car = 97: $showcar = '<center><img src = "pic\picar\salon97.jpg" ></center>'
+if car = 98: $showcar = '<center><img src = "pic\picar\salon98.jpg" ></center>'
+if car = 99: $showcar = '<center><img src = "pic\picar\salon99.jpg" ></center>'
+if car = 100: $showcar = '<center><img src = "pic\picar\salon100.jpg" ></center>'
 
 cla
 'Конечно, гонки должны проходить ночью.. но мне лень ждать )'
-act 'СТАРТ':
+act 'СТАРТ': 
 cls
-bcolor=rgb(255,0,0)
+bcolor = rgb(255,0,0)
 WAIT 1500
-bcolor=rgb(255,255,0)
+bcolor = rgb(255,255,0)
 WAIT 1500
-bcolor=rgb(0,255,0)
-!bcolor=rgb(255,255,255)
+bcolor = rgb(0,255,0)
+!bcolor = rgb(255,255,255)
 
 !назначаем активную трассу
-set $race=$race1 
+ $race = $race1 
 !скорость обновления в мс - сложность
 SETTIMER 750
 !запускаем гонку в count 
-race_start=1
+race_start = 1
 !инициализация счетчиков
-race_count=0
-set race_hit=1
-race_row=0
-set race_miss=0
+race_count = 0
+ race_hit = 1
+race_row = 0
+ race_miss = 0
 end 
 
 

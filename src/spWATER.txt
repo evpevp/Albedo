@@ -1,118 +1,118 @@
 # spWATER
 dynamic $battlemain
 clr
-gs'stat'
+gs 'stat'
 
-if round>=2: 
-	 if spWaterStr>=100 and manna>=50:
-		 act 'Струя воды 50 маны':
+if round>= 2: 
+	 if spWaterStr>= 100 and manna>= 50: 
+		 act 'Струя воды 50 маны': 
 		 cla
-		 spWaterStrExp=spWaterStrExp+1
-		 manna=manna-50
-		 '<font color=green>Вы собрали энергию в руку и преобразовали ее в струю воды ударившую противника</font>'
-		 waterdam=RAND(100,200)
-         damage=RAND(800,1000+spWaterStrExp)
-		 gs'defenceV'
-		 xgt'fight','1'
+		 spWaterStrExp = spWaterStrExp+1
+		 manna = manna-50
+		 '<font color = green>Вы собрали энергию в руку и преобразовали ее в струю воды ударившую противника</font>'
+		 waterdam = RAND(100,200)
+         damage = RAND(800,1000+spWaterStrExp)
+		 gs 'defenceV'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=3: 
-	 if spWaterMultiStr>=100 and manna>=100:
-		 act 'Распыление 100 маны':
+if round>= 3: 
+	 if spWaterMultiStr>= 100 and manna>= 100: 
+		 act 'Распыление 100 маны': 
 		 cla
-		 spWaterMultiStrExp=spWaterMultiStrExp+1
-		 manna=manna-100
-		 '<font color=green>Вы собрали энергию в руку и преобразовали ее в воду распыляя ее в воздухе</font>'
-		 waterdam=RAND(50,70)
-		 damage=RAND(200,300+spWaterMultiStrExp)
-		 gs'defenceV'
-		 waterdam=RAND(50,70)
-		 damage=RAND(200,300+spWaterMultiStrExp)
-		 gs'defenceV'
-		 waterdam=RAND(50,70)
-		 damage=RAND(200,300+spWaterMultiStrExp)
-		 gs'defenceV'
-		 waterdam=RAND(50,70)
-		 damage=RAND(200,300+spWaterMultiStrExp)
-		 gs'defenceV'
-		 waterdam=RAND(50,70)
-		 damage=RAND(200,300+spWaterMultiStrExp)
-		 gs'defenceV'
-		 waterdam=RAND(50,70)
-		 damage=RAND(200,300+spWaterMultiStrExp)
-		 gs'defenceV'
-		 xgt'fight','1'
+		 spWaterMultiStrExp = spWaterMultiStrExp+1
+		 manna = manna-100
+		 '<font color = green>Вы собрали энергию в руку и преобразовали ее в воду распыляя ее в воздухе</font>'
+		 waterdam = RAND(50,70)
+		 damage = RAND(200,300+spWaterMultiStrExp)
+		 gs 'defenceV'
+		 waterdam = RAND(50,70)
+		 damage = RAND(200,300+spWaterMultiStrExp)
+		 gs 'defenceV'
+		 waterdam = RAND(50,70)
+		 damage = RAND(200,300+spWaterMultiStrExp)
+		 gs 'defenceV'
+		 waterdam = RAND(50,70)
+		 damage = RAND(200,300+spWaterMultiStrExp)
+		 gs 'defenceV'
+		 waterdam = RAND(50,70)
+		 damage = RAND(200,300+spWaterMultiStrExp)
+		 gs 'defenceV'
+		 waterdam = RAND(50,70)
+		 damage = RAND(200,300+spWaterMultiStrExp)
+		 gs 'defenceV'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=4: 
-	 if spWaterShild>=100 and manna>=150:
-		 act 'Водный щит 150 маны':
+if round>= 4: 
+	 if spWaterShild>= 100 and manna>= 150: 
+		 act 'Водный щит 150 маны': 
 		 cla
-		 spWaterShildExp=spWaterShildExp+1
-		 manna=manna-150
-		 '<font color=green>Вы собрали энергию в руку и закрыли себя щитом из воды</font>'
-		 defence=defence+5500
-		 defenceT+=5500
-		 waterDef=6
-		 xgt'fight','1'
+		 spWaterShildExp = spWaterShildExp+1
+		 manna = manna-150
+		 '<font color = green>Вы собрали энергию в руку и закрыли себя щитом из воды</font>'
+		 defence = defence+5500
+		 defenceT+= 5500
+		 waterDef = 6
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=5: 
-	 if manna>=1000 and spPotop=>100 and potop<=0 and cooldownSpell<=0:
-	 	 act 'Потоп 1000 маны':
+if round>= 5: 
+	 if manna>= 1000 and spPotop >=100 and potop<= 0 and cooldownSpell<= 0: 
+	 	 act 'Потоп 1000 маны': 
 		 cla
-		 '<font color=green>Вы собрали энергию в руку и стали создавая воду затапливать округу</font>'
-		 defence=3500
-		 defenceT=2500
-		 defenceW=2500
-		 waterDef=12
-		 manna=manna-1000
-		 damageM=RAND(300,500)
-		 gs'defenceMV'
-		 potop=10
-		 cooldownSpell=12
-		 waterdam=waterdam+RAND(500,1000)
-		 damage=damage+RAND(500,1000)
-		 gs'defenceV'
-		 xgt'fight','1'
+		 '<font color = green>Вы собрали энергию в руку и стали создавая воду затапливать округу</font>'
+		 defence = 3500
+		 defenceT = 2500
+		 defenceW = 2500
+		 waterDef = 12
+		 manna = manna-1000
+		 damageM = RAND(300,500)
+		 gs 'defenceMV'
+		 potop = 10
+		 cooldownSpell = 12
+		 waterdam = waterdam+RAND(500,1000)
+		 damage = damage+RAND(500,1000)
+		 gs 'defenceV'
+		 xgt 'fight','1'
 		 exit
 		 end
      end
      
-     if potop>0:
-         if manna>=500 and spPotopManna=>100:
-			 act 'Маннакрашер 500 маны':
+     if potop>0: 
+         if manna>= 500 and spPotopManna >=100: 
+			 act 'Маннакрашер 500 маны': 
 			 cla
-			 '<font color=green>Вы собрали энергию и созданная вами вода начала разрушать энергию противника и восстанавливать ваши щиты</font>'
-			 defence=3500
-			 defenceT=2500
-			 defenceW=2500
-			 waterDef=12
-			 manna=manna-500
-			 damageM=RAND(300,500)
-			 gs'defenceMV'
-			 xgt'fight','1'
+			 '<font color = green>Вы собрали энергию и созданная вами вода начала разрушать энергию противника и восстанавливать ваши щиты</font>'
+			 defence = 3500
+			 defenceT = 2500
+			 defenceW = 2500
+			 waterDef = 12
+			 manna = manna-500
+			 damageM = RAND(300,500)
+			 gs 'defenceMV'
+			 xgt 'fight','1'
 			 exit
 			 end
 		 end
 		 
-		 if manna>=500 and spPotopShark=>100:
-			 act 'Водяная акула 500 маны':
+		 if manna>= 500 and spPotopShark >=100: 
+			 act 'Водяная акула 500 маны': 
 			 cla
-			 '<font color=green>Вы собрали энергию и создали акулу которая ракетой устремилась к противнику</font>'
-			 manna=manna-500
-			 damageM=RAND(500,800)
-			 waterdam=waterdam+RAND(500,1000)
-			 damage=damage+RAND(2000,3000)
-			 gs'defenceV'
-			 gs'defenceMV'
-			 xgt'fight','1'
+			 '<font color = green>Вы собрали энергию и создали акулу которая ракетой устремилась к противнику</font>'
+			 manna = manna-500
+			 damageM = RAND(500,800)
+			 waterdam = waterdam+RAND(500,1000)
+			 damage = damage+RAND(2000,3000)
+			 gs 'defenceV'
+			 gs 'defenceMV'
+			 xgt 'fight','1'
 			 exit
 			 end
 		 end
@@ -122,6 +122,6 @@ end
 
 
 
-     act 'Пропустить ход':xgt'fight','1'
+     act 'Пропустить ход': xgt 'fight','1'
 --- spWATER ---------------------------------
 

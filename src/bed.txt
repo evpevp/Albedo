@@ -1,31 +1,31 @@
 # bed
 clr
-gs'stat'
+gs 'stat'
 $metkaK = $ARGS[0]
 $locK = $CURLOC
 $metka = $ARGS[0]
 $loc = $CURLOC
-if pol > 0:'<center><img src="pic\pics\bed.jpg" ></center>'
-!if slot3 = 0 and pol > 0:'<center><img src="pic\pics\son.jpg" ></center>'
+if pol > 0: '<center><img src = "pic\pics\bed.jpg" ></center>'
+!if slot3 = 0 and pol > 0: '<center><img src = "pic\pics\son.jpg" ></center>'
 'Вы лежите на кровати. Будильник заведен на <<timer>> часов, <<timerM>> минут.'
-if mop ! 0:'<B><font color=red>Вам нужно смыть косметику прежде чем лечь спать.</font></B>'
+if mop ! 0: '<B><font color = red>Вам нужно смыть косметику прежде чем лечь спать.</font></B>'
 
-     if son >= 10:
+     if son >= 10: 
      'Спать почему-то не хочется.'
-         act 'Попробовать уснуть':
-         son=0
-         gt'bed2'
+         act 'Попробовать уснуть': 
+         son = 0
+         gt 'bed2'
          end
      end
      
-     if srok = 0 and SCslave=0:act 'Завести будильник':gt'budilnik','start'
+     if srok = 0 and SCslave = 0: act 'Завести будильник': gt 'budilnik','start'
      
-     if son < 10:
-		 act 'Раздеться и лечь спать':gt'bed2'
+     if son < 10: 
+		 act 'Раздеться и лечь спать': gt 'bed2'
      end
      
      
      
-     act 'Встать с кровати':GOTO $locBed, $metkaBed
+     act 'Встать с кровати': GOTO $locBed, $metkaBed
 --- bed ---------------------------------
 

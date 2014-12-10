@@ -8,44 +8,44 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 mag = 1
 '<center><H4>Душевые кабинки</H4></center>'
-'<center><img src="pic/Evedon/shower.jpg" ></center>'
+'<center><img src = "pic/Evedon/shower.jpg" ></center>'
 'Отдельное помещение, покрытое плиткой, в котором находятся четыре душевых кабинки.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 
-act 'Помыться в душе':
+act 'Помыться в душе': 
 cla
 *clr
-minut=minut+15
-sweat=-5
+minut += 15
+sweat = -5
 clr
-gs'stat'
+gs 'stat'
 'Вы разделись и вошли в кабинку где стали мыться под теплыми струями воды.'
-gs'bassW'
-     if penis>0:
+gs 'bassW'
+     if penis>0: 
      'Вы тщательно вымыли свое тело и вышли из душевой.'
-     act 'Уйти из душевой':gt'tasportW'
+     act 'Уйти из душевой': gt 'tasportW'
      end
-     if penis<=0:
-     shorand=RAND(0,100)
-         if shorand<80:
+     if penis<= 0: 
+     shorand = RAND(0,100)
+         if shorand<80: 
          'Вы тщательно вымыли свое тело и вышли из душевой.'
-         act 'Уйти из душевой':gt'tasportW'
+         act 'Уйти из душевой': gt 'tasportW'
          end
-         if shorand>=80:
+         if shorand>= 80: 
          !эвенты
-             if inurishower=0 or hekelQW=0:xgt'showerevent','start'
-             if inurishower>0 and hekelQW>0:
-             evrand=RAND(0,1)
-                 if evrand=0:xgt'showerevent','start'
-                 if evrand=1:xgt'showerevent','start2'
+             if inurishower = 0 or hekelQW = 0: xgt 'showerevent','start'
+             if inurishower>0 and hekelQW>0: 
+             evrand = RAND(0,1)
+                 if evrand = 0: xgt 'showerevent','start'
+                 if evrand = 1: xgt 'showerevent','start2'
              end
          end
      end

@@ -1,13 +1,13 @@
 # efhorn
 clr
-gs'stat'
-efhorn=efhorn-1
-horny=0
-if INFIGHT=1:
+gs 'stat'
+efhorn = efhorn-1
+horny = 0
+if INFIGHT = 1: 
 DELOBJ 'Инвентарь'
-'<center><img src="pic/EvedonOd\potion6.jpg"></center>'
+'<center><img src = "pic/EvedonOd\potion6.jpg"></center>'
 end
 clr
-gs'stat'
+gs 'stat'
 --- efhorn ---------------------------------
 

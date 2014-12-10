@@ -10,91 +10,91 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 mag = 1
 
-if posadMark=1:$posadmark='Вы только сегодня посадили семена и они конечно же еще не проросли.'
-if posadMark=2:$posadmark='Вы только вчера посадили семена и они конечно же еще не проросли.'
-if posadMark=3:$posadmark='Из земли торчат маленькие побеги.'
-if posadMark=4:$posadmark='Из земли пробиваются побеги с первыми листочками.'
-if posadMark=5:$posadmark='В поле растут маленькие растеньица с нежными молодыми листочками.'
-if posadMark=6:$posadmark='В поле растут растения, которые пока не плодоносят.'
-if posadMark=7:$posadmark='В поле растут растения, на которых видны не раскрытые бутончики.'
-if posadMark=8:$posadmark='В поле растут растения, на которых видны распустившиеся цветочки.'
-if posadMark=9:$posadmark='В поле растут растения, на которых начали вызревать плоды.'
-if posadMark=10:$posadmark='В поле растут растения, на которых висят еще не зрелые плоды.'
-if posadMark=11:$posadmark='В поле растут растения, на которых висят зрелые плоды с которых можно собирать урожай.'
-if posadMark=12:$posadmark='В поле растут растения, на которых висят плоды начинающие перезревать.'
-if posadMark=13:$posadmark='В поле растут растения, на которых висят плоды начавшие гнить.'
-if posadMark>=14:$posadmark='В поле торчат как палки сухие остовы растений.'
+if posadMark = 1: $posadmark = 'Вы только сегодня посадили семена и они конечно же еще не проросли.'
+if posadMark = 2: $posadmark = 'Вы только вчера посадили семена и они конечно же еще не проросли.'
+if posadMark = 3: $posadmark = 'Из земли торчат маленькие побеги.'
+if posadMark = 4: $posadmark = 'Из земли пробиваются побеги с первыми листочками.'
+if posadMark = 5: $posadmark = 'В поле растут маленькие растеньица с нежными молодыми листочками.'
+if posadMark = 6: $posadmark = 'В поле растут растения, которые пока не плодоносят.'
+if posadMark = 7: $posadmark = 'В поле растут растения, на которых видны не раскрытые бутончики.'
+if posadMark = 8: $posadmark = 'В поле растут растения, на которых видны распустившиеся цветочки.'
+if posadMark = 9: $posadmark = 'В поле растут растения, на которых начали вызревать плоды.'
+if posadMark = 10: $posadmark = 'В поле растут растения, на которых висят еще не зрелые плоды.'
+if posadMark = 11: $posadmark = 'В поле растут растения, на которых висят зрелые плоды с которых можно собирать урожай.'
+if posadMark = 12: $posadmark = 'В поле растут растения, на которых висят плоды начинающие перезревать.'
+if posadMark = 13: $posadmark = 'В поле растут растения, на которых висят плоды начавшие гнить.'
+if posadMark>= 14: $posadmark = 'В поле торчат как палки сухие остовы растений.'
 
 
 
 '<center><H4>Ферма <<$farmname>></H4></center>'
 '<center>Поле</center>'
-'<center><img src="pic/Evedon\farmMYpole.jpg" ></center>'
+'<center><img src = "pic/Evedon\farmMYpole.jpg" ></center>'
 'Большое поле принадлежащее вам.'
-if rassada>0 and posad<100:'У вас есть рассада, которой хватит на то чтобы засеять поле <<rassada>> раз.'
-if posad>0 and posad<100:'Поле засажено на <<posad>>%'
-if posad>=100:'<<$posadmark>>.'
+if rassada>0 and posad<100: 'У вас есть рассада, которой хватит на то чтобы засеять поле <<rassada>> раз.'
+if posad>0 and posad<100: 'Поле засажено на <<posad>>%'
+if posad>= 100: '<<$posadmark>>.'
 clr
-gs'stat'
-!fcolor=rgb(0,0,0)
-!bcolor=rgb(255,255,255)
+gs 'stat'
+!fcolor = rgb(0,0,0)
+!bcolor = rgb(255,255,255)
 !LCOLOR = rgb(106,90,205)
-gs'time'
+gs 'time'
 
 
-act 'Уйти':
-minut=minut+5
-gt'farmMY'
+act 'Уйти': 
+minut += 5
+ gt 'farmMY'
 end
 
-if posadMark>=2 and posadMark<11:
+if posadMark>= 2 and posadMark<11: 
 !полоть, поливать, собирать жуков
-     if farmstam>1:
-         if polkaday!day:
-			 act 'Полоть самостоятельно 2 час.':
+     if farmstam>1: 
+         if polkaday!day: 
+			 act 'Полоть самостоятельно 2 час.': 
 			 cla
 			 *clr
-			 exp+=RAND(lvl/4,lvl/2)
-			 farmstam-=2
-			 minut=minut+120
-			 polkaday=day
-			 polka+=1
-			 sweat+=1
-			 vital+=RAND(0,1)
+			 exp+= RAND(lvl/4,lvl/2)
+			 farmstam- = 2
+			 minut += 120
+			 polkaday = day
+			 polka+= 1
+			 sweat+= 1
+			 vital+= RAND(0,1)
 			 'Вы два часа стояли в наклонку, пропалывая грядки и уничтожая сорняки.'
-			 act 'Передохнуть':gt $CURLOC
+			 act 'Передохнуть': gt $CURLOC
 			 end
 		 end
 		 
-		 if polivkaday!day:
-			 act 'Поливать самостоятельно 2 час.':
+		 if polivkaday!day: 
+			 act 'Поливать самостоятельно 2 час.': 
 			 cla
 			 *clr
-			 exp+=RAND(lvl/4,lvl/2)
-			 farmstam-=2
-			 minut=minut+120
-			 polivkaday=day
-			 polivka+=1
-			 sweat+=1
-			 vital+=RAND(0,1)
+			 exp+= RAND(lvl/4,lvl/2)
+			 farmstam- = 2
+			 minut += 120
+			 polivkaday = day
+			 polivka+= 1
+			 sweat+= 1
+			 vital+= RAND(0,1)
 			 'Вы два часа ходили по грядкам и поливали.'
-			 act 'Передохнуть':gt $CURLOC
+			 act 'Передохнуть': gt $CURLOC
 			 end
 		 end
 		 
-		 if koroedday!day:
-			 act 'Собирать жуков самостоятельно 2 час.':
+		 if koroedday!day: 
+			 act 'Собирать жуков самостоятельно 2 час.': 
 			 cla
 			 *clr
-			 exp+=RAND(lvl/4,lvl/2)
-			 farmstam-=2
-			 minut=minut+120
-			 koroedday=day
-			 koroed+=1
-			 sweat+=1
-			 vital+=RAND(0,1)
+			 exp+= RAND(lvl/4,lvl/2)
+			 farmstam- = 2
+			 minut += 120
+			 koroedday = day
+			 koroed+= 1
+			 sweat+= 1
+			 vital+= RAND(0,1)
 			 'Вы два часа ходили собирали жуков которые грызут растения.'
-			 act 'Передохнуть':gt $CURLOC
+			 act 'Передохнуть': gt $CURLOC
 			 end
 		 end
 		 
@@ -103,26 +103,26 @@ if posadMark>=2 and posadMark<11:
 	 end
 end
 
-if posadMark>=11 and posadMark<13:
+if posadMark>= 11 and posadMark<13: 
 !собирать урожай
-     if farmstam>0:
-		 act 'Собирать урожай самостоятельно 2 час.':
+     if farmstam>0: 
+		 act 'Собирать урожай самостоятельно 2 час.': 
 		 cla
 		 *clr
-		 exp+=RAND(lvl/4,lvl/2)
-		 farmstam-=1
-		 minut=minut+120
-         posadMark=0
-         posad=0
-         urosob=RAND(5,10)+polka+polivka+koroed
-         uroz+=urosob
-         polka=0
-         polivka=0
-         koroed=0
-         sweat+=1
-         vital+=RAND(0,1)
+		 exp+= RAND(lvl/4,lvl/2)
+		 farmstam- = 1
+		 minut += 120
+         posadMark = 0
+         posad = 0
+         urosob = RAND(5,10)+polka+polivka+koroed
+         uroz+= urosob
+         polka = 0
+         polivka = 0
+         koroed = 0
+         sweat+= 1
+         vital+= RAND(0,1)
 		 'Вы два часа ходили по грядкам, собирая урожай. Вы собрали <<urosob>> мешков урожая.'
-		 act 'Передохнуть':gt $CURLOC
+		 act 'Передохнуть': gt $CURLOC
 		 end
 		 
 		 
@@ -131,21 +131,21 @@ if posadMark>=11 and posadMark<13:
 	 end
 end
 
-if posadMark>=13:
+if posadMark>= 13: 
 !убрать мертвые растения
-     if farmstam>0:
-		 act 'Убрать мертвые растения 1 час.':
+     if farmstam>0: 
+		 act 'Убрать мертвые растения 1 час.': 
 		 cla
 		 *clr
-		 exp+=RAND(lvl/4,lvl/2)
-		 farmstam-=1
-		 minut=minut+60
-         posadMark=0
-         posad=0
-         sweat+=1
-         vital+=RAND(0,1)
+		 exp+= RAND(lvl/4,lvl/2)
+		 farmstam- = 1
+		 minut += 60
+         posadMark = 0
+         posad = 0
+         sweat+= 1
+         vital+= RAND(0,1)
 		 'Вы целый час ходили по грядкам и выдирали мертвые растенья.'
-		 act 'Передохнуть':gt $CURLOC
+		 act 'Передохнуть': gt $CURLOC
 		 end
 		 
 		 
@@ -154,35 +154,35 @@ if posadMark>=13:
 	 end
 end
 
-if rassada>0 and posad<100:
-     if farmstam>0:
-		 act 'Запрячься в плуг и пахать на себе 1 час.':
+if rassada>0 and posad<100: 
+     if farmstam>0: 
+		 act 'Запрячься в плуг и пахать на себе 1 час.': 
 		 cla
 		 *clr
-		 exp+=RAND(lvl/4,lvl/2)
-		 farmstam-=1
-		 minut=minut+60
-		 posad+=RAND(5,10)
-		 sweat+=1
-		 vital+=RAND(0,1)
-		 if posad>=100:posad=100&rassada-=1&posadMark=1
+		 exp+= RAND(lvl/4,lvl/2)
+		 farmstam- = 1
+		 minut += 60
+		 posad+= RAND(5,10)
+		 sweat+= 1
+		 vital+= RAND(0,1)
+		 if posad>= 100: posad = 100 & rassada- = 1 & posadMark = 1
 		 'Вы целый час тащили на своем горбу плуг и рыхлили землю под посадку, теперь поле засажено на <<posad>>%'
-		 act 'Передохнуть':gt $CURLOC
+		 act 'Передохнуть': gt $CURLOC
 		 end
 		 
-		 if oslik>0 and oslikormday+5>daystart:
-		 	 act 'Пахать на ослике 1 час.':
+		 if oslik>0 and oslikormday+5>daystart: 
+		 	 act 'Пахать на ослике 1 час.': 
 			 cla
 			 *clr
-			 exp+=RAND(lvl/4,lvl/2)
-			 farmstam-=1
-			 minut=minut+60
-			 posad+=RAND(15,25)
-			 sweat+=1
-			 vital+=RAND(0,1)
-			 if posad>=100:posad=100&rassada-=1&posadMark=1
+			 exp+= RAND(lvl/4,lvl/2)
+			 farmstam- = 1
+			 minut += 60
+			 posad+= RAND(15,25)
+			 sweat+= 1
+			 vital+= RAND(0,1)
+			 if posad>= 100: posad = 100 & rassada- = 1 & posadMark = 1
 			 'Вы целый час шли, удерживая плуг за осликом и погоняли его, чтобы он не останавливаясь шел через огород перепахивая его, теперь поле засажено на <<posad>>%'
-			 act 'Передохнуть':gt $CURLOC
+			 act 'Передохнуть': gt $CURLOC
 			 end
 		 end
 		 

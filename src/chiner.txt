@@ -1,9 +1,9 @@
 # chiner
-if chin < chinMAX:
-set chin = chin + 1
+if chin < chinMAX: 
+ chin = chin + 1
 end
-if chinV < chinMAXV:
-set chinV = chinV + 1
+if chinV < chinMAXV: 
+ chinV = chinV + 1
 end
 --- chiner ---------------------------------
 

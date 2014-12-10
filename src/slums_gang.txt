@@ -1,21 +1,21 @@
 # slums_gang
-picrand=RAND(0,3)
-						if picrand=0:'<center><img src="pic/slums_corner/after_train.jpg" ></center>'
-						if picrand=1:'<center><img src="pic/slums_corner/after_train1.jpg" ></center>'
-						if picrand=2:'<center><img src="pic/slums_corner/after_train2.jpg" ></center>'
+picrand = RAND(0,3)
+						if picrand = 0: '<center><img src = "pic/slums_corner/after_train.jpg" ></center>'
+						if picrand = 1: '<center><img src = "pic/slums_corner/after_train1.jpg" ></center>'
+						if picrand = 2: '<center><img src = "pic/slums_corner/after_train2.jpg" ></center>'
 'Удивительно, но вы выдержали тяжелую тренировку. У вас почти не осталось сил. От сильных ударов одежда местами разорвалась, оголив нежные плечики. Юбка пошла по шву и стало видно ваши крохотные белые трусики.' 
 'От пойла, что вам  дал старик, вы сильно опьянели. И в голову стали лезть самые безумные мысли. Вы полуголая, беззащитная, юная девушка в грязной подворотне, где полно бродяг, нищих и, возможно, ужасных монстров. От этих мыслей вы сильно возбуждаетесь. И приходите к мысли, что пора уносить отсюда ноги.'
 'Но вдруг, вы слышите шорох и становится по-настоящему страшно!'
 
-if drunkMasterStyle=10:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 10: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	horny=0
-	SUB=SUB+1
-	minut=minut+120
-	guy=guy+1
-	'<center><img src="pic/slums_corner/lucky_bum1.jpg" ></center>'
+	horny = 0
+	SUB = SUB+1
+	minut += 120
+	guy = guy+1
+	'<center><img src = "pic/slums_corner/lucky_bum1.jpg" ></center>'
 	'На ваше изможденное, но такое прекрасное тело наткнулся, старый бездомный неудачник. Сначала он испугался вас, но потом прищурился и разглядел, что перед ним прекрасная юная особа. От радости у него чуть челюсти не выпали!'
 	'- Мне хочется поласкать тебя!
 У Вас в трусиках стало влажно. Через маечку выделялись вперед пухленькие грудки. Закрыв от наслаждения глаза, старик стал гладить их и сжимать. Было очень приятно. Наклонившись, он лизнул правый сосок, поласкал его языком и мягко охватив губами, начал посасывать. Вы вздохнули и чуть застонали. Бродяга безнаказанно сосал Ваши сисечки, мял их, гладил и снова сосал, пока у Вас не начала кружиться голова.
@@ -28,173 +28,173 @@ if drunkMasterStyle=10:
 
 	
 
-		chanrand=RAND(0,7)
-			if chanrand = 0:
-			leg=leg+RAND(1,5)
+		chanrand = RAND(0,7)
+			if chanrand = 0: 
+			leg = leg+RAND(1,5)
 			end
-			if chanrand = 1:
-			thight=thight+RAND(1,5)
+			if chanrand = 1: 
+			thight = thight+RAND(1,5)
 			end
-			if chanrand = 2:
-			ass=ass+RAND(1,5)
+			if chanrand = 2: 
+			ass = ass+RAND(1,5)
 			end
-			if chanrand = 3:
-			brist=brist+RAND(1,5)
+			if chanrand = 3: 
+			brist = brist+RAND(1,5)
 			end
-			if chanrand = 4:
-			hand=hand+RAND(1,5)
+			if chanrand = 4: 
+			hand = hand+RAND(1,5)
 			end
-			if chanrand = 5:
-			face=face+RAND(1,5)
+			if chanrand = 5: 
+			face = face+RAND(1,5)
 			end
-			if chanrand = 6:
-			tit=tit+RAND(1,5)
+			if chanrand = 6: 
+			tit = tit+RAND(1,5)
 			end
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=20:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 20: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	'<center><img src="pic/slums_corner/dog_attack_2.jpg" ></center>'
+	'<center><img src = "pic/slums_corner/dog_attack_2.jpg" ></center>'
 	'На вас набросилась свора бродячих псов. Они начинают рвать на вас одежду, громко лаять и страшно рычать. "Всё, это конец!" проноситься у вас в голове.'
 	'Но в последний момент нападение на вас замечает местный парнишка! Он храбро бросается на собак с палкой и разгоняет их!'
 	'Когда вы приходите в себя, парня уже и след простыл. "Жаль, даже отблагодарить не успела!"'
 	
-act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=30:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 30: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	horny=0
-	gem=gem+1000
-	minut=minut+120
-	guy=guy+1
-	if vagina>0:vag=vag+1&sex=sex+1&cumpussy=cumpussy+1
-	'<center><img src="pic/slums_corner/drunk_men3.jpg" ></center>'
+	horny = 0
+	gem = gem+1000
+	minut += 120
+	guy = guy+1
+	if vagina>0: vag = vag+1 & sex = sex+1 & cumpussy = cumpussy+1
+	'<center><img src = "pic/slums_corner/drunk_men3.jpg" ></center>'
 	'На вас наткнулся пьяный мужчина в костюме, судя по всему возвращающийся из какого-то злачного кабака. Он поднял вас на ноги и нагнул, не церемонясь стал вас трахать.
 (Молоденькая красавица стояла опираясь руками об стену дома. Ее платье, было небрежно задрано, а колготки с трусиками порваны и их остатки, висели лохмотьями на ней. Топ был спущен, так что сиськи беспомощно болтались в воздухе в такт движениям. Жирный мужик имел её сзади, попеременно во все дырки.)
 Вас охватывает оргазм.
 - Спасибо, красавица!'
 'После того как, негодяй закончил, он засунул вам 1000 гем в руку и пошатываясь ушел.'
 
-		chanrand=RAND(0,7)
-			if chanrand = 0:
-			leg=leg+RAND(1,5)
+		chanrand = RAND(0,7)
+			if chanrand = 0: 
+			leg = leg+RAND(1,5)
 			end
-			if chanrand = 1:
-			thight=thight+RAND(1,5)
+			if chanrand = 1: 
+			thight = thight+RAND(1,5)
 			end
-			if chanrand = 2:
-			ass=ass+RAND(1,5)
+			if chanrand = 2: 
+			ass = ass+RAND(1,5)
 			end
-			if chanrand = 3:
-			brist=brist+RAND(1,5)
+			if chanrand = 3: 
+			brist = brist+RAND(1,5)
 			end
-			if chanrand = 4:
-			hand=hand+RAND(1,5)
+			if chanrand = 4: 
+			hand = hand+RAND(1,5)
 			end
-			if chanrand = 5:
-			face=face+RAND(1,5)
+			if chanrand = 5: 
+			face = face+RAND(1,5)
 			end
-			if chanrand = 6:
-			tit=tit+RAND(1,5)
+			if chanrand = 6: 
+			tit = tit+RAND(1,5)
 			end
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=40:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 40: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	!horny=0
-	'<center><img src="pic/slums_corner/bum_fight4.jpg" ></center>'
+	!horny = 0
+	'<center><img src = "pic/slums_corner/bum_fight4.jpg" ></center>'
 	'(Вроде бы все в порядке, вы успеваете отдохнуть и немного протрезветь без происшествий. И только вы отряхиваетесь и решаете уходить, как на вас нападает тот самый бомж, который, воспользовавшись вашей беспомощностью, лапал вас в первый день.)'
 	'- А моя красавица, ты пришла навестить старика! (С этими словами он, вот сука, успевает одной рукой схватить вас за грудь, а другой стянуть трусики. Чтож самое время испробовать новую технику!)'
 	'(с криком) - Cherry blossom impact! (Вы ударом сверхчеловеческой силы, закидываете извращенца в мусорный бак, как мяч в корзину!)'
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=50:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 50: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	minut=minut+120
-	'<center><img src="pic/slums_corner/happyboy_5.jpg" ></center>'
+	minut += 120
+	'<center><img src = "pic/slums_corner/happyboy_5.jpg" ></center>'
 	'Уф, это всего лишь тот парнишка, что спас вас от своры собак. Оборванец лезет к вам обниматься!'
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=60:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 60: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	minut=minut+120
-	'<center><img src="pic/slums_corner/slums_corner.jpg" ></center>'
+	minut += 120
+	'<center><img src = "pic/slums_corner/slums_corner.jpg" ></center>'
 	'К счастью, вам просто послышалось.'
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=70:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 70: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	horny=0
-	minut=minut+120
-	guy=guy+1
-	bj=bj+1
-	cumlip=cumlip+1
-	anal=anal+1
-	cumanus=cumanus+1
-	if vagina>0:vag=vag+1&sex=sex+1&cumpussy=cumpussy+1
-	'<center><img src="pic/slums_corner/rape_7.jpg" ></center>'
+	horny = 0
+	minut += 120
+	guy = guy+1
+	bj = bj+1
+	cumlip = cumlip+1
+	anal = anal+1
+	cumanus = cumanus+1
+	if vagina>0: vag = vag+1 & sex = sex+1 & cumpussy = cumpussy+1
+	'<center><img src = "pic/slums_corner/rape_7.jpg" ></center>'
 	'Насильник! Вас 2 часа насиловали во все щели в грязной подворотне.'
-		chanrand=RAND(0,7)
-			if chanrand = 0:
-			leg=leg+RAND(1,5)
+		chanrand = RAND(0,7)
+			if chanrand = 0: 
+			leg = leg+RAND(1,5)
 			end
-			if chanrand = 1:
-			thight=thight+RAND(1,5)
+			if chanrand = 1: 
+			thight = thight+RAND(1,5)
 			end
-			if chanrand = 2:
-			ass=ass+RAND(1,5)
+			if chanrand = 2: 
+			ass = ass+RAND(1,5)
 			end
-			if chanrand = 3:
-			brist=brist+RAND(1,5)
+			if chanrand = 3: 
+			brist = brist+RAND(1,5)
 			end
-			if chanrand = 4:
-			hand=hand+RAND(1,5)
+			if chanrand = 4: 
+			hand = hand+RAND(1,5)
 			end
-			if chanrand = 5:
-			face=face+RAND(1,5)
+			if chanrand = 5: 
+			face = face+RAND(1,5)
 			end
-			if chanrand = 6:
-			tit=tit+RAND(1,5)
+			if chanrand = 6: 
+			tit = tit+RAND(1,5)
 			end
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=80:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 80: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	horny=0
-	minut=minut+120
-	guy=guy+1
-	bj=bj+1
-	cumlip=cumlip+1
-	if vagina>0:vag=vag+1&sex=sex+1&cumpussy=cumpussy+1
-	'<center><img src="pic/slums_corner/gruz_6.jpg" ></center>'
+	horny = 0
+	minut += 120
+	guy = guy+1
+	bj = bj+1
+	cumlip = cumlip+1
+	if vagina>0: vag = vag+1 & sex = sex+1 & cumpussy = cumpussy+1
+	'<center><img src = "pic/slums_corner/gruz_6.jpg" ></center>'
 	'На вас наткнулся портовый грузчик.'
 	'- Ого, какая красавица!'
 	'Он одним рывком дернул блузку и пуговицы посыпались на землю, он жадно покрывал поцелуями вашу шею, крепко рукой сдавил правую грудь, левой спускаясь ниже, вы стояли наслаждаясь его напором. 
@@ -204,58 +204,58 @@ if drunkMasterStyle=80:
 	Вы игралась языком с его головкой, а он положив руки на затылок начал контролировать глубину проникновения, через минуту он трахал горло, жёстко и беспощадно, вы задыхались, от приступов рвоты, но держались. И вот через пару минут он вылил сперму в прелестный ротик. 
 	Мужлан закрыл вам рот своей ладонью и сказал глотать. Видно было как девушке противно глотать вязкую жидкость, но кое-как она это сделала.'
 
-		chanrand=RAND(0,7)
-			if chanrand = 0:
-			leg=leg+RAND(1,5)
+		chanrand = RAND(0,7)
+			if chanrand = 0: 
+			leg = leg+RAND(1,5)
 			end
-			if chanrand = 1:
-			thight=thight+RAND(1,5)
+			if chanrand = 1: 
+			thight = thight+RAND(1,5)
 			end
-			if chanrand = 2:
-			ass=ass+RAND(1,5)
+			if chanrand = 2: 
+			ass = ass+RAND(1,5)
 			end
-			if chanrand = 3:
-			brist=brist+RAND(1,5)
+			if chanrand = 3: 
+			brist = brist+RAND(1,5)
 			end
-			if chanrand = 4:
-			hand=hand+RAND(1,5)
+			if chanrand = 4: 
+			hand = hand+RAND(1,5)
 			end
-			if chanrand = 5:
-			face=face+RAND(1,5)
+			if chanrand = 5: 
+			face = face+RAND(1,5)
 			end
-			if chanrand = 6:
-			tit=tit+RAND(1,5)
+			if chanrand = 6: 
+			tit = tit+RAND(1,5)
 			end
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=90:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 90: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	minut=minut+120
-	'<center><img src="pic/slums_corner/slums_corner.jpg" ></center>'
+	minut += 120
+	'<center><img src = "pic/slums_corner/slums_corner.jpg" ></center>'
 	'К счастью, это всего лишь кошка.'
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 
-if drunkMasterStyle=100:
-	act 'О нет! Только не...':
+if drunkMasterStyle = 100: 
+	act 'О нет! Только не...': 
 	cla
 	*clr
-	horny=0
-	minut=minut+120
-	guy=guy+3
-	gangbang=gangbang+1
-	bj=bj+3
-	cumlip=cumlip+3
-	cumface=cumface+3
-	anal=anal+3
-	cumanus=cumanus+3
-	if vagina>0:vag=vag+3&sex=sex+3&cumpussy=cumpussy+3
-	'<center><img src="pic/slums_corner/orgy_10.jpg" ></center>'
+	horny = 0
+	minut += 120
+	guy = guy+3
+	gangbang = gangbang+1
+	bj = bj+3
+	cumlip = cumlip+3
+	cumface = cumface+3
+	anal = anal+3
+	cumanus = cumanus+3
+	if vagina>0: vag = vag+3 & sex = sex+3 & cumpussy = cumpussy+3
+	'<center><img src = "pic/slums_corner/orgy_10.jpg" ></center>'
 	'Трое грязных бродяг решили с вами позабавиться!'
 	'Они придумали следующее развлечение. Завязали вам глаза тряпкой и стоя на коленях, вы должны были угадать его хозяина, за каждый не угаданный ответ вас ждал шлепок по попке. Но вскоре вы безошибочно научилась определять их члены. Во время этого тройного минета вы сами испытали оргазм, когда один из бродяг кончил на вас они стали размазывать сперму по вашему лицу. Затем остальные двое приказали вам стать раком и оттопырить попку, что вы послушно и исполнили в предвкушении удовольствия, что наконец-то вас трахнут.
 	 - А теперь мы трахнем нашу девочку! 
@@ -266,29 +266,29 @@ if drunkMasterStyle=100:
      После этой безумной оргии вы полностью отрубились. А когда проснулись, то увидели, что все закончилось. 
 '
 
-		chanrand=RAND(0,7)
-			if chanrand = 0:
-			leg=leg+RAND(1,5)
+		chanrand = RAND(0,7)
+			if chanrand = 0: 
+			leg = leg+RAND(1,5)
 			end
-			if chanrand = 1:
-			thight=thight+RAND(1,5)
+			if chanrand = 1: 
+			thight = thight+RAND(1,5)
 			end
-			if chanrand = 2:
-			ass=ass+RAND(1,5)
+			if chanrand = 2: 
+			ass = ass+RAND(1,5)
 			end
-			if chanrand = 3:
-			brist=brist+RAND(1,5)
+			if chanrand = 3: 
+			brist = brist+RAND(1,5)
 			end
-			if chanrand = 4:
-			hand=hand+RAND(1,5)
+			if chanrand = 4: 
+			hand = hand+RAND(1,5)
 			end
-			if chanrand = 5:
-			face=face+RAND(1,5)
+			if chanrand = 5: 
+			face = face+RAND(1,5)
 			end
-			if chanrand = 6:
-			tit=tit+RAND(1,5)
+			if chanrand = 6: 
+			tit = tit+RAND(1,5)
 			end
-	act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+	act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 	end
 end
 --- slums_gang ---------------------------------

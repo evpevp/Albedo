@@ -2,22 +2,22 @@
 *clr
 $metka = $ARGS[0]
 $loc = $CURLOC
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>ПИВНОЙ БАР</H4></center>'
-'<center><img src="pic\pic\pivbar0.jpg" ></center>'
+'<center><img src = "pic\pic\pivbar0.jpg" ></center>'
 'Пивной бар работает с 10 до 23 часов каждый день.'
 clr
-gs'stat'
+gs 'stat'
 
-act 'НА УЛИЦУ':
-minut=minut+15
+act 'НА УЛИЦУ': 
+minut += 15
 GOTO $locMag, $metkaMag
 end
 
-     if hour >= 10 and hour <= 23:
-     act 'Войти в пивной бар':gt'pivbar1','start'
+     if hour >= 10 and hour <= 23: 
+     act 'Войти в пивной бар': gt 'pivbar1','start'
      end
 --- pivbar ---------------------------------
 

@@ -9,42 +9,42 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Подвал гильдии воров</H4></center>'
-'<center><img src="pic/Evedon\1\vorgild.jpg" ></center>'
+'<center><img src = "pic/Evedon\1\vorgild.jpg" ></center>'
 'Старый подвал, больше похожий на темницу.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-if vor>1:
-'((Ваша комната|vorRoom|minut=minut+5))'
-'((Кабинет Коннора|konnorkab|minut=minut+5))'
-if tavernavor=2:'((Барная стойка|tavernavor|minut=minut+5))'
+if vor>1: 
+'((Ваша комната|vorRoom|minut += 5))'
+'((Кабинет Коннора|konnorkab|minut += 5))'
+if tavernavor = 2: '((Барная стойка|tavernavor|minut += 5))'
 end
 
-if vor=1:
-'<center><img src="pic/EvedonNarod\konnor.jpg"></center>'
+if vor = 1: 
+'<center><img src = "pic/EvedonNarod\konnor.jpg"></center>'
 'Вам на встречу выходит молодой человек, одетый в хороший костюм.'
-     act 'Вор должен быть на свободе.':
+     act 'Вор должен быть на свободе.': 
      cla
      *clr
-     '<center><img src="pic/EvedonNarod\konnor.jpg"></center>'
-     vor=2
+     '<center><img src = "pic/EvedonNarod\konnor.jpg"></center>'
+     vor = 2
      'А, старина Джим прислал первого рекрута? Меня зовут Коннор. Джим тебе уже сказал о моем деле.'
      'Да я собираюсь возродить гильдию воров. Между прочим не так давно нашими услугами пользовались все, даже орден.'
      'Тут недавно заварушка в ордене была, пришел там к власти один хмырь...всех, кто не с орденом, положено убивать. Похищают и убивают даже мирных граждан.'
      'Тут среди народа слух пошел, что глава ордена черный маг и хочет он власти, армию собирает. Видимо воры в его планы не входят.'
      'Да облавы на нас и раньше устраивали, но чтобы под корень уничтожать, никогда. В общем ты тут походи, выбери себе комнату, потом зайди ко мне в кабинет, может найдется для тебя работа.'
-     act 'Отойти':gt'vorgildia'
+     act 'Отойти': gt 'vorgildia'
      end
 end
 
 
-act 'Выйти в трущебы':
-minut=minut+5
-gt'slumsW'
+act 'Выйти в трущебы': 
+minut += 5
+ gt 'slumsW'
 end
 --- vorgildia ---------------------------------
 

@@ -1,99 +1,99 @@
 # smu
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Строительно монтажное управление</B></center>'
-'<center><img src="pic\pic\smu.jpg" ></center>'
+'<center><img src = "pic\pic\smu.jpg" ></center>'
 'Часы работы с 7 до 17, выходные суббота, воскресенье.'
-act 'Уйти':gt 'nord'
-     if hour >= 7 and hour <= 17 and week < 6:
-     act 'Идти в сму':gt'smu','1'
+act 'Уйти': gt 'nord'
+     if hour >= 7 and hour <= 17 and week < 6: 
+     act 'Идти в сму': gt 'smu','1'
      end
 
 end
 
-if $ARGS[0]='1':
+if $ARGS[0] = '1': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Строительно монтажное управление</B></center>'
-'<center><img src="pic\pic\smu1.jpg" ></center>'
+'<center><img src = "pic\pic\smu1.jpg" ></center>'
 
-act 'Уйти':gt 'smu','start'
-act 'Идти в офис':gt 'smu','3'
-act 'Идти на маш двор':gt 'smu','2'
+act 'Уйти': gt 'smu','start'
+act 'Идти в офис': gt 'smu','3'
+act 'Идти на маш двор': gt 'smu','2'
 end
 
-if $ARGS[0]='2':
+if $ARGS[0] = '2': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Машинный двор</B></center>'
-'<center><img src="pic\pic\smu2.jpg" ></center>'
+'<center><img src = "pic\pic\smu2.jpg" ></center>'
 
-if tobiQW>0:'Стройка находится за городом и единственной возможностью добратся до ее является собственный автомобиль или ((попутный транспорт|obekt|minut=minut+60))'
+if tobiQW>0: 'Стройка находится за городом и единственной возможностью добратся до ее является собственный автомобиль или ((попутный транспорт|obekt|minut += 60))'
 
-act 'Уйти':gt 'smu','1'
-     if hour>= 16 and otrivonce ! day:
+act 'Уйти': gt 'smu','1'
+     if hour>= 16 and otrivonce ! day: 
      otrivonce = day
-     otrivrand=RAND(0,1)
-         if otrivrand=0:
+     otrivrand = RAND(0,1)
+         if otrivrand = 0: 
 		 'На лавочке у маш двора вы видите какое то спящее тело.'
-			 act 'Подойти к спящему':
+			 act 'Подойти к спящему': 
 			 cla
 			 *clr
-			 '<center><img src="pic\pic\otriv.jpg" ></center>'
+			 '<center><img src = "pic\pic\otriv.jpg" ></center>'
 			 'Вы почесали голову увидев в дупель пьяного рабочего. Поймав за рукав пробегающего мимо главного инженера вы спросили у него "Кто это спящее тело? И чего он тут устроил дом колхозника?" на что главный инженер пожал плечами "Так это же Курылев, мы его выгоняем каждый месяц за пьянство, а он просачивается обратно, спрашивали как это он делает, не признается, говорит, что он алкаш, и не помнит, как опять устраивается на работу в СМУ."'
-			 act 'Ох уж этот Курылев.':gt 'smu','1'
+			 act 'Ох уж этот Курылев.': gt 'smu','1'
 			 end
 	     end
-	     if otrivrand=1:
+	     if otrivrand = 1: 
 	     cla
 	     *clr
-	     '<center><img src="pic\pic\otriv2.jpg" ></center>'
+	     '<center><img src = "pic\pic\otriv2.jpg" ></center>'
 	     'За столиком сидят пьяные в дым мужики с пузырем. Увидев вас один поднял бровь и важно произнес "Генрихович, присядь, выпей с простым народом."'
-	     	 act 'Выпить с мужиками':
+	     	 act 'Выпить с мужиками': 
 			 cla
-			 minut=minut+60
-			 alko=alko+25
-			 otrand=RAND(0,5)
-			     if otrand=0:$otriv='плашках семь восьмых дюйма'
-			     if otrand=1:$otriv='том как он в молодости шабером кнехт стачивал'
-			     if otrand=2:$otriv='не правильном мировом устройстве, в виду которого самые тупые представители человеческой породы занимают самые высокие места, пока умные раздумывают, дураки действуют и успевают занять все теплые места, как сидения в трамвае'
-			     if otrand=3:$otriv='процессах Клазиуса из за которых не возможно передать тепло от холодных тел к горячим'
-			     if otrand=4:$otriv='том какой хороший автомобиль Волга, не то что ваши Мерседесы, подмандил и Волга опять едет, это же ГАЗ!!! причем слово ГАЗ выделял поднятым к небу пальцем и многозначительной интонацией'
-			     if otrand=5:$otriv='футорках, которые в Брежневскую эпоху делать умели, а сейчас нет, не выворачиваются падлы'
+			 minut += 60
+			 alko = alko+25
+			 otrand = RAND(0,5)
+			     if otrand = 0: $otriv = 'плашках семь восьмых дюйма'
+			     if otrand = 1: $otriv = 'том как он в молодости шабером кнехт стачивал'
+			     if otrand = 2: $otriv = 'не правильном мировом устройстве, в виду которого самые тупые представители человеческой породы занимают самые высокие места, пока умные раздумывают, дураки действуют и успевают занять все теплые места, как сидения в трамвае'
+			     if otrand = 3: $otriv = 'процессах Клазиуса из за которых не возможно передать тепло от холодных тел к горячим'
+			     if otrand = 4: $otriv = 'том какой хороший автомобиль Волга, не то что ваши Мерседесы, подмандил и Волга опять едет, это же ГАЗ!!! причем слово ГАЗ выделял поднятым к небу пальцем и многозначительной интонацией'
+			     if otrand = 5: $otriv = 'футорках, которые в Брежневскую эпоху делать умели, а сейчас нет, не выворачиваются падлы'
 			 'Вы сели за стол и выпили стакан какой то ядерной сивухи со вкусом огня и резины, вы моментально захмелели и один из пьянчуг что то вам бормотал о <<$otriv>>.'
-			 act 'Встать.':gt 'smu','1'
+			 act 'Встать.': gt 'smu','1'
 			 end
 			 
-			 act 'Безобразие, как ваши фамилии?':
+			 act 'Безобразие, как ваши фамилии?': 
 			 cla
-			 minut=minut+15
+			 minut += 15
              'Генрихович, не мельтеши, это я Курылев и кум мой, Арсентий. Мы после работы культурно проводим время.'
-			 act 'Встать.':gt 'smu','1'
+			 act 'Встать.': gt 'smu','1'
 			 end
 	     end
      end
@@ -101,107 +101,107 @@ act 'Уйти':gt 'smu','1'
 
 end
 
-if $ARGS[0]='3':
+if $ARGS[0] = '3': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Офис СМУ</B></center>'
-'<center><img src="pic\pic\smu3.jpg" ></center>'
-act 'Уйти':gt 'smu','1'	
-	if ItkQW<1:
+'<center><img src = "pic\pic\smu3.jpg" ></center>'
+act 'Уйти': gt 'smu','1'	
+	if ItkQW<1: 
 		
-		act 'Идти в свой кабинет':gt 'smu','smuSek'
-		act 'Идти в кабинет главбуха':gt 'smu','smuGlavbuh'
-		act 'Идти в кабинет главного инженера':gt 'smu','smuIng'
-		act 'Идти в кабинет заместителя директора':gt 'smu','smuZam'
+		act 'Идти в свой кабинет': gt 'smu','smuSek'
+		act 'Идти в кабинет главбуха': gt 'smu','smuGlavbuh'
+		act 'Идти в кабинет главного инженера': gt 'smu','smuIng'
+		act 'Идти в кабинет заместителя директора': gt 'smu','smuZam'
 	end
-	if ItkQW>=1:act 'Идти в кабинет директора':gt 'smu','smuSek'
+	if ItkQW>= 1: act 'Идти в кабинет директора': gt 'smu','smuSek'
 end
 
-if $ARGS[0]='smuSek':
+if $ARGS[0] = 'smuSek': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Кабинет Секретаря</B></center>'
-'<center><img src="pic\pic\smuSek.jpg" ></center>'
+'<center><img src = "pic\pic\smuSek.jpg" ></center>'
 
 
-act 'Уйти':gt 'smu','3'
-if ItkQW>=1:act 'Идти в кабинет директора':gt 'smu','smuDirektor'
-if (ItkQW>=1 and tobiQW>=2000) or RobSarkis>0:
+act 'Уйти': gt 'smu','3'
+if ItkQW>= 1: act 'Идти в кабинет директора': gt 'smu','smuDirektor'
+if (ItkQW>= 1 and tobiQW>= 2000) or RobSarkis>0: 
 	'Люда: - Директора сейчас нет'
 	delact 'Идти в кабинет директора'
-	act 'Уйти':gt 'smu','3'
+	act 'Уйти': gt 'smu','3'
 end
 
 
 
-if ItkQW<1:
-act 'Идти в свой кабинет':gt 'smu','smuDirektor'
-     if hour<17:
-		 act 'Поговорить c секретаршой':
+if ItkQW<1: 
+act 'Идти в свой кабинет': gt 'smu','smuDirektor'
+     if hour<17: 
+		 act 'Поговорить c секретаршой': 
 		 cla
 		 *clr
-		 '<center><img src="pic\fam\sekr.jpg" ></center>'
+		 '<center><img src = "pic\fam\sekr.jpg" ></center>'
 		 '(Вы) - Как дела Людочка?'
-		 if brak = 0:'(Люда) - Все в порядке Игорь Генрихович. Никто не звонил.'
-		 if brak = 1:'(Люда) - Игорь Генрихович, звонили из банка, счета арестованы.'
-		 act 'Уйти':gt 'smu','smuSek'
-		     if ludasex = 0 and horny>=50:
-		         act 'Склонять к сексу предлагая повысить оклад':
+		 if brak = 0: '(Люда) - Все в порядке Игорь Генрихович. Никто не звонил.'
+		 if brak = 1: '(Люда) - Игорь Генрихович, звонили из банка, счета арестованы.'
+		 act 'Уйти': gt 'smu','smuSek'
+		     if ludasex = 0 and horny>= 50: 
+		         act 'Склонять к сексу предлагая повысить оклад': 
 				 cla
 				 *clr
-				 '<center><img src="pic\fam\sek.jpg" ></center>'
+				 '<center><img src = "pic\fam\sek.jpg" ></center>'
 				 '(Вы) - Людочка! А как ты рассматриваешь возможность повышения твоего оклада?'
 				 '(Люда) - Игорь Генрихович, конечно же положительно!'
 				 '(Вы) - Но для этого надо больше трудится, не так ли? Выполнять еще и дополнительные обязанности.'
 				 '(Люда) - Конечно я все понимаю.'
-					 act 'Тогда продемонстрируйте как вы это понимаете':
+					 act 'Тогда продемонстрируйте как вы это понимаете': 
 					 cla
 					 *clr
-					 '<center><img src="pic\fam\sek1.jpg" ></center>'
+					 '<center><img src = "pic\fam\sek1.jpg" ></center>'
 					 'Люда начала расстегивать блузку демонстрируя свою пышную грудь.'
-						 act 'Потрогать':
+						 act 'Потрогать': 
 						 cla
 						 *clr
-						 '<center><img src="pic\fam\sek2.jpg" ></center>'
+						 '<center><img src = "pic\fam\sek2.jpg" ></center>'
 						 'Вы взяли дело в свои руки и начали гладить пышные формы секретарши, Люда заулыбалась.'
-						 	 act 'Достать ее грудь':
+						 	 act 'Достать ее грудь': 
 							 cla
 							 *clr
-							 '<center><img src="pic\fam\sek3.jpg" ></center>'
+							 '<center><img src = "pic\fam\sek3.jpg" ></center>'
 							 'Вы достали ее пышные груди и начали их ласкать руками.'
-							     act 'Поставить ее на колени':
+							     act 'Поставить ее на колени': 
 								 cla
 								 *clr
-								 '<center><img src="pic\fam\sek4.jpg" ></center>'
+								 '<center><img src = "pic\fam\sek4.jpg" ></center>'
 								 'Люда встала на колени и начала сосать ваш член.'
-								     act 'Трахнуть ее':
+								     act 'Трахнуть ее': 
 									 cla
 									 *clr
-									 '<center><img src="pic\fam\sek5.jpg" ></center>'
+									 '<center><img src = "pic\fam\sek5.jpg" ></center>'
 									 'Вы легли на пол и Люда запрыгнув на ваш член начала бойко скакать на нем, через несколько минут вы не выдержали и кончили.'
 									 ludasex = 1
-									 girl=girl+1
-									 sexm=sexm+1
-									 horny=0
-									 smuzpfull=smuzpfull+100000
-									 manna=manna+50
-									 act 'Уйти':gt 'smu','smuSek'
+									 girl = girl+1
+									 sexm = sexm+1
+									 horny = 0
+									 smuzpfull = smuzpfull+100000
+									 manna = manna+50
+									 act 'Уйти': gt 'smu','smuSek'
 									 end
 								 end
 							 end
@@ -214,264 +214,264 @@ act 'Идти в свой кабинет':gt 'smu','smuDirektor'
 end
 end
 
-if $ARGS[0]='smuDirektor':
+if $ARGS[0] = 'smuDirektor': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Кабинет директора</B></center>'
-'<center><img src="pic\pic\smuDirektor.jpg" ></center>'
+'<center><img src = "pic\pic\smuDirektor.jpg" ></center>'
 
 
 
 
-if ItkQW=2 and tobiQW<1000 and mast =1:
+if ItkQW = 2 and tobiQW<1000 and mast = 1: 
 	'Роберт Саркисянович: - Здравствуй, Игорёк.В общем, так. У меня времени нет, а тут открывается новый объект, будешь туда ездить курьером отвозить привозить документы. Вот, держи папку с документами. Если ещё не купил машину, то можешь туда доехать транспортом СМУ. Транспорт уезжает с  машдвора'
-	money=money+1000
-	act 'Уйти':gt 'smu','smuSek'
-	RobSarkis=1
+	money = money+1000
+	act 'Уйти': gt 'smu','smuSek'
+	RobSarkis = 1
 end
-if ItkQW=3 and tobiQW<1000 and mast>1 and mast<10:
+if ItkQW = 3 and tobiQW<1000 and mast>1 and mast<10: 
 	'Роберт Саркисянович: - Здравствуте, Игорь Генрихович.В общем, так. У меня времени нет, а тут открывается новый объект, а мне в СМУ нужен прораб. Будешь руководить стройкой, плачу 2000р в день. Объект на контроле у главного, так что, раз в день я буду приезжать смотреть на твою работу. Если ещё не купил машину, то можешь туда доехать транспортом СМУ. Транспорт уезжает с  машдвора'
-	money=money+2000
-	act 'Уйти':gt 'smu','smuSek'
-	RobSarkis=1
+	money = money+2000
+	act 'Уйти': gt 'smu','smuSek'
+	RobSarkis = 1
 end
-if ItkQW=3 and tobiQW<1000 and  mast=0:
+if ItkQW = 3 and tobiQW<1000 and  mast = 0: 
 	'Роберт Саркисянович: - Здравствуте, Игорь Генрихович.В общем, так. У меня времени нет, а тут открывается новый объект, а мне в СМУ нужен прораб. Будешь руководить стройкой, плачу 2000р в день. Объект на контроле у главного, так что, раз в день я буду приезжать смотреть на твою работу. Если ещё не купил машину, то можешь туда доехать транспортом СМУ. Транспорт уезжает с  машдвора'
-	money=money+2000
-	act 'Уйти':gt 'smu','smuSek'
-	RobSarkis=1
+	money = money+2000
+	act 'Уйти': gt 'smu','smuSek'
+	RobSarkis = 1
 end
 
-if ItkQW<1:
-	 'За рабочим столом стоит ваш <a href="exec:GT ''komp'',''start''">компьютер</a>.'
+if ItkQW<1: 
+	 'За рабочим столом стоит ваш <a href = "exec: gt ''komp'',''start''">компьютер</a>.'
 !!!!!!!!!!!Инна
-	 if innaQW>=200 and innavag=1 and (day-InnaLastFuckDay)>=5: gt 'innasex','innaoffice'
+	 if innaQW>= 200 and innavag = 1 and (day-InnaLastFuckDay)>= 5: gt 'innasex','innaoffice'
 end
-if tend > 0:'Осталось еще <<tend>> дней подготовки тендера.'
-if tender >0:'Осталось еще <<tender>> дней работы на объекте.'
+if tend > 0: 'Осталось еще <<tend>> дней подготовки тендера.'
+if tender >0: 'Осталось еще <<tender>> дней работы на объекте.'
 
 
-act 'Уйти':gt 'smu','smuSek'
+act 'Уйти': gt 'smu','smuSek'
 
-     if tobiQW>0 and tobiQW < 2000 and dayobj>=daystart+150 and tobiQWstop=0:
+     if tobiQW>0 and tobiQW < 2000 and dayobj>= daystart+150 and tobiQWstop = 0: 
      cla
      'Раздается звонок. Это Роман Всеволодович. "Игорь, какого хера ты меня так подставляешь? Ты не выполнил обязательства, я вынужден отозвать 200 млн, обратно. Если это обанкротит СМУ, то мне похерам, ты будешь за это отвечать. Понял?"'
-     balance=balance-200000000
-     tobiQWstop=1
-     tobiQW=0
-     act 'Положить трубку':gt 'smu','smuDirektor'
+     balance = balance-200000000
+     tobiQWstop = 1
+     tobiQW = 0
+     act 'Положить трубку': gt 'smu','smuDirektor'
      exit
      end
      
-     if tobiQW = 2000 and tobiQWstop=0:
+     if tobiQW = 2000 and tobiQWstop = 0: 
      cla
      'Раздается звонок. Это Роман Всеволодович. "Игорь, извини, ничего личного, из за проблем с этой пещерой, у меня отзывают обратно все средства полученные на стройку, да еще и неустойку обязали выплатить. Поэтому я отзываю обратно 200 лямов. Если это разорит СМУ, то извини, но тебе придется за это отвечать."'
-     balance=balance-200000000
-     tobiQWstop=1
-     act 'Положить трубку':gt 'smu','smuDirektor'
+     balance = balance-200000000
+     tobiQWstop = 1
+     act 'Положить трубку': gt 'smu','smuDirektor'
      exit
      end
      
-     if SRO=1 and smumodern=1 and tobiQW=0 and tobiQWstop=0:
-         act 'Позвонить в Москву Роману Всеволодовичу':
+     if SRO = 1 and smumodern = 1 and tobiQW = 0 and tobiQWstop = 0: 
+         act 'Позвонить в Москву Роману Всеволодовичу': 
          cla
-         tobiQW=1
-         balance=balance+200000000
-         dayobj=daystart
+         tobiQW = 1
+         balance = balance+200000000
+         dayobj = daystart
          '(Вы) - Роман Всеволодович, все готово, мы вступили в СРО и модернизировали технику.'
          '(Роман Всеволодович) - Отлично, я перечисляю на ваш счет 200 млн. Начинайте работу, и еще Игорь, стройка крупная и ответственная, возьми ее на личный контроль. Приезжай каждый день на объект, конечно после того как закончиш работу в СМУ. Только один маленький нюанс, стройка полу легальная, согласования все есть, но работу пока документально не разрешили. Строй объект, документы по этой стройке оформлять буду я. И еще, на стройку я даю тебе 150 дней. Не справишся, пеняй на себя.'
-         act 'Положить трубку':gt 'smu','smuDirektor'
+         act 'Положить трубку': gt 'smu','smuDirektor'
          end
      end
      
-     if ludasex = 1 and horny>=50 and brak = 0:
-         act 'Вызвать секретаршу':gt'seksex','start'
+     if ludasex = 1 and horny>= 50 and brak = 0: 
+         act 'Вызвать секретаршу': gt 'seksex','start'
      end
-     if hour<=10:
-		 if tender > 0 and brak = 0:
+     if hour<= 10: 
+		 if tender > 0 and brak = 0: 
 		 'Объект в работе и вам необходимо оформлять документы.'
-			 act 'Работать с бумагами до 17 часов':
+			 act 'Работать с бумагами до 17 часов': 
 			 cla
-			 if slot = 1 and hapri=1 and horny<100:tender=tender-1
-				 if tender = 0:
-				 smukont=smukont*1000000
-				 smudohod=smudohod+smukont
-				 balance=balance+smukont
+			 if slot = 1 and hapri = 1 and horny<100: tender = tender-1
+				 if tender = 0: 
+				 smukont = smukont*1000000
+				 smudohod = smudohod+smukont
+				 balance = balance+smukont
 				 'Работа на объекте завершена и вам перечислили <<smukont>> рублей'
 				 end
-			 minut=minut+480
+			 minut += 480
 			 clr
-             gs'stat'
-			 hour=17
-			 minut=0
+             gs 'stat'
+			 hour = 17
+			 minut = 0
 			 clr
-             gs'stat'
+             gs 'stat'
 			 'Вы целый день занимались бумагами.'
-			 evrand=RAND(0,100)
-			 act 'Уйти':gt 'smu','smuDirektor'
-			     if evrand >=95 and tender > 0:
+			 evrand = RAND(0,100)
+			 act 'Уйти': gt 'smu','smuDirektor'
+			     if evrand >= 95 and tender > 0: 
 			     cla
 			     tender = 0
-				 smukont=smukont*1000000
-				 smudohod=smudohod+smukont
-				 balance=balance+smukont
+				 smukont = smukont*1000000
+				 smudohod = smudohod+smukont
+				 balance = balance+smukont
 				 'Как ни странно, но главный инженер вам позвонил и доложил, что работа на объекте завершена и вам перечислили <<smukont>> рублей'
-				 act 'Уйти':gt 'smu','smuDirektor'
+				 act 'Уйти': gt 'smu','smuDirektor'
 			     exit
 			     end
 			     
-			     if evrand >=90 and evrand <95 and tender > 0:
+			     if evrand >= 90 and evrand <95 and tender > 0: 
 			     cla
 			     'Вам позвонил прораб со стройки и сказал, что возникли не предвиденные работы на объекте, это займет на пару дней больше времени, но вы тут же дозвонились до заказчика и составили дополнительное соглашение на увеличение суммы договора.'
-			     tender=tender+2
-			     smukont=smukont*2
-			     act 'Уйти':gt 'smu','smuDirektor'
+			     tender = tender+2
+			     smukont = smukont*2
+			     act 'Уйти': gt 'smu','smuDirektor'
 			     end
 			     
-			     if evrand >=85 and evrand <90 and tender > 0:
+			     if evrand >= 85 and evrand <90 and tender > 0: 
 			     cla
 			     'Вам позвонил главный инженер и доложил, у одного из кранов поломка, мы можем своими силами исправить, но это затянет выполнение объекта на 3 дня или проплатить пятьдесят тысяч и нам его сегодня же отремонтируют.'
-			         act 'Делайте сами':
+			         act 'Делайте сами': 
 			         cla
-			         tender=tender+3
+			         tender = tender+3
 			         'Вы начальник, вам виднее и главный инженер согласился произвести ремонт собственными силами.'
-			         act 'Уйти':gt 'smu','smuDirektor'
+			         act 'Уйти': gt 'smu','smuDirektor'
 			         end
-			         if balance>50000:
-			             act 'Надо объект завершить как можно быстрее, мы заплатим деньги':
+			         if balance>50000: 
+			             act 'Надо объект завершить как можно быстрее, мы заплатим деньги': 
 			             cla
-			             balance=balance-50000
+			             balance = balance-50000
 			             'Вы перевели деньги и кран был восстановлен в работу в течении дня.'
-			             act 'Уйти':gt 'smu','smuDirektor'
+			             act 'Уйти': gt 'smu','smuDirektor'
 			             end
 			         end
 			     exit
 			     end
 			     
-			     if evrand >=80 and evrand <85 and tender > 0:
+			     if evrand >= 80 and evrand <85 and tender > 0: 
 			     cla
-			     tender=tender+1
-			     otrivrand=RAND(0,5)
-			         if otrivrand = 0:$otriv='палец'
-			         if otrivrand = 1:$otriv='руку' 
-			         if otrivrand = 2:$otriv='ногу'
-			         if otrivrand = 3:$otriv='хуй'
-			         if otrivrand = 4:$otriv='нос'
-			         if otrivrand = 5:$otriv='ухо'
-			     otrirand=RAND(0,1)
-			         if otrirand = 0:$otri='ко лбу'
-			         if otrirand = 1:$otri='к жопе'
+			     tender = tender+1
+			     otrivrand = RAND(0,5)
+			         if otrivrand = 0: $otriv = 'палец'
+			         if otrivrand = 1: $otriv = 'руку' 
+			         if otrivrand = 2: $otriv = 'ногу'
+			         if otrivrand = 3: $otriv = 'хуй'
+			         if otrivrand = 4: $otriv = 'нос'
+			         if otrivrand = 5: $otriv = 'ухо'
+			     otrirand = RAND(0,1)
+			         if otrirand = 0: $otri = 'ко лбу'
+			         if otrirand = 1: $otri = 'к жопе'
 			     'Звонок со стройки "Тут рабочему Курылеву оторвало <<$otriv>> лебедкой, поэтому стройка затянется еще на один день. А сейчас врачи пришивают Курылеву <<$otriv>> на место, первая попытка у них была не удачная, пришили <<$otri>>, пришлось отрывать второй раз."'
-			     act 'Вот же гнида этот Курылев, лишу тринадцатой зарплаты.':gt 'smu','smuDirektor'
+			     act 'Вот же гнида этот Курылев, лишу тринадцатой зарплаты.': gt 'smu','smuDirektor'
 			     exit
 			     end
 			     
-			     if evrand >=75 and evrand <80 and tender > 1:
+			     if evrand >= 75 and evrand <80 and tender > 1: 
 			     cla
-			     tender=tender-1
+			     tender = tender-1
 			     'Звонок со стройки "Дела продвигаются хорошо, рабочий Курылев вышел с больничного и в одиночку, лопатой, выкопал котлован."'
-			     act 'Какой же молодец этот Курылев, надо его премировать.':gt 'smu','smuDirektor'
+			     act 'Какой же молодец этот Курылев, надо его премировать.': gt 'smu','smuDirektor'
 			     exit
 			     end
 			 end
 		 end
-		 if tender = 0 and tend > 0 and brak = 0:
+		 if tender = 0 and tend > 0 and brak = 0: 
 		 'Вам необходимо подготовить тендер.'
-			 act 'Оформлять тендер до 17 часов':
+			 act 'Оформлять тендер до 17 часов': 
 			 cla
-			 if slot = 1 and hapri=1 and horny<100:tend=tend-1
-			 if tend=0 and SRO = 0 and smumodern=0:tender=5&smukont=RAND(2,5)
-			 if tend=0 and SRO = 1 and smumodern=0:tender=5&smukont=RAND(5,8)
-			 if tend=0 and SRO = 0 and smumodern=1:tender=5&smukont=RAND(4,7)
-			 if tend=0 and SRO = 1 and smumodern=1:tender=5&smukont=RAND(7,10)
-			 minut=minut+480
+			 if slot = 1 and hapri = 1 and horny<100: tend = tend-1
+			 if tend = 0 and SRO = 0 and smumodern = 0: tender = 5 & smukont = RAND(2,5)
+			 if tend = 0 and SRO = 1 and smumodern = 0: tender = 5 & smukont = RAND(5,8)
+			 if tend = 0 and SRO = 0 and smumodern = 1: tender = 5 & smukont = RAND(4,7)
+			 if tend = 0 and SRO = 1 and smumodern = 1: tender = 5 & smukont = RAND(7,10)
+			 minut += 480
 			 clr
-             gs'stat'
-			 hour=17
-			 minut=0
+             gs 'stat'
+			 hour = 17
+			 minut = 0
 			 clr
-             gs'stat'
+             gs 'stat'
 			 'Вы целый день занимались бумагами, подготавливая участие в тендере.'
 			 
-			 act 'Уйти':gt 'smu','smuDirektor'
-			 evrand=RAND(0,100)
-			     if evrand >=95:
+			 act 'Уйти': gt 'smu','smuDirektor'
+			 evrand = RAND(0,100)
+			     if evrand >= 95: 
 			     cla
 			     'Звонит телефон, вы поднимаете трубку, "Алло. Привет Игорь, это Алексей Петров, слушай, я узнал, что ты тендер готовишь. Мог бы ты нам его уступить? Ты отменишь тендер, а я тебе на твой личный счетец сброшу сто штук. Как ты смотришь на это?"'
-			     act 'Извини, но СМУ позарез нужны деньги':gt 'smu','smuDirektor'
-			         act 'Ладно, отменю тендер.':
+			     act 'Извини, но СМУ позарез нужны деньги': gt 'smu','smuDirektor'
+			         act 'Ладно, отменю тендер.': 
 			         cla
-			         bankfond=bankfond+100000
-			         tend=0
-			         tender=0
+			         bankfond = bankfond+100000
+			         tend = 0
+			         tender = 0
 			         'Вы договорились об отмене тендера и Алексей обещал вам перечислить на ваш счет сто тысяч.'
-			         act 'Уйти':gt 'smu','smuDirektor'
+			         act 'Уйти': gt 'smu','smuDirektor'
 			         end
 			     exit
 			     end
 			     
-			     if evrand >=90 and evrand <95:
+			     if evrand >= 90 and evrand <95: 
 			     cla
-			     tend=0
-			     tender=0
+			     tend = 0
+			     tender = 0
 			     'Звонит телефон и вам говорят, что тендер отменяется.'
-			     act 'Уйти':gt 'smu','smuDirektor'
+			     act 'Уйти': gt 'smu','smuDirektor'
 			     exit
 			     end
 			     
-			     if evrand >=85 and evrand <90:
+			     if evrand >= 85 and evrand <90: 
 			     cla
 			     'Оказалось, что у вас уже есть все необходимые бумаги и вы очень быстро подготавливаетесь к тендеру.'
-			     tend=0
-                 tender=5
-                 smukont=RAND(1,10)
-                 act 'Уйти':gt 'smu','smuDirektor'
+			     tend = 0
+                 tender = 5
+                 smukont = RAND(1,10)
+                 act 'Уйти': gt 'smu','smuDirektor'
 			     exit
 			     end
 			     
-			     if evrand >=80 and evrand <85:
+			     if evrand >= 80 and evrand <85: 
 			     cla
 			     'Вам позвонил зам, сегодня в органицацию приезжают пожарные инспектора с проверкой.'
-			         act 'Да и фиг с ними':
+			         act 'Да и фиг с ними': 
 			         cla
 			         'Инспекторам очень не понравилось состояние вашего противопожарного оборудования. Они наложили штраф на предприятие 250 тысяч и на вас лично 50 тысяч.'
-			         bankfond=bankfond-50000
-			         balance=balance-250000
-                     act 'Вот же курвы':gt 'smu','smuDirektor'
+			         bankfond = bankfond-50000
+			         balance = balance-250000
+                     act 'Вот же курвы': gt 'smu','smuDirektor'
                      end
                      
-                     if money>= 15000:
-                     	 act 'Зайди я дам тебе 15 тысяч на инспекторов.':
+                     if money>= 15000: 
+                     	 act 'Зайди я дам тебе 15 тысяч на инспекторов.': 
 						 cla
 						 'Ситуация требует быстрого решения, и поэтому вы выделили 15 тысяч из своих личных денег заму, на решение проблемы с инспекцией.'
-						 money=money-15000
-						 act 'Уйти':gt 'smu','smuDirektor'
+						 money = money-15000
+						 act 'Уйти': gt 'smu','smuDirektor'
 						 end
                      end
 			     exit
 			     end
 			     
-			     if evrand >=75 and evrand <80:
+			     if evrand >= 75 and evrand <80: 
 			     'Вам позвонил владелец контрольного пакета акций Роман Всеволодович из Москвы, он просит перевести на счет его московской организации миллион рублей.'
-			         if balance >= 1000000:
-			         balance=balance-1000000
+			         if balance >= 1000000: 
+			         balance = balance-1000000
 			         'Вы не хотя подчинились приказу и дали распоряжение главбуху подготовить документы на перечиление денег.'
-			         act 'Уйти':gt 'smu','smuDirektor'
+			         act 'Уйти': gt 'smu','smuDirektor'
 			         end
-			         if balance < 1000000:
-			         manna=manna-20
+			         if balance < 1000000: 
+			         manna = manna-20
 			         'Вы объяснили Роману, что денег в СМУ нет, Роман естественно поднял скандал и наорал на вас, за вашу не компетентность.'
-			         act 'Уйти':gt 'smu','smuDirektor'
+			         act 'Уйти': gt 'smu','smuDirektor'
 			         end
 			     exit
 			     end
@@ -480,185 +480,185 @@ act 'Уйти':gt 'smu','smuSek'
      end
 end
 end
-if $ARGS[0]='smuGlavbuh':
+if $ARGS[0] = 'smuGlavbuh': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Кабинет Главбуха</B></center>'
-'<center><img src="pic\pic\smuGlavbuh.jpg" ></center>'
+'<center><img src = "pic\pic\smuGlavbuh.jpg" ></center>'
 
 
-act 'Уйти':gt 'smu','3'
-     if hour<17 and smukredit = 0 and brak = 0:
-		 act 'Поговорить о финансах':
+act 'Уйти': gt 'smu','3'
+     if hour<17 and smukredit = 0 and brak = 0: 
+		 act 'Поговорить о финансах': 
 		 cla
 		 '(Вы) - Как дела с финансами?'
 		 '(Главбух) - Игорь Генрихович. Финансы поют романсы, мы подъедаем последние крохи, на плаву нам остался месяц. Мы должны либо найти крупный заказ. Либо брать кредит и искать заказы. Но брать кредит в наших условиях, это просто отсрочка разорения. Расходы по предприятию вырастут еще сильнее.'
-		     act 'Берите кредит (15млн, выплаты по 1,5млн в течении года)':
+		     act 'Берите кредит (15млн, выплаты по 1,5млн в течении года)': 
 		     cla
-		     balance=balance+15000000
-		     smukredit=1500000
-		     keditmonth=12
+		     balance = balance+15000000
+		     smukredit = 1500000
+		     keditmonth = 12
 		     'Вы распорядились взять кредит под залог предприятия'
-		     act 'Уйти':gt 'smu','3'
+		     act 'Уйти': gt 'smu','3'
 		     end 
-         act 'Уйти':gt 'smu','3'
+         act 'Уйти': gt 'smu','3'
 		 end
      end
-     if hour<17 and smukredit > 0 and brak = 0:
-		 act 'Поговорить о финансах':
+     if hour<17 and smukredit > 0 and brak = 0: 
+		 act 'Поговорить о финансах': 
 		 cla
 		 '(Вы) - Как дела с финансами?'
 		 '(Главбух) - Игорь Генрихович. Кредит нам дал свободные деньги, но теперь расходы просто огромные. Даже не знаю, выкрутимся ли мы.'
-         act 'Уйти':gt 'smu','3'
-             if sobrQW>=2 and smumodern=0 and smukredit2=0:
+         act 'Уйти': gt 'smu','3'
+             if sobrQW>= 2 and smumodern = 0 and smukredit2 = 0: 
              'Кредит на модернизацию? Хмм, это будет очень тяжело. взять 50 миллионов, мы будем год выплачивать по 5 миллионов в месяц. Конечно договора при членстве в СРО и новой техники будут более прибыльными, но все же это может быть началом банкротства.'
-                 act 'Берите кредит 50 млн.':
-                 balance=balance+50000000
-				 smukredit2=5000000
-				 keditmonth2=12
+                 act 'Берите кредит 50 млн.': 
+                 balance = balance+50000000
+				 smukredit2 = 5000000
+				 keditmonth2 = 12
                  gt 'smu','3'
                  end
              end
 		 end
      end
-     if hour<17 and brak = 1:
-         act 'Поговорить о финансах':
+     if hour<17 and brak = 1: 
+         act 'Поговорить о финансах': 
 		 cla
 		 '(Вы) - Как дела с финансами?'
 		 '(Главбух) - Игорь Генрихович. Мы банкроты, какие финансы.'
-         act 'Уйти':gt 'smu','3'
+         act 'Уйти': gt 'smu','3'
 		 end
      end
 end
 
-if $ARGS[0]='smuIng':
+if $ARGS[0] = 'smuIng': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Кабинет главного инженера</B></center>'
-'<center><img src="pic\pic\smuIngener.jpg" ></center>'
+'<center><img src = "pic\pic\smuIngener.jpg" ></center>'
 
 
-act 'Уйти':gt 'smu','3'
-     if hour<17 and brak = 0:
-		 act 'Поговорить о технике':
+act 'Уйти': gt 'smu','3'
+     if hour<17 and brak = 0: 
+		 act 'Поговорить о технике': 
 		 cla
 		 '(Вы) - Как дела с техникой?'
-		 if metalkran>0 and newkran>0:'(Зам) - Игорь Генрихович, теперь все в порядке с техникой.'
-		 if sobrQW>=2 and smumodern=0:'(Зам) - хотя конечно на модернизацию автопарка нужно потратить не меньше 50 милионов.'
-		 if metalkran=0:'(Зам) - Игорь Генрихович, я уже не раз вам говорил, у нас два крана, это минимум кранов для стройки, но у одного крана треснула металоконструкция, нужно варить. Нанимать стороннюю организацию. Это 5 милионов будет стоить. Иначе мы не сможем ни один строительный заказ выполнить.'
-		 if newkran=0:'(Зам) - После последнего объекта нам пришлось распилить в металлолом последний башенный кран. Строить дома, нам просто не чем. Купить башенный кран, это минимум 10 милионов.'
-		 act 'Уйти':gt 'smu','3'
-		     if balance >= 5000000 and metalkran=0:
-		         act 'Отремонтируйте кран 5 млн':
+		 if metalkran>0 and newkran>0: '(Зам) - Игорь Генрихович, теперь все в порядке с техникой.'
+		 if sobrQW>= 2 and smumodern = 0: '(Зам) - хотя конечно на модернизацию автопарка нужно потратить не меньше 50 милионов.'
+		 if metalkran = 0: '(Зам) - Игорь Генрихович, я уже не раз вам говорил, у нас два крана, это минимум кранов для стройки, но у одного крана треснула металоконструкция, нужно варить. Нанимать стороннюю организацию. Это 5 милионов будет стоить. Иначе мы не сможем ни один строительный заказ выполнить.'
+		 if newkran = 0: '(Зам) - После последнего объекта нам пришлось распилить в металлолом последний башенный кран. Строить дома, нам просто не чем. Купить башенный кран, это минимум 10 милионов.'
+		 act 'Уйти': gt 'smu','3'
+		     if balance >= 5000000 and metalkran = 0: 
+		         act 'Отремонтируйте кран 5 млн': 
 		         cla
-		         balance=balance-5000000
-		         metalkran=1
+		         balance = balance-5000000
+		         metalkran = 1
 		         'Вы подписали бумаги на ремонт металоконструкций крана и ваше предприятие оплатит 5 млн за эту работу.'
-		         act 'Уйти':gt 'smu','smuIng'
+		         act 'Уйти': gt 'smu','smuIng'
 		         end
 		     end
-		     if balance >= 10000000 and newkran=0:
-		         act 'Купите башенный кран 10 млн':
+		     if balance >= 10000000 and newkran = 0: 
+		         act 'Купите башенный кран 10 млн': 
 		         cla
-		         balance=balance-10000000
-		         newkran=1
+		         balance = balance-10000000
+		         newkran = 1
 		         'Вы подписали бумаги на покупку башенного крана и ваше предприятие оплатит 10 млн.'
-		         act 'Уйти':gt 'smu','smuIng'
+		         act 'Уйти': gt 'smu','smuIng'
 		         end
 		     end
-		     if balance >= 50000000 and sobrQW>=2 and smumodern=0:
-		     	 act 'Модернизировать технику 50 млн':
+		     if balance >= 50000000 and sobrQW>= 2 and smumodern = 0: 
+		     	 act 'Модернизировать технику 50 млн': 
 		         cla
-		         balance=balance-50000000
-		         smumodern=1
+		         balance = balance-50000000
+		         smumodern = 1
 		         'Вы подписали бумаги на модернизацию техники и ваше предприятие оплатит 50 млн.'
-		         act 'Уйти':gt 'smu','smuIng'
+		         act 'Уйти': gt 'smu','smuIng'
 		         end
 		     end
 		 end
      end
-     if hour<17 and brak = 1:
-     	 act 'Поговорить о технике':
+     if hour<17 and brak = 1: 
+     	 act 'Поговорить о технике': 
 		 cla
 		 '(Вы) - Как дела с техникой?'
 		 '(Зам) - Игорь Генрихович, технику с молотка продадут, мы же банкроты.'
-		 act 'Уйти':gt 'smu','smuIng'
+		 act 'Уйти': gt 'smu','smuIng'
 		 end
      end
 end
 
-if $ARGS[0]='smuZam':
+if $ARGS[0] = 'smuZam': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Кабинет заместителя директора</B></center>'
-'<center><img src="pic\pic\smuZam.jpg" ></center>'
+'<center><img src = "pic\pic\smuZam.jpg" ></center>'
 
 
-act 'Уйти':gt 'smu','3'
+act 'Уйти': gt 'smu','3'
 
-     if brak = 0:
-		 if hour<17 and slot = 1 and hapri = 1 and tender = 0 and tend = 0 and metalkran=1 and newkran=1:
-			 act 'Поговорить о контрактах':
+     if brak = 0: 
+		 if hour<17 and slot = 1 and hapri = 1 and tender = 0 and tend = 0 and metalkran = 1 and newkran = 1: 
+			 act 'Поговорить о контрактах': 
 			 cla
 			 tend = 2
 			 '(Вы) - Ну как? Есть какие то контраты?'
 			 '(Зам) - Да Игорь Генрихович. Нашеся объект, вам нужно подготовить тендер.'
-			 act 'Уйти':gt 'smu','3'
+			 act 'Уйти': gt 'smu','3'
 			 end
 		 else
-			 act 'Поговорить о контрактах':
+			 act 'Поговорить о контрактах': 
 			 cla
 			 '(Вы) - Ну как? Есть какие то контраты?'
 			 '(Зам) - Нет Игорь Генрихович. Пока нет ничего, конкуренты душат, перехватывают все подряд.'
-			 if metalkran < 1 or newkran < 1:'Да и с нашими кранами нечего делать на объектах.'
-			 act 'Уйти':gt 'smu','3'
+			 if metalkran < 1 or newkran < 1: 'Да и с нашими кранами нечего делать на объектах.'
+			 act 'Уйти': gt 'smu','3'
 			 end
 		 end
 		 
-		 if sobrQW>=2 and hour<17 and SRO=0:
-		 	 act 'Поговорить о СРО':
+		 if sobrQW>= 2 and hour<17 and SRO = 0: 
+		 	 act 'Поговорить о СРО': 
 			 cla
 			 '(Вы) - Ну что там с СРО?'
 			 '(Зам) - Эта саморегулируемая организация настоящие бандиты, такие взносы гнут, что кошмар. Представляешь Генрихович, лям в месяц.'
-			 act 'Да, это они совсем охерели грабители':gt 'smu','3'
-			     act 'Ладно, хрен с ними, вступай.':
-			     SRO=1
-			     smuzemla=smuzemla+1000000
+			 act 'Да, это они совсем охерели грабители': gt 'smu','3'
+			     act 'Ладно, хрен с ними, вступай.': 
+			     SRO = 1
+			     smuzemla = smuzemla+1000000
 			     gt 'smu','3'
 			     end
 			 end
 		 end
      end
-     if brak = 1:
-     	 act 'Поговорить о банкротстве':
+     if brak = 1: 
+     	 act 'Поговорить о банкротстве': 
 		 cla
 		 '(Вы) - Ну как дела с процедурой банкротства?'
 		 '(Зам) - Игорь Генрихович. Мы в полной жопе. Арбитражный суд признал нас банкротами. Вам надо бы обзавестись адвокатом, против вас может быть возбуждено уголовное дело.'
-		 act 'Уйти':gt 'smu','3'
+		 act 'Уйти': gt 'smu','3'
 		 end
      end
      

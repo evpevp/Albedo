@@ -3,147 +3,147 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
-'<center><B><font color=maroon>Качалка</font></B></center>'
-'<center><img src="pic\pic\kachalka.jpg" ></center>'
+ minut = minut + 5
+'<center><B><font color = maroon>Качалка</font></B></center>'
+'<center><img src = "pic\pic\kachalka.jpg" ></center>'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 'Рабочее время с 16 до 21.'
 
 
-     act 'Уйти.':
+     act 'Уйти.': 
      GOTO $locMag, $metkaMag
      end
      
-     if hour>=16 and hour<=20 and money>=500 and kachalkaday!day and kachalkaOplata=0:
-         act 'Заплатить 500 рублей.':
+     if hour>= 16 and hour<= 20 and money>= 500 and kachalkaday!day and kachalkaOplata = 0: 
+         act 'Заплатить 500 рублей.': 
          cla
-         minut+=10
-         kachalkaday=day
-         money-=500
-         kachalkaOplata=1
+         minut+= 10
+         kachalkaday = day
+         money- = 500
+         kachalkaOplata = 1
          'Вы отдали тренеру пятихатку'
-         act 'Уйти.':gt $CURLOC
+         act 'Уйти.': gt $CURLOC
          end
      end
      
-     if week=6 and sorevArmDay!day:
+     if week = 6 and sorevArmDay!day: 
      'Сегодня в качалке проводятся соревнования по армрестлингу.'
-         if armRazrad=0:
+         if armRazrad = 0: 
          'Уровень соревнований дружеская встреча'
-			 act 'Принять участие.':
-			 armwresLewel=0
-			 sorevArmDay=day
-			 gt'armwrestling','start'
+			 act 'Принять участие.': 
+			 armwresLewel = 0
+			 sorevArmDay = day
+			 gt 'armwrestling','start'
 			 end
          end
-         if armRazrad=1:
+         if armRazrad = 1: 
          'Уровень соревнований первенство качалки'
-			 act 'Принять участие.':
-			 armwresLewel=1
-			 sorevArmDay=day
-			 gt'armwrestling','start'
+			 act 'Принять участие.': 
+			 armwresLewel = 1
+			 sorevArmDay = day
+			 gt 'armwrestling','start'
 			 end
          end
-         if armRazrad=2:
+         if armRazrad = 2: 
          'Уровень соревнований чемпионат города'
-			 act 'Принять участие.':
-			 armwresLewel=2
-			 sorevArmDay=day
-			 gt'armwrestling','start'
+			 act 'Принять участие.': 
+			 armwresLewel = 2
+			 sorevArmDay = day
+			 gt 'armwrestling','start'
 			 end
          end
-         if armRazrad=3:
+         if armRazrad = 3: 
          'Уровень соревнований чемпионат области'
-			 act 'Принять участие.':
-			 armwresLewel=3
-			 sorevArmDay=day
-			 gt'armwrestling','start'
+			 act 'Принять участие.': 
+			 armwresLewel = 3
+			 sorevArmDay = day
+			 gt 'armwrestling','start'
 			 end
          end
-         if armRazrad=4:
+         if armRazrad = 4: 
          'Уровень соревнований чемпионат региона'
-			 act 'Принять участие.':
-			 armwresLewel=4
-			 sorevArmDay=day
-			 gt'armwrestling','start'
+			 act 'Принять участие.': 
+			 armwresLewel = 4
+			 sorevArmDay = day
+			 gt 'armwrestling','start'
 			 end
          end
-         if armRazrad=5:
+         if armRazrad = 5: 
          'Уровень соревнований чемпионат России'
-			 act 'Принять участие.':
-			 armwresLewel=5
-			 sorevArmDay=day
-			 gt'armwrestling','start'
+			 act 'Принять участие.': 
+			 armwresLewel = 5
+			 sorevArmDay = day
+			 gt 'armwrestling','start'
 			 end
          end
-         if armRazrad=6:
+         if armRazrad = 6: 
          'Уровень соревнований чемпионат европы'
-			 act 'Принять участие.':
-			 armwresLewel=6
-			 sorevArmDay=day
-			 gt'armwrestling','start'
+			 act 'Принять участие.': 
+			 armwresLewel = 6
+			 sorevArmDay = day
+			 gt 'armwrestling','start'
 			 end
          end
      end
      
-     if kachalkaOplata=1:
+     if kachalkaOplata = 1: 
      
-		 act 'Качатся на выносливость.':
+		 act 'Качатся на выносливость.': 
 		 cla
-		 minut+=60
-		 kachalkaOplata=0
-		     if alko<=0:
-			 vital=vital+RAND(5,10)
-			 exp=exp+RAND(lvl/4,lvl/2)
+		 minut+= 60
+		 kachalkaOplata = 0
+		     if alko<= 0: 
+			 vital = vital+RAND(5,10)
+			 exp = exp+RAND(lvl/4,lvl/2)
 		     end
 		 'Вы качали железо развивая мышцы'
-		     if alko>0:
-		     health=50
+		     if alko>0: 
+		     health = 50
 		     'Херакс, вы не выдержали и уронили штагу себе на ногу. Черт, не стоило тренироватся под градусом.'
 		     end
-		 act 'Уйти.':gt $CURLOC
+		 act 'Уйти.': gt $CURLOC
 		 end
 		 
-		 act 'Качатся на силу.':
+		 act 'Качатся на силу.': 
 		 cla
-		 minut+=60
-		 kachalkaOplata=0
-		     if alko<=0:
-			 stren=stren+RAND(5,10)
-			 exp=exp+RAND(lvl/4,lvl/2)
+		 minut+= 60
+		 kachalkaOplata = 0
+		     if alko<= 0: 
+			 stren = stren+RAND(5,10)
+			 exp = exp+RAND(lvl/4,lvl/2)
 		     end
 		 'Вы качали железо развивая мышцы'
-		 	 if alko>0:
-		     health=50
+		 	 if alko>0: 
+		     health = 50
 		     'Херакс, вы не выдержали и уронили штагу себе на ногу. Черт, не стоило тренироватся под градусом.'
 		     end
-		 act 'Уйти.':gt $CURLOC
+		 act 'Уйти.': gt $CURLOC
 		 end
 		 
-		 if money>=5000 and steroidDay!day:
-		 	 act 'Купить стероиды 5 тыр.':
+		 if money>= 5000 and steroidDay!day: 
+		 	 act 'Купить стероиды 5 тыр.': 
 			 cla
-			 steroidDay=day
-			 money-=5000
+			 steroidDay = day
+			 money- = 5000
 			 'Вы купили стероиды у тренера и он предложил тут же вколоть их вам'
-			     act 'Вколоть стероиды.':
+			     act 'Вколоть стероиды.': 
 			     cla
 			     *clr
-			     horny=100
-			     minut+=15
-			     vital=vital+RAND(3,5)
+			     horny = 100
+			     minut+= 15
+			     vital = vital+RAND(3,5)
 			     'Тренер вколол вам стероиды. И предупредил вас не увлекатся ими. А то последствия могут быть печальные.'
-			         if vital>250:
-			         horny=-1000
-			             if penis>8:penis-=1
-			             if penis<=8:tit+=10
+			         if vital>250: 
+			         horny = -1000
+			             if penis>8: penis- = 1
+			             if penis<= 8: tit+= 10
 			         'Черт, кажется стероиды действуют на организм не очень хорошо.'
 			         end
-			     act 'Уйти.':gt $CURLOC
+			     act 'Уйти.': gt $CURLOC
 			     end
 			 end
 		 

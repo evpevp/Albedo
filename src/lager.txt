@@ -1,29 +1,29 @@
 # lager
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-hour=19
-set minut = 0
+hour = 19
+ minut = 0
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Исправительно Трудовая Колония</B></center>'
-'<center><img src="pic/jail/poverka.jpg" ></center>'
+'<center><img src = "pic/jail/poverka.jpg" ></center>'
 'Вас выгрузили во дворе колонии, построили в шеренги и начали распределять по отрядам. Когда прозвучало: "Осужденный Харитонов", - вы вышли из строя.'
-     if mast=1:
+     if mast = 1: 
      'В третий отряд'
-     barak=3
-     act 'Идти в отряд.':gt'petuhi'
+     barak = 3
+     act 'Идти в отряд.': gt 'petuhi'
      end
      
-     if mast>1:
+     if mast>1: 
      'Во второй отряд'
-     barak=2
-     act 'Идти в отряд.':gt'barak'
+     barak = 2
+     act 'Идти в отряд.': gt 'barak'
      end
 
 end

@@ -1,282 +1,282 @@
 # MISSTRESS
 clr
-gs'stat'
+gs 'stat'
 'Двери лязгнули и в комнату вошла Вапула.'
-if stepSlave>=50:
+if stepSlave>= 50: 
 !геймовер
-'<center><img src="pic/EvedonSC/over.jpg" ></center>'
+'<center><img src = "pic/EvedonSC/over.jpg" ></center>'
 'Вапула вас вывела в операционную. Вам отрезали руки и ноги, а тело плотно упаковали в кожаный костюм. Вам закрыли глаза и уши и поместили в туалет.'
 'У вас отсутствуют всякие чувства кроме вкуса. Каждый день к вам заходят ведьмы, гоблины и Вапула и мочатся вам в рот. Вскоре ваш разум погрузился в пучину безумия в, которой вы наслаждались вкусом мочи и иногда присутствием члена во рту, которые вы с удовольствием чистили.'
 'Вапула вас сломала и превратила в живой писсуар. Это конец.'
 end
 
 
-if stepSlave>=40 and stepSlave<50:
+if stepSlave>= 40 and stepSlave<50: 
 !туалетный раб
 'На этом уроке я начну готовить из тебя туалетного раба. Тебе предстоит стать моим писсуаром.'
 
-     if sub<80:
-		 act 'Послать ее ко всем чертям':
+     if sub<80: 
+		 act 'Послать ее ко всем чертям': 
 		 cla
 		 *clr
-		 minut=minut+60
+		 minut += 60
 		 'Вы обругали на чем стоит эту демоническую тварь. Вапула посмотрела на вас с легким разочарованием.'
 		 'Вапула покачала головой: "Я знаю это трудно. Я знаю это сложный процесс, но это не оправдывает грубость."'
-			 act '.....':
-			 punrand=RAND(0,3)
-			 XGT 'PUNISH'
+			 act '.....': 
+			 punrand = RAND(0,3)
+			 xgt 'PUNISH'
 			 end
 		 end
      end
      
-     if sub<100:
-		 act 'Отрицательно покачать головой':
+     if sub<100: 
+		 act 'Отрицательно покачать головой': 
 		 cla
 		 *clr
-		 manna=manna-50
-		 minut=minut+60
-		 SCrest+=1
+		 manna = manna-50
+		 minut += 60
+		 SCrest+= 1
 		 'Вапула зло усмехнулась и связала вас.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
      end
      
-	 act 'Пить мочу':
+	 act 'Пить мочу': 
 	 cla
 	 *clr
-	 wipo=wipo-25
-	 minut=minut+60
-	 SCUMbrot=SCUMbrot+1
-	 stepSlave+=1
-	 sub+=1
-	 '<center><img src="pic/EvedonSC/piss.jpg" ></center>'
+	 wipo = wipo-25
+	 minut += 60
+	 SCUMbrot = SCUMbrot+1
+	 stepSlave+= 1
+	 sub+= 1
+	 '<center><img src = "pic/EvedonSC/piss.jpg" ></center>'
 	 'Вы открыли рот и Вапула начала мочиться туда.'
-	 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
+	 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
 	 'Вапула бросает кусок черствого хлеба в тарелку и достав член дрочит над тарелкой, наконец она кончает в тарелку где лежит кусок хлеба, наполняя ее до краев спермой.'
-	 act '.....':GT 'SLAVECELL'
+	 act '.....': gt 'SLAVECELL'
 	 end
 	 
-	 if sub>=90:
-		 act 'С энтузиазмом пить мочу':
+	 if sub>= 90: 
+		 act 'С энтузиазмом пить мочу': 
 		 cla
 		 *clr
-		 wipo=wipo-50
-		 SUB=SUB+5
-		 minut=minut+60
-		 stepSlave+=5
-		 SCbrot=SCbrot+1
-		 '<center><img src="pic/EvedonSC/piss.jpg" ></center>'
+		 wipo = wipo-50
+		 SUB = SUB+5
+		 minut += 60
+		 stepSlave+= 5
+		 SCbrot = SCbrot+1
+		 '<center><img src = "pic/EvedonSC/piss.jpg" ></center>'
 		 'Вы с энтузиазмом открыли рот и Вапула начала мочиться туда, вы наслаждались ее мочей.'
-		 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
+		 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
 		 'Вапула бросила в тарелку кусок черствого хлеба.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
 	 end
 end
 
-if stepSlave>=30 and stepSlave<40:
+if stepSlave>= 30 and stepSlave<40: 
 !долбят
 'Встань рачком и раздвинь попку, время научиться принимать в себя мой член.'
 
-     if sub<60:
-		 act 'Послать ее ко всем чертям':
+     if sub<60: 
+		 act 'Послать ее ко всем чертям': 
 		 cla
 		 *clr
-		 minut=minut+60
+		 minut += 60
 		 'Вы обругали на чем стоит эту демоническую тварь. Вапула посмотрела на вас с легким разочарованием.'
 		 'Вапула покачала головой: "Я знаю это трудно. Я знаю это сложный процесс, но это не оправдывает грубость."'
-			 act '.....':
-			 punrand=RAND(0,3)
-			 XGT 'PUNISH'
+			 act '.....': 
+			 punrand = RAND(0,3)
+			 xgt 'PUNISH'
 			 end
 		 end
      end
      
-     if sub<80:
-		 act 'Отрицательно покачать головой':
+     if sub<80: 
+		 act 'Отрицательно покачать головой': 
 		 cla
 		 *clr
-		 manna=manna-50
-		 minut=minut+60
-		 SCrest+=1
+		 manna = manna-50
+		 minut += 60
+		 SCrest+= 1
 		 'Вапула зло усмехнулась и связала вас.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
      end
      
-	 act 'Встать раком':
+	 act 'Встать раком': 
 	 cla
 	 *clr
-	 wipo=wipo-25
-	 minut=minut+60
-	 SCUMbrot=SCUMbrot+1
-	 stepSlave+=1
-	 sub+=1
-	 '<center><img src="pic/EvedonSC/sex.jpg" ></center>'
+	 wipo = wipo-25
+	 minut += 60
+	 SCUMbrot = SCUMbrot+1
+	 stepSlave+= 1
+	 sub+= 1
+	 '<center><img src = "pic/EvedonSC/sex.jpg" ></center>'
 	 'Вы подставили попку для ее члена.'
-	 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
-	 gs'analslut'
-	 cumanus+=1
-	 anus+=5
-	 anal+=1
+	 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
+	 gs 'analslut'
+	 cumanus+= 1
+	 anus+= 5
+	 anal+= 1
 	 'Вапула бросает кусок черствого хлеба в тарелку и достав член дрочит над тарелкой, наконец она кончает в тарелку где лежит кусок хлеба, наполняя ее до краев спермой.'
-	 act '.....':GT 'SLAVECELL'
+	 act '.....': gt 'SLAVECELL'
 	 end
 	 
-	 if sub>=80:
-		 act 'Встать раком и подмахивать с энтузиазмом':
+	 if sub>= 80: 
+		 act 'Встать раком и подмахивать с энтузиазмом': 
 		 cla
 		 *clr
-		 wipo=wipo-50
-		 SUB=SUB+5
-		 minut=minut+60
-		 stepSlave+=5
-		 SCbrot=SCbrot+1
-		 '<center><img src="pic/EvedonSC/sex.jpg" ></center>'
+		 wipo = wipo-50
+		 SUB = SUB+5
+		 minut += 60
+		 stepSlave+= 5
+		 SCbrot = SCbrot+1
+		 '<center><img src = "pic/EvedonSC/sex.jpg" ></center>'
 		 'Вы с энтузиазмом засунули член Вапулы в свою попку и начали подмахивать.'
-		 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
-		 gs'analslut'
-	     cumanus+=1
-	     anus+=5
-	     anal+=1
+		 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
+		 gs 'analslut'
+	     cumanus+= 1
+	     anus+= 5
+	     anal+= 1
 		 'Вапула бросила в тарелку кусок черствого хлеба.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
 	 end
 end
 
-if stepSlave>=20 and stepSlave<30:
+if stepSlave>= 20 and stepSlave<30: 
 !соска
 'Теперь встань на колени передо мной и умоляй меня дать тебе отсосать мой член'
-     if sub<40:
-		 act 'Послать ее ко всем чертям':
+     if sub<40: 
+		 act 'Послать ее ко всем чертям': 
 		 cla
 		 *clr
-		 minut=minut+60
+		 minut += 60
 		 'Вы обругали на чем стоит эту демоническую тварь. Вапула посмотрела на вас с легким разочарованием.'
 		 'Вапула покачала головой: "Я знаю это трудно. Я знаю это сложный процесс, но это не оправдывает грубость."'
-			 act '.....':
-			 punrand=RAND(0,3)
-			 XGT 'PUNISH'
+			 act '.....': 
+			 punrand = RAND(0,3)
+			 xgt 'PUNISH'
 			 end
 		 end
      end
      
-     if sub<60:
-		 act 'Отрицательно покачать головой':
+     if sub<60: 
+		 act 'Отрицательно покачать головой': 
 		 cla
 		 *clr
-		 manna=manna-50
-		 minut=minut+60
-		 SCrest+=1
+		 manna = manna-50
+		 minut += 60
+		 SCrest+= 1
 		 'Вапула зло усмехнулась и связала вас.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
      end
      
-	 act 'Сосать у нее':
+	 act 'Сосать у нее': 
 	 cla
 	 *clr
-	 wipo=wipo-25
-	 minut=minut+60
-	 SCUMbrot=SCUMbrot+1
-	 stepSlave+=1
-	 sub+=1
-	 if vapulasex=0:vapulasex=1&girl+=1
-	 '<center><img src="pic/EvedonSC/bj.jpg" ></center>'
+	 wipo = wipo-25
+	 minut += 60
+	 SCUMbrot = SCUMbrot+1
+	 stepSlave+= 1
+	 sub+= 1
+	 if vapulasex = 0: vapulasex = 1 & girl+= 1
+	 '<center><img src = "pic/EvedonSC/bj.jpg" ></center>'
 	 'Вы встали на колени и начали отсасывать ее член.'
-	 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
-	 gs'cumslut'
-	 cumlip+=1
+	 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
+	 gs 'cumslut'
+	 cumlip+= 1
 	 'Вапула бросает кусок черствого хлеба в тарелку и достав член дрочит над тарелкой, наконец она кончает в тарелку где лежит кусок хлеба, наполняя ее до краев спермой.'
-	 act '.....':GT 'SLAVECELL'
+	 act '.....': gt 'SLAVECELL'
 	 end
 	 
-	 if sub>=60:
-		 act 'Страстно отсасывать, стараться во всем угодить госпоже':
+	 if sub>= 60: 
+		 act 'Страстно отсасывать, стараться во всем угодить госпоже': 
 		 cla
 		 *clr
-		 wipo=wipo-50
-		 SUB=SUB+5
-		 minut=minut+60
-		 stepSlave+=5
-		 SCbrot=SCbrot+1
-		 if vapulasex=0:vapulasex=1&girl+=1
-		 '<center><img src="pic/EvedonSC/bj.jpg" ></center>'
+		 wipo = wipo-50
+		 SUB = SUB+5
+		 minut += 60
+		 stepSlave+= 5
+		 SCbrot = SCbrot+1
+		 if vapulasex = 0: vapulasex = 1 & girl+= 1
+		 '<center><img src = "pic/EvedonSC/bj.jpg" ></center>'
 		 'Вы ползаете на четвереньках перед Вапулой выгибая спинку и стараясь принимать сексуальные позы. После чего берете в рот и начинаете сосать у нее, стараясь изо всех сил.'
-		 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
-		 gs'cumslut'
-	     cumlip+=1
+		 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
+		 gs 'cumslut'
+	     cumlip+= 1
 		 'Вапула бросила в тарелку кусок черствого хлеба.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
 	 end
 end
 
-if stepSlave>=10 and stepSlave<20:
+if stepSlave>= 10 and stepSlave<20: 
 !ползать  перед Вапулой
 'Кое чему ты научилась, теперь время продвигаться в обучении дальше. Встань на колени и ползай передо мной.'
 
-     if sub<10:
-		 act 'Послать ее ко всем чертям':
+     if sub<10: 
+		 act 'Послать ее ко всем чертям': 
 		 cla
 		 *clr
-		 minut=minut+60
+		 minut += 60
 		 'Вы обругали на чем стоит эту демоническую тварь. Вапула посмотрела на вас с легким разочарованием.'
 		 'Вапула покачала головой: "Я знаю это трудно. Я знаю это сложный процесс, но это не оправдывает грубость."'
-			 act '.....':
-			 punrand=RAND(0,3)
-			 XGT 'PUNISH'
+			 act '.....': 
+			 punrand = RAND(0,3)
+			 xgt 'PUNISH'
 			 end
 		 end
      end
      
-     if sub<30:
-		 act 'Отрицательно покачать головой':
+     if sub<30: 
+		 act 'Отрицательно покачать головой': 
 		 cla
 		 *clr
-		 manna=manna-50
-		 minut=minut+60
-		 SCrest+=1
+		 manna = manna-50
+		 minut += 60
+		 SCrest+= 1
 		 'Вапула зло усмехнулась и связала вас.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
      end
      
-	 act 'Ползать на четвереньках перед госпожой':
+	 act 'Ползать на четвереньках перед госпожой': 
 	 cla
 	 *clr
-	 wipo=wipo-25
-	 minut=minut+60
-	 SCUMbrot=SCUMbrot+1
-	 stepSlave+=1
-	 sub+=1
-	 '<center><img src="pic/EvedonSC/etap.jpg" ></center>'
+	 wipo = wipo-25
+	 minut += 60
+	 SCUMbrot = SCUMbrot+1
+	 stepSlave+= 1
+	 sub+= 1
+	 '<center><img src = "pic/EvedonSC/etap.jpg" ></center>'
 	 'Вы встали на четвереньки и начали ползать перед Вапулой.'
-	 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
+	 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
 	 'Вапула бросает кусок черствого хлеба в тарелку и достав член дрочит над тарелкой, наконец она кончает в тарелку где лежит кусок хлеба, наполняя ее до краев спермой.'
-	 act '.....':GT 'SLAVECELL'
+	 act '.....': gt 'SLAVECELL'
 	 end
 	 
-	 if sub>=30:
-		 act 'Стараться во всем угодить госпоже':
+	 if sub>= 30: 
+		 act 'Стараться во всем угодить госпоже': 
 		 cla
 		 *clr
-		 wipo=wipo-50
-		 SUB=SUB+5
-		 minut=minut+60
-		 stepSlave+=5
-		 SCbrot=SCbrot+1
-		 '<center><img src="pic/EvedonSC/etap.jpg" ></center>'
+		 wipo = wipo-50
+		 SUB = SUB+5
+		 minut += 60
+		 stepSlave+= 5
+		 SCbrot = SCbrot+1
+		 '<center><img src = "pic/EvedonSC/etap.jpg" ></center>'
 		 'Вы ползаете на четвереньках перед Вапулой выгибая спинку и стараясь принимать сексуальные позы.'
-		 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
+		 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
 		 'Вапула бросила в тарелку кусок черствого хлеба.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
 	 end
 end
 
-if stepSlave<10:
+if stepSlave<10: 
 '"О, дорогуша, ты выглядишь расстроенной. Ты должна быть счастлива. Я здесь, чтобы покормить тебя. Я полагю ты бедное и несчастное существо, мне так жалко это видеть."'
 'Но расслабься, сегодня я начну воспитывать тебя. И ты сама увидишь как это просто и легко заработать еду. Всего лишь нужно порадовать свою хозяйку.'
 'От одного щелчка ее пальцев ваши оковы просто исчезают в воздухе.'
@@ -284,65 +284,65 @@ if stepSlave<10:
 'Вапула присела на корточки и взяла вас за подбородок и посмотрела вам в глаза. Первый шаг, это показать свое уважение Госпоже. Все что тебе нужно сделать это сказать всего одно маленькое предложение. Скажи: "Здравствуйте госпожа, чем я могу служить вам сегодня?"'
 'После этого Вапула встает на ноги и ждет от вас исполнения ее команды.'
 
-     if dom>=10:
-		 act 'Послать ее ко всем чертям':
+     if dom>= 10: 
+		 act 'Послать ее ко всем чертям': 
 		 cla
 		 *clr
-		 minut=minut+60
+		 minut += 60
 		 'Вы обругали на чем стоит эту демоническую тварь. Вапула посмотрела на вас с легким разочарованием.'
 		 'Вапула покачала головой: "Я знаю это трудно. Я знаю это сложный процесс, но это не оправдывает грубость."'
-			 act '.....':
-			 punrand=RAND(0,3)
-			 XGT 'PUNISH'
+			 act '.....': 
+			 punrand = RAND(0,3)
+			 xgt 'PUNISH'
 			 end
 		 end
      end
      
-     if dom>=0:
-		 act 'Отрицательно покачать головой':
+     if dom>= 0: 
+		 act 'Отрицательно покачать головой': 
 		 cla
 		 *clr
-		 manna=manna-50
-		 minut=minut+60
-		 SCrest+=1
+		 manna = manna-50
+		 minut += 60
+		 SCrest+= 1
 		 'Вапула зло усмехнулась и связала вас.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
      end
      
-	 act 'Здравствуйте госпожа, чем я могу служить вам сегодня?':
+	 act 'Здравствуйте госпожа, чем я могу служить вам сегодня?': 
 	 cla
 	 *clr
-	 wipo=wipo-25
-	 minut=minut+60
-	 SCUMbrot=SCUMbrot+1
-	 stepSlave+=1
-	 sub+=1
+	 wipo = wipo-25
+	 minut += 60
+	 SCUMbrot = SCUMbrot+1
+	 stepSlave+= 1
+	 sub+= 1
 	 '(Вы) - Здравствуйте госпожа, чем я могу служить вам сегодня?'
 	 '(Вапула) - Я не слышу тебя раб, говори громче!'
 	 '(Вы) - Здравствуйте госпожа, чем я могу служить вам сегодня?'
 	 '(Вапула) - Неплохо для начала. Теперь я покормлю тебя супчиком.'
-	 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
+	 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
 	 'Вапула бросает кусок черствого хлеба в тарелку и достав член дрочит над тарелкой, наконец она кончает в тарелку где лежит кусок хлеба, наполняя ее до краев спермой.'
-	 act '.....':GT 'SLAVECELL'
+	 act '.....': gt 'SLAVECELL'
 	 end
 	 
-	 if sub>0:
-		 act 'Стараться во всем угодить госпоже':
+	 if sub>0: 
+		 act 'Стараться во всем угодить госпоже': 
 		 cla
 		 *clr
-		 wipo=wipo-50
-		 SUB=SUB+5
-		 minut=minut+60
-		 stepSlave+=5
-		 SCbrot=SCbrot+1
+		 wipo = wipo-50
+		 SUB = SUB+5
+		 minut += 60
+		 stepSlave+= 5
+		 SCbrot = SCbrot+1
 		 '(Вы) - Здравствуйте госпожа, чем я могу служить вам сегодня?'
 		 '(Вапула) - Я не слышу тебя раб, говори громче!'
 		 '(Вы) - Здравствуйте госпожа, чем я могу служить вам сегодня?'
 		 '(Вапула) - Отлично, из тебя получается отличное домашнее животное. Держи еду, питомец.'
-		 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
+		 if SCrest = 0: SCrest- = 1 & 'Вапула ослабляет ваши путы.'
 		 'С этими словами Вапула бросила в тарелку кусок черствого хлеба.'
-		 act '.....':GT 'SLAVECELL'
+		 act '.....': gt 'SLAVECELL'
 		 end
 	 end
 

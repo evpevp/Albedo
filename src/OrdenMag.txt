@@ -9,146 +9,146 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Практикум</H4></center>'
-'<center><img src="pic/Evedon/monastMag.jpg" ></center>'
+'<center><img src = "pic/Evedon/monastMag.jpg" ></center>'
 'Темное помещение, украшенное светящимися символами является местом познания магии.'
 'Медитация в магическом круге развивающая магичность стоит 5 кредитов.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
-if Normativ=1:'Ты уже на уровне младшего магистра. Подойди к декану.'
-if Normativ=2:'Ты уже готов к переходу на уровень старшего магистра. Подойди к декану.'
-if OrdenRang=2:'Обучение заклинаниям стоит 500 кредитов.'
+if Normativ = 1: 'Ты уже на уровне младшего магистра. Подойди к декану.'
+if Normativ = 2: 'Ты уже готов к переходу на уровень старшего магистра. Подойди к декану.'
+if OrdenRang = 2: 'Обучение заклинаниям стоит 500 кредитов.'
 
-     if magordday!day and kredit>=5:
-         act 'Медитировать развивая магичность 1 час':
+     if magordday!day and kredit>= 5: 
+         act 'Медитировать развивая магичность 1 час': 
          cla
          *clr
-         kredit=kredit-5
-         magordday=day
-         exp=exp+RAND(lvl/2,lvl*2)
-	     magikExp=magikExp+RAND(magika,magika*2)
-		 minut=minut+60
+         kredit = kredit-5
+         magordday = day
+         exp = exp+RAND(lvl/2,lvl*2)
+	     magikExp = magikExp+RAND(magika,magika*2)
+		 minut += 60
 		 'Вы медитируете сидя в магическом символе пытаясь увеличить свою магичность.'
-		 act 'Уйти':gt $CURLOC
+		 act 'Уйти': gt $CURLOC
 		 end
      end
      
-     if raspredOrden=1:
+     if raspredOrden = 1: 
      'Вы относитесь к школе электричества. Изучение заклинаний стоит 10 кредитов, выучить заклинание можно за 10ть уроков. 1 урок в день.'
-         if spShok<100 and kredit>=10 and spShokday!day:
-             act 'Изучать разряд 1 час':
+         if spShok<100 and kredit>= 10 and spShokday!day: 
+             act 'Изучать разряд 1 час': 
 			 cla
 			 *clr
-			 kredit=kredit-10
-			 spShokday=day
-			 exp=exp+RAND(lvl/4,lvl/2)
-			 spShok=spShok+10
-			 if spShok>100:spShok=100
-			 minut=minut+60
+			 kredit = kredit-10
+			 spShokday = day
+			 exp = exp+RAND(lvl/4,lvl/2)
+			 spShok = spShok+10
+			 if spShok>100: spShok = 100
+			 minut += 60
 			 'Вы изучали заклинание и выучили его на <<spShok>>%.'
-			 act 'Уйти':gt $CURLOC
+			 act 'Уйти': gt $CURLOC
 			 end
          end
          
-         if spShok>=100 and magika>=11:
-             if spShokTri<100 and kredit>=10 and spShokday!day:
-				 act 'Изучать тройной разряд 1 час':
+         if spShok>= 100 and magika>= 11: 
+             if spShokTri<100 and kredit>= 10 and spShokday!day: 
+				 act 'Изучать тройной разряд 1 час': 
 				 cla
 				 *clr
-				 kredit=kredit-10
-				 spShokday=day
-				 exp=exp+RAND(lvl/4,lvl/2)
-				 spShokTri=spShokTri+10
-				 if spShokTri>100:spShokTri=100
-				 minut=minut+60
+				 kredit = kredit-10
+				 spShokday = day
+				 exp = exp+RAND(lvl/4,lvl/2)
+				 spShokTri = spShokTri+10
+				 if spShokTri>100: spShokTri = 100
+				 minut += 60
 				 'Вы изучали заклинание и выучили его на <<spShokTri>>%.'
-				 act 'Уйти':gt $CURLOC
+				 act 'Уйти': gt $CURLOC
 				 end
 			 end
          end
          
-         if spShokTri>=100 and magika>=12:
-             if spShokSh<100 and kredit>=10 and spShokday!day:
-				 act 'Изучать разрядный щит 1 час':
+         if spShokTri>= 100 and magika>= 12: 
+             if spShokSh<100 and kredit>= 10 and spShokday!day: 
+				 act 'Изучать разрядный щит 1 час': 
 				 cla
 				 *clr
-				 kredit=kredit-10
-				 spShokday=day
-				 exp=exp+RAND(lvl/4,lvl/2)
-				 spShokSh=spShokSh+10
-				 if spShokSh>100:spShokSh=100
-				 minut=minut+60
+				 kredit = kredit-10
+				 spShokday = day
+				 exp = exp+RAND(lvl/4,lvl/2)
+				 spShokSh = spShokSh+10
+				 if spShokSh>100: spShokSh = 100
+				 minut += 60
 				 'Вы изучали заклинание и выучили его на <<spShokSh>>%.'
-				 Normativ=1
-				 act 'Уйти':gt $CURLOC
+				 Normativ = 1
+				 act 'Уйти': gt $CURLOC
 				 end
 			 end
          end
          
-         if OrdenRang>=2:
+         if OrdenRang>= 2: 
          
-             if kredit>=500:
-                 if spWillSh<100 and spShokday!day:
-					 act 'Изучать волевой щит 1 час':
+             if kredit>= 500: 
+                 if spWillSh<100 and spShokday!day: 
+					 act 'Изучать волевой щит 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spShokday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spWillSh=spWillSh+10
-					 if spWillSh>100:spWillSh=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spShokday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spWillSh = spWillSh+10
+					 if spWillSh>100: spWillSh = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spWillSh>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spWillSh>=100 and spElPole<100 and spShokday!day:
-				 	 act 'Изучать ионизирующее поле 1 час':
+				 if spWillSh>= 100 and spElPole<100 and spShokday!day: 
+				 	 act 'Изучать ионизирующее поле 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spShokday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spElPole=spElPole+10
-					 if spElPole>100:spElPole=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spShokday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spElPole = spElPole+10
+					 if spElPole>100: spElPole = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spElPole>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spWillSh>=100 and spElPole>=100 and spBigShok<100 and spShokday!day:
-				 	 act 'Изучать молнию 1 час':
+				 if spWillSh>= 100 and spElPole>= 100 and spBigs hok<100 and spShokday!day: 
+				 	 act 'Изучать молнию 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spShokday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spBigShok=spBigShok+10
-					 if spBigShok>100:spBigShok=100
-					 minut=minut+60
-					 'Вы изучали заклинание и выучили его на <<spBigShok>>%.'
-					 act 'Уйти':gt $CURLOC
+					 kredit = kredit-500
+					 spShokday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spBigs hok = spBigs hok+10
+					 if spBigs hok>100: spBigs hok = 100
+					 minut += 60
+					 'Вы изучали заклинание и выучили его на <<spBigs hok>>%.'
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spWillSh>=100 and spElPole>=100 and spBigShok>=100 and spElProboy<100 and spShokday!day:
-				 	 act 'Изучать пробой 1 час':
+				 if spWillSh>= 100 and spElPole>= 100 and spBigs hok>= 100 and spElProboy<100 and spShokday!day: 
+				 	 act 'Изучать пробой 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spShokday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spElProboy=spElProboy+10
-					 if spElProboy>100:spElProboy=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spShokday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spElProboy = spElProboy+10
+					 if spElProboy>100: spElProboy = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spElProboy>>%.'
-					 Normativ=2
-					 act 'Уйти':gt $CURLOC
+					 Normativ = 2
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
              
@@ -156,348 +156,348 @@ if OrdenRang=2:'Обучение заклинаниям стоит 500 кред�
          end
          
      end
-     if raspredOrden=2:
+     if raspredOrden = 2: 
      'Вы относитесь к школе воды. Изучение заклинаний стоит 10 кредитов, выучить заклинание можно за 10ть уроков. 1 урок в день.'
-         if spWaterStr<100 and kredit>=10 and spWaterStrday!day:
-             act 'Изучать струю воды 1 час':
+         if spWaterStr<100 and kredit>= 10 and spWaterStrday!day: 
+             act 'Изучать струю воды 1 час': 
 			 cla
 			 *clr
-			 kredit=kredit-10
-			 spWaterStrday=day
-			 exp=exp+RAND(lvl/4,lvl/2)
-			 spWaterStr=spWaterStr+10
-			 if spWaterStr>100:spWaterStr=100
-			 minut=minut+60
+			 kredit = kredit-10
+			 spWaterStrday = day
+			 exp = exp+RAND(lvl/4,lvl/2)
+			 spWaterStr = spWaterStr+10
+			 if spWaterStr>100: spWaterStr = 100
+			 minut += 60
 			 'Вы изучали заклинание и выучили его на <<spWaterStr>>%.'
-			 act 'Уйти':gt $CURLOC
+			 act 'Уйти': gt $CURLOC
 			 end
          end
          
-         if spWaterStr>=100 and magika>=11:
-             if spWaterMultiStr<100 and kredit>=10 and spWaterStrday!day:
-				 act 'Изучать распыление 1 час':
+         if spWaterStr>= 100 and magika>= 11: 
+             if spWaterMultiStr<100 and kredit>= 10 and spWaterStrday!day: 
+				 act 'Изучать распыление 1 час': 
 				 cla
 				 *clr
-				 kredit=kredit-10
-				 spWaterStrday=day
-				 exp=exp+RAND(lvl/4,lvl/2)
-				 spWaterMultiStr=spWaterMultiStr+10
-				 if spWaterMultiStr>100:spWaterMultiStr=100
-				 minut=minut+60
+				 kredit = kredit-10
+				 spWaterStrday = day
+				 exp = exp+RAND(lvl/4,lvl/2)
+				 spWaterMultiStr = spWaterMultiStr+10
+				 if spWaterMultiStr>100: spWaterMultiStr = 100
+				 minut += 60
 				 'Вы изучали заклинание и выучили его на <<spWaterMultiStr>>%.'
-				 act 'Уйти':gt $CURLOC
+				 act 'Уйти': gt $CURLOC
 				 end
 			 end
          end
          
-         if spWaterMultiStr>=100 and magika>=12:
-             if spWaterShild<100 and kredit>=10 and spWaterStrday!day:
-				 act 'Изучать водный щит 1 час':
+         if spWaterMultiStr>= 100 and magika>= 12: 
+             if spWaterShild<100 and kredit>= 10 and spWaterStrday!day: 
+				 act 'Изучать водный щит 1 час': 
 				 cla
 				 *clr
-				 kredit=kredit-10
-				 spWaterStrday=day
-				 exp=exp+RAND(lvl/4,lvl/2)
-				 spWaterShild=spWaterShild+10
-				 if spWaterShild>100:spWaterShild=100
-				 minut=minut+60
+				 kredit = kredit-10
+				 spWaterStrday = day
+				 exp = exp+RAND(lvl/4,lvl/2)
+				 spWaterShild = spWaterShild+10
+				 if spWaterShild>100: spWaterShild = 100
+				 minut += 60
 				 'Вы изучали заклинание и выучили его на <<spWaterShild>>%.'
-				 Normativ=1
-				 act 'Уйти':gt $CURLOC
+				 Normativ = 1
+				 act 'Уйти': gt $CURLOC
 				 end
 			 end
          
          end
          
-         if OrdenRang>=2:
-             if kredit>=500:
-                 if spPotop<100 and spWaterStrday!day:
-					 act 'Изучать потоп 1 час':
+         if OrdenRang>= 2: 
+             if kredit>= 500: 
+                 if spPotop<100 and spWaterStrday!day: 
+					 act 'Изучать потоп 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spWaterStrday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spPotop=spPotop+10
-					 if spPotop>100:spPotop=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spWaterStrday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spPotop = spPotop+10
+					 if spPotop>100: spPotop = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spPotop>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spPotop>=100 and spPotopManna<100 and spWaterStrday!day:
-					 act 'Изучать маннакрашер 1 час':
+				 if spPotop>= 100 and spPotopManna<100 and spWaterStrday!day: 
+					 act 'Изучать маннакрашер 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spWaterStrday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spPotopManna=spPotopManna+10
-					 if spPotopManna>100:spPotopManna=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spWaterStrday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spPotopManna = spPotopManna+10
+					 if spPotopManna>100: spPotopManna = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spPotopManna>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spPotop>=100 and spPotopManna>=100 and spPotopShark<100 and spWaterStrday!day:
-					 act 'Изучать водяную акулу 1 час':
+				 if spPotop>= 100 and spPotopManna>= 100 and spPotopShark<100 and spWaterStrday!day: 
+					 act 'Изучать водяную акулу 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spWaterStrday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spPotopShark=spPotopShark+10
-					 if spPotopShark>100:spPotopShark=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spWaterStrday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spPotopShark = spPotopShark+10
+					 if spPotopShark>100: spPotopShark = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spPotopShark>>%.'
-					 Normativ=2
-					 act 'Уйти':gt $CURLOC
+					 Normativ = 2
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
              end
          end
      end
-     if raspredOrden=3:
+     if raspredOrden = 3: 
      'Вы относитесь к школе земли. Изучение заклинаний стоит 10 кредитов, выучить заклинание можно за 10ть уроков. 1 урок в день.'
-         if spSStorm<100 and kredit>=10 and spSStormday!day:
-             act 'Изучать песчаный шторм 1 час':
+         if spSStorm<100 and kredit>= 10 and spSStormday!day: 
+             act 'Изучать песчаный шторм 1 час': 
 			 cla
 			 *clr
-			 kredit=kredit-10
-			 spSStormday=day
-			 exp=exp+RAND(lvl/4,lvl/2)
-			 spSStorm=spSStorm+10
-			 if spSStorm>100:spSStorm=100
-			 minut=minut+60
+			 kredit = kredit-10
+			 spSStormday = day
+			 exp = exp+RAND(lvl/4,lvl/2)
+			 spSStorm = spSStorm+10
+			 if spSStorm>100: spSStorm = 100
+			 minut += 60
 			 'Вы изучали заклинание и выучили его на <<spSStorm>>%.'
-			 act 'Уйти':gt $CURLOC
+			 act 'Уйти': gt $CURLOC
 			 end
          end
          
-         if spSStorm>=100 and magika>=11:
-             if spSandShild<100 and kredit>=10 and spSStormday!day:
-				 act 'Изучать песчаный щит 1 час':
+         if spSStorm>= 100 and magika>= 11: 
+             if spSandShild<100 and kredit>= 10 and spSStormday!day: 
+				 act 'Изучать песчаный щит 1 час': 
 				 cla
 				 *clr
-				 kredit=kredit-10
-				 spSStormday=day
-				 exp=exp+RAND(lvl/4,lvl/2)
-				 spSandShild=spSandShild+10
-				 if spSandShild>100:spSandShild=100
-				 minut=minut+60
+				 kredit = kredit-10
+				 spSStormday = day
+				 exp = exp+RAND(lvl/4,lvl/2)
+				 spSandShild = spSandShild+10
+				 if spSandShild>100: spSandShild = 100
+				 minut += 60
 				 'Вы изучали заклинание и выучили его на <<spSandShild>>%.'
-				 act 'Уйти':gt $CURLOC
+				 act 'Уйти': gt $CURLOC
 				 end
 			 end
          end
          
-         if spSandShild>=100 and magika>=12:
-             if spSandUdar<100 and kredit>=10 and spSStormday!day:
-				 act 'Изучать земляной удар 1 час':
+         if spSandShild>= 100 and magika>= 12: 
+             if spSandUdar<100 and kredit>= 10 and spSStormday!day: 
+				 act 'Изучать земляной удар 1 час': 
 				 cla
 				 *clr
-				 kredit=kredit-10
-				 spSStormday=day
-				 exp=exp+RAND(lvl/4,lvl/2)
-				 spSandUdar=spSandUdar+10
-				 if spSandUdar>100:spSandUdar=100
-				 minut=minut+60
+				 kredit = kredit-10
+				 spSStormday = day
+				 exp = exp+RAND(lvl/4,lvl/2)
+				 spSandUdar = spSandUdar+10
+				 if spSandUdar>100: spSandUdar = 100
+				 minut += 60
 				 'Вы изучали заклинание и выучили его на <<spSandUdar>>%.'
-				 Normativ=1
-				 act 'Уйти':gt $CURLOC
+				 Normativ = 1
+				 act 'Уйти': gt $CURLOC
 				 end
 			 end
          end
          
-         if OrdenRang>=2:
-             if kredit>=500:
-                 if spSandAbsolut<100 and spSStormday!day:
-					 act 'Изучать абсолютную защиту 1 час':
+         if OrdenRang>= 2: 
+             if kredit>= 500: 
+                 if spSandAbsolut<100 and spSStormday!day: 
+					 act 'Изучать абсолютную защиту 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spSStormday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spSandAbsolut=spSandAbsolut+10
-					 if spSandAbsolut>100:spSandAbsolut=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spSStormday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spSandAbsolut = spSandAbsolut+10
+					 if spSandAbsolut>100: spSandAbsolut = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spSandAbsolut>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spSandAbsolut>=100 and spSandInGround<100 and spSStormday!day:
-					 act 'Изучать погружение 1 час':
+				 if spSandAbsolut>= 100 and spSandInGround<100 and spSStormday!day: 
+					 act 'Изучать погружение 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spSStormday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spSandInGround=spSandInGround+10
-					 if spSandInGround>100:spSandInGround=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spSStormday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spSandInGround = spSandInGround+10
+					 if spSandInGround>100: spSandInGround = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spSandInGround>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spSandAbsolut>=100 and spSandInGround>=100 and spSandInGroundAtk<100 and spSStormday!day:
-					 act 'Изучать подземную атаку 1 час':
+				 if spSandAbsolut>= 100 and spSandInGround>= 100 and spSandInGroundAtk<100 and spSStormday!day: 
+					 act 'Изучать подземную атаку 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spSStormday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spSandInGroundAtk=spSandInGroundAtk+10
-					 if spSandInGroundAtk>100:spSandInGroundAtk=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spSStormday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spSandInGroundAtk = spSandInGroundAtk+10
+					 if spSandInGroundAtk>100: spSandInGroundAtk = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spSandInGroundAtk>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spSandAbsolut>=100 and spSandInGround>=100 and spSandInGroundAtk>=100 and spSandUdarPlita<100 and spSStormday!day:
-					 act 'Изучать удар плитами 1 час':
+				 if spSandAbsolut>= 100 and spSandInGround>= 100 and spSandInGroundAtk>= 100 and spSandUdarPlita<100 and spSStormday!day: 
+					 act 'Изучать удар плитами 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spSStormday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spSandUdarPlita=spSandUdarPlita+10
-					 if spSandUdarPlita>100:spSandUdarPlita=100
-					 minut=minut+60
-					 Normativ=2
+					 kredit = kredit-500
+					 spSStormday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spSandUdarPlita = spSandUdarPlita+10
+					 if spSandUdarPlita>100: spSandUdarPlita = 100
+					 minut += 60
+					 Normativ = 2
 					 'Вы изучали заклинание и выучили его на <<spSandUdarPlita>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
              end
          end
      end
-     if raspredOrden=4:
+     if raspredOrden = 4: 
      'Вы относитесь к школе воздуха. Изучение заклинаний стоит 10 кредитов, выучить заклинание можно за 10ть уроков. 1 урок в день.'
-         if spWindUd<100 and kredit>=10 and spWindUdday!day:
-             act 'Изучать удар воздуха 1 час':
+         if spWindUd<100 and kredit>= 10 and spWindUdday!day: 
+             act 'Изучать удар воздуха 1 час': 
 			 cla
 			 *clr
-			 kredit=kredit-10
-			 spWindUdday=day
-			 exp=exp+RAND(lvl/4,lvl/2)
-			 spWindUd=spWindUd+10
-			 if spWindUd>100:spWindUd=100
-			 minut=minut+60
+			 kredit = kredit-10
+			 spWindUdday = day
+			 exp = exp+RAND(lvl/4,lvl/2)
+			 spWindUd = spWindUd+10
+			 if spWindUd>100: spWindUd = 100
+			 minut += 60
 			 'Вы изучали заклинание и выучили его на <<spWindUd>>%.'
-			 act 'Уйти':gt $CURLOC
+			 act 'Уйти': gt $CURLOC
 			 end
          end
          
-         if spWindUd>=100 and magika>=11:
-			 if spVacuum<100 and kredit>=10 and spWindUdday!day:
-				 act 'Изучать вакуум 1 час':
+         if spWindUd>= 100 and magika>= 11: 
+			 if spVacuum<100 and kredit>= 10 and spWindUdday!day: 
+				 act 'Изучать вакуум 1 час': 
 				 cla
 				 *clr
-				 kredit=kredit-10
-				 spWindUdday=day
-				 exp=exp+RAND(lvl/4,lvl/2)
-				 spVacuum=spVacuum+10
-				 if spVacuum>100:spVacuum=100
-				 minut=minut+60
+				 kredit = kredit-10
+				 spWindUdday = day
+				 exp = exp+RAND(lvl/4,lvl/2)
+				 spVacuum = spVacuum+10
+				 if spVacuum>100: spVacuum = 100
+				 minut += 60
 				 'Вы изучали заклинание и выучили его на <<spVacuum>>%.'
-				 act 'Уйти':gt $CURLOC
+				 act 'Уйти': gt $CURLOC
 				 end
 			 end
          end
          
-         if spVacuum>=100 and magika>=12:
-			 if spVacShild<100 and kredit>=10 and spWindUdday!day:
-				 act 'Изучать атмосферный щит 1 час':
+         if spVacuum>= 100 and magika>= 12: 
+			 if spVacShild<100 and kredit>= 10 and spWindUdday!day: 
+				 act 'Изучать атмосферный щит 1 час': 
 				 cla
 				 *clr
-				 kredit=kredit-10
-				 spWindUdday=day
-				 exp=exp+RAND(lvl/4,lvl/2)
-				 spVacShild=spVacShild+10
-				 if spVacShild>100:spVacShild=100
-				 minut=minut+60
+				 kredit = kredit-10
+				 spWindUdday = day
+				 exp = exp+RAND(lvl/4,lvl/2)
+				 spVacShild = spVacShild+10
+				 if spVacShild>100: spVacShild = 100
+				 minut += 60
 				 'Вы изучали заклинание и выучили его на <<spVacShild>>%.'
-				 Normativ=1
-				 act 'Уйти':gt $CURLOC
+				 Normativ = 1
+				 act 'Уйти': gt $CURLOC
 				 end
 			 end
          end
          
-         if OrdenRang>=2:
-             if kredit>=500:
-                 if spVacBullet<100 and spWindUdday!day:
-					 act 'Изучать вакуумные пули 1 час':
+         if OrdenRang>= 2: 
+             if kredit>= 500: 
+                 if spVacBullet<100 and spWindUdday!day: 
+					 act 'Изучать вакуумные пули 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spWindUdday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spVacBullet=spVacBullet+10
-					 if spVacBullet>100:spVacBullet=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spWindUdday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spVacBullet = spVacBullet+10
+					 if spVacBullet>100: spVacBullet = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spVacBullet>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spVacBullet>=100 and spVacPerepad<100 and spWindUdday!day:
-					 act 'Изучать перепад давления 1 час':
+				 if spVacBullet>= 100 and spVacPerepad<100 and spWindUdday!day: 
+					 act 'Изучать перепад давления 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spWindUdday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spVacPerepad=spVacPerepad+10
-					 if spVacPerepad>100:spVacPerepad=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spWindUdday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spVacPerepad = spVacPerepad+10
+					 if spVacPerepad>100: spVacPerepad = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spVacPerepad>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spVacBullet>=100 and spVacPerepad>=100 and spVacVih<100 and spWindUdday!day:
-					 act 'Изучать ярость шторма 1 час':
+				 if spVacBullet>= 100 and spVacPerepad>= 100 and spVacVih<100 and spWindUdday!day: 
+					 act 'Изучать ярость шторма 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spWindUdday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spVacVih=spVacVih+10
-					 if spVacVih>100:spVacVih=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spWindUdday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spVacVih = spVacVih+10
+					 if spVacVih>100: spVacVih = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spVacVih>>%.'
-					 act 'Уйти':gt $CURLOC
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
 				 
-				 if spVacBullet>=100 and spVacPerepad>=100 and spVacVih>=100 and spVacPolet<100 and spWindUdday!day:
-					 act 'Изучать полет 1 час':
+				 if spVacBullet>= 100 and spVacPerepad>= 100 and spVacVih>= 100 and spVacPolet<100 and spWindUdday!day: 
+					 act 'Изучать полет 1 час': 
 					 cla
 					 *clr
-					 kredit=kredit-500
-					 spWindUdday=day
-					 exp=exp+RAND(lvl/4,lvl/2)
-					 spVacPolet=spVacPolet+10
-					 if spVacPolet>100:spVacPolet=100
-					 minut=minut+60
+					 kredit = kredit-500
+					 spWindUdday = day
+					 exp = exp+RAND(lvl/4,lvl/2)
+					 spVacPolet = spVacPolet+10
+					 if spVacPolet>100: spVacPolet = 100
+					 minut += 60
 					 'Вы изучали заклинание и выучили его на <<spVacPolet>>%.'
-					 Normativ=2
-					 act 'Уйти':gt $CURLOC
+					 Normativ = 2
+					 act 'Уйти': gt $CURLOC
 					 end
 				 end
              end
          end
      end
 
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'foOrden'
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'foOrden'
 	 end
 --- OrdenMag ---------------------------------
 

@@ -1,171 +1,171 @@
 # TAcityEvent
-if $ARGS[0]='domini':
+if $ARGS[0] = 'domini': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
-horny=horny+20
+ minut = minut + 15
+horny = horny+20
 clr
-gs'stat'
+gs 'stat'
 'Хекель обернулась и увидела вас. Она усмехнулась, "Присоединяйся."'
 
 
-act 'уйти':gt'teladareW'
+act 'уйти': gt 'teladareW'
 
-     if penis>0:
-         act 'Подставить член Доминике для обслуживания':
+     if penis>0: 
+         act 'Подставить член Доминике для обслуживания': 
          cla
-         sexm=sexm+1
-         horny=horny+10
-         manna=manna+50
-         if dominiSex=0:dominiSex=1&girl=girl+1
-         '<center><img src="pic/EvedonTA/domEv.jpg" ></center>'
+         sexm = sexm+1
+         horny = horny+10
+         manna = manna+50
+         if dominiSex = 0: dominiSex = 1 & girl = girl+1
+         '<center><img src = "pic/EvedonTA/domEv.jpg" ></center>'
          'Вы достали член и подставили его ко рту Доминики в котором уже был член Хекель. Местная волшебница Доминика принялась обрабатывать своим ртом сразу две волшебных палочки. Наконец Хекель не выдержала и спустила в открытый рот Доминики. Следом присоединились и вы украсив лицо волшебницы своим чудодейственным нектаром.'
-         act 'уйти':gt'teladareW'
+         act 'уйти': gt 'teladareW'
          end
      end
      
-	 act 'Встать на колени перед Хекель':
+	 act 'Встать на колени перед Хекель': 
 	 cla
-	 bj=bj+1
-	 if hekelSex=0:hekelSex=1&futa=futa+1
-	 horny=horny+10
-	 manna=manna+50
-	 SUB=SUB+1
-	 '<center><img src="pic/EvedonTA/domEv2.jpg" ></center>'
+	 bj = bj+1
+	 if hekelSex = 0: hekelSex = 1 & futa = futa+1
+	 horny = horny+10
+	 manna = manna+50
+	 SUB = SUB+1
+	 '<center><img src = "pic/EvedonTA/domEv2.jpg" ></center>'
 	 'Вы встали на колени перед Хекель и присоединились к Доминике занявшись отсосом члена у Хекель. Хекель долго не продержалась и обильно кончила от таких ласк вам на лица, Доминика принялась слизывать сперму с вашего лица и не успокоилась пока не почистила вас до суха.'
-	 gs'cumslut'
-	 facial=facial+1
-	 act 'уйти':gt'teladareW'
+	 gs 'cumslut'
+	 facial = facial+1
+	 act 'уйти': gt 'teladareW'
 	 end
 
 end
 
 
-if $ARGS[0]='gang':
+if $ARGS[0] = 'gang': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
-horny=horny+20
+ minut = minut + 15
+horny = horny+20
 clr
-gs'stat'
-if penis>0:$evtext='вы достали свой <<penis>> сантиметровый член и начали его мастурбировать'
-if penis=0:$evtext='вы нащупали рукой свою киску и начали ее ласкать'
+gs 'stat'
+if penis>0: $evtext = 'вы достали свой <<penis>> сантиметровый член и начали его мастурбировать'
+if penis = 0: $evtext = 'вы нащупали рукой свою киску и начали ее ласкать'
 'Подглядывая в окошко <<$evtext>>. Видимо вы издали слишком громкий звук. Хекель молниеносно открыла окно и высунулась в него.'
 'Черт вас застукали в пикантный момент. Хекель оскалилась и схватив вас затащила в комнату через окно, после чего закрыла его.'
 'Обнаженные Инури, Хекель и Коттон окружили вас подрачивая свои стоячие члены.'
-     if DOM>0 and penis>0:
-         act 'А вот хрен вам, я буду оборонятся.':
+     if DOM>0 and penis>0: 
+         act 'А вот хрен вам, я буду оборонятся.': 
          cla
          *clr
          'Хекель хмыкнула, хрен с тобой, можешь трахнуть в рот шлюшку Коттон. Откликаясь на это предложение Коттон встала перед вами на колени и распахнула свой перемазанный спермой рот.'
-             act 'Вставить ей в рот.':
+             act 'Вставить ей в рот.': 
              cla
              *clr
-                 if femin>=200:
-                 if inurisex=0:inurisex=1&futa=futa+1
-				  minut=minut+15
-				 if cottonSex=0:cottonSex=1&futa=futa+1
-				 sexm=sexm+1
-				 manna=manna+30
-				 if FutaSlutQW=0:FutaSlutQW=1
-                 '<center><img src="pic/EvedonTA/EVinuri2.jpg" ></center>'
+                 if femin>= 200: 
+                 if inurisex = 0: inurisex = 1 & futa = futa+1
+				  minut += 15
+				 if cottonSex = 0: cottonSex = 1 & futa = futa+1
+				 sexm = sexm+1
+				 manna = manna+30
+				 if FutaSlutQW = 0: FutaSlutQW = 1
+                 '<center><img src = "pic/EvedonTA/EVinuri2.jpg" ></center>'
                  'Вы вставили член в рот Коттон и та принялась его обрабатывать, внезапно вы почувствовали как чьи то руки ложатся на вашу попу и пальчик смазанный чем то холодным и скользким проникает вам в анус. Вы попытались сбросить руки с себя но в тот же момент вам в попу вошел член, вы взвизгнули от неожиданности, а Коттон удвоила усилия обрабатывая ваш член своим ртом.'
-                 gs'analslut'
+                 gs 'analslut'
                  'Оглянувшись вы поняли, что Хекель долбит вас в задницу, наконец не выдержав такого напора с обоих сторон вы начали кончать в рот Коттон заполняя его спермой. Ваш анус начал ритмично сжиматся вокруг члена Коттон и она не выдержала начав наполнять вашу попку своей горячей спермой.'
-                 anal=anal+1
-                 cumanus=cumanus+1
-                 anus=anus+3
-                 horny=0
-                 act 'уйти':gt'teladareW'
+                 anal = anal+1
+                 cumanus = cumanus+1
+                 anus = anus+3
+                 horny = 0
+                 act 'уйти': gt 'teladareW'
                  end
                  
-                 if femin<200:
-                 	 if cottonSex=0:cottonSex=1&futa=futa+1
-				 sexm=sexm+1
-				 manna=manna+30
-				 horny=0
-                 '<center><img src="pic/EvedonTA/EVinuri3.jpg" ></center>'
+                 if femin<200: 
+                 	 if cottonSex = 0: cottonSex = 1 & futa = futa+1
+				 sexm = sexm+1
+				 manna = manna+30
+				 horny = 0
+                 '<center><img src = "pic/EvedonTA/EVinuri3.jpg" ></center>'
                  'Вы начали долбить в рот Коттон, Хекель сразу же заметно возбудилась и поставила на колени Инури начав трахать ее в рот. Вы стояли друг напротив друга с Хекель и между вами сидели две членососки, Инури и Коттон обрабатывающие ваши члены. Хекель неожиданно обняла вас и начала целовать вас в губы засовывая туда язык. Наконец вы кончили в рот Коттон и Хекель тоже со стоном набила спермой рот Инури, после чего Инури и Коттон сидя перед вами на коленях начали целоваться друг с другом обмениваясь вашей с Хекель спермой.'
-                 act 'уйти':gt'teladareW'
+                 act 'уйти': gt 'teladareW'
                  end
              end 
              
-             act 'Пожалуй я воздержусь.':
+             act 'Пожалуй я воздержусь.': 
              cla
              *clr
-             '<center><img src="pic/EvedonTA/EVinuri.jpg" ></center>'
+             '<center><img src = "pic/EvedonTA/EVinuri.jpg" ></center>'
              'Инури теребя свой член подошла к Коттон и вставила ей в рот со словами "А я вот опять захотела отодрать эту шлюху."'
-                 act 'уйти':gt'teladareW'
+                 act 'уйти': gt 'teladareW'
                  
-                 act 'Вставить в задницу Инури':
+                 act 'Вставить в задницу Инури': 
                  cla
                  *clr
-                 if inurisex=0:inurisex=1&futa=futa+1
-				 minut=minut+15
-				 sexm=sexm+1
-				 horny=0
-                 '<center><img src="pic/EvedonTA/EVinuri2.jpg" ></center>'
+                 if inurisex = 0: inurisex = 1 & futa = futa+1
+				 minut += 15
+				 sexm = sexm+1
+				 horny = 0
+                 '<center><img src = "pic/EvedonTA/EVinuri2.jpg" ></center>'
                  'Пока Инури была занята и наслаждалась минетом который ей делала Коттон вы всадили ей в задницу, она застонала, но не стала сопротивляться и через некоторое время Инури начала кончать в рот Коттон, от оргазма ритмично сжимая анусом ваш член, вы не выдержали и стали кончать в зад Инури наполняя его спермой.'
-                 act 'уйти':gt'teladareW'
+                 act 'уйти': gt 'teladareW'
                  end
              end 
          end
      end
      
-     act 'Сглотнуть слюну от ужаса.':
+     act 'Сглотнуть слюну от ужаса.': 
      cla
      *clr
-     if FutaSlutQW=0:FutaSlutQW=1
-     if inurisex=0:inurisex=1&futa=futa+1
-	 minut=minut+15
-	 if cottonSex=0:cottonSex=1&futa=futa+1
-	 if hekelSex=0:hekelSex=1&futa=futa+1
-	 SUB=SUB+1
-	 gang=gang+1
-         if penis>0:'<center><img src="pic/EvedonTA/EVinuriM.jpg" ></center>'
-         if penis<=0:'<center><img src="pic/EvedonTA/EVinuriF.jpg" ></center>'
+     if FutaSlutQW = 0: FutaSlutQW = 1
+     if inurisex = 0: inurisex = 1 & futa = futa+1
+	 minut += 15
+	 if cottonSex = 0: cottonSex = 1 & futa = futa+1
+	 if hekelSex = 0: hekelSex = 1 & futa = futa+1
+	 SUB = SUB+1
+	 gang = gang+1
+         if penis>0: '<center><img src = "pic/EvedonTA/EVinuriM.jpg" ></center>'
+         if penis<= 0: '<center><img src = "pic/EvedonTA/EVinuriF.jpg" ></center>'
          'Три футанари окружили вас и с улыбками поставили вас на колени они тут же подставили вам свои могучие и твердые члены, для обслуживания. Не видя других выходов вы начали отсасывать их члены по очереди и надрачивать их руками.'
-         gs'cumslut'
+         gs 'cumslut'
          'Наконец футы начали кончать вам на лицо покрывая его горячей спермой.'
-         cumface=cumface+3
-         facial=facial+3
-         bj=bj+3
-         act 'уйти':gt'teladareW'
+         cumface = cumface+3
+         facial = facial+3
+         bj = bj+3
+         act 'уйти': gt 'teladareW'
      end
 end
 
 
 
 
-if $ARGS[0]='whore':
+if $ARGS[0] = 'whore': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
-horny=horny+10
+ minut = minut + 15
+horny = horny+10
 clr
-gs'stat'
+gs 'stat'
 'Вы зашли за угол с забулдыгой и он вручив вам деньги достал член для обслуживания.'
-     act 'Сосать.':
+     act 'Сосать.': 
      cla
      *clr
-     gem=gem+100
-	 minut=minut+15
-	 guy=guy+1
-	 SUB=SUB+1
-     '<center><img src="pic/EvedonTA/whore.jpg" ></center>'
+     gem = gem+100
+	 minut += 15
+	 guy = guy+1
+	 SUB = SUB+1
+     '<center><img src = "pic/EvedonTA/whore.jpg" ></center>'
 	 'Вы сели на корточки перед пьянчугой и обхватили его пахнущий потом член, начав отсасывать. Пянчуга крякнул "Хорошо сосешь шлюха, настоящая профи."'
-	 gs'cumslut'
+	 gs 'cumslut'
 	 'Наконец из его члена прямо вам в горло начала стрелять омерзительная на вкус сперма, вы старательно сглатывали ее не прекращая ласкать член караванщика своим ротиком.'
-	 cumlip=cumlip+1
-	 swallow=swallow+1
-	 bj=bj+1
-	 act 'уйти':gt'teladareW'
+	 cumlip = cumlip+1
+	 swallow = swallow+1
+	 bj = bj+1
+	 act 'уйти': gt 'teladareW'
      end
 end
 

@@ -2,209 +2,209 @@
 
 
 
-evrand=RAND(0,100)
-if evrand>=80:
+evrand = RAND(0,100)
+if evrand>= 80: 
 
-     if hour>=5 and hour<21:
+     if hour>= 5 and hour<21: 
      !дневные монстры леса
-     tiprand=RAND(0,5)
-		 if fightforest<=0:
-		 fightforest=1
+     tiprand = RAND(0,5)
+		 if fightforest<= 0: 
+		 fightforest = 1
 		 
-			 if tiprand=0:
+			 if tiprand = 0: 
 			 cla
 			 *clr
-			 gs'aukaW'
-			 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+			 gs 'aukaW'
+			 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 			 'Из-за пенька высунулся небольшой, зеленоватый, пузатый человечек и по лицу видно, что высунулся он не с добрыми намерениями.'
-			 act 'Драться':gt'before'
+			 act 'Драться': gt 'before'
 			 exit
 			 end
 			 
-			 if tiprand=1:
+			 if tiprand = 1: 
 			 cla
 			 *clr
-			 monster=14
-			 $nameV='Оскверненное насекомое'
-			 lvlv=100
-			 strenV=100
-			 speedV=200
-			 agilV=200
-			 vitalV=100
-			 intelv=10
-			 willv=10
-			 program=28
-			 healthV=vitalV*10
-			 mannaV=intelV*10+intelV*5
-			 wipoV=willV*10
-			 mortalv=RAND(5,25)
-			 '<center><img src="pic/EvedonMonsters/bee.jpg"></center>'
+			 monster = 14
+			 $nameV = 'Оскверненное насекомое'
+			 lvlv = 100
+			 strenV = 100
+			 speedV = 200
+			 agilV = 200
+			 vitalV = 100
+			 intelv = 10
+			 willv = 10
+			 program = 28
+			 healthV = vitalV*10
+			 mannaV = intelV*10+intelV*5
+			 wipoV = willV*10
+			 mortalv = RAND(5,25)
+			 '<center><img src = "pic/EvedonMonsters/bee.jpg"></center>'
 			 'Из кустов выползло насекомое похожее на муху, только величиной с теленка, оно потерло лапками и уставилось на вас своими фасетчатыми глазами. Следом выползло еще одно, и еще, вскоре вы насчитали <<mortalv>> насекомых, которые устремились к вам.'
-			 act 'Драться':gt'before'
+			 act 'Драться': gt 'before'
 			 exit
 			 end
 			 
-			 if tiprand=2:
+			 if tiprand = 2: 
 			 cla
 			 *clr
-			 monster=15
-			 $nameV='Туманная ведьма'
-			 lvlv=100
-			 strenV=10
-			 speedV=10
-			 agilV=10
-			 vitalV=150
-			 intelv=450
-			 willv=100
-			 program=27
-			 healthV=vitalV*10
-			 mannaV=intelV*10+intelV*5
-			 wipoV=willV*10
-			 BATpotionV=RAND(3,10)
-			 '<center><img src="pic/EvedonMonsters/tumanvedma.jpg"></center>'
+			 monster = 15
+			 $nameV = 'Туманная ведьма'
+			 lvlv = 100
+			 strenV = 10
+			 speedV = 10
+			 agilV = 10
+			 vitalV = 150
+			 intelv = 450
+			 willv = 100
+			 program = 27
+			 healthV = vitalV*10
+			 mannaV = intelV*10+intelV*5
+			 wipoV = willV*10
+			 BATpotionV = RAND(3,10)
+			 '<center><img src = "pic/EvedonMonsters/tumanvedma.jpg"></center>'
 			 'Перед вами показалась симпатичная девушка. Она усмехнулась увидев вас.'
-			 act 'Драться':gt'before'
+			 act 'Драться': gt 'before'
 			 exit
 			 end
 			 
-			 if tiprand=3:
+			 if tiprand = 3: 
 			 cla
 			 *clr
-			 '<center><img src="pic/EvedonMonsters/elf.jpg"></center>'
-			 monster=16
-			 $nameV='Эльф отступник'
-			 lvlv=150
-			 strenV=500
-			 speedV=200
-			 agilV=200
-			 vitalV=50
-			 intelv=300
-			 willv=100
-			 program=31
-			 healthV=vitalV*10
-			 mannaV=intelV*10+intelV*12
-			 wipoV=willV*10
-			 BATpotionV=5
-			     if skverna>0:
+			 '<center><img src = "pic/EvedonMonsters/elf.jpg"></center>'
+			 monster = 16
+			 $nameV = 'Эльф отступник'
+			 lvlv = 150
+			 strenV = 500
+			 speedV = 200
+			 agilV = 200
+			 vitalV = 50
+			 intelv = 300
+			 willv = 100
+			 program = 31
+			 healthV = vitalV*10
+			 mannaV = intelV*10+intelV*12
+			 wipoV = willV*10
+			 BATpotionV = 5
+			     if skverna>0: 
 				 'Из-за кустов вышел эльф, он выругался на эльфийском языке сильным и звонким голосом и сказал на человеческом: "Я тебя научу как шляться по эльфийским лесам, оскверненная тварь."'
-				 act 'Драться':gt'before'
+				 act 'Драться': gt 'before'
 				 exit
 				 end
-				 if skverna<=0:
+				 if skverna<= 0: 
 				 'Вы чувствуете что за вами пристально наблюдают. Внезапно из-за кустов вышел эльф. Этот лес принадлежит нам, людям тут не место.'
-				 act 'Драться':gt'before'
+				 act 'Драться': gt 'before'
 				 exit
 				 end
 			 exit
 			 end
 			 
 			 
-			 if tiprand=4:
+			 if tiprand = 4: 
 			 cla
 			 *clr
-			 monster=19
-			 $nameV='Полиморф'
-			 lvlv=lvl
-			 strenV=stren
-			 speedV=speed
-			 agilV=agil
-			 vitalV=vital
-			 intelv=intel
-			 willv=will
-			 program=24
-			 healthV=vitalV*10
-			 mannaV=intelV*10+intelV*magika
-			 wipoV=willV*10
-			 fintv=5
-			 !monster=12
-			 '<center><img src="pic/EvedonMonsters/polimorf.jpg"></center>'
+			 monster = 19
+			 $nameV = 'Полиморф'
+			 lvlv = lvl
+			 strenV = stren
+			 speedV = speed
+			 agilV = agil
+			 vitalV = vital
+			 intelv = intel
+			 willv = will
+			 program = 24
+			 healthV = vitalV*10
+			 mannaV = intelV*10+intelV*magika
+			 wipoV = willV*10
+			 fintv = 5
+			 !monster = 12
+			 '<center><img src = "pic/EvedonMonsters/polimorf.jpg"></center>'
 			 'В траве вы увидели черную лужу, она молниеносно устремилась к вам вырастая и принимая человеческие очертания, буквально секунда и перед вами стояла ваша точная копия.'
-			 act 'Драться':gt'before'
+			 act 'Драться': gt 'before'
 			 exit
 			 end
 			 
-			 if tiprand=5:
+			 if tiprand = 5: 
 			 cla
 			 *clr
-			 gs'tentakleW'
+			 gs 'tentakleW'
 			 'Из-за кустов показалось мощное щупальце.'
-	         act 'Сражаться':gt'before'
+	         act 'Сражаться': gt 'before'
 	         exit
 			 end
 		 end
      
      end
      
-     if hour<5 or hour>=21:
-     tiprand=RAND(0,4)
-         if tiprand=0:
+     if hour<5 or hour>= 21: 
+     tiprand = RAND(0,4)
+         if tiprand = 0: 
 		 cla
 		 *clr
 		 !ночные монстры леса
-		 gs'werewolfW'
+		 gs 'werewolfW'
 		 'Неподалеку завыл волк и на вас из кустов выпрыгнул огромный двуногий волк. Оборотень оскалился и глухо зарычав бросился на вас.'
-		 act 'Драться':gt'before'
+		 act 'Драться': gt 'before'
 		 exit
 		 end
 		 
-		 if tiprand=1:
+		 if tiprand = 1: 
 		 cla
 		 *clr
 		 !ночные монстры леса
-		 gs'werewolfW'
-		 mortalv=RAND(3,8)
+		 gs 'werewolfW'
+		 mortalv = RAND(3,8)
 		 'Не подалеку завыли волки и на вас из кустов выпрыгнул огромный двуногий волк. Оборотень оскалился и глухо зарычав бросился на вас. Вы увидели, что еще несколько оборотней вылезло из кустов и присоединилось к нападающему.'
-		 act 'Драться':gt'before'
+		 act 'Драться': gt 'before'
 		 exit
 		 end
 		 
-		 if tiprand=2:
+		 if tiprand = 2: 
 		 cla
 		 *clr
-		 monster=19
-		 $nameV='Полиморф'
-		 lvlv=lvl
-		 strenV=stren
-		 speedV=speed
-		 agilV=agil
-		 vitalV=vital
-		 intelv=intel
-		 willv=will
-		 program=24
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*magika
-		 wipoV=willV*10
-		 fintv=5
-		 !monster=12
-		 '<center><img src="pic/EvedonMonsters/polimorf.jpg"></center>'
+		 monster = 19
+		 $nameV = 'Полиморф'
+		 lvlv = lvl
+		 strenV = stren
+		 speedV = speed
+		 agilV = agil
+		 vitalV = vital
+		 intelv = intel
+		 willv = will
+		 program = 24
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*magika
+		 wipoV = willV*10
+		 fintv = 5
+		 !monster = 12
+		 '<center><img src = "pic/EvedonMonsters/polimorf.jpg"></center>'
 		 'В траве вы увидели черную лужу, она молниеносно устремилась к вам вырастая и принимая человеческие очертания, буквально секунда и перед вами стояла ваша точная копия.'
-		 act 'Драться':gt'before'
+		 act 'Драться': gt 'before'
 		 exit
 		 end
 		 
-		 if tiprand=3:
+		 if tiprand = 3: 
 		 cla
 		 *clr
-		 gs'aukaW'
-		 mortalv=RAND(4,12)
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 gs 'aukaW'
+		 mortalv = RAND(4,12)
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 'Из-за пенька высунулся небольшой, зеленоватый, пузатый человечек и по лицу видно, что высунулся он не с добрыми намерениями. Из-за другого показалась еще одна рожица и еще. На полянку вышла целая банда Аук.'
-		 act 'Драться':gt'before'
+		 act 'Драться': gt 'before'
 		 exit
 		 end
 		 
-		 if tiprand=4:
+		 if tiprand = 4: 
 		 cla
 		 *clr
-		 gs'tentakleW'
+		 gs 'tentakleW'
 		 'В темноте послышался странный шорох и из-за кустов показалось мощное щупальце.'
-		 act 'Сражаться':gt'before'
+		 act 'Сражаться': gt 'before'
 		 exit
 		 end
      end
      
-     if fightforest>0:
-     fightforest=fightforest-1
+     if fightforest>0: 
+     fightforest = fightforest-1
      end
 end
 --- mobran ---------------------------------

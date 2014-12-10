@@ -1,17 +1,17 @@
 # nakazW
 *clr
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 $metka = $ARGS[0]
 $loc = $CURLOC
-if SUB<=0:horny=0
-if SUB>0:horny=horny+SUB
+if SUB<= 0: horny = 0
+if SUB>0: horny = horny+SUB
 
 
-if DemonMorf>=1 or skverna>=100 or vampireMorf>=1 or DemonWish>0:
+if DemonMorf>= 1 or skverna>= 100 or vampireMorf>= 1 or DemonWish>0: 
 'В вас обнаружили демоническое начало и тут же приговорили к смерти на костре.'
 'Маги из ордена выволокли вас на площадь и приковали к столбу, который обложили дровами и подожгли. Толпа ликовала когда пламя пожирало вас. Никакая защита вас не могла спасти, что-то было магическое в столбе что оттягивало ваши силы.'
 'Вы пронзительно закричали от боли и бились на столбе пока наконец смерть не принесла вам облегчение.'
@@ -21,147 +21,147 @@ exit
 end
 
 
-if crime=0:
+if crime = 0: 
 'Стража вас освобождает из оков и отпускает.'
-	 act 'Отойти от позорного столба':
-	 minut=minut+1
-	 gt'enterW'
+	 act 'Отойти от позорного столба': 
+	 minut += 1
+	 gt 'enterW'
 	 end
 end
 
 
-if crime=1 and pilloryG=0:
-gem=0
-vordubina=0
-vorazer=0
-vorknife=0
+if crime = 1 and pilloryG = 0: 
+gem = 0
+vordubina = 0
+vorazer = 0
+vorknife = 0
 'Стража приводит вас в министерство скорой расправы, где вас обыскивают и отбирают все деньги. Судья вас приговаривает к 10ти плетям и суткам у позорного столба. Вас выводят на площадь под смешки зевак и заковывают в деревянные колодки.'
-     act 'Получить удары плетью':
+     act 'Получить удары плетью': 
      cla
-     pilloryG=1
-     pillhour=24
-     health=health/2
-     wipo=wipo/2
-     manna=0
-     V_Roziske=0
-     if OrdenRang>0:OrdenRang=-1
+     pilloryG = 1
+     pillhour = 24
+     health = health/2
+     wipo = wipo/2
+     manna = 0
+     V_Roziske = 0
+     if OrdenRang>0: OrdenRang = -1
      'Палач достает кнут и со всей силы бьет им вам по заднице. Вы орете от жуткой боли. Удары все сыпятся на вас и вы уже не можете больше этого терпеть и начинаете терять сознание. Но тут удары прекращаются.'
-     act 'Далее':gt'nakazW'
+     act 'Далее': gt 'nakazW'
      end
 
 end
 
-if crime=1 and pilloryG=1 and pillhour=0:
-pilloryG=0
-crime=0
-pozor=pozor+1
-gt'nakazW'
+if crime = 1 and pilloryG = 1 and pillhour = 0: 
+pilloryG = 0
+crime = 0
+pozor = pozor+1
+ gt 'nakazW'
 end
 
-if crime=1 and pilloryG=1 and pillhour>0:
-'<center><img src="pic/Evedon/pillory.jpg" ></center>'
+if crime = 1 and pilloryG = 1 and pillhour>0: 
+'<center><img src = "pic/Evedon/pillory.jpg" ></center>'
 'Вы стоите нагнувшись раком в колодках.'
-     act 'Стоять час':
+     act 'Стоять час': 
      cla
-     minut=minut+60
-     pillhour=pillhour-1
-     pilaktrand=RAND(0,100)
-         if pilaktrand <50:
+     minut += 60
+     pillhour = pillhour-1
+     pilaktrand = RAND(0,100)
+         if pilaktrand <50: 
          'Вы простояли час в совершенно неудобной позе от которой у вас болят ноги и спина.'
          end
-         if pilaktrand >=50:
-         tipnakran=RAND(0,femin+100)
-             if tipnakran<femin:
-             wipo=wipo-5
-             tipsexrand=RAND(0,2)
-                 if vagina>0:
-                     if tipsexrand=0:
-                     bj=bj+1
-                     guy=guy+1
+         if pilaktrand >= 50: 
+         tipnakran = RAND(0,femin+100)
+             if tipnakran<femin: 
+             wipo = wipo-5
+             tipsexrand = RAND(0,2)
+                 if vagina>0: 
+                     if tipsexrand = 0: 
+                     bj = bj+1
+                     guy = guy+1
                      'Перед вашим лицом встает мужчина и достает свой немытый член, он подводит его к вашим губам и вставляет его вам в рот и начинает трахать ваше лицо.'
-                     finrand=RAND(0,1)
-                         if finrand = 0:
-                         swallow=swallow+1
-                         cumlip=cumlip+1
+                     finrand = RAND(0,1)
+                         if finrand = 0: 
+                         swallow = swallow+1
+                         cumlip = cumlip+1
                          'Мужчина кончает вам в рот и вы не имеете выбора, кроме как проглотить сперму.'
                          end
-                         if finrand = 1:
-                         facial=facial+1
-                         cumface=cumface+1
+                         if finrand = 1: 
+                         facial = facial+1
+                         cumface = cumface+1
                          'Мужчина достает член из вашего рта и кончает вам на лицо, покрывая его спермой.'
                          end
                      end
-                     if tipsexrand=1:
-                     anus=anus+1
-                     anal=anal+1
-                     guy=guy+1
+                     if tipsexrand = 1: 
+                     anus = anus+1
+                     anal = anal+1
+                     guy = guy+1
                      'Сзади к вам подошел мужчина и засунул вам палец в попу, после того как он немного поводил пальцем там, он вогнал вам в зад свой член и начал трахать вас.'
-                     finrand=RAND(0,1)
-                         if finrand = 0:
-                         cumass=cumass+1
+                     finrand = RAND(0,1)
+                         if finrand = 0: 
+                         cumass = cumass+1
                          'Наконец мужчина достает свой член из вашей попы и кончает вам на ягодицы.'
                          end
-                         if finrand = 1:
-                         cumanus=cumanus+1
+                         if finrand = 1: 
+                         cumanus = cumanus+1
                          'Мужчина застонал и вы почувствовали как теплая жидкость разливается в вашей попе. После чего он достал свой член из вас и отошел.'
                          end
                      end
-                     if tipsexrand=2:
-                     guy=guy+1
-                     sex=sex+1
-                     vag=vag+1
+                     if tipsexrand = 2: 
+                     guy = guy+1
+                     sex = sex+1
+                     vag = vag+1
                      'К вашей попе подошел мужчина и тут же вогнал вам в киску свой член, начав вас яростно трахать.'
-                     finrand=RAND(0,1)
-                         if finrand = 0:
-                         cumass=cumass+1
+                     finrand = RAND(0,1)
+                         if finrand = 0: 
+                         cumass = cumass+1
                          'Наконец мужчина достает свой член из вашей киски и кончает вам на ягодицы.'
                          end
-                         if finrand = 1:
-                         cumpussy=cumpussy+1
+                         if finrand = 1: 
+                         cumpussy = cumpussy+1
                          'Мужчина застонал и вы почувствовали как теплая жидкость ударяет вам в матку. После чего он достал свой член из вас и отошел.'
                          end
                      end
                  end
-                 if vagina=0:
-                     if tipsexrand=0:
-                     bj=bj+1
-                     guy=guy+1
+                 if vagina = 0: 
+                     if tipsexrand = 0: 
+                     bj = bj+1
+                     guy = guy+1
                      'Перед вашим лицом встает мужчина и достает свой немытый член, он подводит его к вашим губам и вставляет его вам в рот и начинает трахать ваше лицо.'
-                     finrand=RAND(0,1)
-                         if finrand = 0:
-                         swallow=swallow+1
-                         cumlip=cumlip+1
+                     finrand = RAND(0,1)
+                         if finrand = 0: 
+                         swallow = swallow+1
+                         cumlip = cumlip+1
                          'Мужчина кончает вам в рот и вы не имеете выбора, кроме как проглотить сперму.'
                          end
-                         if finrand = 1:
-                         facial=facial+1
-                         cumface=cumface+1
+                         if finrand = 1: 
+                         facial = facial+1
+                         cumface = cumface+1
                          'Мужчина достает член из вашего рта и кончает вам на лицо, покрывая его спермой.'
                          end
                      end
-                     if tipsexrand>0:
-                     anus=anus+1
-                     anal=anal+1
-                     guy=guy+1
+                     if tipsexrand>0: 
+                     anus = anus+1
+                     anal = anal+1
+                     guy = guy+1
                      'Сзади к вам подошел мужчина и засунул вам палец в попу, после того как он немного поводил пальцем там, он вогнал вам в зад свой член и начал трахать вас.'
-                     finrand=RAND(0,1)
-                         if finrand = 0:
-                         cumass=cumass+1
+                     finrand = RAND(0,1)
+                         if finrand = 0: 
+                         cumass = cumass+1
                          'Наконец мужчина достает свой член из вашей попы и кончает вам на ягодицы.'
                          end
-                         if finrand = 1:
-                         cumanus=cumanus+1
+                         if finrand = 1: 
+                         cumanus = cumanus+1
                          'Мужчина застонал и вы почувствовали как теплая жидкость разливается в вашей попе. После чего он достал свой член из вас и отошел.'
                          end
                      end
                  end
              end
-             if tipnakran>=femin:
-             sweat=sweat+1
+             if tipnakran>= femin: 
+             sweat = sweat+1
              'Добрые жители Эведона с хохотом швыряют в вас тухлыми яйцами.'
              end
          end
-     act 'Далее':gt'nakazW'
+     act 'Далее': gt 'nakazW'
      end
 end
 

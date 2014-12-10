@@ -1,32 +1,32 @@
 # RACE_COUNT
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
-set minut = minut + 1
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+ minut = minut + 1
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 !считаем попадания 
-set race_count=race_count+1
-set race_hit=1
-set $metka='finish'
+ race_count = race_count+1
+ race_hit = 1
+ $metka = 'finish'
 end
 
-if $ARGS[0]='finish':
+if $ARGS[0] = 'finish': 
 	'<center><B><<$car>></B></center>'
 	*PL $showcar
-	set minut = minut + 60
-	set benz = benz - 4
-	set teh = teh - RAND(2,6)
-	set manna = manna + 20
-	wipo=wipo+10
+	 minut = minut + 60
+	 benz = benz - 4
+	 teh = teh - RAND(2,6)
+	 manna = manna + 20
+	wipo = wipo+10
 	'Вы вписались в поворот <<race_count>> раз'
 	'Вы не справились с управлением <<race_miss>> раз'
-	act 'Вернуться в город':
+	act 'Вернуться в город': 
 	cla
-	xgt'car','salon'
+	xgt 'car','salon'
 	end 
 end
 --- RACE_COUNT ---------------------------------

@@ -1,34 +1,34 @@
 # manShW
-if $ARGS[0]='1':
+if $ARGS[0] = '1': 
 cla
 $metka = $ARGS[0]
 $loc = $CURLOC
-'<center><img src="pic/EvedonOd/shield.jpg" ></center>'
+'<center><img src = "pic/EvedonOd/shield.jpg" ></center>'
 'Маленький щит.'
 'Защита 20'
-act 'Убрать вещь.':GOTO $locP, $metkaP
-     if dershi = 0 and mag = 1:
+act 'Убрать вещь.': GOTO $locP, $metkaP
+     if dershi = 0 and mag = 1: 
      'Цена <<payclo>>'
-         if gem >= payclo:
-			 act 'Купить':
+         if gem >= payclo: 
+			 act 'Купить': 
 			 cla
-			 set gem = gem - payclo
-			 set dershi = 1
-			 !set kostumB = bedra
+			  gem = gem - payclo
+			  dershi = 1
+			 ! kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
-			 act 'Уйти.':GOTO $locP, $metkaP
+			 act 'Уйти.': GOTO $locP, $metkaP
 			 end
 		 end
-	 elseif mag = 0:
-			 act 'Выбрать':
+	 elseif mag = 0: 
+			 act 'Выбрать': 
 			 cla
-			 gs'ShildNill'
+			 gs 'ShildNill'
 			 !слот для статов и боевой системы
 			 shild = 1
 			 !щит для шкафа
 			 dershi = 2
 			 !защита для боевой системы
-			 ShilDef=20
+			 ShilDef = 20
 			 GOTO $locP, $metkaP
 			 end
      end

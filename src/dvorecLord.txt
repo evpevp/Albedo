@@ -5,22 +5,22 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Дворец Лорда</H4></center>'
-'<center><img src="pic/Evedon/dvorec.jpg" ></center>'
+'<center><img src = "pic/Evedon/dvorec.jpg" ></center>'
 '.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-'((Тронный зал|tronzal|minut=minut+5))'
-'((Служба охраны Лорда|SolCourtW|minut=minut+5))'
-'((Министерство|minCourtW|minut=minut+5))'
+'((Тронный зал|tronzal|minut += 5))'
+'((Служба охраны Лорда|SolCourtW|minut += 5))'
+'((Министерство|minCourtW|minut += 5))'
 
 
 
-	 act 'Уйти (5 мин)':
-	 minut=minut+5
-	 gt'courtW'
+	 act 'Уйти (5 мин)': 
+	 minut += 5
+	 gt 'courtW'
 	 end
 --- dvorecLord ---------------------------------
 

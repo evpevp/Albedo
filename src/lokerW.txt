@@ -5,47 +5,47 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 mag = 0
 clr
-gs'stat'
+gs 'stat'
 
-if SCslave=0:
-if roba = 1:'<a href="exec:GT ''manodW'',''1''">Рубище.</a>'
-if pesantclo = 1:'<a href="exec:GT ''manodW'',''2''">Крестьянская одежда.</a>'
-if townclo = 1:'<a href="exec:GT ''manodW'',''3''">Одежда горожанина.</a>'
-if dvorclo = 1:'<a href="exec:GT ''manodW'',''4''">Одежда дворянина.</a>'
-if rodvorclo = 1:'<a href="exec:GT ''manodW'',''5''">Роскошная одежда дворянина.</a>'
-if pesantclo2 = 1:'<a href="exec:GT ''manodW'',''6''">Крестьянская одежда Тель Адре.</a>'
-if townclo2 = 1:'<a href="exec:GT ''manodW'',''7''">Одежда горожанина Тель Адре.</a>'
-if bodysuit = 1:'<a href="exec:GT ''manodW'',''8''">Нанокостюм.</a>'
+if SCslave = 0: 
+if roba = 1: '<a href = "exec: gt ''manodW'',''1''">Рубище.</a>'
+if pesantclo = 1: '<a href = "exec: gt ''manodW'',''2''">Крестьянская одежда.</a>'
+if townclo = 1: '<a href = "exec: gt ''manodW'',''3''">Одежда горожанина.</a>'
+if dvorclo = 1: '<a href = "exec: gt ''manodW'',''4''">Одежда дворянина.</a>'
+if rodvorclo = 1: '<a href = "exec: gt ''manodW'',''5''">Роскошная одежда дворянина.</a>'
+if pesantclo2 = 1: '<a href = "exec: gt ''manodW'',''6''">Крестьянская одежда Тель Адре.</a>'
+if townclo2 = 1: '<a href = "exec: gt ''manodW'',''7''">Одежда горожанина Тель Адре.</a>'
+if bodysuit = 1: '<a href = "exec: gt ''manodW'',''8''">Нанокостюм.</a>'
 *nl
-if armor=1:'<a href="exec:GT ''manArW'',''1''">Легкий доспех.</a>'
-if armor2=1:'<a href="exec:GT ''manArW'',''2''">Средний доспех.</a>'
-if armor3=1:'<a href="exec:GT ''manArW'',''3''">Тяжелый доспех.</a>'
-if armor4=1:'<a href="exec:GT ''manArW'',''4''">Доспех пустынного жителя.</a>'
-if armor5=1:'<a href="exec:GT ''manArW'',''9''">Доспех стражи Эведона.</a>'
+if armor = 1: '<a href = "exec: gt ''manArW'',''1''">Легкий доспех.</a>'
+if armor2 = 1: '<a href = "exec: gt ''manArW'',''2''">Средний доспех.</a>'
+if armor3 = 1: '<a href = "exec: gt ''manArW'',''3''">Тяжелый доспех.</a>'
+if armor4 = 1: '<a href = "exec: gt ''manArW'',''4''">Доспех пустынного жителя.</a>'
+if armor5 = 1: '<a href = "exec: gt ''manArW'',''9''">Доспех стражи Эведона.</a>'
 *nl
-if robe=1:'<a href="exec:GT ''manArW'',''5''">Роба послушника ордена четырехлистника.</a>'
-if robe2=1:'<a href="exec:GT ''manArW'',''6''">Роба младшего магистра ордена четырехлистника.</a>'
-if robe3=1:'<a href="exec:GT ''manArW'',''7''">Роба старшего магистра ордена четырехлистника.</a>'
-if robeGrand=1:'<a href="exec:GT ''manArW'',''8''">Роба великого магистра ордена четырехлистника.</a>'
+if robe = 1: '<a href = "exec: gt ''manArW'',''5''">Роба послушника ордена четырехлистника.</a>'
+if robe2 = 1: '<a href = "exec: gt ''manArW'',''6''">Роба младшего магистра ордена четырехлистника.</a>'
+if robe3 = 1: '<a href = "exec: gt ''manArW'',''7''">Роба старшего магистра ордена четырехлистника.</a>'
+if robeGrand = 1: '<a href = "exec: gt ''manArW'',''8''">Роба великого магистра ордена четырехлистника.</a>'
 *nl
-if vorknife=1:'<a href="exec:GT ''manSwW'',''1''">Устрашающий нож.</a>'
-if vordubina=1:'<a href="exec:GT ''manSwW'',''2''">Воровская дубина.</a>'
-if mech = 1:'<a href="exec:GT ''manSwW'',''3''">Короткий меч.</a>'
-if mech2 = 1:'<a href="exec:GT ''manSwW'',''4''">Средний меч.</a>'
-if mech3 = 1:'<a href="exec:GT ''manSwW'',''5''">Дворянский меч.</a>'
-if desertSword = 1:'<a href="exec:GT ''manSwW'',''6''">Пустынный меч.</a>'
+if vorknife = 1: '<a href = "exec: gt ''manSwW'',''1''">Устрашающий нож.</a>'
+if vordubina = 1: '<a href = "exec: gt ''manSwW'',''2''">Воровская дубина.</a>'
+if mech = 1: '<a href = "exec: gt ''manSwW'',''3''">Короткий меч.</a>'
+if mech2 = 1: '<a href = "exec: gt ''manSwW'',''4''">Средний меч.</a>'
+if mech3 = 1: '<a href = "exec: gt ''manSwW'',''5''">Дворянский меч.</a>'
+if desertSword = 1: '<a href = "exec: gt ''manSwW'',''6''">Пустынный меч.</a>'
 *nl
-if dershi=1:'<a href="exec:GT ''manShW'',''1''">Маленький щит.</a>'
+if dershi = 1: '<a href = "exec: gt ''manShW'',''1''">Маленький щит.</a>'
 
 
 
-act 'Закрыть шкаф':GOTO $locBed, $metkaBed
+act 'Закрыть шкаф': GOTO $locBed, $metkaBed
 
 end
 
-if SCslave=1:
+if SCslave = 1: 
 
-act 'Осмотреться':GT'SLAVECELL'
+act 'Осмотреться': gt 'SLAVECELL'
 end
 --- lokerW ---------------------------------
 

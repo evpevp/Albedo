@@ -1,16 +1,16 @@
 # gaman
-horny=100
-gaman=gaman-1
-     if narkoman=0:narkota=narkota+1
-     if narkota>=10 and narkoman=1:narkota=narkota+3
-     if narkota<10 and narkoman=1:
-     narkota=12
-     SUB=SUB+1
-     will=will-1
-     if will<1:will=1
-     '<B><font color=red>Вы приняли наркотик, чтобы облегчить ломку и почувствовали себя безвольной тряпкой.</font></B>'
+horny = 100
+gaman = gaman-1
+     if narkoman = 0: narkota = narkota+1
+     if narkota>= 10 and narkoman = 1: narkota = narkota+3
+     if narkota<10 and narkoman = 1: 
+     narkota = 12
+     SUB = SUB+1
+     will = will-1
+     if will<1: will = 1
+     '<B><font color = red>Вы приняли наркотик, чтобы облегчить ломку и почувствовали себя безвольной тряпкой.</font></B>'
      end
 clr
-gs'stat'
+gs 'stat'
 --- gaman ---------------------------------
 

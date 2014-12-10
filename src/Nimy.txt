@@ -1,15 +1,15 @@
 # Nimy
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-gs'stat'
+gs 'stat'
 !Ними музыкант
 'Ними строго посмотрела на вас.'
 
-	 act 'Уйти':
+	 act 'Уйти': 
 	 GOTO $locBed, $metkaBed
 	 end
 

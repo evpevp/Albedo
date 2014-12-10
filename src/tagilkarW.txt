@@ -2,38 +2,38 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 *clr
-'<center><img src="pic/EvedonNarod/karavanchiki1.jpg"></center>'
+'<center><img src = "pic/EvedonNarod/karavanchiki1.jpg"></center>'
 
-if femin<200:
+if femin<200: 
 'Караванщики из Эведона немного отвлеклись на вас, посмотрели и дружно заржали. "Эй друг! Мы думали в Тель Адре только бабы, да членобабы. Или ты может сюда заявился, чтобы тоже бабой стать?"'
 
-act 'Уйти':GOTO $locP, $metkaP
+act 'Уйти': GOTO $locP, $metkaP
 end
 
-if femin>=200:
-     if penis>0:
+if femin>= 200: 
+     if penis>0: 
      'Один из Эведонских караванщиков внезапно схватил вас между ног. Вы взвизгнули когда он сжал ваш член рукой.'
      'Караванщик заржал. "Это тоже членодевка. Га га га! Я же говорил в Тель Адре просто рассадник членодевок."'
-     act 'Уйти':GOTO $locP, $metkaP
+     act 'Уйти': GOTO $locP, $metkaP
      end
-     if penis=0:
-     takarand=RAND(0,10)
-         if takarand<8 or whore<10:
+     if penis = 0: 
+     takarand = RAND(0,10)
+         if takarand<8 or whore<10: 
 		 'Караванщики присвистнули. Ого какая телочка! Эй крошка, иди к нам, составь компанию.'
-		 act 'Уйти':GOTO $locP, $metkaP
-			 act 'Сесть к караванщикам':gt'karavanersW','start'
+		 act 'Уйти': GOTO $locP, $metkaP
+			 act 'Сесть к караванщикам': gt 'karavanersW','start'
          end 
-         if takarand>=8 and whore>=10:
+         if takarand>= 8 and whore>= 10: 
          
          'Эй соска, мы тут в карты играем, но как-то скучно, может залезешь под стол и развлечешь нас? Штука гемов.'
-          act 'Уйти':GOTO $locP, $metkaP
-             act 'Давайте деньги':
+          act 'Уйти': GOTO $locP, $metkaP
+             act 'Давайте деньги': 
              cla
              *clr
-             karavday=day
-             gem=gem+1000
+             karavday = day
+             gem = gem+1000
              'Караванщики заржали и кинули под стол кошелек, набитый гемами, полезай и возьми все что тебе причитается.'
-             act 'Лезть под стол':gt'karavanersW','table'
+             act 'Лезть под стол': gt 'karavanersW','table'
              end 
          end
      end

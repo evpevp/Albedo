@@ -8,34 +8,34 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 mag = 1
 '<center><H4>Съемная комната</H4></center>'
-'<center><img src="pic/Evedon/foroom.jpg" ></center>'
+'<center><img src = "pic/Evedon/foroom.jpg" ></center>'
 'Небольшая комната, но уютная и в ней есть все необходимое.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 
-'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
-'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
-'Резной <a href="exec:GT ''lokerW''">шкаф</a>.'
-'Уютный <a href="exec:GT ''divanW''">диван</a>.'
-if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
-if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+'Застеленная, чистая <a href = "exec: gt ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href = "exec: gt ''kadka''">для мытья</a>.'
+'Резной <a href = "exec: gt ''lokerW''">шкаф</a>.'
+'Уютный <a href = "exec: gt ''divanW''">диван</a>.'
+if mirr>0: '<a href = "exec: gt ''mirrW''">Зеркало</a>'
+if brakW>0: '<a href = "exec: gt ''marryWorld''"><<$namefrendM>></a>'
 
-if slot=0:
+if slot = 0: 
 *nl
 'Без одежды нельзя выходить на улицу.'
 end
 
-if slot>0:
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'foTraktir'
+if slot>0: 
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'foTraktir'
 	 end
 end
 --- foRoom ---------------------------------

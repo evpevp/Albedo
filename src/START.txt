@@ -1,96 +1,96 @@
 # START
-set $name = 'Игорь'
-set $surname = 'Харитонов'
+ $name = 'Игорь'
+ $surname = 'Харитонов'
 
-set fat = 100
-set son = 18
-set golod = 3
-tarelka=1
-fairy=5
-milo=3
-stanok=5
-eda=3
-shampoo=5
+ fat = 100
+ son = 18
+ golod = 3
+tarelka = 1
+fairy = 5
+milo = 3
+stanok = 5
+eda = 3
+shampoo = 5
 prava = 1
 
 
-set rost = 192
-lvl=1
-exp=0
-stren=10
-speed=10
-agil=10
-vital=10
-intel=10
-will=10
-health=vital*10
-manna=intel*10
-wipo=will*10
-stamina=health
-chin=will
-!set chin = 500
-!set stamina = 1500
-!set jab = 100
-!set punch = 100
-!set kik = 100
-!set defence = 100
+ rost = 192
+lvl = 1
+exp = 0
+stren = 10
+speed = 10
+agil = 10
+vital = 10
+intel = 10
+will = 10
+health = vital*10
+manna = intel*10
+wipo = will*10
+stamina = health
+chin = will
+! chin = 500
+! stamina = 1500
+! jab = 100
+! punch = 100
+! kik = 100
+! defence = 100
 !safemoney = 5000
 !kvartira = 1
-money=50000
+money = 50000
 bankfond = 3545295
-balance=15000000
-zarplata=200000
-smuzemla=5000000
-smuzpfull=2300000+zarplata
-smuteh=1000000
-smupro=500000
-smurashod=smupro+smuteh+smuzpfull+smuzemla+smukredit
-smudohod=0
-smukredit=0
-zpmaid=30000
-sauna=0
-pornstudio=0
-DVD_avtomat=0
-film=0
-filmpart=0
-BDSMfilm=0
-BDSMactress=0
-BDSMtoilet=0
+balance = 15000000
+zarplata = 200000
+smuzemla = 5000000
+smuzpfull = 2300000+zarplata
+smuteh = 1000000
+smupro = 500000
+smurashod = smupro+smuteh+smuzpfull+smuzemla+smukredit
+smudohod = 0
+smukredit = 0
+zpmaid = 30000
+sauna = 0
+pornstudio = 0
+DVD_avtomat = 0
+film = 0
+filmpart = 0
+BDSMfilm = 0
+BDSMactress = 0
+BDSMtoilet = 0
 kostum = 1
 manjeans = 1
 sport = 1
-set kostumE = 5000
-set manjeansE = 5000
-set sportE = 5000
+ kostumE = 5000
+ manjeansE = 5000
+ sportE = 5000
 
-car=100
-benz=40
-teh=950
-tehcar=1000
+car = 100
+benz = 40
+teh = 950
+tehcar = 1000
 cardrive = 2
-$car='Mercedes-Benz S 600'
+$car = 'Mercedes-Benz S 600'
 
-set vidageday = 360
-set age = 42
-set vidage = 42
-set year = 2010
-set month = 3
-set week = 6
-set hour = 10
-set day = 1
-set pol = 0
+ vidageday = 360
+ age = 42
+ vidage = 42
+ year = 2010
+ month = 3
+ week = 6
+ hour = 10
+ day = 1
+ pol = 0
 
 '<center><H1>АЛЬБЕДО</H1></center>'
 
 
-fcolor=rgb(83,6,25)
-bcolor=rgb(204,204,255)
+fcolor = rgb(83,6,25)
+bcolor = rgb(204,204,255)
 LCOLOR = rgb(106,90,205)
 *nl
 *nl
 *nl
 *nl
-!'<center><img src="pic\start.jpg" ></center>'
+!'<center><img src = "pic\start.jpg" ></center>'
 'Игра родившаяся из слияния идей ЭТО и Завоевания.'
 *nl
 'Игра не предназначенна для тех кому еще не исполнилось 18 лет.'
@@ -106,12 +106,12 @@ LCOLOR = rgb(106,90,205)
 !'<center><H3>АЛЬБЕДО</H3></center>'
 !'<center><H4>АЛЬБЕДО</H4></center>'
 !'<center><H5>АЛЬБЕДО</H5></center>'
-!'<center><B><font color=rgb(204,204,255)>АЛЬБЕДО</font></B></center>'
-!'<center><img src="pic\start.jpg" ></center>'
+!'<center><B><font color = rgb(204,204,255)>АЛЬБЕДО</font></B></center>'
+!'<center><img src = "pic\start.jpg" ></center>'
 
 
 
-!act 'ДАЛЕЕ':gt'begin'
+!act 'ДАЛЕЕ': gt 'begin'
 
 
 

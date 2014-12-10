@@ -3,32 +3,32 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Мэри Кеннет</H4></center>'
-'<center><img src="pic/EvedonNarod/MaryKennet.jpg" ></center>'
+'<center><img src = "pic/EvedonNarod/MaryKennet.jpg" ></center>'
 'Скромная молодая девушка полная противоположность своей разбитной мамаши.'
 clr
-gs'stat'
+gs 'stat'
 
 
-act 'Уйти':gt $locFight,$metkaFight
+act 'Уйти': gt $locFight,$metkaFight
 
-act 'Болтать':
+act 'Болтать': 
 cla
-minut+=15
-gs'stat'
-     if StefanQW>=1:
+minut+= 15
+gs 'stat'
+     if StefanQW>= 1: 
      'Привет <<$name>>.'
      end
      'Я до обеда торгую в лавке, пока мама делами занимается. Зато можно вечером отдохнуть.'
-act 'Уйти':gt $locFight,$metkaFight
+act 'Уйти': gt $locFight,$metkaFight
 end
 
-if toiletJerkQW=2:
-     act 'Спросить могут ли у нее поселится приезжие':
+if toiletJerkQW = 2: 
+     act 'Спросить могут ли у нее поселится приезжие': 
 	 cla
-	 minut+=15
-	 gs'stat'
+	 minut+= 15
+	 gs 'stat'
 	 'Об этом надо поговорить с моей мамой.'
-	 act 'Уйти':gt $locFight,$metkaFight
+	 act 'Уйти': gt $locFight,$metkaFight
 	 end
 end
 --- MaryKennet ---------------------------------

@@ -1,109 +1,109 @@
 # InnaVannaya
 *clr
-minut=minut+1
+minut += 1
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>ВАННАЯ КОМНАТА</H4></center>'
-'<center><img src="pic\room\VanaI.jpg" ></center>'
+'<center><img src = "pic\room\VanaI.jpg" ></center>'
 'В ванной все стандартно ((умывальник|umiv)) над которым висит ((зеркало|mirror)) и большая ((ванная|innavan))'
 clr
-gs'stat'
+gs 'stat'
 
-if shampoo <= 1:shampoo = 10
-if stanok <= 1:stanok = 10
-if milo <= 1:milo = 10
+if shampoo <= 1: shampoo = 10
+if stanok <= 1: stanok = 10
+if milo <= 1: milo = 10
 
-if innaday=day and innaQW>=200 and CheckInnaShower=1:
+if innaday = day and innaQW>= 200 and CheckInnaShower = 1: 
 	cla
 	*clr
 	'Зайдя в ванную, вы замечаете свою дочь в душевой. Она стоит к вам спиной и льет из душа холодную воду на свою попку. Видимо после вашей горячей встречи - это единственный способ для неё остыть.'
-	'<center><img src="pic\fam\dotashower.gif" ></center>'
-	CheckInnaShower=0
-	act 'Выйти':gt'InnaKor'
-	act 'Незаметно понаблюдать':
+	'<center><img src = "pic\fam\dotashower.gif" ></center>'
+	CheckInnaShower = 0
+	act 'Выйти': gt 'InnaKor'
+	act 'Незаметно понаблюдать': 
 		 cla
 		 *clr
 		 'Добавив горячей воды - Инна перевела напор воды с попки на киску, лаская струйками свой клитор. Вам стало немного стыдно, ведь всё время вы думали лишь о своём удовольствии, забывая напрочь об оргазме Инны.'
-		 '<center><img src="pic\fam\InnaS1.jpg" ></center>'
-		 act 'Что же дальше?':
+		 '<center><img src = "pic\fam\InnaS1.jpg" ></center>'
+		 act 'Что же дальше?': 
 			 cla
 			 *clr
-			 '<center><img src="pic\fam\InnaS2.jpg" ></center>'
+			 '<center><img src = "pic\fam\InnaS2.jpg" ></center>'
 			 'Инна взяв щетку для купания не стала намыливать ни своё тело, ни наносить мыло на щетку...'
-			act '...':
+			act '...': 
 				 cla
 				 *clr
-				 '<center><img src="pic\fam\InnaS3.jpg" ></center>'
+				 '<center><img src = "pic\fam\InnaS3.jpg" ></center>'
 				 '...усевшись на полу в душевой, она стала аккуратно мастурбировать рукоятью щетки. Это явный плевок в ваше самолюбие...вместо секса с вами - секс со ЩЕТКОЙ. Хотя сам виноват...надо было думать о чувствах дочки во время секса, а не только мучить её попку! Ну ничего - сейчас все поправим...'
-				 act '...':
+				 act '...': 
 					 cla
 					 *clr
-					 '<center><img src="pic\fam\InnaS4.jpg" ></center>'
+					 '<center><img src = "pic\fam\InnaS4.jpg" ></center>'
 					 '...пулей подлетев к дочке - Вы: Все доча, хватит баловаться в одиночку. Сейчас я займусь тобой вплотную.'
 					 'Инна корчит вам рожи, смеётся и отнекивается. Вдобавок еще и вцепилась в опорную трубу.'
 					 'Без труда отцепив ее - вы поволокли ее в спальню. Инна по пути вырвалась, но обещала через минутку подойти...'
 					 '...Инна: секундочку...я тут кое-что купила в магазине женского белья!'
-					 act 'Пару минут спустя':
+					 act 'Пару минут спустя': 
 						 cla
 						 *clr
-						 '<center><img src="pic\fam\InnaAfterSh1.jpg" ></center>'
+						 '<center><img src = "pic\fam\InnaAfterSh1.jpg" ></center>'
 						 'Инна: Как тебя, а?'
 						 'Вы: Ты просто бомба, крошка! Подойди ближе!'
-						 act '...':
+						 act '...': 
 						 	 cla
 							 *clr
-							 '<center><img src="pic\fam\InnaAfterSh2.jpg" ></center>'
+							 '<center><img src = "pic\fam\InnaAfterSh2.jpg" ></center>'
 							 'Когда Инна подошла ближе - вы прошлись своим взглядом по её телу, развернули её и стали играться её аппетитными булочками. Да, не зря кормили!'
-							 act 'Продолжить':
+							 act 'Продолжить': 
 								 cla
 								 *clr
-								 '<center><img src="pic\fam\InnaAfterSh3.jpg" ></center>'
+								 '<center><img src = "pic\fam\InnaAfterSh3.jpg" ></center>'
 								 'Наигравшись вдоволь - вы кладете Инну прямо на пол - задираете её эротическое одеяние и начинаете ласкать её киску'
-								 act '...':
+								 act '...': 
 									 cla
 									 *clr
-									 '<center><img src="pic\fam\InnaAfterSh4.jpg" ></center>'
+									 '<center><img src = "pic\fam\InnaAfterSh4.jpg" ></center>'
 									 'Вы: чего бездельничаешь - поработай тоже ротиком!'
 									 'Инна тут же расстегнула ваши джинсы и стала приводить ваш член в боевую готовность.'
-									 act '...':
+									 act '...': 
 										 cla
 										 *clr
-										 '<center><img src="pic\fam\InnaAfterSh5.jpg" ></center>'
+										 '<center><img src = "pic\fam\InnaAfterSh5.jpg" ></center>'
 										 'Почувствовав, что кисуля Инны пустила соки, усевшись на диван - вы насаживаете её на свой фаллос'
-										 act 'Далее...':
+										 act 'Далее...': 
 											 cla
 											 *clr
-											 '<center><img src="pic\fam\InnaAfterSh6.jpg" ></center>'
+											 '<center><img src = "pic\fam\InnaAfterSh6.jpg" ></center>'
 											 'Играя с  темпом, вы внимательно следите за состоянием Инны, дабы принести ей максимальное удовольствие и в тоже время не кончить раньше времени.'
-											 act 'И вот-вот-вот...':
+											 act 'И вот-вот-вот...': 
 												 cla
 												 *clr
-												 '<center><img src="pic\fam\InnaAfterSh7.jpg" ></center>'
+												 '<center><img src = "pic\fam\InnaAfterSh7.jpg" ></center>'
 												 '...наконец настает тот момент - по телу Инны проходит легкая дрожь, её явно бросает в жар, количество сокращений  мышц её киски не поддается счету, а из уст срывается стон сладострастия...Фух, вы горды собой!'
-												 InnaOrgasmCounter=InnaOrgasmCounter+1
-												 if InnaOrgasmCounter>=InnaOrgasmQW and InnaOrgasmQW!-1:
-													 InnaOrgasmQW=-1
-													 InnaBDSM=1
+												 InnaOrgasmCounter = InnaOrgasmCounter+1
+												 if InnaOrgasmCounter>= InnaOrgasmQW and InnaOrgasmQW!-1: 
+													 InnaOrgasmQW = -1
+													 InnaBDSM = 1
 													 'Инна: Ты столько раз был нежен со мной. Мне так приятно! Если хочешь, в следующий раз можешь побыть моим хозяином, а я твоей покорной шлюшкой.'
 													 msg 'У вас созрел план. Инна живет на последнем этаже. Вверху есть чердак, который можно легко превратить в мансарду. Если выкупить это помещение (хозяин дома живет на первом этаже) и прикупить в секс шопе кое-что, то получится отличная BDSM студия, где можно будет от души "погонять" Инку!'
 												 end
-												 act 'Кончить':
+												 act 'Кончить': 
 													 cla
 													 *clr
-													 '<center><img src="pic\fam\InnaAfterShCream.jpg" ></center>'
+													 '<center><img src = "pic\fam\InnaAfterShCream.jpg" ></center>'
 													 'Лишь после того, как волны оргазма накрывшие Инну стихли - вы позволили себе кончить в её лоно и полюбоваться своим деянием.'
-													 manna=manna+25
-                                                     wipo=wipo+25
-											         horny=0
-											         sexm=sexm+1
-											         InnaLastFuckDay=day
-													 set minut=minut+45
-													 act 'Привести себя в порядок':gt'InnaKor'
+													 manna = manna+25
+                                                     wipo = wipo+25
+											         horny = 0
+											         sexm = sexm+1
+											         InnaLastFuckDay = day
+													  minut += 45
+													 act 'Привести себя в порядок': gt 'InnaKor'
 												 end
 											 end
 										 end
@@ -117,114 +117,114 @@ if innaday=day and innaQW>=200 and CheckInnaShower=1:
 		 end
 	 end
 else
- act 'Коридор':gt'InnaKor'
+ act 'Коридор': gt 'InnaKor'
 end
 
-case=rand(1,10)
+case = rand(1,10)
 
-if innavag=0 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
+if innavag = 0 and case = 7 and CheckInnaShower!1 and (hour>= 16 or hour<= 8): 
 	 cla
 	 clr
 	 'Зайдя в ванную, вы обнаруживаете свою дочь, которая готовится к принятию ванны'
-	 picrand=Rand(0,1)
-	 if picrand=0:'<center><img src="pic\fam\DnsB1.jpg" ></center>'
-	 if picrand=1:'<center><img src="pic\fam\DnsB2.jpg" ></center>'
+	 picrand = Rand(0,1)
+	 if picrand = 0: '<center><img src = "pic\fam\DnsB1.jpg" ></center>'
+	 if picrand = 1: '<center><img src = "pic\fam\DnsB2.jpg" ></center>'
 	 'Инна: ПАПА!!!'	
 	 'Вы: Извини доча!...Направляясь к выходу: закрывать дверь надо!'
-	 act 'Выйти из ванной':GOTO $locM, $metkaM
+	 act 'Выйти из ванной': GOTO $locM, $metkaM
 end
 
-if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
+if innavag = 1 and case = 7 and CheckInnaShower!1 and (hour>= 16 or hour<= 8): 
 	 cla
 	 *clr
 	 'Зайдя в ванную вы обнаруживаете свою дочь, которая в ней моется'
-	 '<center><img src="pic\fam\Dbs1.jpg" ></center>'
-	 act '...':
+	 '<center><img src = "pic\fam\Dbs1.jpg" ></center>'
+	 act '...': 
 		 cla
 		 *clr
 		 'Инна пристально глядя на вас, выключила воду и потянулась ртом к крану...делая хоть и странный, но в свою очередь вполне понятный намёк...' 
-		 '<center><img src="pic\fam\Dbs2.jpg" ></center>'	
+		 '<center><img src = "pic\fam\Dbs2.jpg" ></center>'	
 		 'Вы, закрыв дверь в ванну на замок, подошли к дочке'
-		 act '...':
+		 act '...': 
 			 cla
 			 *clr
-			 '<center><img src="pic\fam\Dbs3.jpg" ></center>'	
+			 '<center><img src = "pic\fam\Dbs3.jpg" ></center>'	
 			 'Обхватив губами ваш член, Инна стала его нежно ласкать языком...смотря на вас взглядом, который бывает лишь у очень преданных хозяину собак'
-			 act 'Продолжить оральную забаву':
+			 act 'Продолжить оральную забаву': 
 				 cla
 				 *clr
-				 '<center><img src="pic\fam\Dbs4.jpg" ></center>'
+				 '<center><img src = "pic\fam\Dbs4.jpg" ></center>'
 				 'Не в силах больше терпеть столько ласки, вы выстреливаете горячий поток спермы в лицо дочки'	
-				 act '...':
+				 act '...': 
 					 cla
 					 *clr
-					 '<center><img src="pic\fam\Dbs5.jpg" ></center>'
-					 'Инна смотрит на вас счастливыми глазами. Да уж...новый уровень отношений с дочерью вам явно нравится! Да и ей он к лицу :)'
-					 set minut = minut + 20
-					 sexm=sexm+1
-					 manna=manna+25
-                     wipo=wipo+25
-                     InnaLastFuckDay=day
-					 horny=0
-					 act 'Привести себя в порядок и выйти из ванной':GOTO $locM, $metkaM
+					 '<center><img src = "pic\fam\Dbs5.jpg" ></center>'
+					 'Инна смотрит на вас счастливыми глазами. Да уж...новый уровень отношений с дочерью вам явно нравится! Да и ей он к лицу : )'
+					  minut = minut + 20
+					 sexm = sexm+1
+					 manna = manna+25
+                     wipo = wipo+25
+                     InnaLastFuckDay = day
+					 horny = 0
+					 act 'Привести себя в порядок и выйти из ванной': GOTO $locM, $metkaM
 					 
 				 end
 			end
-			act 'Нежно погрузиться во внутренний мир дочки':
+			act 'Нежно погрузиться во внутренний мир дочки': 
 				 cla
 				 *clr
-				 '<center><img src="pic\fam\Dbs6.jpg" ></center>'
+				 '<center><img src = "pic\fam\Dbs6.jpg" ></center>'
 				 'Усадив дочку, вы аккуратно входите в её узкую щелочку, постепенно наращивая темп и приближаясь к кульминации'
-				 act 'Продолжить дрючить дочь':
+				 act 'Продолжить дрючить дочь': 
 					 cla
 					 *clr
-					 '<center><img src="pic\fam\Dbs7.jpg" ></center>'
+					 '<center><img src = "pic\fam\Dbs7.jpg" ></center>'
 					 'Предчувствуя оргазм, вы высовываете член из киски и отправляете струйки семени на нежное тело дочки'
-					 act 'Привести себя в порядок и выйти из ванной':
-						 set minut = minut + 25
-						 sexm=sexm+1
-						 manna=manna+25
-                         wipo=wipo+25
-                         InnaLastFuckDay=day
-						 horny=0
+					 act 'Привести себя в порядок и выйти из ванной': 
+						  minut = minut + 25
+						 sexm = sexm+1
+						 manna = manna+25
+                         wipo = wipo+25
+                         InnaLastFuckDay = day
+						 horny = 0
 						 GOTO $locM, $metkaM
 					 end
 				 end
-			 act 'Кончить на личико':
+			 act 'Кончить на личико': 
 				 cla
 				 *clr
-				 '<center><img src="pic\fam\Dbs5.jpg" ></center>'
-				 'Инна смотрит на вас счастливыми глазами. Да уж...новый уровень отношений с дочерью вам явно нравится! Да и ей он к лицу :)'
-				 set minut = minut + 25	
-				 set sexm=sexm+1
-				 manna=manna+25
-                 wipo=wipo+25
-                 InnaLastFuckDay=day
-				 horny=0
-				 act 'Привести себя в порядок и выйти из ванной':GOTO $locM, $metkaM
+				 '<center><img src = "pic\fam\Dbs5.jpg" ></center>'
+				 'Инна смотрит на вас счастливыми глазами. Да уж...новый уровень отношений с дочерью вам явно нравится! Да и ей он к лицу : )'
+				  minut = minut + 25	
+				  sexm = sexm+1
+				 manna = manna+25
+                 wipo = wipo+25
+                 InnaLastFuckDay = day
+				 horny = 0
+				 act 'Привести себя в порядок и выйти из ванной': GOTO $locM, $metkaM
 			 end
-			 act 'Поставить раком':
+			 act 'Поставить раком': 
 				 cla
 				 *clr
-				 '<center><img src="pic\fam\Dbs8.jpg" ></center>'
+				 '<center><img src = "pic\fam\Dbs8.jpg" ></center>'
 				 'Оперевшись об умывальник, Инна предоставила вам возможность пристроиться сзади. Вогнав свой член в дочь, вы не стали сразу наращивать быстрый темп, решив насладиться узенькой щелочкой дочери и ее чудесным обхватом'
-				 act '...':
+				 act '...': 
 					 cla
 					 *clr
-					 '<center><img src="pic\fam\Dbs9.jpg" ></center>'
+					 '<center><img src = "pic\fam\Dbs9.jpg" ></center>'
 					 'Устав от медленного марафона и нарастив темп, вы стремительно приближаетесь к пику наслаждения. Инна, глядя на вас, рычит, закусывая при этом нижнюю губу.'
-					 act '...':
+					 act '...': 
 						 cla
 						*clr
-						 '<center><img src="pic\fam\Dbs10.jpg" ></center>'
+						 '<center><img src = "pic\fam\Dbs10.jpg" ></center>'
 						 'В последний момент вы успеваете вынуть свой агрегат из лона дочки и обдать ёё попку и киску спермой...некоторое время вы стоите и любуетесь как ручейки спермы стекают вдоль тела Инны'
-						 set minut = minut + 30
-						 sexm=sexm+1
-						 manna=manna+25
-                         wipo=wipo+25
-                         InnaLastFuckDay=day
-						 horny=0
-						 act 'Привести себя в порядок и выйти из ванной':GOTO $locM, $metkaM
+						  minut = minut + 30
+						 sexm = sexm+1
+						 manna = manna+25
+                         wipo = wipo+25
+                         InnaLastFuckDay = day
+						 horny = 0
+						 act 'Привести себя в порядок и выйти из ванной': GOTO $locM, $metkaM
 						 end
 					 end
 				 end

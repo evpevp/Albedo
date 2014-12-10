@@ -9,122 +9,122 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Комната Лидии, точная копия вашей</H4></center>'
-'<center><img src="pic/Evedon\ordenRoom.jpg" ></center>'
+'<center><img src = "pic/Evedon\ordenRoom.jpg" ></center>'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if lidiaQW=>1:
-'<center><img src="pic/EvedonNarod\lidia.jpg" ></center>'
+if lidiaQW >=1: 
+'<center><img src = "pic/EvedonNarod\lidia.jpg" ></center>'
 'Лидия улыбается вам."Привет <<$name>>, проходи."'
-act 'Уйти':gt'foOrden'
-     act 'Поцеловать':
+act 'Уйти': gt 'foOrden'
+     act 'Поцеловать': 
      cla
      *clr
-     '<center><img src="pic/Evedon\1\lidiakiss.jpg" ></center>'
-     gs'stat'
+     '<center><img src = "pic/Evedon\1\lidiakiss.jpg" ></center>'
+     gs 'stat'
      'Вы целуете девушку в ее сладкие губы, постепенно переходя к главному'
-     act 'Смотреть на Лидию':gt'lidiaRoom','lidiapred'
+     act 'Смотреть на Лидию': gt 'lidiaRoom','lidiapred'
      end
      end
 end
 
-if $ARGS[0]='lidiapred':
+if $ARGS[0] = 'lidiapred': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-set minut=minut+5
-horny=horny+25
-gs'stat'
-'<center><img src="pic/Evedon\1\lidiastrip.jpg" ></center>'
+ minut += 5
+horny = horny+25
+gs 'stat'
+'<center><img src = "pic/Evedon\1\lidiastrip.jpg" ></center>'
 'Лидия начинает раздеваться. Вы смотрите на девушку и начинаете возбуждаться'
-act 'Смотреть':gt'lidiaRoom','lidiasex'
+act 'Смотреть': gt 'lidiaRoom','lidiasex'
 end
 
-if $ARGS[0]='lidiasex':
+if $ARGS[0] = 'lidiasex': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
 clr
-'<center><img src="pic/Evedon\1\lidiapred.jpg" ></center>'
-set minut=minut+10
-lidiasex=lidiasex+1
-sexm+=1
-girl=girl+1
-horny=horny+20
-gs'stat'
+'<center><img src = "pic/Evedon\1\lidiapred.jpg" ></center>'
+ minut += 10
+lidiasex = lidiasex+1
+sexm+= 1
+girl = girl+1
+horny = horny+20
+gs 'stat'
 'Девушка лежит перед вами и смотрит на вас'
-     act 'Дать в рот':
+     act 'Дать в рот': 
      cla
      *clr
-     horny=0
-     '<center><img src="pic/Evedon\1\lidiaoral.jpg" ></center>'
+     horny = 0
+     '<center><img src = "pic/Evedon\1\lidiaoral.jpg" ></center>'
      'Девушка опустилась перед вами и начала сосать ваш <<penis>> сантиметровый член. Лидия с таким энтузиазмом сосет, что вы готовы кончить прямо сейчас.'
-         act 'Кончить в рот':
+         act 'Кончить в рот': 
          cla
          *clr
-         '<center><img src="pic/Evedon\1\lidiaoralcum.jpg" ></center>'
+         '<center><img src = "pic/Evedon\1\lidiaoralcum.jpg" ></center>'
          'Вы не выдерживаете и кончаете прямо в рот Лидии'
-         act 'Уйти':gt'foOrden'
+         act 'Уйти': gt 'foOrden'
          end
          
-         act 'Кончить на лицо':
+         act 'Кончить на лицо': 
          cla
          *clr
-         '<center><img src="pic/Evedon\1\lidiaoralcumface.jpg" ></center>'
+         '<center><img src = "pic/Evedon\1\lidiaoralcumface.jpg" ></center>'
          'В последнюю секунду вы вытаскиваете член из рабочего ротика девушки и заливаете ей лицо своим семенем'
-         act 'Уйти':gt'foOrden'
+         act 'Уйти': gt 'foOrden'
          end
      end
      
-     act 'Трахнуть в киску':
+     act 'Трахнуть в киску': 
      cla
      *clr
-     horny=0
-     '<center><img src="pic/Evedon\1\lidiasex.jpg" ></center>'
+     horny = 0
+     '<center><img src = "pic/Evedon\1\lidiasex.jpg" ></center>'
      'Вы вставляете в киску девушки свой <<penis>> сантиметровый член. Лидия стонет под вами.'
-         act 'Кончить внутрь':
+         act 'Кончить внутрь': 
          cla
          *clr
-         '<center><img src="pic/Evedon\1\lidiasexcum.jpg" ></center>'
+         '<center><img src = "pic/Evedon\1\lidiasexcum.jpg" ></center>'
          'Продолжая сношать девушку, вы не выдерживаете и разряжаетесь прямо внутрь.'
-         act 'Уйти':gt'foOrden'
+         act 'Уйти': gt 'foOrden'
          end
          
-         act 'Кончить наружу':
+         act 'Кончить наружу': 
          cla
          *clr
-         '<center><img src="pic/Evedon\1\lidiasexcumboby.jpg" ></center>'
+         '<center><img src = "pic/Evedon\1\lidiasexcumboby.jpg" ></center>'
          'Вы вытаскиваете член из киски девушки и начинаете поливать ее тело своим семенем.'
-         act 'Уйти':gt'foOrden'
+         act 'Уйти': gt 'foOrden'
          end
      end
      
-     act 'Трахнуть в попу':
+     act 'Трахнуть в попу': 
      cla
      *clr
-     horny=0
-     '<center><img src="pic/Evedon\1\lidiaanal.jpg" ></center>'
+     horny = 0
+     '<center><img src = "pic/Evedon\1\lidiaanal.jpg" ></center>'
      'Вы ставите девушку раком и вставляете свой <<penis>> сантиметровый член в ее тугую попку. Лидия стонет, пока вы ее трахаете.'
-         act 'Кончить внутрь':
+         act 'Кончить внутрь': 
          cla
          *clr
-         '<center><img src="pic/Evedon\1\lidiaanalcum.jpg" ></center>'
+         '<center><img src = "pic/Evedon\1\lidiaanalcum.jpg" ></center>'
          'Вы не выдерживаете и заливаете анус девушки своей спермой'
-         act 'Уйти':gt'foOrden'
+         act 'Уйти': gt 'foOrden'
          end
          
-         act 'Кончить наружу':
+         act 'Кончить наружу': 
          cla
          *clr
-         '<center><img src="pic/Evedon\1\lidiaanalcumass.jpg" ></center>'
+         '<center><img src = "pic/Evedon\1\lidiaanalcumass.jpg" ></center>'
          'Вы вытаскиваете член из попки девушки и заливаете ее попку своей спермой.'
-         act 'Уйти':gt'foOrden'
+         act 'Уйти': gt 'foOrden'
          end
      end
 end

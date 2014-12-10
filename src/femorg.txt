@@ -2,18 +2,18 @@
 !женские оргазмы
 
 
-if vagina>0:
-     if horny<50:
-     horny=0
+if vagina>0: 
+     if horny<50: 
+     horny = 0
      'Вам больно и неприятно. Внутри киски все полыхает огнем и вы стоните и морщитесь от боли.'
      end
-     if horny>=50 and horny<100:
-     horny=horny+vagina
+     if horny>= 50 and horny<100: 
+     horny = horny+vagina
      'Низ живота охватило приятное тепло и мягкие волны начали окутывать ваше тело, постепенно ощущения снизились но не пропали.'
      end
-     if horny>=100:
-     orgasm=orgasm+1
-     horny=0
+     if horny>= 100: 
+     orgasm = orgasm+1
+     horny = 0
      'Мышцы влагалища начали сокращаться и вас сотряс мощнейший оргазм.'
      end
 end

@@ -7,15 +7,15 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Дремучий лес</H4></center>'
-'<center><img src="pic/Evedon/df24.jpg" ></center>'
-'В окружении старых деревьев стоит ((маленький домик|robotDomW|minut=minut+5)), около которого расположен ((небольшой огород|robotOgW|minut=minut+5)). Рядом с домом лежит покрытый ржачинной и вмятинами огромный четырехногий ((робот|robotW|minut=minut+5))'
+'<center><img src = "pic/Evedon/df24.jpg" ></center>'
+'В окружении старых деревьев стоит ((маленький домик|robotDomW|minut += 5)), около которого расположен ((небольшой огород|robotOgW|minut += 5)). Рядом с домом лежит покрытый ржачинной и вмятинами огромный четырехногий ((робот|robotW|minut += 5))'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-'<center>((Север|df1_4|minut=minut+30))</center>'
-'<center>((Запад|df2_3|minut=minut+30))-+-((Восток|df2_5|minut=minut+30))</center>'
-'<center>((Юг|desertW|minut=minut+30))</center>'
+'<center>((Север|df1_4|minut += 30))</center>'
+'<center>((Запад|df2_3|minut += 30))-+-((Восток|df2_5|minut += 30))</center>'
+'<center>((Юг|desertW|minut += 30))</center>'
 !!!дома
 *nl
 
@@ -23,20 +23,20 @@ gs'time'
 
 !!!
 ''
-if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
+if vampireMorf>= 1: 'Зарыться в <a href = "exec: gt ''vampGrave''">землю</a>'
 
 
 
-     act 'Ждать':
+     act 'Ждать': 
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         if waiting <= 0 or waiting > 120: 
+          minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         if waiting > 0 and waiting <= 120: 
+          minut = minut + waiting
          end
-     act 'Посмотреть на часы':gt curloc
+     act 'Посмотреть на часы': gt curloc
      end
 --- df2_4 ---------------------------------
 

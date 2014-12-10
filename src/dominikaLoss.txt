@@ -1,12 +1,12 @@
 # dominikaLoss
-monster=0
-dominicaDed=100
-missionData=0
-OrdenRang=-1
+monster = 0
+dominicaDed = 100
+missionData = 0
+OrdenRang = -1
 'Доминика оказалась слишком сильна для вас и вы рухнули на пол. Она тут же развернулась и сбежала из трактира не тратя времени.'
 
 
 
-act 'Уйти':GOTO $locP, $metkaP
+act 'Уйти': GOTO $locP, $metkaP
 --- dominikaLoss ---------------------------------
 

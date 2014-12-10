@@ -1,90 +1,90 @@
 # slotSistem
 
-if world=0:
-     if pol=0:
-         if slot=1:
+if world = 0: 
+     if pol = 0: 
+         if slot = 1: 
          pl'Вы одеты в приличный костюм.'
          end
-         if slot=2:
+         if slot = 2: 
          pl'Вы одеты в джинсы и рубашку.'
          end
-         if slot=3:
+         if slot = 3: 
          pl'Вы одеты в спортивную одежду.'
          end
      end
-     if pol>0:
-         if slot=1:
+     if pol>0: 
+         if slot = 1: 
          pl'Вы одета как шлюха.'
          end
-         if slot=2:
+         if slot = 2: 
          pl'Вы одеты в спортивную одежду.'
          end
-         if slot=3:
+         if slot = 3: 
          pl'Вы одеты в джинсы.'
          end
-         if slot=4:
+         if slot = 4: 
          pl'Вы одеты в штаны.'
          end
-         if slot=5:
+         if slot = 5: 
          pl'Вы одеты в сарафан.'
          end
-         if slot=6:
+         if slot = 6: 
          pl'Вы одеты в офисную одежду.'
          end
-         if slot=7:
+         if slot = 7: 
          pl'Вы одеты в шорты.'
          end
-         if slot=8:
+         if slot = 8: 
          pl'Вы одеты в юбку.'
          end
-         if slot=9:
+         if slot = 9: 
          pl'Вы одеты в платье.'
          end
      end
 end
 
-if world=1:
-     if slot=11:
+if world = 1: 
+     if slot = 11: 
      pl'Вы одеты как местный нищий и попрошайка.'
      end
-     if slot=12:
+     if slot = 12: 
      pl'Вы одеты в простую сельскую одежду.'
      end
-     if slot=13:
+     if slot = 13: 
      pl'Вы одеты в одежду горожанина.'
      end
-     if slot=14:
+     if slot = 14: 
      pl'Вы одеты в дворянскую одежду.'
      end
-     if slot=15:
+     if slot = 15: 
      pl'Вы одеты в роскошную дворянскую одежду, в которой не стыдно показатся даже перед лордом.'
      end
      
-     if slot=100:
+     if slot = 100: 
      pl'Вы одеты в легкий доспех.'
      end
-     if slot=101:
+     if slot = 101: 
      pl'Вы одеты в средний доспех.'
      end
-     if slot=102:
+     if slot = 102: 
      pl'Вы одеты в тяжелый доспех.'
      end
-     if slot=103:
+     if slot = 103: 
      pl'Вы одеты в доспех стражи Эведона.'
      end
-     if slot=200:
+     if slot = 200: 
      pl'Вы одеты в робу ордена четырехлистника.'
      end
-     if slot=500:
+     if slot = 500: 
      pl'Вы одеты в нанокостюм.'
      end
 end
 
 
-if sword = 1:pl'У вас за поясом устрашающий нож.'
-if sword = 2:pl'У вас за поясом воровская дубинка.'
-if sword = 3:pl'У вас к поясу прикреплен меч.'
-if shild > 0:pl'На спине висит щит'
+if sword = 1: pl'У вас за поясом устрашающий нож.'
+if sword = 2: pl'У вас за поясом воровская дубинка.'
+if sword = 3: pl'У вас к поясу прикреплен меч.'
+if shild > 0: pl'На спине висит щит'
 
 
 

@@ -1,64 +1,64 @@
 # dominiW
-if $ARGS[0]='bj':
+if $ARGS[0] = 'bj': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
-'<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
+ minut = minut + 5
+'<center><img src = "pic/EvedonNarod/dominika.jpg"></center>'
 'Вы пришли домой к Доминике, она указала вам на свою кровать.'
 'Доминика получила <<domcum>> порций спермы от вас.'
 
-     act 'Лечь на кровать':
+     act 'Лечь на кровать': 
      cla
      *clr
      minut = minut + 15
-     if dominiSex=0:dominiSex=1&girl=girl+1
-     sexm=sexm+1
-     domcum=domcum+1
-     horny=0
-     '<center><img src="pic/EvedonTA/dombj.jpg" ></center>'
+     if dominiSex = 0: dominiSex = 1 & girl = girl+1
+     sexm = sexm+1
+     domcum = domcum+1
+     horny = 0
+     '<center><img src = "pic/EvedonTA/dombj.jpg" ></center>'
      'Доминика обхватила вашу багровую головку своими пухлыми, сочными губами и начала сосать как пылесос, вы почти молниеносно кончили и она проглотила каждую капельку, что получила от вас.'
-     act 'Учиться':gt'dominiW','lern'
+     act 'Учиться': gt 'dominiW','lern'
      end
 
 end
 
-if $ARGS[0]='cum':
+if $ARGS[0] = 'cum': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-'<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
-set minut = minut + 5
+'<center><img src = "pic/EvedonNarod/dominika.jpg"></center>'
+ minut = minut + 5
 'Вы пришли домой к Доминике, она указала вам на свою кровать.'
 'Доминика получила <<domcum>> порций спермы от вас.'
 
-     act 'Лечь на кровать':
+     act 'Лечь на кровать': 
      cla
      *clr
      minut = minut + 15
-     if dominiSex=0:dominiSex=1&girl=girl+1
-     lesb=lesb+1
-     domcum=domcum+cum
-     horny=0
-     orgasm=orgasm+1
-     gs'bassW'
-     '<center><img src="pic/EvedonTA/dominiLick.jpg" ></center>'
+     if dominiSex = 0: dominiSex = 1 & girl = girl+1
+     lesb = lesb+1
+     domcum = domcum+cum
+     horny = 0
+     orgasm = orgasm+1
+     gs 'bassW'
+     '<center><img src = "pic/EvedonTA/dominiLick.jpg" ></center>'
      'Доминика начала тщательно вылизывать ваше тело съедая всю сперму что она находила на вас.'
-     act 'Учиться':gt'dominiW','lern'
+     act 'Учиться': gt 'dominiW','lern'
      end
 
 end
 
 
-if $ARGS[0]='lern':
+if $ARGS[0] = 'lern': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
-'<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
+ minut = minut + 5
+'<center><img src = "pic/EvedonNarod/dominika.jpg"></center>'
 'Доминика разделась обнажив свое тело покрытое замысловатыми татуировками.'
 'Я могу обучать базовой школе магии которая требует только личной силы, да и то не очень большой.'
 'Это заклинания Зеркал, Щит мага, Смещение.'
@@ -67,185 +67,185 @@ set minut = minut + 5
 'На третьем уровне магичности можешь выучить иглы Каллена.'
 'На четвертом уровне магичности ритуал разлома'
 'И мое самое последнее заклинание можешь выучить на пятом уровне магичности, это ритуал кислотного дождя.'
-     if spZerkalo<100:
-         act 'Изучать зеркало':
+     if spZerkalo<100: 
+         act 'Изучать зеркало': 
          cla
          *clr
          minut = minut + 60
-         spZerkalo=spZerkalo+RAND(10,25)
-         if spZerkalo>100:spZerkalo=100
-         exp=exp+RAND(lvl/2,lvl*2)
+         spZerkalo = spZerkalo+RAND(10,25)
+         if spZerkalo>100: spZerkalo = 100
+         exp = exp+RAND(lvl/2,lvl*2)
          'Доминика стала обучать вас зеркалу. Это заклинание создает зеркальные копии на поле боя и если противник не попадет в вас а в зеркало, то зеркало хотя и разрушится, но вы не получите урона. Количество зеркал зависит от опыта заклинателя.'
          'Вы изучили заклинание на <<spZerkalo>>%'
-         if dominicaDed=0:act 'Уйти':gt'teladareW'
-         if dominicaDed>1:act 'Уйти':gt'monMotel'
+         if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+         if dominicaDed>1: act 'Уйти': gt 'monMotel'
          end
      end
      
-     if spZerkalo=100:
-         if spMagShild<100:
-             act 'Изучать щит мага':
+     if spZerkalo = 100: 
+         if spMags hild<100: 
+             act 'Изучать щит мага': 
 			 cla
 			 *clr
 			 minut = minut + 60
-			 spMagShild=spMagShild+RAND(10,25)
-			 if spMagShild>100:spMagShild=100
-			 exp=exp+RAND(lvl/2,lvl*2)
+			 spMags hild = spMags hild+RAND(10,25)
+			 if spMags hild>100: spMags hild = 100
+			 exp = exp+RAND(lvl/2,lvl*2)
 			 'Доминика стала обучать вас щиту мага. Это заклинание позволяет создавать щит мага, который с опытом становится крепче.'
-			 'Вы изучили заклинание на <<spMagShild>>%'
-			 if dominicaDed=0:act 'Уйти':gt'teladareW'
-             if dominicaDed>1:act 'Уйти':gt'monMotel'
+			 'Вы изучили заклинание на <<spMags hild>>%'
+			 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+             if dominicaDed>1: act 'Уйти': gt 'monMotel'
 			 end
          end
      end
          
-	 if spMagShild>=100:
-		 if spSmeshenie<100:
-			 act 'Изучать заклинание смещения':
+	 if spMags hild>= 100: 
+		 if spSmeshenie<100: 
+			 act 'Изучать заклинание смещения': 
 			 cla
 			 *clr
 			 minut = minut + 60
-			 spSmeshenie=spSmeshenie+RAND(10,25)
-			 if spSmeshenie>100:spSmeshenie=100
-			 exp=exp+RAND(lvl/2,lvl*2)
+			 spSmeshenie = spSmeshenie+RAND(10,25)
+			 if spSmeshenie>100: spSmeshenie = 100
+			 exp = exp+RAND(lvl/2,lvl*2)
 			 'Доминика стала обучать вас смещению. Это заклинание позволяет автоматически смещать тело, избегая удара во время атаки.'
 			 'Вы изучили заклинание на <<spSmeshenie>>%'
-			 if dominicaDed=0:act 'Уйти':gt'teladareW'
-             if dominicaDed>1:act 'Уйти':gt'monMotel'
+			 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+             if dominicaDed>1: act 'Уйти': gt 'monMotel'
 			 end
 		 end
      end
      
-	 if spSmeshenie>=100:
-		 if spFist<100:
-			 act 'Изучать заклинание громового кулака':
+	 if spSmeshenie>= 100: 
+		 if spFist<100: 
+			 act 'Изучать заклинание громового кулака': 
 			 cla
 			 *clr
 			 minut = minut + 60
-			 spFist=spFist+RAND(10,25)
-			 if spFist>100:spFist=100
-			 exp=exp+RAND(lvl/2,lvl*2)
+			 spFist = spFist+RAND(10,25)
+			 if spFist>100: spFist = 100
+			 exp = exp+RAND(lvl/2,lvl*2)
 			 'Доминика стала обучать вас кулаку грома. Это заклинание позволяет вложить силу магии в удар.'
 			 'Вы изучили заклинание на <<spFist>>%'
-			 if dominicaDed=0:act 'Уйти':gt'teladareW'
-             if dominicaDed>1:act 'Уйти':gt'monMotel'
+			 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+             if dominicaDed>1: act 'Уйти': gt 'monMotel'
 			 end
 		 end
 	 end
 	 
-	 if spSozh>=100 and domRevengeQW=0:
-		 act 'Поговорить о Сераф.':
+	 if spSozh>= 100 and domRevengeQW = 0: 
+		 act 'Поговорить о Сераф.': 
 		 cla
 		 *clr
-		 '<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
+		 '<center><img src = "pic/EvedonNarod/dominika.jpg"></center>'
 		 minut = minut + 60
 		 '(Вы) - Расскажи, что там за история у вас с Сераф приключилась?'
 		 '(Доминика) - Ничего интересного. Я просто заметила, что Сераф свободно умеет телепортироваться. А значит и в другие миры ходить может. Хотела завладеть ее секретами, да только недооценила я ее. Сильная тварь оказалась, играючи меня побила. Но ее можно прищемить в ее логове, вот только проблема, как узнать где ее логово?'
-		 if dominicaDed=0:act 'Уйти':gt'teladareW'
-         if dominicaDed>1:act 'Уйти':gt'monMotel'
-		     act 'Может я попытаюсь найти логово Сераф?':
+		 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+         if dominicaDed>1: act 'Уйти': gt 'monMotel'
+		     act 'Может я попытаюсь найти логово Сераф?': 
 		     cla
 		     *clr
-		     '<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
-		     domRevengeQW=1
+		     '<center><img src = "pic/EvedonNarod/dominika.jpg"></center>'
+		     domRevengeQW = 1
 		     'Вы предложили Доминике свою помощь, она задумалась. Хм, где логово Сераф может знать только другой суккуб, Вапула. А вот ее ковен торчит посреди пустыни и всем известен. Можешь попробовать ее побить и выяснить где Сераф. К сожалению, я не смогу пойти с тобой, после поражения Сераф и ее проклятия, мне ничего не светит в бою с Суккубом.'
-		     if dominicaDed=0:act 'Уйти':gt'teladareW'
-             if dominicaDed>1:act 'Уйти':gt'monMotel'
+		     if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+             if dominicaDed>1: act 'Уйти': gt 'monMotel'
 		     end
 		 end
 	 end
 	 
 	 
-	 if magika>=2:
+	 if magika>= 2: 
 	 
-		 if spSphera<100:
-			 act 'Изучать сферическую защиту':
+		 if spSphera<100: 
+			 act 'Изучать сферическую защиту': 
 			 cla
 			 *clr
 			 minut = minut + 60
-			 spSphera=spSphera+RAND(10,25)
-			 if spSphera>100:spSphera=100
-			 exp=exp+RAND(lvl/2,lvl*2)
+			 spSphera = spSphera+RAND(10,25)
+			 if spSphera>100: spSphera = 100
+			 exp = exp+RAND(lvl/2,lvl*2)
 			 'Доминика стала обучать вас сферической защите. Это заклинание позволяет наложить пусть и не очень крепкую защиту, зато эта защита работает против большинства стихий.'
 			 'Вы изучили заклинание на <<spSphera>>%'
-			 if dominicaDed=0:act 'Уйти':gt'teladareW'
-             if dominicaDed>1:act 'Уйти':gt'monMotel'
+			 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+             if dominicaDed>1: act 'Уйти': gt 'monMotel'
 			 end
 		 end
 	 
 	 end
 	 
 	 
-	 if magika>=3: 
-		 if spSve<100:
-			 act 'Изучать иглы Каллена':
+	 if magika>= 3: 
+		 if spSve<100: 
+			 act 'Изучать иглы Каллена': 
 			 cla
 			 *clr
 			 minut = minut + 60
-			 spSve=spSve+RAND(10,25)
-			 if spSve>100:spSve=100
-			 exp=exp+RAND(lvl/2,lvl*2)
+			 spSve = spSve+RAND(10,25)
+			 if spSve>100: spSve = 100
+			 exp = exp+RAND(lvl/2,lvl*2)
 			 'Доминика стала обучать вас иглам Каллена. Это заклинание швыряет горсть игл в противника. Для выполнения заклинания нужны зачарованные иглы. Покупаешь в магазине обыкновенные швейные иглы из стали и сидя перед зеркалом зачаровываешь их самостоятельно.'
-				 if spIglaQW=0:spIglaQW=1&spIgla=spIgla+10&'Я тебе подарю десять упаковок, а потом ищи их самостоятельно.'
+				 if spIglaQW = 0: spIglaQW = 1 & spIgla = spIgla+10 & 'Я тебе подарю десять упаковок, а потом ищи их самостоятельно.'
 			 'Вы изучили заклинание на <<spSve>>%'
-			 if dominicaDed=0:act 'Уйти':gt'teladareW'
-             if dominicaDed>1:act 'Уйти':gt'monMotel'
+			 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+             if dominicaDed>1: act 'Уйти': gt 'monMotel'
 			 end
 		 
 		 end
 	 end
 	 
 	 
-	 if magika>=4: 
-		 if spSozh<100:
-			 act 'Изучать ритуал Разлома':
+	 if magika>= 4: 
+		 if spSozh<100: 
+			 act 'Изучать ритуал Разлома': 
 			 cla
 			 *clr
 			 minut = minut + 60
-			 spSozh=spSozh+RAND(10,25)
-			 if spSozh>100:spSozh=100
-			 exp=exp+RAND(lvl/2,lvl*2)
+			 spSozh = spSozh+RAND(10,25)
+			 if spSozh>100: spSozh = 100
+			 exp = exp+RAND(lvl/2,lvl*2)
 			 'Доминика стала обучать вас Разлому. Проведя ритуал над душой демона в геме вы можете разломить надвое физическую защиту противника, какой бы крепкой она ни была. Но для этого ритуала нужны гемы с душой демона.'
 			 'Вы изучили заклинание на <<spSozh>>%'
-			 if dominicaDed=0:act 'Уйти':gt'teladareW'
-             if dominicaDed>1:act 'Уйти':gt'monMotel'
+			 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+             if dominicaDed>1: act 'Уйти': gt 'monMotel'
 			 end
 		 
 		 end
 	 end
 	 
-	 if magika>=5: 
-		 if spAcid<100:
-			 act 'Изучать ритуал кислотного дыхания':
+	 if magika>= 5: 
+		 if spAcid<100: 
+			 act 'Изучать ритуал кислотного дыхания': 
 			 cla
 			 *clr
 			 minut = minut + 60
-			 spAcid=spAcid+RAND(10,25)
-			 if spAcid>100:spAcid=100
-			 exp=exp+RAND(lvl/2,lvl*2)
+			 spAcid = spAcid+RAND(10,25)
+			 if spAcid>100: spAcid = 100
+			 exp = exp+RAND(lvl/2,lvl*2)
 			 'Доминика стала обучать вас ритуалу кислотного дыхания. Провести этот сложный и энергозатратный ритуал можно только используя демоническую серу. Но зато можно наполнить воздух кислотой, которая будет уничтожать защиту и если нет защиты то будет сжигать противника.'
 			 'Вы изучили заклинание на <<spAcid>>%'
-			 if dominicaDed=0:act 'Уйти':gt'teladareW'
-             if dominicaDed>1:act 'Уйти':gt'monMotel'
+			 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+             if dominicaDed>1: act 'Уйти': gt 'monMotel'
 			 end
 		 
 		 end
 	 end
      
      
-	 act 'Изучать магичность':
+	 act 'Изучать магичность': 
 	 cla
 	 *clr
 	 minut = minut + 60
-	 exp=exp+RAND(lvl/2,lvl*2)
-	 magikExp=magikExp+RAND(magika,magika*2)
+	 exp = exp+RAND(lvl/2,lvl*2)
+	 magikExp = magikExp+RAND(magika,magika*2)
 	 'Вы пытаетесь открыть новые потенциалы своих способностей вместе с Доминикой.'
-	 if dominicaDed=0:act 'Уйти':gt'teladareW'
-     if dominicaDed>1:act 'Уйти':gt'monMotel'
+	 if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+     if dominicaDed>1: act 'Уйти': gt 'monMotel'
 	 end
 
- if dominicaDed=0:act 'Уйти':gt'teladareW'
- if dominicaDed>1:act 'Уйти':gt'monMotel'
+ if dominicaDed = 0: act 'Уйти': gt 'teladareW'
+ if dominicaDed>1: act 'Уйти': gt 'monMotel'
 end
 --- dominiW ---------------------------------
 

@@ -18,8 +18,8 @@ $tracklist_fight[1] = 'pic/muz/fight1.mp3'
 
 $tracklist_orochimaru[0] = 'pic/muz/orochimaru.mp3'
 
-if club=1:
-	clubrand=rand (0,5)
+if club = 1: 
+	clubrand = rand (0,5)
 	if clubrand = 0: $tracklist_club[0] = 'pic/muz/club.mp3'
 	if clubrand = 1: $tracklist_club[0] = 'pic/muz/club1.mp3'
 	if clubrand = 2: $tracklist_club[0] = 'pic/muz/club2.mp3'

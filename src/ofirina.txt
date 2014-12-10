@@ -3,31 +3,31 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Ирина</H4></center>'
-'<center><img src="pic\fam\irina\ofirina.jpg" ></center>'
+'<center><img src = "pic\fam\irina\ofirina.jpg" ></center>'
 clr
-gs'stat'
+gs 'stat'
 'Молоденькая и симпатичная официантка из кафе.'
 
-act 'Отойти':GOTO $locM, $metkaM
+act 'Отойти': GOTO $locM, $metkaM
 
-if ofirinaQW=0 and money>=5000:
-     act 'Дать Ире на чай 5 тыр и познакомится':
+if ofirinaQW = 0 and money>= 5000: 
+     act 'Дать Ире на чай 5 тыр и познакомится': 
      cla
-     money=money-5000
-     ofirinaQW=1
+     money = money-5000
+     ofirinaQW = 1
      'Вы дали Ирине на чай бумажку в 5тыр и спросили у нее номер телефона. Она заулыбалась и дала вам свой номерок. Вы обещали как-нибудь пригласить ее в ресторан.'
-     act 'Отойти':GOTO $locM, $metkaM
+     act 'Отойти': GOTO $locM, $metkaM
      end
 end 
 
-if ofirinaQW>=2 and horny>=50 and money>=5000:  
+if ofirinaQW>= 2 and horny>= 50 and money>= 5000:  
 	 'Она улыбается глядя на вас.'
-	 act 'Дать Ире на чай 5 тыр и предложить отойти вместе':
+	 act 'Дать Ире на чай 5 тыр и предложить отойти вместе': 
 	 cla
-	 money=money-5000
-	 horny=0
+	 money = money-5000
+	 horny = 0
 	 'Вы дали Ирине на чай бумажку в 5тыр. Ирина сказала, что будет ждать вас в кладовой и ушла.'
-		 act 'Идти в кладовую':gt'ofirina1','kafe1'
+		 act 'Идти в кладовую': gt 'ofirina1','kafe1'
 	 end
 end
   

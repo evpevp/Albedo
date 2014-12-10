@@ -1,23 +1,23 @@
 # eat
 
-if serafLip=0:
-	 if golod >= 10:
-	 set golod = golod + 5
-	 health=health+5
-	 set fat = fat + 1
+if serafLip = 0: 
+	 if golod >= 10: 
+	  golod = golod + 5
+	 health = health+5
+	  fat = fat + 1
 	 'Вы объелись.'
 	 end
-	 if golod < 10:
-	 set golod = golod + 10
-	 health=health+5
-	 manna=manna+5
+	 if golod < 10: 
+	  golod = golod + 10
+	 health = health+5
+	 manna = manna+5
 	 'Вы хорошо покушали.'
 	 end
 end
-if serafLip=1:
+if serafLip = 1: 
 golod = 0
-health=health/2
-manna=manna/2
+health = health/2
+manna = manna/2
 'Резко заболел желудок и вас тут же вырвало, вы не сможете есть ничего, кроме спермы.'
 end
 --- eat ---------------------------------

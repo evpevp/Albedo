@@ -7,79 +7,79 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Сатиры</H4></center>'
-'<center><img src="pic/Evedonface/satir.jpg" ></center>'
+'<center><img src = "pic/Evedonface/satir.jpg" ></center>'
 
-if hour>12:
+if hour>12: 
 'Пятеро сатиров весело пьянствуют и орут похабные песни своими блеющими голосами.'
 else
 'Пьяные сатиры валяются кто где между пустыми бутылками и объедками.'
 end
 
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
-satirday=day
+satirday = day
 
-act 'Уйти':minut=minut+5&gt'df0_2'
+act 'Уйти': minut += 5 & gt 'df0_2'
 
 *nl
 
-if satirFwin>0:
+if satirFwin>0: 
 'Едва завидев вас, сатиры пускаются наутек.'
 exit
 end
 
-if satirFloss>0:
-	 if femin<200:
+if satirFloss>0: 
+	 if femin<200: 
 	 'Сатиры кидают в вас пустыми бутылками и гогочут "Проваливай отсюда."'
-	 elseif femin>=200:
+	 elseif femin>= 200: 
 	 'Эй детка, еще хочешь позабавиться? В прошлый раз мало было?'
 	 end
 exit
 end
 
-if femin<200:
-     if stren+vital<100:
+if femin<200: 
+     if stren+vital<100: 
      'Эй ты, топай отсюда, блеют вам сатиры и начинают кидаться пустыми бутылками и камнями.'
      else
      'Эй ты, иди к нам, выпьем.'
-         act 'Пить с Сатирами':minut=minut+5&gt'satirDrunk'
+         act 'Пить с Сатирами': minut += 5 & gt 'satirDrunk'
      end
-elseif femin>=200:
+elseif femin>= 200: 
 cla
 'Сатиры заскакали по полянке вокруг вас, иди к нам крошка, выпьем, повеселимся.'
-     act 'Уйти':
+     act 'Уйти': 
      cla
      'Сатиры вертятся вокруг вас не давая прохода. Ну останься с нами, будет весело.'
-         act 'Уйти':minut=minut+5&gt'df0_2'
-         act 'Пить с Сатирами':minut=minut+5&gt'satirDrunk'
+         act 'Уйти': minut += 5 & gt 'df0_2'
+         act 'Пить с Сатирами': minut += 5 & gt 'satirDrunk'
      end
      
-     act 'Пить с Сатирами':minut=minut+5&gt'satirDrunk'
+     act 'Пить с Сатирами': minut += 5 & gt 'satirDrunk'
 end
 
 
 
-act 'Набить сатирам морды':
+act 'Набить сатирам морды': 
 cla
- $nameV='Сатир'
- lvlv=200
- strenV=500
- speedV=180
- agilV=180
- vitalV=400
- intelv=10
- willv=10
- program=39
- healthV=vitalV*10
- mannaV=intelV*10+intelV*15
- wipoV=willV*10
- monster=24
+ $nameV = 'Сатир'
+ lvlv = 200
+ strenV = 500
+ speedV = 180
+ agilV = 180
+ vitalV = 400
+ intelv = 10
+ willv = 10
+ program = 39
+ healthV = vitalV*10
+ mannaV = intelV*10+intelV*15
+ wipoV = willV*10
+ monster = 24
  'Сатир напал на вас пока остальные кружат вокруг вас и блеющими голосами подбадривают кореша.'
- act 'Драться':gs'before'
+ act 'Драться': gs 'before'
 end
 
 

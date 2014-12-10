@@ -5,25 +5,25 @@
 !damageZ
 !damageZV
 
-if defenceH<=0:
-health=health-damageZV
-'<font color=red><<$tipuronaZV>> нанес вам <B><<damagezv>></B> едениц урона</font>'
+if defenceH<= 0: 
+health = health-damageZV
+'<font color = red><<$tipuronaZV>> нанес вам <B><<damagezv>></B> едениц урона</font>'
 end
 
-if defenceH>0:
-     if defenceH>=damageZV:
-     defenceH-=damageZV
-     '<font color=red><<$tipuronaZV>> нанес <B><<damagezv>></B> едениц урона защите</font>'
+if defenceH>0: 
+     if defenceH>= damageZV: 
+     defenceH- = damageZV
+     '<font color = red><<$tipuronaZV>> нанес <B><<damagezv>></B> едениц урона защите</font>'
      else
-     damageZV-=defenceH
-     defenceH=0
-     health=health-damageZV
-     '<font color=red><<$tipuronaZV>> уничтожил вашу защиту разума и нанес вам <B><<damagezv>></B> едениц урона</font>'
+     damageZV- = defenceH
+     defenceH = 0
+     health = health-damageZV
+     '<font color = red><<$tipuronaZV>> уничтожил вашу защиту разума и нанес вам <B><<damagezv>></B> едениц урона</font>'
      end
      
 end
 
 
-damageZV=0
+damageZV = 0
 --- defenceZ ---------------------------------
 

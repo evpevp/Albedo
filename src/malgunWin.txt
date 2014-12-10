@@ -1,27 +1,27 @@
 # malgunWin
-monster=0
+monster = 0
 'Мальган упал на пол трактира. Плюнув кровью он сказал. "Ну! Чего ты ждешь мразь? Добивай меня. Все что вы можете, это убивать людей и хапать ртом и жопой. Борцы с демонами, как же. Вы боритесь только за то, чтоб его светлейшеству великому магистру посытней жилось. Вы хуже демонов. Твари, как я вас ненавижу!"'
 
 
 
 	 act 'Добить его': 
 	 cla
-	 missionData=0
-	 missionA=2
-	 kredit=kredit+2000
-	 malgundead=1
+	 missionData = 0
+	 missionA = 2
+	 kredit = kredit+2000
+	 malgundead = 1
 	 'Вы добили Мальгана и он затих, прекратив, наконец, свой поток ругательств.'
-	 act 'Уйти':GOTO $locP, $metkaP
+	 act 'Уйти': GOTO $locP, $metkaP
 	 end
 	 
 	 
 	 act 'Ладно, я не стану тебя убивать. Уходи.': 
 	 cla
-	 missionData=0
-	 OrdenRang=-1
-	 malgundead=200
+	 missionData = 0
+	 OrdenRang = -1
+	 malgundead = 200
 	 'Мальган с трудом встал и вышел из трактира.'
-	 act 'Уйти':GOTO $locP, $metkaP
+	 act 'Уйти': GOTO $locP, $metkaP
 	 end
 --- malgunWin ---------------------------------
 

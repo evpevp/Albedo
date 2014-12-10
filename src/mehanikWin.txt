@@ -1,11 +1,11 @@
 # mehanikWin
-monster=0
-deadMeh=1
-blackStarArt=1
+monster = 0
+deadMeh = 1
+blackStarArt = 1
 'Механик погиб в бою с вами и исчез, оставив на поле боя свой артефакт в виде черной звезды.'
 
 
 
-act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 --- mehanikWin ---------------------------------
 

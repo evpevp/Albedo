@@ -1,10 +1,10 @@
 # cheatdm
-if $selobj='Меню боевки':
+if $selobj = 'Меню боевки': 
 	*clr
-	*nl'<B>Параметры:</B>'+'  <a href="exec: son = 30"><B>Выспавшийся</B></a>'+'  <a href="exec: golod = 14"><B>Утолить_чувство_голода</B></a>'+' <a href="exec: gem += 1000"><B>Добавить_денег(+1000)</B></a>'+' <a href="exec: horny = 100"><B>Возбудиться</B></a>'+' <a href="exec: horny = 0"><B>Снять_возбужденность</B></a>'+' <a href="exec: lvl += 1"><B>Повысить_уровень</B></a>'+' <a href="exec: sp += 10"><B>Добавить_очки_повышения_навыков</B></a>'+'  <a href="exec: sweat = 0"><B>Смыть_пот</B></a>'+' <a href="exec: alko = 0"><B>Протрезветь</B></a>'+' <a href="exec: salo += 10"><B>Потолстеть</B></a>'+' <a href="exec: salo -= 10"><B>Похудеть</B></a>'+''
+	*nl'<B>Параметры: </B>'+'  <a href = "exec: son = 30"><B>Выспавшийся</B></a>'+'  <a href = "exec: golod = 14"><B>Утолить_чувство_голода</B></a>'+' <a href = "exec: gem += 1000"><B>Добавить_денег(+1000)</B></a>'+' <a href = "exec: horny = 100"><B>Возбудиться</B></a>'+' <a href = "exec: horny = 0"><B>Снять_возбужденность</B></a>'+' <a href = "exec: lvl += 1"><B>Повысить_уровень</B></a>'+' <a href = "exec: sp += 10"><B>Добавить_очки_повышения_навыков</B></a>'+'  <a href = "exec: sweat = 0"><B>Смыть_пот</B></a>'+' <a href = "exec: alko = 0"><B>Протрезветь</B></a>'+' <a href = "exec: salo += 10"><B>Потолстеть</B></a>'+' <a href = "exec: salo - = 10"><B>Похудеть</B></a>'+''
 	
     cla
-	act 'Закрыть':GOTO $loc, $metka
+	act 'Закрыть': GOTO $loc, $metka
     end
 --- cheatdm ---------------------------------
 

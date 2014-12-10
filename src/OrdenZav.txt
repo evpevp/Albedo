@@ -9,50 +9,50 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Заведующий хозяйственной частью ордена</H4></center>'
-'<center><img src="pic/Evedon\ordenZav.jpg" ></center>'
+'<center><img src = "pic/Evedon\ordenZav.jpg" ></center>'
 'Неординарная комната завхоза ордена. Заведующий хозяйством управляет всей материальной базой ордена.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-     if OrdenRang>1:
-         act 'Обменять кредиты на гемы':
+     if OrdenRang>1: 
+         act 'Обменять кредиты на гемы': 
 		 cla
-		 set minut = minut + 5
+		  minut = minut + 5
 		 kartaIN = input ("Сколько кредитов ходите обменять?")
-		     if kartaIN <= 0 or kartaIN > kredit:
+		     if kartaIN <= 0 or kartaIN > kredit: 
 		     'У вас нет такого количества.'
 		     else
-		     set gem = gem + kartaIN
-		     set kredit = kredit - kartaIN
+		      gem = gem + kartaIN
+		      kredit = kredit - kartaIN
 		     'Вы обменяли орденские кредиты на гемы.'
 		     end
 		     
-		 act 'Отойти':gt'OrdenZav'
+		 act 'Отойти': gt 'OrdenZav'
 		 end
 		 
-		 act 'Обменять гемы на кредиты':
+		 act 'Обменять гемы на кредиты': 
 		 cla
-		 set minut = minut + 5
+		  minut = minut + 5
 		 kartaOUT = input ("Сколько гемов хотите обменять?")
-		     if kartaOUT <= 0 or kartaOUT > gem:
+		     if kartaOUT <= 0 or kartaOUT > gem: 
 		     'У вас нет такого количества.'
 		     else
-		     set gem = gem - kartaOUT
-		     set kredit = kredit + kartaOUT
+		      gem = gem - kartaOUT
+		      kredit = kredit + kartaOUT
 		     'Вы обменяли гемы на орденские кредиты.'
 		     end
-		 act 'Отойти':gt'OrdenZav'
+		 act 'Отойти': gt 'OrdenZav'
 		 end
      end
 
 
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'foOrden'
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'foOrden'
 	 end
 --- OrdenZav ---------------------------------
 

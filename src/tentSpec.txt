@@ -1,20 +1,20 @@
 # tentSpec
-koefspeed=speedv*20/100
-koefagil=agil*20/100
-pop=RAND(speedv-koefspeed,speedv+koefspeed)
-uvo=RAND((agil-Kar)-koefagil,(agil-Kar)+koefagil)
-poparand=RAND(0,10)
+koefspeed = speedv*20/100
+koefagil = agil*20/100
+pop = RAND(speedv-koefspeed,speedv+koefspeed)
+uvo = RAND((agil-Kar)-koefagil,(agil-Kar)+koefagil)
+poparand = RAND(0,10)
 
-if pop>=uvo or poparand>=8:
-!stun=1
-'<B><font color=red><<$nameV>> ПОПАЛ В ВАС</font></B>'
-skveratk=skverna+5
-if skveratk>25:skveratk=25
-wipo=wipo-skveratk
-horny=horny+skveratk
+if pop>= uvo or poparand>= 8: 
+!stun = 1
+'<B><font color = red><<$nameV>> ПОПАЛ В ВАС</font></B>'
+skveratk = skverna+5
+if skveratk>25: skveratk = 25
+wipo = wipo-skveratk
+horny = horny+skveratk
 end
-if pop<uvo and poparand<8:
-'<B><font color=green>ВЫ УВЕРНУЛИСЬ ОТ АТАКИ</font></B>'
+if pop<uvo and poparand<8: 
+'<B><font color = green>ВЫ УВЕРНУЛИСЬ ОТ АТАКИ</font></B>'
 end
 --- tentSpec ---------------------------------
 

@@ -1,15 +1,15 @@
 # zahvatv
-koefspeed=speedv*20/100
-koefagil=agil*20/100
-pop=RAND(speedv-koefspeed,speedv+koefspeed)
-uvo=RAND((agil-Kar)-koefagil,(agil-Kar)+koefagil)
+koefspeed = speedv*20/100
+koefagil = agil*20/100
+pop = RAND(speedv-koefspeed,speedv+koefspeed)
+uvo = RAND((agil-Kar)-koefagil,(agil-Kar)+koefagil)
 
-if pop>=uvo:
-stun=1
-'<B><font color=red><<$nameV>> ПРОВЕЛ ЗАХВАТ</font></B>'
+if pop>= uvo: 
+stun = 1
+'<B><font color = red><<$nameV>> ПРОВЕЛ ЗАХВАТ</font></B>'
 end
-if pop<uvo:
-'<B><font color=green>ВЫ УВЕРНУЛИСЬ ОТ ЗАХВАТА</font></B>'
+if pop<uvo: 
+'<B><font color = green>ВЫ УВЕРНУЛИСЬ ОТ ЗАХВАТА</font></B>'
 end
 --- zahvatv ---------------------------------
 

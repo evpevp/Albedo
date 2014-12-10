@@ -8,32 +8,32 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Кабак</H4></center>'
 '<center>Веселый скелет</center>'
-'<center><img src="pic/Evedon/portbar.jpg" ></center>'
+'<center><img src = "pic/Evedon/portbar.jpg" ></center>'
 'Грязный, шумный кабак набитый разной степени опьянения грузчиками и моряками. Мебель сколочена из грубых не строганных досок, отполированных рукавами и штанами за долгие годы. На стенах чадят толстые свечи, от которых больше вони и сажи, чем света.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-'За стойкой протирает не свежим полотенцем стаканы <a href="exec:GT ''tamanW''">трактирщик</a>.'
+'За стойкой протирает не свежим полотенцем стаканы <a href = "exec: gt ''tamanW''">трактирщик</a>.'
 
 
-act 'Выйти':
-minut=minut+5
-gt'portW'
+act 'Выйти': 
+minut += 5
+ gt 'portW'
 end
 
-if iventPortBJ=1:
-     act 'Подойти и спросить у трактирщика, где-то место, где спит управляющий порта':
+if iventPortBJ = 1: 
+     act 'Подойти и спросить у трактирщика, где-то место, где спит управляющий порта': 
      cla
-     iventPortBJ=2
+     iventPortBJ = 2
      'Его комната в подвале этой таверны, пройдите за тот столик, и под вашими ногами окажется дверь в погреб'
-     act 'Пройти до погреба':gt'portbarpodval'
+     act 'Пройти до погреба': gt 'portbarpodval'
      end
 end
 
-if iventPortBJ=2:act 'Идти в погреб':gt'portbarpodval'
+if iventPortBJ = 2: act 'Идти в погреб': gt 'portbarpodval'
 
 --- portbarW ---------------------------------
 

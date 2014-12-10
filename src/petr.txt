@@ -3,29 +3,29 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Петр</H4></center>'
-'<center><img src="pic\fam\petr.jpg" ></center>'
+'<center><img src = "pic\fam\petr.jpg" ></center>'
 clr
-gs'stat'
+gs 'stat'
 'Ваш сын Петр, отличный спортсмен и полный болван когда дело доходит до учебы.'
 
 
 
-act 'Отойти':GOTO $locM, $metkaM
+act 'Отойти': GOTO $locM, $metkaM
 
-if petrday ! day:
+if petrday ! day: 
 cla
 'Пап, дай денег. Хотя бы тысяч десять.'
-     if money >= 10000:
-         act 'На деньги':
+     if money >= 10000: 
+         act 'На деньги': 
          cla
          petrqw = petrqw + 1
          petrday = day
-         money=money-10000
+         money = money-10000
          'Вы дали денег сыну и он с довольным видом убрал их в бумажник.'
-         act 'Отойти':GOTO $locM, $metkaM
+         act 'Отойти': GOTO $locM, $metkaM
          end
      end
-     act 'Кругом одни живоглоты, отстань':GOTO $locM, $metkaM
+     act 'Кругом одни живоглоты, отстань': GOTO $locM, $metkaM
 end
 --- petr ---------------------------------
 

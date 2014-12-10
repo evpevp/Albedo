@@ -10,102 +10,102 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 mag = 1
 '<center><H4>Дом Брайтмуров</H4></center>'
-'<center><img src="pic/Evedon/mdStefanHouse.jpg" ></center>'
+'<center><img src = "pic/Evedon/mdStefanHouse.jpg" ></center>'
 'Чистый и просторный домик семьи Брайтмур.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
-if shelok=0:shelok=1
-'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
-'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a> закрыта ширмой от посторонних глаз.'
-'Простенький <a href="exec:GT ''lokerW''">шкафчик</a> для одежды.'
-'Уютный <a href="exec:GT ''divanW''">диван</a>.'
-'<a href="exec:GT ''mirrW''">Зеркало</a>'
-if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+if shelok = 0: shelok = 1
+'Застеленная, чистая <a href = "exec: gt ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href = "exec: gt ''kadka''">для мытья</a> закрыта ширмой от посторонних глаз.'
+'Простенький <a href = "exec: gt ''lokerW''">шкафчик</a> для одежды.'
+'Уютный <a href = "exec: gt ''divanW''">диван</a>.'
+'<a href = "exec: gt ''mirrW''">Зеркало</a>'
+if brakW>0: '<a href = "exec: gt ''marryWorld''"><<$namefrendM>></a>'
 
-if slot=0:
+if slot = 0: 
 *nl
 'Без одежды нельзя выходить на улицу.'
 end
 
-if StefanIzgnan=1:
+if StefanIzgnan = 1: 
 cls
-gs'stat'
+gs 'stat'
 '<center><H4>Дом Брайтмуров</H4></center>'
-'<center><img src="pic/Evedon/mdStefanHouse.jpg" ></center>'
+'<center><img src = "pic/Evedon/mdStefanHouse.jpg" ></center>'
 'Ваша мать указывает вам на дверь. "Иди куда хочешь, ты нам больше не сын!"'
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'monDorf'
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'monDorf'
 	 end
 exit
 end
 
-if slot>0:
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'monDorf'
+if slot>0: 
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'monDorf'
 	 end
 end
 
-if hour=4 or hour=5 or hour =6 or hour=17 or hour=18 or hour=19:
-	 act 'Есть':
+if hour = 4 or hour = 5 or hour = 6 or hour = 17 or hour = 18 or hour = 19: 
+	 act 'Есть': 
 	 cla
 	 *clr
-	 minut=minut+15
-	 gs'eda'
+	 minut += 15
+	 gs 'eda'
 	 'Мема поставила перед вами тарелку с едой.'
-	 gs'eat'
-	 act 'Отойти':gt $CURLOC
+	 gs 'eat'
+	 act 'Отойти': gt $CURLOC
 	 end
 end
 
-if StefanQW>=1:
-     if hour<5 or hour>=20:'Вся семья уже спит.'
-     if hour=5:
-     '<a href="exec:GT ''DavidBrightmoore''">Отец</a> сидит за столом и есть зерновую кашу из миски. <a href="exec:GT ''AdeleBrightmoore''">Мать</a> суетится в упечи. А сестры еще спят.'
+if StefanQW>= 1: 
+     if hour<5 or hour>= 20: 'Вся семья уже спит.'
+     if hour = 5: 
+     '<a href = "exec: gt ''DavidBrightmoore''">Отец</a> сидит за столом и есть зерновую кашу из миски. <a href = "exec: gt ''AdeleBrightmoore''">Мать</a> суетится в упечи. А сестры еще спят.'
      end
-     if hour=6:
-     'Ваши сестры <a href="exec:GT ''RosanBrightmoore''">Розан</a> и <a href="exec:GT ''ViolaBrightmoore''">Виола</a> завтракают за столом с <a href="exec:GT ''AdeleBrightmoore''">Матерью</a>'
+     if hour = 6: 
+     'Ваши сестры <a href = "exec: gt ''RosanBrightmoore''">Розан</a> и <a href = "exec: gt ''ViolaBrightmoore''">Виола</a> завтракают за столом с <a href = "exec: gt ''AdeleBrightmoore''">Матерью</a>'
      end
-     if hour=7:
-     '<a href="exec:GT ''ViolaBrightmoore''">Виола</a> помогает <a href="exec:GT ''AdeleBrightmoore''">маме</a> с мытьем посуды. <a href="exec:GT ''RosanBrightmoore''">Розан</a> прядет сидя на скамейке.'
+     if hour = 7: 
+     '<a href = "exec: gt ''ViolaBrightmoore''">Виола</a> помогает <a href = "exec: gt ''AdeleBrightmoore''">маме</a> с мытьем посуды. <a href = "exec: gt ''RosanBrightmoore''">Розан</a> прядет сидя на скамейке.'
      end
-     if hour=8 or hour=9:
-     '<a href="exec:GT ''ViolaBrightmoore''">Виола</a> помогает <a href="exec:GT ''AdeleBrightmoore''">маме</a> готовить еду. <a href="exec:GT ''RosanBrightmoore''">Розан</a> прядет сидя на скамейке.'
+     if hour = 8 or hour = 9: 
+     '<a href = "exec: gt ''ViolaBrightmoore''">Виола</a> помогает <a href = "exec: gt ''AdeleBrightmoore''">маме</a> готовить еду. <a href = "exec: gt ''RosanBrightmoore''">Розан</a> прядет сидя на скамейке.'
      end
-     if hour=10:
-     '<a href="exec:GT ''ViolaBrightmoore''">Виола</a> моет пол в доме пока <a href="exec:GT ''RosanBrightmoore''">Розан</a> занимается пряжей, а <a href="exec:GT ''AdeleBrightmoore''">мама</a> стирает белье.'
+     if hour = 10: 
+     '<a href = "exec: gt ''ViolaBrightmoore''">Виола</a> моет пол в доме пока <a href = "exec: gt ''RosanBrightmoore''">Розан</a> занимается пряжей, а <a href = "exec: gt ''AdeleBrightmoore''">мама</a> стирает белье.'
      end
-     if hour=11:
-     'Розан спряталась за ширмой и моется в кадушке. <a href="exec:GT ''ViolaBrightmoore''">Виола</a> и <a href="exec:GT ''AdeleBrightmoore''">мама</a> отдыхают сидя на скамейке.'
+     if hour = 11: 
+     'Розан спряталась за ширмой и моется в кадушке. <a href = "exec: gt ''ViolaBrightmoore''">Виола</a> и <a href = "exec: gt ''AdeleBrightmoore''">мама</a> отдыхают сидя на скамейке.'
      end
-     if hour=12:
-     'Виола спряталась за ширмой и моется в кадушке. <a href="exec:GT ''RosanBrightmoore''">Розан</a> и <a href="exec:GT ''AdeleBrightmoore''">мама</a> отдыхают сидя на скамейке.'
+     if hour = 12: 
+     'Виола спряталась за ширмой и моется в кадушке. <a href = "exec: gt ''RosanBrightmoore''">Розан</a> и <a href = "exec: gt ''AdeleBrightmoore''">мама</a> отдыхают сидя на скамейке.'
      end
-     if hour=13:
-     'Мама спряталась за ширмой и моется в кадушке. <a href="exec:GT ''ViolaBrightmoore''">Виола</a> отдыхает сидя на скамейке пока <a href="exec:GT ''RosanBrightmoore''">Розан</a> крутится вокруг зеркала.'
+     if hour = 13: 
+     'Мама спряталась за ширмой и моется в кадушке. <a href = "exec: gt ''ViolaBrightmoore''">Виола</a> отдыхает сидя на скамейке пока <a href = "exec: gt ''RosanBrightmoore''">Розан</a> крутится вокруг зеркала.'
      end
-     if hour=14:
-     '<a href="exec:GT ''AdeleBrightmoore''">Мама</a> что то шьет сидя на скамейке.'
+     if hour = 14: 
+     '<a href = "exec: gt ''AdeleBrightmoore''">Мама</a> что то шьет сидя на скамейке.'
      end
-     if hour=15:
-     '<a href="exec:GT ''AdeleBrightmoore''">Мама</a> что то шьет сидя на скамейке.'
+     if hour = 15: 
+     '<a href = "exec: gt ''AdeleBrightmoore''">Мама</a> что то шьет сидя на скамейке.'
      end
-     if hour=16:
-     '<a href="exec:GT ''AdeleBrightmoore''">Мама</a> возле печи разогревает еду.'
+     if hour = 16: 
+     '<a href = "exec: gt ''AdeleBrightmoore''">Мама</a> возле печи разогревает еду.'
      end
-     if hour=17:
-     'Ваши сестры <a href="exec:GT ''RosanBrightmoore''">Розан</a> и <a href="exec:GT ''ViolaBrightmoore''">Виола</a> завтракают за столом с <a href="exec:GT ''AdeleBrightmoore''">Матерью</a>'
+     if hour = 17: 
+     'Ваши сестры <a href = "exec: gt ''RosanBrightmoore''">Розан</a> и <a href = "exec: gt ''ViolaBrightmoore''">Виола</a> завтракают за столом с <a href = "exec: gt ''AdeleBrightmoore''">Матерью</a>'
      end
-     if hour=18:
-     'Усталый <a href="exec:GT ''DavidBrightmoore''">отец</a> сидит за столом и есть зерновую кашу из миски. <a href="exec:GT ''AdeleBrightmoore''">Мама</a> суетится возле стола подавая ему еду.'
+     if hour = 18: 
+     'Усталый <a href = "exec: gt ''DavidBrightmoore''">отец</a> сидит за столом и есть зерновую кашу из миски. <a href = "exec: gt ''AdeleBrightmoore''">Мама</a> суетится возле стола подавая ему еду.'
      end
-     if hour=19:
-     'Вся семья готовится ко сну. <a href="exec:GT ''RosanBrightmoore''">Розан</a> причесывает волосы, <a href="exec:GT ''ViolaBrightmoore''">Виола</a> расстилает кровать. <a href="exec:GT ''DavidBrightmoore''">Отец</a> моется в кадушке пока <a href="exec:GT ''AdeleBrightmoore''">мама</a> подает ему воду.'
+     if hour = 19: 
+     'Вся семья готовится ко сну. <a href = "exec: gt ''RosanBrightmoore''">Розан</a> причесывает волосы, <a href = "exec: gt ''ViolaBrightmoore''">Виола</a> расстилает кровать. <a href = "exec: gt ''DavidBrightmoore''">Отец</a> моется в кадушке пока <a href = "exec: gt ''AdeleBrightmoore''">мама</a> подает ему воду.'
      end
 end
 

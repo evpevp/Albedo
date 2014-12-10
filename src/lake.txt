@@ -1,70 +1,70 @@
 # lake
 cla
 *clr
-if lakeonce = 0:set lakeonce = 1&set minut = minut + 60
-'<center><B><font color=maroon>Озеро</font></B></center>'
+if lakeonce = 0: lakeonce = 1 & minut = minut + 60
+'<center><B><font color = maroon>Озеро</font></B></center>'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-if ofirinaQW >= 2 and week=7 and hour >= 10 and hour < 15 and horny>=1:
+if ofirinaQW >= 2 and week = 7 and hour >= 10 and hour < 15 and horny>= 1: 
 	'<b>Возле озера вы увидели Ирину моющую свою старенькую машину оставшуюся от родителей.</b>'
-	picrand=RAND(0,1)
-	if picrand=0:'<center><img src="pic\fam\irina\park\irina_park_5.gif" ></center>'
-	if picrand=1:'<center><img src="pic\fam\irina\park\irina_park_9.gif" ></center>'
-    act '<b>Подойти к Ирине</b>':gt'irinaevent','lake'
+	picrand = RAND(0,1)
+	if picrand = 0: '<center><img src = "pic\fam\irina\park\irina_park_5.gif" ></center>'
+	if picrand = 1: '<center><img src = "pic\fam\irina\park\irina_park_9.gif" ></center>'
+    act '<b>Подойти к Ирине</b>': gt 'irinaevent','lake'
 else
-	'<center><img src="pic/pic/lake.jpg" ></center>'
+	'<center><img src = "pic/pic/lake.jpg" ></center>'
 end   
-if car > 0 and cardrive = 4: 'У озера стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+if car > 0 and cardrive = 4: 'У озера стоит <a href = "exec: gs ''car'',''start''">ваш <<$car>></a>.'
 	'Вы можете позагорать или искупаться.'
-act 'Купаться 1 час':
+act 'Купаться 1 час': 
     cla
     *clr
-    set cumpussy = 0
-	set cumbelly = 0
-	set cumass = 0
-	set cumlip = 0
-	set cumface = 0
-	set cumfrot = 0
-    set minut = minut + 60
-    set sweat = -3
-    set manna = manna + 5
-    set willpower = willpower + 5
-    if stren < 30:set stren = stren + 1
+     cumpussy = 0
+	 cumbelly = 0
+	 cumass = 0
+	 cumlip = 0
+	 cumface = 0
+	 cumfrot = 0
+     minut = minut + 60
+     sweat = -3
+     manna = manna + 5
+     willpower = willpower + 5
+    if stren < 30: stren = stren + 1
     !НИМФА ОЗЕРА!
-	!fairymeet=RAND(0,15)
-	if nark!1:
+	!fairymeet = RAND(0,15)
+	if nark!1: 
 		'Вы искупнулись в озере, вода освежает и бодрит.'
-		act 'Выйти из воды':gt'lake','start'
+		act 'Выйти из воды': gt 'lake','start'
 	end
-         if nark=1 and pol=0 and FNtr!1:
-			gt 'nimfs','LakeNimfa'			 
+         if nark = 1 and pol = 0 and FNtr!1: 
+			 gt 'nimfs','LakeNimfa'			 
 		 end 
-		 if nark=1 and pol=0 and FNtr=1:
-			gt 'nimfs','LakeNimfaFight'			 
+		 if nark = 1 and pol = 0 and FNtr = 1: 
+			 gt 'nimfs','LakeNimfaFight'			 
 		 end 
 		 !НИМФА ОЗЕРА!
 	
 
          end
      if hour >= 6 and hour <= 19:    
-         act 'Загорать 1 час':
+         act 'Загорать 1 час': 
          cla
          *clr
-         set minut = minut + 60
-         set sweat = sweat + 1
-         set manna = manna + 5
-             act 'Встать с пляжа':gt'lake','start'
+          minut = minut + 60
+          sweat = sweat + 1
+          manna = manna + 5
+             act 'Встать с пляжа': gt 'lake','start'
          end
      end    
      end
 
-     act 'ВЫЙТИ':
+     act 'ВЫЙТИ': 
      cla
-     set lakeonce = 0
-     set minut = minut + 60
-     gt'street'
+      lakeonce = 0
+      minut = minut + 60
+     gt 'street'
      end
 
 --- lake ---------------------------------

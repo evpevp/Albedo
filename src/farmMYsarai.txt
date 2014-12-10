@@ -12,59 +12,59 @@ mag = 1
 
 '<center><H4>Ферма <<$farmname>></H4></center>'
 '<center>Сарай</center>'
-'<center><img src="pic/Evedon/sarai.jpg" ></center>'
+'<center><img src = "pic/Evedon/sarai.jpg" ></center>'
 'Полутемное помещение для хранения сельскохозяйственных орудий.'
-if brevno>0:'Около сарая лежит <<brevno>> шт бревен.'
+if brevno>0: 'Около сарая лежит <<brevno>> шт бревен.'
 'В углу валяется старый ржавый и гнутый плуг. На не большом верстаке лежит кое-какой инструмент, пилы, топоры, молотки.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
 
-act 'Уйти':
-minut=minut+5
-gt'farmMY'
+act 'Уйти': 
+minut += 5
+ gt 'farmMY'
 end
 
-if brevno>0 and farmstam>0:
-	 act 'Распилить бревно на поленья 1 час (30 поленьев)':
-	 minut=minut+60
-	 brevno-=1
-	 drova+=30
-	 farmstam-=1
-	 sweat+=1
-	 vital+=RAND(1,2)
-	 exp+=RAND(lvl/4,lvl/2)
+if brevno>0 and farmstam>0: 
+	 act 'Распилить бревно на поленья 1 час (30 поленьев)': 
+	 minut += 60
+	 brevno- = 1
+	 drova+= 30
+	 farmstam- = 1
+	 sweat+= 1
+	 vital+= RAND(1,2)
+	 exp+= RAND(lvl/4,lvl/2)
 	 gt $CURLOC
 	 end
 	 
-	 act 'Сжечь бревно и получить щелок 1 час (50 щелок)':
-	 minut=minut+60
-	 brevno-=1
-	 shelok+=50
-	 farmstam-=1
-	 sweat+=1
-	 vital+=RAND(0,1)
-	 exp+=RAND(lvl/4,lvl/2)
+	 act 'Сжечь бревно и получить щелок 1 час (50 щелок)': 
+	 minut += 60
+	 brevno- = 1
+	 shelok+= 50
+	 farmstam- = 1
+	 sweat+= 1
+	 vital+= RAND(0,1)
+	 exp+= RAND(lvl/4,lvl/2)
 	 gt $CURLOC
 	 end
 end
 
-if brevno>=100 and plotnikskill>=25 and barnMY<100 and farmstam>0:
-	 act 'Делать хлев для ослика':
+if brevno>= 100 and plotnikskill>= 25 and barnMY<100 and farmstam>0: 
+	 act 'Делать хлев для ослика': 
 	 cla
-	 minut+=60
-	 plotnikskill+=1
-	 farmstam-=1
-	 vital+=RAND(0,1)
-	 exp+=RAND(lvl/4,lvl/2)
-	 barnMY+=RAND(5,10)
-	 if barnMY>=100:barnMY=100&brevno-=100
+	 minut+= 60
+	 plotnikskill+= 1
+	 farmstam- = 1
+	 vital+= RAND(0,1)
+	 exp+= RAND(lvl/4,lvl/2)
+	 barnMY+= RAND(5,10)
+	 if barnMY>= 100: barnMY = 100 & brevno- = 100
 	 'Вы мастерили в течение часа хлев для ослика и за час сумели построить <<barnMY>>% от хлева'
-	 act 'Далее':gt $CURLOC
+	 act 'Далее': gt $CURLOC
 	 end
 end
 

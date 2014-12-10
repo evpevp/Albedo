@@ -1,7 +1,7 @@
 # spSBO
 dynamic $battlemain
 clr
-gs'stat'
+gs 'stat'
 
 !!!!!!1электро вода
 !!!!!!2электро воздух
@@ -12,110 +12,110 @@ gs'stat'
 
 !!!!!!!!!!!!!!!ЭЛЕКТРО ВОДА
 
-     if manna>=1000 and elektroluza<=0 and cooldownSpell<=0 and spellElWa>=100:
-         act 'Электролужа (1000 маны)':
+     if manna>= 1000 and elektroluza<= 0 and cooldownSpell<= 0 and spellElWa>= 100: 
+         act 'Электролужа (1000 маны)': 
          cla
-         cooldownSpell+=2
-         manna-=1000
-         elektroluza=20
-         '<B><font color=green>Вы разлили воду на землю и зарядили ее электроэнергией.</font></B>'
-		 damageM=RAND(300,500)
-		 gs'defenceMV'
-		 shokdam=RAND(100,300)
-		 damage=RAND(500,1000)
-		 gs'defenceV'
-         xgt'fight','1'
+         cooldownSpell+= 2
+         manna- = 1000
+         elektroluza = 20
+         '<B><font color = green>Вы разлили воду на землю и зарядили ее электроэнергией.</font></B>'
+		 damageM = RAND(300,500)
+		 gs 'defenceMV'
+		 shokdam = RAND(100,300)
+		 damage = RAND(500,1000)
+		 gs 'defenceV'
+         xgt 'fight','1'
          end
      end
      
-     if manna>=1000 and spellElWa2>=100:
-         act 'Электророса (1000 маны)':
+     if manna>= 1000 and spellElWa2>= 100: 
+         act 'Электророса (1000 маны)': 
          cla
-         manna-=1000
-         cooldownSpell+=2
-         '<B><font color=green>Вы наполнили росой воздух и зарядили ее электроэнергией.</font></B>'
-         shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 damageM=RAND(100,200)
-		 gs'defenceMV'
-         xgt'fight','1'
+         manna- = 1000
+         cooldownSpell+= 2
+         '<B><font color = green>Вы наполнили росой воздух и зарядили ее электроэнергией.</font></B>'
+         shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 damageM = RAND(100,200)
+		 gs 'defenceMV'
+         xgt 'fight','1'
          end
      end
 
 !!!!!!!!!!!!!!!!!!!!!!ЭЛЕКТРО ВОЗДУХ
 
-     if elektostorm<=0 and manna>=1000 and cooldownSpell<=0 and spellElWi>=100:
-         act 'Прячущий электровихрь 1000 маны':
+     if elektostorm<= 0 and manna>= 1000 and cooldownSpell<= 0 and spellElWi>= 100: 
+         act 'Прячущий электровихрь 1000 маны': 
 		 cla
-     	 '<B><font color=green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
-		 manna=manna-1000
-		 notHere=6
-		 elektostorm=6
-		 cooldownSpell=2
-		 xgt'fight','1'
+     	 '<B><font color = green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
+		 manna = manna-1000
+		 notHere = 6
+		 elektostorm = 6
+		 cooldownSpell = 2
+		 xgt 'fight','1'
 		 exit
          end
      end
      
-     if elektostorm>0 and manna>=1000 and spellElWi2>=100:
-         act 'Удар шторма 1000 маны':
+     if elektostorm>0 and manna>= 1000 and spellElWi2>= 100: 
+         act 'Удар шторма 1000 маны': 
 		 cla
-         '<B><font color=green>Вы колдуете и ударяете мощным вихрем бьющим молниями.</font></B>'
-		 manna-=1000
-		 shokdam=RAND(150,300)
-		 damage=RAND(2500,4500)
-		 gs'defenceV'
-		 Perepad=1
-	     damageW=RAND(500,1000)
-	     $tipuronaWV='Перепад давления'
-	     gs'defenceWV'
-		 xgt'fight','1'
+         '<B><font color = green>Вы колдуете и ударяете мощным вихрем бьющим молниями.</font></B>'
+		 manna- = 1000
+		 shokdam = RAND(150,300)
+		 damage = RAND(2500,4500)
+		 gs 'defenceV'
+		 Perepad = 1
+	     damageW = RAND(500,1000)
+	     $tipuronaWV = 'Перепад давления'
+	     gs 'defenceWV'
+		 xgt 'fight','1'
 		 end
      
      end
@@ -123,175 +123,175 @@ gs'stat'
 
 !!!!!!!!!!!!!!!!!!ЭЛЕКТРО ЗЕМЛЯ
 
-     if elektoground<=0 and manna>=1000 and cooldownSpell<=0 and spellElGr>=100:
-         act 'Подземная молния 1000 маны':
+     if elektoground<= 0 and manna>= 1000 and cooldownSpell<= 0 and spellElGr>= 100: 
+         act 'Подземная молния 1000 маны': 
 		 cla
-     	 '<B><font color=green>Вы колдуете и погружаетесь в землю наполняя ее электроэнергией.</font></B>'
-		 manna=manna-1000
-		 notHere=6
-		 elektoground=6
-		 cooldownSpell+=2
-		 xgt'fight','1'
+     	 '<B><font color = green>Вы колдуете и погружаетесь в землю наполняя ее электроэнергией.</font></B>'
+		 manna = manna-1000
+		 notHere = 6
+		 elektoground = 6
+		 cooldownSpell+= 2
+		 xgt 'fight','1'
 		 exit
          end
      end
      
-     if manna>=1000 and spellElGr2>=100:
-         act 'Электропесок (1000 маны)':
+     if manna>= 1000 and spellElGr2>= 100: 
+         act 'Электропесок (1000 маны)': 
          cla
-         manna-=1000
-         cooldownSpell+=2
-         '<B><font color=green>Вы подняли песок заряженный электричеством и метнули его в противника.</font></B>'
-         shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-		 shokdam=RAND(150,300)
-		 damage=RAND(200,300)
-		 gs'defenceV'
-         xgt'fight','1'
+         manna- = 1000
+         cooldownSpell+= 2
+         '<B><font color = green>Вы подняли песок заряженный электричеством и метнули его в противника.</font></B>'
+         shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+		 shokdam = RAND(150,300)
+		 damage = RAND(200,300)
+		 gs 'defenceV'
+         xgt 'fight','1'
          end
      end
 
 !!!!!!!!!!!!!!!!!!!!ВОДА ВОЗДУХ
 
-     if waterstorm<=0 and manna>=1000 and cooldownSpell<=0 and spellWiWa>=100:
-         act 'Водяной вихрь 1000 маны':
+     if waterstorm<= 0 and manna>= 1000 and cooldownSpell<= 0 and spellWiWa>= 100: 
+         act 'Водяной вихрь 1000 маны': 
 		 cla
-     	 '<B><font color=green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
-		 manna=manna-1000
-		 notHere=6
-		 waterstorm=6
-		 cooldownSpell=2
-		 xgt'fight','1'
+     	 '<B><font color = green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
+		 manna = manna-1000
+		 notHere = 6
+		 waterstorm = 6
+		 cooldownSpell = 2
+		 xgt 'fight','1'
 		 exit
          end
      end
      
-     if manna>=1000 and spellWiWa2>=100:
-         act 'Звенящая роса (1000 маны)':
+     if manna>= 1000 and spellWiWa2>= 100: 
+         act 'Звенящая роса (1000 маны)': 
          cla
-         manna-=1000
-         cooldownSpell+=2
-         '<B><font color=green>Вы подняли песок заряженный электричеством и метнули его в противника.</font></B>'
-		 damage=RAND(1000,2000)
-		 gs'defenceV'
-		 damageM=RAND(500,800)
-	     gs'defenceMV'
-	     damage=RAND(1000,2000)
-		 gs'defenceV'
-		 damageM=RAND(500,800)
-	     gs'defenceMV'
-	     damage=RAND(1000,2000)
-		 gs'defenceV'
-		 damageM=RAND(500,800)
-	     gs'defenceMV'
-	     damage=RAND(1000,2000)
-		 gs'defenceV'
-		 damageM=RAND(500,800)
-	     gs'defenceMV'
-	     damage=RAND(1000,2000)
-		 gs'defenceV'
-		 damageM=RAND(500,800)
-	     gs'defenceMV'
-	     damage=RAND(1000,2000)
-		 gs'defenceV'
-		 damageM=RAND(500,800)
-	     gs'defenceMV'
-         xgt'fight','1'
+         manna- = 1000
+         cooldownSpell+= 2
+         '<B><font color = green>Вы подняли песок заряженный электричеством и метнули его в противника.</font></B>'
+		 damage = RAND(1000,2000)
+		 gs 'defenceV'
+		 damageM = RAND(500,800)
+	     gs 'defenceMV'
+	     damage = RAND(1000,2000)
+		 gs 'defenceV'
+		 damageM = RAND(500,800)
+	     gs 'defenceMV'
+	     damage = RAND(1000,2000)
+		 gs 'defenceV'
+		 damageM = RAND(500,800)
+	     gs 'defenceMV'
+	     damage = RAND(1000,2000)
+		 gs 'defenceV'
+		 damageM = RAND(500,800)
+	     gs 'defenceMV'
+	     damage = RAND(1000,2000)
+		 gs 'defenceV'
+		 damageM = RAND(500,800)
+	     gs 'defenceMV'
+	     damage = RAND(1000,2000)
+		 gs 'defenceV'
+		 damageM = RAND(500,800)
+	     gs 'defenceMV'
+         xgt 'fight','1'
          end
      end
 
 
 !!!!!!!!!!!!!!!!!!ВОДА ЗЕМЛЯ
 
-     if waterground<=0 and manna>=1000 and cooldownSpell<=0 and spellWaGr>=100:
-         act 'Погружение в грязь 1000 маны':
+     if waterground<= 0 and manna>= 1000 and cooldownSpell<= 0 and spellWaGr>= 100: 
+         act 'Погружение в грязь 1000 маны': 
 		 cla
-     	 '<B><font color=green>Вы колдуете и погружаетесь в землю.</font></B>'
-		 manna=manna-1000
-		 notHere=6
-		 waterground=6
-		 cooldownSpell+=2
-		 xgt'fight','1'
+     	 '<B><font color = green>Вы колдуете и погружаетесь в землю.</font></B>'
+		 manna = manna-1000
+		 notHere = 6
+		 waterground = 6
+		 cooldownSpell+= 2
+		 xgt 'fight','1'
 		 exit
          end
      end
      
-     if manna>=1000 and spellWaGr2>=100:
-         act 'Грязевая волна (1000 маны)':
+     if manna>= 1000 and spellWaGr2>= 100: 
+         act 'Грязевая волна (1000 маны)': 
          cla
-         manna-=1000
-         cooldownSpell+=2
-         '<B><font color=green>Вы подняли песок заряженный электричеством и метнули его в противника.</font></B>'
-		 damage=RAND(1000,1800)
-		 gs'defenceV'
-		 damageM=RAND(1200,2000)
-	     gs'defenceMV'
-         xgt'fight','1'
+         manna- = 1000
+         cooldownSpell+= 2
+         '<B><font color = green>Вы подняли песок заряженный электричеством и метнули его в противника.</font></B>'
+		 damage = RAND(1000,1800)
+		 gs 'defenceV'
+		 damageM = RAND(1200,2000)
+	     gs 'defenceMV'
+         xgt 'fight','1'
          end
      end
 
 !!!!!!!!!!!!!!!!!!!!!ВОЗДУХ ЗЕМЛЯ
 
-     if windstorm<=0 and manna>=1000 and cooldownSpell<=0 and spellWiGr>=100:
-         act 'Каменный вихрь 1000 маны':
+     if windstorm<= 0 and manna>= 1000 and cooldownSpell<= 0 and spellWiGr>= 100: 
+         act 'Каменный вихрь 1000 маны': 
 		 cla
-     	 '<B><font color=green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
-		 manna=manna-1000
-		 notHere=6
-		 windstorm=6
-		 cooldownSpell=2
-		 xgt'fight','1'
+     	 '<B><font color = green>Вы колдуете и вихрь поднимает вас в воздух скрывая от противника.</font></B>'
+		 manna = manna-1000
+		 notHere = 6
+		 windstorm = 6
+		 cooldownSpell = 2
+		 xgt 'fight','1'
 		 exit
          end
      end
      
      
-     if manna>=1000 and spellWiGr2>=100:
-         act 'Летающая гора (1000 маны)':
+     if manna>= 1000 and spellWiGr2>= 100: 
+         act 'Летающая гора (1000 маны)': 
          cla
-         manna-=1000
-         cooldownSpell+=2
-         '<B><font color=green>Вихрь вырывает камни из земли и метает их в противника.</font></B>'
-         $tipuronaV='Удар валуна'
-		 damage=RAND(4000,5000)
-		 gs'defenceV'
-         $tipuronaV='Удар валуна'
-		 damage=RAND(4000,5000)
-		 gs'defenceV'
-		 $tipuronaV='Удар валуна'
-		 damage=RAND(4000,5000)
-		 gs'defenceV'
-         xgt'fight','1'
+         manna- = 1000
+         cooldownSpell+= 2
+         '<B><font color = green>Вихрь вырывает камни из земли и метает их в противника.</font></B>'
+         $tipuronaV = 'Удар валуна'
+		 damage = RAND(4000,5000)
+		 gs 'defenceV'
+         $tipuronaV = 'Удар валуна'
+		 damage = RAND(4000,5000)
+		 gs 'defenceV'
+		 $tipuronaV = 'Удар валуна'
+		 damage = RAND(4000,5000)
+		 gs 'defenceV'
+         xgt 'fight','1'
          end
      end
 
 
-act 'Пропустить ход':xgt'fight','1'
+act 'Пропустить ход': xgt 'fight','1'
 
 
 --- spSBO ---------------------------------

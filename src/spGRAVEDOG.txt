@@ -1,283 +1,283 @@
 # spGRAVEDOG
 dynamic $battlemain
 clr
-gs'stat'
+gs 'stat'
 
-!'if GraveDogPower>=5:
-     if cooldownSpell<=0:
-		 act 'Могильный вой':
+!'if GraveDogPower>= 5: 
+     if cooldownSpell<= 0: 
+		 act 'Могильный вой': 
 		 cla
-		 cooldownSpell=3
-		 horny=0
-		 !GraveDogPower-=5
+		 cooldownSpell = 3
+		 horny = 0
+		 !GraveDogPower- = 5
 		 tempshop = input ("У собаки <<GraveDogPower>> силы. Сколько собачьей силы вы желаете вложить в ее вой?")
-			 if tempshop>GraveDogPower or tempshop<=0:
-			 '<font color=green>Вам не удалось вызвать собачий вой.</font>'
+			 if tempshop>GraveDogPower or tempshop<= 0: 
+			 '<font color = green>Вам не удалось вызвать собачий вой.</font>'
 			 else
-			 GraveDogPower-=tempshop
-			 damageH=tempshop
-			 '<font color=green>Вы приказали собаке выть.</font>'
+			 GraveDogPower- = tempshop
+			 damageH = tempshop
+			 '<font color = green>Вы приказали собаке выть.</font>'
 			 end
-		 '<font color=green>Ваш пес завыл утробно, нагоняя леденящий ужас.</font>'
-		 $tipuronaHV='Леденящий ужас'
-		 gs'defenceHV'
-		 xgt'fight','1'
+		 '<font color = green>Ваш пес завыл утробно, нагоняя леденящий ужас.</font>'
+		 $tipuronaHV = 'Леденящий ужас'
+		 gs 'defenceHV'
+		 xgt 'fight','1'
 		 exit
 		 end
      end
 end'
 
-if GraveDogPower>=5:
-	 act 'Могильный вой <<GraveDogPower*5/100>> сил пса':
+if GraveDogPower>= 5: 
+	 act 'Могильный вой <<GraveDogPower*5/100>> сил пса': 
 	 cla
-	 horny=0
-	 GraveDogPower-=GraveDogPower*5/100
-	 damageH=GraveDogPower*10/100
-	 '<font color=green>Ваш пес завыл утробно, нагоняя леденящий ужас.</font>'
-	 $tipuronaHV='Леденящий ужас'
-	 gs'defenceHV'
-	 xgt'fight','1'
+	 horny = 0
+	 GraveDogPower- = GraveDogPower*5/100
+	 damageH = GraveDogPower*10/100
+	 '<font color = green>Ваш пес завыл утробно, нагоняя леденящий ужас.</font>'
+	 $tipuronaHV = 'Леденящий ужас'
+	 gs 'defenceHV'
+	 xgt 'fight','1'
 	 exit
 	 end
 end
 
-if GraveDogPower<GraveDogPowerM and manna>=10 and wipo>=100:
-     act 'Дать свои силы псу (1еденица силы 10 маны, требует 100 воли)':
+if GraveDogPower<GraveDogPowerM and manna>= 10 and wipo>= 100: 
+     act 'Дать свои силы псу (1еденица силы 10 маны, требует 100 воли)': 
      cla
-     horny=0
-     GDraznica=GraveDogPowerM-GraveDogPower
-     wipo-=100
+     horny = 0
+     GDraznica = GraveDogPowerM-GraveDogPower
+     wipo- = 100
      tempshop = input ("У вас <<manna>> маны. 10 маны = 1 еденица силы собаки. Cколько сил вы желаете восстановить собаке?")
-         if tempshop*10>manna or tempshop<=0:
-         '<font color=green>Вам не удалось передать силы собаке.</font>'
+         if tempshop*10>manna or tempshop<= 0: 
+         '<font color = green>Вам не удалось передать силы собаке.</font>'
          else
-             if tempshop>GDraznica:
-             tempshop=GDraznica
-             GraveDogPower+=tempshop
-             manna-=tempshop*10
-             '<font color=green>Вы передали часть своей энергии собаке.</font>'
+             if tempshop>GDraznica: 
+             tempshop = GDraznica
+             GraveDogPower+= tempshop
+             manna- = tempshop*10
+             '<font color = green>Вы передали часть своей энергии собаке.</font>'
              else
-             GraveDogPower+=tempshop
-             manna-=tempshop*10
-             '<font color=green>Вы передали часть своей энергии собаке.</font>'
+             GraveDogPower+= tempshop
+             manna- = tempshop*10
+             '<font color = green>Вы передали часть своей энергии собаке.</font>'
              end
              
          end
           
-     xgt'fight','1'
+     xgt 'fight','1'
 	 exit
      end
 end
 
-if manna>=1000 and wipo>=0:
-     act 'Камлать временно повышая верхнюю границу силы пса (1еденица силы 1 воли, требует 1000 маны)':
+if manna>= 1000 and wipo>= 0: 
+     act 'Камлать временно повышая верхнюю границу силы пса (1еденица силы 1 воли, требует 1000 маны)': 
      cla
-     horny=0
-     manna-=1000
+     horny = 0
+     manna- = 1000
      tempshop = input ("У вас <<wipo>> воли. 1 воли = 1 еденица к потолку силы собаки.")
-         if tempshop>wipo or tempshop<=0:
-         '<font color=green>Вам не удалось камлание.</font>'
+         if tempshop>wipo or tempshop<= 0: 
+         '<font color = green>Вам не удалось камлание.</font>'
          else
-         GraveDogPowerM+=tempshop
-         wipo-=tempshop
-         '<font color=green>Вы камлали с бубном повышая верхнюю границу сил пса за счет своей воли.</font>'
+         GraveDogPowerM+= tempshop
+         wipo- = tempshop
+         '<font color = green>Вы камлали с бубном повышая верхнюю границу сил пса за счет своей воли.</font>'
          end
           
-     xgt'fight','1'
+     xgt 'fight','1'
 	 exit
      end
 end
 
-if undead=1 and manna>=500 and GraveDogPower>=50:
-     act 'Камлать укладывая мертвеца обратно в могилу (500 маны и 50 силы собаки)':
+if undead = 1 and manna>= 500 and GraveDogPower>= 50: 
+     act 'Камлать укладывая мертвеца обратно в могилу (500 маны и 50 силы собаки)': 
      cla
-     horny=0
-     manna-=500
-     GraveDogPower-=50
-     healthv=0
-     '<font color=green>Вы камлали с бубном заставляя мертвеца вернутся обратно в свою могилу.</font>'
-     xgt'fight','1'
+     horny = 0
+     manna- = 500
+     GraveDogPower- = 50
+     healthv = 0
+     '<font color = green>Вы камлали с бубном заставляя мертвеца вернутся обратно в свою могилу.</font>'
+     xgt 'fight','1'
 	 exit
      end
 end
 
-if undead=2 and manna>=1000 and GraveDogPower>=100:
-     act 'Камлать укладывая вампира обратно в могилу (1000 маны и 100 силы собаки)':
+if undead = 2 and manna>= 1000 and GraveDogPower>= 100: 
+     act 'Камлать укладывая вампира обратно в могилу (1000 маны и 100 силы собаки)': 
      cla
-     GraveDogPower-=100
-     horny=0
-     manna-=1000
-     healthv=0
-     '<font color=green>Вы камлали с бубном заставляя вампира вернутся обратно в свою могилу.</font>'
-     xgt'fight','1'
+     GraveDogPower- = 100
+     horny = 0
+     manna- = 1000
+     healthv = 0
+     '<font color = green>Вы камлали с бубном заставляя вампира вернутся обратно в свою могилу.</font>'
+     xgt 'fight','1'
 	 exit
      end
 end
 
 
-if round>=3:
-	if wipov<=0 and mannav>0 and manna>=1000 and GraveDogPower>=100:
-		 act 'Камлать сжигая ману у безвольного противника (1000 маны и 100 силы собаки)':
+if round>= 3: 
+	if wipov<= 0 and mannav>0 and manna>= 1000 and GraveDogPower>= 100: 
+		 act 'Камлать сжигая ману у безвольного противника (1000 маны и 100 силы собаки)': 
 		 cla
-		 horny=0
-		 GraveDogPower-=100
-		 manna-=1000
-		 '<font color=green>Вы камлали с бубном развеивая магию безвольного противника.</font>'
-		 damageM=RAND(GraveDogPower/30,GraveDogPower/20)
-		 gs'defenceMV'
-		 xgt'fight','1'
+		 horny = 0
+		 GraveDogPower- = 100
+		 manna- = 1000
+		 '<font color = green>Вы камлали с бубном развеивая магию безвольного противника.</font>'
+		 damageM = RAND(GraveDogPower/30,GraveDogPower/20)
+		 gs 'defenceMV'
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
 
-	if wipov<=0 and mannav<=0 and manna>=1000 and GraveDogPower>=100:
-		 act 'Камлать сжигая жизнь у обессиленного противника (1000 маны и 100 силы собаки)':
+	if wipov<= 0 and mannav<= 0 and manna>= 1000 and GraveDogPower>= 100: 
+		 act 'Камлать сжигая жизнь у обессиленного противника (1000 маны и 100 силы собаки)': 
 		 cla
-		 horny=0
-		 GraveDogPower-=100
-		 manna-=1000
-		 healthv=0
-		 '<font color=green>Вы камлали с бубном сжигая жизнь у обессиленного противника.</font>'
-		 damageZ=RAND(GraveDogPower/40,GraveDogPower/20)
-		 $tipuronaZ='Сжигание жизни'
-		 gs'defenceZV'
-		 xgt'fight','1'
+		 horny = 0
+		 GraveDogPower- = 100
+		 manna- = 1000
+		 healthv = 0
+		 '<font color = green>Вы камлали с бубном сжигая жизнь у обессиленного противника.</font>'
+		 damageZ = RAND(GraveDogPower/40,GraveDogPower/20)
+		 $tipuronaZ = 'Сжигание жизни'
+		 gs 'defenceZV'
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
 end
 !!!!!!!!!!!!!!!Младший магистр
 
-if round>=6:
-	if manna>=1000 and GraveDogPower>=10 and spAstralBlast>=100:
-		 act 'Астральный удар (1000 маны и 10 силы собаки)':
+if round>= 6: 
+	if manna>= 1000 and GraveDogPower>= 10 and spAstralBlast>= 100: 
+		 act 'Астральный удар (1000 маны и 10 силы собаки)': 
 		 cla
-		 spAstralBlastExp+=1
-		 horny=0
-		 GraveDogPower-=10
-		 manna-=1000
-		 '<font color=green>Вы собрав свою силу и силу собаки нанесли удар по магии противника.</font>'
-		 damageM=RAND(2000+spAstralBlastExp,3000+spAstralBlastExp*10)
-		 gs'defenceMV'
-		 xgt'fight','1'
+		 spAstralBlastExp+= 1
+		 horny = 0
+		 GraveDogPower- = 10
+		 manna- = 1000
+		 '<font color = green>Вы собрав свою силу и силу собаки нанесли удар по магии противника.</font>'
+		 damageM = RAND(2000+spAstralBlastExp,3000+spAstralBlastExp*10)
+		 gs 'defenceMV'
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
 
-	if manna>=1000 and GraveDogPower>=10 and spGraveRessurect>=100:
-		 act 'Запретное восстановление (1000 маны и 10 силы собаки)':
+	if manna>= 1000 and GraveDogPower>= 10 and spGraveRessurect>= 100: 
+		 act 'Запретное восстановление (1000 маны и 10 силы собаки)': 
 		 cla
-		 horny=0
-		 GraveDogPower-=10
-		 manna-=1000
-		 if filosofkam=0:vidage+=1
-		 '<font color=green>Собрав свои силы и силы собаки вы восстановили полностью свою жизнь, но немного постарели.</font>'
-		 health=vital*10
-		 xgt'fight','1'
+		 horny = 0
+		 GraveDogPower- = 10
+		 manna- = 1000
+		 if filosofkam = 0: vidage+= 1
+		 '<font color = green>Собрав свои силы и силы собаки вы восстановили полностью свою жизнь, но немного постарели.</font>'
+		 health = vital*10
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
 
-	if manna>=2000 and GraveDogPower>=100 and priziv=0 and cooldownSpell<=0 and spConjWall>=100:
-		 act 'Призыв живой стены (2000 маны и 100 силы собаки)':
+	if manna>= 2000 and GraveDogPower>= 100 and priziv = 0 and cooldownSpell<= 0 and spConjWall>= 100: 
+		 act 'Призыв живой стены (2000 маны и 100 силы собаки)': 
 		 cla
-		 horny=0
-		 GraveDogPower-=100
-		 manna-=2000
-		 cooldownSpell=5
-		 $pname='Живая стена'
-		 priziv=1
-		 prizivTimes=20
-		 pstren=100
-		 pspeed=100
-		 pagil=100
-		 pvital=1000
-		 Pintel=400
-		 pwill=200
-		 Phealth=pvital*10
-		 pmanna=pintel*10
-		 pwipo=pwill*10
-		 prizivProgram=0
-		 '<font color=green>Собрав свои силы и силы собаки вы призвали на поле боя живую стену.</font>'
-		 xgt'fight','1'
+		 horny = 0
+		 GraveDogPower- = 100
+		 manna- = 2000
+		 cooldownSpell = 5
+		 $pname = 'Живая стена'
+		 priziv = 1
+		 prizivTimes = 20
+		 pstren = 100
+		 pspeed = 100
+		 pagil = 100
+		 pvital = 1000
+		 Pintel = 400
+		 pwill = 200
+		 Phealth = pvital*10
+		 pmanna = pintel*10
+		 pwipo = pwill*10
+		 prizivProgram = 0
+		 '<font color = green>Собрав свои силы и силы собаки вы призвали на поле боя живую стену.</font>'
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
 
-	if manna>=2000 and GraveDogPower>=100 and priziv=0 and cooldownSpell<=0 and spConjScelet>=100:
-		 act 'Призыв скелета (2000 маны и 100 силы собаки)':
+	if manna>= 2000 and GraveDogPower>= 100 and priziv = 0 and cooldownSpell<= 0 and spConjScelet>= 100: 
+		 act 'Призыв скелета (2000 маны и 100 силы собаки)': 
 		 cla
-		 horny=0
-		 GraveDogPower-=100
-		 manna-=2000
-		 cooldownSpell=5
-		 $pname='Скелет'
-		 priziv=1
-		 prizivTimes=20
-		 pstren=500
-		 pspeed=100
-		 pagil=100
-		 pvital=300
-		 Pintel=200
-		 pwill=100
-		 Phealth=pvital*10
-		 pmanna=pintel*10
-		 pwipo=pwill*10
-		 prizivProgram=1
-		 '<font color=green>Собрав свои силы и силы собаки вы призвали на поле боя скелет.</font>'
-		 xgt'fight','1'
+		 horny = 0
+		 GraveDogPower- = 100
+		 manna- = 2000
+		 cooldownSpell = 5
+		 $pname = 'Скелет'
+		 priziv = 1
+		 prizivTimes = 20
+		 pstren = 500
+		 pspeed = 100
+		 pagil = 100
+		 pvital = 300
+		 Pintel = 200
+		 pwill = 100
+		 Phealth = pvital*10
+		 pmanna = pintel*10
+		 pwipo = pwill*10
+		 prizivProgram = 1
+		 '<font color = green>Собрав свои силы и силы собаки вы призвали на поле боя скелет.</font>'
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
 
-	if priziv>0 and manna>=500 and GraveDogPower>=2:
-		 act 'Создать физ защиту своему призыву (500 маны и 2 силы собаки)':
+	if priziv>0 and manna>= 500 and GraveDogPower>= 2: 
+		 act 'Создать физ защиту своему призыву (500 маны и 2 силы собаки)': 
 		 cla
-		 GraveDogPower-=2
-		 manna-=500
-		 pdefence+=5000
-		 '<font color=green>Собрав свои силы и силы собаки вы создали физ защиту своему призыву.</font>'
-		 xgt'fight','1'
+		 GraveDogPower- = 2
+		 manna- = 500
+		 pdefence+= 5000
+		 '<font color = green>Собрав свои силы и силы собаки вы создали физ защиту своему призыву.</font>'
+		 xgt 'fight','1'
 		 exit
 		 end
 		 
-		 act 'Создать температурную защиту своему призыву (500 маны и 2 силы собаки)':
+		 act 'Создать температурную защиту своему призыву (500 маны и 2 силы собаки)': 
 		 cla
-		 GraveDogPower-=2
-		 manna-=500
-		 pdefenceT+=5000
-		 '<font color=green>Собрав свои силы и силы собаки вы создали температурную защиту своему призыву.</font>'
-		 xgt'fight','1'
+		 GraveDogPower- = 2
+		 manna- = 500
+		 pdefenceT+= 5000
+		 '<font color = green>Собрав свои силы и силы собаки вы создали температурную защиту своему призыву.</font>'
+		 xgt 'fight','1'
 		 exit
 		 end
 		 
-		 act 'Создать воздушную защиту своему призыву (500 маны и 2 силы собаки)':
+		 act 'Создать воздушную защиту своему призыву (500 маны и 2 силы собаки)': 
 		 cla
-		 GraveDogPower-=2
-		 manna-=500
-		 pdefenceW+=5000
-		 '<font color=green>Собрав свои силы и силы собаки вы создали воздушную защиту своему призыву.</font>'
-		 xgt'fight','1'
+		 GraveDogPower- = 2
+		 manna- = 500
+		 pdefenceW+= 5000
+		 '<font color = green>Собрав свои силы и силы собаки вы создали воздушную защиту своему призыву.</font>'
+		 xgt 'fight','1'
 		 exit
 		 end
 		 
-		 act 'Создать ментальную защиту своему призыву (500 маны и 2 силы собаки)':
+		 act 'Создать ментальную защиту своему призыву (500 маны и 2 силы собаки)': 
 		 cla
-		 GraveDogPower-=2
-		 manna-=500
-		 pdefenceH+=5000
-		 '<font color=green>Собрав свои силы и силы собаки вы создали ментальную защиту своему призыву.</font>'
-		 xgt'fight','1'
+		 GraveDogPower- = 2
+		 manna- = 500
+		 pdefenceH+= 5000
+		 '<font color = green>Собрав свои силы и силы собаки вы создали ментальную защиту своему призыву.</font>'
+		 xgt 'fight','1'
 		 exit
 		 end
 		 
-		 act 'Создать магичискую защиту своему призыву (500 маны и 2 силы собаки)':
+		 act 'Создать магичискую защиту своему призыву (500 маны и 2 силы собаки)': 
 		 cla
-		 GraveDogPower-=2
-		 manna-=500
-		 pdefenceM+=5000
-		 '<font color=green>Собрав свои силы и силы собаки вы создали магическую защиту своему призыву.</font>'
-		 xgt'fight','1'
+		 GraveDogPower- = 2
+		 manna- = 500
+		 pdefenceM+= 5000
+		 '<font color = green>Собрав свои силы и силы собаки вы создали магическую защиту своему призыву.</font>'
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
@@ -285,63 +285,63 @@ end
 
 !старший магистр
 
-if round>=8:
-	if manna>=5000 and GraveDogPower>=200 and cooldownSpell<=0 and spMiazm>=100:
-		 act 'Миазмы (5000 маны и 200 силы собаки)':
+if round>= 8: 
+	if manna>= 5000 and GraveDogPower>= 200 and cooldownSpell<= 0 and spMiazm>= 100: 
+		 act 'Миазмы (5000 маны и 200 силы собаки)': 
 		 cla
-		 horny=0
-		 GraveDogPower-=200
-		 manna-=5000
-		 cooldownSpell=3
-		 acid+=RAND(20,40)
-		 klonv=0
-		 nothere=0
-		 klon=0
-		 klonv=0
-		 '<font color=green>Собрав свои силы и силы собаки вы призвали на поле миазмы делающие видимым любое существо и уничтожающее клонов.</font>'
-		 xgt'fight','1'
+		 horny = 0
+		 GraveDogPower- = 200
+		 manna- = 5000
+		 cooldownSpell = 3
+		 acid+= RAND(20,40)
+		 klonv = 0
+		 nothere = 0
+		 klon = 0
+		 klonv = 0
+		 '<font color = green>Собрав свои силы и силы собаки вы призвали на поле миазмы делающие видимым любое существо и уничтожающее клонов.</font>'
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
 end
 
-if round>=10:
-	if manna>=5000 and GraveDogPower>=200 and cooldownSpell<=0 and spVladikShadow>=100:
-		 act 'Тени владык (5000 маны и 200 силы собаки)':
+if round>= 10: 
+	if manna>= 5000 and GraveDogPower>= 200 and cooldownSpell<= 0 and spVladikShadow>= 100: 
+		 act 'Тени владык (5000 маны и 200 силы собаки)': 
 		 cla
-		 horny=0
-		 GraveDogPower-=200
-		 manna-=5000
-		 cooldownSpell=3
-		 '<font color=green>Собрав свои силы и силы собаки вы призвали на поле ТЕНИ ВЛАДЫК.</font>'
-		 '<font color=green>Сгустившиеся тени вокруг противника напали на него стараясь разорвать на части.</font>'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 damage=RAND(1000,1500)
-		 gs'defenceV'
-		 xgt'fight','1'
+		 horny = 0
+		 GraveDogPower- = 200
+		 manna- = 5000
+		 cooldownSpell = 3
+		 '<font color = green>Собрав свои силы и силы собаки вы призвали на поле ТЕНИ ВЛАДЫК.</font>'
+		 '<font color = green>Сгустившиеся тени вокруг противника напали на него стараясь разорвать на части.</font>'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 damage = RAND(1000,1500)
+		 gs 'defenceV'
+		 xgt 'fight','1'
 		 exit
 		 end
 	end
 end
 
-act 'Пропустить ход':xgt'fight','1'
+act 'Пропустить ход': xgt 'fight','1'
 
 
 

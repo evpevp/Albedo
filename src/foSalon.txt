@@ -8,33 +8,33 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 mag = 1
 '<center><H4>Салон мадам Жозефины</H4></center>'
-'<center><img src="pic/Evedon/foSalon.jpg" ></center>'
+'<center><img src = "pic/Evedon/foSalon.jpg" ></center>'
 'В салоне дорогая, резная мебель и стены обиты роскошными тканями.'
 
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
 
-act 'Уйти':
-minut=minut+5
-gt'fortW'
+act 'Уйти': 
+minut += 5
+ gt 'fortW'
 end
 
-if hour>=16:
-     if slot>13:
+if hour>= 16: 
+     if slot>13: 
      'Мадам Жозефина осмотрела ваш костюм и сказала "Это клуб для джентльменов, поэтому вход стоит 1000 гемов. Соблаговолите внести означенную сумму".'
-         if gem>=1000:
-             act 'Оплатить':
-             gem-=1000
-             noble+=1
-             gt'foSalon2'
+         if gem>= 1000: 
+             act 'Оплатить': 
+             gem- = 1000
+             noble+= 1
+             gt 'foSalon2'
              end
          end
      else

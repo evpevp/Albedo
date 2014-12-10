@@ -9,20 +9,20 @@ $locFight = $CURLOC
 $metkaBed = $ARGS[0]
 $locBed = $CURLOC
 '<center><H4>Комната в термах</H4></center>'
-'<center><img src="pic/Evedon/room.jpg" ></center>'
+'<center><img src = "pic/Evedon/room.jpg" ></center>'
 'Просторная, чистая и светлая комната украшена дорогой изящной мебелью.'
 clr
-gs'stat'
-'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
-'Резной <a href="exec:GT ''lokerW''">шкаф</a> из красного дерева.'
-'Уютный <a href="exec:GT ''divanW''">диван</a> обитый дорогой тканью.'
-if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
+gs 'stat'
+'Застеленная, чистая <a href = "exec: gt ''bed''">кровать</a>.'
+'Резной <a href = "exec: gt ''lokerW''">шкаф</a> из красного дерева.'
+'Уютный <a href = "exec: gt ''divanW''">диван</a> обитый дорогой тканью.'
+if mirr>0: '<a href = "exec: gt ''mirrW''">Зеркало</a>'
 
 
-act 'Уйти из комнаты':minut=minut+5&gt'onsenWork','start'
+act 'Уйти из комнаты': minut += 5 & gt 'onsenWork','start'
 
 
-if slot>0:act 'Раздеться':gs'clonil'&minut+=5&gt $CURLOC
+if slot>0: act 'Раздеться': gs 'clonil' & minut+= 5 & gt $CURLOC
 
 --- onsenRoom ---------------------------------
 

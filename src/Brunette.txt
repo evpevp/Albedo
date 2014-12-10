@@ -4,64 +4,64 @@ $loc = $CURLOC
 cla
 *clr 
 clr
-gs'stat'
-'<center><img src="pic\studiа\Brunette_1.jpg" ></center>'
+gs 'stat'
+'<center><img src = "pic\studiа\Brunette_1.jpg" ></center>'
 'Вы выбрали брюнеточку и приступили к съёмкам фильма'
 
-act 'Начать сьёмку':
+act 'Начать сьёмку': 
 cla
 *clr 
-'<center><img src="pic\studiа\Brunette_2.jpg" ></center>'
+'<center><img src = "pic\studiа\Brunette_2.jpg" ></center>'
 'Вы стали снимать актрису с двумя актерами'
-	 act 'Снять сцену с миньетом':
+	 act 'Снять сцену с миньетом': 
 	 cla
      *clr
-	 '<center><img src="pic\studiа\Brunette_3.jpg" ></center>'
+	 '<center><img src = "pic\studiа\Brunette_3.jpg" ></center>'
 	 'Она неплохо отсосала ребятам ...'
-		 act 'Поставить брюнетку рачком':
+		 act 'Поставить брюнетку рачком': 
 		 cla
          *clr
-		 '<center><img src="pic\studiа\Brunette_4.jpg" ></center>'
+		 '<center><img src = "pic\studiа\Brunette_4.jpg" ></center>'
 		 'Один из актёров начал трахать брюнетку раком, а она продолжала сосать у второго ...'
-			 act 'Снять сцену с аналом':
+			 act 'Снять сцену с аналом': 
 			 cla
              *clr
-			 '<center><img src="pic\studiа\Brunette_5.jpg" ></center>'
+			 '<center><img src = "pic\studiа\Brunette_5.jpg" ></center>'
 			 'Девочка лихо села на один хуй сверху и продолжила отсасывать другой ...'
-				 act 'Поменять позицию...':
+				 act 'Поменять позицию...': 
 				 cla
                  *clr
-				 '<center><img src="pic\studiа\Brunette_6.jpg" ></center>'
+				 '<center><img src = "pic\studiа\Brunette_6.jpg" ></center>'
 				 'Попрыгав на члене киской, она села на него попочкой'
-					 act 'Снять двойное проникновение ...':
+					 act 'Снять двойное проникновение ...': 
 					 cla
                      *clr
-					 '<center><img src="pic\studiа\Brunette_7.jpg" ></center>'
+					 '<center><img src = "pic\studiа\Brunette_7.jpg" ></center>'
 					 'Брюнетка села пиздёнкой на один член, а второй получила в анус ...'
-						 act 'Развернуть по-другому..':
+						 act 'Развернуть по-другому..': 
 						 cla
                          *clr
-						 '<center><img src="pic\studiа\Brunette_8.jpg" ></center>'
+						 '<center><img src = "pic\studiа\Brunette_8.jpg" ></center>'
 						 'Широко раскинув ноги, сучка наслаждалась действом в два смычка '
-							 act 'Пора кончать ...':
+							 act 'Пора кончать ...': 
 							 cla
                              *clr
-							 '<center><img src="pic\studiа\Brunette_9.jpg" ></center>'
+							 '<center><img src = "pic\studiа\Brunette_9.jpg" ></center>'
 							 'Ребята постарались на славу и обкончали сучке всё лицо и грудь ...'
-								 act 'Закончить съёмку фильма':
-								 set minut = minut + 600
-								 film=film+1
-								 filmpart=filmpart+1
+								 act 'Закончить съёмку фильма': 
+								  minut = minut + 600
+								 film = film+1
+								 filmpart = filmpart+1
 								 castig = 0 
 								 actris = 0
 								 cla
 								 *clr 
 								 clr
-								 gs'stat'
-								 '<center><img src="pic\studiа\dvd-disс.jpg" ></center>'
+								 gs 'stat'
+								 '<center><img src = "pic\studiа\dvd-disс.jpg" ></center>'
 								 'Вы потратили 10 часов на съёмку и монтаж фильма'
 								 'и записали отснятый фильм на DVD диск'
-									 act 'Отвезти фильм Тимофеичу': gt'sauna','1'
+									 act 'Отвезти фильм Тимофеичу': gt 'sauna','1'
 								 end
 							 end	 
 						 end

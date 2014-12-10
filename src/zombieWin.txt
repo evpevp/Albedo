@@ -1,9 +1,9 @@
 # zombieWin
-monster=0
-deadgem=RAND(lvl,lvl*4)
+monster = 0
+deadgem = RAND(lvl,lvl*4)
 'Мертвец затих на земле. Вы подобрали из его карманов <<deadgem>> гем'
-gem+=deadgem
+gem+= deadgem
 
-act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 --- zombieWin ---------------------------------
 

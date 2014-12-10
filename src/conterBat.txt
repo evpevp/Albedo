@@ -1,23 +1,23 @@
 # conterBat
-if conterBatTimeV<=0 and conterBatV>0:conterBatTimeV=0&conterBatV=0
-if conterBatTime<=0 and conterBat>0:conterBatTime=0&conterBat=0
+if conterBatTimeV<= 0 and conterBatV>0: conterBatTimeV = 0 & conterBatV = 0
+if conterBatTime<= 0 and conterBat>0: conterBatTime = 0 & conterBat = 0
 
-if conterBat=1 and countBatRound!round:
-countBatRound=round
-conterBatTime=conterBatTime-1
-'<B><font color=green>Вы наносите КОНТРУДАР.</font></B>'
- damage=RAND(stren/2,stren)
- tipatk=1
- gs'popad'
+if conterBat = 1 and countBatRound!round: 
+countBatRound = round
+conterBatTime = conterBatTime-1
+'<B><font color = green>Вы наносите КОНТРУДАР.</font></B>'
+ damage = RAND(stren/2,stren)
+ tipatk = 1
+ gs 'popad'
 end
 
-if conterBat=2 and countBatRound!round and stileMark=7:
-countBatRound=round
-conterBatTime=conterBatTime-1
-'<B><font color=green>Вы наносите КОНТРУДАР мечом.</font></B>'
- tipatk=1
- gs'udar','3'
- gs'popad'
+if conterBat = 2 and countBatRound!round and stileMark = 7: 
+countBatRound = round
+conterBatTime = conterBatTime-1
+'<B><font color = green>Вы наносите КОНТРУДАР мечом.</font></B>'
+ tipatk = 1
+ gs 'udar','3'
+ gs 'popad'
 end
 --- conterBat ---------------------------------
 

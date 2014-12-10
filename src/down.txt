@@ -7,105 +7,105 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>ЦЕНТР ГОРОДА</H4></center>'
-'<center><img src="pic\pic\down.jpg" ></center>'
+'<center><img src = "pic\pic\down.jpg" ></center>'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 
 
-if music_on=1:music_on=0
-if club=1:club=0
+if music_on = 1: music_on = 0
+if club = 1: club = 0
 
 
-if car > 0 and cardrive = 2:
-set cardrive = 2
-'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+if car > 0 and cardrive = 2: 
+ cardrive = 2
+'На парковке стоит <a href = "exec: gs ''car'',''start''">ваш <<$car>></a>.'
 end
 
-if NoHaritonov=0:
-if brak < 2:'Ваша элитная шестикомнатная ((квартира|koridor1|minut=minut+5)) в которой вы живете с женой и детьми.'
-if brak = 2:'Ваша элитная шестикомнатная ((квартира|koridor2|minut=minut+5)) в которой вы живете с женой и детьми.'
-if innaQW >= 200:'<a href="exec:GT ''innaRoom'',''start''">Квартира вашей дочери Инны.</a>.'
+if NoHaritonov = 0: 
+if brak < 2: 'Ваша элитная шестикомнатная ((квартира|koridor1|minut += 5)) в которой вы живете с женой и детьми.'
+if brak = 2: 'Ваша элитная шестикомнатная ((квартира|koridor2|minut += 5)) в которой вы живете с женой и детьми.'
+if innaQW >= 200: '<a href = "exec: gt ''innaRoom'',''start''">Квартира вашей дочери Инны.</a>.'
 end
-'<a href="exec:GT ''metro'',''start2''">Метро</a>.'
-'<a href="exec:GT ''bank'',''start''">Банк</a>.'
-'<a href="exec:GT ''fit'',''start''">Фитнес центр</a>.'
-'<a href="exec:GT ''stripclub'',''start''">Стрипклуб</a>.'
-'<a href="exec:GT ''sexshop'',''start''">Секс шоп</a> для извращенцев со всего города.'
-'Модный <a href="exec:GT ''club'',''start''">Ночной клуб</a> сияет огнями, привлекая молодежь со всего города.'
-'Дорогой <a href="exec:GT ''restoran'',''start''">Ресторан</a> вокруг которого стоят роскошные автомашины.'
-'<a href="exec:GT ''advokat'',''start''">Адвокатская контора</a>.'
-if pornstudio=1:'Ваша <a href="exec:GT ''pornstudio'',''start''">Киностудия</a> в которой вы снимаете фильмы для взрослых.'
+'<a href = "exec: gt ''metro'',''start2''">Метро</a>.'
+'<a href = "exec: gt ''bank'',''start''">Банк</a>.'
+'<a href = "exec: gt ''fit'',''start''">Фитнес центр</a>.'
+'<a href = "exec: gt ''stripclub'',''start''">Стрипклуб</a>.'
+'<a href = "exec: gt ''sexshop'',''start''">Секс шоп</a> для извращенцев со всего города.'
+'Модный <a href = "exec: gt ''club'',''start''">Ночной клуб</a> сияет огнями, привлекая молодежь со всего города.'
+'Дорогой <a href = "exec: gt ''restoran'',''start''">Ресторан</a> вокруг которого стоят роскошные автомашины.'
+'<a href = "exec: gt ''advokat'',''start''">Адвокатская контора</a>.'
+if pornstudio = 1: 'Ваша <a href = "exec: gt ''pornstudio'',''start''">Киностудия</a> в которой вы снимаете фильмы для взрослых.'
 
 
-     act 'Ждать':
+     act 'Ждать': 
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         if waiting <= 0 or waiting > 120: 
+          minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         if waiting > 0 and waiting <= 120: 
+          minut = minut + waiting
          end
-     act 'Посмотреть на часы':gt curloc
+     act 'Посмотреть на часы': gt curloc
      end
      
-     act 'Ехать на такси':
+     act 'Ехать на такси': 
      cla
      *clr
-     '<center><img src="pic\pic\taxi1.jpg" ></center>'
+     '<center><img src = "pic\pic\taxi1.jpg" ></center>'
      'Вы поймали проезжавшую мимо таксишку.'
-     set minut = minut + 15
-         act 'В спальный район 250 руб':
+      minut = minut + 15
+         act 'В спальный район 250 руб': 
 		 cla
 		 *clr
          'Вы сели в такси и за 15 минут доехали до спального района'
-			 if money >= 250:
-			 set money = money - 250
+			 if money >= 250: 
+			  money = money - 250
 			 'Заплатили таксисту 250 рублей и вышли из машины.'
-			 act 'Уйти':gt 'street'
+			 act 'Уйти': gt 'street'
 			 exit
 			 end
 			 
-			 if money < 250 and pol=0:
+			 if money < 250 and pol = 0: 
 			 'Таксист разозлился и развернул машину обратно выгрузав вас там откуда взял.'
-			 act 'Уйти':gt 'down'
+			 act 'Уйти': gt 'down'
 			 exit
 			 end
          end
          
-         act 'В северный район 250 руб':
+         act 'В северный район 250 руб': 
 		 cla
 		 *clr
          'Вы сели в такси и за 15 минут доехали до северного района'
-			 if money >= 250:
-			 set money = money - 250
+			 if money >= 250: 
+			  money = money - 250
 			 'Заплатили таксисту 250 рублей и вышли из машины.'
-			 act 'Уйти':gt 'nord'
+			 act 'Уйти': gt 'nord'
 			 exit
 			 end
 			 
-			 if money < 250 and pol=0:
+			 if money < 250 and pol = 0: 
 			 'Таксист разозлился и развернул машину обратно выгрузав вас там откуда взял.'
-			 act 'Уйти':gt 'down'
+			 act 'Уйти': gt 'down'
 			 exit
 			 end
          end
      end
      
-     act 'Идти к северному району 3 часа':
+     act 'Идти к северному району 3 часа': 
      cla
-     minut=minut+180
-     sweat=sweat+2
-     gt'nord'
+     minut += 180
+     sweat = sweat+2
+     gt 'nord'
      end
      
-     act 'Идти к спальному району 3 часа':
+     act 'Идти к спальному району 3 часа': 
      cla
-     minut=minut+180
-     sweat=sweat+2
-     gt'street'
+     minut += 180
+     sweat = sweat+2
+     gt 'street'
      end
 
 

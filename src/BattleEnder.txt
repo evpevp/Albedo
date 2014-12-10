@@ -1,65 +1,65 @@
 # BattleEnder
-if $ARGS[0]='win':
-     if FightTip = 0:
-     set WIN = WIN + 1
+if $ARGS[0] = 'win': 
+     if FightTip = 0: 
+      WIN = WIN + 1
      end
-     if FightTip = 1:
-         if amature = 0:set BOXWIN = BOXWIN + 1
-         if amature = 1:set BOXWINp = BOXWINp + 1
+     if FightTip = 1: 
+         if amature = 0: BOXWIN = BOXWIN + 1
+         if amature = 1: BOXWINp = BOXWINp + 1
      end
-     if FightTip = 2:
-         if amature = 0:set KIKWIN = KIKWIN + 1
-         if amature = 1:set KIKWINp = KIKWINp + 1
+     if FightTip = 2: 
+         if amature = 0: KIKWIN = KIKWIN + 1
+         if amature = 1: KIKWINp = KIKWINp + 1
      end
-     if FightTip = 3:
-     set WRESLWIN = WRESLWIN + 1
+     if FightTip = 3: 
+      WRESLWIN = WRESLWIN + 1
      end
-     if FightTip = 4:
-     set MMAWIN = MMAWIN + 1
+     if FightTip = 4: 
+      MMAWIN = MMAWIN + 1
      end
-gs'FightNill'
-act 'Уйти.':GOTO $locFight, $metkaFight
+gs 'FightNill'
+act 'Уйти.': GOTO $locFight, $metkaFight
 end
 
-if $ARGS[0]='loss':
-     if FightTip = 0:
-     set LOSS = LOSS + 1
+if $ARGS[0] = 'loss': 
+     if FightTip = 0: 
+      LOSS = LOSS + 1
      end
-     if FightTip = 1:
-         if amature = 0:set BOXLOSS = BOXLOSS + 1
-         if amature = 1:set BOXLOSSp = BOXLOSSp + 1
+     if FightTip = 1: 
+         if amature = 0: BOXLOSS = BOXLOSS + 1
+         if amature = 1: BOXLOSSp = BOXLOSSp + 1
      end
-     if FightTip = 2:
-         if amature = 0:set KIKLOSS = KIKLOSS + 1
-         if amature = 1:set KIKLOSSp = KIKLOSSp + 1
+     if FightTip = 2: 
+         if amature = 0: KIKLOSS = KIKLOSS + 1
+         if amature = 1: KIKLOSSp = KIKLOSSp + 1
      end
-     if FightTip = 3:
-     set WRESLLOSS = WRESLLOSS + 1
+     if FightTip = 3: 
+      WRESLLOSS = WRESLLOSS + 1
      end
-     if FightTip = 4:
-     set MMALOSS = MMALOSS + 1
+     if FightTip = 4: 
+      MMALOSS = MMALOSS + 1
      end
-gs'FightNill'
-act 'Уйти.':GOTO $locFight, $metkaFight
+gs 'FightNill'
+act 'Уйти.': GOTO $locFight, $metkaFight
 end
 
-if $ARGS[0]='draw':
-     if FightTip = 1:
-         if amature = 0:set BOXDRAW = BOXDRAW + 1
-         if amature = 1:set BOXDRAWp = BOXDRAWp + 1
+if $ARGS[0] = 'draw': 
+     if FightTip = 1: 
+         if amature = 0: BOXDRAW = BOXDRAW + 1
+         if amature = 1: BOXDRAWp = BOXDRAWp + 1
      end
-     if FightTip = 2:
-         if amature = 0:set KIKDRAW = KIKDRAW + 1
-         if amature = 1:set KIKDRAWp = KIKDRAWp + 1
+     if FightTip = 2: 
+         if amature = 0: KIKDRAW = KIKDRAW + 1
+         if amature = 1: KIKDRAWp = KIKDRAWp + 1
      end
-     if FightTip = 3:
-     set WRESLDRAW = WRESLDRAW + 1
+     if FightTip = 3: 
+      WRESLDRAW = WRESLDRAW + 1
      end
-     if FightTip = 4:
-     set MMADRAW = MMADRAW + 1
+     if FightTip = 4: 
+      MMADRAW = MMADRAW + 1
      end
-gs'FightNill'
-act 'Уйти.':GOTO $locFight, $metkaFight
+gs 'FightNill'
+act 'Уйти.': GOTO $locFight, $metkaFight
 end
 
 

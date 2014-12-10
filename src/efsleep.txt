@@ -1,10 +1,10 @@
 # efsleep
 clr
-gs'stat'
-efsleep=efsleep-1
-son=20
-if INFIGHT=1:DELOBJ 'Инвентарь'
+gs 'stat'
+efsleep = efsleep-1
+son = 20
+if INFIGHT = 1: DELOBJ 'Инвентарь'
 clr
-gs'stat'
+gs 'stat'
 --- efsleep ---------------------------------
 

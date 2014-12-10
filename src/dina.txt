@@ -1,189 +1,189 @@
 # dina
-$spermEatS={
-	skverna+=cumbelly
-	cumbelly=0
-	swallow+=1
+$spermEatS = {
+	skverna+= cumbelly
+	cumbelly = 0
+	swallow+= 1
 	'Вы собрали сперму с живота и слизали ее.'
-	gs'stat'
+	gs 'stat'
 }
-$spermEatS1={
-	skverna+=cumpussy
-	cumpussy=0
-	swallow+=1
+$spermEatS1 = {
+	skverna+= cumpussy
+	cumpussy = 0
+	swallow+= 1
 	'Вы собрали сперму из своей киски и съели ее.'
-	gs'stat'
+	gs 'stat'
 }
-$spermEatS2={
-	skverna+=cumass
-	cumass=0
-	swallow+=1
+$spermEatS2 = {
+	skverna+= cumass
+	cumass = 0
+	swallow+= 1
 	'Вы собрали сперму со своей попы и съели ее.'
-	gs'stat'
+	gs 'stat'
 }
-$spermEatS3={
-	skverna+=cumanus
-	cumanus=0
-	swallow+=1
+$spermEatS3 = {
+	skverna+= cumanus
+	cumanus = 0
+	swallow+= 1
 	'Вы выдавили сперму из своей попки в ладонь и слизали ее.'
-	gs'stat'
+	gs 'stat'
 }
-$spermEatS4={
-	skverna+=cumlip
-	cumlip=0
-	swallow+=1
+$spermEatS4 = {
+	skverna+= cumlip
+	cumlip = 0
+	swallow+= 1
 	'Вы облизнулись проглатывая сперму во рту.'
-	gs'stat'
+	gs 'stat'
 }
-$spermEatS5={
-	skverna+=cumface
-	cumface=0
-	swallow+=1
+$spermEatS5 = {
+	skverna+= cumface
+	cumface = 0
+	swallow+= 1
 	'Вы высунули свой длинный демонический язык и облизнули свое лицо слизывая и поедая сперму.'
-	gs'stat'
+	gs 'stat'
 }
-$spermBut={
-	SPbut+=cumbelly
-	cumbelly=0
-	gs'stat'
+$spermBut = {
+	SPbut+= cumbelly
+	cumbelly = 0
+	gs 'stat'
 	'Вы собрали сперму в бутылочку'
 }
-$spermEat={
-	if golod >= 10:
-		set golod = golod + 5
-		health=health+5
-		set fat = fat + 1
+$spermEat = {
+	if golod >= 10: 
+		 golod = golod + 5
+		health = health+5
+		 fat = fat + 1
 		'Вы объелись спермой.'
 	end
-	if golod < 10:
-		set golod = golod + 10
-		health=health+5
-		manna=manna+5
+	if golod < 10: 
+		 golod = golod + 10
+		health = health+5
+		manna = manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
 	end
-	cumbelly-=1
-	swallow+=1
-	swallowEat+=1
-	gs'stat'
+	cumbelly- = 1
+	swallow+= 1
+	swallowEat+= 1
+	gs 'stat'
 }
-$spermBut1={
-	SPbut+=cumpussy
-	cumpussy=0
-	gs'stat'
+$spermBut1 = {
+	SPbut+= cumpussy
+	cumpussy = 0
+	gs 'stat'
 	'Вы собрали сперму в бутылочку'
 }
-$spermEat1={
-	if golod >= 10:
-		set golod = golod + 5
-		health=health+5
-		set fat = fat + 1
+$spermEat1 = {
+	if golod >= 10: 
+		 golod = golod + 5
+		health = health+5
+		 fat = fat + 1
 		'Вы объелись спермой.'
 	end
-	if golod < 10:
-		set golod = golod + 10
-		health=health+5
-		manna=manna+5
+	if golod < 10: 
+		 golod = golod + 10
+		health = health+5
+		manna = manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
 	end
-	cumpussy-=1
-	swallow+=1
-	swallowEat+=1
-	gs'stat'
+	cumpussy- = 1
+	swallow+= 1
+	swallowEat+= 1
+	gs 'stat'
 }
-$spermBut2={
-	SPbut+=cumass
-	cumass=0
-	gs'stat'
+$spermBut2 = {
+	SPbut+= cumass
+	cumass = 0
+	gs 'stat'
 	'Вы собрали сперму в бутылочку'
 }
-$spermEat2={
-	if golod >= 10:
-		set golod = golod + 5
-		health=health+5
-		set fat = fat + 1
+$spermEat2 = {
+	if golod >= 10: 
+		 golod = golod + 5
+		health = health+5
+		 fat = fat + 1
 		'Вы объелись спермой.'
 	end
-	if golod < 10:
-		set golod = golod + 10
-		health=health+5
-		manna=manna+5
+	if golod < 10: 
+		 golod = golod + 10
+		health = health+5
+		manna = manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
 	end
-	cumass-=1
-	swallow+=1
-	swallowEat+=1
-	gs'stat'
+	cumass- = 1
+	swallow+= 1
+	swallowEat+= 1
+	gs 'stat'
 }
-$spermBut3={
-	SPbut+=cumanus
-	cumanus=0
-	gs'stat'
+$spermBut3 = {
+	SPbut+= cumanus
+	cumanus = 0
+	gs 'stat'
 	'Вы собрали сперму в бутылочку'
 }
-$spermEat3={
-	if golod >= 10:
-		set golod = golod + 5
-		health=health+5
-		set fat = fat + 1
+$spermEat3 = {
+	if golod >= 10: 
+		 golod = golod + 5
+		health = health+5
+		 fat = fat + 1
 		'Вы объелись спермой.'
 	end
-	if golod < 10:
-		set golod = golod + 10
-		health=health+5
-		manna=manna+5
+	if golod < 10: 
+		 golod = golod + 10
+		health = health+5
+		manna = manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
 	end
-	cumanus-=1
-	swallow+=1
-	swallowEat+=1
-	gs'stat'
+	cumanus- = 1
+	swallow+= 1
+	swallowEat+= 1
+	gs 'stat'
 }
-$spermBut4={
-	SPbut+=cumlip
-	cumlip=0
-	gs'stat'
+$spermBut4 = {
+	SPbut+= cumlip
+	cumlip = 0
+	gs 'stat'
 	'Вы собрали сперму в бутылочку'
 }
-$spermEat4={
-	if golod >= 10:
-		set golod = golod + 5
-		health=health+5
-		set fat = fat + 1
+$spermEat4 = {
+	if golod >= 10: 
+		 golod = golod + 5
+		health = health+5
+		 fat = fat + 1
 		'Вы объелись спермой.'
 	end
-	if golod < 10:
-		set golod = golod + 10
-		health=health+5
-		manna=manna+5
+	if golod < 10: 
+		 golod = golod + 10
+		health = health+5
+		manna = manna+5
 	'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
 	end
-	cumlip-=1
-	swallow+=1
-	swallowEat+=1
-	gs'stat'
+	cumlip- = 1
+	swallow+= 1
+	swallowEat+= 1
+	gs 'stat'
 }
-$spermBut5={
-	SPbut+=cumface
-	cumface=0
-	gs'stat'
+$spermBut5 = {
+	SPbut+= cumface
+	cumface = 0
+	gs 'stat'
 	'Вы собрали сперму в бутылочку'
 }
-$spermEat5={
-	if golod >= 10:
-		set golod = golod + 5
-		health=health+5
-		set fat = fat + 1
+$spermEat5 = {
+	if golod >= 10: 
+		 golod = golod + 5
+		health = health+5
+		 fat = fat + 1
 		'Вы объелись спермой.'
 	end
-	if golod < 10:
-		set golod = golod + 10
-		health=health+5
-		manna=manna+5
+	if golod < 10: 
+		 golod = golod + 10
+		health = health+5
+		manna = manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
 	end
-	cumface-=1
-	swallow+=1
-	swallowEat+=1
-	gs'stat'
+	cumface- = 1
+	swallow+= 1
+	swallowEat+= 1
+	gs 'stat'
 }
 --- dina ---------------------------------
 

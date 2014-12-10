@@ -8,128 +8,128 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>ГОРОД ЭВЕДОН</H4></center>'
 '<center>Позорный столб</center>'
-'<center><img src="pic/Evedon\pillory.jpg" ></center>'
+'<center><img src = "pic/Evedon\pillory.jpg" ></center>'
 'Наказанных позорным столбом разрешается, насиловать, швырять едой, мочиться на них и воспрещается поить, кормить и отгонять желающих развлечься.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-act 'Отойти от позорного столба':
-minut=minut+1
-gt'enterW'
+act 'Отойти от позорного столба': 
+minut += 1
+ gt 'enterW'
 end
 
-if pilloryday!day:
-pilloryday=day
-pilloryrand=RAND(0,100)
-     if pilloryrand >=40:
-     pilrand=RAND(0,3)
-         if pilrand = 0:
-         pillman=1
-         $pillname='плешивый старик'
-         $pillnames='плешивого старика'
-         $pillnamess='плешивому старику'
+if pilloryday!day: 
+pilloryday = day
+pilloryrand = RAND(0,100)
+     if pilloryrand >= 40: 
+     pilrand = RAND(0,3)
+         if pilrand = 0: 
+         pillman = 1
+         $pillname = 'плешивый старик'
+         $pillnames = 'плешивого старика'
+         $pillnamess = 'плешивому старику'
          !'К позорному столбы прикован грязный плешивый старик.'
          end
-         if pilrand = 1:
-         pillman=2
-         $pillname='волосатый мужик'
-         $pillnames='волосатого мужика'
-         $pillnamess='волосатому мужику'
+         if pilrand = 1: 
+         pillman = 2
+         $pillname = 'волосатый мужик'
+         $pillnames = 'волосатого мужика'
+         $pillnamess = 'волосатому мужику'
          end
-         if pilrand = 2:
-         pillman=3
-         $pillname='молодой парень'
-         $pillnames='молодого парня'
-         $pillnamess='молодому парню'
+         if pilrand = 2: 
+         pillman = 3
+         $pillname = 'молодой парень'
+         $pillnames = 'молодого парня'
+         $pillnamess = 'молодому парню'
          end
-         if pilrand = 3:
-         pillman=4
-         $pillname='симпатичная девушка'
-         $pillnames='симпатичной девушке'
-         $pillnamess='симпатичную девушку'
+         if pilrand = 3: 
+         pillman = 4
+         $pillname = 'симпатичная девушка'
+         $pillnames = 'симпатичной девушке'
+         $pillnamess = 'симпатичную девушку'
          end
      end
-     if pilloryrand <40:
-     pillman=0
-     $pillname=''
-     $pillnames=''
-     $pillnamess=''
+     if pilloryrand <40: 
+     pillman = 0
+     $pillname = ''
+     $pillnames = ''
+     $pillnamess = ''
      !'К позорному столбы никто не прикован.'
      end
 end
 
-if pilloryday=day:
-     if pillman = 0:'К позорному столбу никто не прикован.'
-     if pillman = 1:'К позорному столбу прикован грязный плешивый старик.'
-     if pillman = 2:'К позорному столбу прикован вонючий и волосатый мужик.'
-     if pillman = 3:'К позорному столбу прикован молодой парень.'
-     if pillman = 4:'К позорному столбу прикована симпатичная девушка.'
+if pilloryday = day: 
+     if pillman = 0: 'К позорному столбу никто не прикован.'
+     if pillman = 1: 'К позорному столбу прикован грязный плешивый старик.'
+     if pillman = 2: 'К позорному столбу прикован вонючий и волосатый мужик.'
+     if pillman = 3: 'К позорному столбу прикован молодой парень.'
+     if pillman = 4: 'К позорному столбу прикована симпатичная девушка.'
 end
 
-if horny>=50 and penis>0 and pillman>0 and pillman<4:
-     act 'Оттрахать <<$pillnames>>':
+if horny>= 50 and penis>0 and pillman>0 and pillman<4: 
+     act 'Оттрахать <<$pillnames>>': 
      cla
      *clr
      'Вы подходите к <<$pillnamess>>'
-         act 'Трахнуть в рот':
+         act 'Трахнуть в рот': 
          cla
          *clr
-         aktman=aktman+1
-         DOM=DOM+1
-         horny=0
+         aktman = aktman+1
+         DOM = DOM+1
+         horny = 0
          'Вы вставлете в рот <<$pillnamess>> свой <<penis>> сантиметровый член. Вы со всей силы трахаете рот <<$pillnames>>, пока не кончили ему в рот.'
-         act 'Отойти':gt'pilloryW'
+         act 'Отойти': gt 'pilloryW'
          end
          
-         act 'Трахнуть в зад':
+         act 'Трахнуть в зад': 
          cla
          *clr
-         aktman=aktman+1
-         DOM=DOM+1
-         horny=0
+         aktman = aktman+1
+         DOM = DOM+1
+         horny = 0
          'Вы вставляете свой <<penis>> сантиметровый член в анус <<$pillnames>>. Вы стали неспеша сношать анус <<$pillnames>>, пока не кончили внутрь.'
-         act 'Отойти':gt'pilloryW'
+         act 'Отойти': gt 'pilloryW'
          end
      end
 end
 
-if horny>=50 and penis>0 and pillman=4:
-     act 'Оттрахать <<$pillnamess>>':
+if horny>= 50 and penis>0 and pillman = 4: 
+     act 'Оттрахать <<$pillnamess>>': 
      cla
      *clr
      'Вы подходите к <<$pillnames>>'
-         act 'Трахнуть в рот':
+         act 'Трахнуть в рот': 
          cla
          *clr
-         sexm+=1
-         girl=girl+1
-         DOM=DOM+1
-         horny=0
+         sexm+= 1
+         girl = girl+1
+         DOM = DOM+1
+         horny = 0
          'Вы вставлете в рот <<$pillnames>> свой <<penis>> сантиметровый член. Вы со всей силы трахаете рот <<$pillnames>>, пока не кончили ей в рот.'
-         act 'Отойти':gt'pilloryW'
+         act 'Отойти': gt 'pilloryW'
          end
          
-         act 'Трахнуть в зад':
+         act 'Трахнуть в зад': 
          cla
          *clr
-         sexm+=1
-         girl=girl+1
-         DOM=DOM+1
-         horny=0
+         sexm+= 1
+         girl = girl+1
+         DOM = DOM+1
+         horny = 0
          'Вы вставляете свой <<penis>> сантиметровый член в анус <<$pillnames>>. Вы стали неспеша сношать анус <<$pillnames>>, пока не кончили внутрь.'
-         act 'Отойти':gt'pilloryW'
+         act 'Отойти': gt 'pilloryW'
          end
          
-         act 'Трахнуть в киску':
+         act 'Трахнуть в киску': 
          cla
          *clr
-         sexm+=1
-         girl=girl+1
-         DOM=DOM+1
-         horny=0
+         sexm+= 1
+         girl = girl+1
+         DOM = DOM+1
+         horny = 0
          'Вы вставляете в <<$pillnamess>> свой <<penis>> сантиметровый член. Вы начинаете сношать <<$pillnamess>>, пока не кончаете ей внутрь.'
-         act 'Отойти':gt'pilloryW'
+         act 'Отойти': gt 'pilloryW'
          end
      end
 end

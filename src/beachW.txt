@@ -8,23 +8,23 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut=minut+5
+minut += 5
 '<center><H4>Пляж</H4></center>'
-'<center><img src="pic/Evedon/beach.jpg" ></center>'
+'<center><img src = "pic/Evedon/beach.jpg" ></center>'
 'Пляж расположен на берегу северного моря и огорожен высоким забором для спокойного отдыха горожан.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-if hour>=8 and hour<=21:
-     if kupalW=0:'Вход на пляж охраняет <a href="exec:GT ''beachmanW''">распорядитель</a>.'
-     if kupalW=1:'<a href="exec:GT ''beachW2''">Пляж</a>.'
+if hour>= 8 and hour<= 21: 
+     if kupalW = 0: 'Вход на пляж охраняет <a href = "exec: gt ''beachmanW''">распорядитель</a>.'
+     if kupalW = 1: '<a href = "exec: gt ''beachW2''">Пляж</a>.'
 end
 
 
-act 'Выйти в город':
-minut=minut+5
-gt'townW'
+act 'Выйти в город': 
+minut += 5
+ gt 'townW'
 end
 --- beachW ---------------------------------
 

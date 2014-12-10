@@ -1,92 +1,92 @@
 # lesorub
-gs'stat'
-act 'Уйти':lesdrunk=0&gt'subkabak'
+gs 'stat'
+act 'Уйти': lesdrunk = 0 & gt 'subkabak'
 
-if lesdrunk>0:
+if lesdrunk>0: 
 *clr
-'<center><img src="pic/EvedonNarod/lesorybvkabake.jpg"></center>'
+'<center><img src = "pic/EvedonNarod/lesorybvkabake.jpg"></center>'
 'За длинным столом сидят крепкие мужики лесорубы и бухают.'
 'Хорошее пойло, аж до задницы продирает, еще будешь?'
-     if pol=0:
-         if alko > 30:
+     if pol = 0: 
+         if alko > 30: 
          'Оо, а вы батенька уже нажрались в хлам, хватит тебе, а то и до дома не дойдешь.'
          end
      else
      
-         if alko > 30 and pol=1:
+         if alko > 30 and pol = 1: 
          cla
          'Один из лесорубов, Ставрос, обнял вас за талию и поцеловал в губы просунув вам в рот свой язык.'
-             act 'Целовать в ответ':
+             act 'Целовать в ответ': 
 		     cla
-		     horny+=20
-		     minut+=15
-		     gs'stat'
+		     horny+= 20
+		     minut+= 15
+		     gs 'stat'
 		     'Вы впились губами в губы Ставроса и лесорубы глядя на это заулюлюкали. Ставрос разорвал поцелуй и сказал вам на ухо "Пойдем погуляем."'
-		         act 'Нет':lesdrunk=0&gt'subkabak'
-		         act 'Выйти из кабака вместе со Ставросом':lesdrunk=0&gt'sexsistem','stavros'
+		         act 'Нет': lesdrunk = 0 & gt 'subkabak'
+		         act 'Выйти из кабака вместе со Ставросом': lesdrunk = 0 & gt 'sexsistem','stavros'
 		     end
          end
-         if alko > 0 and alko <= 10 and pol=1:
+         if alko > 0 and alko <= 10 and pol = 1: 
          'Вы немного захмелели и щеки стали румяными. К вам поближе подсел лесоруб Ставрос и стал травить анекдоты и веселые истории.'
          end
-         if alko > 10 and alko <= 20 and pol=1:
+         if alko > 10 and alko <= 20 and pol = 1: 
          'Вы довольно пьяны и лесоруб Ставрос клеится к вам шепча на ушко скабрезности и поглаживая по коленке.'
          end
-         if alko > 20 and alko <= 30 and pol=1:
+         if alko > 20 and alko <= 30 and pol = 1: 
          'Вы пьяны и Ставрос начал гладить ваши ноги и трогать грудь, предлагая вам поцеловаться.'
-             act 'Целовать':
+             act 'Целовать': 
 		     cla
-		     horny+=20
-		     minut+=15
-		     gs'stat'
+		     horny+= 20
+		     minut+= 15
+		     gs 'stat'
 		     'Вы впились губами в губы Ставроса и лесорубы глядя на это заулюлюкали. Ставрос разорвал поцелуй и сказал вам на ухо "Пойдем погуляем."'
-		         act 'Нет':lesdrunk=0&gt'subkabak'
-		         act 'Выйти из кабака вместе со Ставросом':lesdrunk=0&gt'sexsistem','stavros'
+		         act 'Нет': lesdrunk = 0 & gt 'subkabak'
+		         act 'Выйти из кабака вместе со Ставросом': lesdrunk = 0 & gt 'sexsistem','stavros'
 		     end
          end
      end
      
-     if alko <= 30:
-		 act 'Опрокинуть стакан':
+     if alko <= 30: 
+		 act 'Опрокинуть стакан': 
 		 cla
-		 lesdrunk+=1
-		 alko+=5
-		 minut+=15
-		 gs'stat'
+		 lesdrunk+= 1
+		 alko+= 5
+		 minut+= 15
+		 gs 'stat'
 		 'Вы хлопнули стакан какого то жуткого пойла.'
-		 act 'Занюхать рукавом':gt $CURLOC
+		 act 'Занюхать рукавом': gt $CURLOC
 		 end
 	 end
 end
 
 
 
-if lesdrunk=0:
+if lesdrunk = 0: 
 *clr
-'<center><img src="pic/EvedonNarod/lesorybvkabake.jpg"></center>'
+'<center><img src = "pic/EvedonNarod/lesorybvkabake.jpg"></center>'
 'За длинным столом сидит добрый десяток крепких мужиков лесорубов и бухают.'
-	if pol=0:
-		 if lesopwork=1:
+	if pol = 0: 
+		 if lesopwork = 1: 
 		 '<<$name>>, выпей с нами.'
-			 act 'Опрокинуть стакан':
+			 act 'Опрокинуть стакан': 
 			 cla
-			 lesdrunk+=1
-			 alko+=5
-			 minut+=15
-			 gs'stat'
+			 lesdrunk+= 1
+			 alko+= 5
+			 minut+= 15
+			 gs 'stat'
 			 'Вы хлопнули стакан какого то жуткого пойла.'
-			 act 'Занюхать рукавом':gt $CURLOC
+			 act 'Занюхать рукавом': gt $CURLOC
 			 end
-		 elseif farmland=1:
+		 elseif farmland = 1: 
 		 'А это же <<$name>>, владелец фермы <<$farmname>>, выпей с нами.'
-			 act 'Опрокинуть стакан':
+			 act 'Опрокинуть стакан': 
 			 cla
-			 lesdrunk+=1
-			 alko+=5
-			 minut+=15
-			 gs'stat'
+			 lesdrunk+= 1
+			 alko+= 5
+			 minut+= 15
+			 gs 'stat'
 			 'Вы хлопнули стакан какого то жуткого пойла.'
-			 act 'Занюхать рукавом':gt $CURLOC
+			 act 'Занюхать рукавом': gt $CURLOC
 			 end
 		 else
 		 'Мы тебя не знаем, будь любезен, отойди.'
@@ -94,18 +94,18 @@ if lesdrunk=0:
 		 end
 	 else
 	 'Ути пути, какие у нас мадмуазельки в гости пожаловали.'
-		 if farmland=1:
+		 if farmland = 1: 
 		 'А это же <<$name>>, владелица фермы <<$farmname>>.'
 		 end
 	 'Садись, выпей с нами'
-		 act 'Опрокинуть стакан':
+		 act 'Опрокинуть стакан': 
 		 cla
-		 lesdrunk+=1
-		 alko+=5
-		 minut+=15
-		 gs'stat'
+		 lesdrunk+= 1
+		 alko+= 5
+		 minut+= 15
+		 gs 'stat'
 		 'Вы хлопнули стакан какого то жуткого пойла.'
-		 act 'Занюхать рукавом':gt $CURLOC
+		 act 'Занюхать рукавом': gt $CURLOC
 		 end
 	 end
 end

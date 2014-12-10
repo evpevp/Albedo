@@ -1,72 +1,72 @@
 # tentakloss
-monster=0
+monster = 0
 'Чудовище победило вас.'
 
-act 'Далее':
+act 'Далее': 
 cla
 *clr
-SUB=SUB+1
-minut=minut+60
-anus=anus+1
-anal=anal+1
-if vagina>0:sex=sex+1
-monst=monst+1
-skverna=skverna+5
-if pol=0:'<center><img src="pic/EvedonMonsters/tentaclesexM.jpg" ></center>'
-if pol>0:
-tenloss=rand(0,4)
-if tenloss=0:'<center><img src="pic/EvedonMonsters/tentaclesex.jpg" ></center>'
-if tenloss=1:'<center><img src="pic/EvedonMonsters/tentaclesex1.jpg" ></center>'
-if tenloss=2:'<center><img src="pic/EvedonMonsters/tentaclesex2.jpg" ></center>'
-if tenloss=3:'<center><img src="pic/EvedonMonsters/tentaclesex3.jpg" ></center>'
-if tenloss=4:'<center><img src="pic/EvedonMonsters/tentaclesex4.jpg" ></center>'
+SUB = SUB+1
+minut += 60
+anus = anus+1
+anal = anal+1
+if vagina>0: sex = sex+1
+monst = monst+1
+skverna = skverna+5
+if pol = 0: '<center><img src = "pic/EvedonMonsters/tentaclesexM.jpg" ></center>'
+if pol>0: 
+tenloss = rand(0,4)
+if tenloss = 0: '<center><img src = "pic/EvedonMonsters/tentaclesex.jpg" ></center>'
+if tenloss = 1: '<center><img src = "pic/EvedonMonsters/tentaclesex1.jpg" ></center>'
+if tenloss = 2: '<center><img src = "pic/EvedonMonsters/tentaclesex2.jpg" ></center>'
+if tenloss = 3: '<center><img src = "pic/EvedonMonsters/tentaclesex3.jpg" ></center>'
+if tenloss = 4: '<center><img src = "pic/EvedonMonsters/tentaclesex4.jpg" ></center>'
 end
 
 'Чудовище схватило вас своими щупальцами и обездвижило.'
-if penis>0:'Ваш член обхватило щупальце и начало его сосать, вы почувствовали как маленький отросток проникает внутрь члена и доходит до самых яиц.'
+if penis>0: 'Ваш член обхватило щупальце и начало его сосать, вы почувствовали как маленький отросток проникает внутрь члена и доходит до самых яиц.'
 
-if vagina>0:
+if vagina>0: 
 'В вашу киску вошло щупальце и начало трахать вас, постоянно изливая семя.'
-gs'femorg'
+gs 'femorg'
 end
 'В ваш анус проникло щупальце и начало трахать вас, иногда извергая в анус семя.'
-gs'analslut'
+gs 'analslut'
 'Вы практически теряете сознания от боли и наслаждения. Наконец тентакль наигрался с вами и бросил.'
-if fertileAnal=0:fertileAnal=60&FertAnMark=1&'Лежа на земле в лужах спермы чудовища, вы поняли, что оно отложило свое яйцо вам в прямую кишку.'
-if vagina>0 and fertileVag=0:fertileVag=60&FertVagMark=1&'И еще в матку.'
+if fertileAnal = 0: fertileAnal = 60 & FertAnMark = 1 & 'Лежа на земле в лужах спермы чудовища, вы поняли, что оно отложило свое яйцо вам в прямую кишку.'
+if vagina>0 and fertileVag = 0: fertileVag = 60 & FertVagMark = 1 & 'И еще в матку.'
 
-chanrand=RAND(0,5)
-     if chanrand = 0:
-     leg=leg+5
+chanrand = RAND(0,5)
+     if chanrand = 0: 
+     leg = leg+5
      'Осталось какое-то странное жжение в ногах после изнасилования от чудовища.'
      end
-     if chanrand = 1:
-     thight=thight+5
+     if chanrand = 1: 
+     thight = thight+5
      'Осталось какое-то странное жжение в бедрах после изнасилования от чудовища.'
      end
-     if chanrand = 2:
-     ass=ass+5
+     if chanrand = 2: 
+     ass = ass+5
      'Осталось какое-то странное жжение в ягодицах после изнасилования от чудовища.'
      end
-     if chanrand = 3:
-     brist=brist+5
+     if chanrand = 3: 
+     brist = brist+5
      'Осталось какое-то странное жжение в теле после изнасилования от чудовища.'
      end
-     if chanrand = 4:
-     hand=hand+5
+     if chanrand = 4: 
+     hand = hand+5
      'Осталось какое-то странное жжение в руках после изнасилования от чудовища.'
      end
-     if chanrand = 5:
-     face=face+5
+     if chanrand = 5: 
+     face = face+5
      'Осталось какое-то странное жжение в лице после изнасилования от чудовища.'
      end
-     if chanrand = 6:
-     tit=tit+5
+     if chanrand = 6: 
+     tit = tit+5
      'Осталось какое-то странное жжение в груди после изнасилования от чудовища.'
      end
-gs'polChange'
-horny=0
-act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+gs 'polChange'
+horny = 0
+act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 end
 --- tentakloss ---------------------------------
 

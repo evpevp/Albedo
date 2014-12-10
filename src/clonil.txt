@@ -1,41 +1,41 @@
 # clonil
-slot=0
-armorDef=0
-spTEHNO=0
+slot = 0
+armorDef = 0
+spTEHNO = 0
 
-if kostum = 2:kostum = 1
-if manjeans = 2:manjeans = 1
-if sport = 2:sport = 1
+if kostum = 2: kostum = 1
+if manjeans = 2: manjeans = 1
+if sport = 2: sport = 1
 
-set odevnesh = 0
-set glamur = 0
-set ski = 0
-set hook = 0
-set ofclo = 0
+ odevnesh = 0
+ glamur = 0
+ ski = 0
+ hook = 0
+ ofclo = 0
 sexual = 0
-if cumfrot > 0:set cumfrot = 0
-if odetero>0:odetero=0
-set nude = 1
+if cumfrot > 0: cumfrot = 0
+if odetero>0: odetero = 0
+ nude = 1
 
 !другой мир
-if roba = 2:roba=1
-if pesantclo = 2:pesantclo = 1
-if townclo = 2:townclo = 1
-if dvorclo = 2:dvorclo = 1
-if rodvorclo = 2:rodvorclo = 1
-if pesantclo2 = 2:pesantclo2 = 1
-if townclo2 = 2:townclo2 = 1
-if bodysuit = 2:bodysuit = 1
+if roba = 2: roba = 1
+if pesantclo = 2: pesantclo = 1
+if townclo = 2: townclo = 1
+if dvorclo = 2: dvorclo = 1
+if rodvorclo = 2: rodvorclo = 1
+if pesantclo2 = 2: pesantclo2 = 1
+if townclo2 = 2: townclo2 = 1
+if bodysuit = 2: bodysuit = 1
 !доспехи
-if armor=2:armor=1
-if armor2=2:armor2=1
-if armor3=2:armor3=1
-if armor4=2:armor4=1
-if armor5=2:armor5=1
+if armor = 2: armor = 1
+if armor2 = 2: armor2 = 1
+if armor3 = 2: armor3 = 1
+if armor4 = 2: armor4 = 1
+if armor5 = 2: armor5 = 1
 !
-if robe = 2:robe=1
-if robe2 = 2:robe2=1
-if robe3 = 2:robe3=1
-if robeGrand=2:robeGrand=1
+if robe = 2: robe = 1
+if robe2 = 2: robe2 = 1
+if robe3 = 2: robe3 = 1
+if robeGrand = 2: robeGrand = 1
 --- clonil ---------------------------------
 

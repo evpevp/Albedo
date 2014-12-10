@@ -1,61 +1,61 @@
 # $menu_magik
-if $selobj='Меню боевки':
-	$snidemobl={
-		DemonMorf=1
-		skverna=skverna-5
-		gs'stat'
+if $selobj = 'Меню боевки': 
+	$snidemobl = {
+		DemonMorf = 1
+		skverna = skverna-5
+		gs 'stat'
 	}
-	$demonpogldy={
-		DMrab-=1
-		health=vital*10
-		manna=intel*10+intel*magika
-		wipo=will*10
-		skverna=skverna+30
-		gs'stat'
+	$demonpogldy = {
+		DMrab- = 1
+		health = vital*10
+		manna = intel*10+intel*magika
+		wipo = will*10
+		skverna = skverna+30
+		gs 'stat'
 	}
-	$akbalreset={
-		if akbalpowerday!day:
-			skverna+=1
-			akbalpowerday=day
-			health=vital*10
-			wipo=will*10
-			manna=intel*10+intel*magika
-			gs'stat'
+	$akbalreset = {
+		if akbalpowerday!day: 
+			skverna+= 1
+			akbalpowerday = day
+			health = vital*10
+			wipo = will*10
+			manna = intel*10+intel*magika
+			gs 'stat'
 		end
 	}
-	$AltAmulet={
-		if INFIGHT=0 and manna>=100000:
+	$AltAmulet = {
+		if INFIGHT = 0 and manna>= 100000: 
 			cls
-			manna-=100000
+			manna- = 100000
 			'Вы дотронулись до амулета и отдав энергию создали портал.'
-			act 'Дворец лорда':gt'courtW'
-			act 'Дворянский район Эведона':gt'reachW'
-			act 'Торговый район Эведона':gt'townW'
-			act 'Порт Эведона':gt'portW'
-			act 'Пригород Эведона':gt'suburbiaW'
-			act 'Фермы':gt'farmW'
-			act 'Горы':gt'mountW'
-			act 'Рыбацкая деревня':gt'fishW'
-			act 'Форт Каэр Дум':gt'fortW'
-			act 'Город Тель Адре':gt'teladareW'
-			if smazetime>=120:act 'Логово Сераф':gt'SerafCave9'
+			act 'Дворец лорда': gt 'courtW'
+			act 'Дворянский район Эведона': gt 'reachW'
+			act 'Торговый район Эведона': gt 'townW'
+			act 'Порт Эведона': gt 'portW'
+			act 'Пригород Эведона': gt 'suburbiaW'
+			act 'Фермы': gt 'farmW'
+			act 'Горы': gt 'mountW'
+			act 'Рыбацкая деревня': gt 'fishW'
+			act 'Форт Каэр Дум': gt 'fortW'
+			act 'Город Тель Адре': gt 'teladareW'
+			if smazetime>= 120: act 'Логово Сераф': gt 'SerafCave9'
 		else
-			gs'stat'
+			gs 'stat'
 		end
 	}
 	clr
-	if DemonMorf>=1:
+	if DemonMorf>= 1: 
      pl'Вы демон, ваша скверна <<skverna>> это ваша жизненная сила, если она дойдет до нуля, вы погибните.'
 	 end
-     if DemonMorf>1:pl'<a href="exec:dynamic $snidemobl ">Снизить демоничность (5 скверны)</a>'
+     if DemonMorf>1: pl'<a href = "exec: dynamic $snidemobl ">Снизить демоничность (5 скверны)</a>'
 
-	 if DMrab>0:
+	 if DMrab>0: 
 	 pl'У вас <<DMrab>> сломленных рабов'
-	 pl'<a href="exec:dynamic $demonpogldy ">Поглотить силу раба полностью восстановив себя</a>'
+	 pl'<a href = "exec: dynamic $demonpogldy ">Поглотить силу раба полностью восстановив себя</a>'
 	 end
 
-		if akbalQW=1000:pl'Сила восстановления Акбала доступна раз в день <a href="exec:dynamic $akbalreset ">ИСПОЛЬЗОВАТЬ</a>'
-		if AltotronAmulet=1:pl'<a href="exec:dynamic $AltAmulet ">Амулет четырехлистника</a> может телепортировать владельца в некоторые локации. Стоимость 100 тысяч маны.' 
+		if akbalQW = 1000: pl'Сила восстановления Акбала доступна раз в день <a href = "exec: dynamic $akbalreset ">ИСПОЛЬЗОВАТЬ</a>'
+		if AltotronAmulet = 1: pl'<a href = "exec: dynamic $AltAmulet ">Амулет четырехлистника</a> может телепортировать владельца в некоторые локации. Стоимость 100 тысяч маны.' 
 	end
 
 unselect

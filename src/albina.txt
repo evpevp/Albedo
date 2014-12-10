@@ -3,24 +3,24 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Ваша жена Альбина</H4></center>'
-'<center><img src="pic\fam\albina_1.gif" ></center>'
+'<center><img src = "pic\fam\albina_1.gif" ></center>'
 clr
-gs'stat'
+gs 'stat'
 'Ваша жена Альбина редкостная стерва и искренне считает себя сливками общества.'
 *nl
 
-act 'Отойти':GOTO $locM, $metkaM
+act 'Отойти': GOTO $locM, $metkaM
 
-if sweat >= 1:'Фу, иди помойся, а то от тебя воняет как от коня.'
+if sweat >= 1: 'Фу, иди помойся, а то от тебя воняет как от коня.'
 
-if sweat < 1:
-     if balance <= 8000000 and smukredit>0 and money>= 100000 and sobrQWday ! day and sobrQW=0:
+if sweat < 1: 
+     if balance <= 8000000 and smukredit>0 and money>= 100000 and sobrQWday ! day and sobrQW = 0: 
      'Дорогой, а как дела в СМУ?'
-         act 'Альбина у СМУ реальные финансовые проблемы':
+         act 'Альбина у СМУ реальные финансовые проблемы': 
          cla
          sobrQWday = day
-         sobrQW=1
-         money=money-100000
+         sobrQW = 1
+         money = money-100000
          '(Вы) - Альбина у СМУ реальные финансовые проблемы, мы разоряемся.'
          '(Альбина) - А ты для чего нужен? Ныть или проблемы решать?'
          '(Вы) - Да что я сделаю? Расходы просто сумасшедшие, объектов почти нет, а те что есть копеечные.'
@@ -31,74 +31,74 @@ if sweat < 1:
          '(Альбина) - Пока еще предупреждаю. Ладно, иди куда шел, мне нужно позвонить в пару мест. Соберемся у нас в столовой. Дай тысяч сто на банкет для акционеров.'
          '(Вы) - На деньги. Когда собираться будем?'
          '(Альбина) - Завтра в восемь вечера.'
-         act 'Отойти':GOTO $locM, $metkaM
+         act 'Отойти': GOTO $locM, $metkaM
          end
      exit
      end
      
-	 if albinaQW >= 1 and albinaday = day:
+	 if albinaQW >= 1 and albinaday = day: 
 	 cla
 	 'Дорогой, может пойдем в спальную?'
-	     if horny >= 50:
-		 act 'Секс с женой':gt'albinasex','start'
+	     if horny >= 50: 
+		 act 'Секс с женой': gt 'albinasex','start'
 		 end
-		 act 'Э, извини, но я сегодня, что то не в духе.':GOTO $locM, $metkaM
+		 act 'Э, извини, но я сегодня, что то не в духе.': GOTO $locM, $metkaM
 	 end
 
-	 if albinaQW >= 1 and albinaday ! day:
+	 if albinaQW >= 1 and albinaday ! day: 
 	 cla
 	 'Дорогой, дай денег. Тысяч тридцать.'
-		 act 'Не дам.':
+		 act 'Не дам.': 
 		 cla
 		 '(Вы) - Не дам!'
 		 '(Альбина) - Ну тогда и я тебе не дам!'
-		 act 'Отойти':GOTO $locM, $metkaM
+		 act 'Отойти': GOTO $locM, $metkaM
 		 end
 			
-		 if money>= 30000:
-			 act 'Дать денег.':
+		 if money>= 30000: 
+			 act 'Дать денег.': 
 			 cla
-			 money=money-30000
+			 money = money-30000
 			 albinaday = day
-			 act 'Отойти':GOTO $locM, $metkaM
+			 act 'Отойти': GOTO $locM, $metkaM
 			 end
 		 end
 	 end
 
 
 
-	 if albinaQW = 0 and albinaday ! day:
+	 if albinaQW = 0 and albinaday ! day: 
 	 cla
 	 'Дорогой, мне нужно к косметологу. Дай мне тысяч тридцать.'
-		 act 'А не дохрена ли?':
+		 act 'А не дохрена ли?': 
 		 cla
 		 '(Вы) - А не дохрена ли?'
 		 '(Альбина) - Ты что? Это я еще скромно попросила. Ну так ты дашь или нет?'
-			 if money>= 30000:
-				 act 'Дать денег.':
+			 if money>= 30000: 
+				 act 'Дать денег.': 
 				 cla
-				 money=money-30000
+				 money = money-30000
 				 albinaday = day
 				 albinaQW = 1
-				 act 'Отойти':GOTO $locM, $metkaM
+				 act 'Отойти': GOTO $locM, $metkaM
 				 end
 			 end
-			 act 'Не дам.':
+			 act 'Не дам.': 
 			 cla
 			 '(Вы) - Не дам!'
 			 '(Альбина) - Ну тогда и я тебе не дам!'
-			 act 'Отойти':GOTO $locM, $metkaM
+			 act 'Отойти': GOTO $locM, $metkaM
 			 end
 			 
 		 end
 		 
-		 if money>= 30000:
-			 act 'Дать денег.':
+		 if money>= 30000: 
+			 act 'Дать денег.': 
 			 cla
-			 money=money-30000
+			 money = money-30000
 			 albinaday = day
 			 albinaQW = 1
-			 act 'Отойти':GOTO $locM, $metkaM
+			 act 'Отойти': GOTO $locM, $metkaM
 			 end
 		 end
 	 end

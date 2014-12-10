@@ -10,53 +10,53 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut=minut+5
+minut += 5
 mag = 1
 '<center><H4>Рыбозавод</H4></center>'
-!'<center><img src="Evedon\foTraktir.jpg" ></center>'
+!'<center><img src = "Evedon\foTraktir.jpg" ></center>'
 'Большой амбар с худой крышей заставлен лотками с рыбой.'
 
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 ''
 'На стене объявление, все желающие могут работать на очистке и потрошении рыбы. 2 часа работы 35 гем.'
 
 
-if hour>=5 and hour<=22:
+if hour>= 5 and hour<= 22: 
 'Грязное отребье уныло потрошит рыбу и снимает с нее шкуру, сидя на лавках перед деревянными корытами.'
 
-     if ribabarkas>0:
-     	 act 'Продать улов рыбы ':
+     if ribabarkas>0: 
+     	 act 'Продать улов рыбы ': 
 		 cla
 		 *clr
-		 minut=minut+30
-		 gem=gem+ribabarkas*5
+		 minut += 30
+		 gem = gem+ribabarkas*5
 		 'Вы продали улов рыбы и получили <<ribabarkas>> гем.'
-		 ribabarkas=0
-		 act 'Передохнуть':gt $curloc
+		 ribabarkas = 0
+		 act 'Передохнуть': gt $curloc
 		 end
      
      end
      
      
-	 if farmstam>0:
-		 act 'Работать на очистке рыбы 2 часа':
+	 if farmstam>0: 
+		 act 'Работать на очистке рыбы 2 часа': 
 		 cla
 		 *clr
-		 minut=minut+120
-		 fat=fat-1
-		 gem=gem+35
-		 manna=manna-5
-		 sweat=sweat+1
-		 exp=exp+5
-		 farmstam-=1
+		 minut += 120
+		 fat = fat-1
+		 gem = gem+35
+		 manna = manna-5
+		 sweat = sweat+1
+		 exp = exp+5
+		 farmstam- = 1
 		 'Сидя на засаленной лавочке, в окружении нищих и бродяг из трущоб, вы два часа потрошили и чистили вонючую и склизкую рыбу.'
-		 act 'Передохнуть':gt $curloc
+		 act 'Передохнуть': gt $curloc
 		 end
-	 elseif farmstam<=0:
+	 elseif farmstam<= 0: 
 	 'Вы слишком устали, чтобы чистить рыбу.'
 	 end
 	 
@@ -67,7 +67,7 @@ else
 end
 
 
-act 'Уйти':minut=minut+5&gt'fishW'
+act 'Уйти': minut += 5 & gt 'fishW'
 
 
 

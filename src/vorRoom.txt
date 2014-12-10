@@ -9,26 +9,26 @@ $locFight = $CURLOC
 $metkaBed = $ARGS[0]
 $locBed = $CURLOC
 '<center><H4>Ваша комната</H4></center>'
-'<center><img src="pic/Evedon\1\vorroom.jpg" ></center>'
+'<center><img src = "pic/Evedon\1\vorroom.jpg" ></center>'
 'Небольшая комната, оборудованная под жилое помещение'
 clr
-gs'stat'
-'Простая <a href="exec:GT ''bed''">кровать</a>.'
-'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
-'Обычный шкаф <a href="exec:GT ''lokerW''">шкаф</a>.'
-'Простой <a href="exec:GT ''divanW''">диван</a>.'
-if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
-if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+gs 'stat'
+'Простая <a href = "exec: gt ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href = "exec: gt ''kadka''">для мытья</a>.'
+'Обычный шкаф <a href = "exec: gt ''lokerW''">шкаф</a>.'
+'Простой <a href = "exec: gt ''divanW''">диван</a>.'
+if mirr>0: '<a href = "exec: gt ''mirrW''">Зеркало</a>'
+if brakW>0: '<a href = "exec: gt ''marryWorld''"><<$namefrendM>></a>'
 
-if slot=0:
+if slot = 0: 
 *nl
 'Без одежды нельзя выходить на улицу.'
 end
 
-if slot>0:
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'vorgildia'
+if slot>0: 
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'vorgildia'
 	 end
 end
 --- vorRoom ---------------------------------

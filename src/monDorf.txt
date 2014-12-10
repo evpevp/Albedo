@@ -5,34 +5,34 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Шахтерская деревня</H4></center>'
-'<center><img src="pic/Evedon/monDorf.jpg" ></center>'
+'<center><img src = "pic/Evedon/monDorf.jpg" ></center>'
 'Мрачная и грязная деревенька в которой живут усталые шахтеры и их семьи.'
-if StefanQW>=1:'В одном из домишек живет <a href="exec: minut=minut+5&gt''mdStefanHouse''">семья Брайтмур</a>.'
-'Древний, покосившийся <a href="exec: minut=minut+5&gt''mdTraktir''">трактир</a> с выцветшей от времени вывеской "Эленвин" открыт в любое время. Напротив трактира находится небольшой и аккуратный <a href="exec: minut=minut+5&gt''mdShop''">магазин</a> принадлежащий вдове Кеннета.'
-if toiletJerkQW=1:'Возле трактира с ослика сгружает скарб какие то незнакомые люди.'
-if hour>=8 and hour<18:'Под навесом сидит <a href="exec:minut+=5&GT ''RoyGlayden''">шериф</a> и осматривает деревню и дорогу неподалеку своим единственным глазом.'
-if hour>=14 and hour<=16:'Возле магазина сидит на лавке <a href="exec:minut+=5&GT ''MaryKennet''">Мэри Кеннет</a> и <a href="exec:GT ''ViolaBrightmoore''">Виола Брайтмур</a>.'
+if StefanQW>= 1: 'В одном из домишек живет <a href = "exec: minut += 5 & gt ''mdStefanHouse''">семья Брайтмур</a>.'
+'Древний, покосившийся <a href = "exec: minut += 5 & gt ''mdTraktir''">трактир</a> с выцветшей от времени вывеской "Эленвин" открыт в любое время. Напротив трактира находится небольшой и аккуратный <a href = "exec: minut += 5 & gt ''mdShop''">магазин</a> принадлежащий вдове Кеннета.'
+if toiletJerkQW = 1: 'Возле трактира с ослика сгружает скарб какие то незнакомые люди.'
+if hour>= 8 and hour<18: 'Под навесом сидит <a href = "exec: minut+= 5 & gt ''RoyGlayden''">шериф</a> и осматривает деревню и дорогу неподалеку своим единственным глазом.'
+if hour>= 14 and hour<= 16: 'Возле магазина сидит на лавке <a href = "exec: minut+= 5 & gt ''MaryKennet''">Мэри Кеннет</a> и <a href = "exec: gt ''ViolaBrightmoore''">Виола Брайтмур</a>.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-!if desertMark>0:
-	 act 'Выйти на северную дорогу(1 час)':
+!if desertMark>0: 
+	 act 'Выйти на северную дорогу(1 час)': 
 	 cla
-	 minut=minut+60
-	 roadMonMark=43
-     gt'MonNordRoad' 
+	 minut += 60
+	 roadMonMark = 43
+     gt 'MonNordRoad' 
 	 end
 !mdStefanHouse
 
-if StefanQW>=1:
-     if hour=6:
-     '<a href="exec:GT ''DavidBrightmoore''">Отец</a> идет на работу в шахты.'
+if StefanQW>= 1: 
+     if hour = 6: 
+     '<a href = "exec: gt ''DavidBrightmoore''">Отец</a> идет на работу в шахты.'
      end
 end
 
-if toiletJerkQW=4 and AlrunaStartDay+2>=daystart and hour>=14 and hour<18:
-'Вы видите что на лавочке под деревом сидит <a href="exec:rosanCry=1&GT ''RosanBrightmoore''">Розана</a> и тихонько плачет вытирая глаза.'
+if toiletJerkQW = 4 and AlrunaStartDay+2>= daystart and hour>= 14 and hour<18: 
+'Вы видите что на лавочке под деревом сидит <a href = "exec: rosanCry = 1 & gt ''RosanBrightmoore''">Розана</a> и тихонько плачет вытирая глаза.'
 end
 --- monDorf ---------------------------------
 

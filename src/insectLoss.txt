@@ -1,36 +1,36 @@
 # insectLoss
-monster=0
+monster = 0
 'Гигантские мухи уронили вас.'
 
-act 'Далее':
+act 'Далее': 
 cla
 *clr
-!horny=0
-SUB=SUB+1
-minut=minut+60
-!anus=anus+1
-!anal=anal+1
-!if vagina>0:sex=sex+1
-monst=monst+1
-skverna=skverna+5
-anal=anal+1
-'<center><img src="pic/EvedonTA/insect.jpg" ></center>'
+!horny = 0
+SUB = SUB+1
+minut += 60
+!anus = anus+1
+!anal = anal+1
+!if vagina>0: sex = sex+1
+monst = monst+1
+skverna = skverna+5
+anal = anal+1
+'<center><img src = "pic/EvedonTA/insect.jpg" ></center>'
 'Насекомое заползло на вас и нетерпеливо вогнало вам в задницу свой толстый хитиновый отросток.'
-ass=ass+RAND(5,10)
-brist=brist+RAND(5,10)
- if penis>0:penis=penis-RAND(1,3)&'У вас зажгло член и вы почувствовали как он уменьшается.'
- if vagina>0:tit=tit+RAND(3,6)&'Ваши груди заныли и стали тяжелыми.'
+ass = ass+RAND(5,10)
+brist = brist+RAND(5,10)
+ if penis>0: penis = penis-RAND(1,3) & 'У вас зажгло член и вы почувствовали как он уменьшается.'
+ if vagina>0: tit = tit+RAND(3,6) & 'Ваши груди заныли и стали тяжелыми.'
  'Насекомое задвигалось и вы почувствовали как большое яйцо проникает вам в зад. После чего он достал свой хитиновый член из вас и отошел.'
-if fertileAnal=0:fertileAnal=60&FertAnMark=1&'Лежа на земле, вы поняли, что оно отложило свое яйцо вам в прямую кишку.'
-gs'analslut'
-anus=anus+10
-if vagina>0 and fertileVag=0:fertileVag=60&FertVagMark=1&'И еще в матку.'
-gs'femorg'
-if vagina>0:vag=vag+5&sex=sex+1
-gs'polChange'
+if fertileAnal = 0: fertileAnal = 60 & FertAnMark = 1 & 'Лежа на земле, вы поняли, что оно отложило свое яйцо вам в прямую кишку.'
+gs 'analslut'
+anus = anus+10
+if vagina>0 and fertileVag = 0: fertileVag = 60 & FertVagMark = 1 & 'И еще в матку.'
+gs 'femorg'
+if vagina>0: vag = vag+5 & sex = sex+1
+gs 'polChange'
 
 
-act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 end
 --- insectLoss ---------------------------------
 

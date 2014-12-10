@@ -5,115 +5,115 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Министерство</H4></center>'
-'<center><img src="pic/Evedon/minis.jpg" ></center>'
+'<center><img src = "pic/Evedon/minis.jpg" ></center>'
 '.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-     if dvoranRang=0 and noble>=20 and gem>=10000:
-         act 'Я хочу получить дворянское звание':
+     if dvoranRang = 0 and noble>= 20 and gem>= 10000: 
+         act 'Я хочу получить дворянское звание': 
          cla
          *clr
-         if pol=0:$text='дворянин'
-         if pol>0:$text='дворянка'
+         if pol = 0: $text = 'дворянин'
+         if pol>0: $text = 'дворянка'
          'Вы хотите получить дворянское звание? Хорошо я могу подписать нужные бумаги, но нужно заплатить налог в размере 10000 гемов.'
-         act 'Мне нужно подумать':gt'dvorecLord'
-             act 'Да, вот деньги.':
+         act 'Мне нужно подумать': gt 'dvorecLord'
+             act 'Да, вот деньги.': 
              cla
              *clr
-             dvoranRang=1
-             gem=gem-10000
+             dvoranRang = 1
+             gem = gem-10000
              'Вот держите бумаги, теперь вы <<$text>> Эведона. Однако если вы хотите получить более высокий титул, обратитесь ко мне снова.'
-             act 'Уйти':gt'dvorecLord'
+             act 'Уйти': gt 'dvorecLord'
              end
          end
      end
 
-     if dvoranRang=1 and noble>=30 and gem>=10000:
-     if pol=0:$text1='барона'
-     if pol>0:$text1='баронессы'
-         act 'Я хочу получить звание <<$text1>>':
+     if dvoranRang = 1 and noble>= 30 and gem>= 10000: 
+     if pol = 0: $text1 = 'барона'
+     if pol>0: $text1 = 'баронессы'
+         act 'Я хочу получить звание <<$text1>>': 
          cla
          *clr
-         if pol=0:$text='барон'
-         if pol>0:$text='баронесса'
+         if pol = 0: $text = 'барон'
+         if pol>0: $text = 'баронесса'
          'Вы хотите получить звание <<$text1>>? Хорошо я могу подписать нужные бумаги, но нужно заплатить налог в размере 10000 гемов.'
-         act 'Мне нужно подумать':gt'dvorecLord'
-             act 'Да, вот деньги.':
+         act 'Мне нужно подумать': gt 'dvorecLord'
+             act 'Да, вот деньги.': 
              cla
              *clr
-             dvoranRang=2
-             gem=gem-10000
+             dvoranRang = 2
+             gem = gem-10000
              'Вот держите бумаги, теперь вы <<$text>> Эведона. Однако если вы хотите получить более высокий титул, обратитесь ко мне снова.'
-             act 'Уйти':gt'dvorecLord'
+             act 'Уйти': gt 'dvorecLord'
              end
          end
      end
 
-     if dvoranRang=2 and noble>=40 and gem>=10000:
-     if pol=0:$text1='графа'
-     if pol>0:$text1='графини'
-         act 'Я хочу получить звание <<$text1>>':
+     if dvoranRang = 2 and noble>= 40 and gem>= 10000: 
+     if pol = 0: $text1 = 'графа'
+     if pol>0: $text1 = 'графини'
+         act 'Я хочу получить звание <<$text1>>': 
          cla
          *clr
-         if pol=0:$text='граф'
-         if pol>0:$text='графиня'
+         if pol = 0: $text = 'граф'
+         if pol>0: $text = 'графиня'
          'Вы хотите получить звание <<$text1>>? Хорошо я могу подписать нужные бумаги, но нужно заплатить налог в размере 10000 гемов.'
-         act 'Мне нужно подумать':gt'dvorecLord'
-             act 'Да, вот деньги.':
+         act 'Мне нужно подумать': gt 'dvorecLord'
+             act 'Да, вот деньги.': 
              cla
              *clr
-             dvoranRang=3
-             gem=gem-10000
+             dvoranRang = 3
+             gem = gem-10000
              'Вот держите бумаги, теперь вы <<$text>> Эведона. Однако если вы хотите получить более высокий титул, обратитесь ко мне снова.'
-             act 'Уйти':gt'dvorecLord'
+             act 'Уйти': gt 'dvorecLord'
              end
          end
      end
 
-     if dvoranRang=3 and noble>=50 and gem>=10000:
-     if pol=0:$text1='герцога'
-     if pol>0:$text1='герцогини'
-         act 'Я хочу получить звание <<$text1>>':
+     if dvoranRang = 3 and noble>= 50 and gem>= 10000: 
+     if pol = 0: $text1 = 'герцога'
+     if pol>0: $text1 = 'герцогини'
+         act 'Я хочу получить звание <<$text1>>': 
          cla
          *clr
-         if pol=0:$text='герцог'
-         if pol>0:$text='герцогиня'
+         if pol = 0: $text = 'герцог'
+         if pol>0: $text = 'герцогиня'
          'Вы хотите получить звание <<$text1>>? Хорошо я могу подписать нужные бумаги, но нужно заплатить налог в размере 10000 гемов.'
-         act 'Мне нужно подумать':gt'dvorecLord'
-             act 'Да, вот деньги.':
+         act 'Мне нужно подумать': gt 'dvorecLord'
+             act 'Да, вот деньги.': 
              cla
              *clr
-             dvoranRang=4
-             gem=gem-10000
-             dvordom=1
-             HomeLord=HomeLord+1
+             dvoranRang = 4
+             gem = gem-10000
+             dvordom = 1
+             HomeLord = HomeLord+1
              'Вот держите бумаги, теперь вы <<$text>> Эведона. Это самое высокое звание в Эведоне. Также вам предоставляется дом в дворянском районе.'
-             act 'Уйти':gt'dvorecLord'
+             act 'Уйти': gt 'dvorecLord'
              end
          end
      end
 
-     if missionData=11:
-         act 'Отдать письмо':
+     if missionData = 11: 
+         act 'Отдать письмо': 
          cla
          *clr
-         missionData=0
-         kredit=kredit+100
-         missionC+=1
-         '<center><img src="pic/Photo/License.jpg" ></center>'
+         missionData = 0
+         kredit = kredit+100
+         missionC+= 1
+         '<center><img src = "pic/Photo/License.jpg" ></center>'
          'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
-         act 'Уйти':gt $CURLOC
+         act 'Уйти': gt $CURLOC
          end
      end
 
 
-	 act 'Уйти (5 мин)':
-	 minut=minut+5
-	 gt'dvorecLord'
+	 act 'Уйти (5 мин)': 
+	 minut += 5
+	 gt 'dvorecLord'
 	 end
 --- minCourtW ---------------------------------
 

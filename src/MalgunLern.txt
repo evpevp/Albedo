@@ -3,15 +3,15 @@
 
 
 !spReinkornMal Абсолютное излечение
-!spGhostBodyMal>=100 Призрачное тело
+!spGhostBodyMal>= 100 Призрачное тело
 !spGhostDamMal Призрачный удар
 *clr
 $metka = $ARGS[0]
 $loc = $CURLOC
 
 
-'<center><img src="pic/EvedonNarod/malgan.jpg" ></center>'
-malgunday=day
+'<center><img src = "pic/EvedonNarod/malgan.jpg" ></center>'
+malgunday = day
 'Вы ушли в комнату Мальгана.'
 'Он начал вам объяснять. Я использую в бою всего лишь три заклинания.
  Абсолютное излечение полностью восстанавливает здоровье, какие бы травмы у меня не были, так же устраняет кровотечения.
@@ -20,36 +20,36 @@ malgunday=day
  При этом ударе, моя рука, пользуясь нематериальностью, проникает в тело соперника и материализуется там, разрывая его плоть на куски. Тут главное научиться бить так, чтобы тебе руку не оторвало при таком ударе.
   '
 
-if spReinkornMal<100:
+if spReinkornMal<100: 
 
-	 act 'Изучать абсолютное излечение.':
+	 act 'Изучать абсолютное излечение.': 
 	 cla
-	 minut+=60
-	 spReinkornMal+=RAND(10,20)
-	 if spReinkornMal>=100:spReinkornMal=100
+	 minut+= 60
+	 spReinkornMal+= RAND(10,20)
+	 if spReinkornMal>= 100: spReinkornMal = 100
 	 'Вы изучили заклинание на <<spReinkornMal>>%'
-	 act 'Уйти':gt'foTraktir'
+	 act 'Уйти': gt 'foTraktir'
 	 end
 
 else
-     if spGhostBodyMal<100:
-     	 act 'Изучать призрачное тело.':
+     if spGhostBodyMal<100: 
+     	 act 'Изучать призрачное тело.': 
 		 cla
-		 minut+=60
-		 spGhostBodyMal+=RAND(10,20)
-		 if spGhostBodyMal>=100:spGhostBodyMal=100
+		 minut+= 60
+		 spGhostBodyMal+= RAND(10,20)
+		 if spGhostBodyMal>= 100: spGhostBodyMal = 100
 		 'Вы изучили заклинание на <<spGhostBodyMal>>%'
-		 act 'Уйти':gt'foTraktir'
+		 act 'Уйти': gt 'foTraktir'
 		 end
      else
-         if spGhostDamMal<100:
-             act 'Изучать призрачный удар.':
+         if spGhostDamMal<100: 
+             act 'Изучать призрачный удар.': 
 			 cla
-			 minut+=60
-			 spGhostDamMal+=RAND(10,20)
-			 if spGhostDamMal>=100:spGhostDamMal=100&MalgunQW=9
+			 minut+= 60
+			 spGhostDamMal+= RAND(10,20)
+			 if spGhostDamMal>= 100: spGhostDamMal = 100 & MalgunQW = 9
 			 'Вы изучили заклинание на <<spGhostDamMal>>%'
-			 act 'Уйти':gt'foTraktir'
+			 act 'Уйти': gt 'foTraktir'
 			 end
          end
      end

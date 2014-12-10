@@ -4,102 +4,102 @@
 
 !damageH
 !damageHV
-     if priziv>0:
-         if PdefenceH>0:
-             if PdefenceH>=damageHv:
-             PdefenceH-=damageHv
-             damageHv=0
-             '<font color=#cd00cd><<$pname>> остановил ментальную атаку противника своей защитой</font>'
+     if priziv>0: 
+         if PdefenceH>0: 
+             if PdefenceH>= damageHv: 
+             PdefenceH- = damageHv
+             damageHv = 0
+             '<font color = #cd00cd><<$pname>> остановил ментальную атаку противника своей защитой</font>'
              end
-             if PdefenceH<damageHv and damageHv>0:
-             damageHv-=PdefenceH
-             PdefenceH=0
-             PWIPO-=damageHv
-             '<font color=#cd00cd><<$namev>> уничтожил ментальную защиту вашего помощника и нанес урон его воле <<damagehv>></font>'
-             damageHv=0
+             if PdefenceH<damageHv and damageHv>0: 
+             damageHv- = PdefenceH
+             PdefenceH = 0
+             PWIPO- = damageHv
+             '<font color = #cd00cd><<$namev>> уничтожил ментальную защиту вашего помощника и нанес урон его воле <<damagehv>></font>'
+             damageHv = 0
              end
          end
-         if PdefenceH<=0 and damageHv>0:
-         PWIPO-=damageHv
-         '<font color=#cd00cd><<$namev>> нанес урон воле помощника <<damagehv>></font>'
-         damageHv=0
+         if PdefenceH<= 0 and damageHv>0: 
+         PWIPO- = damageHv
+         '<font color = #cd00cd><<$namev>> нанес урон воле помощника <<damagehv>></font>'
+         damageHv = 0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<= 0 or Pwipo<= 0 or pmanna<= 0: 
          dynamic $prizivNill
          end
      end
-gs'PreEffect'
+gs 'PreEffect'
 
-if conterBat>0:gs'conterBat'
-!if conterBatV>0:gs'conterBatV'
+if conterBat>0: gs 'conterBat'
+!if conterBatV>0: gs 'conterBatV'
 
-if zerkalo>0:
-zeratk=RAND(0,zerkalo)
-     if zeratk=0 or sonarv>0:
-     zerkalo=0
-     '<font color=red><<$nameV>> попал в вас, а не в ваши отражения и зеркала рассыпались</font>'
+if zerkalo>0: 
+zeratk = RAND(0,zerkalo)
+     if zeratk = 0 or sonarv>0: 
+     zerkalo = 0
+     '<font color = red><<$nameV>> попал в вас, а не в ваши отражения и зеркала рассыпались</font>'
      end
-     if zeratk>0 and sonarv=0:
-     zerkalo=zerkalo-1
-     damagehv=0
-     '<font color=red><<$nameV>> попал в зеркало и оно рассыпалось</font>'
+     if zeratk>0 and sonarv = 0: 
+     zerkalo = zerkalo-1
+     damagehv = 0
+     '<font color = red><<$nameV>> попал в зеркало и оно рассыпалось</font>'
      end
 end
 
-if levitation>0:gs'Levitation'
+if levitation>0: gs 'Levitation'
 
-if barier>0 and damageHV>0:
-damageHV=damageHV-((damageHV*barier)/100)
-'<font color=green>Ваш барьер снизил урон разума на <B><<barier>></B>%</font>'
-barier=barier-1
+if barier>0 and damageHV>0: 
+damageHV = damageHV-((damageHV*barier)/100)
+'<font color = green>Ваш барьер снизил урон разума на <B><<barier>></B>%</font>'
+barier = barier-1
 end
 
-	 if gostbody>0:
-	 damageHV=0
-	 gostbody-=1
-	 '<font color=green>Удар противника прошел через ваше тело, не причинив вам никакого ущерба.</font>'
+	 if gostbody>0: 
+	 damageHV = 0
+	 gostbody- = 1
+	 '<font color = green>Удар противника прошел через ваше тело, не причинив вам никакого ущерба.</font>'
 	 end
 
 
 
-if defenceH=0 and damageHV>0:
-gs'klonDef'
-     if damageHV>0:
+if defenceH = 0 and damageHV>0: 
+gs 'klonDef'
+     if damageHV>0: 
 	 dynamic $rascheturonaH
-	 '<font color=red><<$tipuronaH>> нанесли вам <B><<damagehv>></B> едениц урона вашей силе воли</font>'
-		 if pohot>0 AND damageHV>0:
-		 skveratk=skverna+pohot
-			 if skveratk>25:skveratk=25+pohot
-		 horny=horny+skveratk
-		 pohot=0
-		 damagehv=0
-		 '<font color=red><<$tipuronaH>> охватывают вас и вы чувствуете что ваша похоть растет</font>'
+	 '<font color = red><<$tipuronaH>> нанесли вам <B><<damagehv>></B> едениц урона вашей силе воли</font>'
+		 if pohot>0 AND damageHV>0: 
+		 skveratk = skverna+pohot
+			 if skveratk>25: skveratk = 25+pohot
+		 horny = horny+skveratk
+		 pohot = 0
+		 damagehv = 0
+		 '<font color = red><<$tipuronaH>> охватывают вас и вы чувствуете что ваша похоть растет</font>'
 		 end
      end
 end
 
-if defenceH>0 and damageHV>0:
-	 if defenceH>damageHV:
-	 defenceH=defenceH-damageHV
-	 '<font color=red>Вашей защите РАЗУМА нанесено <B><<damageHV>></B> едениц урона</font>'
-	 !damageHV=0
+if defenceH>0 and damageHV>0: 
+	 if defenceH>damageHV: 
+	 defenceH = defenceH-damageHV
+	 '<font color = red>Вашей защите РАЗУМА нанесено <B><<damageHV>></B> едениц урона</font>'
+	 !damageHV = 0
 	 end
 	 
-	 if defenceH<=damageHV:
-	 damageHV=damageHV-defenceH
-	 gs'klonDef'
-	     if damageHV>0:
+	 if defenceH<= damageHV: 
+	 damageHV = damageHV-defenceH
+	 gs 'klonDef'
+	     if damageHV>0: 
 		 dynamic $rascheturonaH
-		 defenceH=0
-		 '<font color=red>ВАША ЗАЩИТА РАЗУМА УНИЧТОЖЕНА</font>'
-		 '<font color=red>Вашей воле нанесли <B><<damageHV>></B> едениц урона</font>'
-		 damageHV=0
-			  if pohot>0 AND damageHV>0:
-			 skveratk=skverna+pohot
-				 if skveratk>25:skveratk=25+pohot
-			 horny=horny+skveratk
-			 pohot=0
-			 '<font color=red><<$tipuronaH>> охватывают вас и вы чувствуете что ваша похоть растет</font>'
+		 defenceH = 0
+		 '<font color = red>ВАША ЗАЩИТА РАЗУМА УНИЧТОЖЕНА</font>'
+		 '<font color = red>Вашей воле нанесли <B><<damageHV>></B> едениц урона</font>'
+		 damageHV = 0
+			  if pohot>0 AND damageHV>0: 
+			 skveratk = skverna+pohot
+				 if skveratk>25: skveratk = 25+pohot
+			 horny = horny+skveratk
+			 pohot = 0
+			 '<font color = red><<$tipuronaH>> охватывают вас и вы чувствуете что ваша похоть растет</font>'
 			 end
 		 end
 	 end

@@ -9,33 +9,33 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Келья</H4></center>'
-'<center><img src="pic/Evedon/monastKel.jpg" ></center>'
+'<center><img src = "pic/Evedon/monastKel.jpg" ></center>'
 'Ваша келья. Полутемное каменное помещение, пропитанное сыростью.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-if shelok<=0:shelok=1
+if shelok<= 0: shelok = 1
 
-'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
-'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
-'Резной <a href="exec:GT ''lokerW''">шкаф</a>.'
-'Уютный <a href="exec:GT ''divanW''">диван</a>.'
-if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
+'Застеленная, чистая <a href = "exec: gt ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href = "exec: gt ''kadka''">для мытья</a>.'
+'Резной <a href = "exec: gt ''lokerW''">шкаф</a>.'
+'Уютный <a href = "exec: gt ''divanW''">диван</a>.'
+if mirr>0: '<a href = "exec: gt ''mirrW''">Зеркало</a>'
 
 
-if slot=0:
+if slot = 0: 
 *nl
 'Без одежды нельзя выходить из кельи.'
 end
 
-if slot>0:
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'monastIn'
+if slot>0: 
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'monastIn'
 	 end
 end
 --- monastKel ---------------------------------

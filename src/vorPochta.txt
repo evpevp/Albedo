@@ -2,11 +2,11 @@
 *clr
 $metka = $ARGS[0]
 $loc = $CURLOC
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>Pochta</H4></center>'
-'<center><img src="pic/pic/vorPochta.jpg" ></center>'
+'<center><img src = "pic/pic/vorPochta.jpg" ></center>'
 'Время работы с 9 до 18 часов каждый день.'
 if hour >= 9 and hour <= 18:     
     'Почта открыта. Через старые двери под скрип петель время от времени ходят люди.'
@@ -15,22 +15,22 @@ else
 end
 
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-act 'ВЫЙТИ':
-minut=minut+1
+act 'ВЫЙТИ': 
+minut += 1
 GOTO $locMag, $metkaMag
 end
 
 if hour >= 9 and hour <= 18 and mast >= 6 and mast <= 10 and vorGrevDay < day:     
-	act 'Послать грев на зону (5000 руб)':
+	act 'Послать грев на зону (5000 руб)': 
 		cla
 		cls
 		time = time + 30
 		vorGrev = vorGrev + 1
 		vorGrevDay = day
-		'<center><img src="pic/pic/vorPosylka.jpg" ></center>'
+		'<center><img src = "pic/pic/vorPosylka.jpg" ></center>'
 		'Приобретя в ближайшем магазине продуктов, мыла, и бритв, вы надежно пакуете посылку в <<vorGrev>>-й раз.' 
 		'Пусть Могол раздаст пацанам; им сейчас нелегко.'
 		act 'ВЫЙТИ': gt 'vorPochta'
@@ -38,18 +38,18 @@ if hour >= 9 and hour <= 18 and mast >= 6 and mast <= 10 and vorGrevDay < day:
 end
 
 
-if hour >= 9 and hour <= 18 and vorGrev >= 5 and vorJoined = 0 and mast >= 6 and mast <= 10:
+if hour >= 9 and hour <= 18 and vorGrev >= 5 and vorJoined = 0 and mast >= 6 and mast <= 10: 
 'Недалеко от почты стоит затонированная бэха. Около нее ошивается крупный мужик в кожанке. Он подзывает вас рукой.'
 
 	act 'Подойти к бэхе.' : 
 		cls
-		'<center><img src="pic/picar/car99.jpg" ></center>'
+		'<center><img src = "pic/picar/car99.jpg" ></center>'
 		'Темное стекло плавно опускается и вы видите седого мужчину в годах на заднем сидении.'
 		''
 		'(Седой): Садись, Харя, разговор есть.'
 		''
 		'Бугай в кожанке открывает для вас дверь.'
-		act 'Сесть в машину.' :
+		act 'Сесть в машину.' : 
 			*clr
 			cla
 			'(Седой): Ты, Харя, я вижу пацанов не забываешь. Это хорошо. Правильно живешь. И боец ты, говорят, неплохой. Могол, вот, за тебя слово сказал. Мне, Харя, такие как ты нужны. Так что ты приходи, если деньжат срубить захочешь. Начнем с малого, а там посмотрим на что ты способен.' 

@@ -1,44 +1,44 @@
 # LOC
-!' Форматы ссылок:
-((текст)) - при клике перейти (gt) на локацию с названием "текст"
-((текст||)) - при клике обработать (gs) локацию с названием "текст"
-((текст|локация)) - при клике перейти (gt) на указанную локацию, текущее описание заменяется новым
-((текст||локация)) - при клике обработать (gs) указанную локацию, новое описание добавляется к текущему
+!' Форматы ссылок: 
+((текст)) - при клике перейти ( gt ) на локацию с названием "текст"
+((текст||)) - при клике обработать (gs ) локацию с названием "текст"
+((текст|локация)) - при клике перейти ( gt ) на указанную локацию, текущее описание заменяется новым
+((текст||локация)) - при клике обработать (gs ) указанную локацию, новое описание добавляется к текущему
 ((текст|||строка кода)) - при клике выполнить строку кода
 ((текст|локация|строка кода)) - то же, что и ((текст|локация)), но перед переходом выполнить строку кода
 ((текст||локация|строка кода)) - то же, что и ((текст||локация)), но перед обработкой выполнить строку кода
 '
 
-$main=$maintxt
+$main = $maintxt
 *clr
-$regex='\(\(([^\)\|]+)(\|{0,2})([^\)\|]*)(\|?)([^\)]*)\)\)'
-:subExLoop
-pos=strpos($main, $regex)
-if pos:
-	$a_dsc=$strfind($main, $regex, 1)
-	$a_dm1=$strfind($main, $regex, 2)
-	$a_loc=$strfind($main, $regex, 3)
-	$a_dm2=$strfind($main, $regex, 4)
-	$a_exe=$strfind($main, $regex, 5)
-	$a_exe=$replace($a_exe, '"', '\"\"')
-	if $a_loc='' and $a_dm2='':$a_loc=$a_dsc
-	if len($a_dm1)=2:
-		if $a_loc='':
-			$link='<a href="exec:showhead=0&dynamic \"<<$a_exe>>\"&'+ _
+$regex = '\(\(([^\)\|]+)(\|{0,2})([^\)\|]*)(\|?)([^\)]*)\)\)'
+: subExLoop
+pos = strpos($main, $regex)
+if pos: 
+	$a_dsc = $strfind($main, $regex, 1)
+	$a_dm1 = $strfind($main, $regex, 2)
+	$a_loc = $strfind($main, $regex, 3)
+	$a_dm2 = $strfind($main, $regex, 4)
+	$a_exe = $strfind($main, $regex, 5)
+	$a_exe = $replace($a_exe, '"', '\"\"')
+	if $a_loc = '' and $a_dm2 = '': $a_loc = $a_dsc
+	if len($a_dm1) = 2: 
+		if $a_loc = '': 
+			$link = '<a href = "exec: showhead = 0 & dynamic \"<<$a_exe>>\" & '+ _
 				'gs \"<<$onnewloc>>\""><<$a_dsc>></a>'
 		else
-			$link='<a href="exec:showhead=0&dynamic \"<<$a_exe>>\"&'+ _
-				'gs \"<<$a_loc>>\"&gs \"<<$onnewloc>>\""><<$a_dsc>></a>'
+			$link = '<a href = "exec: showhead = 0 & dynamic \"<<$a_exe>>\" & '+ _
+				'gs \"<<$a_loc>>\" & gs \"<<$onnewloc>>\""><<$a_dsc>></a>'
 		end
 	else
-		$link='<a href="exec:showhead=1&dynamic \"<<$a_exe>>\"&'+ _
-			'gt \"<<$a_loc>>\""><<$a_dsc>></a>'
+		$link = '<a href = "exec: showhead = 1 & dynamic \"<<$a_exe>>\" & '+ _
+			' gt \"<<$a_loc>>\""><<$a_dsc>></a>'
 	end
-	$main=$mid($main, 1, pos-1)+$link+$mid($main, pos+len($strfind($main, $regex)))
+	$main = $mid($main, 1, pos-1)+$link+$mid($main, pos+len($strfind($main, $regex)))
 	jump 'subExLoop'
 end
 
-if showhead:
+if showhead: 
 	!'<h3>Локация "<<$curloc>>"</h3><hr />'
 	*p $main
 	!'<h3>Конец описания</h3>'
@@ -47,15 +47,15 @@ else
 end
 
 gs 'stat'
-if $CURLOC ! $nextHLoc:
-	if $CURLOC = $historyLoc[ARRSIZE ('$historyLoc') - 1] and ARRSIZE ('$historyLoc'):
+if $CURLOC ! $nextHLoc: 
+	if $CURLOC = $historyLoc[ARRSIZE ('$historyLoc') - 1] and ARRSIZE ('$historyLoc'): 
 		killvar '$historyLoc', ARRSIZE ('$historyLoc') - 1
 		$nextHLoc = $CURLOC
 	else
 		$historyLoc[] = $nextHLoc 
 		$nextHLoc = $CURLOC
 	end
-	if ARRSIZE ('$historyLoc'):	$prevHLoc = $historyLoc[ARRSIZE ('$historyLoc') - 1] 
+	if ARRSIZE ('$historyLoc'): 	$prevHLoc = $historyLoc[ARRSIZE ('$historyLoc') - 1] 
 end
 
 if $CURLOC ! $nextLoc: 

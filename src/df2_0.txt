@@ -7,35 +7,35 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Заросшие деревьями утесы</H4></center>'
-'<center><img src="pic/Evedon/df20.jpg" ></center>'
+'<center><img src = "pic/Evedon/df20.jpg" ></center>'
 'На огромных каменных утесах поросла зелень. Вездесущие кусты и могучие деревья.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-'<center>((Север|df1_0|minut=minut+30))</center>'
-'<center>((Запад|mountW|minut=minut+30))-+-((Восток|df2_1|minut=minut+30))</center>'
-'<center>((Юг|desertW|minut=minut+30))</center>'
+'<center>((Север|df1_0|minut += 30))</center>'
+'<center>((Запад|mountW|minut += 30))-+-((Восток|df2_1|minut += 30))</center>'
+'<center>((Юг|desertW|minut += 30))</center>'
 !!!дома
 
 
 
 !!!
 ''
-if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
+if vampireMorf>= 1: 'Зарыться в <a href = "exec: gt ''vampGrave''">землю</a>'
 
 
 
-     act 'Ждать':
+     act 'Ждать': 
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         if waiting <= 0 or waiting > 120: 
+          minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         if waiting > 0 and waiting <= 120: 
+          minut = minut + waiting
          end
-     act 'Посмотреть на часы':gt curloc
+     act 'Посмотреть на часы': gt curloc
      end
      
      
@@ -46,6 +46,6 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">земл�
      
      
      
-gs'mobran'
+gs 'mobran'
 --- df2_0 ---------------------------------
 

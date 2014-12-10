@@ -1,18 +1,18 @@
 # mdTraktir
-if toiletJerkQW=1:
-gs'stat'
-toiletJerkQW=2
+if toiletJerkQW = 1: 
+gs 'stat'
+toiletJerkQW = 2
 '<center><H4>Трактир Эленвин</H4></center>'
-'<center><img src="pic/EvedonNarod/AlrunaAmon.jpg" ></center>'
+'<center><img src = "pic/EvedonNarod/AlrunaAmon.jpg" ></center>'
 'Вы вошли в трактир и увидели как незнакомая блондинка с ослепительной внешностью разговаривает с трактирщиком. Трактирщик ей объясняет, что у него нет комнат для аренды. Но девушка настаивает держа толстый кошель в руках. Наконец общение симпатичной дамы и трактирщика заходит в тупик и девушка поворачивается к вам. Они дружески вам улыбается и подходит к вам, обдавая жаром своего тела и едва уловимым запахом трав и еще чего то сладкого.'
 '(Блондинка) - Привет. Меня зовут Алруна Амон, я алхимик, сейчас туго с ингридиентами поэтому пришлось пускаться в путешествие. Хочу остановится в этой деревеньке, очень уж она перспективная, но этот болван трактирщик утверждает, что тут нет мест где могут остановиться путешественники. Помоги мне найти комнатушку, я тебя отблагодарю и хозяева в накладе не остануться.'
-	 act 'Вы одна?':
+	 act 'Вы одна?': 
 	 cla
-	 horny+=20
-	 minut=minut+15
+	 horny+= 20
+	 minut += 15
 	 ''
 	 'Вы поинтересовались одна ли она, на что Алруна покачала головой, нет, со мной еще двое слуг. Вы кивнули головой обещая поискать место для Алруны. Она ослепительно улыбнулась и спросила ваше имя. Вы ответили ей "<<$name>>"'
-	 act 'Отойти':gt $CURLOC
+	 act 'Отойти': gt $CURLOC
 	 end
 exit
 end
@@ -30,86 +30,86 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 mag = 1
 '<center><H4>Трактир Эленвин</H4></center>'
-'<center><img src="pic/Evedon/mdTraktir.jpg" ></center>'
+'<center><img src = "pic/Evedon/mdTraktir.jpg" ></center>'
 'Полутемный трактир пропах потом и вином. От очага в центре исходит приятное тепло.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
-if hour>=5 and hour<=12:
-'За стойкой стоит <a href="exec:minut+=5&GT ''MelindaKlarkson''">дочь трактирщика</a>'
+if hour>= 5 and hour<= 12: 
+'За стойкой стоит <a href = "exec: minut+= 5 & gt ''MelindaKlarkson''">дочь трактирщика</a>'
 else
-'За стойкой стоит <a href="exec:minut+=5&GT ''BertKlarkson''">трактирщик</a>'
+'За стойкой стоит <a href = "exec: minut+= 5 & gt ''BertKlarkson''">трактирщик</a>'
 end
 ''
-if hour>=8 and hour<14:
-'С кружкой пива сидит <a href="exec:minut+=5&GT ''AstonGasilot''">Астон Гасилот</a> местный балагур и помощник шерифа.'
+if hour>= 8 and hour<14: 
+'С кружкой пива сидит <a href = "exec: minut+= 5 & gt ''AstonGasilot''">Астон Гасилот</a> местный балагур и помощник шерифа.'
 end
-if hour>=14 and hour<18:
-     if toiletJerkQW<4 or toiletJerkQW=4 and AlrunaStartDay+2<daystart:
-'С кружкой пива сидит <a href="exec:minut+=5&GT ''AstonGasilot''">Астон Гасилот</a> местный балагур и помощник шерифа с ним за столом сидит <a href="exec:GT ''RosanBrightmoore''">Розан</a>.'
+if hour>= 14 and hour<18: 
+     if toiletJerkQW<4 or toiletJerkQW = 4 and AlrunaStartDay+2<daystart: 
+'С кружкой пива сидит <a href = "exec: minut+= 5 & gt ''AstonGasilot''">Астон Гасилот</a> местный балагур и помощник шерифа с ним за столом сидит <a href = "exec: gt ''RosanBrightmoore''">Розан</a>.'
      end
-     if toiletJerkQW=4 and AlrunaStartDay+2>=daystart:
-'С кружкой пива сидит <a href="exec:minut+=5&GT ''AstonGasilot''">Астон Гасилот</a> местный балагур и помощник шерифа.'
+     if toiletJerkQW = 4 and AlrunaStartDay+2>= daystart: 
+'С кружкой пива сидит <a href = "exec: minut+= 5 & gt ''AstonGasilot''">Астон Гасилот</a> местный балагур и помощник шерифа.'
      end
 end
-if hour>=18:
-'С кружкой пива сидит <a href="exec:minut+=5&GT ''AstonGasilot''">Астон Гасилот</a> местный балагур и помощник шерифа, напротив его за столом сидит сам <a href="exec:minut+=5&GT ''RoyGlayden''">шериф</a>.'
+if hour>= 18: 
+'С кружкой пива сидит <a href = "exec: minut+= 5 & gt ''AstonGasilot''">Астон Гасилот</a> местный балагур и помощник шерифа, напротив его за столом сидит сам <a href = "exec: minut+= 5 & gt ''RoyGlayden''">шериф</a>.'
 end
-if toiletJerkQW=2 or toiletJerkQW=3:'За столом сидит <a href="exec:minut+=5&GT ''AlrunaAmon''">Алруна Амон</a> приезжая девушка алхимик с двумя слугами, один из которых <a href="exec:minut+=5&GT ''Valafar''">мужчина со звериным лицом</a> а второй <a href="exec:minut+=5&GT ''Zepar''">настоящий аристократ</a>'
-if toiletJerkQW=4:'За столом сидят слуги Алруны, один из которых <a href="exec:minut+=5&GT ''Valafar''">мужчина со звериным лицом</a> а второй <a href="exec:minut+=5&GT ''Zepar''">настоящий аристократ</a>'
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'monDorf'
+if toiletJerkQW = 2 or toiletJerkQW = 3: 'За столом сидит <a href = "exec: minut+= 5 & gt ''AlrunaAmon''">Алруна Амон</a> приезжая девушка алхимик с двумя слугами, один из которых <a href = "exec: minut+= 5 & gt ''Valafar''">мужчина со звериным лицом</a> а второй <a href = "exec: minut+= 5 & gt ''Zepar''">настоящий аристократ</a>'
+if toiletJerkQW = 4: 'За столом сидят слуги Алруны, один из которых <a href = "exec: minut+= 5 & gt ''Valafar''">мужчина со звериным лицом</a> а второй <a href = "exec: minut+= 5 & gt ''Zepar''">настоящий аристократ</a>'
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'monDorf'
 	 end
 
 
-	 if gem>=10:
-		 act 'Есть 10 гем':
+	 if gem>= 10: 
+		 act 'Есть 10 гем': 
 		 cla
 		 *clr
-		 minut=minut+15
-		 gem=gem-10
-		 gs'eda'
+		 minut += 15
+		 gem = gem-10
+		 gs 'eda'
 		 'Вы отдали причитающиеся гемы и вам поставили тарелку с едой.'
-		 gs'eat'
-		 act 'Отойти от стойки':gt $CURLOC
+		 gs 'eat'
+		 act 'Отойти от стойки': gt $CURLOC
 		 end
 	 end
 
-	 if gem>=15:
-		 act 'Пиво 15 гем':
+	 if gem>= 15: 
+		 act 'Пиво 15 гем': 
 		 cla
-		 minut=minut+15
-		 gem=gem-15
-		 fat=fat+1
-		 alko=alko+2
-		 golod=golod+3
-		 manna=manna+10
-		 wipo=wipo+10
-		 horny=horny+5
+		 minut += 15
+		 gem = gem-15
+		 fat = fat+1
+		 alko = alko+2
+		 golod = golod+3
+		 manna = manna+10
+		 wipo = wipo+10
+		 horny = horny+5
 	      *clr
-         '<center><img src="pic/EvedonOd/beer.jpg"></center>'
+         '<center><img src = "pic/EvedonOd/beer.jpg"></center>'
 		 'Вы отдали причитающиеся гемы и вам поставили кружку пива.'
-		 act 'Отойти от стойки':gt $CURLOC
+		 act 'Отойти от стойки': gt $CURLOC
 		 end
 	 end
 
-	 if gem>=20:
-		 act 'Виски 20 гем':
+	 if gem>= 20: 
+		 act 'Виски 20 гем': 
 		 cla
-		 minut=minut+15
-		 gem=gem-20
-		 alko=alko+5
-		 manna=manna+20
-		 wipo=wipo+20
-		 horny=horny+10
+		 minut += 15
+		 gem = gem-20
+		 alko = alko+5
+		 manna = manna+20
+		 wipo = wipo+20
+		 horny = horny+10
 	     *clr
-         '<center><img src="pic/EvedonOd/wiskey.jpg"></center>'
+         '<center><img src = "pic/EvedonOd/wiskey.jpg"></center>'
 		 'Вы отдали причитающиеся гемы и вам поставили стаканчик виски.'
-		 act 'Отойти от стойки':gt $CURLOC
+		 act 'Отойти от стойки': gt $CURLOC
 		 end
 	 end
 --- mdTraktir ---------------------------------

@@ -1,67 +1,67 @@
 # minoW
 *clr
-'<center><img src="pic/EvedonMonsters/minotavr.jpg"></center>'
+'<center><img src = "pic/EvedonMonsters/minotavr.jpg"></center>'
 
-monster=5
+monster = 5
 
-minorand=RAND(0,2)
+minorand = RAND(0,2)
 
 
-if minorand=0:
-$nameV='Тщедушный минотавр'
-lvlv=80
-strenV=60
-speedV=95
-agilV=95
-vitalV=100
-intelv=10
-willv=100
-program=10
-healthV=vitalV*15
-mannaV=intelV*10
-wipoV=willV*10
-ShilDefv=30
-weaponv=1
-armorDefv=50
-wepAtkV=60
+if minorand = 0: 
+$nameV = 'Тщедушный минотавр'
+lvlv = 80
+strenV = 60
+speedV = 95
+agilV = 95
+vitalV = 100
+intelv = 10
+willv = 100
+program = 10
+healthV = vitalV*15
+mannaV = intelV*10
+wipoV = willV*10
+ShilDefv = 30
+weaponv = 1
+armorDefv = 50
+wepAtkV = 60
 end
 
-if minorand=1:
-$nameV='Минотавр'
-lvlv=90
-strenV=100
-speedV=100
-agilV=100
-vitalV=100
-intelv=10
-willv=100
-program=10
-healthV=vitalV*15
-mannaV=intelV*10
-wipoV=willV*10
-ShilDefv=30
-weaponv=1
-armorDefv=50
-wepAtkV=60
+if minorand = 1: 
+$nameV = 'Минотавр'
+lvlv = 90
+strenV = 100
+speedV = 100
+agilV = 100
+vitalV = 100
+intelv = 10
+willv = 100
+program = 10
+healthV = vitalV*15
+mannaV = intelV*10
+wipoV = willV*10
+ShilDefv = 30
+weaponv = 1
+armorDefv = 50
+wepAtkV = 60
 end
 
-if minorand=2:
-$nameV='Лорд Минотавр'
-lvlv=100
-strenV=100
-speedV=120
-agilV=120
-vitalV=110
-intelv=10
-willv=100
-program=10
-healthV=vitalV*15
-mannaV=intelV*10
-wipoV=willV*10
-ShilDefv=30
-weaponv=1
-armorDefv=50
-wepAtkV=60
+if minorand = 2: 
+$nameV = 'Лорд Минотавр'
+lvlv = 100
+strenV = 100
+speedV = 120
+agilV = 120
+vitalV = 110
+intelv = 10
+willv = 100
+program = 10
+healthV = vitalV*15
+mannaV = intelV*10
+wipoV = willV*10
+ShilDefv = 30
+weaponv = 1
+armorDefv = 50
+wepAtkV = 60
 end
 --- minoW ---------------------------------
 

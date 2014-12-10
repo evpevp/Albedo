@@ -1,65 +1,65 @@
 # etap
-if $ARGS[0]='0':
+if $ARGS[0] = '0': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Автозак</B></center>'
-'<center><img src="pic/jail/etap.jpg" ></center>'
+'<center><img src = "pic/jail/etap.jpg" ></center>'
 'Вас погрузили в автозак, грузовую машину для перевозки заключенных. И она куда-то поехала.'
 
-     act 'Ехать 1 час.':
-	 minut=minut+60
+     act 'Ехать 1 час.': 
+	 minut += 60
 	 gt 'etap','2'
 	 end
 end
 
-if $ARGS[0]='2':
+if $ARGS[0] = '2': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Тюремный поезд</B></center>'
-'<center><img src="pic/jail/etap2.jpg" ></center>'
+'<center><img src = "pic/jail/etap2.jpg" ></center>'
 'Охрана с собаками загнала вас в зарешеченную стальную конуру в вагоне поезда с целой кучей других заключенных.'
 'Хорошо хоть ехать всего сутки, но и эти сутки показались вам адом, стоя в тесноте в трясущемся продуваемом вагоне. Охрана в туалет не водит, есть негде.'
 
-     act 'Ехать сутки.':
-	 minut=minut+1440
+     act 'Ехать сутки.': 
+	 minut += 1440
 	 gt 'etap','3'
 	 end
 end
 
-if $ARGS[0]='3':
+if $ARGS[0] = '3': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Автозак</B></center>'
-'<center><img src="pic/jail/etap3.jpg" ></center>'
+'<center><img src = "pic/jail/etap3.jpg" ></center>'
 'Наконец-то поезд приехал к месту назначения. Вас встретил целый отряд автоматчиков с злобными псами, вас выгружали из вагона и гнали бегом через шеренги любезно подгоняющих вас дубиналами охранников к автозаку.'
 
 
-     act 'Ехать до лагеря.':
-	 minut=minut+60
+     act 'Ехать до лагеря.': 
+	 minut += 60
 	 gt 'lager','start'
 	 end
 end

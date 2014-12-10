@@ -5,115 +5,115 @@
 !damageW
 !damageWV
 
-gs'PreEffect'
+gs 'PreEffect'
 
-if tumanv>0:
-	 if tumanv>damagetw:
-	 tumanv=tumanv-damagew
-	 '<font color=red>Туман противника выдержал и поглотил воздушный удар</font>'
-	 damagew=0
+if tumanv>0: 
+	 if tumanv>damagetw: 
+	 tumanv = tumanv-damagew
+	 '<font color = red>Туман противника выдержал и поглотил воздушный удар</font>'
+	 damagew = 0
 	 end
-	 if tumanv<=damagew:
-	 damagew=damagew-tumanv
-	 tumanv=0
-	 '<font color=green>ТУМАН ПРОТИВНИКА УНИЧТОЖЕН</font>'
+	 if tumanv<= damagew: 
+	 damagew = damagew-tumanv
+	 tumanv = 0
+	 '<font color = green>ТУМАН ПРОТИВНИКА УНИЧТОЖЕН</font>'
 	 end
 end
 
-if levitationV>0:gs'LevitationV'
-!if conterBat>0:gs'conterBat'
-if conterBatV>0:gs'conterBatV'
+if levitationV>0: gs 'LevitationV'
+!if conterBat>0: gs 'conterBat'
+if conterBatV>0: gs 'conterBatV'
 
 
 
-if zerkalov>0:
-zeratk=RAND(0,zerkalov/2)
-     if zeratk=0 or sonar>0:
-     zerkalov=0
-     '<font color=green>Вы попали в настоящего противника а не в его отражения и зеркала рассыпались</font>'
+if zerkalov>0: 
+zeratk = RAND(0,zerkalov/2)
+     if zeratk = 0 or sonar>0: 
+     zerkalov = 0
+     '<font color = green>Вы попали в настоящего противника а не в его отражения и зеркала рассыпались</font>'
      end
-     if zeratk>0 and sonar=0:
-     zerkalov=zerkalov-1
-     damagew=0
-     '<font color=green>Вы попали в зеркало и оно рассыпалось</font>'
+     if zeratk>0 and sonar = 0: 
+     zerkalov = zerkalov-1
+     damagew = 0
+     '<font color = green>Вы попали в зеркало и оно рассыпалось</font>'
      end
 end
 
-if barierV>0 and damageW>0:
-damageW=damageW-((damageW*barierV)/100)
-'<font color=red>Барьер противника снизил воздушный урон на <B><<barierV>></B>%</font>'
-barierV=barierV-1
+if barierV>0 and damageW>0: 
+damageW = damageW-((damageW*barierV)/100)
+'<font color = red>Барьер противника снизил воздушный урон на <B><<barierV>></B>%</font>'
+barierV = barierV-1
 end
 
-	 if gostbodyv>0:
-	 damageW=0
-	 gostbodyv-=1
-	 '<font color=red><<$namev>> пропустил удар через свое тело</font>'
+	 if gostbodyv>0: 
+	 damageW = 0
+	 gostbodyv- = 1
+	 '<font color = red><<$namev>> пропустил удар через свое тело</font>'
 	 end
 
-if defenceWV<=0 and damageW>0:
-gs'klonDefV'
+if defenceWV<= 0 and damageW>0: 
+gs 'klonDefV'
 dynamic $rascheturonaWV
-'<font color=green><<$tipuronaWV>> нанес противнику <B><<damagew>></B> едениц урона</font>'
-     if Perepad>0 and damageW>0:
-     Perepad=0
-     blood=blood+(damageW/100)
-     '<font color=green><<$tipuronaWV>> вызвал у противника кровотечение</font>'
+'<font color = green><<$tipuronaWV>> нанес противнику <B><<damagew>></B> едениц урона</font>'
+     if Perepad>0 and damageW>0: 
+     Perepad = 0
+     blood = blood+(damageW/100)
+     '<font color = green><<$tipuronaWV>> вызвал у противника кровотечение</font>'
      end
      
-     if Vibro>0 and damageW>0:
-     Vibro=0
-     if VibroTravmaV=0:VibroTravmaV=1
-     '<font color=green><<$tipuronaWV>> вызвал у противника разрыв внутренних органов</font>'
+     if Vibro>0 and damageW>0: 
+     Vibro = 0
+     if VibroTravmaV = 0: VibroTravmaV = 1
+     '<font color = green><<$tipuronaWV>> вызвал у противника разрыв внутренних органов</font>'
      end
      
-     if soundMag>0 and damageW>0:
-     mannaV=mannaV-soundMag
-     wipoV=wipoV-soundMag
-     soundMag=0
-     '<font color=green><<$tipuronaWV>> ударил противника по мане и воле</font>'
+     if soundMag>0 and damageW>0: 
+     mannaV = mannaV-soundMag
+     wipoV = wipoV-soundMag
+     soundMag = 0
+     '<font color = green><<$tipuronaWV>> ударил противника по мане и воле</font>'
      end
-!damageW=0
+!damageW = 0
 end
 
-if defencewv>0 and damageW>0:
-	 if defencewv>damagew:
-	 defencewv=defencewv-damagew
-	 '<font color=green>Вы нанесли <B><<damagew>></B> едениц урона ВОЗДУШНОЙ защите противника</font>'
-	 damagew=0
+if defencewv>0 and damageW>0: 
+	 if defencewv>damagew: 
+	 defencewv = defencewv-damagew
+	 '<font color = green>Вы нанесли <B><<damagew>></B> едениц урона ВОЗДУШНОЙ защите противника</font>'
+	 damagew = 0
 	 end
-	 if defencewv<=damagew:
-	 damagew=damagew-defencewv
-	 gs'klonDefV'
+	 if defencewv<= damagew: 
+	 damagew = damagew-defencewv
+	 gs 'klonDefV'
 	     if damagew>0:  
 		 dynamic $rascheturonaWV
-		 defencewv=0
-		 '<font color=green>ВОЗДУШНАЯ ЗАЩИТА ПРОТИВНИКА УНИЧТОЖЕНА</font>'
-		 '<font color=green>Вы нанесли <B><<damagew>></B> едениц урона</font>'
-		     if Perepad>0 and damageW>0:
-			 Perepad=0
-			 blood=blood+(damageW/4)
-			 '<font color=green><<$tipuronaWV>> вызвал у противника кровотечение</font>'
+		 defencewv = 0
+		 '<font color = green>ВОЗДУШНАЯ ЗАЩИТА ПРОТИВНИКА УНИЧТОЖЕНА</font>'
+		 '<font color = green>Вы нанесли <B><<damagew>></B> едениц урона</font>'
+		     if Perepad>0 and damageW>0: 
+			 Perepad = 0
+			 blood = blood+(damageW/4)
+			 '<font color = green><<$tipuronaWV>> вызвал у противника кровотечение</font>'
 			 end
 			 
-			 if Vibro>0 and damageW>0:
-			 Vibro=0
-			 if VibroTravmaV=0:VibroTravmaV=1
-			 '<font color=green><<$tipuronaWV>> вызвал у противника разрыв внутренних органов</font>'
+			 if Vibro>0 and damageW>0: 
+			 Vibro = 0
+			 if VibroTravmaV = 0: VibroTravmaV = 1
+			 '<font color = green><<$tipuronaWV>> вызвал у противника разрыв внутренних органов</font>'
 			 end
 			 
-			 if soundMag>0 and damageW>0:
-			 mannaV=mannaV-soundMag
-			 wipoV=wipoV-soundMag
-			 soundMag=0
-			 '<font color=green><<$tipuronaWV>> ударил противника по мане и воле</font>'
+			 if soundMag>0 and damageW>0: 
+			 mannaV = mannaV-soundMag
+			 wipoV = wipoV-soundMag
+			 soundMag = 0
+			 '<font color = green><<$tipuronaWV>> ударил противника по мане и воле</font>'
 			 end
-		 damageW=0
+		 damageW = 0
 	     end
 	 end
 end
 
-Vibro=0
-soundMag=0
+Vibro = 0
+soundMag = 0
 --- defenceWV ---------------------------------
 

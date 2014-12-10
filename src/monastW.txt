@@ -6,56 +6,56 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-tan=tan+3
+tan = tan+3
 '<center><H4>Монастырь Мары</H4></center>'
-'<center><img src="pic/Evedon/monast.jpg" ></center>'
+'<center><img src = "pic/Evedon/monast.jpg" ></center>'
 'Посередине горного озера стоит величественный монастырь, построенный из белого камня.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-     if missionData=7:
+     if missionData = 7: 
      'Вам навстречу вышла настоятельница монастыря.'
-         act 'Отдать письмо':
+         act 'Отдать письмо': 
          cla
          *clr
-         missionData=0
-         kredit=kredit+100
-         missionC+=1
-         '<center><img src="pic/Photo/License.jpg" ></center>'
+         missionData = 0
+         kredit = kredit+100
+         missionC+= 1
+         '<center><img src = "pic/Photo/License.jpg" ></center>'
          'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
-         act 'Уйти':gt $CURLOC
+         act 'Уйти': gt $CURLOC
          end
      end
 
 
-     if OrdenPiper=1:
+     if OrdenPiper = 1: 
 	 'Вам навстречу выходит монахиня и протягивает руку, ожидая от вас грамоту ордена.'
-	     act 'Подать грамоту':
+	     act 'Подать грамоту': 
 	     cla
 	     *clr
-	     '<center><img src="pic/EvedonNarod/septa.jpg"></center>'
-	     minut=minut+30
+	     '<center><img src = "pic/EvedonNarod/septa.jpg"></center>'
+	     minut += 30
 	     'Вы подали грамоту монахине, она прочитала ее и впустила вас в монастырь. Вы молча шли по сумрачным коридорам и наконец пришли в просторную залу, где вас уже ожидала настоятельница монастыря.'
 	     'Настоятельница пристально вас осмотрела и достала из серебряной шкатулки кулон на цепочке.'
-	         if skverna<=0:
+	         if skverna<= 0: 
 	         'В тебе нет скверны, дитя мое.'
-	             if magika>=10:
-	             OrdenPiper=2
+	             if magika>= 10: 
+	             OrdenPiper = 2
 	             'И силы твоей достаточно, чтобы стать послушником. Я подписываю твою грамоту, иди обратно в резиденцию ордена, чтобы пройти процедуру посвящения в послушники.'
-	             	 act 'Уйти (1 час)':
-					 minut=minut+60
-					 gt'mountW'
+	             	 act 'Уйти (1 час)': 
+					 minut += 60
+					 gt 'mountW'
 					 end
 	             end
-	             if magika<10:
+	             if magika<10: 
 	             'Но силы твоей недостаточно для борьбы с демонами. Тебе нужно подготовить себя. Иди в келью.'
-	             act 'Идти в монастырь':gt'monastIn'
+	             act 'Идти в монастырь': gt 'monastIn'
 	             end
 	         end 
-	         if skverna>0:
+	         if skverna>0: 
 	         'В тебе есть скверна, дитя мое. Тебе необходимо очиститься от нее. Иди в келью.'
-	         act 'Идти в монастырь':gt'monastIn'
+	         act 'Идти в монастырь': gt 'monastIn'
 	         end 
 	     end
 	 end
@@ -63,9 +63,9 @@ gs'time'
      
      
 
-	 act 'Уйти (1 час)':
-	 minut=minut+60
-	 gt'mountW'
+	 act 'Уйти (1 час)': 
+	 minut += 60
+	 gt 'mountW'
 	 end
 	 
 	 

@@ -1,58 +1,58 @@
 # passeffect
 
-if cumlip>0:
-charand=RAND(0,2)
-     if chanrand = 0:face=face+RAND(1,5)
-     if chanrand = 1:brist=brist+RAND(1,5)
-     if chanrand = 2:tit=tit+RAND(1,5)
+if cumlip>0: 
+charand = RAND(0,2)
+     if chanrand = 0: face = face+RAND(1,5)
+     if chanrand = 1: brist = brist+RAND(1,5)
+     if chanrand = 2: tit = tit+RAND(1,5)
      
-     if cumslut>=10:
-     health=health+10
-     wipo=wipo+30
-     manna=manna+30
+     if cumslut>= 10: 
+     health = health+10
+     wipo = wipo+30
+     manna = manna+30
      'Сперма, это так вкусно!'
      end
 end
 
-if cumface>0:
-face=face+RAND(1,5)
-     if cumslut>=10:
-     horny=horny+(cumslut/2)
-     wipo=wipo+30
-     manna=manna+30
+if cumface>0: 
+face = face+RAND(1,5)
+     if cumslut>= 10: 
+     horny = horny+(cumslut/2)
+     wipo = wipo+30
+     manna = manna+30
      'Сперма на лице, это так возбуждающе!'
      end
 end
 
-if cumbelly > 0:
-brist=brist+RAND(1,5)
+if cumbelly > 0: 
+brist = brist+RAND(1,5)
 end
 
-if cumpussy > 0:
-charand=RAND(0,2)
-     if chanrand = 0:leg=leg+RAND(1,5)
-     if chanrand = 1:thight=thight+RAND(1,5)
-     if chanrand = 2:ass=ass+RAND(1,5)
+if cumpussy > 0: 
+charand = RAND(0,2)
+     if chanrand = 0: leg = leg+RAND(1,5)
+     if chanrand = 1: thight = thight+RAND(1,5)
+     if chanrand = 2: ass = ass+RAND(1,5)
 end
 
-if cumass > 0:
-ass=ass+RAND(1,5)
+if cumass > 0: 
+ass = ass+RAND(1,5)
 end
 
-if cumanus > 0:
-charand=RAND(0,2)
-     if chanrand = 0:leg=leg+RAND(1,5)
-     if chanrand = 1:thight=thight+RAND(1,5)
-     if chanrand = 2:ass=ass+RAND(1,5)
+if cumanus > 0: 
+charand = RAND(0,2)
+     if chanrand = 0: leg = leg+RAND(1,5)
+     if chanrand = 1: thight = thight+RAND(1,5)
+     if chanrand = 2: ass = ass+RAND(1,5)
      
-     if analslut>=10:
-     health=health+10
-     wipo=wipo+30
-     manna=manna+30
+     if analslut>= 10: 
+     health = health+10
+     wipo = wipo+30
+     manna = manna+30
      'О да, мне так нравится тепленькая сперма в моей попке!'
      end
 end
 
-gs'polChange'
+gs 'polChange'
 --- passeffect ---------------------------------
 

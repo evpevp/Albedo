@@ -1,11 +1,11 @@
 # метрдотель
-*PL '<right><img src="pic/casino\metrd.jpg" ></right>'
+*PL '<right><img src = "pic/casino\metrd.jpg" ></right>'
 *P 'Вам что-то нужно от меня?'
-ACT 'Отойти':
-	gt 'холл'
+ACT 'Отойти': 
+	 gt 'холл'
 END
 clr
-gs'stat'
-set minut=minut + 5
+gs 'stat'
+ minut = minut + 5
 --- метрдотель ---------------------------------
 

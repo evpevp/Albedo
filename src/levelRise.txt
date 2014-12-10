@@ -12,38 +12,38 @@
 'Мана <<manna>>'
 'Сила воли <<wipo>>'
 
-act 'ВЫЙТИ':GOTO $loc, $metka
+act 'ВЫЙТИ': GOTO $loc, $metka
 
-if sp >0:
-     act 'Повысить силу':
-     stren=stren+1
-     sp=sp-1
-     gt'levelRise'
+if sp >0: 
+     act 'Повысить силу': 
+     stren = stren+1
+     sp = sp-1
+     gt 'levelRise'
      end
-     act 'Повысить скорость':
-     speed=speed+1
-     sp=sp-1
-     gt'levelRise'
+     act 'Повысить скорость': 
+     speed = speed+1
+     sp = sp-1
+     gt 'levelRise'
      end
-     act 'Повысить ловкость':
-     agil=agil+1
-     sp=sp-1
-     gt'levelRise'
+     act 'Повысить ловкость': 
+     agil = agil+1
+     sp = sp-1
+     gt 'levelRise'
      end
-     act 'Повысить стойкость':
-     vital=vital+1
-     sp=sp-1
-     gt'levelRise'
+     act 'Повысить стойкость': 
+     vital = vital+1
+     sp = sp-1
+     gt 'levelRise'
      end
-     act 'Повысить интелект':
-     intel=intel+1
-     sp=sp-1
-     gt'levelRise'
+     act 'Повысить интелект': 
+     intel = intel+1
+     sp = sp-1
+     gt 'levelRise'
      end
-     act 'Повысить волю':
-     will=will+1
-     sp=sp-1
-     gt'levelRise'
+     act 'Повысить волю': 
+     will = will+1
+     sp = sp-1
+     gt 'levelRise'
      end
 
 end

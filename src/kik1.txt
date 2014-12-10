@@ -1,65 +1,65 @@
 # kik1
-if $ARGS[0]='start':
-set stamina = stamina - 5
-set staminaV = staminaV - 1
-set speedKoef = speed*25/100
-set agilKoef = agilV*25/100
-set initKoef = init*10
-set initKoefV = initV*10
-     if init = 0:
-     set baseSpeed = 0
+if $ARGS[0] = 'start': 
+ stamina = stamina - 5
+ staminaV = staminaV - 1
+ speedKoef = speed*25/100
+ agilKoef = agilV*25/100
+ initKoef = init*10
+ initKoefV = initV*10
+     if init = 0: 
+      baseSpeed = 0
      end
-     if init > 0:
-     set baseSpeed = speed*initKoef/100
+     if init > 0: 
+      baseSpeed = speed*initKoef/100
      end
-     if initV = 0:
-     set baseAgil = 0
+     if initV = 0: 
+      baseAgil = 0
      end
-     if initV > 0:
-     set baseAgil = agilV*initKoefV/100
+     if initV > 0: 
+      baseAgil = agilV*initKoefV/100
      end
-set pop = speed + kik + RAND (150,200)
-set popad = RAND ((pop-baseSpeed)- speedKoef,(pop-baseSpeed)+ speedKoef)
-set def = agilV + defenceV + RAND (150,200)
-set uvorot = RAND ((def-baseAgil)- agilKoef,(def-baseAgil)+ agilKoef)
-     if popad >= uvorot+ (uvorot*25/100):
-     '<B><font color=green>МОЩНОЕ ПОПАДАНИЕ</font></B>'
-     gs'kik1','krit'
+ pop = speed + kik + RAND (150,200)
+ popad = RAND ((pop-baseSpeed)- speedKoef,(pop-baseSpeed)+ speedKoef)
+ def = agilV + defenceV + RAND (150,200)
+ uvorot = RAND ((def-baseAgil)- agilKoef,(def-baseAgil)+ agilKoef)
+     if popad >= uvorot+ (uvorot*25/100): 
+     '<B><font color = green>МОЩНОЕ ПОПАДАНИЕ</font></B>'
+     gs 'kik1','krit'
      end
-     if popad < uvorot+ (uvorot*25/100) and popad >= uvorot:
-     '<B><font color=green>ПОПАДАНИЕ</font></B>'
-     gs'kik1','udar'
+     if popad < uvorot+ (uvorot*25/100) and popad >= uvorot: 
+     '<B><font color = green>ПОПАДАНИЕ</font></B>'
+     gs 'kik1','udar'
      end 
-     if popad < uvorot:
-     set stamina = stamina - 5
-     '<B><font color=red>ПРОМАХ</font></B>'
+     if popad < uvorot: 
+      stamina = stamina - 5
+     '<B><font color = red>ПРОМАХ</font></B>'
      end 
 end
 
-if $ARGS[0]='krit':
+if $ARGS[0] = 'krit': 
 point = point + 1
-set kikKoef = kik - 10
-if kikKoef < 10:set kikKoef = 10
-set powerKik = stren*kikKoef/100
-gs'Knok'
-set staminaV = staminaV - (powerKik*50/100)
+ kikKoef = kik - 10
+if kikKoef < 10: kikKoef = 10
+ powerKik = stren*kikKoef/100
+gs 'Knok'
+ staminaV = staminaV - (powerKik*50/100)
 !'выносливость <<powerPunch>>'
 !'челюсть <<powerPunch*50/100>>'
-set cutrand = RAND (0,100)
-     if cutrand >= 90:set cutV = cutV + 1
+ cutrand = RAND (0,100)
+     if cutrand >= 90: cutV = cutV + 1
 end
 
-if $ARGS[0]='udar':
+if $ARGS[0] = 'udar': 
 point = point + 1
-set kikKoef = kik - 20
-if kikKoef < 10:set kikKoef = 20
-set powerKik = stren*kikKoef/100
-gs'Knok'
-set staminaV = staminaV - (powerKik*50/100)
+ kikKoef = kik - 20
+if kikKoef < 10: kikKoef = 20
+ powerKik = stren*kikKoef/100
+gs 'Knok'
+ staminaV = staminaV - (powerKik*50/100)
 !'выносливость <<powerPunch>>'
 !'челюсть <<powerPunch*50/100>>'
-set cutrand = RAND (0,100)
-     if cutrand >= 90:set cutV = cutV + 1
+ cutrand = RAND (0,100)
+     if cutrand >= 90: cutV = cutV + 1
 !'выносливость <<powerPunch*60/100>>'
 !'челюсть <<powerPunch>>'
 end

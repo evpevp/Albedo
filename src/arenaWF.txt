@@ -2,15 +2,15 @@
 *clr
 $metka = $ARGS[0]
 $loc = $CURLOC
-minut=minut+5
+minut += 5
 '<center><H4>Арена</H4></center>'
-'<center><img src="pic/Evedon/arena.jpg" ></center>'
+'<center><img src = "pic/Evedon/arena.jpg" ></center>'
 'Вы вышли на песок арены и громовой голос ведущего начал говорить.'
 'Уважаемая публика. Сейчас перед вами будет кровавая битва двух воинов. <<$arenaname>> и <<$nameV>>'
-arenafight=1
-arenaday=day
+arenafight = 1
+arenaday = day
 
-act 'Сражаться':gt'before'
+act 'Сражаться': gt 'before'
 
 --- arenaWF ---------------------------------
 

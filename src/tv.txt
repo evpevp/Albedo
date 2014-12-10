@@ -2,20 +2,20 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 clr
-gs'stat'
+gs 'stat'
 '<center><H4>Телевизор</H4></center>'
-if pol = 0:'<center><img src="pic\pic\tv.jpg" ></center>'
-if pol > 0:'<center><img src="pic\pic\tv1.jpg" ></center>'
+if pol = 0: '<center><img src = "pic\pic\tv.jpg" ></center>'
+if pol > 0: '<center><img src = "pic\pic\tv1.jpg" ></center>'
 
 
-     act 'Смотреть телевизор 1час':
+     act 'Смотреть телевизор 1час': 
      cla
-     minut=minut+60
-     manna=manna+10
+     minut += 60
+     manna = manna+10
      'Вы смотрите телевизор целый час.'
-     act 'далее':gt'tv'
+     act 'далее': gt 'tv'
      end
 
-act 'Выключить телевизор':GOTO $locM, $metkaM
+act 'Выключить телевизор': GOTO $locM, $metkaM
 --- tv ---------------------------------
 

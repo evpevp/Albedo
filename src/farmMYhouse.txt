@@ -10,55 +10,55 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 mag = 1
 
-if fmyH=0:$fmyhouse='Утлый домишко грозящий вот-вот обрушиться на голову'
-if fmyH=1:$fmyhouse='Аккуратный и уютный дом'
+if fmyH = 0: $fmyhouse = 'Утлый домишко грозящий вот-вот обрушиться на голову'
+if fmyH = 1: $fmyhouse = 'Аккуратный и уютный дом'
 
 '<center><H4>Ферма <<$farmname>></H4></center>'
 '<center>Фермерский дом</center>'
-'<center><img src="pic/Evedon/farmMYhouse.jpg" ></center>'
+'<center><img src = "pic/Evedon/farmMYhouse.jpg" ></center>'
 '<<$fmyhouse>>'
-if edaWF>0:'Еды для приготовления <<edaWF>> штук'
-if drova>0:'Дров для очага <<drova>> охапок'
-if shelok>0:'Склянок со щелоком для мытья <<shelok>> штук'
+if edaWF>0: 'Еды для приготовления <<edaWF>> штук'
+if drova>0: 'Дров для очага <<drova>> охапок'
+if shelok>0: 'Склянок со щелоком для мытья <<shelok>> штук'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
-'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
-'Резной <a href="exec:GT ''lokerW''">шкаф</a>.'
-'Уютный <a href="exec:GT ''divanW''">диван</a>.'
-'<a href="exec:GT ''mirrW''">Зеркало</a>'
-if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+'Застеленная, чистая <a href = "exec: gt ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href = "exec: gt ''kadka''">для мытья</a>.'
+'Резной <a href = "exec: gt ''lokerW''">шкаф</a>.'
+'Уютный <a href = "exec: gt ''divanW''">диван</a>.'
+'<a href = "exec: gt ''mirrW''">Зеркало</a>'
+if brakW>0: '<a href = "exec: gt ''marryWorld''"><<$namefrendM>></a>'
 
-if slot=0:
+if slot = 0: 
 *nl
 'Без одежды нельзя выходить из комнаты.'
 end
 
-if slot>0:
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'farmMY'
+if slot>0: 
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'farmMY'
 	 end
 end
 
-if edaWF>0 and drova>0:
-     act 'Приготовить еду 30мин':
+if edaWF>0 and drova>0: 
+     act 'Приготовить еду 30мин': 
      cla
      *clr
-	 minut=minut+30
-	 edaWF=edaWF-1
-	 drova=drova-1
-	 manna=manna+20
-	 wipo=wipo+20
-	 gs'eda'
+	 minut += 30
+	 edaWF = edaWF-1
+	 drova = drova-1
+	 manna = manna+20
+	 wipo = wipo+20
+	 gs 'eda'
 	 'Вы истопили очаг дровами и поставили еду на огонь, через полчаса все было готово и вы приступили к трапезе.'
-	 gs'eat'
-	 act 'Убрать посуду':gt $CURLOC
+	 gs 'eat'
+	 act 'Убрать посуду': gt $CURLOC
 	 end
 end
 --- farmMYhouse ---------------------------------

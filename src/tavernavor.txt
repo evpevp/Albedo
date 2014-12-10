@@ -7,22 +7,22 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Барная стойка</H4></center>'
-'<center><img src="pic/Evedon\1\tavernavor.jpg" ></center>'
+'<center><img src = "pic/Evedon\1\tavernavor.jpg" ></center>'
 'Это небольшое помещение, оборудованное под таверну.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if hour>=7 and hour<=21:'За стойкой стоит <a href="exec:GT ''lilit''">Лилит</a>.'
-if hour>=22 or hour<7:'За стойкой стоит <a href="exec:GT ''chasmin''">Жасмин</a>.'
-if skyphik=3 and hour>=8 and hour<=22:'За одним из столов сидит <a href="exec:GT ''delvin''">Делвин</a>.'
-if mimiko=4 and hour>=7 and hour<=22: 'За одним из столов сидит <a href="exec:GT ''mimiko''">Мимико</a>.'
+if hour>= 7 and hour<= 21: 'За стойкой стоит <a href = "exec: gt ''lilit''">Лилит</a>.'
+if hour>= 22 or hour<7: 'За стойкой стоит <a href = "exec: gt ''chasmin''">Жасмин</a>.'
+if skyphik = 3 and hour>= 8 and hour<= 22: 'За одним из столов сидит <a href = "exec: gt ''delvin''">Делвин</a>.'
+if mimiko = 4 and hour>= 7 and hour<= 22: 'За одним из столов сидит <a href = "exec: gt ''mimiko''">Мимико</a>.'
 
-act 'Уйти':
-minut=minut+5
-gt'vorgildia'
+act 'Уйти': 
+minut += 5
+ gt 'vorgildia'
 end
 --- tavernavor ---------------------------------
 

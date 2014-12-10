@@ -4,23 +4,23 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>ВАННАЯ КОМНАТА</H4></center>'
-'<center><img src="pic/room/vanr.jpg" ></center>'
+'<center><img src = "pic/room/vanr.jpg" ></center>'
 'В ванной все стандартно. ((Умывальник|umiv)), над которым висит ((зеркало|mirror)), и большая ((ванная|van)).'
-if stanok <= 0:set $stanok = ''
-if stanok > 0:set $stanok = 'бритвенный станок, которого хватит на <<stanok>> раз'
-if milo <= 0:set $milo = ''
-if milo > 0 and stanok <= 0:set $and = ''
-if milo > 0 and stanok > 0:set $and = 'и'
-if milo > 0:set $milo = '<<$and>> мыло, которого хватит на <<milo>> раз'
+if stanok <= 0: $stanok = ''
+if stanok > 0: $stanok = 'бритвенный станок, которого хватит на <<stanok>> раз'
+if milo <= 0: $milo = ''
+if milo > 0 and stanok <= 0: $and = ''
+if milo > 0 and stanok > 0: $and = 'и'
+if milo > 0: $milo = '<<$and>> мыло, которого хватит на <<milo>> раз'
 'На полочке около умывальника лежит <<$stanok>> <<$milo>>.'
 clr
 gs 'stat'
 
-act 'Коридор':gt'koridor'
+act 'Коридор': gt 'koridor'
 dynamic $act_DoHair
 dynamic $act_GetShaved
 dynamic $act_Wash

@@ -1,11 +1,11 @@
 # spREZ
 dynamic $battlemain
 clr
-gs'stat'
+gs 'stat'
 
 
 
 
-act 'Пропустить ход':xgt'fight','1'
+act 'Пропустить ход': xgt 'fight','1'
 --- spREZ ---------------------------------
 

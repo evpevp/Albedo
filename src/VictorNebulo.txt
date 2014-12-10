@@ -3,28 +3,28 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Виктор Небуло</H4></center>'
-'<center><img src="pic/EvedonNarod/VictorNebulo.jpg" ></center>'
+'<center><img src = "pic/EvedonNarod/VictorNebulo.jpg" ></center>'
 'Управляющий шахтой является всего лишь наемным рабочим братьев Сеттонов. Виктор пожилой человек в соломенной шляпе и простом костюме.'
 clr
-gs'stat'
+gs 'stat'
 
 
-act 'Уйти':gt $locFight,$metkaFight
+act 'Уйти': gt $locFight,$metkaFight
 
 
-	 if shahtWork=0:
+	 if shahtWork = 0: 
 	 
-	     act 'Работа в шахте':
+	     act 'Работа в шахте': 
 		 cla
-		 minut=minut+15
-		 gs'stat'
+		 minut += 15
+		 gs 'stat'
 		 'Забой в шахте начинается с 6ти и до 17ти часов. Работа по сделке, сколько добудешь руды, столько и получишь.'
-		 act 'Уйти':gt $locFight,$metkaFight
-		     act 'Согласиться на работу':
+		 act 'Уйти': gt $locFight,$metkaFight
+		     act 'Согласиться на работу': 
 		     cla
-		     shahtWork=1
+		     shahtWork = 1
 		     'И не опаздывай, в 8мь утра шахта закрывается до 17ти часов.'
-		     act 'Уйти':gt $locFight,$metkaFight
+		     act 'Уйти': gt $locFight,$metkaFight
 		     end
 		 end
 	 

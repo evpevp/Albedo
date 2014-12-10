@@ -1,132 +1,132 @@
 # PreEffect
 !Эффекты до удара
 
-gs'PreEffectDy'
+gs 'PreEffectDy'
 
 
 
 !отталкивание
-if ShinraTensei>0 and ShinraTenseiV>0:
+if ShinraTensei>0 and ShinraTenseiV>0: 
 dynamic $obnulDam
 dynamic $obnulDamV
-elseif ShinraTensei>0:
+elseif ShinraTensei>0: 
 dynamic $obnulDamV
-elseif ShinraTenseiV>0:
+elseif ShinraTenseiV>0: 
 dynamic $obnulDam
 end
 
 
-gs'PreEffectDy2'
+gs 'PreEffectDy2'
 
 !поглощение магии
-if Gakido>0 and GakidoV>0:
+if Gakido>0 and GakidoV>0: 
 dynamic $obnulDamG
 dynamic $obnulDamGV
-elseif Gakido>0:
+elseif Gakido>0: 
 dynamic $obnulDamGV
-elseif GakidoV>0:
+elseif GakidoV>0: 
 dynamic $obnulDamG
 end
 
-if GakidoSelf>0:
-     if manna>(intel*10+intel*magika)*2:
-     '<font color=red>Вы взяли маны гораздо больше, чем можете удержать.</font>'
+if GakidoSelf>0: 
+     if manna>(intel*10+intel*magika)*2: 
+     '<font color = red>Вы взяли маны гораздо больше, чем можете удержать.</font>'
      end
-GakidoSelf=0
+GakidoSelf = 0
 end
-if GakidoSelfV>0:
-     if mannav>(intelv*10+intelv*magikav)*2:
-     '<font color=green><<$name>> взял маны больше, чем может удержать</font>'
+if GakidoSelfV>0: 
+     if mannav>(intelv*10+intelv*magikav)*2: 
+     '<font color = green><<$name>> взял маны больше, чем может удержать</font>'
      end
-GakidoSelfV=0
+GakidoSelfV = 0
 end
 
-gs'PreEffectDy3'
+gs 'PreEffectDy3'
 
 !отброс магии
-if MirrorMagik>0 and MirrorMagikV>0:
+if MirrorMagik>0 and MirrorMagikV>0: 
 dynamic $obnulDamM
 dynamic $obnulDamMV
-elseif MirrorMagik>0:
+elseif MirrorMagik>0: 
 dynamic $obnulDamMV
-elseif MirrorMagikV>0:
+elseif MirrorMagikV>0: 
 dynamic $obnulDamM
 end
 
 
-gs'PreEffectDy4'
+gs 'PreEffectDy4'
 
 !остановка магии
-if StopMagik>0 and StopMagikV>0:
+if StopMagik>0 and StopMagikV>0: 
 dynamic $obnulDamS
 dynamic $obnulDamSV
-elseif StopMagik>0:
+elseif StopMagik>0: 
 dynamic $obnulDamSV
-elseif StopMagikV>0:
+elseif StopMagikV>0: 
 dynamic $obnulDamS
 end
 
-if sharingan>0 and sharinganV>0:
-	 if damageH>0:
-	 damageH=0
+if sharingan>0 and sharinganV>0: 
+	 if damageH>0: 
+	 damageH = 0
 	 end
-	 if damageHV>0:
-	 damageHV=0
+	 if damageHV>0: 
+	 damageHV = 0
 	 end
-elseif sharingan>0:
-	 if damageHV>0:
-	 damageH=damageHV
-	 damageHV=0
-	 manna-=50
-	 '<font color=green>Вы перенаправили ментальный удар противника на него</font>'
-	 $tipuronaHV='Перенаправление ментального удара'
-	 gs'defenceHV'
+elseif sharingan>0: 
+	 if damageHV>0: 
+	 damageH = damageHV
+	 damageHV = 0
+	 manna- = 50
+	 '<font color = green>Вы перенаправили ментальный удар противника на него</font>'
+	 $tipuronaHV = 'Перенаправление ментального удара'
+	 gs 'defenceHV'
 	 end
-elseif sharinganV>0:
-	 if damageH>0:
-	 damageHV=damageH
-	 damageH=0
-	 mannav-=50
-	 '<font color=red><<$namev>> перенаправил ваш ментальный удар на вас</font>'
-	 $tipuronaH='Перенаправление ментального удара'
-	 gs'defenceH'
+elseif sharinganV>0: 
+	 if damageH>0: 
+	 damageHV = damageH
+	 damageH = 0
+	 mannav- = 50
+	 '<font color = red><<$namev>> перенаправил ваш ментальный удар на вас</font>'
+	 $tipuronaH = 'Перенаправление ментального удара'
+	 gs 'defenceH'
 	 end
 end
 
 
-if waterDef>0:
-     if damageTV>0:
-     damageTV=damageTV/2
-     '<font color=green>Водяная защита ослабляет температурный удар противника</font>'
+if waterDef>0: 
+     if damageTV>0: 
+     damageTV = damageTV/2
+     '<font color = green>Водяная защита ослабляет температурный удар противника</font>'
      end
 end
 
-if potop>0:
-     if damageTV>0:
-     damageTV=damageTV/10
-     '<font color=green>Потоп ослабляет температурный удар противника в десять раз</font>'
+if potop>0: 
+     if damageTV>0: 
+     damageTV = damageTV/10
+     '<font color = green>Потоп ослабляет температурный удар противника в десять раз</font>'
      end
-     if defenceTV>0:
-     defenceTV=defenceTV/2
-     '<font color=green>Потоп ослабляет температурную защиту противника</font>'
-     end
-end
-
-if waterDefV>0:
-     if damageT>0:
-     damageT=damageT/2
-     '<font color=red>Водяная защита противника, ослабляет ваш температурный удар</font>'
+     if defenceTV>0: 
+     defenceTV = defenceTV/2
+     '<font color = green>Потоп ослабляет температурную защиту противника</font>'
      end
 end
 
-if potopV>0:
-     if damageT>0:
-     damageT=damageT/10
-     '<font color=red>Потоп противника, ослабляет ваш температурный удар в десять раз</font>'
+if waterDefV>0: 
+     if damageT>0: 
+     damageT = damageT/2
+     '<font color = red>Водяная защита противника, ослабляет ваш температурный удар</font>'
      end
-     if defenceT>0:
-     defenceT=defenceT/2
-     '<font color=red>Потоп противника, ослабляет вашу температурную защиту</font>'
+end
+
+if potopV>0: 
+     if damageT>0: 
+     damageT = damageT/10
+     '<font color = red>Потоп противника, ослабляет ваш температурный удар в десять раз</font>'
+     end
+     if defenceT>0: 
+     defenceT = defenceT/2
+     '<font color = red>Потоп противника, ослабляет вашу температурную защиту</font>'
      end
 end
 

@@ -2,28 +2,28 @@
 cla
 *clr
 
-'<center><img src="pic/EvedonTA/hkdefeat.jpg" ></center>'
-if hkdefeat=0:
-DOM=DOM+1
-hkdefeat=1
+'<center><img src = "pic/EvedonTA/hkdefeat.jpg" ></center>'
+if hkdefeat = 0: 
+DOM = DOM+1
+hkdefeat = 1
 'Хэкель лежит на полу таверны и смотрит на вас с ненавистью "Реванш. Завтра в спортзале" - говорит она, харкая кровью.'
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'teladareW'
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'teladareW'
 	 end
 exit
 end
 
-if hkdefeat=1:
-DOM=DOM+1
-hkdefeat=2
+if hkdefeat = 1: 
+DOM = DOM+1
+hkdefeat = 2
 'Хэкель опять повержена. Но на этот раз помимо ненависти, вы замечаете интерес в ее глазах.'
-     act 'Протянуть ей руку и помочь встать':
+     act 'Протянуть ей руку и помочь встать': 
      cla
      *clr
-     '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
-     DOM=DOM+1
-	 minut=minut+5
+     '<center><img src = "pic/EvedonNarod/hekel.jpg"></center>'
+     DOM = DOM+1
+	 minut += 5
 	 ' - Думаю сейчас не самое плохое время, чтобы познакомиться, меня зовут Хэкель.'
 	 ' <<$name>> - ответили вы, и пожали ее руку.'
 	 ' - Мне не знаком твой стиль <<$name>>, где ты обучился ему?'
@@ -31,9 +31,9 @@ hkdefeat=2
 	 ' - Что ж, может тогда ты согласишься обучить меня? Я же в свою очередь могу научить тебя стилю Железной рубашки.'
 	 '"Договорились, но сначала тебе надо залечить раны и отдохнуть" - говорите вы и подзываете Белинду, которая все это время наблюдала за схваткой.'
 	 
-	 	 act 'Уйти':
-		 minut=minut+5
-		 gt'teladareW'
+	 	 act 'Уйти': 
+		 minut += 5
+		 gt 'teladareW'
 		 end
 	 end
 end

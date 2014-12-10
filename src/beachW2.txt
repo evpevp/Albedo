@@ -7,30 +7,30 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Пляж</H4></center>'
-'<center><img src="pic/Evedon/beach.jpg" ></center>'
+'<center><img src = "pic/Evedon/beach.jpg" ></center>'
 'Чистый песок и теплое, хотя и называемое северным, море с мерным рокотом омывает берег.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-if hour>=8 and hour<=21:
-     act 'Искупаться 1 час':
+if hour>= 8 and hour<= 21: 
+     act 'Искупаться 1 час': 
      cla
-	 minut=minut+60
-	 sweat=-3
-	 manna=manna+50
-	 wipo=wipo+50
-	 exp=exp+1
+	 minut += 60
+	 sweat = -3
+	 manna = manna+50
+	 wipo = wipo+50
+	 exp = exp+1
 	 'Вы весело резвились, плавая в море.'
-	 gs'bassW'
-	 act 'Отдохнуть':gt'beachW2'
+	 gs 'bassW'
+	 act 'Отдохнуть': gt 'beachW2'
 	 end
 end
 
 
-act 'Уйти с пляжа':
-minut=minut+5
-gt'beachW'
+act 'Уйти с пляжа': 
+minut += 5
+ gt 'beachW'
 end
 --- beachW2 ---------------------------------
 

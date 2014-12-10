@@ -4,59 +4,59 @@
 
 !damageM
 !damageMV
-     if priziv>0:
-         if PdefenceM>0:
-             if PdefenceM>=damageMv:
-             PdefenceM-=damageMv
-             damageMv=0
-             '<font color=#cd00cd><<$pname>> остановил атаку на МАГИЮ своей защитой</font>'
+     if priziv>0: 
+         if PdefenceM>0: 
+             if PdefenceM>= damageMv: 
+             PdefenceM- = damageMv
+             damageMv = 0
+             '<font color = #cd00cd><<$pname>> остановил атаку на МАГИЮ своей защитой</font>'
              end
-             if PdefenceM<damageMv and damageMv>0:
-             damageMv-=PdefenceM
-             PdefenceM=0
-             PMANNA-=damageMv
-             '<font color=#cd00cd><<$namev>> уничтожил защиту магии вашего помощника и нанес урон его мане <<damageMv>></font>'
-             damageMv=0
+             if PdefenceM<damageMv and damageMv>0: 
+             damageMv- = PdefenceM
+             PdefenceM = 0
+             PMANNA- = damageMv
+             '<font color = #cd00cd><<$namev>> уничтожил защиту магии вашего помощника и нанес урон его мане <<damageMv>></font>'
+             damageMv = 0
              end
          end
-         if PdefenceM<=0 and damageMv>0:
-         PMANNA-=damageHv
-         '<font color=#cd00cd><<$namev>> нанес урон мане помощника <<damageMv>></font>'
-         damageMv=0
+         if PdefenceM<= 0 and damageMv>0: 
+         PMANNA- = damageHv
+         '<font color = #cd00cd><<$namev>> нанес урон мане помощника <<damageMv>></font>'
+         damageMv = 0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<= 0 or Pwipo<= 0 or pmanna<= 0: 
          dynamic $prizivNill
          end
      end
      
-gs'PreEffect'
+gs 'PreEffect'
 
-if zerkalo>0:zerkalo=0&'<B><font color=red>Зеркала разлетаются.</font></B>'
-if fint>0:fint=0&'<B><font color=red>Невозможно применить смещение.</font></B>'
+if zerkalo>0: zerkalo = 0 & '<B><font color = red>Зеркала разлетаются.</font></B>'
+if fint>0: fint = 0 & '<B><font color = red>Невозможно применить смещение.</font></B>'
 
-if conterBat>0:gs'conterBat'
-!if conterBatV>0:gs'conterBatV'
+if conterBat>0: gs 'conterBat'
+!if conterBatV>0: gs 'conterBatV'
 
-if levitation>0:gs'Levitation'
+if levitation>0: gs 'Levitation'
 
-	 if gostbody>0:
-	 damageMV=0
-	 gostbody-=1
-	 '<font color=green>Удар противника прошел через ваше тело, не причинив вам никакого ущерба.</font>'
+	 if gostbody>0: 
+	 damageMV = 0
+	 gostbody- = 1
+	 '<font color = green>Удар противника прошел через ваше тело, не причинив вам никакого ущерба.</font>'
 	 end
 
-if defenceM=0:
-gs'klonDef'
-     if damageMV>0:
+if defenceM = 0: 
+gs 'klonDef'
+     if damageMV>0: 
 	 dynamic $rascheturonaM
-	 '<font color=red><<$nameV>> нанес вам <B><<damageMV>></B> едениц урона магии</font>'
-	     if mannaStumpV>0 and damageMV>0:
-	     mannaStumpV=0
-	     stun=2
-	     manna=manna-(manna*20/100)
-	     '<font color=red>Печать обездвиживает вас и сжигает 20% маны</font>'
+	 '<font color = red><<$nameV>> нанес вам <B><<damageMV>></B> едениц урона магии</font>'
+	     if mannaStumpV>0 and damageMV>0: 
+	     mannaStumpV = 0
+	     stun = 2
+	     manna = manna-(manna*20/100)
+	     '<font color = red>Печать обездвиживает вас и сжигает 20% маны</font>'
 	     end
-	 damageMV=0
+	 damageMV = 0
      end
      
 end

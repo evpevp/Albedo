@@ -4,19 +4,19 @@ $loc = $CURLOC
 cla
 *clr
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Туалет</B></center>'
-'<center><img src="pic/jail/petuhwork.jpg" ></center>'
+'<center><img src = "pic/jail/petuhwork.jpg" ></center>'
 'Обыкновенный засранный сортир.'
 
-act 'Чистить толчки.':
+act 'Чистить толчки.': 
 cla
-minut=minut+240
+minut += 240
 'Вы драили до блеска засранные унитазы.'
-act 'Выйти на построение.':gt 'itk'
+act 'Выйти на построение.': gt 'itk'
 end
 --- petuhwork ---------------------------------
 

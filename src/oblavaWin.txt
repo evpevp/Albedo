@@ -1,10 +1,10 @@
 # oblavaWin
-monster=0
-oblavaOrdenWin+=1
-exp=exp+5000
+monster = 0
+oblavaOrdenWin+= 1
+exp = exp+5000
 'На поле боя валяются трупы и стонущие тяжелораненые. Вы единственный, кто стоит на ногах. Это был тяжелый бой и выстраданная победа, но надо уходить.'
 
 
-act 'Уйти':GOTO $locMag, $metkaMag
+act 'Уйти': GOTO $locMag, $metkaMag
 --- oblavaWin ---------------------------------
 

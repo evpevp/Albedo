@@ -1,43 +1,43 @@
 # spVAMP
 dynamic $battlemain
-gs'stat'
+gs 'stat'
 
 
 
 
 
-     if vampireMorf>0 and vampirePower>0:
-         act 'Вампирский шепот 1ед вампирской силы':
+     if vampireMorf>0 and vampirePower>0: 
+         act 'Вампирский шепот 1ед вампирской силы': 
          cla
          
-         vampirePower-=1
-         '<font color=green>Вы пристально смотрите на противника и шепчете заклинание.</font>'
-         $tipuronaHV='Вампирский шопот'
-         damageH=RAND(vampireMorf*10,vampireMorf*20)
-		 gs'defenceHV'
-         xgt'fight','1'
+         vampirePower- = 1
+         '<font color = green>Вы пристально смотрите на противника и шепчете заклинание.</font>'
+         $tipuronaHV = 'Вампирский шопот'
+         damageH = RAND(vampireMorf*10,vampireMorf*20)
+		 gs 'defenceHV'
+         xgt 'fight','1'
          end
      end
 
 
 
-     if vampireMorf>0 and vampirePower>0 and wipov<=0:
-         act 'Укусить':
+     if vampireMorf>0 and vampirePower>0 and wipov<= 0: 
+         act 'Укусить': 
          cla
-         vampirePower-=1
-         '<font color=green>Вы шепчете "Не сопротивляйся, подойди ко мне."</font>'
-         if defencev>0:defencev=0&'<B><font color=green><<$namev>> снимает физ защиту.</font></B>'
-	     if defenceTv>0:defenceTv=0&'<B><font color=green><<$namev>> снимает температурную защиту.</font></B>'
-	     if defenceWv>0:defenceWv=0&'<B><font color=green><<$namev>> снимаете воздушную защиту.</font></B>'
-	     if defenceHv>0:defenceHv=0&'<B><font color=green><<$namev>> снимает защиту разума.</font></B>'
-	     if fintv>0:fintv=0&'<B><font color=green><<$namev>> убирает финты.</font></B>'
-	     if zerkalov>0:zerkalov=0&'<B><font color=green><<$namev>> убирает зеркала.</font></B>'
-	     bloodeatvamp=healthv
-	     '<B><font color=green>Вы медленно подходите и кусаете противника.</font></B>'
-	     damagV=RAND(vampireMorf*10,vampireMorf*20)
-	     gs'defencev'
-	     if bloodeatvamp>healthv:health+=bloodeatvamp-healthv&'<B><font color=green>Вы восстанавливаете <<bloodeatvamp-healthv>> едениц жизни.</font></B>'
-	     xgt'fight','1'
+         vampirePower- = 1
+         '<font color = green>Вы шепчете "Не сопротивляйся, подойди ко мне."</font>'
+         if defencev>0: defencev = 0 & '<B><font color = green><<$namev>> снимает физ защиту.</font></B>'
+	     if defenceTv>0: defenceTv = 0 & '<B><font color = green><<$namev>> снимает температурную защиту.</font></B>'
+	     if defenceWv>0: defenceWv = 0 & '<B><font color = green><<$namev>> снимаете воздушную защиту.</font></B>'
+	     if defenceHv>0: defenceHv = 0 & '<B><font color = green><<$namev>> снимает защиту разума.</font></B>'
+	     if fintv>0: fintv = 0 & '<B><font color = green><<$namev>> убирает финты.</font></B>'
+	     if zerkalov>0: zerkalov = 0 & '<B><font color = green><<$namev>> убирает зеркала.</font></B>'
+	     bloodeatvamp = healthv
+	     '<B><font color = green>Вы медленно подходите и кусаете противника.</font></B>'
+	     damagV = RAND(vampireMorf*10,vampireMorf*20)
+	     gs 'defencev'
+	     if bloodeatvamp>healthv: health+= bloodeatvamp-healthv & '<B><font color = green>Вы восстанавливаете <<bloodeatvamp-healthv>> едениц жизни.</font></B>'
+	     xgt 'fight','1'
          end
      end
      
@@ -45,7 +45,7 @@ gs'stat'
 
 
 
-act 'Пропустить ход':xgt'fight','1'
+act 'Пропустить ход': xgt 'fight','1'
 
 
 

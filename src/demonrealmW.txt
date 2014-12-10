@@ -6,86 +6,86 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
-sweat=sweat+5
-if astarotDead=0:
+minut += 5
+sweat = sweat+5
+if astarotDead = 0: 
 '<center><H4>Демоническая реальность</H4></center>'
-'<center><img src="pic/Evedon/demonrealm.jpg" ></center>'
-'По раскаленной земле текут ручейки лавы, страшный жар заполняет воздух. Багровое небо не пропускает солнца. Вдалеке слышен ((громоподобный рев|demonW|minut=minut+30)) от которого кровь стынет в жилах.'
+'<center><img src = "pic/Evedon/demonrealm.jpg" ></center>'
+'По раскаленной земле текут ручейки лавы, страшный жар заполняет воздух. Багровое небо не пропускает солнца. Вдалеке слышен ((громоподобный рев|demonW|minut += 30)) от которого кровь стынет в жилах.'
 end
-if astarotDead>=1:
+if astarotDead>= 1: 
 '<center><H4>Демоническая реальность</H4></center>'
-'<center><img src="pic/Evedon/demonrealm1.jpg" ></center>'
+'<center><img src = "pic/Evedon/demonrealm1.jpg" ></center>'
 'После поражения Астарота земля в месте его присутствия хоть и осквернена и раскаленная до предела, но потоки лавы уменьшились и багровые тучи иногда разрывает ветер открывая доступ солнцу.'
 end
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(144,0,32)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(144,0,32)
 LCOLOR = rgb(0,0,0)
 
 
-demrand=RAND(0,100)
-if demrand<20:
+demrand = RAND(0,100)
+if demrand<20: 
 !ничего
 end  
-if demrand>=20 and otkritTA>0:
-demevrand=RAND(0,10)
-     if demevrand>=0 and demevrand<7:
-     sera=sera+1
+if demrand>= 20 and otkritTA>0: 
+demevrand = RAND(0,10)
+     if demevrand>= 0 and demevrand<7: 
+     sera = sera+1
      *nl
      'Вы нашли окаменевший кусок демонической серы.'
      end
-     if demevrand=7:
+     if demevrand = 7: 
      cla
      *clr
-     fcolor=rgb(200,200,200)
-     gs'impW2'
-     !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+     fcolor = rgb(200,200,200)
+     gs 'impW2'
+     !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
      'На вас набросился маленького роста бес c молотом.'
-     act 'Драться':gs'before'
+     act 'Драться': gs 'before'
      exit
      end
-     if demevrand=8:
+     if demevrand = 8: 
      cla
      *clr
-     fcolor=rgb(200,200,200)
-     gs'hellhoundW'
-     !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+     fcolor = rgb(200,200,200)
+     gs 'hellhoundW'
+     !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
      'На вас набросился огромный демонический пес.'
-     act 'Драться':gs'before'
+     act 'Драться': gs 'before'
      exit
      end
-     if demevrand=9:
+     if demevrand = 9: 
      cla
      *clr
-     fcolor=rgb(200,200,200)
-     gs'hellbullW'
-     !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+     fcolor = rgb(200,200,200)
+     gs 'hellbullW'
+     !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
      'На вас набросился огромный демонический бык.'
-     act 'Драться':gs'before'
+     act 'Драться': gs 'before'
      exit
      end
-     if demevrand=10:
+     if demevrand = 10: 
      cla
      *clr
-     fcolor=rgb(200,200,200)
-     gs'minoW'
-     !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+     fcolor = rgb(200,200,200)
+     gs 'minoW'
+     !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
      'Громыхая доспехами вам на встречу вышел здоровенный полу человек, полу бык.'
-     act 'Драться':gs'before'
+     act 'Драться': gs 'before'
      exit
      end
 end
 
-     act 'Бродить по окрестностям(15 мин)':
-     minut=minut+15
-     gt'demonrealmW'
+     act 'Бродить по окрестностям(15 мин)': 
+     minut += 15
+     gt 'demonrealmW'
      end
      
-	 act 'Идти на север(1 час)':
-	 minut=minut+60
-	 gt'telaW'
+	 act 'Идти на север(1 час)': 
+	 minut += 60
+	 gt 'telaW'
 	 end
 
 

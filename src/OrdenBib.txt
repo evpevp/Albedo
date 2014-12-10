@@ -9,41 +9,41 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Орденская библиотека</H4></center>'
-'<center><img src="pic/Evedon/ordenBib.jpg" ></center>'
+'<center><img src = "pic/Evedon/ordenBib.jpg" ></center>'
 'Огромная библиотека, набитая книгами и магическими артефактами.'
 'Изучение книг стоит 3 кредита'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-     if kredit>=3:
-		 act 'Изучать книги 1 час':
+     if kredit>= 3: 
+		 act 'Изучать книги 1 час': 
 		 cla
 		 *clr
-		 kredit=kredit-3
-		 minut=minut+60
-		 exp=exp+RAND(0,lvl/4)
+		 kredit = kredit-3
+		 minut += 60
+		 exp = exp+RAND(0,lvl/4)
 		 'Вы достали книгу и приступили к чтению.'
-		 act 'Отойти от стола':gt $CURLOC
+		 act 'Отойти от стола': gt $CURLOC
 		 end
 	 end
 
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'foOrden'
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'foOrden'
 	 end
 	 
-	 if biblOrday!day:
-		 act 'Помогать библиотекарю 1 час за 20 кредитов':
+	 if biblOrday!day: 
+		 act 'Помогать библиотекарю 1 час за 20 кредитов': 
 		 cla
 		 *clr
-		 minut=minut+60
-		 kredit=kredit+20
-		 biblOrday=day
+		 minut += 60
+		 kredit = kredit+20
+		 biblOrday = day
 		 'Вы расставляли книги по полкам в течение часа за 20 кредитов.'
-		 act 'Передохнуть':gt $CURLOC
+		 act 'Передохнуть': gt $CURLOC
 		 end
 	 end
 --- OrdenBib ---------------------------------

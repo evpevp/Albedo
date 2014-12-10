@@ -8,762 +8,762 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+1
+minut += 1
 mag = 1
 '<center><H4>Скупщик</H4></center>'
-'<center><img src="pic/Evedon/rinok2.jpg" ></center>'
+'<center><img src = "pic/Evedon/rinok2.jpg" ></center>'
 'Так, предлагай, что хочешь продать.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-     if uroz>0:
-     	 act 'Предложить купить урожай':
+     if uroz>0: 
+     	 act 'Предложить купить урожай': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за мешок 50 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if uroz>1:
-					 act 'Продать все':
-					 gem=gem+uroz*50
+				 if uroz>1: 
+					 act 'Продать все': 
+					 gem = gem+uroz*50
 					 msg'Вы продали <<uroz>> мешков урожая.'
-					 uroz=0
+					 uroz = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<uroz>> мешков урожая. Cколько вы желаете продать?")
-						 if tempshop > uroz or tempshop < 0:
+						 if tempshop > uroz or tempshop < 0: 
 						 msg 'У вас нет такого количества.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop*50
-						 uroz=uroz-tempshop
+						 gem = gem+tempshop*50
+						 uroz = uroz-tempshop
 						 msg'Вы продали <<tempshop>> мешков урожая.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if uroz=1:
-				 uroz=uroz-1
-				 gem=gem+50
+				 if uroz = 1: 
+				 uroz = uroz-1
+				 gem = gem+50
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-		 act 'Нет':gt $CURLOC
+		 act 'Нет': gt $CURLOC
 		 end
      end
 
-     if tentSperm>0:
-		 act 'Показать сперму тентакля':
+     if tentSperm>0: 
+		 act 'Показать сперму тентакля': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 150 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if tentSperm>1:
-					 act 'Продать все':
-					 gem=gem+tentSperm*150
+				 if tentSperm>1: 
+					 act 'Продать все': 
+					 gem = gem+tentSperm*150
 					 msg'Вы продали <<tentSperm>> спермы тентакля .'
-					 tentSperm=0
+					 tentSperm = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<tentSperm>> спермы тентакля. Cколько вы желаете продать?")
-						  if tempshop > tentSperm or tempshop < 0 :
+						  if tempshop > tentSperm or tempshop < 0 : 
 						  msg 'У вас нет такого количества спермы тентакля.'  
 						  gt $CURLOC
 						 else
-						  gem=gem+tempshop*150
-						 tentSperm=tentSperm-tempshop
+						  gem = gem+tempshop*150
+						 tentSperm = tentSperm-tempshop
 						 msg'Вы продали <<tempshop>> спермы тентакля.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
 		 
-				 if tentSperm=1:
-				 tentSperm=tentSperm-1
-				 gem=gem+150
+				 if tentSperm = 1: 
+				 tentSperm = tentSperm-1
+				 gem = gem+150
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
              end
-		 act 'Нет':gt $CURLOC
+		 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if demonSoul>0:
-		 act 'Показать гем с душой демонической твари':
+	 if demonSoul>0: 
+		 act 'Показать гем с душой демонической твари': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 220 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if demonSoul>1:
-					 act 'Продать все':
-					 gem=gem+demonSoul*220
+				 if demonSoul>1: 
+					 act 'Продать все': 
+					 gem = gem+demonSoul*220
 					 msg'Вы продали <<demonSoul>> гем с душой демонической твари.'
-					 demonSoul=0
+					 demonSoul = 0
 					 gt $CURLOC
 					 end
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<demonSoul>> гем с душой демонической твари. Cколько вы желаете продать?")
 					   
-						  if tempshop > demonSoul or tempshop < 0 :
+						  if tempshop > demonSoul or tempshop < 0 : 
 						  msg 'У вас нет такого количества гем с душой демонической твари .'  
 						  gt $CURLOC
 						  else
-						  gem=gem+tempshop*220
-						 demonSoul=demonSoul-tempshop
+						  gem = gem+tempshop*220
+						 demonSoul = demonSoul-tempshop
 						 msg'Вы продали <<tempshop>> гем с душой демонической твари.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if demonSoul=1:
+				 if demonSoul = 1: 
 				 
-				 demonSoul=demonSoul-1
-				 gem=gem+220
+				 demonSoul = demonSoul-1
+				 gem = gem+220
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
 			 
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if grib>0:
-		 act 'Показать членогриб':
+	 if grib>0: 
+		 act 'Показать членогриб': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 10 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if grib>1:
+				 if grib>1: 
 				 
-					 act 'Продать все':
-					 gem=gem+grib*10
+					 act 'Продать все': 
+					 gem = gem+grib*10
 					 msg'Вы продали <<grib>> членогрибов.'
-					 grib=0
+					 grib = 0
 					 gt $CURLOC
 					 end
              
-				     act 'Продать нужное количество':
+				     act 'Продать нужное количество': 
 				     tempshop = input ("У вас <<grib>> членогрибов. Сколько вы желаете продать?")
-						 if tempshop > grib or tempshop < 0 :
+						 if tempshop > grib or tempshop < 0 : 
 						 msg 'У вас нет такого количества членогрибов.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *10
-						 grib=grib-tempshop
+						 gem = gem+tempshop *10
+						 grib = grib-tempshop
 						 msg'Вы продали <<tempshop>> членогрибов.'
 						 gt $CURLOC
 					     end
 					 end
 				 end
-				 if grib=1:
-				 grib=grib-1
-				 gem=gem+10
+				 if grib = 1: 
+				 grib = grib-1
+				 gem = gem+10
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if grib2>0:
-		 act 'Показать гриб красноголовик':
+	 if grib2>0: 
+		 act 'Показать гриб красноголовик': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 10 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if grib2>1:
-					 act 'Продать все':
-					 gem=gem+grib2*10
+				 if grib2>1: 
+					 act 'Продать все': 
+					 gem = gem+grib2*10
 					 msg'Вы продали <<grib2>> грибов красноголовиков.'
-					 grib2=0
+					 grib2 = 0
 					 gt $CURLOC
 					 end
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<grib2>> грибов красноголовиков. Сколько вы желаете продать?")
-						  if tempshop > grib2 or tempshop < 0 :
+						  if tempshop > grib2 or tempshop < 0 : 
 						  msg 'У вас нет такого количества грибов красноголовиков.'  
 						  gt $CURLOC
 						  else
-						  gem=gem+tempshop *10
-						 grib2=grib2-tempshop
+						  gem = gem+tempshop *10
+						 grib2 = grib2-tempshop
 						 msg'Вы продали <<tempshop>> грибов красноголовиков.'
 						 gt $CURLOC
 						 end
 					 end
 				 end			 
-				 if grib2=1:
-				 grib2=grib2-1
-				 gem=gem+10
+				 if grib2 = 1: 
+				 grib2 = grib2-1
+				 gem = gem+10
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if grib3>0:
-		 act 'Показать гриб дристогонку':
+	 if grib3>0: 
+		 act 'Показать гриб дристогонку': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 10 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if grib3>1:
+				 if grib3>1: 
 				 
-					 act 'Продать все':
-					 gem=gem+grib3*10
+					 act 'Продать все': 
+					 gem = gem+grib3*10
 					 msg'Вы продали <<grib3>> грибов дристогонок.'
-					 grib3=0
+					 grib3 = 0
 					 gt $CURLOC
 					 end
 				 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<grib3>> грибов дристогонок. Сколько вы желаете продать?")
-						 if tempshop > grib3 or tempshop < 0 :
+						 if tempshop > grib3 or tempshop < 0 : 
 						 msg 'У вас нет такого количества грибов дристогонок.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *10
-						 grib3=grib3-tempshop
+						 gem = gem+tempshop *10
+						 grib3 = grib3-tempshop
 						 msg'Вы продали <<tempshop>> грибов дристогонок.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if grib3=1:
-				 grib3=grib3-1
-				 gem=gem+10
+				 if grib3 = 1: 
+				 grib3 = grib3-1
+				 gem = gem+10
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if grib4>0:
-		 act 'Показать гриб коротун':
+	 if grib4>0: 
+		 act 'Показать гриб коротун': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 10 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if grib4>1:
-					 act 'Продать все':
-					 gem=gem+grib4*10
+				 if grib4>1: 
+					 act 'Продать все': 
+					 gem = gem+grib4*10
 					 msg'Вы продали <<grib4>> грибов коротунов.'
-					 grib4=0
+					 grib4 = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<grib4>> грибов коротунов. Сколько вы желаете продать?")
-						 if tempshop > grib4 or tempshop < 0 :
+						 if tempshop > grib4 or tempshop < 0 : 
 						 msg 'У вас нет такого количества грибов коротунов.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *10
-						 grib4=grib4-tempshop
+						 gem = gem+tempshop *10
+						 grib4 = grib4-tempshop
 						 msg'Вы продали <<tempshop>> грибов коротунов.'
 						 gt $CURLOC
 						 end
 					 end
 				 end			 
-				 if grib4=1:
-				 grib4=grib4-1
-				 gem=gem+10
+				 if grib4 = 1: 
+				 grib4 = grib4-1
+				 gem = gem+10
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if grib5>0:
-		 act 'Показать цветогриб':
+	 if grib5>0: 
+		 act 'Показать цветогриб': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 10 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if grib5>1:
-					 act 'Продать все':
-					 gem=gem+grib5*10
+				 if grib5>1: 
+					 act 'Продать все': 
+					 gem = gem+grib5*10
 					 msg'Вы продали <<grib5>> цветогрибов.'
-					 grib5=0
+					 grib5 = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<grib5>> цветогрибов. Сколько вы желаете продать?")
-						 if tempshop > grib5 or tempshop < 0 :
+						 if tempshop > grib5 or tempshop < 0 : 
 						 msg 'У вас нет такого количества цветогрибов.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *10
-						 grib5=grib5-tempshop
+						 gem = gem+tempshop *10
+						 grib5 = grib5-tempshop
 						 msg'Вы продали <<tempshop>> цветогрибов.'
 						 gt $CURLOC
 						 end
 					 end
 				 end			 
-				 if grib5=1:
-				 grib5=grib5-1
-				 gem=gem+10
+				 if grib5 = 1: 
+				 grib5 = grib5-1
+				 gem = gem+10
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if berry>0:
-		 act 'Показать эльфийские ягоды':
+	 if berry>0: 
+		 act 'Показать эльфийские ягоды': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 150 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if berry>1:
-					 act 'Продать все':
-					 gem=gem+berry*150
+				 if berry>1: 
+					 act 'Продать все': 
+					 gem = gem+berry*150
 					 msg'Вы продали <<berry>> эльфийских ягод.'
-					 berry=0
+					 berry = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<berry>> эльфийских ягод. Сколько вы желаете продать?")
-						  if tempshop > berry or tempshop < 0 :
+						  if tempshop > berry or tempshop < 0 : 
 						  msg 'У вас нет такого количества эльфийских ягод.'  
 						  gt $CURLOC
 						  else
-						  gem=gem+tempshop *150
-						 berry=berry-tempshop
+						  gem = gem+tempshop *150
+						 berry = berry-tempshop
 						 msg'Вы продали <<tempshop>> эльфийских ягод.'
 						 gt $CURLOC
 					     end
 					 end
 				 end
-				 if berry=1:
-				 berry=berry-1
-				 gem=gem+150
+				 if berry = 1: 
+				 berry = berry-1
+				 gem = gem+150
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if sera>0:
-		 act 'Показать серу':
+	 if sera>0: 
+		 act 'Показать серу': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 150 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if sera>1:
-					 act 'Продать все':
-					 gem=gem+sera*150
+				 if sera>1: 
+					 act 'Продать все': 
+					 gem = gem+sera*150
 					 msg'Вы продали <<sera>> серы.'
-					 sera=0
+					 sera = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<sera>> серы. Сколько вы желаете продать?")
-						 if tempshop > sera or tempshop < 0 :
+						 if tempshop > sera or tempshop < 0 : 
 						 msg 'У вас нет такого количества серы.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *150
-						 sera=sera-tempshop
+						 gem = gem+tempshop *150
+						 sera = sera-tempshop
 						 msg'Вы продали <<tempshop>> серы.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if sera=1:
-				 sera=sera-1
-				 gem=gem+150
+				 if sera = 1: 
+				 sera = sera-1
+				 gem = gem+150
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if sucmilk>0:
-	 	 act 'Показать молоко суккуба':
+	 if sucmilk>0: 
+	 	 act 'Показать молоко суккуба': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 100 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if sucmilk>1:
-					 act 'Продать все':
-					 gem=gem+sucmilk*100 
+				 if sucmilk>1: 
+					 act 'Продать все': 
+					 gem = gem+sucmilk*100 
 					 msg'Вы продали <<sucmilk>> молока суккуба.'
-					 sucmilk=0
+					 sucmilk = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<sucmilk>> молоко суккуба. Сколько вы желаете продать?")
-						 if tempshop > sucmilk or tempshop < 0 :
+						 if tempshop > sucmilk or tempshop < 0 : 
 						 msg 'У вас нет такого количества молока суккуба.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *100
-						 sucmilk=sucmilk-tempshop
+						 gem = gem+tempshop *100
+						 sucmilk = sucmilk-tempshop
 						 msg'Вы продали <<tempshop>> молока суккуба.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if sucmilk=1:
-				 sucmilk=sucmilk-1
-				 gem=gem+100
+				 if sucmilk = 1: 
+				 sucmilk = sucmilk-1
+				 gem = gem+100
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if laktaid>0:
-	 	 act 'Показать лактаид':
+	 if laktaid>0: 
+	 	 act 'Показать лактаид': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 100 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if laktaid>1:
-					 act 'Продать все':
-					 gem=gem+laktaid*100
+				 if laktaid>1: 
+					 act 'Продать все': 
+					 gem = gem+laktaid*100
 					 msg'Вы продали <<laktaid>> лактаида.'
-					 laktaid=0
+					 laktaid = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<laktaid>> лактаида. Сколько вы желаете продать?")
-						 if tempshop > laktaid or tempshop < 0 :
+						 if tempshop > laktaid or tempshop < 0 : 
 						 msg 'У вас нет такого количества лактаида.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *100
-						 laktaid=laktaid-tempshop
+						 gem = gem+tempshop *100
+						 laktaid = laktaid-tempshop
 						 msg'Вы продали <<tempshop>> лактаида.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if laktaid=1:
-				 laktaid=laktaid-1
-				 gem=gem+100
+				 if laktaid = 1: 
+				 laktaid = laktaid-1
+				 gem = gem+100
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if improot>0:
-	 	 act 'Показать бесовский корень':
+	 if improot>0: 
+	 	 act 'Показать бесовский корень': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 80 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if improot>1:
-					 act 'Продать все':
-					 gem=gem+improot*80
+				 if improot>1: 
+					 act 'Продать все': 
+					 gem = gem+improot*80
 					 msg'Вы продали <<improot>> бесовского корня.'
-					 improot=0
+					 improot = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<improot>> бесовского корня. Сколько вы желаете продать?")
-						 if tempshop > improot or tempshop < 0 :
+						 if tempshop > improot or tempshop < 0 : 
 						 msg 'У вас нет такого количества бесовского корня.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *80
-						 improot=improot-tempshop
+						 gem = gem+tempshop *80
+						 improot = improot-tempshop
 						 msg'Вы продали <<tempshop>> бесовского корня.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if improot=1:
-				 improot=improot-1
-				 gem=gem+80
+				 if improot = 1: 
+				 improot = improot-1
+				 gem = gem+80
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if wooldemon>0:
-	 	 act 'Показать демоническую шерсть':
+	 if wooldemon>0: 
+	 	 act 'Показать демоническую шерсть': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 150 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if wooldemon>1:
-					 act 'Продать все':
-					 gem=gem+wooldemon*150
+				 if wooldemon>1: 
+					 act 'Продать все': 
+					 gem = gem+wooldemon*150
 					 msg'Вы продали <<wooldemon>> демонической шерсти.'
-					 wooldemon=0
+					 wooldemon = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					 tempshop = input ("У вас <<wooldemon>> демонической шерсти. Сколько вы желаете продать?")
-						 if tempshop > wooldemon or tempshop < 0 :
+						 if tempshop > wooldemon or tempshop < 0 : 
 						 msg 'У вас нет такого количества демонической шерсти.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *150
-						 wooldemon=wooldemon-tempshop
+						 gem = gem+tempshop *150
+						 wooldemon = wooldemon-tempshop
 						 msg'Вы продали <<tempshop>> демонической шерсти.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if wooldemon=1:
-				 wooldemon=wooldemon-1
-				 gem=gem+150
+				 if wooldemon = 1: 
+				 wooldemon = wooldemon-1
+				 gem = gem+150
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if klikdemon>0:
-	 	 act 'Показать клык демона':
+	 if klikdemon>0: 
+	 	 act 'Показать клык демона': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 120 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if klikdemon>1:
-					 act 'Продать все':
-					 gem=gem+klikdemon*120
+				 if klikdemon>1: 
+					 act 'Продать все': 
+					 gem = gem+klikdemon*120
 					 msg'Вы продали <<klikdemon>> клыков демона.'
-					 klikdemon=0
+					 klikdemon = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					 tempshop = input ("У вас <<klikdemon>> клыков демона. Сколько вы желаете продать?")
-						 if tempshop > klikdemon or tempshop < 0 :
+						 if tempshop > klikdemon or tempshop < 0 : 
 						 msg 'У вас нет такого количества клыков демона.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *120
-						 klikdemon=klikdemon-tempshop
+						 gem = gem+tempshop *120
+						 klikdemon = klikdemon-tempshop
 						 msg'Вы продали <<tempshop>> клыков демона.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if klikdemon=1:
-				 klikdemon=klikdemon-1
-				 gem=gem+120
+				 if klikdemon = 1: 
+				 klikdemon = klikdemon-1
+				 gem = gem+120
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if bloodemon>0:
-	 	 act 'Показать кровь демона':
+	 if bloodemon>0: 
+	 	 act 'Показать кровь демона': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 120 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if bloodemon>1:
-					 act 'Продать все':
-					 gem=gem+bloodemon*120
+				 if bloodemon>1: 
+					 act 'Продать все': 
+					 gem = gem+bloodemon*120
 					 msg'Вы продали <<bloodemon>> крови демона.'
-					 bloodemon=0
+					 bloodemon = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<bloodemon>> крови демона. Сколько вы желаете продать?")
-						 if tempshop > bloodemon or tempshop < 0 :
+						 if tempshop > bloodemon or tempshop < 0 : 
 						 msg 'У вас нет такого количества крови демона.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *120
-						 bloodemon=bloodemon-tempshop
+						 gem = gem+tempshop *120
+						 bloodemon = bloodemon-tempshop
 						 msg'Вы продали <<tempshop>> крови демона.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if bloodemon=1:
-				 bloodemon=bloodemon-1
-				 gem=gem+120
+				 if bloodemon = 1: 
+				 bloodemon = bloodemon-1
+				 gem = gem+120
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
 			 
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if horndemon>0:
-	 	 act 'Показать рог демона':
+	 if horndemon>0: 
+	 	 act 'Показать рог демона': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 200 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if horndemon>1:
-					 act 'Продать все':
-					 gem=gem+horndemon*200
+				 if horndemon>1: 
+					 act 'Продать все': 
+					 gem = gem+horndemon*200
 					 msg'Вы продали <<horndemon>> рогов демона.'
-					 horndemon=0
+					 horndemon = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<horndemon>> рогов демона. Сколько вы желаете продать?")
-						 if tempshop > horndemon or tempshop < 0 :
+						 if tempshop > horndemon or tempshop < 0 : 
 						 msg 'У вас нет такого количества рогов демона.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *200
-						 horndemon=horndemon-tempshop
+						 gem = gem+tempshop *200
+						 horndemon = horndemon-tempshop
 						 msg'Вы продали <<tempshop>> рогов демона.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
 				 
-				 if horndemon=1:
-				 horndemon=horndemon-1
-				 gem=gem+200
+				 if horndemon = 1: 
+				 horndemon = horndemon-1
+				 gem = gem+200
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if letherdemon>0:
-	 	 act 'Показать кожу демона':
+	 if letherdemon>0: 
+	 	 act 'Показать кожу демона': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 200 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if letherdemon>1:
-					 act 'Продать все':
-					 gem=gem+letherdemon*200
+				 if letherdemon>1: 
+					 act 'Продать все': 
+					 gem = gem+letherdemon*200
 					 msg'Вы продали <<letherdemon>> кожи демона.'
-					 letherdemon=0
+					 letherdemon = 0
 					 gt $CURLOC
 					 end
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<letherdemon>> кожи демона. Сколько вы желаете продать?")
-						 if tempshop > letherdemon or tempshop < 0 :
+						 if tempshop > letherdemon or tempshop < 0 : 
 						 msg 'У вас нет такого количества кожи демона.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *200
-						 letherdemon=letherdemon-tempshop
+						 gem = gem+tempshop *200
+						 letherdemon = letherdemon-tempshop
 						 msg'Вы продали <<tempshop>> кожи демона.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if letherdemon=1:
-				 letherdemon=letherdemon-1
-				 gem=gem+200
+				 if letherdemon = 1: 
+				 letherdemon = letherdemon-1
+				 gem = gem+200
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 	 
-	 if silk>0:
-	 	 act 'Показать паучий шелк':
+	 if silk>0: 
+	 	 act 'Показать паучий шелк': 
 		 cla
-		 minut=minut+1
+		 minut += 1
 		 'Хмм, я дам за это 600 гемов и ни гемом больше'
-			 act 'Да':
+			 act 'Да': 
 			 cla
-				 if silk>1:
-					 act 'Продать все':
-					 gem=gem+silk*600
+				 if silk>1: 
+					 act 'Продать все': 
+					 gem = gem+silk*600
 					 msg'Вы продали <<silk>> паучьего шелка.'
-					 silk=0
+					 silk = 0
 					 gt $CURLOC
 					 end
 					 
-					 act 'Продать нужное количество':
+					 act 'Продать нужное количество': 
 					  tempshop = input ("У вас <<silk>> паучьего шелка. Сколько вы желаете продать?")
-						 if tempshop > silk or tempshop < 0 :
+						 if tempshop > silk or tempshop < 0 : 
 						 msg 'У вас нет такого количества паучьего шелка.'  
 						 gt $CURLOC
 						 else
-						 gem=gem+tempshop *600
-						 silk=silk-tempshop
+						 gem = gem+tempshop *600
+						 silk = silk-tempshop
 						 msg'Вы продали <<tempshop>> паучьего шелка.'
 						 gt $CURLOC
 						 end
 					 end
 				 end
-				 if silk=1:
-				 silk=silk-1
-				 gem=gem+600
+				 if silk = 1: 
+				 silk = silk-1
+				 gem = gem+600
 				 'Вы продали скупщику свой товар.'
-				 act 'Спрятать деньги':gt $CURLOC
+				 act 'Спрятать деньги': gt $CURLOC
 				 end
 			 end
-			 act 'Нет':gt $CURLOC
+			 act 'Нет': gt $CURLOC
 		 end
 	 end
 
-act 'Отойти':minut=minut+5&gt'rinokW'
+act 'Отойти': minut += 5 & gt 'rinokW'
 
 --- skupkaW ---------------------------------
 

@@ -5,34 +5,34 @@ $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
 showinput 0
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>ГОСТИННАЯ</H4></center>'
-if tv = 0:'<center><img src="pic/room/sitr.jpg" ></center>'
-if tv > 0:'<center><img src="pic/room/sitr1.jpg" ></center>'
+if tv = 0: '<center><img src = "pic/room/sitr.jpg" ></center>'
+if tv > 0: '<center><img src = "pic/room/sitr1.jpg" ></center>'
 clr
-gs'stat'
-if safemoney > 0:'В ((стенке|stenka)) лежит ((коробка|safe)) в которой вы храните <<safemoney>> рублей.'
-if safemoney = 0:'В ((стенке|stenka)) лежит ((коробка|safe)) в которой вы обыкновенно храните деньги, но сейчас она пуста.'
-if TV > 0:
+gs 'stat'
+if safemoney > 0: 'В ((стенке|stenka)) лежит ((коробка|safe)) в которой вы храните <<safemoney>> рублей.'
+if safemoney = 0: 'В ((стенке|stenka)) лежит ((коробка|safe)) в которой вы обыкновенно храните деньги, но сейчас она пуста.'
+if TV > 0: 
 'Около стены стоит ((телевизор|tv)).'
 end
-if sorevArmWin>0:'На полке лежит <<sorevArmWin>> грамот о победе в соревнованиях по армрестлингу'
-if tobiQW = 1999 and TV > 0:
-	act 'Посмотреть новости':
-		If $selact='Посмотреть новости':
+if sorevArmWin>0: 'На полке лежит <<sorevArmWin>> грамот о победе в соревнованиях по армрестлингу'
+if tobiQW = 1999 and TV > 0: 
+	act 'Посмотреть новости': 
+		If $selact = 'Посмотреть новости': 
 			delact $selact
 			clr
 			wait 500
-			'<center><img src="pic/pic/car2.jpg" ></center>'
+			'<center><img src = "pic/pic/car2.jpg" ></center>'
 			'По телеку рассказывали о происшествии на объекте. 
 После рассказа о гибели Михаила ведущая перешла к другим новостям. Внезапно то, что она рассказывала, вас заинтересовало. Она говорила о конференции лингвистом проходящей в зале отеля казино. Вы вспомнили про свитки из пещеры и решили туда наведаться.'
-		act 'Гостинная':gt'sitroom'
+		act 'Гостинная': gt 'sitroom'
 		end
 	end	
 tobiQW = 2000
 end
-act 'Коридор':gt'koridor'
+act 'Коридор': gt 'koridor'
 --- sitroom ---------------------------------
 

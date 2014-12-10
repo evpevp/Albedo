@@ -5,125 +5,125 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Шахты Мондюваля</H4></center>'
-'<center><img src="pic/Evedon/mine.jpg" ></center>'
-'Шахты в горах близ славного города Мондюваля являются основным местом добычи руды. Множество разных зданий стоят около шахт, рудные склады, амбары с фуражом для осликов, навесы для осликов, контора, рабский барак, в отдельностоящем здании находится <a href="exec:minut+=5&GT ''monShahtToilet''">туалет для шахтеров</a>.'
+'<center><img src = "pic/Evedon/mine.jpg" ></center>'
+'Шахты в горах близ славного города Мондюваля являются основным местом добычи руды. Множество разных зданий стоят около шахт, рудные склады, амбары с фуражом для осликов, навесы для осликов, контора, рабский барак, в отдельностоящем здании находится <a href = "exec: minut+= 5 & gt ''monShahtToilet''">туалет для шахтеров</a>.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-!if desertMark>0:
-	 act 'Выйти на северную дорогу(1 час)':
+!if desertMark>0: 
+	 act 'Выйти на северную дорогу(1 час)': 
 	 cla
-	 minut=minut+60
-	 roadMonMark=44
-     gt'MonNordRoad' 
+	 minut += 60
+	 roadMonMark = 44
+     gt 'MonNordRoad' 
 	 end
-if hour>=5 and hour<=18:
-'Возле шахты как муравьи крутятся занятые шахтеры. Среди всех рабочих выделяется <a href="exec:minut+=5&GT ''VictorNebulo''">управляющий</a> шахтой.'
+if hour>= 5 and hour<= 18: 
+'Возле шахты как муравьи крутятся занятые шахтеры. Среди всех рабочих выделяется <a href = "exec: minut+= 5 & gt ''VictorNebulo''">управляющий</a> шахтой.'
 end
 
-if shahtWork>0:
+if shahtWork>0: 
 ''
 'Вы отработали в шахтах <<shahtTimes>> дней.'
 ''
 end
-	 if shahtWork>0 and hour>=6 and hour<8:
+	 if shahtWork>0 and hour>= 6 and hour<8: 
 	 
-	     act 'Работать в шахте':
+	     act 'Работать в шахте': 
 		 cla
-		 shahtTimes+=1
-		 if hour=6:
-		 minut=0
-		 hour=7
+		 shahtTimes+= 1
+		 if hour = 6: 
+		 minut = 0
+		 hour = 7
 		 jump'shahtworkmark'
 		 end
-		 if hour=7:
-		 minut=0
-		 hour=8
+		 if hour = 7: 
+		 minut = 0
+		 hour = 8
 		 jump'shahtworkmark'
 		 end
-		 :shahtworkmark
-		 minut+=(17-hour)*60
-		 gs'stat'
-		 if shahtSkill<100:shahtSkill+=1
-		 luckshaht=RAND(0,100)
+		 : shahtworkmark
+		 minut+= (17-hour)*60
+		 gs 'stat'
+		 if shahtSkill<100: shahtSkill+= 1
+		 luckshaht = RAND(0,100)
 		 'В шахте темно, сыро, холодно, душно и очень пыльно.'
-		     if luckshaht>=90:
+		     if luckshaht>= 90: 
 		     'Вам повезло и вы наткнулись на очень богатую жилу в которой было много руды.'
-		     payrand=RAND(shahtSkill*3,shahtSkill*5)
-				 if payrand<=0:
-				 payshaht=0
+		     payrand = RAND(shahtSkill*3,shahtSkill*5)
+				 if payrand<= 0: 
+				 payshaht = 0
 				 'Вы совсем ничего не заработали в шахте.'
 				 else
-				 payshaht=payrand
+				 payshaht = payrand
 				 'Вы заработали <<payshaht>> гем'
 				 end
 		     end
-		     if luckshaht>=10 and luckshaht<90:
+		     if luckshaht>= 10 and luckshaht<90: 
 		     'Жила была вполне нормальной и вы кое что сумели добыть.'
-		     payrand=RAND(shahtSkill,shahtSkill*2)
-				 if payrand<=0:
-				 payshaht=0
+		     payrand = RAND(shahtSkill,shahtSkill*2)
+				 if payrand<= 0: 
+				 payshaht = 0
 				 'Вы совсем ничего не заработали в шахте.'
 				 else
-				 payshaht=payrand
+				 payshaht = payrand
 				 'Вы заработали <<payshaht>> гем'
 				 end
 		     end
-		     if luckshaht<10:
+		     if luckshaht<10: 
 		     'Вам не повезло, жила которую вы разрабатывали оказалась пустой и вы практически ничего не смогли добыть.'
-		     payrand=RAND(0,shahtSkill/10)
-				 if payrand<=0:
-				 payshaht=0
+		     payrand = RAND(0,shahtSkill/10)
+				 if payrand<= 0: 
+				 payshaht = 0
 				 'Вы совсем ничего не заработали в шахте.'
 				 else
-				 payshaht=payrand
+				 payshaht = payrand
 				 'Вы заработали <<payshaht>> гем'
 				 end
 		     end
-		 gem+=payshaht
-		 sweat+=10
-		 manna=0
-		 shahtRost+=1
-		 exp=exp+RAND(shahtSkill/2,shahtSkill*2)
-		 vitalrand=RAND(0,100)
-		     if vitalrand>=95:vital+=1
-		 strenrand=RAND(0,100)
-		     if strenrand>=95:stren+=1
-		 shahtage+=1
-		 if shahtage>=100 and filosofkam=0:vidage+=1&shahtage=0
-		 if shahtage>=100 and filosofkam=1:shahtage=0
-		     if pol=0:
-		     if shahtRost>=10 and StefanQW>=1 and rost<178:shahtRost=0&rost+=1&stren+=1&vital+=1&penis+=1
-		     if tit>0:tit-=RAND(1,5)
-			 chanrand=RAND(0,5)
-				 if chanrand = 0:
-				 leg=leg-RAND(1,2)
+		 gem+= payshaht
+		 sweat+= 10
+		 manna = 0
+		 shahtRost+= 1
+		 exp = exp+RAND(shahtSkill/2,shahtSkill*2)
+		 vitalrand = RAND(0,100)
+		     if vitalrand>= 95: vital+= 1
+		 strenrand = RAND(0,100)
+		     if strenrand>= 95: stren+= 1
+		 shahtage+= 1
+		 if shahtage>= 100 and filosofkam = 0: vidage+= 1 & shahtage = 0
+		 if shahtage>= 100 and filosofkam = 1: shahtage = 0
+		     if pol = 0: 
+		     if shahtRost>= 10 and StefanQW>= 1 and rost<178: shahtRost = 0 & rost+= 1 & stren+= 1 & vital+= 1 & penis+= 1
+		     if tit>0: tit- = RAND(1,5)
+			 chanrand = RAND(0,5)
+				 if chanrand = 0: 
+				 leg = leg-RAND(1,2)
 				 end
-				 if chanrand = 1:
-				 thight=thight-RAND(1,2)
+				 if chanrand = 1: 
+				 thight = thight-RAND(1,2)
 				 end
-				 if chanrand = 2:
-				 ass=ass-RAND(1,2)
+				 if chanrand = 2: 
+				 ass = ass-RAND(1,2)
 				 end
-				 if chanrand = 3:
-				 brist=brist-RAND(1,2)
+				 if chanrand = 3: 
+				 brist = brist-RAND(1,2)
 				 end
-				 if chanrand = 4:
-				 hand=hand-RAND(1,2)
+				 if chanrand = 4: 
+				 hand = hand-RAND(1,2)
 				 end
-				 if chanrand = 5:
-				 face=face-RAND(1,2)
+				 if chanrand = 5: 
+				 face = face-RAND(1,2)
 				 end
 		     end
-		     if intel>10:
-		     intel-=1
-		     stren+=1
+		     if intel>10: 
+		     intel- = 1
+		     stren+= 1
 		     end
-		 gs'stat'
-		 gs'time'
+		 gs 'stat'
+		 gs 'time'
 		 'После выдачи зарплаты вы собрались на поверхность.'
-		 act 'Уйти':gt $curloc
+		 act 'Уйти': gt $curloc
 		 end
 	 
 	 end

@@ -1,149 +1,149 @@
 # spELFEN
 dynamic $battlemain
 clr
-gs'stat'
+gs 'stat'
 
 
-spElfDefManna=1000-spElfDefExp
-if spElfDefManna<100:spElfDefManna=100
+spElfDefManna = 1000-spElfDefExp
+if spElfDefManna<100: spElfDefManna = 100
 
-     if manna>=spElfDefManna and wooddef<=0 and spellElf>=100:
-         act 'Древесная защита (<<spElfDefManna>> маны)':
+     if manna>= spElfDefManna and wooddef<= 0 and spellElf>= 100: 
+         act 'Древесная защита (<<spElfDefManna>> маны)': 
          cla
-         spElfDefExp+=1
-         manna-=spElfDefManna
-         defence=defence+10000+spElfDefExp*5
-		 defenceT=defenceT+10000+spElfDefExp*5
-		 defenceW=defenceW+10000+spElfDefExp*5
-		 wooddef=10
-         '<font color=green>Вы начали колдовать и из земли выросло дерево защищающее вас.</font>'
-         xgt'fight','1'
+         spElfDefExp+= 1
+         manna- = spElfDefManna
+         defence = defence+10000+spElfDefExp*5
+		 defenceT = defenceT+10000+spElfDefExp*5
+		 defenceW = defenceW+10000+spElfDefExp*5
+		 wooddef = 10
+         '<font color = green>Вы начали колдовать и из земли выросло дерево защищающее вас.</font>'
+         xgt 'fight','1'
          end
      end
      
-     if wooddef>0 and spellElf>=100:
-         act 'Убрать древесную защиту':
+     if wooddef>0 and spellElf>= 100: 
+         act 'Убрать древесную защиту': 
          cla
-         defence=0
-		 defenceT=0
-		 defenceW=0
-		 wooddef=0
-         '<font color=green>Вы прекратили магию и убрали древесную защиту.</font>'
-         xgt'fight','1'
+         defence = 0
+		 defenceT = 0
+		 defenceW = 0
+		 wooddef = 0
+         '<font color = green>Вы прекратили магию и убрали древесную защиту.</font>'
+         xgt 'fight','1'
          end
      end
      
-     if wooddef>0 and manna>=300 and spellElf2>=100:
-         act 'Древесная атака (300 маны)':
+     if wooddef>0 and manna>= 300 and spellElf2>= 100: 
+         act 'Древесная атака (300 маны)': 
          cla
-         spElfAtkExp+=1
-         manna-=300
-         '<font color=green>Вы начали колдовать и из вашей руки стремительно вырос сук.</font>'
-         damage=RAND(1000+spElfAtkExp*5,2000+spElfAtkExp*10)
-         gs'defenceV'
-         xgt'fight','1'
+         spElfAtkExp+= 1
+         manna- = 300
+         '<font color = green>Вы начали колдовать и из вашей руки стремительно вырос сук.</font>'
+         damage = RAND(1000+spElfAtkExp*5,2000+spElfAtkExp*10)
+         gs 'defenceV'
+         xgt 'fight','1'
          end
          
-         act 'Колючее облако (300 маны)':
+         act 'Колючее облако (300 маны)': 
          cla
-         spElfAtkExp+=1
-         manna-=300
-         '<font color=green>Вы начали колдовать и из вашей руки вылетели колючки.</font>'
-         damage=RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
-         gs'defenceV'
-         damage=RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
-         gs'defenceV'
-         damage=RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
-         gs'defenceV'
-         damage=RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
-         gs'defenceV'
-         damage=RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
-         gs'defenceV'
-         xgt'fight','1'
+         spElfAtkExp+= 1
+         manna- = 300
+         '<font color = green>Вы начали колдовать и из вашей руки вылетели колючки.</font>'
+         damage = RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
+         gs 'defenceV'
+         damage = RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
+         gs 'defenceV'
+         damage = RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
+         gs 'defenceV'
+         damage = RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
+         gs 'defenceV'
+         damage = RAND(100+spElfAtkExp*5,200+spElfAtkExp*10)
+         gs 'defenceV'
+         xgt 'fight','1'
          end
      
      end
      
-     if elvenmeditation<=0 and wipo>=100 and spellElf3>=100:
-         act 'Призыв сил природы (100 воли)':
+     if elvenmeditation<= 0 and wipo>= 100 and spellElf3>= 100: 
+         act 'Призыв сил природы (100 воли)': 
          cla
-         elvenmeditation=1
-         wipo-=100
-         cooldown+=5
-         '<font color=green>Вы начали медитацию стараясь соединится с силами природы и увеличить свою ману.</font>'
-         xgt'fight','1'
+         elvenmeditation = 1
+         wipo- = 100
+         cooldown+= 5
+         '<font color = green>Вы начали медитацию стараясь соединится с силами природы и увеличить свою ману.</font>'
+         xgt 'fight','1'
          end
      
      end
      
-     if manna>=5000 and round>=6 and magika>=8:
+     if manna>= 5000 and round>= 6 and magika>= 8: 
      
-         if cooldownSpell<=0 and spellElf4>=100:
-			 act 'Лесная тюрьма (5000 маны)':
+         if cooldownSpell<= 0 and spellElf4>= 100: 
+			 act 'Лесная тюрьма (5000 маны)': 
 			 cla
-			 manna-=5000
-			 '<font color=green>Вы призвали лесную тюрьму которая оплела ветками противника.</font>'
-			 cooldownSpell=12
-			 $pname='Лесная тюрьма'
-			 priziv=1
-			 prizivTimes=10
-			 pstren=100
-			 pspeed=100
-			 pagil=100
-			 pvital=2500
-			 Pintel=1000
-			 pwill=1000
-			 Phealth=pvital*10
-			 pmanna=pintel*10
-			 pwipo=pwill*10
-			 prizivProgram=2
-			 xgt'fight','1'
+			 manna- = 5000
+			 '<font color = green>Вы призвали лесную тюрьму которая оплела ветками противника.</font>'
+			 cooldownSpell = 12
+			 $pname = 'Лесная тюрьма'
+			 priziv = 1
+			 prizivTimes = 10
+			 pstren = 100
+			 pspeed = 100
+			 pagil = 100
+			 pvital = 2500
+			 Pintel = 1000
+			 pwill = 1000
+			 Phealth = pvital*10
+			 pmanna = pintel*10
+			 pwipo = pwill*10
+			 prizivProgram = 2
+			 xgt 'fight','1'
 			 end
          end
      end
           
-     if manna>=1000 and round>=6 and magika>=8:
+     if manna>= 1000 and round>= 6 and magika>= 8: 
      
-         if cooldownSpell<=0 and spellElf5>=100:
-			 act 'Лесное благословение (1000 маны)':
+         if cooldownSpell<= 0 and spellElf5>= 100: 
+			 act 'Лесное благословение (1000 маны)': 
 			 cla
-			 manna-=1000
-			 '<font color=green>Вы призвали благословение леса увеличивающее ваши характеристики.</font>'
-			 cooldownSpell=10
-			 stren=stren+(stren*20/100)
-			 strenBAF=10
-			 speed=speed+(speed*20/100)
-			 speedBAF=10
-			 agil=agil+(agil*20/100)
-			 agilBAF=10
-			 intel=intel+(intel*20/100)
-			 intelBAF=10
-			 will=will+(will*20/100)
-			 willBAF=10
-			 xgt'fight','1'
+			 manna- = 1000
+			 '<font color = green>Вы призвали благословение леса увеличивающее ваши характеристики.</font>'
+			 cooldownSpell = 10
+			 stren = stren+(stren*20/100)
+			 strenBAF = 10
+			 speed = speed+(speed*20/100)
+			 speedBAF = 10
+			 agil = agil+(agil*20/100)
+			 agilBAF = 10
+			 intel = intel+(intel*20/100)
+			 intelBAF = 10
+			 will = will+(will*20/100)
+			 willBAF = 10
+			 xgt 'fight','1'
 			 end
          end
      end
      
-     if manna>=1000 and cooldownSpell<=0 and round>=6 and magika>=8 and spellElf6>=100:
-         act 'Абсолютное излечение (1000 маны)':
+     if manna>= 1000 and cooldownSpell<= 0 and round>= 6 and magika>= 8 and spellElf6>= 100: 
+         act 'Абсолютное излечение (1000 маны)': 
          cla
-         manna-=1000
-         bloodv=0
-         health=vital*10
-         '<font color=green>Вы собираете энергию и восстанавливаете здоровье.</font>'
-         xgt'fight','1'
+         manna- = 1000
+         bloodv = 0
+         health = vital*10
+         '<font color = green>Вы собираете энергию и восстанавливаете здоровье.</font>'
+         xgt 'fight','1'
          end
      end
      
-     if manna>=5000 and cooldownSpell<=0 and round>=6 and magika>=8 and spellElf7>=100:
-         act 'Несгибаемость (5000 маны)':
+     if manna>= 5000 and cooldownSpell<= 0 and round>= 6 and magika>= 8 and spellElf7>= 100: 
+         act 'Несгибаемость (5000 маны)': 
          cla
-         manna-=5000
-         horny=0
-         wipo=will*10
-         '<font color=green>Вы собираете энергию и восстанавливаете волю.</font>'
-         xgt'fight','1'
+         manna- = 5000
+         horny = 0
+         wipo = will*10
+         '<font color = green>Вы собираете энергию и восстанавливаете волю.</font>'
+         xgt 'fight','1'
          end
      end
      
@@ -167,7 +167,7 @@ if spElfDefManna<100:spElfDefManna=100
 
 
 
-act 'Пропустить ход':xgt'fight','1'
+act 'Пропустить ход': xgt 'fight','1'
 
 
 

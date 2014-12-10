@@ -6,71 +6,71 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 '<center><H4>Руины города Мон-Крик</H4></center>'
-'<center><img src="pic/Evedon/monkrik.jpg" ></center>'
+'<center><img src = "pic/Evedon/monkrik.jpg" ></center>'
 'Разрушенный город в горах.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 
 !!!дома 
 
-	 act 'Выйти на горную дорогу (1 час)':
-	 minut=minut+60
-	 roadMonMark=10
-	 gt'MonWestRoad'
+	 act 'Выйти на горную дорогу (1 час)': 
+	 minut += 60
+	 roadMonMark = 10
+	 gt 'MonWestRoad'
 	 end
 	 
-	 if filosofkamQW=3:
-	     act 'Искать осколок камня':
+	 if filosofkamQW = 3: 
+	     act 'Искать осколок камня': 
 	     cla
-	     minut=minut+60
-	     kamenrand=RAND(0,4)
-	         if kamenrand<4:
+	     minut += 60
+	     kamenrand = RAND(0,4)
+	         if kamenrand<4: 
 	         'Вы целый час искали, но ничего не нашли.'
-	         act 'уйти':gt $curloc
+	         act 'уйти': gt $curloc
 	         end
-	         if kamenrand=4:
-	         filosofkamQW=4
+	         if kamenrand = 4: 
+	         filosofkamQW = 4
 	         'После часа поисков, вы нашли осколок камня.'
-	         act 'уйти':gt $curloc
+	         act 'уйти': gt $curloc
 	         end
 	     end
 	 end
 	 
 	 
-	 act 'Бродить по городу (1 час)':
+	 act 'Бродить по городу (1 час)': 
 	 cla
-	 minut=minut+60
-	 mkrand=RAND(0,5)
-	 if mkrand<5:gt $curloc
-	     if mkrand=5:
-	     gemrand=RAND(10,50)
+	 minut += 60
+	 mkrand = RAND(0,5)
+	 if mkrand<5: gt $curloc
+	     if mkrand = 5: 
+	     gemrand = RAND(10,50)
 	     'Вы нашли в заброшенном доме <<gemrand>> гемов'
-	     gem+=gemrand
-	     act 'уйти':gt $curloc
+	     gem+= gemrand
+	     act 'уйти': gt $curloc
 	     end
-	     if mkrand=6:
+	     if mkrand = 6: 
 	     ''
-	     act 'уйти':gt $curloc
+	     act 'уйти': gt $curloc
 	     end
-	     if mkrand=7:
+	     if mkrand = 7: 
 	     ''
-	     act 'уйти':gt $curloc
+	     act 'уйти': gt $curloc
 	     end
-	     if mkrand=8:
+	     if mkrand = 8: 
 	     ''
-	     act 'уйти':gt $curloc
+	     act 'уйти': gt $curloc
 	     end
-	     if mkrand=9:
+	     if mkrand = 9: 
 	     ''
-	     act 'уйти':gt $curloc
+	     act 'уйти': gt $curloc
 	     end
-	     if mkrand=10:
+	     if mkrand = 10: 
 	     ''
-	     act 'уйти':gt $curloc
+	     act 'уйти': gt $curloc
 	     end
 	 
 	 

@@ -1,129 +1,129 @@
 # enemykikBoxing
-if $ARGS[0]='start':
-     if enemtip = 0:
+if $ARGS[0] = 'start': 
+     if enemtip = 0: 
      !сисси
-     xgt'enemykikBoxing','sissy'
+     xgt 'enemykikBoxing','sissy'
      end
-     if enemtip = 1:
+     if enemtip = 1: 
      !классика
-     xgt'enemykikBoxing','klassik'
+     xgt 'enemykikBoxing','klassik'
      end
-     if enemtip = 2:
+     if enemtip = 2: 
      !атакер
-     xgt'enemykikBoxing','ataker'
+     xgt 'enemykikBoxing','ataker'
      end
-     if enemtip = 3:
+     if enemtip = 3: 
      !слаггер
-     xgt'enemykikBoxing','slug'
+     xgt 'enemykikBoxing','slug'
      end
 
 end
 
-if $ARGS[0]='slug':
-     if stamV = stam:
-     '<font color=red><<$nameV>> наносит <B>мощный удар</B> по корпусу.</font>'
-	 gs'punchV1','start'
-	 xgt'kikboxing','sta' 
+if $ARGS[0] = 'slug': 
+     if stamV = stam: 
+     '<font color = red><<$nameV>> наносит <B>мощный удар</B> по корпусу.</font>'
+	 gs 'punchV1','start'
+	 xgt 'kikboxing','sta' 
 	 exit
      end
-     if stamV = stam + 1:
-     '<font color=red><<$nameV>> наносит <B>удар ногой</B> в корпус.</font>'
-	 gs'kikV1','start'
-	 xgt'kikboxing','sta' 
+     if stamV = stam + 1: 
+     '<font color = red><<$nameV>> наносит <B>удар ногой</B> в корпус.</font>'
+	 gs 'kikV1','start'
+	 xgt 'kikboxing','sta' 
 	 exit
      end
-     if stamV < stam + 1:
-     '<font color=red><<$nameV>> наносит <B>удар ногой</B> в голову.</font>'
-	 gs'kikV','start'
-	 xgt'kikboxing','sta'
+     if stamV < stam + 1: 
+     '<font color = red><<$nameV>> наносит <B>удар ногой</B> в голову.</font>'
+	 gs 'kikV','start'
+	 xgt 'kikboxing','sta'
 	 exit
      end
-     if stamV > stam:
-     '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
+     if stamV > stam: 
+     '<font color = red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 !set agilBonusV = 2
-     !set agilV = (agilMAX*2)
-	 xgt'kikboxing','sta' 
+	  stamina = stamina + 5
+	 ! agilBonusV = 2
+     ! agilV = (agilMAX*2)
+	 xgt 'kikboxing','sta' 
 	 exit
      end
 
 end
 
 
-if $ARGS[0]='sissy':
-     if pointV <= point + 5:
-     set atkrand = RAND (0,1)
-         if atkrand = 0:
-		 '<font color=red><<$nameV>> наносит быстрый джеб с шагом вперед.</font>'
-		 gs'jabV','start'
-		 xgt'kikboxing','sta' 
+if $ARGS[0] = 'sissy': 
+     if pointV <= point + 5: 
+      atkrand = RAND (0,1)
+         if atkrand = 0: 
+		 '<font color = red><<$nameV>> наносит быстрый джеб с шагом вперед.</font>'
+		 gs 'jabV','start'
+		 xgt 'kikboxing','sta' 
 		 end
-		 if atkrand = 1:
-		 '<font color=red><<$nameV>> наносит <B>удар ногой</B> в корпус.</font>'
-		 gs'kikV1','start'
-		 xgt'kikboxing','sta' 
+		 if atkrand = 1: 
+		 '<font color = red><<$nameV>> наносит <B>удар ногой</B> в корпус.</font>'
+		 gs 'kikV1','start'
+		 xgt 'kikboxing','sta' 
 		 end
 	 end
-	 if pointV > point + 5:
-	 '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
+	 if pointV > point + 5: 
+	 '<font color = red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 xgt'kikboxing','sta' 
+	  stamina = stamina + 5
+	 xgt 'kikboxing','sta' 
 	 exit
 	 end
 end
 
-if $ARGS[0]='klassik':
-     if pointV <= point:
-     set atkrand = RAND (0,1)
-         if atkrand = 0:
-		 '<font color=red><<$nameV>> наносит быстрый джеб с шагом вперед.</font>'
-		 gs'jabV','start'
-		 xgt'kikboxing','sta' 
+if $ARGS[0] = 'klassik': 
+     if pointV <= point: 
+      atkrand = RAND (0,1)
+         if atkrand = 0: 
+		 '<font color = red><<$nameV>> наносит быстрый джеб с шагом вперед.</font>'
+		 gs 'jabV','start'
+		 xgt 'kikboxing','sta' 
 		 end
-		 if atkrand = 1:
-		 '<font color=red><<$nameV>> наносит <B>удар ногой</B> в корпус.</font>'
-		 gs'kikV1','start'
-		 xgt'kikboxing','sta' 
+		 if atkrand = 1: 
+		 '<font color = red><<$nameV>> наносит <B>удар ногой</B> в корпус.</font>'
+		 gs 'kikV1','start'
+		 xgt 'kikboxing','sta' 
 		 end
      end
-     if pointV > point and stamV < 2:
-     set atkrand = RAND (0,1)
-         if atkrand = 0:
-		 '<font color=red><<$nameV>> наносит <B>мощный удар</B> в голову.</font>'
-		 gs'punchV','start'
-		 xgt'kikboxing','sta' 
+     if pointV > point and stamV < 2: 
+      atkrand = RAND (0,1)
+         if atkrand = 0: 
+		 '<font color = red><<$nameV>> наносит <B>мощный удар</B> в голову.</font>'
+		 gs 'punchV','start'
+		 xgt 'kikboxing','sta' 
 		 exit
 		 end
-		 if atkrand = 1:
-		 '<font color=red><<$nameV>> наносит <B>удар ногой</B> в голову.</font>'
-		 gs'kikV','start'
-		 xgt'kikboxing','sta' 
+		 if atkrand = 1: 
+		 '<font color = red><<$nameV>> наносит <B>удар ногой</B> в голову.</font>'
+		 gs 'kikV','start'
+		 xgt 'kikboxing','sta' 
 		 end
      end
-     if pointV > point and stamV >= 2:
-     '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
+     if pointV > point and stamV >= 2: 
+     '<font color = red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 xgt'kikboxing','sta' 
+	  stamina = stamina + 5
+	 xgt 'kikboxing','sta' 
 	 exit
      end
 
 end
 
-if $ARGS[0]='ataker':
-set atkrand = RAND (0,1)
-     if atkrand = 0:
-	 '<font color=red><<$nameV>> наносит <B>удар ногой</B> в голову.</font>'
-	 gs'kikV','start'
-	 xgt'kikboxing','sta' 
+if $ARGS[0] = 'ataker': 
+ atkrand = RAND (0,1)
+     if atkrand = 0: 
+	 '<font color = red><<$nameV>> наносит <B>удар ногой</B> в голову.</font>'
+	 gs 'kikV','start'
+	 xgt 'kikboxing','sta' 
      exit
      end
-     if atkrand = 1:
-	 '<font color=red><<$nameV>> наносит <B>мощный удар</B> в голову.</font>'
-	 gs'punchV','start'
-	 xgt'kikboxing','sta' 
+     if atkrand = 1: 
+	 '<font color = red><<$nameV>> наносит <B>мощный удар</B> в голову.</font>'
+	 gs 'punchV','start'
+	 xgt 'kikboxing','sta' 
 	 exit
 	 end
 

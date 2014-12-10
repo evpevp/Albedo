@@ -1,73 +1,73 @@
 # drunk_master
 $metka = $ARGS[0]
 $loc = $CURLOC
-'<center><img src="pic/slums_corner/drunk_master_buy.jpg" ></center>'
+'<center><img src = "pic/slums_corner/drunk_master_buy.jpg" ></center>'
 
 
-if drunkMasterQW=0:drunkMasterQW=1
-if drunkMasterQW=2:
+if drunkMasterQW = 0: drunkMasterQW = 1
+if drunkMasterQW = 2: 
 'Мне больше нечему тебя учить.'
-act 'Уйти':GOTO 'slumsW'
+act 'Уйти': GOTO 'slumsW'
 end
 
-if drunkMasterW=1 and alko!100 and drunkMaster!day:
+if drunkMasterW = 1 and alko!100 and drunkMaster!day: 
 '(Старичок с прищуром посмотрел на вас.)'
 '- Хе-хе. Пришла учиться у пьяного Мастера.' 
 ' - Для этого тебе как минимум надо быть пьяной. У меня как раз тут есть, что выпить. Составь старичку компанию, кхе-хе!'
 '(Вы подумали, что крайне не разумно пить черт знает что, черт знает где, с бомжеватого вида стариком.)'
 
- act 'Уйти':GOTO 'slumsW'
+ act 'Уйти': GOTO 'slumsW'
 	
-	 act 'Пить':
+	 act 'Пить': 
 	 cla
-	 minut=minut+15
-	 alko=100
-	 manna=manna+20
-	 wipo=wipo+20
-	 horny=100
+	 minut += 15
+	 alko = 100
+	 manna = manna+20
+	 wipo = wipo+20
+	 horny = 100
 	 ''
 	 act 'далее': GOTO $CURLOC
 	 end
 end
 
-if alko=100 and drunkMasterQW=1 and drunkMaster!day:
+if alko = 100 and drunkMasterQW = 1 and drunkMaster!day: 
 'Вот теперь ты готова, попробую тебя чему-нибудь обучить, глупая девчонка!'
-     act 'Учится':
+     act 'Учится': 
      cla
      *clr
-     drunkMaster=day
-     exp=exp+RAND(lvl,lvl*2)
+     drunkMaster = day
+     exp = exp+RAND(lvl,lvl*2)
          
-         if drunkMasterStyle>=100:
+         if drunkMasterStyle>= 100: 
          'Мне больше нечему тебя учить.'
-         act 'далее':GOTO 'slumsW'
+         act 'далее': GOTO 'slumsW'
 		 end
 		 
-		 if drunkMasterStyle<100:
-		 drunkMasterStyle=drunkMasterStyle+10
-		 if drunkMasterStyle>100:drunkMasterStyle=100&drunkMasterQW=2
-		 picrand=RAND(0,3)
-		 if picrand=0:'<center><img src="pic/slums_corner/master_after.jpg" ></center>'
-		 if picrand=1:'<center><img src="pic/slums_corner/master_after1.jpg" ></center>'
-		 if picrand=2:'<center><img src="pic/slums_corner/master_after2.jpg" ></center>'
+		 if drunkMasterStyle<100: 
+		 drunkMasterStyle = drunkMasterStyle+10
+		 if drunkMasterStyle>100: drunkMasterStyle = 100 & drunkMasterQW = 2
+		 picrand = RAND(0,3)
+		 if picrand = 0: '<center><img src = "pic/slums_corner/master_after.jpg" ></center>'
+		 if picrand = 1: '<center><img src = "pic/slums_corner/master_after1.jpg" ></center>'
+		 if picrand = 2: '<center><img src = "pic/slums_corner/master_after2.jpg" ></center>'
 		 'Пьяный мастер обучал вас падать как мешок и мгновенно вставать, дразнить противника, уклоняться от смертельных ударов и другим интересным вещам.'
 		 'Вы усвоили на <<drunkMasterStyle>>%'
 		 '(Мастер) - Ну все, хватит на сегодня! Ты хорошая ученица, приходи завтра.'
-		 act 'далее':GOTO 'slums_gang'
+		 act 'далее': GOTO 'slums_gang'
 		 end
 	 end
 end
 
 
-if drunkMasterQW=1 and drunkMaster=day:
+if drunkMasterQW = 1 and drunkMaster = day: 
 'Мы уже занимались сегодня. Таким вещам нужно обучаться постепенно, а то тело не выдержит.'
-act 'Уйти':GOTO 'slumsW'
+act 'Уйти': GOTO 'slumsW'
 end
 
 
-if drunkMasterW=2:
+if drunkMasterW = 2: 
 	 'Мастер вас игнорирует.'
-	 act 'Уйти':GOTO 'slumsW'
+	 act 'Уйти': GOTO 'slumsW'
 end
 --- drunk_master ---------------------------------
 

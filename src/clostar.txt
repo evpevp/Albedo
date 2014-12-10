@@ -1,16 +1,16 @@
 # clostar
-if kostum = 2:kostumE = kostumE - 1
-if manjeans = 2:manjeansE = manjeansE - 1
-if sport = 2:sportE = sportE - 1
+if kostum = 2: kostumE = kostumE - 1
+if manjeans = 2: manjeansE = manjeansE - 1
+if sport = 2: sportE = sportE - 1
 
 
 
-i=0
-:metkanewclomarkpoisk
-i+=1
-if newclo[i]=2:
-newcloH[i]-=1
-elseif i<131:
+i = 0
+: metkanewclomarkpoisk
+i+= 1
+if newclo[i] = 2: 
+newcloH[i]- = 1
+elseif i<131: 
 jump'metkanewclomarkpoisk'
 end
 !другой мир

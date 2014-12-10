@@ -1,68 +1,68 @@
 # batledynek
-$battlemain={
-if potop>0:'<font color=blue>Вы затопили местность вокруг себя, вода будет держаться еще <<potop>> ходов</font>'
-if mortalv>0:'<font color=red>У вас <<mortalv>> противников</font>'
-if notHere>0:'<font color=green><B><<$namev>> вас не видит</B></font>'
-if priziv>0:
-'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> мана:<<pmanna>> Воля:<<pwipo>> Осталось ходов:<<prizivTimes>></font>'
-if pdefence>0 or pdefenceT>0 or pdefenceW>0 or pdefenceH>0:'<font color=#cd00cd>Физзащита:<<pdefence>> Температурная защита:<<pdefenceT>> Воздушная защита:<<pdefenceW>> Защита разума:<<pdefenceH>></font>'
+$battlemain = {
+if potop>0: '<font color = blue>Вы затопили местность вокруг себя, вода будет держаться еще <<potop>> ходов</font>'
+if mortalv>0: '<font color = red>У вас <<mortalv>> противников</font>'
+if notHere>0: '<font color = green><B><<$namev>> вас не видит</B></font>'
+if priziv>0: 
+'<font color = #cd00cd><<$pname>> охраняет вас Жизнь: <<Phealth>> мана: <<pmanna>> Воля: <<pwipo>> Осталось ходов: <<prizivTimes>></font>'
+if pdefence>0 or pdefenceT>0 or pdefenceW>0 or pdefenceH>0: '<font color = #cd00cd>Физзащита: <<pdefence>> Температурная защита: <<pdefenceT>> Воздушная защита: <<pdefenceW>> Защита разума: <<pdefenceH>></font>'
 end
-'Ваш уровень <<lvl>> Здоровье <font color=red><B><<health>></B></font> мана <font color=blue><B><<manna>></B></font> сила воли <font color=green><B><<wipo>></B></font>'
-if sonar>0:'<font color=green>Ваш сонар будет отслеживать истинное местанахождение противника еще <<sonar>> раундов</font>'
-if GraveDog=100:'<font color=green>Энергия могильной собаки <<GraveDogPower>>, максимально возможная энергия <<GraveDogPowerM>></font>'
-if defence>0:'<font color=green>Физическая защита <<defence>> едениц</font>'
-if defenceT>0:'<font color=green>Температурная защита <<defenceT>> едениц</font>'
-if defenceW>0:'<font color=green>Воздушная защита <<defenceW>> едениц</font>'
-if defenceH>0:'<font color=green>Защита разума <<defenceH>> едениц</font>'
-if defenceM>0:'<font color=green>Защита маны <<defenceM>> едениц</font>'
-if defenceG>0:'<font color=green>Гравитационная защита <<defenceG>> едениц</font>'
-if defenceZ>0:'<font color=green>Защита от проклятий <<defenceZ>> едениц</font>'
-if defenceP>0:'<font color=green>Защита телепортацией <<defenceP>> едениц</font>'
-if zerkalo>0:'<font color=green> <<zerkalo>> штук зеркал</font>'
-if fint>0:'<font color=green>Вы можете сместится и избежать урона <<fint>> раз</font>'
-if monster>0:'<font color=red>Возбужденность <B><<horny>></B></font>'
-if klon>0:'<font color=green>У вас <<klon>> клон</font>'
-if stileMark=1:'Вы стоите в стойке ТИГРА'
-if stileMark=2:'Вы стоите в боксерской стойке'
-if stileMark=3:'Вы стоите в стойке железной рубашки'
-if stileMark=4:'Вы стоите в стойке журавля'
-if stileMark=5:'Ваше тело покрыто черными узорами печати Оротимару'
-if stileMark=6:'Вы стоите закрывшись щитом'
-if stileMark=7:'Вы стоите с оружием в руках'
-if ironskin>0:'Ваша защита выдержит <<ironskin>> едениц урона'
-if Bloodv>0:'<font color=red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
-if notHereV>0:'<font color=red>Вы не видите противника</font>'
-if tumanv>0:'<font color=red>Ваш взгляд застилает туман </font>'
-if sandstormv>0:'<font color=red>Ваш взгляд застилает песчаная буря</font>'
-if tuman>0:'<font color=green>Взгляд противника застилает туман </font>'
-if sandstorm>0:'<font color=green>Взгляд противника застилает песчаная буря</font>'
-if gostbody>0:'<font color=green>Устойчивость призрачного тела <<gostbody>></font>'
-if vampireMorf>=1 and vampirePower>0:'<font color=green>Вампирских сил <<vampirePower>>ед</font>'
-if VoronKlon>0:'У вас задействована сила вороньего клона которая не даст вам погибнуть, а возродит вас в целости и сохранности, только уровень маны останется такой, какой был на момент поражения'
-if round>=5 and cooldowngostbody>0 and spGhostBodyMal>=100 and cooldowngostbody>=round:'<font color=red>Скилл призрачного тела еще не восстановился</font>'
-if cooldownSpell>0:'<font color=red>Вы не можете применять высшие заклинания еще <<cooldownSpell>> ходов</font>'
+'Ваш уровень <<lvl>> Здоровье <font color = red><B><<health>></B></font> мана <font color = blue><B><<manna>></B></font> сила воли <font color = green><B><<wipo>></B></font>'
+if sonar>0: '<font color = green>Ваш сонар будет отслеживать истинное местанахождение противника еще <<sonar>> раундов</font>'
+if GraveDog = 100: '<font color = green>Энергия могильной собаки <<GraveDogPower>>, максимально возможная энергия <<GraveDogPowerM>></font>'
+if defence>0: '<font color = green>Физическая защита <<defence>> едениц</font>'
+if defenceT>0: '<font color = green>Температурная защита <<defenceT>> едениц</font>'
+if defenceW>0: '<font color = green>Воздушная защита <<defenceW>> едениц</font>'
+if defenceH>0: '<font color = green>Защита разума <<defenceH>> едениц</font>'
+if defenceM>0: '<font color = green>Защита маны <<defenceM>> едениц</font>'
+if defenceG>0: '<font color = green>Гравитационная защита <<defenceG>> едениц</font>'
+if defenceZ>0: '<font color = green>Защита от проклятий <<defenceZ>> едениц</font>'
+if defenceP>0: '<font color = green>Защита телепортацией <<defenceP>> едениц</font>'
+if zerkalo>0: '<font color = green> <<zerkalo>> штук зеркал</font>'
+if fint>0: '<font color = green>Вы можете сместится и избежать урона <<fint>> раз</font>'
+if monster>0: '<font color = red>Возбужденность <B><<horny>></B></font>'
+if klon>0: '<font color = green>У вас <<klon>> клон</font>'
+if stileMark = 1: 'Вы стоите в стойке ТИГРА'
+if stileMark = 2: 'Вы стоите в боксерской стойке'
+if stileMark = 3: 'Вы стоите в стойке железной рубашки'
+if stileMark = 4: 'Вы стоите в стойке журавля'
+if stileMark = 5: 'Ваше тело покрыто черными узорами печати Оротимару'
+if stileMark = 6: 'Вы стоите закрывшись щитом'
+if stileMark = 7: 'Вы стоите с оружием в руках'
+if ironskin>0: 'Ваша защита выдержит <<ironskin>> едениц урона'
+if Bloodv>0: '<font color = red>Вы теряете <B><<Bloodv>></B> едениц жизни от кровотечения</font>'
+if notHereV>0: '<font color = red>Вы не видите противника</font>'
+if tumanv>0: '<font color = red>Ваш взгляд застилает туман </font>'
+if sandstormv>0: '<font color = red>Ваш взгляд застилает песчаная буря</font>'
+if tuman>0: '<font color = green>Взгляд противника застилает туман </font>'
+if sandstorm>0: '<font color = green>Взгляд противника застилает песчаная буря</font>'
+if gostbody>0: '<font color = green>Устойчивость призрачного тела <<gostbody>></font>'
+if vampireMorf>= 1 and vampirePower>0: '<font color = green>Вампирских сил <<vampirePower>>ед</font>'
+if VoronKlon>0: 'У вас задействована сила вороньего клона которая не даст вам погибнуть, а возродит вас в целости и сохранности, только уровень маны останется такой, какой был на момент поражения'
+if round>= 5 and cooldowngostbody>0 and spGhostBodyMal>= 100 and cooldowngostbody>= round: '<font color = red>Скилл призрачного тела еще не восстановился</font>'
+if cooldownSpell>0: '<font color = red>Вы не можете применять высшие заклинания еще <<cooldownSpell>> ходов</font>'
 
-'<<$namev>> уровень <<lvlv>> здоровье <font color=red><B><<healthV>></B></font> мана <font color=blue><B><<mannaV>></B></font> сила воли <font color=green><B><<wipoV>></B></font>'
-if levitationV>0:'<font color=red><<$namev>> летает над вами</font>'
-if tentakNumber>0:'<font color=red>У чудовища <<tentakNumber>> действующих щупалец</font>'
-if defenceV>0:'<font color=red>Физическая защита <<defencev>> едениц</font>'
-if defenceTV>0:'<font color=red>Температурная защита <<defenceTv>> едениц</font>'
-if defenceWV>0:'<font color=red>Воздушная защита <<defenceWv>> едениц</font>'
-if defenceHV>0:'<font color=red>Защита разума <<defenceHv>> едениц</font>'
-if defenceMV>0:'<font color=red>Защита маны <<defenceMv>> едениц</font>'
-if defenceGV>0:'<font color=red>Гравитационная защита <<defenceGv>> едениц</font>'
-if defenceZV>0:'<font color=red>Защита от проклятий <<defenceZv>> едениц</font>'
-if defencePV>0:'<font color=red>Защита телепортацией <<defencePv>> едениц</font>'
-if zerkalov>0:'<font color=red> <<zerkalov>> штук зеркал</font>'
-if stileVMark=1:'<<$namev>> стоит в стойке ТИГРА'
-if stileVMark=2:'<<$namev>> стоит в боксерской стойке'
-if stileVMark=3:'<<$namev>> стоит в стойке железной рубашки'
-if stileVMark=4:'<<$namev>> стоит в стойке журавля'
-if stileVMark=6:'<<$namev>> стоит закрывшись щитом'
-if ironskinv>0:'Защита противника выдержит <<ironskinv>> едениц урона'
-if Blood>0:'<font color=green><<$nameV>> теряет <B><<Blood>></B> едениц жизни от кровотечения</font>'
+'<<$namev>> уровень <<lvlv>> здоровье <font color = red><B><<healthV>></B></font> мана <font color = blue><B><<mannaV>></B></font> сила воли <font color = green><B><<wipoV>></B></font>'
+if levitationV>0: '<font color = red><<$namev>> летает над вами</font>'
+if tentakNumber>0: '<font color = red>У чудовища <<tentakNumber>> действующих щупалец</font>'
+if defenceV>0: '<font color = red>Физическая защита <<defencev>> едениц</font>'
+if defenceTV>0: '<font color = red>Температурная защита <<defenceTv>> едениц</font>'
+if defenceWV>0: '<font color = red>Воздушная защита <<defenceWv>> едениц</font>'
+if defenceHV>0: '<font color = red>Защита разума <<defenceHv>> едениц</font>'
+if defenceMV>0: '<font color = red>Защита маны <<defenceMv>> едениц</font>'
+if defenceGV>0: '<font color = red>Гравитационная защита <<defenceGv>> едениц</font>'
+if defenceZV>0: '<font color = red>Защита от проклятий <<defenceZv>> едениц</font>'
+if defencePV>0: '<font color = red>Защита телепортацией <<defencePv>> едениц</font>'
+if zerkalov>0: '<font color = red> <<zerkalov>> штук зеркал</font>'
+if stileVMark = 1: '<<$namev>> стоит в стойке ТИГРА'
+if stileVMark = 2: '<<$namev>> стоит в боксерской стойке'
+if stileVMark = 3: '<<$namev>> стоит в стойке железной рубашки'
+if stileVMark = 4: '<<$namev>> стоит в стойке журавля'
+if stileVMark = 6: '<<$namev>> стоит закрывшись щитом'
+if ironskinv>0: 'Защита противника выдержит <<ironskinv>> едениц урона'
+if Blood>0: '<font color = green><<$nameV>> теряет <B><<Blood>></B> едениц жизни от кровотечения</font>'
 ''
-if spMarpeozaBuff>0:'Осталось <<spMarpeozaBuff>> благословений Марпеозы'
+if spMarpeozaBuff>0: 'Осталось <<spMarpeozaBuff>> благословений Марпеозы'
 }
 
 
@@ -71,650 +71,650 @@ if spMarpeozaBuff>0:'Осталось <<spMarpeozaBuff>> благословен�
 
 
 
-$befbatdin={
-if no obj'Инвентарь':ADDOBJ 'Инвентарь'
-if fint>0:fint=fint-1
-if fintv>0:fintv=fintv-1
+$befbatdin = {
+if no obj'Инвентарь': ADDOBJ 'Инвентарь'
+if fint>0: fint = fint-1
+if fintv>0: fintv = fintv-1
 
-if vampireMorf>=1:defence=10000
+if vampireMorf>= 1: defence = 10000
 
-if adamantin=1:barier=75
+if adamantin = 1: barier = 75
 
 
-if gribspordead>0:
-     if gribspordead>=9:
+if gribspordead>0: 
+     if gribspordead>= 9: 
      cls
-     gribspordead+=1
-     health=-1000
-     manna=-1000
-     wipo=-1000
-     realDead=1
-     '<font color=red>Грибные споры прогрызли ваш череп и разрывают ваш мозг в клочья.</font>'
-         act 'Корчится в агонии':
-         gs'nill'
-         gt'overdm','1'
+     gribspordead+= 1
+     health = -1000
+     manna = -1000
+     wipo = -1000
+     realDead = 1
+     '<font color = red>Грибные споры прогрызли ваш череп и разрывают ваш мозг в клочья.</font>'
+         act 'Корчится в агонии': 
+         gs 'nill'
+         gt 'overdm','1'
          end
      exit
      end
-     if gribspordead=8:
-     gribspordead+=1
-     health-=1500
-     manna-=1500
-     wipo-=1500
-     blood+=100
-     '<font color=red>Вы просто комок кровоточащей боли, на вас нет живого места, грибные споры начинают пробивать ваши кости прорастая сквозь них.</font>'
+     if gribspordead = 8: 
+     gribspordead+= 1
+     health- = 1500
+     manna- = 1500
+     wipo- = 1500
+     blood+= 100
+     '<font color = red>Вы просто комок кровоточащей боли, на вас нет живого места, грибные споры начинают пробивать ваши кости прорастая сквозь них.</font>'
      end
-     if gribspordead=7:
-     gribspordead+=1
-     health-=1000
-     manna-=1000
-     wipo-=1000
-     blood+=50
-     '<font color=red>Грибные споры буквально разрывают вас из нутри, из открытых, кровоточащих рваных ран торчат нитевидные споры разрастающиеся прямо на глазах</font>'
+     if gribspordead = 7: 
+     gribspordead+= 1
+     health- = 1000
+     manna- = 1000
+     wipo- = 1000
+     blood+= 50
+     '<font color = red>Грибные споры буквально разрывают вас из нутри, из открытых, кровоточащих рваных ран торчат нитевидные споры разрастающиеся прямо на глазах</font>'
      end
-     if gribspordead=6:
-     gribspordead+=1
-     health-=800
-     manna-=800
-     wipo-=800
-     blood+=10
-     '<font color=red>Ваша кожа начинает лопаться и из кровоточащих ран видны нитевидные белые отростки</font>'
+     if gribspordead = 6: 
+     gribspordead+= 1
+     health- = 800
+     manna- = 800
+     wipo- = 800
+     blood+= 10
+     '<font color = red>Ваша кожа начинает лопаться и из кровоточащих ран видны нитевидные белые отростки</font>'
      end
-     if gribspordead=5:
-     gribspordead+=1
-     health-=500
-     manna-=500
-     wipo-=500
-     '<font color=red>Страшная боль раздирает вас</font>'
+     if gribspordead = 5: 
+     gribspordead+= 1
+     health- = 500
+     manna- = 500
+     wipo- = 500
+     '<font color = red>Страшная боль раздирает вас</font>'
      end
-     if gribspordead=4:
-     gribspordead+=1
-     health-=300
-     manna-=300
-     wipo-=300
-     '<font color=red>Боль распросраняется по всему телу</font>'
+     if gribspordead = 4: 
+     gribspordead+= 1
+     health- = 300
+     manna- = 300
+     wipo- = 300
+     '<font color = red>Боль распросраняется по всему телу</font>'
      end
-     if gribspordead=3:
-     gribspordead+=1
-     health-=100
-     '<font color=red>Ваши легкие разрывает от боли</font>'
+     if gribspordead = 3: 
+     gribspordead+= 1
+     health- = 100
+     '<font color = red>Ваши легкие разрывает от боли</font>'
      end
-     if gribspordead=2:
-     gribspordead+=1
-     health-=10
-     '<font color=red>У вас в легких распростроняется резкая боль</font>'
+     if gribspordead = 2: 
+     gribspordead+= 1
+     health- = 10
+     '<font color = red>У вас в легких распростроняется резкая боль</font>'
      end
-     if gribspordead=1:
-     gribspordead+=1
-     '<font color=red>У вас в легких что то покалывает</font>'
+     if gribspordead = 1: 
+     gribspordead+= 1
+     '<font color = red>У вас в легких что то покалывает</font>'
      end
 end
 
 
 
-if healthAmuletV>0 and healthV<vitalV*10:
-healthAmuletV=healthAmuletV-1
-healthV=healthV+1000
-'<font color=red>Амулет восстанавливает здоровье противника</font>'
+if healthAmuletV>0 and healthV<vitalV*10: 
+healthAmuletV = healthAmuletV-1
+healthV = healthV+1000
+'<font color = red>Амулет восстанавливает здоровье противника</font>'
 end
 
-if healthAmulet>0 and health<vital*10:
-healthAmulet=healthAmulet-1
-health=health+1000
-'<font color=green>Амулет восстанавливает ваше здоровье</font>'
+if healthAmulet>0 and health<vital*10: 
+healthAmulet = healthAmulet-1
+health = health+1000
+'<font color = green>Амулет восстанавливает ваше здоровье</font>'
 end
 
-if conterBatTimeV<=0 and conterBatV>0:conterBatTimeV=0&conterBatV=0
-if conterBatTime<=0 and conterBat>0:conterBatTime=0&conterBat=0
+if conterBatTimeV<= 0 and conterBatV>0: conterBatTimeV = 0 & conterBatV = 0
+if conterBatTime<= 0 and conterBat>0: conterBatTime = 0 & conterBat = 0
 
-if potopV>0:
-potopV-=1
-     if manna>0:
-	 manna-=potopV*30
-	 mannav+=potopV*30
-	 '<font color=red><<$nameV>> поглощает у вас <<potopV*30>> едениц маны</font>'
+if potopV>0: 
+potopV- = 1
+     if manna>0: 
+	 manna- = potopV*30
+	 mannav+= potopV*30
+	 '<font color = red><<$nameV>> поглощает у вас <<potopV*30>> едениц маны</font>'
 	 end
 end
 
-if potop>0:
-potop-=1
-     if mannaМ>0:
-	 mannaV-=potop*30
-	 manna+=potop*30
-	 '<font color=green>Вы поглощаете у противника <<potop*30>> едениц маны</font>'
+if potop>0: 
+potop- = 1
+     if mannaМ>0: 
+	 mannaV- = potop*30
+	 manna+= potop*30
+	 '<font color = green>Вы поглощаете у противника <<potop*30>> едениц маны</font>'
 	 end
 end
 
-if mannaV<0:mannaV=0
-if manna<0:manna=0
+if mannaV<0: mannaV = 0
+if manna<0: manna = 0
 
-if levitationV>0:levitationV=levitationV-1
-if levitation>0:levitation=levitation-1
-if notHere>0:notHere=notHere-1
-if notHereV>0:notHereV=notHereV-1
+if levitationV>0: levitationV = levitationV-1
+if levitation>0: levitation = levitation-1
+if notHere>0: notHere = notHere-1
+if notHereV>0: notHereV = notHereV-1
 
-if zerkalo>0:zerkalo=zerkalo-1
-if zerkalov>0:zerkalov=zerkalov-1
-if zerkalo>50:zerkalo=50
-if zerkalov>50:zerkalov=50
+if zerkalo>0: zerkalo = zerkalo-1
+if zerkalov>0: zerkalov = zerkalov-1
+if zerkalo>50: zerkalo = 50
+if zerkalov>50: zerkalov = 50
 
 
-if tuman>0:tuman=tuman-1
-if tumanv>0:tumanv=tumanv-1
+if tuman>0: tuman = tuman-1
+if tumanv>0: tumanv = tumanv-1
 
-if InGroundV>0:InGroundV=InGroundV-1&notHereV=InGroundV+1&mannaV=mannaV-250&'<font color=green><<$namev>> находясь под землей теряет 250 едениц маны</font>'
-if InGround>0:InGround=InGround-1&notHere=InGround+1&manna=manna-250&'<font color=green>Вы теряете 250 едениц маны находясь под землей</font>'
+if InGroundV>0: InGroundV = InGroundV-1 & notHereV = InGroundV+1 & mannaV = mannaV-250 & '<font color = green><<$namev>> находясь под землей теряет 250 едениц маны</font>'
+if InGround>0: InGround = InGround-1 & notHere = InGround+1 & manna = manna-250 & '<font color = green>Вы теряете 250 едениц маны находясь под землей</font>'
 
-if sandstorm>0:
-sandstorm=sandstorm-1
-     if defenceV<=0 and notHereV<=0:
-     healthV=healthV-(sandstorm*30)
-     '<font color=green>Песчаная буря наносит противнику <<sandstorm*30>> едениц урона</font>'
-         if healthV<=0:
-         '<font color=green><<$namev>> сильно пострадал</font>'
-         xgt'fight','2'
+if sandstorm>0: 
+sandstorm = sandstorm-1
+     if defenceV<= 0 and notHereV<= 0: 
+     healthV = healthV-(sandstorm*30)
+     '<font color = green>Песчаная буря наносит противнику <<sandstorm*30>> едениц урона</font>'
+         if healthV<= 0: 
+         '<font color = green><<$namev>> сильно пострадал</font>'
+         xgt 'fight','2'
          exit
          end     
      end
-     if defenceV>0:
-     defenceV=defenceV-(sandstorm*30)
-     '<font color=green>Песчаная буря подтачивает физическую защиту противника нанося ей <<sandstorm*30>> едениц урона</font>'
-     if defenceV<=0:defenceV=0&'<font color=green>Песчаная буря полностью уничтожила физическую защиту противника</font>'
+     if defenceV>0: 
+     defenceV = defenceV-(sandstorm*30)
+     '<font color = green>Песчаная буря подтачивает физическую защиту противника нанося ей <<sandstorm*30>> едениц урона</font>'
+     if defenceV<= 0: defenceV = 0 & '<font color = green>Песчаная буря полностью уничтожила физическую защиту противника</font>'
      end
 end
 
-if sandstormv>0:
-sandstormv=sandstormv-1
-     if defence<=0 and notHereV<=0:
-     health=health-(sandstormv*30)
-     '<font color=red>Песчаная буря наносит вам <<sandstormv*30>> едениц урона</font>'
-         if health<=0:
-         '<font color=red>Вы сильно пострадали</font>'
-         xgt'fight','2'
+if sandstormv>0: 
+sandstormv = sandstormv-1
+     if defence<= 0 and notHereV<= 0: 
+     health = health-(sandstormv*30)
+     '<font color = red>Песчаная буря наносит вам <<sandstormv*30>> едениц урона</font>'
+         if health<= 0: 
+         '<font color = red>Вы сильно пострадали</font>'
+         xgt 'fight','2'
          exit
          end 
      end
-     if defence>0:
-     defence=defence-(sandstormv*30)
-     '<font color=red>Песчаная буря подтачивает вашу физическую защиту нанося ей <<sandstormv*30>> едениц урона</font>'
-     if defence<=0:defence=0&'<font color=red>Песчаная буря полностью уничтожила вашу физическую защиту</font>'
+     if defence>0: 
+     defence = defence-(sandstormv*30)
+     '<font color = red>Песчаная буря подтачивает вашу физическую защиту нанося ей <<sandstormv*30>> едениц урона</font>'
+     if defence<= 0: defence = 0 & '<font color = red>Песчаная буря полностью уничтожила вашу физическую защиту</font>'
      end
 
 end
 
 
 
-if acid>0:
-acid=acid-1
-if acid>40:acid=40
-     if defenceV<=0 and notHere<=0:
-     healthV=healthV-(acid*50)
-     '<font color=green>Кислота обжигает противника и наносит ему <<acid*50>> едениц урона</font>'
-         if healthV<=0:
-         '<font color=green><<$namev>> сильно обгорел</font>'
-         xgt'fight','2'
+if acid>0: 
+acid = acid-1
+if acid>40: acid = 40
+     if defenceV<= 0 and notHere<= 0: 
+     healthV = healthV-(acid*50)
+     '<font color = green>Кислота обжигает противника и наносит ему <<acid*50>> едениц урона</font>'
+         if healthV<= 0: 
+         '<font color = green><<$namev>> сильно обгорел</font>'
+         xgt 'fight','2'
          exit
          end     
      end
-     if defenceV>0:
-     defenceV=defenceV-(acid*50)
-     '<font color=green>Кислота оплавляет физическую защиту противника</font>'
-     if defenceV<=0:defenceV=0&'<font color=green>Кислота полностью уничтожила физическую защиту противника</font>'
+     if defenceV>0: 
+     defenceV = defenceV-(acid*50)
+     '<font color = green>Кислота оплавляет физическую защиту противника</font>'
+     if defenceV<= 0: defenceV = 0 & '<font color = green>Кислота полностью уничтожила физическую защиту противника</font>'
      end
-     if defenceTV>0:
-     defenceTV=defenceTV-(acid*50)
-     '<font color=green>Кислота оплавляет температурную защиту противника</font>'
-     if defenceTV<=0:defenceTV=0&'<font color=green>Кислота полностью уничтожила температурную защиту противника</font>'
+     if defenceTV>0: 
+     defenceTV = defenceTV-(acid*50)
+     '<font color = green>Кислота оплавляет температурную защиту противника</font>'
+     if defenceTV<= 0: defenceTV = 0 & '<font color = green>Кислота полностью уничтожила температурную защиту противника</font>'
      end
-     if defenceWV>0:
-     defenceWV=defenceWV-(acid*80)
-     '<font color=green>Кислота оплавляет воздушную защиту противника</font>'
-     if defenceWV<=0:defenceWV=0&'<font color=green>Кислота полностью уничтожила воздушную защиту противника</font>'
+     if defenceWV>0: 
+     defenceWV = defenceWV-(acid*80)
+     '<font color = green>Кислота оплавляет воздушную защиту противника</font>'
+     if defenceWV<= 0: defenceWV = 0 & '<font color = green>Кислота полностью уничтожила воздушную защиту противника</font>'
      end
 end
 
-if acidV>0:
-acidV=acidV-1
-if acidv>40:acidv=40
-     if defence<=0 and notHereV<=0:
-     health=health-(acidv*50)
-     '<font color=red>Кислота обжигает вас и наносит <<acidv*50>> едениц урона</font>'
-         if health<=0:
-         '<font color=red>Вы сильно обгорели</font>'
-         xgt'fight','2'
+if acidV>0: 
+acidV = acidV-1
+if acidv>40: acidv = 40
+     if defence<= 0 and notHereV<= 0: 
+     health = health-(acidv*50)
+     '<font color = red>Кислота обжигает вас и наносит <<acidv*50>> едениц урона</font>'
+         if health<= 0: 
+         '<font color = red>Вы сильно обгорели</font>'
+         xgt 'fight','2'
          exit
          end 
      end
-     if defence>0:
-     defence=defence-(acidv*50)
-     '<font color=red>Кислота оплавляет вашу физическую защиту</font>'
-     if defence<=0:defence=0&'<font color=red>Кислота полностью уничтожила вашу физическую защиту</font>'
+     if defence>0: 
+     defence = defence-(acidv*50)
+     '<font color = red>Кислота оплавляет вашу физическую защиту</font>'
+     if defence<= 0: defence = 0 & '<font color = red>Кислота полностью уничтожила вашу физическую защиту</font>'
      end
-     if defenceT>0:
-     defenceT=defenceT-(acidv*50)
-     '<font color=red>Кислота оплавляет вашу температурную защиту</font>'
-     if defenceT<=0:defenceT=0&'<font color=red>Кислота полностью уничтожила вашу температурную защиту</font>'
+     if defenceT>0: 
+     defenceT = defenceT-(acidv*50)
+     '<font color = red>Кислота оплавляет вашу температурную защиту</font>'
+     if defenceT<= 0: defenceT = 0 & '<font color = red>Кислота полностью уничтожила вашу температурную защиту</font>'
      end
-     if defenceW>0:
-     defenceW=defenceW-(acidv*80)
-     '<font color=red>Кислота оплавляет вашу воздушную защиту</font>'
-     if defenceW<=0:defenceW=0&'<font color=red>Кислота полностью уничтожила вашу воздушную защиту</font>'
+     if defenceW>0: 
+     defenceW = defenceW-(acidv*80)
+     '<font color = red>Кислота оплавляет вашу воздушную защиту</font>'
+     if defenceW<= 0: defenceW = 0 & '<font color = red>Кислота полностью уничтожила вашу воздушную защиту</font>'
      end
 end
 
 
 
-if wipo<=0:wipo=0&manna=manna/2&'<font color=red>Из-за потери воли вы не можете удержать магическую энергию и половина ее просто исчезает.</font>'
-if wipov<=0:wipov=0&mannav=mannav/2&'<font color=green><<$namev>> из-за потери воли не может удержать магическую энергию и половина ее просто исчезает.</font>'
+if wipo<= 0: wipo = 0 & manna = manna/2 & '<font color = red>Из-за потери воли вы не можете удержать магическую энергию и половина ее просто исчезает.</font>'
+if wipov<= 0: wipov = 0 & mannav = mannav/2 & '<font color = green><<$namev>> из-за потери воли не может удержать магическую энергию и половина ее просто исчезает.</font>'
 
-if defence>manna*10:defence=defence-100&health=health-10&'<font color=red>Физическая защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
-if defenceT>manna*10:defenceT=defenceT-100&health=health-10&'<font color=red>Температурная защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
-if defenceW>manna*10:defenceW=defenceW-100&health=health-10&'<font color=red>Воздушная защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
-if defenceH>manna*10:defenceH=defenceH-100&health=health-10&'<font color=red>Защита разума слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
+if defence>manna*10: defence = defence-100 & health = health-10 & '<font color = red>Физическая защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
+if defenceT>manna*10: defenceT = defenceT-100 & health = health-10 & '<font color = red>Температурная защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
+if defenceW>manna*10: defenceW = defenceW-100 & health = health-10 & '<font color = red>Воздушная защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
+if defenceH>manna*10: defenceH = defenceH-100 & health = health-10 & '<font color = red>Защита разума слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
 
-if defenceV>mannaV*10 and monster!11:defenceV=defenceV-100&healthv=healthv-10&'<font color=green>Физическая защита противника слишком велика для его энергии, противник не в состоянии ее удержать и защита разламывается нанося ему урон здоровью.</font>'
-if defenceTV>mannaV*10:defenceTV=defenceTV-100&healthv=healthv-10&'<font color=green>Температурная защита противника слишком велика для его энергии, противник не в состоянии ее удержать и защита разламывается нанося ему урон здоровью.</font>'
-if defenceWV>mannaV*10:defenceWV=defenceWV-100&healthv=healthv-10&'<font color=green>Воздушная защита противника слишком велика для его энергии, противник не в состоянии ее удержать и защита разламывается нанося ему урон здоровью</font>'
-if defenceHV>mannaV*10 and monster!12:defenceHV=defenceHV-100&healthv=healthv-10&'<font color=green>Защита разума противника слишком велика для его энергии, противник не в состоянии ее удержать и защита разламывается нанося ему урон здоровью</font>'
+if defenceV>mannaV*10 and monster!11: defenceV = defenceV-100 & healthv = healthv-10 & '<font color = green>Физическая защита противника слишком велика для его энергии, противник не в состоянии ее удержать и защита разламывается нанося ему урон здоровью.</font>'
+if defenceTV>mannaV*10: defenceTV = defenceTV-100 & healthv = healthv-10 & '<font color = green>Температурная защита противника слишком велика для его энергии, противник не в состоянии ее удержать и защита разламывается нанося ему урон здоровью.</font>'
+if defenceWV>mannaV*10: defenceWV = defenceWV-100 & healthv = healthv-10 & '<font color = green>Воздушная защита противника слишком велика для его энергии, противник не в состоянии ее удержать и защита разламывается нанося ему урон здоровью</font>'
+if defenceHV>mannaV*10 and monster!12: defenceHV = defenceHV-100 & healthv = healthv-10 & '<font color = green>Защита разума противника слишком велика для его энергии, противник не в состоянии ее удержать и защита разламывается нанося ему урон здоровью</font>'
 
-round=round+1
+round = round+1
 
-if stun<0:stun=0
-if stunv<0:stunv=0
-if stileMark!3 and ironskin>0:ironskin=0
-if stilevMark!3 and ironskinv>0:ironskinv=0
+if stun<0: stun = 0
+if stunv<0: stunv = 0
+if stileMark!3 and ironskin>0: ironskin = 0
+if stilevMark!3 and ironskinv>0: ironskinv = 0
 !
-if Blood>0:healthV=healthV-Blood
-if BloodV>0:health=health-BloodV
+if Blood>0: healthV = healthV-Blood
+if BloodV>0: health = health-BloodV
 
-if defencev<=0 and wooddefv>0 or defenceTV<=0 and wooddefv>0 or defenceWV<=0 and wooddefv>0:wooddefv=0 
-if defence<=0 and wooddef>0 or defenceT<=0 and wooddef>0 or defenceW<=0 and wooddef>0:wooddef=0 
+if defencev<= 0 and wooddefv>0 or defenceTV<= 0 and wooddefv>0 or defenceWV<= 0 and wooddefv>0: wooddefv = 0 
+if defence<= 0 and wooddef>0 or defenceT<= 0 and wooddef>0 or defenceW<= 0 and wooddef>0: wooddef = 0 
 
-if wooddefv>0:
-wooddefv=wooddefv-1
-defencev=defencev+1000
-defenceTV=defenceTV+1000
-defenceWV=defenceWV+1000
-mannav=mannav-50
-'<font color=red>Древесная защита растет и здоровенный сучок устремляется к вам</font>'
-damageV=defencev/10
-gs'defence'
-	 if health<=0:
-	 '<font color=red>Вы сильно пострадали</font>'
-	 xgt'fight','2'
+if wooddefv>0: 
+wooddefv = wooddefv-1
+defencev = defencev+1000
+defenceTV = defenceTV+1000
+defenceWV = defenceWV+1000
+mannav = mannav-50
+'<font color = red>Древесная защита растет и здоровенный сучок устремляется к вам</font>'
+damageV = defencev/10
+gs 'defence'
+	 if health<= 0: 
+	 '<font color = red>Вы сильно пострадали</font>'
+	 xgt 'fight','2'
 	 exit
 	 end 
 end
-if wooddef>0:
-wooddef=wooddef-1
-defence=defence+1000
-defenceT=defenceT+1000
-defenceW=defenceW+1000
-manna=manna-50
-'<font color=green>Ваша древесная защита растет и здоровенный сучок устремляется к противнику</font>'
-damage=defence/10
-gs'defenceV'
-	 if healthv<=0:
-	 '<font color=green><<$namev>> сильно пострадал</font>'
-	 xgt'fight','2'
-	 exit
-	 end 
-end
-
-if shokDef>0:shokDef=shokDef-1
-if defence>0 and shokDef>0:
-manna=manna-10
-defence=defence-(defence*20/100)
-'<font color=green>Ваша электро защита бьет разрядами во все стороны</font>'
-damage=shokDef*10
-gs'defenceV'
-damage=shokDef*10
-gs'defenceV'
-damage=shokDef*10
-gs'defenceV'
-	 if healthv<=0:
-	 '<font color=green><<$namev>> сильно пострадал</font>'
-	 xgt'fight','2'
+if wooddef>0: 
+wooddef = wooddef-1
+defence = defence+1000
+defenceT = defenceT+1000
+defenceW = defenceW+1000
+manna = manna-50
+'<font color = green>Ваша древесная защита растет и здоровенный сучок устремляется к противнику</font>'
+damage = defence/10
+gs 'defenceV'
+	 if healthv<= 0: 
+	 '<font color = green><<$namev>> сильно пострадал</font>'
+	 xgt 'fight','2'
 	 exit
 	 end 
 end
 
-if shokDefV>0:shokDefV=shokDefV-1
-if defenceV>0 and shokDefV>0:
-mannav=mannav-10
-defencev=defencev-(defencev*20/100)
-'<font color=red>Электро защита противника бьет разрядами во все стороны</font>'
-damageV=shokDefV*10
-gs'defence'
-damageV=shokDefV*10
-gs'defence'
-damageV=shokDefV*10
-gs'defence'
-	 if health<=0:
-	 '<font color=red>Вы сильно пострадали</font>'
-	 xgt'fight','2'
+if shokDef>0: shokDef = shokDef-1
+if defence>0 and shokDef>0: 
+manna = manna-10
+defence = defence-(defence*20/100)
+'<font color = green>Ваша электро защита бьет разрядами во все стороны</font>'
+damage = shokDef*10
+gs 'defenceV'
+damage = shokDef*10
+gs 'defenceV'
+damage = shokDef*10
+gs 'defenceV'
+	 if healthv<= 0: 
+	 '<font color = green><<$namev>> сильно пострадал</font>'
+	 xgt 'fight','2'
 	 exit
 	 end 
 end
 
-if waterDef>0:waterDef=waterDef-1
-if waterDef>0 and defence>0:
-defence=defence-500
-manna=manna+50
-'<font color=green>Ваша водяная защита ослабевает, но восполняет вашу энергию.</font>'
-end
-
-if waterDefV>0:waterDefV=waterDefV-1
-if waterDefV>0 and defenceV>0:
-defenceV=defenceV-500
-mannaV=mannaV+50
-'<font color=red>Водяная защита противника ослабевает, но восполняет его энергию.</font>'
-end
-
-	 if health<=0:
-	 '<font color=red>Вы сильно пострадали</font>'
-	 xgt'fight','2'
+if shokDefV>0: shokDefV = shokDefV-1
+if defenceV>0 and shokDefV>0: 
+mannav = mannav-10
+defencev = defencev-(defencev*20/100)
+'<font color = red>Электро защита противника бьет разрядами во все стороны</font>'
+damageV = shokDefV*10
+gs 'defence'
+damageV = shokDefV*10
+gs 'defence'
+damageV = shokDefV*10
+gs 'defence'
+	 if health<= 0: 
+	 '<font color = red>Вы сильно пострадали</font>'
+	 xgt 'fight','2'
 	 exit
 	 end 
-	 
-	 if healthv<=0:
-	 '<font color=green><<$namev>> сильно пострадал</font>'
-	 xgt'fight','2'
+end
+
+if waterDef>0: waterDef = waterDef-1
+if waterDef>0 and defence>0: 
+defence = defence-500
+manna = manna+50
+'<font color = green>Ваша водяная защита ослабевает, но восполняет вашу энергию.</font>'
+end
+
+if waterDefV>0: waterDefV = waterDefV-1
+if waterDefV>0 and defenceV>0: 
+defenceV = defenceV-500
+mannaV = mannaV+50
+'<font color = red>Водяная защита противника ослабевает, но восполняет его энергию.</font>'
+end
+
+	 if health<= 0: 
+	 '<font color = red>Вы сильно пострадали</font>'
+	 xgt 'fight','2'
 	 exit
 	 end 
 	 
-if manna<0:manna=0
-if mannav<0:mannav=0
+	 if healthv<= 0: 
+	 '<font color = green><<$namev>> сильно пострадал</font>'
+	 xgt 'fight','2'
+	 exit
+	 end 
+	 
+if manna<0: manna = 0
+if mannav<0: mannav = 0
 }
 
 
 
 
-$rascheturona={
-     if priziv>0:
-         if Pdefence>0:
-             if Pdefence>=damagev:
-             Pdefence-=damagev
-             damagev=0
-             '<font color=#cd00cd><<$pname>> остановил атаку противника своей защитой</font>'
+$rascheturona = {
+     if priziv>0: 
+         if Pdefence>0: 
+             if Pdefence>= damagev: 
+             Pdefence- = damagev
+             damagev = 0
+             '<font color = #cd00cd><<$pname>> остановил атаку противника своей защитой</font>'
              end
-             if Pdefence<damagev and damagev>0:
-             damagev-=Pdefence
-             Pdefence=0
-             Phealth-=damagev
-             '<font color=#cd00cd><<$namev>> уничтожил защиту вашего помощника и нанес урон его здоровью <<damagev>></font>'
-             damagev=0
+             if Pdefence<damagev and damagev>0: 
+             damagev- = Pdefence
+             Pdefence = 0
+             Phealth- = damagev
+             '<font color = #cd00cd><<$namev>> уничтожил защиту вашего помощника и нанес урон его здоровью <<damagev>></font>'
+             damagev = 0
              end
          end
-         if Pdefence<=0 and damagev>0:
-         Phealth-=damagev
-         '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damagev>></font>'
-         damagev=0
+         if Pdefence<= 0 and damagev>0: 
+         Phealth- = damagev
+         '<font color = #cd00cd><<$namev>> нанес урон здоровью помощника <<damagev>></font>'
+         damagev = 0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<= 0 or Pwipo<= 0 or pmanna<= 0: 
          dynamic $prizivNill
          end
      end
-     if GraveDog>=100:
-         if GraveDogPower>=damagev:
-         GraveDogPower-=damagev
-         damagev=0
+     if GraveDog>= 100: 
+         if GraveDogPower>= damagev: 
+         GraveDogPower- = damagev
+         damagev = 0
          else
-         damagev-=GraveDogPower
-         GraveDogPower=0
-         health=health-damagev
+         damagev- = GraveDogPower
+         GraveDogPower = 0
+         health = health-damagev
          end
      else
-     health=health-damagev
+     health = health-damagev
      end
 }
-$rascheturonav={
-     if GraveDogv>=100:
-         if GraveDogPowerv>=damage:
-         GraveDogPowerv-=damage
-         damage=0
+$rascheturonav = {
+     if GraveDogv>= 100: 
+         if GraveDogPowerv>= damage: 
+         GraveDogPowerv- = damage
+         damage = 0
          else
-         damage-=GraveDogPowerv
-         GraveDogPowerv=0
-         healthv=healthv-damage
+         damage- = GraveDogPowerv
+         GraveDogPowerv = 0
+         healthv = healthv-damage
          end
      else
-     healthv=healthv-damage
+     healthv = healthv-damage
      end
 }
-$rascheturonaT={
-     if priziv>0:
-         if PdefenceT>0:
-             if PdefenceT>=damageTv:
-             PdefenceT-=damageTv
-             damageTv=0
-             '<font color=#cd00cd><<$pname>> остановил температурную атаку противника своей защитой</font>'
+$rascheturonaT = {
+     if priziv>0: 
+         if PdefenceT>0: 
+             if PdefenceT>= damageTv: 
+             PdefenceT- = damageTv
+             damageTv = 0
+             '<font color = #cd00cd><<$pname>> остановил температурную атаку противника своей защитой</font>'
              end
-             if PdefenceT<damageTv and damageTv>0:
-             damageTv-=PdefenceT
-             PdefenceT=0
-             Phealth-=damageTv
-             '<font color=#cd00cd><<$namev>> уничтожил температурную защиту вашего помощника и нанес урон его здоровью <<damagetv>></font>'
-             damageTv=0
+             if PdefenceT<damageTv and damageTv>0: 
+             damageTv- = PdefenceT
+             PdefenceT = 0
+             Phealth- = damageTv
+             '<font color = #cd00cd><<$namev>> уничтожил температурную защиту вашего помощника и нанес урон его здоровью <<damagetv>></font>'
+             damageTv = 0
              end
          end
-         if PdefenceT<=0 and damageTv>0:
-         Phealth-=damageTv
-         '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damagetv>></font>'
-         damageTv=0
+         if PdefenceT<= 0 and damageTv>0: 
+         Phealth- = damageTv
+         '<font color = #cd00cd><<$namev>> нанес урон здоровью помощника <<damagetv>></font>'
+         damageTv = 0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<= 0 or Pwipo<= 0 or pmanna<= 0: 
          dynamic $prizivNill
          end
      end
      
-     if GraveDog>=100:
-         if GraveDogPower>=damageTV:
-         GraveDogPower-=damageTV
-         damageTV=0
+     if GraveDog>= 100: 
+         if GraveDogPower>= damageTV: 
+         GraveDogPower- = damageTV
+         damageTV = 0
          else
-         damageTV-=GraveDogPower
-         GraveDogPower=0
-         health=health-damageTV
+         damageTV- = GraveDogPower
+         GraveDogPower = 0
+         health = health-damageTV
          end
      else
-     health=health-damageTV
+     health = health-damageTV
      end
 }
-$rascheturonaTV={
-     if prizivv>0:
-         if PdefenceTv>0:
-             if PdefenceTv>=damageT:
-             PdefenceTv-=damageT
-             damageT=0
-             '<font color=#cd00cd><<$pnamev>> остановил вашу температурную атаку своей защитой</font>'
+$rascheturonaTV = {
+     if prizivv>0: 
+         if PdefenceTv>0: 
+             if PdefenceTv>= damageT: 
+             PdefenceTv- = damageT
+             damageT = 0
+             '<font color = #cd00cd><<$pnamev>> остановил вашу температурную атаку своей защитой</font>'
              end
-             if PdefenceTv<damageT and damageT>0:
-             damageT-=PdefenceTv
-             PdefenceTv=0
-             Phealthv-=damageT
-             '<font color=#cd00cd>Вы уничтожили температурную защиту помощника противника и нанесли урон его здоровью <<damaget>></font>'
-             damageT=0
+             if PdefenceTv<damageT and damageT>0: 
+             damageT- = PdefenceTv
+             PdefenceTv = 0
+             Phealthv- = damageT
+             '<font color = #cd00cd>Вы уничтожили температурную защиту помощника противника и нанесли урон его здоровью <<damaget>></font>'
+             damageT = 0
              end
          end
-         if PdefenceTv<=0 and damageT>0:
-         Phealthv-=damageT
-         '<font color=#cd00cd>Вы нанесли урон здоровью помощника противника <<damaget>></font>'
-         damageT=0
+         if PdefenceTv<= 0 and damageT>0: 
+         Phealthv- = damageT
+         '<font color = #cd00cd>Вы нанесли урон здоровью помощника противника <<damaget>></font>'
+         damageT = 0
          end
-         if Phealthv<=0 or Pwipov<=0 or pmannav<=0:
+         if Phealthv<= 0 or Pwipov<= 0 or pmannav<= 0: 
          dynamic $prizivNillv
          end
      end
      
-     if GraveDogv>=100:
-         if GraveDogPowerv>=damageT:
-         GraveDogPowerv-=damageT
-         damageT=0
+     if GraveDogv>= 100: 
+         if GraveDogPowerv>= damageT: 
+         GraveDogPowerv- = damageT
+         damageT = 0
          else
-         damageT-=GraveDogPowerv
-         GraveDogPowerv=0
-         healthv=healthv-damageT
+         damageT- = GraveDogPowerv
+         GraveDogPowerv = 0
+         healthv = healthv-damageT
          end
      else
-     healthv=healthv-damageT
+     healthv = healthv-damageT
      end
 }
-$rascheturonaW={
-     if priziv>0:
-         if PdefenceW>0:
-             if PdefenceW>=damageWv:
-             PdefenceW-=damageWv
-             damageWv=0
-             '<font color=#cd00cd><<$pname>> остановил воздушную атаку противника своей защитой</font>'
+$rascheturonaW = {
+     if priziv>0: 
+         if PdefenceW>0: 
+             if PdefenceW>= damageWv: 
+             PdefenceW- = damageWv
+             damageWv = 0
+             '<font color = #cd00cd><<$pname>> остановил воздушную атаку противника своей защитой</font>'
              end
-             if PdefenceW<damageWv and damageWv>0:
-             damageWv-=PdefenceW
-             PdefenceW=0
-             Phealth-=damageWv
-             '<font color=#cd00cd><<$namev>> уничтожил воздушную защиту вашего помощника и нанес урон его здоровью <<damageWv>></font>'
-             damageWv=0
+             if PdefenceW<damageWv and damageWv>0: 
+             damageWv- = PdefenceW
+             PdefenceW = 0
+             Phealth- = damageWv
+             '<font color = #cd00cd><<$namev>> уничтожил воздушную защиту вашего помощника и нанес урон его здоровью <<damageWv>></font>'
+             damageWv = 0
              end
          end
-         if PdefenceW<=0 and damageWv>0:
-         Phealth-=damageWv
-         '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damageWv>></font>'
-         damageWv=0
+         if PdefenceW<= 0 and damageWv>0: 
+         Phealth- = damageWv
+         '<font color = #cd00cd><<$namev>> нанес урон здоровью помощника <<damageWv>></font>'
+         damageWv = 0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<= 0 or Pwipo<= 0 or pmanna<= 0: 
          dynamic $prizivNill
          end
      end
-     if GraveDog>=100:
-         if GraveDogPower>=damageWV:
-         GraveDogPower-=damageWV
-         damageWV=0
+     if GraveDog>= 100: 
+         if GraveDogPower>= damageWV: 
+         GraveDogPower- = damageWV
+         damageWV = 0
          else
-         damageWV-=GraveDogPower
-         GraveDogPower=0
-         health=health-damageWV
+         damageWV- = GraveDogPower
+         GraveDogPower = 0
+         health = health-damageWV
          end
      else
-     health=health-damageWV
+     health = health-damageWV
      end
 }
-$rascheturonaWV={
-     if GraveDogv>=100:
-         if GraveDogPowerv>=damageW:
-         GraveDogPowerv-=damageW
-         damageW=0
+$rascheturonaWV = {
+     if GraveDogv>= 100: 
+         if GraveDogPowerv>= damageW: 
+         GraveDogPowerv- = damageW
+         damageW = 0
          else
-         damageW-=GraveDogPowerv
-         GraveDogPowerv=0
-         healthv=healthv-damageW
+         damageW- = GraveDogPowerv
+         GraveDogPowerv = 0
+         healthv = healthv-damageW
          end
      else
-     healthv=healthv-damageW
+     healthv = healthv-damageW
      end
 }
-$rascheturonaH={
-     if priziv>0:
-         if PdefenceH>0:
-             if PdefenceH>=damageHv:
-             PdefenceH-=damageHv
-             damageHv=0
-             '<font color=#cd00cd><<$pname>> остановил ментальную атаку противника своей защитой</font>'
+$rascheturonaH = {
+     if priziv>0: 
+         if PdefenceH>0: 
+             if PdefenceH>= damageHv: 
+             PdefenceH- = damageHv
+             damageHv = 0
+             '<font color = #cd00cd><<$pname>> остановил ментальную атаку противника своей защитой</font>'
              end
-             if PdefenceH<damageHv and damageHv>0:
-             damageHv-=PdefenceH
-             PdefenceH=0
-             PWIPO-=damageHv
-             '<font color=#cd00cd><<$namev>> уничтожил ментальную защиту вашего помощника и нанес урон его воле <<damagehv>></font>'
-             damageHv=0
+             if PdefenceH<damageHv and damageHv>0: 
+             damageHv- = PdefenceH
+             PdefenceH = 0
+             PWIPO- = damageHv
+             '<font color = #cd00cd><<$namev>> уничтожил ментальную защиту вашего помощника и нанес урон его воле <<damagehv>></font>'
+             damageHv = 0
              end
          end
-         if PdefenceH<=0 and damageHv>0:
-         PWIPO-=damageHv
-         '<font color=#cd00cd><<$namev>> нанес урон воле помощника <<damagehv>></font>'
-         damageHv=0
+         if PdefenceH<= 0 and damageHv>0: 
+         PWIPO- = damageHv
+         '<font color = #cd00cd><<$namev>> нанес урон воле помощника <<damagehv>></font>'
+         damageHv = 0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<= 0 or Pwipo<= 0 or pmanna<= 0: 
          dynamic $prizivNill
          end
      end
      
-     if GraveDog>=100:
-         if GraveDogPower>=damageHV:
-         GraveDogPower-=damageHV
-         damageHV=0
+     if GraveDog>= 100: 
+         if GraveDogPower>= damageHV: 
+         GraveDogPower- = damageHV
+         damageHV = 0
          else
-         damageHV-=GraveDogPower
-         GraveDogPower=0
-         WIPO=WIPO-damageHV
+         damageHV- = GraveDogPower
+         GraveDogPower = 0
+         WIPO = WIPO-damageHV
          end
      else
-     WIPO=WIPO-damageHV
+     WIPO = WIPO-damageHV
      end
 }
-$rascheturonaHV={
-     if GraveDogv>=100:
-         if GraveDogPowerv>=damageH:
-         GraveDogPowerv-=damageH
-         damageH=0
+$rascheturonaHV = {
+     if GraveDogv>= 100: 
+         if GraveDogPowerv>= damageH: 
+         GraveDogPowerv- = damageH
+         damageH = 0
          else
-         damageH-=GraveDogPowerv
-         GraveDogPowerv=0
-         WIPOV=WIPOV-damageH
+         damageH- = GraveDogPowerv
+         GraveDogPowerv = 0
+         WIPOV = WIPOV-damageH
          end
      else
-     WIPOV=WIPOV-damageH
+     WIPOV = WIPOV-damageH
      end
 }
-$rascheturonaM={
-     if priziv>0:
-         if PdefenceM>0:
-             if PdefenceM>=damageMv:
-             PdefenceM-=damageMv
-             damageMv=0
-             '<font color=#cd00cd><<$pname>> остановил атаку на МАГИЮ своей защитой</font>'
+$rascheturonaM = {
+     if priziv>0: 
+         if PdefenceM>0: 
+             if PdefenceM>= damageMv: 
+             PdefenceM- = damageMv
+             damageMv = 0
+             '<font color = #cd00cd><<$pname>> остановил атаку на МАГИЮ своей защитой</font>'
              end
-             if PdefenceM<damageMv and damageMv>0:
-             damageMv-=PdefenceM
-             PdefenceM=0
-             PMANNA-=damageMv
-             '<font color=#cd00cd><<$namev>> уничтожил защиту магии вашего помощника и нанес урон его мане <<damageMv>></font>'
-             damageMv=0
+             if PdefenceM<damageMv and damageMv>0: 
+             damageMv- = PdefenceM
+             PdefenceM = 0
+             PMANNA- = damageMv
+             '<font color = #cd00cd><<$namev>> уничтожил защиту магии вашего помощника и нанес урон его мане <<damageMv>></font>'
+             damageMv = 0
              end
          end
-         if PdefenceM<=0 and damageMv>0:
-         PMANNA-=damageHv
-         '<font color=#cd00cd><<$namev>> нанес урон мане помощника <<damageMv>></font>'
-         damageMv=0
+         if PdefenceM<= 0 and damageMv>0: 
+         PMANNA- = damageHv
+         '<font color = #cd00cd><<$namev>> нанес урон мане помощника <<damageMv>></font>'
+         damageMv = 0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<= 0 or Pwipo<= 0 or pmanna<= 0: 
          dynamic $prizivNill
          end
      end
-     if GraveDog>=100:
-         if GraveDogPower>=damageMV:
-         GraveDogPower-=damageMV
-         damageMV=0
+     if GraveDog>= 100: 
+         if GraveDogPower>= damageMV: 
+         GraveDogPower- = damageMV
+         damageMV = 0
          else
-         damageMV-=GraveDogPower
-         GraveDogPower=0
-         MANNA=MANNA-damageMV
+         damageMV- = GraveDogPower
+         GraveDogPower = 0
+         MANNA = MANNA-damageMV
          end
      else
-     MANNA=MANNA-damageMV
+     MANNA = MANNA-damageMV
      end
 }
-$rascheturonaMV={
-     if GraveDogv>=100:
-         if GraveDogPowerv>=damageM:
-         GraveDogPowerv-=damageM
-         damageM=0
+$rascheturonaMV = {
+     if GraveDogv>= 100: 
+         if GraveDogPowerv>= damageM: 
+         GraveDogPowerv- = damageM
+         damageM = 0
          else
-         damageM-=GraveDogPowerv
-         GraveDogPowerv=0
-         MANNAV=MANNAV-damageM
+         damageM- = GraveDogPowerv
+         GraveDogPowerv = 0
+         MANNAV = MANNAV-damageM
          end
      else
-     MANNAV=MANNAV-damageM
+     MANNAV = MANNAV-damageM
      end
 }
 

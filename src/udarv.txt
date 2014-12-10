@@ -1,45 +1,45 @@
 # udarv
-if $ARGS[0]='0':
+if $ARGS[0] = '0': 
 !рука
-damagev=0
-damagev=strenv/2
-damkoef=damagev*20/100
-damagev=RAND(damagev-damkoef,damagev+damkoef)
+damagev = 0
+damagev = strenv/2
+damkoef = damagev*20/100
+damagev = RAND(damagev-damkoef,damagev+damkoef)
 end
-if $ARGS[0]='1':
+if $ARGS[0] = '1': 
 !нога
-damagev=0
-damagev=strenv
-damkoef=damagev*20/100
-damagev=RAND(damagev-damkoef,damagev+damkoef)
+damagev = 0
+damagev = strenv
+damkoef = damagev*20/100
+damagev = RAND(damagev-damkoef,damagev+damkoef)
 end
-if $ARGS[0]='2':
+if $ARGS[0] = '2': 
 !дубинал
-damagev=0
-damagev=strenv*2
-damkoef=damagev*20/100
-damagev=RAND(damagev-damkoef,damagev+damkoef)
+damagev = 0
+damagev = strenv*2
+damkoef = damagev*20/100
+damagev = RAND(damagev-damkoef,damagev+damkoef)
 end
-if $ARGS[0]='3':
+if $ARGS[0] = '3': 
 !холодное оружие
-damagev=0
-damagev=(strenv*2)+weapDamV
-damkoef=damagev*20/100
-damagev=RAND(strenV+damagev-damkoef,strenV+damagev+damkoef)
+damagev = 0
+damagev = (strenv*2)+weapDamV
+damkoef = damagev*20/100
+damagev = RAND(strenV+damagev-damkoef,strenV+damagev+damkoef)
 end
-if $ARGS[0]='4':
+if $ARGS[0] = '4': 
 !клыки
-damagev=0
-damagev=(strenv*4)
-damkoef=damagev*20/100
-damagev=RAND(damagev-damkoef,damagev+damkoef)
+damagev = 0
+damagev = (strenv*4)
+damkoef = damagev*20/100
+damagev = RAND(damagev-damkoef,damagev+damkoef)
 end
-if $ARGS[0]='5':
+if $ARGS[0] = '5': 
 !бык
-damagev=0
-damagev=500
-damkoef=damagev*20/100
-damagev=RAND(damagev-damkoef,damagev+damkoef)
+damagev = 0
+damagev = 500
+damkoef = damagev*20/100
+damagev = RAND(damagev-damkoef,damagev+damkoef)
 end
 --- udarv ---------------------------------
 

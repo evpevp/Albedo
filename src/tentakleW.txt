@@ -1,71 +1,71 @@
 # tentakleW
 *clr
-'<center><img src="pic/EvedonMonsters/tentacle.jpg"></center>'
+'<center><img src = "pic/EvedonMonsters/tentacle.jpg"></center>'
 
-tentrand=RAND(0,3)
-monster=1
-tentakNumber=8
-bronikv=200
+tentrand = RAND(0,3)
+monster = 1
+tentakNumber = 8
+bronikv = 200
 
 
-if tentrand=0:
-$nameV='Малый тентакль'
-lvlv=50
-strenV=60
-speedV=160
-agilV=160
-vitalV=610
-intelv=10
-willv=10
-program=9
-healthV=vitalV*10
-mannaV=intelV*10
-wipoV=willV*10
+if tentrand = 0: 
+$nameV = 'Малый тентакль'
+lvlv = 50
+strenV = 60
+speedV = 160
+agilV = 160
+vitalV = 610
+intelv = 10
+willv = 10
+program = 9
+healthV = vitalV*10
+mannaV = intelV*10
+wipoV = willV*10
 end
 
-if tentrand=1:
-$nameV='Тентакль'
-lvlv=70
-strenV=120
-speedV=200
-agilV=160
-vitalV=610
-intelv=10
-willv=10
-program=9
-healthV=vitalV*10
-mannaV=intelV*10
-wipoV=willV*10
+if tentrand = 1: 
+$nameV = 'Тентакль'
+lvlv = 70
+strenV = 120
+speedV = 200
+agilV = 160
+vitalV = 610
+intelv = 10
+willv = 10
+program = 9
+healthV = vitalV*10
+mannaV = intelV*10
+wipoV = willV*10
 end
 
-if tentrand=2:
-$nameV='Крупный тентакль'
-lvlv=90
-strenV=130
-speedV=200
-agilV=200
-vitalV=750
-intelv=10
-willv=10
-program=9
-healthV=vitalV*10
-mannaV=intelV*10
-wipoV=willV*10
+if tentrand = 2: 
+$nameV = 'Крупный тентакль'
+lvlv = 90
+strenV = 130
+speedV = 200
+agilV = 200
+vitalV = 750
+intelv = 10
+willv = 10
+program = 9
+healthV = vitalV*10
+mannaV = intelV*10
+wipoV = willV*10
 end
 
-if tentrand=3:
-$nameV='Огромный тентакль'
-lvlv=110
-strenV=180
-speedV=200
-agilV=200
-vitalV=1000
-intelv=10
-willv=10
-program=9
-healthV=vitalV*10
-mannaV=intelV*10
-wipoV=willV*10
+if tentrand = 3: 
+$nameV = 'Огромный тентакль'
+lvlv = 110
+strenV = 180
+speedV = 200
+agilV = 200
+vitalV = 1000
+intelv = 10
+willv = 10
+program = 9
+healthV = vitalV*10
+mannaV = intelV*10
+wipoV = willV*10
 end
 --- tentakleW ---------------------------------
 

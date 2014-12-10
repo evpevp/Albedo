@@ -2,15 +2,15 @@
 
 *clr
 
-edarand=RAND(0,7)
-if edarand=0:'<center><img src="pic/Evedon/eda.jpg"></center>'
-if edarand=1:'<center><img src="pic/Evedon/eda1.jpg"></center>'
-if edarand=2:'<center><img src="pic/Evedon/eda2.jpg"></center>'
-if edarand=3:'<center><img src="pic/Evedon/eda3.jpg"></center>'
-if edarand=4:'<center><img src="pic/Evedon/eda4.jpg"></center>'
-if edarand=5:'<center><img src="pic/Evedon/eda5.jpg"></center>'
-if edarand=6:'<center><img src="pic/Evedon/eda6.jpg"></center>'
-if edarand=7:'<center><img src="pic/Evedon/eda7.jpg"></center>'
+edarand = RAND(0,7)
+if edarand = 0: '<center><img src = "pic/Evedon/eda.jpg"></center>'
+if edarand = 1: '<center><img src = "pic/Evedon/eda1.jpg"></center>'
+if edarand = 2: '<center><img src = "pic/Evedon/eda2.jpg"></center>'
+if edarand = 3: '<center><img src = "pic/Evedon/eda3.jpg"></center>'
+if edarand = 4: '<center><img src = "pic/Evedon/eda4.jpg"></center>'
+if edarand = 5: '<center><img src = "pic/Evedon/eda5.jpg"></center>'
+if edarand = 6: '<center><img src = "pic/Evedon/eda6.jpg"></center>'
+if edarand = 7: '<center><img src = "pic/Evedon/eda7.jpg"></center>'
 
 
 

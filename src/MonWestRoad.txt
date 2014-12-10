@@ -7,77 +7,77 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Западная горная дорога</H4></center>'
-'<center><img src="pic/Evedon/monroad.jpg" ></center>'
+'<center><img src = "pic/Evedon/monroad.jpg" ></center>'
 'Дорога вьется в горном лесу, то поднимаясь в горы, то опускаясь в низины.'
 'На столбике грубо намалевано <<roadMonMark>>я верста'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 
-robrand=RAND(0,100)
-if robrand>=80:
-     if roratimes<=0:
-	 roratimes=1
+robrand = RAND(0,100)
+if robrand>= 80: 
+     if roratimes<= 0: 
+	 roratimes = 1
 	 *clr
-     '<center><img src="pic/EvedonMonsters/demonolog.jpg"></center>'
+     '<center><img src = "pic/EvedonMonsters/demonolog.jpg"></center>'
 	 'С обочины к вам направилась девушка одетая очень фривольно, из-под короткой юбки свисал толстый член. Она усмехнулась глядя на вас.'
-	     if marpeozaQW!100:
+	     if marpeozaQW!100: 
 		 'И напала сказав "Ты станешь еще одним кирпичиком силы культа матери Марпеозы"'
-		 $nameV='Демонолог'
-		 lvlv=186
-		 strenV=100
-		 speedV=100
-		 agilV=100
-		 vitalV=500
-		 intelv=500
-		 willv=110
-		 program=42
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
-		 BATpotionV=5
-		 klonv=1
-		 armorDefV=300
-		 monster=26
-		 act 'Драться':gt'before'
+		 $nameV = 'Демонолог'
+		 lvlv = 186
+		 strenV = 100
+		 speedV = 100
+		 agilV = 100
+		 vitalV = 500
+		 intelv = 500
+		 willv = 110
+		 program = 42
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*15
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 klonv = 1
+		 armorDefV = 300
+		 monster = 26
+		 act 'Драться': gt 'before'
 		 exit
 		 end
-		 if marpeozaQW=100:
+		 if marpeozaQW = 100: 
 		 'Привет <<$name>>'
-		 act 'Уйти':gt $curloc
+		 act 'Уйти': gt $curloc
 		 exit
 		 end
 	 end
 
-	 if roratimes>0:roratimes=roratimes-1
+	 if roratimes>0: roratimes = roratimes-1
 
 end
 
 ''
-if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
-if roadMonMark=3 and marpeozaQW!2 and demonmorf<=0:'На обочине дороги стоит <a href="exec: gt''DemonologLogovo''">Старый постоялый двор</a>.'
+if vampireMorf>= 1: 'Зарыться в <a href = "exec: gt ''vampGrave''">землю</a>'
+if roadMonMark = 3 and marpeozaQW!2 and demonmorf<= 0: 'На обочине дороги стоит <a href = "exec: gt ''DemonologLogovo''">Старый постоялый двор</a>.'
 
-!if desertMark>0:
-	 act 'Идти на запад(1 час)':
+!if desertMark>0: 
+	 act 'Идти на запад(1 час)': 
 	 cla
-	 minut=minut+60
-	 roadMonMark+=1
+	 minut += 60
+	 roadMonMark+= 1
 	 'Вы идете по пустынной дороге.'
-         act 'Передохнуть':
-             if roadMonMark<10:gt $curloc 
-             if roadMonMark>=10:gt 'monkrik'
+         act 'Передохнуть': 
+             if roadMonMark<10: gt $curloc 
+             if roadMonMark>= 10: gt 'monkrik'
          end
 	 end
 	 
-	 act 'Идти на восток(1 час)':
+	 act 'Идти на восток(1 час)': 
 	 cla
-	 minut=minut+60
-     roadMonMark-=1
+	 minut += 60
+     roadMonMark- = 1
      'Вы идете по пустынной дороге.'
-         act 'Передохнуть':
-             if roadMonMark<=0:gt'mountW'
-             if roadMonMark>0:gt $curloc 
+         act 'Передохнуть': 
+             if roadMonMark<= 0: gt 'mountW'
+             if roadMonMark>0: gt $curloc 
          end
 	 end
 --- MonWestRoad ---------------------------------

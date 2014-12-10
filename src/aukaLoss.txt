@@ -1,53 +1,53 @@
 # aukaLoss
-monster=0
+monster = 0
 'Аука повалил вас на землю, вы не в состоянии даже на ноги подняться. В ушах звон, открыв глаза, вы видите что возле вас уже собралось человек пятнадцать таких пузатых коротышек и все уже достали свои довольно немаленькие писюны, готовые позабавиться с вами.'
 
-act 'Вот черт':
+act 'Вот черт': 
 cla
 *clr
-!horny=0
-SUB=SUB+1
-minut=minut+120
-monst=monst+1
-skverna=skverna+5
-guy=guy+15
-gangbang=gangbang+1
-bj=bj+5
-cumlip=cumlip+2
-cumface=cumface+3
-anal=anal+5
-cumanus=cumanus+5
-if vagina>0:vag=vag+10&sex=sex+5&cumpussy=cumpussy+5
-'<center><img src="pic/EvedonMonsters/aukasex.jpg" ></center>'
+!horny = 0
+SUB = SUB+1
+minut += 120
+monst = monst+1
+skverna = skverna+5
+guy = guy+15
+gangbang = gangbang+1
+bj = bj+5
+cumlip = cumlip+2
+cumface = cumface+3
+anal = anal+5
+cumanus = cumanus+5
+if vagina>0: vag = vag+10 & sex = sex+5 & cumpussy = cumpussy+5
+'<center><img src = "pic/EvedonMonsters/aukasex.jpg" ></center>'
 'Пузатые коротышки быстро вас раздели и оттащили за руки и ноги на маленькую полянку, где вас поставили на четыре кости и вы опомниться не успели как в каждом вашем отверстии уже было по члену немилосердно вас трахающему. Какой-то продуманный старичок, даже вам пытался сначала в ухо затолкать свой член, а потом в ноздрю. Эта вакханалия продолжалась по меньшей мере пару часов, за это время коротышки забрызгали все ваше тело своей спермой и отжарили во все дыры до полного изнеможения'
-if vagina>0:gs'femorg'
-gs'cumslut'
-gs'analslut'
+if vagina>0: gs 'femorg'
+gs 'cumslut'
+gs 'analslut'
 'Когда банда Аук наигралась с вашем телом, они подтянули свои штанишки и стали собираться в лес, один из них добрососедски вам сказал. "Ты заходи, еще повторим как-нибудь."'
 
-     chanrand=RAND(0,7)
-		 if chanrand = 0:
-		 leg=leg+RAND(1,5)
+     chanrand = RAND(0,7)
+		 if chanrand = 0: 
+		 leg = leg+RAND(1,5)
 		 end
-		 if chanrand = 1:
-		 thight=thight+RAND(1,5)
+		 if chanrand = 1: 
+		 thight = thight+RAND(1,5)
 		 end
-		 if chanrand = 2:
-		 ass=ass+RAND(1,5)
+		 if chanrand = 2: 
+		 ass = ass+RAND(1,5)
 		 end
-		 if chanrand = 3:
-		 brist=brist+RAND(1,5)
+		 if chanrand = 3: 
+		 brist = brist+RAND(1,5)
 		 end
-		 if chanrand = 4:
-		 hand=hand+RAND(1,5)
+		 if chanrand = 4: 
+		 hand = hand+RAND(1,5)
 		 end
-		 if chanrand = 5:
-		 face=face+RAND(1,5)
+		 if chanrand = 5: 
+		 face = face+RAND(1,5)
 		 end
-		 if chanrand = 6:
-		 tit=tit+RAND(1,5)
+		 if chanrand = 6: 
+		 tit = tit+RAND(1,5)
 		 end
-act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 end
 --- aukaLoss ---------------------------------
 

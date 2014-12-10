@@ -1,234 +1,234 @@
 # stripclub
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
-'<center><B><font color=maroon>Стрип клуб</font></B></center>'
-'<center><img src="pic\pic\stripclub.jpg" ></center>'
+ minut = minut + 5
+'<center><B><font color = maroon>Стрип клуб</font></B></center>'
+'<center><img src = "pic\pic\stripclub.jpg" ></center>'
 'Время работы с 16 до 3 без выходных.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-Set scrand = RAND (1,100)
-if scrand <= 1 and stripday ! day:
-set stripday = day
-Set cfnm = 1
+ scrand = RAND (1,100)
+if scrand <= 1 and stripday ! day: 
+ stripday = day
+ cfnm = 1
 end
-if scrand > 1 and stripday ! day:
-set stripday = day
-Set cfnm = 0
+if scrand > 1 and stripday ! day: 
+ stripday = day
+ cfnm = 0
 end
-if cfnm = 1:'Сегодня в программе, мужской стриптиз, входной билет 500 руб.'
-if cfnm = 0:'Сегодня в программе, стриптиз, входной билет 500 руб.'
-     act 'ВЫЙТИ':
+if cfnm = 1: 'Сегодня в программе, мужской стриптиз, входной билет 500 руб.'
+if cfnm = 0: 'Сегодня в программе, стриптиз, входной билет 500 руб.'
+     act 'ВЫЙТИ': 
      cla
-     set minut = minut + 5
-     gt'down'
+      minut = minut + 5
+     gt 'down'
      end
      
-     if hour >= 16 or hour < 3:
-		 if cfnm = 0 and money >= 500:
-			 act 'Заплатить 500 рублей и войти':
+     if hour >= 16 or hour < 3: 
+		 if cfnm = 0 and money >= 500: 
+			 act 'Заплатить 500 рублей и войти': 
 			 cla
-			 set money = money - 500
-			 set minut = minut + 5
-			 gt'stripclub','forman'
+			  money = money - 500
+			  minut = minut + 5
+			 gt 'stripclub','forman'
 			 end
 		 end
      end
 
 end
 
-if $ARGS[0]='forman':
+if $ARGS[0] = 'forman': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
-'<center><B><font color=maroon>Стрип клуб</font></B></center>'
-'<center><img src="pic\pic\stripclub1.jpg" ></center>'
+ minut = minut + 5
+'<center><B><font color = maroon>Стрип клуб</font></B></center>'
+'<center><img src = "pic\pic\stripclub1.jpg" ></center>'
 clr
-gs'stat'
+gs 'stat'
 'На сцене в общем зале выступают девушки раздевающиеся под музыку, существует услуга приват танцев, стоимость 1000 рублей за танец.'
 
-     act 'ВЫЙТИ':
+     act 'ВЫЙТИ': 
      cla
-     set minut = minut + 5
-     gt'stripclub','start'
+      minut = minut + 5
+     gt 'stripclub','start'
      end
      
-     if hour >= 16 or hour < 3:
-		 masharand=Rand(0,7)
-         act 'Сесть за столик около сцены и смотреть стриптиз':gt'stripclub','stol'
-         if money >= 1000 and (masharand<>2 or mashaQW<15):
-			act 'Заказать приватный танец (1000 руб)':gt'stripclub','privat'
+     if hour >= 16 or hour < 3: 
+		 masharand = Rand(0,7)
+         act 'Сесть за столик около сцены и смотреть стриптиз': gt 'stripclub','stol'
+         if money >= 1000 and (masharand<>2 or mashaQW<15): 
+			act 'Заказать приватный танец (1000 руб)': gt 'stripclub','privat'
          end
-         if hour >= 19 or hour < 3 and money>=1000 and mashaQW>=15 and masharand=2:
-			act 'Заказать приватный танец (1000 руб)':gt'stripclub','mashaprivat'
+         if hour >= 19 or hour < 3 and money>= 1000 and mashaQW>= 15 and masharand = 2: 
+			act 'Заказать приватный танец (1000 руб)': gt 'stripclub','mashaprivat'
 		 end
      end
 end
 
-if $ARGS[0]='privat':
+if $ARGS[0] = 'privat': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set money = money - 1000
-set minut = minut + 60
-set horny = horny + 25
-manna=manna+15
-set DOM = DOM + 1
+ money = money - 1000
+ minut = minut + 60
+ horny = horny + 25
+manna = manna+15
+ DOM = DOM + 1
 clr
-gs'stat'
-if pol = 0:'<center><img src="pic\pic\privat2.jpg" ></center>'
+gs 'stat'
+if pol = 0: '<center><img src = "pic\pic\privat2.jpg" ></center>'
 'Девушки очень горячо танцуют вокруг вас, вы чувствуете как возбуждаетесь.'
-     if money >= 1000:
-     act 'Еще один приватный танец (1000 руб)':gt'stripclub','privat'
+     if money >= 1000: 
+     act 'Еще один приватный танец (1000 руб)': gt 'stripclub','privat'
      end
-     act 'Уйти к сцене':gt'stripclub','forman'
+     act 'Уйти к сцене': gt 'stripclub','forman'
 end
 
-if $ARGS[0]='stol':
+if $ARGS[0] = 'stol': 
 cla
 *clr
 clr
-gs'stat'
-'<center><img src="pic\pic\stripclub2.jpg" ></center>'
+gs 'stat'
+'<center><img src = "pic\pic\stripclub2.jpg" ></center>'
 'На сцене зажигают девченки бойко танцуя и раздеваясь перед напряженной мужской публикой.'
 
-     act 'Смотреть стриптиз':
+     act 'Смотреть стриптиз': 
      cla
      *clr
 	 clr
-	 gs'stat'
-	 set minut = minut + 15
-     '<center><img src="pic\pic\stripclub4.jpg" ></center>'
+	 gs 'stat'
+	  minut = minut + 15
+     '<center><img src = "pic\pic\stripclub4.jpg" ></center>'
      'Около вас танцует девушка явно расчитывая на чаевые.'
-         if money >= 50:
-             act 'Сунуть ей 50 рублей':
+         if money >= 50: 
+             act 'Сунуть ей 50 рублей': 
 			 cla
 			 *clr
-			 set horny = horny + 5
-			 set minut = minut + 15
-			 manna=manna+5
-			 set money = money - 50
-			 '<center><img src="pic\pic\stripclub6.jpg" ></center>'
+			  horny = horny + 5
+			  minut = minut + 15
+			 manna = manna+5
+			  money = money - 50
+			 '<center><img src = "pic\pic\stripclub6.jpg" ></center>'
 			 'Вы сунули 50 рублей стриптизерше в трусики и она призывно начала вилять бедрами и трясти титьками перед вами, вы чувствуете как вы плавно начинаете возбуждаться.'
-			 act 'Далее':gt'stripclub','stol'
+			 act 'Далее': gt 'stripclub','stol'
 			 end
          end
          
-         act 'Потупить взор':
+         act 'Потупить взор': 
          cla
-         set horny = horny - 5
-         set minut = minut + 15
-         manna=manna-5
+          horny = horny - 5
+          minut = minut + 15
+         manna = manna-5
          'Вы решили не давать денег стриптизерше и отвели от нее взгляд, вам немного стыдно и возбуждение уменьшается.'
-         act 'Далее':gt'stripclub','stol'
+         act 'Далее': gt 'stripclub','stol'
          end
      end
      
-     act 'Отойти от сцены':gt'stripclub','forman'
+     act 'Отойти от сцены': gt 'stripclub','forman'
 end
 
 
 
-if $ARGS[0]='mashaprivat':
+if $ARGS[0] = 'mashaprivat': 
 	$metka = $ARGS[0]
 	$loc = $CURLOC
 	cla
 	*clr
-	'<center><img src="pic\fam\masha30.jpg" ></center>'
+	'<center><img src = "pic\fam\masha30.jpg" ></center>'
 	'Вы заказали приватный танец. В полутьме возле шеста, танцует девушка.'
 	'Уставившись на её попку, вы не сразу заметили как она подошла к вам'
-	act 'Продолжить':
+	act 'Продолжить': 
 		cla
 		*clr
-		'<center><img src="pic\fam\masha31.jpg" ></center>'
+		'<center><img src = "pic\fam\masha31.jpg" ></center>'
 		'Без лишних слов девушка расстегивает вам ширинку и впиваетя смачным ротиком в ваш член.'
-		act 'Маша?!?':
+		act 'Маша?!?': 
 			cla
 			*clr
-			minut=minut+5
-			mashainnaroom=5
-			'<center><img src="pic\fam\masha32.jpg" ></center>'
+			minut += 5
+			mashainnaroom = 5
+			'<center><img src = "pic\fam\masha32.jpg" ></center>'
 			'Маша смеется, видя вашу расстерянность и отбегает в шесту.' 
-			if mashaSC!1:
-				mashaSC=1
+			if mashaSC!1: 
+				mashaSC = 1
 				'Так вот какая у неё вторая работа.'
 			end
 			'Маша продолжает танец, попутно освобожая себя и вас от одежды.'
-			act 'Продолжить минет':
+			act 'Продолжить минет': 
 				cla
 				*clr
-				minut=minut+5
-				'<center><img src="pic\fam\masha33.jpg" ></center>'
+				minut += 5
+				'<center><img src = "pic\fam\masha33.jpg" ></center>'
 				'Маша дрочит вам член и ласкает ртом яйца.'
-				act 'Кончить':
+				act 'Кончить': 
 					cla
 					*clr
-					sexm=sexm+1
-					horny=0
-					manna=manna+50
-					'<center><img src="pic\fam\masha34.gif" ></center>'
+					sexm = sexm+1
+					horny = 0
+					manna = manna+50
+					'<center><img src = "pic\fam\masha34.gif" ></center>'
 					'Чувствуя, что скоро кончите вы начинаете трахать Машу в рот. Загнав свой член ей в глотку вы кончаете.'
 					'Маша покорно проглатывает вашу сперму'
-					act 'Уйти к сцене':gt'stripclub','forman'
+					act 'Уйти к сцене': gt 'stripclub','forman'
 				end
 			end
-			act 'Насадить на член':
+			act 'Насадить на член': 
 				cla
 				*clr
-				minut=minut+5
-				'<center><img src="pic\fam\masha35.jpg" ></center>'
+				minut += 5
+				'<center><img src = "pic\fam\masha35.jpg" ></center>'
 				'Вы насаживаете Машу на свой разгоряченный член и начинаете трахать её.'
-				act 'Кончить':
+				act 'Кончить': 
 					cla
 					*clr
-					sexm=sexm+1
-					horny=0
-					manna=manna+50
-					'<center><img src="pic\fam\masha36.jpg" ></center>'
+					sexm = sexm+1
+					horny = 0
+					manna = manna+50
+					'<center><img src = "pic\fam\masha36.jpg" ></center>'
 					'Чувствуя, что скоро кончите вы начинаете неистово долбить киску. Добившись от Маши криков срасти, вы загоняете свой член поглубже и кончаете.'
 					'Сперма медленно вытекает из Маши, стекая по вашему члену.'
-					act 'Уйти к сцене':gt'stripclub','forman'
+					act 'Уйти к сцене': gt 'stripclub','forman'
 				end
 			end
-			act 'Трахнуть в попку':
+			act 'Трахнуть в попку': 
 				cla
 				*clr
-				minut=minut+5
-				'<center><img src="pic\fam\masha37.jpg" ></center>'
+				minut += 5
+				'<center><img src = "pic\fam\masha37.jpg" ></center>'
 				'Поставив Машу раком, вы вылизываете Маше киску и попку, уделяя особенное внимание колечку сфинктера.'
-				act 'Вставить член':
+				act 'Вставить член': 
 					cla
 					*clr
-					minut=minut+5
-					'<center><img src="pic\fam\masha38.jpg" ></center>'
+					minut += 5
+					'<center><img src = "pic\fam\masha38.jpg" ></center>'
 					'Член входит в попку неожиданно легко, видимо Маше не впервой принимать члены этой дырочкой, но вы не спешите.'
 					'Маша тихо стонет пока ваш член глубже проникает в попку. Загнав член по самые яйца, вы начинаете двигаться в попке девушки, постепенно увеличивая темп.'
 					'Маша тихо постанывает от удовольствия, кажется ей нравится анальный секс.'
-					act 'Кончить':
+					act 'Кончить': 
 						cla
 						*clr
-						sexm=sexm+1
-						horny=0
-						manna=manna+50
-						'<center><img src="pic\fam\masha38.gif" ></center>'
+						sexm = sexm+1
+						horny = 0
+						manna = manna+50
+						'<center><img src = "pic\fam\masha38.gif" ></center>'
 						'Чувствуя, что скоро кончите вы начинаете неистово долбить попку. Добившись от Маши криков срасти, вы загоняете свой член поглубже и кончаете.'
 						'Довольный, вы смотрите как ваша сперма медленно вытекает из раздолбанной попки девушки.'
-						act 'Уйти к сцене':gt'stripclub','forman'
+						act 'Уйти к сцене': gt 'stripclub','forman'
 					end
 				end
 			end
 		end	
 	end
-	act 'Уйти к сцене':gt'stripclub','forman'
+	act 'Уйти к сцене': gt 'stripclub','forman'
 end
 --- stripclub ---------------------------------
 

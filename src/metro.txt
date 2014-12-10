@@ -1,224 +1,224 @@
 # metro
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
-'<center><B><font color=maroon>Турникет</font></B></center>'
-'<center><img src="pic\pic\turniket.jpg" ></center>'
+'<center><B><font color = maroon>Турникет</font></B></center>'
+'<center><img src = "pic\pic\turniket.jpg" ></center>'
 'Проезд на метро стоит 16 рублей.'
 'Время работы с 5 до 23'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set minut = minut + 15
-     if money >= 16 and hour >= 5 and hour <= 23:
-         act 'Оплатить 16 рублей':
+ minut = minut + 15
+     if money >= 16 and hour >= 5 and hour <= 23: 
+         act 'Оплатить 16 рублей': 
          cla
-         set money = money - 16
-         set minut = minut + 15
-         gt'metro','m1'
+          money = money - 16
+          minut = minut + 15
+         gt 'metro','m1'
          end
      end
      
-     act 'Выйти из метро':
+     act 'Выйти из метро': 
      cla
-     set minut = minut + 15
-     gt'street'
+      minut = minut + 15
+     gt 'street'
      end
 end
 
-if $ARGS[0]='start2':
+if $ARGS[0] = 'start2': 
 $metka = $ARGS[0]
 $loc = $CURLOC
-'<center><B><font color=maroon>Турникет</font></B></center>'
-'<center><img src="pic\pic\turniket.jpg" ></center>'
+'<center><B><font color = maroon>Турникет</font></B></center>'
+'<center><img src = "pic\pic\turniket.jpg" ></center>'
 'Проезд на метро стоит 16 рублей.'
 'Время работы с 5 до 23'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set minut = minut + 15
-     if money >= 16 and hour >= 5 and hour <= 23:
-         act 'Оплатить 16 рублей':
+ minut = minut + 15
+     if money >= 16 and hour >= 5 and hour <= 23: 
+         act 'Оплатить 16 рублей': 
          cla
-         set money = money - 16
-         set minut = minut + 15
-         gt'metro','m2'
+          money = money - 16
+          minut = minut + 15
+         gt 'metro','m2'
          end
      end
      
-     act 'Выйти из метро':
+     act 'Выйти из метро': 
      cla
-     set minut = minut + 15
-     gt'down'
+      minut = minut + 15
+     gt 'down'
      end
 end
 
-if $ARGS[0]='start3':
+if $ARGS[0] = 'start3': 
 $metka = $ARGS[0]
 $loc = $CURLOC
-'<center><B><font color=maroon>Турникет</font></B></center>'
-'<center><img src="pic\pic\turniket.jpg" ></center>'
+'<center><B><font color = maroon>Турникет</font></B></center>'
+'<center><img src = "pic\pic\turniket.jpg" ></center>'
 'Проезд на метро стоит 16 рублей.'
 'Время работы с 5 до 23'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set minut = minut + 15
-     if money >= 16 and hour >= 5 and hour <= 23:
-         act 'Оплатить 16 рублей':
+ minut = minut + 15
+     if money >= 16 and hour >= 5 and hour <= 23: 
+         act 'Оплатить 16 рублей': 
          cla
-         set money = money - 16
-         set minut = minut + 15
-         gt'metro','m3'
+          money = money - 16
+          minut = minut + 15
+         gt 'metro','m3'
          end
      end
      
-     act 'Выйти из метро':
+     act 'Выйти из метро': 
      cla
-     set minut = minut + 15
-     gt'nord'
+      minut = minut + 15
+     gt 'nord'
      end
 end
 
-if $ARGS[0]='m1':
+if $ARGS[0] = 'm1': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
-'<center><B><font color=maroon>Станция метро</font></B></center>'
-'<center><B><font color=maroon>Спальный район</font></B></center>'
-'<center><img src="pic\pic\metro.jpg" ></center>'
+'<center><B><font color = maroon>Станция метро</font></B></center>'
+'<center><B><font color = maroon>Спальный район</font></B></center>'
+'<center><img src = "pic\pic\metro.jpg" ></center>'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set metro = 2
+ metro = 2
 
-     act 'Ехать в центр':
+     act 'Ехать в центр': 
      cla
-     set train = 2
-     set minut = minut + 15
-     gt'metro','vagon'
+      train = 2
+      minut = minut + 15
+     gt 'metro','vagon'
      end
      
-     act 'Ехать в северный район':
+     act 'Ехать в северный район': 
      cla
-     set train = 3
-     set minut = minut + 15
-     gt'metro','vagon'
+      train = 3
+      minut = minut + 15
+     gt 'metro','vagon'
      end
 
 
-     act 'Выйти из метро':
+     act 'Выйти из метро': 
      cla
-     set minut = minut + 15
-     gt'street'
+      minut = minut + 15
+     gt 'street'
      end
 end
 
-if $ARGS[0]='vagon':
+if $ARGS[0] = 'vagon': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
-'<center><B><font color=maroon>Вагон метро</font></B></center>'
+'<center><B><font color = maroon>Вагон метро</font></B></center>'
 
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-     if hour < 7 or hour > 10 and hour < 15 or hour > 20:
-     '<center><img src="pic\pic\vagon.jpg" ></center>'
+     if hour < 7 or hour > 10 and hour < 15 or hour > 20: 
+     '<center><img src = "pic\pic\vagon.jpg" ></center>'
      'В вагоне всего несколько пассажиров уныло разглядывающих рекламу в вагоне.'
      end
-     if hour >= 7 and hour <= 10 or hour >= 15 and hour <= 20:
-     '<center><img src="pic\pic\vagonFull.jpg" ></center>'
+     if hour >= 7 and hour <= 10 or hour >= 15 and hour <= 20: 
+     '<center><img src = "pic\pic\vagonFull.jpg" ></center>'
      'В вагоне много людей, все стоят как статуи не обращая ни малейшего внимания на окружающих.'
      end
 
-     act 'Выйти из вагона':
+     act 'Выйти из вагона': 
      cla
-     if train = 1:gt'metro','m1'
-     if train = 2:gt'metro','m2'
-     if train = 3:gt'metro','m3'
+     if train = 1: gt 'metro','m1'
+     if train = 2: gt 'metro','m2'
+     if train = 3: gt 'metro','m3'
      end
 end
 
 
-if $ARGS[0]='m2':
+if $ARGS[0] = 'm2': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
-'<center><B><font color=maroon>Станция метро</font></B></center>'
-'<center><B><font color=maroon>Центр</font></B></center>'
-'<center><img src="pic\pic\metro2.jpg" ></center>'
+'<center><B><font color = maroon>Станция метро</font></B></center>'
+'<center><B><font color = maroon>Центр</font></B></center>'
+'<center><img src = "pic\pic\metro2.jpg" ></center>'
 'Проезд на метро стоит 16 рублей.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set metro = 1
-     act 'Ехать в спальный район':
+ metro = 1
+     act 'Ехать в спальный район': 
      cla
-     set train = 1
-     set minut = minut + 15
-     gt'metro','vagon'
+      train = 1
+      minut = minut + 15
+     gt 'metro','vagon'
      end
      
-     act 'Ехать в северный район':
+     act 'Ехать в северный район': 
      cla
-     set train = 3
-     set minut = minut + 15
-     gt'metro','vagon'
+      train = 3
+      minut = minut + 15
+     gt 'metro','vagon'
      end
 
-     act 'Выйти из метро':
+     act 'Выйти из метро': 
      cla
-     set minut = minut + 5
-     gt'down'
+      minut = minut + 5
+     gt 'down'
      end
 end
 
 
-if $ARGS[0]='m3':
+if $ARGS[0] = 'm3': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
-'<center><B><font color=maroon>Станция метро</font></B></center>'
-'<center><B><font color=maroon>Север</font></B></center>'
-'<center><img src="pic\pic\metro3.jpg" ></center>'
+'<center><B><font color = maroon>Станция метро</font></B></center>'
+'<center><B><font color = maroon>Север</font></B></center>'
+'<center><img src = "pic\pic\metro3.jpg" ></center>'
 'Проезд на метро стоит 16 рублей.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set metro = 1
-     act 'Ехать в центр':
+ metro = 1
+     act 'Ехать в центр': 
      cla
-     set train = 2
-     set minut = minut + 15
-     gt'metro','vagon'
+      train = 2
+      minut = minut + 15
+     gt 'metro','vagon'
      end
      
-     act 'Ехать в спальный район':
+     act 'Ехать в спальный район': 
      cla
-     set train = 1
-     set minut = minut + 15
-     gt'metro','vagon'
+      train = 1
+      minut = minut + 15
+     gt 'metro','vagon'
      end
 
-     act 'Выйти из метро':
+     act 'Выйти из метро': 
      cla
-     set minut = minut + 5
-     gt'nord'
+      minut = minut + 5
+     gt 'nord'
      end
 end
 --- metro ---------------------------------

@@ -1,55 +1,55 @@
 # ofirina1
-if $ARGS[0]='kafe1':
+if $ARGS[0] = 'kafe1': 
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-'<center><img src="pic\fam\irina\kafe\irina_kafe_2.gif" ></center>'
+gs 'stat'
+'<center><img src = "pic\fam\irina\kafe\irina_kafe_2.gif" ></center>'
 'Вы зашли в кладовую, заперли дверь на ключ. Ирина уже ждала вас, она сказала, что у вас 5 минут, стянула с вас штаны и начала отсасывать.'
-	 act 'Дальше':gt'ofirina1','kafe2'
+	 act 'Дальше': gt 'ofirina1','kafe2'
 end
 
-if $ARGS[0]='kafe2':
+if $ARGS[0] = 'kafe2': 
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-picrand=RAND(0,2)
-if picrand=0:'<center><img src="pic\fam\irina\kafe\irina_kafe_6.gif" ></center>'
-if picrand=1:'<center><img src="pic\fam\irina\kafe\irina_kafe_7.gif" ></center>'
-if picrand=2:'<center><img src="pic\fam\irina\kafe\irina_kafe_8.gif" ></center>'
+gs 'stat'
+picrand = RAND(0,2)
+if picrand = 0: '<center><img src = "pic\fam\irina\kafe\irina_kafe_6.gif" ></center>'
+if picrand = 1: '<center><img src = "pic\fam\irina\kafe\irina_kafe_7.gif" ></center>'
+if picrand = 2: '<center><img src = "pic\fam\irina\kafe\irina_kafe_8.gif" ></center>'
 'Но вам хотелось большего. Вы развернули Ирину и стали что есть мочи драть её раком.'
 'Но вы не хотели задерживать Иру, всё-таки у девочки рабочее время.'
-	 act 'Трахать в рот':gt'ofirina1','kafe3'
+	 act 'Трахать в рот': gt 'ofirina1','kafe3'
 end
 
-if $ARGS[0]='kafe3':
+if $ARGS[0] = 'kafe3': 
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-'<center><img src="pic\fam\irina\kafe\irina_kafe_10.gif" ></center>'
+gs 'stat'
+'<center><img src = "pic\fam\irina\kafe\irina_kafe_10.gif" ></center>'
 'Вы поставили Иру на колени и стали трахать в рот приближаясь к финишу.'
-	 act 'Кончить':gt'ofirina1','kafe4'
+	 act 'Кончить': gt 'ofirina1','kafe4'
 end
 
-if $ARGS[0]='kafe4':
+if $ARGS[0] = 'kafe4': 
 $metka = $ARGS[0]
 $loc = $CURLOC
-minut=minut+15
-if ofirinaQW=2:ofirinaQW=3
-sexm=sexm+1
-manna=manna+50
-sweat=sweat+5
+minut += 15
+if ofirinaQW = 2: ofirinaQW = 3
+sexm = sexm+1
+manna = manna+50
+sweat = sweat+5
 clr
-gs'stat'
-'<center><img src="pic\fam\irina\kafe\irina_kafe_11.gif" ></center>'
+gs 'stat'
+'<center><img src = "pic\fam\irina\kafe\irina_kafe_11.gif" ></center>'
 'Через минуту вы стали кончать целясь Ирине в рот.'
 'Затем помогли ей привести себя в порядок и вышли обратно в кафе.'
-	 act 'В кафе':GOTO $locM, $metkaM
+	 act 'В кафе': GOTO $locM, $metkaM
 end
 
 --- ofirina1 ---------------------------------

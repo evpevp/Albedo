@@ -18,28 +18,28 @@
 'Легендарный великий магистр ордена четырехлистника Альтотрон. Возможно сильнейший маг из живущих.'
 
 
-act '<center>Пожилой купец, приехавший в Эведон по торговым делам</center>':
+act '<center>Пожилой купец, приехавший в Эведон по торговым делам</center>': 
 SHOWOBJS 1
 SHOWSTAT 1
 $name = 'Эйрик'
 $surname = ''
 fat = 200
-salo=200
+salo = 200
 son = 18
 golod = 3
 rost = 178
-lvl=30
-exp=0
-stren=40
-speed=25
-agil=20
-vital=100
-intel=10
-will=10
-magika=1
-health=vital*10
-manna=intel*10+intel*magika
-wipo=will*10
+lvl = 30
+exp = 0
+stren = 40
+speed = 25
+agil = 20
+vital = 100
+intel = 10
+will = 10
+magika = 1
+health = vital*10
+manna = intel*10+intel*magika
+wipo = will*10
 
 hcol = 1
 glacol = 1
@@ -54,60 +54,60 @@ hour = 10
 day = 1
 
 pol = 0
-penis=12
-vagina=0
+penis = 12
+vagina = 0
 
-tit=0
-face=0
-hand=0
-brist=0
-ass=0
-thight=0
-leg=0
+tit = 0
+face = 0
+hand = 0
+brist = 0
+ass = 0
+thight = 0
+leg = 0
 
-world=1
-demonQW=1
-horny=0
+world = 1
+demonQW = 1
+horny = 0
 
-gem=6500
-Licens=20
+gem = 6500
+Licens = 20
 slot = 13
 townclo = 2
 
-music_on=0
-farmstam=stren/10
-NoHaritonov=1
+music_on = 0
+farmstam = stren/10
+NoHaritonov = 1
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
-gs'stat'
-gt'portW'
+gs 'stat'
+ gt 'portW'
 end
 
 
-act '<center>Юная девушка живущая в трущобах</center>':
+act '<center>Юная девушка живущая в трущобах</center>': 
 SHOWOBJS 1
 SHOWSTAT 1
 $name = 'Эйрин'
 $surname = ''
 fat = 200
-salo=200
+salo = 200
 son = 18
 golod = 3
 rost = 168
-lvl=20
-exp=0
-stren=40
-speed=25
-agil=20
-vital=50
-intel=10
-will=10
-magika=1
-health=vital*10
-manna=intel*10+intel*magika
-wipo=will*10
+lvl = 20
+exp = 0
+stren = 40
+speed = 25
+agil = 20
+vital = 50
+intel = 10
+will = 10
+magika = 1
+health = vital*10
+manna = intel*10+intel*magika
+wipo = will*10
 
 vidageday = 360
 age = 18
@@ -119,69 +119,69 @@ hour = 10
 day = 1
 
 !pol = 0
-penis=0
-vagina=1
+penis = 0
+vagina = 1
 
-hlong=50
+hlong = 50
 hcol = 3
 glacol = 3
-lip=2
-skin=2
-glaraz=2
-resnic=2
+lip = 2
+skin = 2
+glaraz = 2
+resnic = 2
 
-tit=80
-face=70
-hand=70
-brist=70
-ass=70
-thight=70
-leg=70
+tit = 80
+face = 70
+hand = 70
+brist = 70
+ass = 70
+thight = 70
+leg = 70
 
-world=1
-demonQW=1
-horny=0
+world = 1
+demonQW = 1
+horny = 0
 
-gem=350
+gem = 350
 slot = 12
 pesantclo = 2
-HomeSlums=1
-HomeLord=1
-farmstam=stren/10
-music_on=0
-NoHaritonov=1
+HomeSlums = 1
+HomeLord = 1
+farmstam = stren/10
+music_on = 0
+NoHaritonov = 1
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
-gs'stat'
-gt'homeSlums'
+gs 'stat'
+ gt 'homeSlums'
 end
 
 
 
-act '<center>Младший магистр ордена Четырехлистника (Мужчина)</center>':
+act '<center>Младший магистр ордена Четырехлистника (Мужчина)</center>': 
 SHOWOBJS 1
 SHOWSTAT 1
 $name = 'Алгебрус'
 $surname = ''
 fat = 100
-salo=100
+salo = 100
 son = 18
 golod = 3
 rost = 182
-lvl=150
-magika=12
-exp=0
-stren=60
-speed=150
-agil=150
-vital=150
-intel=200
-will=100
-health=vital*10
-manna=intel*10+intel*magika
-wipo=will*10
+lvl = 150
+magika = 12
+exp = 0
+stren = 60
+speed = 150
+agil = 150
+vital = 150
+intel = 200
+will = 100
+health = vital*10
+manna = intel*10+intel*magika
+wipo = will*10
 
 
 
@@ -195,82 +195,82 @@ hour = 10
 day = 1
 
 pol = 0
-penis=16
-vagina=0
+penis = 16
+vagina = 0
 
 hcol = 3
 glacol = 3
-hlong=50
+hlong = 50
 
-tit=0
-face=0
-hand=0
-brist=0
-ass=0
-thight=0
-leg=0
+tit = 0
+face = 0
+hand = 0
+brist = 0
+ass = 0
+thight = 0
+leg = 0
 
-world=1
-demonQW=1
-horny=0
+world = 1
+demonQW = 1
+horny = 0
 
-gem=350
-kredit=3500
-OrdenRang=2
+gem = 350
+kredit = 3500
+OrdenRang = 2
 slot = 200
 robe2 = 2
-armorDef=200
-lektion=50
-spZerkalo=100
-spMagShild=100
-spSmeshenie=100
-spTuman=100
-spKlon=100
+armorDef = 200
+lektion = 50
+spZerkalo = 100
+spMags hild = 100
+spSmeshenie = 100
+spTuman = 100
+spKlon = 100
 !Электрик
-scolElectro=1
-raspredOrden=1
-spShok=100
-spShokTri=100
-spShokSh=100
-spWillSh=100
-spElPole=100
-spBigShok=100
-spElProboy=100
-Normativ=2
-farmstam=stren/10
-music_on=0
-NoHaritonov=1
+scolElectro = 1
+raspredOrden = 1
+spShok = 100
+spShokTri = 100
+spShokSh = 100
+spWillSh = 100
+spElPole = 100
+spBigs hok = 100
+spElProboy = 100
+Normativ = 2
+farmstam = stren/10
+music_on = 0
+NoHaritonov = 1
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
-gs'stat'
-gt'OrdenRoom'
+gs 'stat'
+ gt 'OrdenRoom'
 end
 
 
-act '<center>Фермерша Лине</center>':
+act '<center>Фермерша Лине</center>': 
 SHOWOBJS 1
 SHOWSTAT 1
 $name = 'Лине'
 $surname = ''
 fat = 240
-salo=240
+salo = 240
 son = 18
 golod = 3
 rost = 172
-lvl=25
-exp=0
-stren=60
-speed=25
-agil=25
-vital=50
-intel=10
-will=10
-magika=1
-health=vital*10
-manna=intel*10+intel*magika
-wipo=will*10
+lvl = 25
+exp = 0
+stren = 60
+speed = 25
+agil = 25
+vital = 50
+intel = 10
+will = 10
+magika = 1
+health = vital*10
+manna = intel*10+intel*magika
+wipo = will*10
 
 vidageday = 360
 age = 16
@@ -282,75 +282,75 @@ hour = 10
 day = 1
 
 !pol = 0
-penis=0
-vagina=1
+penis = 0
+vagina = 1
 
-hlong=50
+hlong = 50
 hcol = 1
 glacol = 1
-lip=2
-skin=2
-glaraz=2
-resnic=2
+lip = 2
+skin = 2
+glaraz = 2
+resnic = 2
 
-tit=80
-face=70
-hand=70
-brist=70
-ass=100
-thight=70
-leg=70
+tit = 80
+face = 70
+hand = 70
+brist = 70
+ass = 100
+thight = 70
+leg = 70
 
-world=1
-demonQW=1
-horny=0
+world = 1
+demonQW = 1
+horny = 0
 
-gem=25
+gem = 25
 slot = 12
 pesantclo = 2
-farmland=1
-HomeLord=1
-$farmname='Айронвуд'
-shelok=5
-brevno=5
-uroz=15
-farmstam=stren/10
+farmland = 1
+HomeLord = 1
+$farmname = 'Айронвуд'
+shelok = 5
+brevno = 5
+uroz = 15
+farmstam = stren/10
 
-music_on=0
-NoHaritonov=1
+music_on = 0
+NoHaritonov = 1
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
-gs'stat'
-gt'farmMYhouse'
+gs 'stat'
+ gt 'farmMYhouse'
 end
 
 
-act '<center>Лесоруб Дирк</center>':
+act '<center>Лесоруб Дирк</center>': 
 SHOWOBJS 1
 SHOWSTAT 1
 $name = 'Дирк'
 $surname = ''
 fat = 150
-salo=150
+salo = 150
 son = 18
 golod = 3
 rost = 193
 
-lvl=76
-exp=0
-stren=110
-speed=100
-agil=100
-vital=110
-intel=10
-will=10
-magika=1
-farmstam=stren/10
-health=vital*10
-manna=intel*10+intel*magika
-wipo=will*10
+lvl = 76
+exp = 0
+stren = 110
+speed = 100
+agil = 100
+vital = 110
+intel = 10
+will = 10
+magika = 1
+farmstam = stren/10
+health = vital*10
+manna = intel*10+intel*magika
+wipo = will*10
 
 hcol = 3
 glacol = 3
@@ -365,65 +365,65 @@ hour = 10
 day = 1
 
 pol = 0
-penis=21
-vagina=0
+penis = 21
+vagina = 0
 
-tit=0
-face=0
-hand=0
-brist=0
-ass=0
-thight=0
-leg=0
+tit = 0
+face = 0
+hand = 0
+brist = 0
+ass = 0
+thight = 0
+leg = 0
 
-world=1
-demonQW=1
-horny=0
+world = 1
+demonQW = 1
+horny = 0
 
-gem=100
-set slot = 12
-set pesantclo = 2
- lesotalon=5
- lesworkTimes=19
- plotnikskill=0
-lesopwork=1
-music_on=0
+gem = 100
+ slot = 12
+ pesantclo = 2
+ lesotalon = 5
+ lesworkTimes = 19
+ plotnikskill = 0
+lesopwork = 1
+music_on = 0
 
-NoHaritonov=1
+NoHaritonov = 1
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
-gs'stat'
-gt'lesopilka'
+gs 'stat'
+ gt 'lesopilka'
 end
 
 
 
-act '<center>Рыболов Леон</center>':
+act '<center>Рыболов Леон</center>': 
 SHOWOBJS 1
 SHOWSTAT 1
 $name = 'Леон'
 $surname = ''
 fat = 250
-salo=250
+salo = 250
 son = 18
 golod = 3
 rost = 182
 
-lvl=56
-exp=0
-stren=100
-speed=60
-agil=60
-vital=100
-intel=10
-will=10
-magika=1
-farmstam=stren/10
-health=vital*10
-manna=intel*10+intel*magika
-wipo=will*10
+lvl = 56
+exp = 0
+stren = 100
+speed = 60
+agil = 60
+vital = 100
+intel = 10
+will = 10
+magika = 1
+farmstam = stren/10
+health = vital*10
+manna = intel*10+intel*magika
+wipo = will*10
 
 hcol = 0
 glacol = 0
@@ -438,72 +438,72 @@ hour = 10
 day = 1
 
 pol = 0
-penis=17
-vagina=0
+penis = 17
+vagina = 0
 
-tit=0
-face=0
-hand=0
-brist=0
-ass=0
-thight=0
-leg=0
+tit = 0
+face = 0
+hand = 0
+brist = 0
+ass = 0
+thight = 0
+leg = 0
 
-world=1
-demonQW=1
-horny=0
+world = 1
+demonQW = 1
+horny = 0
 
-gem=150
-set slot = 12
-set pesantclo = 2
-fishhouse=1
-HomeLord=1
-fishbarkas=100
-boatmark=2
-$barkasname='Одинокая звезда'
-ribsetmark=1
-ribset=0
-barkasparusmark=1
-barkasparus=0
-sextant=1
-music_on=0
+gem = 150
+ slot = 12
+ pesantclo = 2
+fishhouse = 1
+HomeLord = 1
+fishbarkas = 100
+boatmark = 2
+$barkasname = 'Одинокая звезда'
+ribsetmark = 1
+ribset = 0
+barkasparusmark = 1
+barkasparus = 0
+sextant = 1
+music_on = 0
 
 
-NoHaritonov=1
+NoHaritonov = 1
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
-gs'stat'
-gt'Fishhouse'
-!gt'serafcave'
+gs 'stat'
+ gt 'Fishhouse'
+! gt 'serafcave'
 end
 
-act '<center>Стефан Брайтмур</center>':
-StefanQW=1
+act '<center>Стефан Брайтмур</center>': 
+StefanQW = 1
 SHOWOBJS 1
 SHOWSTAT 1
 $name = 'Стефан'
 $surname = 'Брайтмур'
 fat = 50
-salo=50
+salo = 50
 son = 21
 golod = 3
 rost = 168
 
-lvl=1
-exp=0
-stren=10
-speed=10
-agil=10
-vital=10
-intel=10
-will=10
-magika=1
-farmstam=stren/10
-health=vital*10
-manna=intel*10+intel*magika
-wipo=will*10
+lvl = 1
+exp = 0
+stren = 10
+speed = 10
+agil = 10
+vital = 10
+intel = 10
+will = 10
+magika = 1
+farmstam = stren/10
+health = vital*10
+manna = intel*10+intel*magika
+wipo = will*10
 
 hcol = 1
 glacol = 1
@@ -518,59 +518,59 @@ hour = 6
 day = 1
 
 pol = 0
-penis=12
-vagina=0
+penis = 12
+vagina = 0
 
-tit=0
-face=30
-hand=30
-brist=30
-ass=30
-thight=30
-leg=30
+tit = 0
+face = 30
+hand = 30
+brist = 30
+ass = 30
+thight = 30
+leg = 30
 
-world=1
-demonQW=1
-horny=0
+world = 1
+demonQW = 1
+horny = 0
 
-gem=3
-set slot = 12
-set pesantclo = 2
+gem = 3
+ slot = 12
+ pesantclo = 2
 
-music_on=0
+music_on = 0
 
 
-NoHaritonov=1
+NoHaritonov = 1
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
-gs'stat'
-gt'mdStefanHouse'
+gs 'stat'
+ gt 'mdStefanHouse'
 end
 
-act '<center>Альтотрон</center>':
+act '<center>Альтотрон</center>': 
 SHOWOBJS 1
 SHOWSTAT 1
 $name = 'Альтотрон'
 $surname = ''
 fat = 10
-salo=10
+salo = 10
 son = 18
 golod = 3
 rost = 197
-lvl=2000
-magika=500
-exp=0
-stren=1000
-speed=1000
-agil=1000
-vital=3000
-intel=3000
-will=1000
-health=vital*10
-manna=intel*10+intel*magika
-wipo=will*10
+lvl = 2000
+magika = 500
+exp = 0
+stren = 1000
+speed = 1000
+agil = 1000
+vital = 3000
+intel = 3000
+will = 1000
+health = vital*10
+manna = intel*10+intel*magika
+wipo = will*10
 
 
 
@@ -584,174 +584,174 @@ hour = 10
 day = 1
 
 pol = 0
-penis=17
-vagina=0
+penis = 17
+vagina = 0
 
 hcol = 4
 glacol = 1
-hlong=70
-berd=40
+hlong = 70
+berd = 40
 
-tit=0
-face=0
-hand=0
-brist=0
-ass=0
-thight=0
-leg=0
+tit = 0
+face = 0
+hand = 0
+brist = 0
+ass = 0
+thight = 0
+leg = 0
 
-world=1
-!demonQW=1
-horny=0
+world = 1
+!demonQW = 1
+horny = 0
 
-gem=350000
-kredit=350000
-OrdenRang=7
-noble=100
-dvoranRang=4
-AltotronAmulet=1
-farMember=1
-altotronDeadQW=100
+gem = 350000
+kredit = 350000
+OrdenRang = 7
+noble = 100
+dvoranRang = 4
+AltotronAmulet = 1
+farMember = 1
+altotronDeadQW = 100
 
 slot = 200
-robeGrand=2
-armorDef=800
-lektion=50
+robeGrand = 2
+armorDef = 800
+lektion = 50
 
-spZerkalo=100
-ZerkaloExp=500
-spMagShild=100
-MagShildExp=1000
-spSmeshenie=100
-spSmeshenieExp=500
-spTuman=100
-spTumanExp=500
-spKlon=100
-spKlonExp=1000
+spZerkalo = 100
+ZerkaloExp = 500
+spMags hild = 100
+Mags hildExp = 1000
+spSmeshenie = 100
+spSmeshenieExp = 500
+spTuman = 100
+spTumanExp = 500
+spKlon = 100
+spKlonExp = 1000
 !Электро
-scolElectro=1
-raspredOrden=1
-spShok=100
-spShokExp=300
-spShokTri=100
-spShoktriExp=300
-spShokSh=100
-spShokShExp=300
-spWillSh=100
-spWillShExp=300
-spElPole=100
-spBigShok=100
-spBigShokExp=500
-spElProboy=100
+scolElectro = 1
+raspredOrden = 1
+spShok = 100
+spShokExp = 300
+spShokTri = 100
+spShoktriExp = 300
+spShokSh = 100
+spShokShExp = 300
+spWillSh = 100
+spWillShExp = 300
+spElPole = 100
+spBigs hok = 100
+spBigs hokExp = 500
+spElProboy = 100
 !Вода
-scolWater=1
-spWaterStr=100
-spWaterStrExp=500
-spWaterMultiStr=100
-spWaterMultiStrExp=300
-spWaterShild=100
-spPotop=100
-spPotopManna=100
-spPotopShark=100
+scolWater = 1
+spWaterStr = 100
+spWaterStrExp = 500
+spWaterMultiStr = 100
+spWaterMultiStrExp = 300
+spWaterShild = 100
+spPotop = 100
+spPotopManna = 100
+spPotopShark = 100
 !земля
-scolGround=1
-spSStorm=100
-spSStormExp=300
-spSandShild=100
-spSandShildExp=300
-spSandUdar=100
-spSandUdarExp=300
-spSandAbsolut=100
-spSandInGround=100
-spSandInGroundAtk=100
-spSandUdarPlita=100
-spSandUdarPlitaExp=300
+scolGround = 1
+spSStorm = 100
+spSStormExp = 300
+spSandShild = 100
+spSandShildExp = 300
+spSandUdar = 100
+spSandUdarExp = 300
+spSandAbsolut = 100
+spSandInGround = 100
+spSandInGroundAtk = 100
+spSandUdarPlita = 100
+spSandUdarPlitaExp = 300
 !воздух
-scolWind=1
-spWindUd=100
-spWindUdExp=300
-spVacuum=100
-spVacuumExp=600
-spVacShild=100
-spVacShildExp=300
-spVacBullet=100
-spVacPerepad=100
-spVacVih=100
-spVacPolet=100
+scolWind = 1
+spWindUd = 100
+spWindUdExp = 300
+spVacuum = 100
+spVacuumExp = 600
+spVacShild = 100
+spVacShildExp = 300
+spVacBullet = 100
+spVacPerepad = 100
+spVacVih = 100
+spVacPolet = 100
 !мальган
-!spReinkornMal=100
-!spGhostBodyMal=100
-!skillGBM=500
-!spGhostDamMal=100
-!skillGFM=500
-sboMagik=1
-spellElWa=100
-spellElWa2=100
-spellElWi=100
-spellElWi2=100
-spellElGr=100
-spellElGr2=100
-spellWiWa=100
-spellWiWa2=100
-spellWaGr=100
-spellWaGr2=100
-spellWiGr=100
-spellWiGr2=100
+!spReinkornMal = 100
+!spGhostBodyMal = 100
+!skillGBM = 500
+!spGhostDamMal = 100
+!skillGFM = 500
+sboMagik = 1
+spellElWa = 100
+spellElWa2 = 100
+spellElWi = 100
+spellElWi2 = 100
+spellElGr = 100
+spellElGr2 = 100
+spellWiWa = 100
+spellWiWa2 = 100
+spellWaGr = 100
+spellWaGr2 = 100
+spellWiGr = 100
+spellWiGr2 = 100
 
-spellElf=100
-spellElf2=100
-spellElf3=100
-spellElf4=100
-spellElf5=100
-spellElf6=100
-spellElf7=100
+spellElf = 100
+spellElf2 = 100
+spellElf3 = 100
+spellElf4 = 100
+spellElf5 = 100
+spellElf6 = 100
+spellElf7 = 100
 
-spellSound=100
-sonarExp=500
-spellSound2=100
-zerkSoundExp=500
-spellSound3=100
-SoundBurExp=500
-spellSound4=100
-SoundKolExp=500
-spellSound5=100
-spellSound6=100
-shimmerStrikeExp=500
+spellSound = 100
+sonarExp = 500
+spellSound2 = 100
+zerkSoundExp = 500
+spellSound3 = 100
+SoundBurExp = 500
+spellSound4 = 100
+SoundKolExp = 500
+spellSound5 = 100
+spellSound6 = 100
+shimmerStrikeExp = 500
 
 
-!beduin=100
+!beduin = 100
 
-!Normativ=2
-farmstam=stren/10
-music_on=0
-NoHaritonov=1
+!Normativ = 2
+farmstam = stren/10
+music_on = 0
+NoHaritonov = 1
 ADDOBJ 'Персонаж'
 ADDOBJ 'Одежда'
 ADDOBJ 'Инвентарь'
 ADDOBJ 'Меню боевки'
-gs'stat'
+gs 'stat'
 
-!blackAmulet=1
-!blackBuben=1
-!GraveDog=100
-!GraveDogPowerM=100000
-!GraveDogPower=100000
+!blackAmulet = 1
+!blackBuben = 1
+!GraveDog = 100
+!GraveDogPowerM = 100000
+!GraveDogPower = 100000
 
-!desertMark=15
-!domRevengeQW=1
-!blackStarArt=1
-!BSmanna=100000
-!akbalQW=1000
-!adamantin=1
-!serafVoronPower=1
-!vapulabain=1
-!gt'serafcave9'
-!gt'desertW1'
-!gt'oasisW'
-!gt'domclokW'
-!V_Roziske=1
-!DemonWish=1
-gt'osobnakAltoW'
+!desertMark = 15
+!domRevengeQW = 1
+!blackStarArt = 1
+!BSmanna = 100000
+!akbalQW = 1000
+!adamantin = 1
+!serafVoronPower = 1
+!vapulabain = 1
+! gt 'serafcave9'
+! gt 'desertW1'
+! gt 'oasisW'
+! gt 'domclokW'
+!V_Roziske = 1
+!DemonWish = 1
+ gt 'osobnakAltoW'
 end
 --- DMstartLoc ---------------------------------
 

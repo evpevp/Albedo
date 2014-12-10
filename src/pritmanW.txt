@@ -1,57 +1,57 @@
 # pritmanW
 *clr
-'<center><img src="pic/EvedonNarod/trTru.jpg"></center>'
+'<center><img src = "pic/EvedonNarod/trTru.jpg"></center>'
 
 'Пиво 1 гем, пойло поядреней 3 гема. Жратва 2 гема. Сказал трактирщик, разглядывая ваш наряд.'
 $metka = $ARGS[0]
 $loc = $CURLOC
 
-act 'Отойти от стойки':gt'pritonW'
+act 'Отойти от стойки': gt 'pritonW'
 
-if gem>=2:
-     act 'Еды':
+if gem>= 2: 
+     act 'Еды': 
      cla
      *clr
-     minut=minut+15
-     gem=gem-2
-     gs'eda'
+     minut += 15
+     gem = gem-2
+     gs 'eda'
      'Трактирщик бросил вам тарелку, до верху наполненную какой-то полусъедобной едой.'
-     gs'eat'
-     act 'Отойти от стойки':gt'pritonW'
+     gs 'eat'
+     act 'Отойти от стойки': gt 'pritonW'
      end
 end
 
-if gem>=1:
-     act 'Пива':
+if gem>= 1: 
+     act 'Пива': 
      cla
-     minut=minut+15
-     gem=gem-1
-     fat=fat+1
-     alko=alko+2
-     golod=golod+2
-     manna=manna+5
-     wipo=wipo+5
-     horny=horny+5
+     minut += 15
+     gem = gem-1
+     fat = fat+1
+     alko = alko+2
+     golod = golod+2
+     manna = manna+5
+     wipo = wipo+5
+     horny = horny+5
      *clr
-     '<center><img src="pic/EvedonOd/beer.jpg"></center>'
+     '<center><img src = "pic/EvedonOd/beer.jpg"></center>'
      'Трактирщик достал вам кружку, наполненную пенящимся пивом и вы быстренько выпили водянистую пакость, называемую местными бродягами пивом.'
-     act 'Отойти от стойки':gt'pritonW'
+     act 'Отойти от стойки': gt 'pritonW'
      end
 end
 
-if gem>=3:
-     act 'Виски':
+if gem>= 3: 
+     act 'Виски': 
      cla
-     minut=minut+15
-     gem=gem-3
-     alko=alko+5
-     manna=manna+10
-     wipo=wipo+10
-     horny=horny+10
+     minut += 15
+     gem = gem-3
+     alko = alko+5
+     manna = manna+10
+     wipo = wipo+10
+     horny = horny+10
      *clr
-     '<center><img src="pic/EvedonOd/wiskey.jpg"></center>'
+     '<center><img src = "pic/EvedonOd/wiskey.jpg"></center>'
      'Трактирщик достал вам стакан, наполненный вонючим пойлом, вы залпом его выпили.'
-     act 'Отойти от стойки':gt'pritonW'
+     act 'Отойти от стойки': gt 'pritonW'
      end
 end
 --- pritmanW ---------------------------------

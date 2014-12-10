@@ -1,21 +1,21 @@
 # sitroom1
 *clr
-minut=minut+1
+minut += 1
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]
 $locM = $CURLOC
 showinput 0
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>ГОСТИННАЯ</H4></center>'
-'<center><img src="pic/room/sitrA.jpg" ></center>'
+'<center><img src = "pic/room/sitrA.jpg" ></center>'
 clr
-gs'stat'
+gs 'stat'
 'Огромный ((телевизор|tv)) встроен в стену, вокруг него расположены удобные диваны.'
-if hour >= 21:'На диване сидит и смотрит телевизор ваша жена ((Альбина|albina)).'
+if hour >= 21: 'На диване сидит и смотрит телевизор ваша жена ((Альбина|albina)).'
 
-act 'Коридор':gt'koridor1'
+act 'Коридор': gt 'koridor1'
 --- sitroom1 ---------------------------------
 

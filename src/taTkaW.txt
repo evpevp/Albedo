@@ -8,120 +8,120 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 mag = 1
 '<center><H4>Ткацкая мастерская</H4></center>'
-'<center><img src="pic/Evedon/tka.jpg" ></center>'
+'<center><img src = "pic/Evedon/tka.jpg" ></center>'
 'В домике на стелажах лежат рулоны самых дорогих тканей. Лежат тюки шерсти и паучьего шелка.'
 !Добаботаны продажи груза, и покупка тканей. Автор Kasssel.
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if hour>=7 and hour<= 20:  
+if hour>= 7 and hour<= 20:  
 'Около ткацкого станка прядет симпатичная девушка Элесса. Отношения <<elesiaQW>>'
 'Работницы Китти и Сандра заняты у ткацких станков.' 
 if GRtkan>0: 'Вы купили <<GRtkan>> дорогих тканей на продажу'
 
-     if missionData=6:
-         act 'Отдать письмо':
+     if missionData = 6: 
+         act 'Отдать письмо': 
          cla
          *clr
-         missionData=0
-         kredit=kredit+100
-         missionC+=1
-         '<center><img src="pic/Photo/License.jpg" ></center>'
+         missionData = 0
+         kredit = kredit+100
+         missionC+= 1
+         '<center><img src = "pic/Photo/License.jpg" ></center>'
          'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
-         act 'Уйти':gt $CURLOC
+         act 'Уйти': gt $CURLOC
          end
      end
 
 
-if GRkraska>0:
-     act 'Продать краску для тканей':
-     gruzMark=3
-     torgTip=3
-     gruzphoto=2
-     noiron=1
-     gt'GRUZ'
+if GRkraska>0: 
+     act 'Продать краску для тканей': 
+     gruzMark = 3
+     tor gt ip = 3
+     gruzphoto = 2
+     noiron = 1
+     gt 'GRUZ'
      end
 end
-     if elesiaQW=0:
-         act 'Узнать нет ли для вас работы.':
+     if elesiaQW = 0: 
+         act 'Узнать нет ли для вас работы.': 
          cla
          *clr
-         elesiaQW=elesiaQW+1
-         '<center><img src="pic/EvedonNarod/elessa.jpg"></center>'
-         minut=minut+15
+         elesiaQW = elesiaQW+1
+         '<center><img src = "pic/EvedonNarod/elessa.jpg"></center>'
+         minut += 15
          'Вы поинтересовались о работе у Элессы. она улыбнулась вам и сказала, у меня заказов из Эведона на дорогую ткань не счесть, а вот работников не хватает, кто в пустыне пропал, кто в Эведон за лучшей жизнью подался. Поэтому да. Я могу взять тебя на работу. Будешь сучить паучий шелк, что бы можно было потом из него сделать нить. За час работы буду платить 20 гемов.'
          
-         act 'Уйти':gt $CURLOC
-             act 'Согласится на работу':
+         act 'Уйти': gt $CURLOC
+             act 'Согласится на работу': 
              cla
-             minut=minut+5
-             elesiaQW=1
+             minut += 5
+             elesiaQW = 1
              'Вы согласились и Элесса показала вам как сучить пряжу.'
-             act 'Уйти':gt $CURLOC
+             act 'Уйти': gt $CURLOC
              end
          end
      end
      
-     if elesiaQW>0:
-         act 'Работать 1 час.':
+     if elesiaQW>0: 
+         act 'Работать 1 час.': 
          cla
          *clr
-             if alko<=0:
-			 minut=minut+55
-			 gem=gem+20
-			 elesiaQW=elesiaQW+1
-			 exp=exp+5
-			 '<center><img src="pic/Evedon/weaver.jpg" ></center>'
+             if alko<= 0: 
+			 minut += 55
+			 gem = gem+20
+			 elesiaQW = elesiaQW+1
+			 exp = exp+5
+			 '<center><img src = "pic/Evedon/weaver.jpg" ></center>'
 			 'Вы сучили паучий шел подготавливая его к дальнейшей обработке в течении часа. После отработанного часа к вам подошла Элесса и дала вам 20 гемов за работу.'
-			     if urtaQW>=20:
-			     sluhrand=RAND(0,100)
-			         if sluhrand>=90:horny=horny+SUB&'Вы краем уха слышите как перешептываются работники, все что вы сумели разобрать это слова Урта и подстилка. Но этого вам хватило, что бы понять о чем говорят другие. Ваши щеки залил румянец стыда.'
+			     if urtaQW>= 20: 
+			     sluhrand = RAND(0,100)
+			         if sluhrand>= 90: horny = horny+SUB & 'Вы краем уха слышите как перешептываются работники, все что вы сумели разобрать это слова Урта и подстилка. Но этого вам хватило, что бы понять о чем говорят другие. Ваши щеки залил румянец стыда.'
 			     end
-			 act 'Передохнуть':gt $CURLOC
+			 act 'Передохнуть': gt $CURLOC
 			 end
-			 if alko>0:
+			 if alko>0: 
 			 'Элесса унюхала от вас запах алкоголя не допустила вас до работы.'
-			 act 'Уйти':gt $CURLOC
+			 act 'Уйти': gt $CURLOC
 			 end
          end
          
-         if elesiaDQW=0 and elesiaQW>=1 and slot=11:
+         if elesiaDQW = 0 and elesiaQW>= 1 and slot = 11: 
          'Элесса посмотрела на вас, потом пошла к сундуку и достала от туда одежду. Она протянула ее вам и сказала "Одень лучше это, а то смотреть неприятно на твое рванье." Элесса подарила вам крестьянскую одежду Тель Адре.'
          pesantclo2 = 1
-         elesiaDQW=1
+         elesiaDQW = 1
          end         
          
-         if elesiaQW>=15:
-         '<center><img src="pic/EvedonNarod/elessa.jpg"></center>'
+         if elesiaQW>= 15: 
+         '<center><img src = "pic/EvedonNarod/elessa.jpg"></center>'
          'Элесса стала доверять вам и разрешает покупать у нее ткани по оптовым ценам.'
          'Обычно она сотрудничает только с караванщиками, но для вас может сделать исключение.'
          'Ткани входят в категорию грузов. Можно взять 1 груз на 10 силы. Стоимость 1 ед ткани 1000 гем'
          end
          
-         if elesiaQW>=15 or Licens>0:
-             if gruz*10<stren:
-                 if gem>=1000:
-                     act 'Купить ткань':
+         if elesiaQW>= 15 or Licens>0: 
+             if gruz*10<stren: 
+                 if gem>= 1000: 
+                     act 'Купить ткань': 
                      cla
                      tempshop = input ("Вы можете нести еще<<stren/10-gruz>> груза. Сколько ткани вы хотите купить?")
-                         if tempshop*1000>gem or tempshop<0:
+                         if tempshop*1000>gem or tempshop<0: 
                          msg'У вас нет такого количества гемов.'
                          gt $CURLOC
-                         elseif gruz+tempshop>stren/10:
+                         elseif gruz+tempshop>stren/10: 
                          msg'Нести столько груза вам не под силу.'
                          gt $CURLOC
                          else
-                         GRtkan=GRtkan+tempshop
-                         gem=gem-tempshop*1000
-                         gruz=gruz+tempshop
+                         GRtkan = GRtkan+tempshop
+                         gem = gem-tempshop*1000
+                         gruz = gruz+tempshop
                          'Вы купили <<tempshop>> дорогих тканей'
-                         act 'Уйти':gt $CURLOC
+                         act 'Уйти': gt $CURLOC
                          gt $CURLOC
                          end
                      end
@@ -132,139 +132,139 @@ end
          end
          
 		 
-         if elesiaQW>=1:
-         	 if wooldemon>0:
+         if elesiaQW>= 1: 
+         	 if wooldemon>0: 
          	 
          	 
          	 'Элесса видит у вас демоническую шерсть и просит вас показать ей.'
-				 act 'Показать демоническую шерсть':
+				 act 'Показать демоническую шерсть': 
 				 cla
 				 *clr
-				 '<center><img src="pic/EvedonNarod/elessa.jpg"></center>'
-				 minut=minut+1
+				 '<center><img src = "pic/EvedonNarod/elessa.jpg"></center>'
+				 minut += 1
 				 'Хмм, я дам за это 750 гемов и ни гемом больше'
-					 act 'Да':
+					 act 'Да': 
 					 cla
-					     if wooldemon>1:
-					     elesiaQW=elesiaQW+1
-							 act 'Продать все':
-							 gem=gem+wooldemon*750
+					     if wooldemon>1: 
+					     elesiaQW = elesiaQW+1
+							 act 'Продать все': 
+							 gem = gem+wooldemon*750
 							 msg'Вы продали <<wooldemon>> демонической шерсти.'
-							 wooldemon=0
+							 wooldemon = 0
 							 gt $CURLOC
 							 end
 							 
-					         act 'Продать нужное количество':
+					         act 'Продать нужное количество': 
 					         tempshop = input ("У вас <<wooldemon>> демонической шерсти. Сколько вы желаете продать?")
-					   		     if tempshop > wooldemon or tempshop < 0 :
+					   		     if tempshop > wooldemon or tempshop < 0 : 
 					             msg 'У вас нет такого количества демонической шерсти.'  
 					             gt $CURLOC
 					             else
-					             gem=gem+tempshop *750
-					             wooldemon=wooldemon-tempshop
+					             gem = gem+tempshop *750
+					             wooldemon = wooldemon-tempshop
 					             msg'Вы продали Элессе <<tempshop>> демонической шерсти.'
 					             gt $CURLOC
 					             end
 					         end
 					     end
 					     
-						 if wooldemon=1:
-						 wooldemon=wooldemon-1
-						 gem=gem+750
+						 if wooldemon = 1: 
+						 wooldemon = wooldemon-1
+						 gem = gem+750
 						 'Вы продали Элессе свой товар.'
-						 act 'Спрятать деньги':gt $CURLOC
+						 act 'Спрятать деньги': gt $CURLOC
 						 end
 					 end
-				 act 'Нет':gt $CURLOC
+				 act 'Нет': gt $CURLOC
 				 end
 			 end
 			 
-			 if letherdemon>0:
+			 if letherdemon>0: 
 			 
 			 
 			 'Элесса видит у вас кожу демона и просит вас показать ей.'
-				 act 'Показать кожу демона':
+				 act 'Показать кожу демона': 
 				 cla
 				 *clr
-				 '<center><img src="pic/EvedonNarod/elessa.jpg"></center>'
-				 minut=minut+1
+				 '<center><img src = "pic/EvedonNarod/elessa.jpg"></center>'
+				 minut += 1
 				 'Хмм, я дам за это 1000 гемов и ни гемом больше'
-					 act 'Да':
-					 elesiaQW=elesiaQW+1
+					 act 'Да': 
+					 elesiaQW = elesiaQW+1
 					 cla
-						 if letherdemon>1:
-							 act 'Продать все':
-							 gem=gem+letherdemon*1000
+						 if letherdemon>1: 
+							 act 'Продать все': 
+							 gem = gem+letherdemon*1000
 							 msg'Вы продали <<letherdemon>> кожи демона.'
-							 letherdemon=0
+							 letherdemon = 0
 							 gt $CURLOC
 							 end
 							 
-							 act 'Продать нужное количество':
+							 act 'Продать нужное количество': 
 							 tempshop = input ("У вас <<letherdemon>> кожи демона. Сколько вы желаете продать?")
-								 if tempshop > letherdemon or tempshop < 0 :
+								 if tempshop > letherdemon or tempshop < 0 : 
 								 msg 'У вас нет такого количества кожи демона.'  
 								 gt $CURLOC
 								 else
-								 gem=gem+tempshop *1000
-								 letherdemon=letherdemon-tempshop
+								 gem = gem+tempshop *1000
+								 letherdemon = letherdemon-tempshop
 								 msg'Вы продали Элессе <<tempshop>> кожи демона.'
 								 gt $CURLOC
 								 end
 							 end
 						 end
-				     	 if letherdemon=1:
-						 letherdemon=letherdemon-1
-						 gem=gem+1000
+				     	 if letherdemon = 1: 
+						 letherdemon = letherdemon-1
+						 gem = gem+1000
 						 'Вы продали Элессе свой товар.'
-						 act 'Спрятать деньги':gt $CURLOC
+						 act 'Спрятать деньги': gt $CURLOC
 						 end
 					 end
-				 act 'Нет':gt $CURLOC
+				 act 'Нет': gt $CURLOC
 				 end
 			 end
 			 
-			 if silk>0:
+			 if silk>0: 
 			 'Элесса видит у вас паучий шелк и просит вас показать ей.'
-				 act 'Показать паучий шелк':
+				 act 'Показать паучий шелк': 
 				 cla
 				 *clr
-				 '<center><img src="pic/EvedonNarod/elessa.jpg"></center>'
-				 minut=minut+1
+				 '<center><img src = "pic/EvedonNarod/elessa.jpg"></center>'
+				 minut += 1
 				 'Хмм, я дам за это 500 гемов и ни гемом больше'
-					 act 'Да':
-					 elesiaQW=elesiaQW+1
+					 act 'Да': 
+					 elesiaQW = elesiaQW+1
 					 cla
-						 if silk>1:
-							 act 'Продать все':
-							 gem=gem+silk*500
+						 if silk>1: 
+							 act 'Продать все': 
+							 gem = gem+silk*500
 							 msg'Вы продали <<silk>> паучего шелка.'
-							 silk=0
+							 silk = 0
 							 gt $CURLOC
 							 end
 							 
-							 act 'Продать нужное количество':
+							 act 'Продать нужное количество': 
 							  tempshop = input ("У вас <<silk>> паучего шелка. Сколько вы желаете продать?")
-								  if tempshop > silk or tempshop < 0 :
+								  if tempshop > silk or tempshop < 0 : 
 								  msg 'У вас нет такого количества паучего шелка.'  
 								  gt $CURLOC
 								  else
-								 gem=gem+tempshop *500
-								 silk=silk-tempshop
+								 gem = gem+tempshop *500
+								 silk = silk-tempshop
 								 msg'Вы продали Элессе <<tempshop>> паучего шелка.'
 								 gt $CURLOC
 								 end
 							 end
 						 end
 						 
-						 if silk=1:
-						 silk=silk-1
-						 gem=gem+500
+						 if silk = 1: 
+						 silk = silk-1
+						 gem = gem+500
 						 'Вы продали Элессе свой товар.'
-						 act 'Спрятать деньги':gt $CURLOC
+						 act 'Спрятать деньги': gt $CURLOC
 						 end
 					 end
-				 act 'Нет':gt $CURLOC
+				 act 'Нет': gt $CURLOC
 				 end
 			 end
          
@@ -276,9 +276,9 @@ else
 'Закрыто.'
 end
 
-act 'Уйти':
-minut=minut+5
-gt'teladareW'
+act 'Уйти': 
+minut += 5
+ gt 'teladareW'
 end
 --- taTkaW ---------------------------------
 

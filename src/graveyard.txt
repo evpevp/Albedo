@@ -6,61 +6,61 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 '<center><H4>Кладбище</H4></center>'
-'<center><img src="pic/Evedon/graveyard.jpg" ></center>'
+'<center><img src = "pic/Evedon/graveyard.jpg" ></center>'
 'Кладбище, возле изъеденных сыростью стен квартала трущоб Эведона, простирается от рыбацкой деревни до болота.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-if hour>=21 or hour<5:
-grrand=RAND(0,100)
-     if grrand>=75:
-     monsrand=RAND(0,3)
-     minut=minut+15
-         if monsrand<3:
+if hour>= 21 or hour<5: 
+grrand = RAND(0,100)
+     if grrand>= 75: 
+     monsrand = RAND(0,3)
+     minut += 15
+         if monsrand<3: 
          *clr
-         '<center><img src="pic/EvedonMonsters/zombie.jpg"></center>'
+         '<center><img src = "pic/EvedonMonsters/zombie.jpg"></center>'
 		 'Из темноты на вас кинулся мертвец.'
-		 $nameV='Мертвец'
-		 undead=1
-		 lvlv=190
-		 strenV=800
-		 speedV=100
-		 agilV=100
-		 vitalV=1000
-		 intelv=10
-		 willv=10
-		 program=43
-		 healthV=vitalV*50
-		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
-		 monster=25
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Мертвец'
+		 undead = 1
+		 lvlv = 190
+		 strenV = 800
+		 speedV = 100
+		 agilV = 100
+		 vitalV = 1000
+		 intelv = 10
+		 willv = 10
+		 program = 43
+		 healthV = vitalV*50
+		 mannaV = intelV*10+intelV*15
+		 wipoV = willV*10
+		 monster = 25
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gt'before'
+		 act 'Драться': gt 'before'
 		 exit
 		 end
-		  if monsrand=3:
-		 $nameV='Вампир'
-		 undead=2
-		 lvlv=250
-		 strenV=100
-		 speedV=100
-		 agilV=100
-		 vitalV=1000
-		 intelv=300
-		 willv=300
-		 program=44
-		 healthV=vitalV*50
-		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
-		 monster=28
+		  if monsrand = 3: 
+		 $nameV = 'Вампир'
+		 undead = 2
+		 lvlv = 250
+		 strenV = 100
+		 speedV = 100
+		 agilV = 100
+		 vitalV = 1000
+		 intelv = 300
+		 willv = 300
+		 program = 44
+		 healthV = vitalV*50
+		 mannaV = intelV*10+intelV*15
+		 wipoV = willV*10
+		 monster = 28
 		 *clr
-		 '<center><img src="pic/EvedonMonsters/vampire.jpg"></center>'
+		 '<center><img src = "pic/EvedonMonsters/vampire.jpg"></center>'
 		 'Из темноты что-то неслышно скользнуло к вам.'
-		 act 'Драться':gt'before'
+		 act 'Драться': gt 'before'
 		 exit
 		 end
      end
@@ -68,35 +68,35 @@ end
 
 
 !!!дома
-'Возле входа на кладбище стоит <a href="exec: gt''gravemaster''">домик кладбищенского хранителя</a>'
-if vampireMorf>=1:'На кладбище вы видите вашу <a href="exec: gt''vampGrave''">могилу</a>'
+'Возле входа на кладбище стоит <a href = "exec: gt ''gravemaster''">домик кладбищенского хранителя</a>'
+if vampireMorf>= 1: 'На кладбище вы видите вашу <a href = "exec: gt ''vampGrave''">могилу</a>'
 !!!
 
-if hour>=21 or hour<5:
-     if blackBuben=1 and GraveDog=1:
-         act 'Убить щенка и провести ритуал соединения душ (1 час)':
+if hour>= 21 or hour<5: 
+     if blackBuben = 1 and GraveDog = 1: 
+         act 'Убить щенка и провести ритуал соединения душ (1 час)': 
          cls
-         GraveDog=100
-         GraveDogPower=100
-         GraveDogPowerM=100
-		 minut=minut+60
+         GraveDog = 100
+         GraveDogPower = 100
+         GraveDogPowerM = 100
+		 minut += 60
 		 'Вы начертили магический символ на свежей могиле и связав щенка положили на символ. Взяв бубен вы начали камлать, связывая ваши души. Когда пришел нужный момент, вы задушили щенка и он умер.'
 		 'Продолжив камлать вы ощутили чье-то присутствие. Это присутствие все усиливалось, волосы шевелились на затылке, но вы довели до конца ритуал и только тогда повернулись. За вашей спиной стоял черный пес, ваш проводник в мире мертвых.'
-		 act 'Закончить ритуал':gt $curloc
+		 act 'Закончить ритуал': gt $curloc
 		 end
      
      end
 end
 
 
-	 act 'Идти к рыбацкой деревни (15 минут)':
-	 minut=minut+15
-	 gt'fishW'
+	 act 'Идти к рыбацкой деревни (15 минут)': 
+	 minut += 15
+	 gt 'fishW'
 	 end
 
-	 act 'Идти к южным болотам (1 час)':
-	 minut=minut+60
-	 gt'marshW'
+	 act 'Идти к южным болотам (1 час)': 
+	 minut += 60
+	 gt 'marshW'
 	 end
 --- graveyard ---------------------------------
 

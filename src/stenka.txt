@@ -2,13 +2,13 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 clr
-gs'stat'
+gs 'stat'
 '<center><H4>Стенка</H4></center>'
 ''
 
 
 
 
-act 'Закрыть стенку':GOTO $locM, $metkaM
+act 'Закрыть стенку': GOTO $locM, $metkaM
 --- stenka ---------------------------------
 

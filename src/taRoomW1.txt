@@ -8,101 +8,101 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 mag = 1
 '<center><H4>Съемная комната</H4></center>'
-'<center><img src="pic/Evedon/taroom.jpg" ></center>'
+'<center><img src = "pic/Evedon/taroom.jpg" ></center>'
 'Небольшая комната, но уютная и в ней есть все необходимое.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
 
-'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
-'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
-'Резной <a href="exec:GT ''lokerW''">шкаф</a>.'
-'Уютный <a href="exec:GT ''divanW''">диван</a>.'
-if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
-if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
+'Застеленная, чистая <a href = "exec: gt ''bed''">кровать</a>.'
+'Большая деревянная кадушка <a href = "exec: gt ''kadka''">для мытья</a>.'
+'Резной <a href = "exec: gt ''lokerW''">шкаф</a>.'
+'Уютный <a href = "exec: gt ''divanW''">диван</a>.'
+if mirr>0: '<a href = "exec: gt ''mirrW''">Зеркало</a>'
+if brakW>0: '<a href = "exec: gt ''marryWorld''"><<$namefrendM>></a>'
 
-if slot=0:
+if slot = 0: 
 *nl
 'Без одежды нельзя выходить на улицу.'
 end
 
-if slot>0:
-	 act 'Уйти':
-	 minut=minut+5
-	 gt'teladareW'
+if slot>0: 
+	 act 'Уйти': 
+	 minut += 5
+	 gt 'teladareW'
 	 end
 end
 
-!'act 'Чит силы':
-lvl=lvl+100
-sp=sp+500
-gt $CURLOC
+!'act 'Чит силы': 
+lvl = lvl+100
+sp = sp+500
+ gt $CURLOC
 end
 
-act 'Чит Заклинания':
-spZerkalo=100
-spMagShild=100
-spSmeshenie=100
-spFist=100
-spSphera=100
-spIgla=100
-spSve=100
-demonSoul=100
-spSozh=100
-gem=150000
-magika=magika+9
-spFistExp=100
-ZerkaloExp=500
-cursedExp=100
-scolElectro=1
-spShok=100
-spShokTri=100
-spShokSh=100
-scolWater=1
-spWaterStr=100
-spWaterMultiStr=100
-spWaterShild=100
-scolGround=1
-spSStorm=100
-spSandShild=100
-spSandUdar=100
-scolWind=1
-spWindUd=100
-spVacuum=100
-spVacShild=100
-spAcid=100
-sera=sera+100
-spWillSh=100
-spElPole=100
-spBigShok=100
-spElProboy=100
-spTuman=100
-spKlon=100
-spPotop=100
-spPotopManna=100
-spPotopShark=100
-spSandAbsolut=100
-spSandInGround=100
-spSandInGroundAtk=100
-spSandUdarPlita=100
-spVacBullet=100
-spVacPerepad=100
-spVacVih=100
-spVacPolet=100
+act 'Чит Заклинания': 
+spZerkalo = 100
+spMags hild = 100
+spSmeshenie = 100
+spFist = 100
+spSphera = 100
+spIgla = 100
+spSve = 100
+demonSoul = 100
+spSozh = 100
+gem = 150000
+magika = magika+9
+spFistExp = 100
+ZerkaloExp = 500
+cursedExp = 100
+scolElectro = 1
+spShok = 100
+spShokTri = 100
+spShokSh = 100
+scolWater = 1
+spWaterStr = 100
+spWaterMultiStr = 100
+spWaterShild = 100
+scolGround = 1
+spSStorm = 100
+spSandShild = 100
+spSandUdar = 100
+scolWind = 1
+spWindUd = 100
+spVacuum = 100
+spVacShild = 100
+spAcid = 100
+sera = sera+100
+spWillSh = 100
+spElPole = 100
+spBigs hok = 100
+spElProboy = 100
+spTuman = 100
+spKlon = 100
+spPotop = 100
+spPotopManna = 100
+spPotopShark = 100
+spSandAbsolut = 100
+spSandInGround = 100
+spSandInGroundAtk = 100
+spSandUdarPlita = 100
+spVacBullet = 100
+spVacPerepad = 100
+spVacVih = 100
+spVacPolet = 100
 
-spTEHNO=1
-RocketTEH=50
-BulletTEH=300
-ShildTEH=10
+spTEHNO = 1
+RocketTEH = 50
+BulletTEH = 300
+ShildTEH = 10
 
-spSwordDancer=100
-gt $CURLOC
+spSwordDancer = 100
+ gt $CURLOC
 end'
 
 

@@ -3,20 +3,20 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 clr
-gs'stat'
-'<center><img src="pic/EvedonNarod\medrodotel.jpg" ></center>'
+gs 'stat'
+'<center><img src = "pic/EvedonNarod\medrodotel.jpg" ></center>'
 'Высокомерный метрдотель обратил внимание на вас.'
-if slot=11:
+if slot = 11: 
 'Ходят тут бродяги всякие и так спасу нет из-за драпающих от демонов оборванцев.'
 end
-if slot=12 or slot=13:
+if slot = 12 or slot = 13: 
 'Все цены на этой бумажке, грамоту-то может знаешь?'
 end
-if slot>13:
-     if femin>200:
+if slot>13: 
+     if femin>200: 
      'Что вам угодно госпожа?'
      end
-     if femin<=200:
+     if femin<= 200: 
      'Что вам угодно господин?'
      end
 end
@@ -25,99 +25,99 @@ end
 'Виски 20 гемов.'
 'Комната стоит 50 гемов в сутки'
 clr
-gs'stat'
-!if cumface>0:SUB=SUB+1&whoreKD=whoreKD+1&'Трактирщик плотоядно ухмыльнулся разглядывая следы спермы на вашем лице.'
-!if cumlip>0:SUB=SUB+1&whoreKD=whoreKD+1&'Трактирщик плотоядно ухмыльнулся разглядывая следы спермы на ваших губах.'
-act 'Отойти от стойки':gt'monmotel'
+gs 'stat'
+!if cumface>0: SUB = SUB+1 & whoreKD = whoreKD+1 & 'Трактирщик плотоядно ухмыльнулся разглядывая следы спермы на вашем лице.'
+!if cumlip>0: SUB = SUB+1 & whoreKD = whoreKD+1 & 'Трактирщик плотоядно ухмыльнулся разглядывая следы спермы на ваших губах.'
+act 'Отойти от стойки': gt 'monmotel'
 
-     act 'Поболтать':
+     act 'Поболтать': 
      cla
      *clr
-     '<center><img src="pic/EvedonNarod\medrodotel.jpg" ></center>'
-     minut=minut+15
+     '<center><img src = "pic/EvedonNarod\medrodotel.jpg" ></center>'
+     minut += 15
      'Вы завязываете разговор с метрдотелем.'
-      act 'Хмм, надо же.':gt $CURLOC
+      act 'Хмм, надо же.': gt $CURLOC
      end
      
      
-	 if gem>=10:
-		 act 'Еды':
+	 if gem>= 10: 
+		 act 'Еды': 
 		 cla
 		 *clr
-		 minut=minut+15
-		 gem=gem-10
-		 gs'eda'
+		 minut += 15
+		 gem = gem-10
+		 gs 'eda'
 		 'Медродотель достал вам тарелку, доверху наполненную едой.'
-		 gs'eat'
-		 act 'Отойти от стойки':gt $CURLOC
+		 gs 'eat'
+		 act 'Отойти от стойки': gt $CURLOC
 		 end
 	 end
 
-	 if gem>=15:
-		 act 'Пива':
+	 if gem>= 15: 
+		 act 'Пива': 
 		 cla
-		 minut=minut+15
-		 gem=gem-15
-		 fat=fat+1
-		 alko=alko+2
-		 golod=golod+3
-		 manna=manna+10
-		 wipo=wipo+10
-		 horny=horny+5
+		 minut += 15
+		 gem = gem-15
+		 fat = fat+1
+		 alko = alko+2
+		 golod = golod+3
+		 manna = manna+10
+		 wipo = wipo+10
+		 horny = horny+5
 	      *clr
-         '<center><img src="pic/EvedonOd\beer.jpg"></center>'
+         '<center><img src = "pic/EvedonOd\beer.jpg"></center>'
 		 'Медродотель достал вам кружку, наполненную пенящимся пивом и вы быстренько ее выпили.'
-		 act 'Отойти от стойки':gt $CURLOC
+		 act 'Отойти от стойки': gt $CURLOC
 		 end
 	 end
 
-	 if gem>=20:
-		 act 'Виски':
+	 if gem>= 20: 
+		 act 'Виски': 
 		 cla
-		 minut=minut+15
-		 gem=gem-20
-		 alko=alko+5
-		 manna=manna+20
-		 wipo=wipo+20
-		 horny=horny+10
+		 minut += 15
+		 gem = gem-20
+		 alko = alko+5
+		 manna = manna+20
+		 wipo = wipo+20
+		 horny = horny+10
 	     *clr
-         '<center><img src="pic/EvedonOd\wiskey.jpg"></center>'
+         '<center><img src = "pic/EvedonOd\wiskey.jpg"></center>'
 		 'Медродотель достал вам стакан, наполненный вонючим пойлом, вы залпом его выпили.'
-		 act 'Отойти от стойки':gt $CURLOC
+		 act 'Отойти от стойки': gt $CURLOC
 		 end
 	 end
 	 
-	 if mimiko=1:
-	     act 'Спросить про Мимико':
+	 if mimiko = 1: 
+	     act 'Спросить про Мимико': 
 	     cla
 	     *clr
-	     minut=minut+15
-	     mimiko=2
-	     '<center><img src="pic/EvedonNarod\medrodotel.jpg" ></center>'
+	     minut += 15
+	     mimiko = 2
+	     '<center><img src = "pic/EvedonNarod\medrodotel.jpg" ></center>'
 	     'Вы спрашиваете у медродотеля про Мимико. Он говорит вам, что она работала здесь вышибалой, но ушла пару дней назад, вроде бы собиралась в Тель-Адре.'
-	     act 'Спасибо.':gt $CURLOC
+	     act 'Спасибо.': gt $CURLOC
 	     end
 	 end
 	 
-if roomWMO>0:
+if roomWMO>0: 
 'У вас оплачено <<roomWMM>> дней'
 end
 
 
-	 if gem>=50:
-		 act 'Оплатить комнату 50 гемов сутки':
+	 if gem>= 50: 
+		 act 'Оплатить комнату 50 гемов сутки': 
 		 cla
-		 minut=minut+15
+		 minut += 15
 		 roomWfgem = input ("Сколько суток вы хотите оплатить? (50 гемов 1 сутки)")
-			 if roomWfgem*50 > gem:
+			 if roomWfgem*50 > gem: 
 			 'У вас недостаточно гемов.'
 			 end
-			 if roomWgem*50 <= gem:
-			 gem=gem-roomWfgem*50
-			 roomWMM=roomWMM+roomWfgem
+			 if roomWgem*50 <= gem: 
+			 gem = gem-roomWfgem*50
+			 roomWMM = roomWMM+roomWfgem
 			 'У вас оплачено <<roomWMM>> дней'
 			 end 
-		 act 'Отойти':gt $CURLOC
+		 act 'Отойти': gt $CURLOC
 		 end
 	 end
 --- Metrdotel ---------------------------------

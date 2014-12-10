@@ -7,66 +7,66 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Мост</H4></center>'
-'<center><img src="pic/Evedon/most.jpg" ></center>'
+'<center><img src = "pic/Evedon/most.jpg" ></center>'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 'Мост пролегает через узкую часть бухты, с одной стороны виднеется порт, с другой - грязные лачуги трущоб.'
-!'С одной стороны моста виден ((порт|portW|minut=minut+15)) с другой ((трущобы|slumsW|minut=minut+15)).'
+!'С одной стороны моста виден ((порт|portW|minut += 15)) с другой ((трущобы|slumsW|minut += 15)).'
 
-act 'Идти в трущобы':
-minut=minut+5
-gt'slumsW'
+act 'Идти в трущобы': 
+minut += 5
+ gt 'slumsW'
 end
 
-act 'Идти в порт':
-minut=minut+5
-gt'portW'
+act 'Идти в порт': 
+minut += 5
+ gt 'portW'
 end
 
-act 'Идти под мост':
-minut=minut+5
-gt'undermostW'
+act 'Идти под мост': 
+minut += 5
+ gt 'undermostW'
 end
 
-     act 'Ждать':
+     act 'Ждать': 
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         if waiting <= 0 or waiting > 120: 
+          minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         if waiting > 0 and waiting <= 120: 
+          minut = minut + waiting
          end
-     act 'Посмотреть на часы':gt curloc
+     act 'Посмотреть на часы': gt curloc
      end
      
-     if V_Roziske>0 and V_RoziskeDay!day:
-     randroz=RAND(0,100)
-         if randroz>=90:gt'Rozisk'
+     if V_Roziske>0 and V_RoziskeDay!day: 
+     randroz = RAND(0,100)
+         if randroz>= 90: gt 'Rozisk'
      end
      
 
-if zaertQW=4 and zaertday<daystart and zeartmostonce=0 and hour>=20:
+if zaertQW = 4 and zaertday<daystart and zeartmostonce = 0 and hour>= 20: 
 cla
 *clr
 !3
-zeartmostonce=1
-zeartactiv+=1
-'<center><img src="pic/EvedonKD/blond.jpg" ></center>'
+zeartmostonce = 1
+zeartactiv+= 1
+'<center><img src = "pic/EvedonKD/blond.jpg" ></center>'
 'Проходя по мосту, вы услышали характерные звуки секса из-под моста. Естественно, вы немедленно начали пытаться хоть что-нибудь рассмотреть. В сгущающихся сумерках вашему взору предстает та блондиночка, которую наяривает какой-то хмырь.'
 
-     act 'Наблюдать':
+     act 'Наблюдать': 
      cla
      'Парочка закончила своё действо и разошлась. Вы опрометью бросились вслед за незнакомкой, но отсутствие освещения не позволило вам её догнать.'
-     act 'Уйти':gt $curloc
+     act 'Уйти': gt $curloc
      end
      
-     act 'Вмешаться':
+     act 'Вмешаться': 
      cla
      'Вы вмешиваетесь в это бесплатное шоу и начинаете ругаться с хмырём. Он оказался довольно трусливым и предпочёл ретироваться. Но лучше от этого не стало, ведь незнакомки тоже поблизости не наблюдается.'
-     act 'Уйти':gt $curloc
+     act 'Уйти': gt $curloc
      end
 
 end

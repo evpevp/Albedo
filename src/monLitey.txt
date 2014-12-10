@@ -9,38 +9,38 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Литейная компания братьев Сеттонов</H4></center>'
-'<center><img src="pic/Evedon/litcomp.jpg" ></center>'
+'<center><img src = "pic/Evedon/litcomp.jpg" ></center>'
 !Возможность покупать и продавать сразу много от Kasssel. Изменение цены и веса металла от Kasssel
 'Груз металла стоит 6000 гемов за 1 штуку. <B> Металл весит 2 ед. груза.</B>' 
 'Товар отпускается только при наличии лицензии'
 'Лицензии получать в городской управе около южных ворот "Эведона'
-if Licens>0:'Торговая лицензия действительна еще <<Licens>> дней'
-if GRiron>0:'У вас <<GRiron>> ед. металла'
+if Licens>0: 'Торговая лицензия действительна еще <<Licens>> дней'
+if GRiron>0: 'У вас <<GRiron>> ед. металла'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-if hour>=6 and hour<=23:
+if hour>= 6 and hour<= 23: 
  
-     if (gruz+1)*10<stren and Licens>0:
-         if gem>=6000:
-             act 'Купить груз металла':
+     if (gruz+1)*10<stren and Licens>0: 
+         if gem>= 6000: 
+             act 'Купить груз металла': 
              cla
              tempshop = input ("Вы можете нести еще<<stren/20-gruz>> ед. металла. Сколько вы хотите купить?")
-                 if tempshop*6000>gem or tempshop<0:
+                 if tempshop*6000>gem or tempshop<0: 
                  msg'У вас нет такого количества гемов.'
                  gt $CURLOC
-                 elseif gruz+tempshop*2>stren/10:
+                 elseif gruz+tempshop*2>stren/10: 
                  msg'Нести столько груза вам не под силу.'
                  gt $CURLOC
                  else
-                 gem=gem-tempshop*6000
-                 GRiron=GRiron+tempshop
-                 gruz=gruz+tempshop*2
+                 gem = gem-tempshop*6000
+                 GRiron = GRiron+tempshop
+                 gruz = gruz+tempshop*2
                  'Вы купили <<tempshop>> ед. металла из шахт Мондюваля.'
-                 act 'Уйти':gt $CURLOC
+                 act 'Уйти': gt $CURLOC
                  end
              end
          end
@@ -50,9 +50,9 @@ else
 'Закрыто'
 end
 
-act 'Уйти':
-minut=minut+5
-gt'monduval'
+act 'Уйти': 
+minut += 5
+ gt 'monduval'
 end
 --- monLitey ---------------------------------
 

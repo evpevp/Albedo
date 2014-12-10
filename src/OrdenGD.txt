@@ -10,25 +10,25 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut=minut+5
+minut += 5
 mag = 1
 '<center><H4>Подвал кладбищенского домика</H4></center>'
 '<center>Резиденция ордена могильной собаки</center>'
-'<center><img src="pic/Evedon/rezoms.jpg" ></center>'
+'<center><img src = "pic/Evedon/rezoms.jpg" ></center>'
 'Подвал, украшенный мрачными гобеленами, черепами со свечами, книжными полками, разнообразными символами.'
 
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-act 'Уйти':minut=minut+5&gt'graveyard'
+act 'Уйти': minut += 5 & gt 'graveyard'
 
 
-if OrdenRangGD=1 and ordenGrave=0:
-ordenGrave=1
+if OrdenRangGD = 1 and ordenGrave = 0: 
+ordenGrave = 1
 'В подвале вас уже ожидают другие члены ордена могильной собаки.'
 'Их немного, всего 20 человек вместе с вами. Среди них вам улыбается знакомый вам книжник'
 'Темные магистры встали в круг вокруг вас и могильщика, и могильщик начал речь.'
@@ -40,72 +40,72 @@ ordenGrave=1
 'Мы собираемся здесь каждую полночь, чтобы провести черную мессу, которая усилит наших псов и восполнит их силы. Мы не сотрудничаем с демонами и никогда не станем иметь с ними ничего общего.'
 'И уж тем более мы не потерпим измены и вступления наших членов в орден четырехлистника. Мы найдем способ покарать отступника.'
 'Могильщик слега поклонился и сказал "Моя речь закончена. Все желающие могут придти на черную мессу в 23 часа."'
-act 'Уйти':minut=minut+5&gt'graveyard'
+act 'Уйти': minut += 5 & gt 'graveyard'
 end
 
-if ordenGrave=1 and hour=23:
+if ordenGrave = 1 and hour = 23: 
 'В круге уже собрались темные магистры'
-     if gravedog>=100:
-		 act 'Начать черную массу':
+     if gravedog>= 100: 
+		 act 'Начать черную массу': 
 		 cla
-		 blackMessa+=1
-		 GraveDogPowerM+=RAND(lvl,lvl*5)
-		 GraveDogPower=GraveDogPowerM
-		 minut+=180
-		 gs'stat'
+		 blackMessa+= 1
+		 GraveDogPowerM+= RAND(lvl,lvl*5)
+		 GraveDogPower = GraveDogPowerM
+		 minut+= 180
+		 gs 'stat'
 		 'Великий магистр Новурнокс камлал с бубном вокруг жертвенного животного, которого зарезал Ганелон Темный и начертал символ на полу соединяя души псов с миром мертвых.'
 		 'Могильные псы присутствующих показались во плоти и завыли, поглощая силу мертвых развеянную над кладбищем. Вы практически не заметили как трехчасовая месса подошла к концу и магистры начали расходиться.'
-		 act 'Уйти':minut=minut+5&gt'graveyard'
-		     if GraveDogPowerM>=5000 and OrdenRangGD<3:
+		 act 'Уйти': minut += 5 & gt 'graveyard'
+		     if GraveDogPowerM>= 5000 and OrdenRangGD<3: 
 		     'Новурнокс после черной мессы предложил вам остаться'
-		         act 'Обучаться у великого магистра Новурнокса':
+		         act 'Обучаться у великого магистра Новурнокса': 
 		         cla
-		         minut+=60
-		         act 'Уйти':minut=minut+5&gt'graveyard'
+		         minut+= 60
+		         act 'Уйти': minut += 5 & gt 'graveyard'
 		         
-		             if spVladikShadow>=100 and magika>=15 and OrdenRangGD=2:
-		             OrdenRangGD=3
+		             if spVladikShadow>= 100 and magika>= 15 and OrdenRangGD = 2: 
+		             OrdenRangGD = 3
 		             'Мои поздравления <<$name>>, по своим силам ты теперь настоящий старший магистр ордена могильной собаки. И мне больше нечему тебя учить.'
 		             end
 		         
-		         	 if OrdenRangGD=2 and magika>=14 and spMiazm>=100 and spVladikShadow<100:
-		             spVladikShadow+=RAND(5,10)
-		                 if spVladikShadow>=100:spVladikShadow=100
+		         	 if OrdenRangGD = 2 and magika>= 14 and spMiazm>= 100 and spVladikShadow<100: 
+		             spVladikShadow+= RAND(5,10)
+		                 if spVladikShadow>= 100: spVladikShadow = 100
 		             'Новурнокс обучает вас теням владык, вы изучили заклинание на <<spVladikShadow>>%'
 		             end
 		         
-		             if OrdenRangGD=2 and magika>=13 and spMiazm<100:
-		             spMiazm+=RAND(5,10)
-		                 if spMiazm>=100:spMiazm=100
+		             if OrdenRangGD = 2 and magika>= 13 and spMiazm<100: 
+		             spMiazm+= RAND(5,10)
+		                 if spMiazm>= 100: spMiazm = 100
 		             'Новурнокс обучает вас Миазмам, вы изучили заклинание на <<spMiazm>>%'
 		             end
 		         
-		             if spConjScelet>=100 and magika>=12 and OrdenRangGD=1:
-		             OrdenRangGD=2
+		             if spConjScelet>= 100 and magika>= 12 and OrdenRangGD = 1: 
+		             OrdenRangGD = 2
 		             'Мои поздравления <<$name>>, по своим силам ты теперь настоящий младший магистр ордена могильной собаки.'
 		             end
 		         
-		         	 if spConjWall>=100 and spConjScelet<100 and magika>=11:
-		             spConjScelet+=RAND(10,20)
-		                 if spConjScelet>=100:spConjScelet=100
+		         	 if spConjWall>= 100 and spConjScelet<100 and magika>= 11: 
+		             spConjScelet+= RAND(10,20)
+		                 if spConjScelet>= 100: spConjScelet = 100
 		             'Новурнокс обучает вас призыву скелета, вы изучили заклинание на <<spConjScelet>>%'
 		             end
 		         
-		         	 if spGraveRessurect>=100 and spConjWall<100 and magika>=10:
-		             spConjWall+=RAND(10,20)
-		                 if spConjWall>=100:spConjWall=100
+		         	 if spGraveRessurect>= 100 and spConjWall<100 and magika>= 10: 
+		             spConjWall+= RAND(10,20)
+		                 if spConjWall>= 100: spConjWall = 100
 		             'Новурнокс обучает вас призыву живой стены, вы изучили заклинание на <<spConjWall>>%'
 		             end
 		         
-		         	 if spAstralBlast>=100 and spGraveRessurect<100 and magika>=9:
-		             spGraveRessurect+=RAND(10,20)
-		                 if spGraveRessurect>=100:spGraveRessurect=100
+		         	 if spAstralBlast>= 100 and spGraveRessurect<100 and magika>= 9: 
+		             spGraveRessurect+= RAND(10,20)
+		                 if spGraveRessurect>= 100: spGraveRessurect = 100
 		             'Новурнокс обучает вас запретному восстановлению, вы изучили заклинание на <<spGraveRessurect>>%'
 		             end
 		             
-		             if spAstralBlast<100 and magika>=8:
-		             spAstralBlast+=RAND(10,20)
-		                 if spAstralBlast>=100:spAstralBlast=100
+		             if spAstralBlast<100 and magika>= 8: 
+		             spAstralBlast+= RAND(10,20)
+		                 if spAstralBlast>= 100: spAstralBlast = 100
 		             'Новурнокс обучает вас Астральному удару, вы изучили заклинание на <<spAstralBlast>>%'
 		             end
 		         

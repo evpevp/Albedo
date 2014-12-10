@@ -6,48 +6,48 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 '<center><H4>Фермерские угодья</H4></center>'
-'<center><img src="pic/Evedon/farm.jpg" ></center>'
+'<center><img src = "pic/Evedon/farm.jpg" ></center>'
 'Просторные поля с фермерскими домиками, оградами и пасущимся скотом. Восточнее виднеется озеро, на севере мрачнеют неприступные стены Эведона.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 
 !!!дома
-if farmland=1:'<a href="exec: minut=minut+5 & gt ''farmMY'' "><font color=green><B>Ферма <<$farmname>></B></font></a>'
-'((Ферма Хокгроув|farmHokGrouW|minut=minut+5))'
-'((Ферма Толинвуд|farmArs|minut=minut+5))'
-'((Цветочная поляна|flowerpol|minut=minut+5))'
-if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">землю</a>'
+if farmland = 1: '<a href = "exec: minut += 5 & gt ''farmMY'' "><font color = green><B>Ферма <<$farmname>></B></font></a>'
+'((Ферма Хокгроув|farmHokGrouW|minut += 5))'
+'((Ферма Толинвуд|farmArs|minut += 5))'
+'((Цветочная поляна|flowerpol|minut += 5))'
+if vampireMorf>= 1: 'Зарыться в <a href = "exec: gt ''vampGrave''">землю</a>'
 !!!
 
-	 act 'Идти к пригороду (1 час)':
-	 minut=minut+60
-	 gt'suburbiaW'
+	 act 'Идти к пригороду (1 час)': 
+	 minut += 60
+	 gt 'suburbiaW'
 	 end
 	 
-	 act 'Идти к озеру (1 час)':
-	 minut=minut+60
-	 gt'lakeW'
+	 act 'Идти к озеру (1 час)': 
+	 minut += 60
+	 gt 'lakeW'
 	 end
 	 
-	 act 'Идти в горы (1 час)':
-	 minut=minut+60
-	 gt'mountW'
+	 act 'Идти в горы (1 час)': 
+	 minut += 60
+	 gt 'mountW'
 	 end
 
-     act 'Ждать':
+     act 'Ждать': 
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         if waiting <= 0 or waiting > 120: 
+          minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         if waiting > 0 and waiting <= 120: 
+          minut = minut + waiting
          end
-     act 'Посмотреть на часы':gt curloc
+     act 'Посмотреть на часы': gt curloc
      end
 --- farmW ---------------------------------
 

@@ -3,81 +3,81 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Долли Кеннет</H4></center>'
-'<center><img src="pic/EvedonNarod/DollyKennet.jpg" ></center>'
+'<center><img src = "pic/EvedonNarod/DollyKennet.jpg" ></center>'
 'Все еще молодая и привелекательная вдовушка владеющая магазином.'
 clr
-gs'stat'
+gs 'stat'
 
 
-act 'Уйти':gt $locFight,$metkaFight
+act 'Уйти': gt $locFight,$metkaFight
 
-if DollyWorkQW=5:
-DollyWorkQW=6
-gem+=10
+if DollyWorkQW = 5: 
+DollyWorkQW = 6
+gem+= 10
 'А, ты починил крышу. Вот спасибо. На 10ть гемов, как я и обещала.'
 exit
 end
 
-if DollyWorkQW=2:
-DollyWorkQW=3
-gem+=5
+if DollyWorkQW = 2: 
+DollyWorkQW = 3
+gem+= 5
 'А, ты починил лавочку. Вот спасибо. На 5ть гемов, как я и обещала.'
 exit
 end
 
-if toiletJerkQW=2:
-     act 'Спросить могут ли у нее поселится приезжие':
+if toiletJerkQW = 2: 
+     act 'Спросить могут ли у нее поселится приезжие': 
 	 cla
-	 minut+=15
-	 toiletJerkQW=3
-	 gs'stat'
+	 minut+= 15
+	 toiletJerkQW = 3
+	 gs 'stat'
 	 'Долли обрадовалась. От мужа мне достался большой дом, но торговля не идет, и постояльцы будут очень кстати. Пошли их ко мне.'
-	 act 'Уйти':gt $locFight,$metkaFight
+	 act 'Уйти': gt $locFight,$metkaFight
 	 end
 end
 
-act 'Болтать':
+act 'Болтать': 
 cla
-minut+=15
-gs'stat'
-     if StefanQW>=1:
+minut+= 15
+gs 'stat'
+     if StefanQW>= 1: 
      'Привет <<$name>>.'
      end
      'Не хватает мужика в доме. Ни починить мебель, ни крышу подлатать. А за товаром приходится в Мондюваль мотаться. Считай туда три часа и обратно не меньше. Хорошо хоть на дороге спокойно.'
-act 'Уйти':gt $locFight,$metkaFight
-     act 'Спросить про работу':
+act 'Уйти': gt $locFight,$metkaFight
+     act 'Спросить про работу': 
 	 cla
-	 minut+=15
-	 gs'stat'
+	 minut+= 15
+	 gs 'stat'
 	 'С деньгами у меня у самой проблемы, шахтеры не самые бойкие покупатели. Долли задумалась.'
-	 	 if DollyWorkQW=3:
+	 	 if DollyWorkQW = 3: 
 	     'У меня крыша в магазине прохудилась, надо бы залатать. Могу заплатить за это 10 гем.'
-	         act 'Договорились':
+	         act 'Договорились': 
 	         cla
-	         minut+=15
-	         DollyWorkQW=4
-	         gs'stat'
+	         minut+= 15
+	         DollyWorkQW = 4
+	         gs 'stat'
 	         'Вы договорились с Долли, что почините ее крышу.'
-	         act 'Уйти':gt $locFight,$metkaFight
+	         act 'Уйти': gt $locFight,$metkaFight
 	         end
-	     act 'Уйти':gt $locFight,$metkaFight
+	     act 'Уйти': gt $locFight,$metkaFight
 	     exit
 	     end
-	     if DollyWorkQW=0:
+	     if DollyWorkQW = 0: 
 	     'Но я могу заплатить 5 гемов, если починишь лавку.'
-	         act 'Договорились':
+	         act 'Договорились': 
 	         cla
-	         minut+=15
-	         DollyWorkQW=1
-	         gs'stat'
+	         minut+= 15
+	         DollyWorkQW = 1
+	         gs 'stat'
 	         'Вы договорились с Долли, что почините ее лавку.'
-	         act 'Уйти':gt $locFight,$metkaFight
+	         act 'Уйти': gt $locFight,$metkaFight
 	         end
-	     act 'Уйти':gt $locFight,$metkaFight
+	     act 'Уйти': gt $locFight,$metkaFight
 	     exit
 	     end
 	 'Нет. Ничего срочного нету.'
-	 act 'Уйти':gt $locFight,$metkaFight
+	 act 'Уйти': gt $locFight,$metkaFight
 	 end
 end
 --- DollyKennet ---------------------------------

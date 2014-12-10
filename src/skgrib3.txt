@@ -1,13 +1,13 @@
 # skgrib3
 clr
-gs'stat'
+gs 'stat'
 !гриб коротун
-horny=0
-grib4=grib4-1
-if rost>120:
-rost=rost-RAND(1,5)
+horny = 0
+grib4 = grib4-1
+if rost>120: 
+rost = rost-RAND(1,5)
 end
-skverna=skverna+1
+skverna = skverna+1
 'Стоило вам только проглотить кусок гриба, как в теле появился странный зуд. Но все быстро закончилось и вы поняли, что стали меньше ростом.'
 --- skgrib3 ---------------------------------
 

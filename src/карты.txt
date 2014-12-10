@@ -1,18 +1,18 @@
 # карты
-*PL '<right><img src="pic/casino/zalcart.jpg" ></right>'
+*PL '<right><img src = "pic/casino/zalcart.jpg" ></right>'
 *P 'В зале много свободных столов для игр в Блекджек и Casino Wars.'
-ACT 'К столу игры в Блек Джек':
-	gt 'блдж'
+ACT 'К столу игры в Блек Джек': 
+	 gt 'блдж'
 END
-ACT 'К столу игры в Casino War':
-	gt 'казвар'
+ACT 'К столу игры в Casino War': 
+	 gt 'казвар'
 END
-ACT 'Вернуться в холл':
-	gt 'холл'
+ACT 'Вернуться в холл': 
+	 gt 'холл'
 END
 clr
-gs'stat'
-set minut=minut + 10
+gs 'stat'
+ minut = minut + 10
 
 !СИМВОЛЫ
 ! ♥

@@ -8,63 +8,63 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-'<center><img src="pic/EvedonNarod/alimey.jpg"></center>'
+'<center><img src = "pic/EvedonNarod/alimey.jpg"></center>'
 'Али Мэй посмотрела на вас холодным взглядом.'
 'Привет <<$name>>, присаживайся.'
 
 
-act 'Уйти':
-minut=minut+5
-gt'taPekarW'
+act 'Уйти': 
+minut += 5
+ gt 'taPekarW'
 end
 
-     if missionData=4:
-         act 'Отдать письмо':
+     if missionData = 4: 
+         act 'Отдать письмо': 
          cla
          *clr
-         missionData=0
-         kredit=kredit+100
-         missionC+=1
-         '<center><img src="pic/Photo/License.jpg" ></center>'
+         missionData = 0
+         kredit = kredit+100
+         missionC+= 1
+         '<center><img src = "pic/Photo/License.jpg" ></center>'
          'Вы отдали письмо и выполнили миссию ранга С. За это вы получили 100 орденских кредитов.'
-         act 'Уйти':gt $CURLOC
+         act 'Уйти': gt $CURLOC
          end
      end
      
-act 'Поговорить':
+act 'Поговорить': 
 cla
 *clr
-'<center><img src="pic/EvedonNarod/alimey.jpg"></center>'
+'<center><img src = "pic/EvedonNarod/alimey.jpg"></center>'
 'Вы подсели к Али и она, посмотрев на вас вопросительным взглядом, сказала: "Спрашивай, я тут всех знаю."'
-act 'Уйти':gt'taPekarW'
-     act 'Урта':
+act 'Уйти': gt 'taPekarW'
+     act 'Урта': 
      cla
      *clr
-     '<center><img src="pic/EvedonNarod/alimey.jpg"></center>'
-     minut=minut+15
+     '<center><img src = "pic/EvedonNarod/alimey.jpg"></center>'
+     minut += 15
      'Вы поинтересовались Уртой.'
      'Али Мэй кивнула. Работаю стражницей несколько лет, все это время я в ее смене. Она редкая футанари. Урта родилась такой. Это действительно редкость. Но она не любит обсуждать ее прошлое. Все что я знаю, росла она в ужасных условиях. Воспитывал ее дед, да и тот выгнал из дома. После чего она в трущобах Эведона обитала и выступала на арене. Но она решила сделать борьбу с демонами смыслом своей жизни и поэтому переехала в Тель Адре. Она одинокий и несчастный человек, прячущий под маской агрессивности свою ранимость. Конечно ее либидо просто фантастическое, она и ко мне подъехала как-то раз, схватила меня за грудь рукой, я ей тогда руку сломала в двух местах.'
-     act 'Уйти':gt'taPekarW'
+     act 'Уйти': gt 'taPekarW'
      end
      
-     act 'Эдрин':
+     act 'Эдрин': 
      cla
      *clr
-     '<center><img src="pic/EvedonNarod/alimey.jpg"></center>'
-     minut=minut+15
+     '<center><img src = "pic/EvedonNarod/alimey.jpg"></center>'
+     minut += 15
      'Вы поинтересовались Эдрин.'
      'Али Мэй кивнула. Понятия не имею почему граф Андре Де Адаре назначил эту шлюху капитаном стражи.'
-     act 'Уйти':gt'taPekarW'
+     act 'Уйти': gt 'taPekarW'
      end
      
-     act 'Коттон':
+     act 'Коттон': 
      cla
      *clr
-     '<center><img src="pic/EvedonNarod/alimey.jpg"></center>'
-     minut=minut+15
+     '<center><img src = "pic/EvedonNarod/alimey.jpg"></center>'
+     minut += 15
      'Вы поинтересовались Коттон.'
      'Али Мэй кивнула. Да, она со мной и Уртой ходит в патруле. Но с Уртой они не общаются, уж не знаю почему, но Коттон избегает Урты.'
-     act 'Уйти':gt'taPekarW'
+     act 'Уйти': gt 'taPekarW'
      end
 end
 --- alimayW ---------------------------------

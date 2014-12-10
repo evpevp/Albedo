@@ -3,59 +3,59 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 showinput 1
 clr
-gs'stat'
+gs 'stat'
 '<center><H4>Коробка для денег</H4></center>'
-if safemoney > 0:
+if safemoney > 0: 
 'В коробке <<safemoney>> рублей.'
-     act 'Положить деньги на хранение':
+     act 'Положить деньги на хранение': 
      cla
      safemon = input ("Сколько рублей вы хотите положить в коробку на хранение?")
-         if safemon <= 0 or safemon > money:
+         if safemon <= 0 or safemon > money: 
          'Недопустимая операция'
          end 
-         if safemon <= money:
-         set safemoney = safemoney + safemon
-         set money = money - safemon
+         if safemon <= money: 
+          safemoney = safemoney + safemon
+          money = money - safemon
          'Вы положили в коробку <<safemon>> рублей.'
          end
-     act 'Закрыть коробку':GOTO $loc, $metka
+     act 'Закрыть коробку': GOTO $loc, $metka
      end
      
-     act 'Взять деньги':
+     act 'Взять деньги': 
      cla
      safemon = input ("Сколько рублей вы хотите взять денег из коробки?")
-         if safemon <= 0 or safemon > safemoney:
+         if safemon <= 0 or safemon > safemoney: 
          'Недопустимая операция'
          end 
-         if safemon <= safemoney:
-         set safemoney = safemoney - safemon
-         set money = money + safemon
+         if safemon <= safemoney: 
+          safemoney = safemoney - safemon
+          money = money + safemon
          'Вы взяли из коробки <<safemon>> рублей.'
          end
-     act 'Закрыть коробку':GOTO $loc, $metka
+     act 'Закрыть коробку': GOTO $loc, $metka
      end
 end
-if safemoney = 0:
+if safemoney = 0: 
 'В коробке нет денег.'
-     act 'Положить деньги на хранение':
+     act 'Положить деньги на хранение': 
      cla
      safemon = input ("Сколько рублей вы хотите положить в коробку на хранение?")
-         if safemon <= 0 or safemon > money:
+         if safemon <= 0 or safemon > money: 
          'Недопустимая операция'
          end 
-         if safemon <= money:
-         set safemoney = safemoney + safemon
-         set money = money - safemon
+         if safemon <= money: 
+          safemoney = safemoney + safemon
+          money = money - safemon
          'Вы положили в коробку <<safemon>> рублей.'
          end
-     act 'Закрыть коробку':GOTO $loc, $metka
+     act 'Закрыть коробку': GOTO $loc, $metka
      end
 end
 
 
 
 
-act 'Закрыть стенку':GOTO $locM, $metkaM
+act 'Закрыть стенку': GOTO $locM, $metkaM
 
 
 !portion = input ("Сколько порций вы хотите купить?")

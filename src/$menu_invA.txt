@@ -1,8 +1,8 @@
 # $menu_invA
-if $selobj='Инвентарь':
+if $selobj = 'Инвентарь': 
 !
- $dopzap=input('дополнить запись в журнале')
- $zap=$zap+' '+$dopzap
+ $dopzap = input('дополнить запись в журнале')
+ $zap = $zap+' '+$dopzap
 end
 
 unselect

@@ -8,80 +8,80 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 $metkaFuck = $ARGS[0]
 $locFuck = $CURLOC
-minut=minut+1
+minut += 1
 '<center><H4>ГОРОД ЭВЕДОН</H4></center>'
 '<center>Деловой квартал</center>'
-'<center><img src="pic/Evedon/town.jpg" ></center>'
+'<center><img src = "pic/Evedon/town.jpg" ></center>'
 'Небольшой, тихий квартал застроен домами разнообразной архитектуры. Все ухоженное и чистое, хотя простенькое и скромное. По всему видно, что в этом месте живут простые и работящие люди.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
-if DemonMorf>=10:
- atkrand=RAND(0,100)
-     if atkrand>=90:
+if DemonMorf>= 10: 
+ atkrand = RAND(0,100)
+     if atkrand>= 90: 
      cls
 	 *clr
-     '<center><img src="pic/EvedonMonsters/guards.jpg"></center>'
-	 pogonarand=RAND(5,10)
+     '<center><img src = "pic/EvedonMonsters/guards.jpg"></center>'
+	 pogonarand = RAND(5,10)
 	 'Разгуливать в облике демона опасно, стража вас обнаружила и атаковала.'
-		 act 'Убегать.':
-		 minut=minut+1
-		 crime=1
-		 gt'runW'
+		 act 'Убегать.': 
+		 minut += 1
+		 crime = 1
+		 gt 'runW'
 		 end
      exit
      end
 end
 
-!'Северный ((Порт|portW|minut=minut+15))'
-'((Пляж|beachW|minut=minut+5))'
-!'Украшенные ворота в ((Высокий квартал|reachW|minut=minut+15)) расположенный в западной части города.'
-'((Переулок Звонких монет|pereulokW|minut=minut+5))'
-'((Рынок|rinokW|minut=minut+5))'
-'((Арена|arenaW|minut=minut+5))'
-'((Общественная баня|onsenW|minut=minut+5))'
-if frendB>=1:'<a href="exec: gt''frendBhome''">В одном из домов живет <<$namefrendB>>.</a>'
-if hour >= 6 and hour<=21:
+!'Северный ((Порт|portW|minut += 15))'
+'((Пляж|beachW|minut += 5))'
+!'Украшенные ворота в ((Высокий квартал|reachW|minut += 15)) расположенный в западной части города.'
+'((Переулок Звонких монет|pereulokW|minut += 5))'
+'((Рынок|rinokW|minut += 5))'
+'((Арена|arenaW|minut += 5))'
+'((Общественная баня|onsenW|minut += 5))'
+if frendB>= 1: '<a href = "exec: gt ''frendBhome''">В одном из домов живет <<$namefrendB>>.</a>'
+if hour >= 6 and hour<= 21: 
 *nl
-piprand=RAND(0,100)
-     if piprand < 50:
+piprand = RAND(0,100)
+     if piprand < 50: 
      'На улице никого нет.'
      end
-     if piprand >= 50:
-     manpip=RAND(1,10)
-     gs'pippleW'
-     'По улице идет ((<<$pipl>>|pipaktW|minut=minut+1))'
+     if piprand >= 50: 
+     manpip = RAND(1,10)
+     gs 'pippleW'
+     'По улице идет ((<<$pipl>>|pipaktW|minut += 1))'
      end
 end
 
-act 'Идти в порт':
-minut=minut+5
-gt'portW'
+act 'Идти в порт': 
+minut += 5
+ gt 'portW'
 end
 
-act 'Идти в Высокий квартал':
-minut=minut+5
-gt'reachW'
+act 'Идти в Высокий квартал': 
+minut += 5
+ gt 'reachW'
 end
 
-act 'Идти к Южным городским воротам':
-minut=minut+15
-gt'enterW'
+act 'Идти к Южным городским воротам': 
+minut += 15
+ gt 'enterW'
 end
 
 
 
-     act 'Ждать':
+     act 'Ждать': 
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
-         if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         if waiting <= 0 or waiting > 120: 
+          minut = minut + 15
          end
-         if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         if waiting > 0 and waiting <= 120: 
+          minut = minut + waiting
          end
-     act 'Посмотреть на часы':gt curloc
+     act 'Посмотреть на часы': gt curloc
      end
 --- townW ---------------------------------
 

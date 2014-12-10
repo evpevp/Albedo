@@ -3,91 +3,91 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 '<center><H4>Адель Брайтмур</H4></center>'
-'<center><img src="pic/EvedonNarod/AdeleBrightmoore.jpg" ></center>'
-if StefanQW>=1:
+'<center><img src = "pic/EvedonNarod/AdeleBrightmoore.jpg" ></center>'
+if StefanQW>= 1: 
 'Ваша мама все еще симпатичная женщина уставшая от вечных забот.'
-if StefanGem>0:'Вы отдали ей <<StefanGem>> гем.'
+if StefanGem>0: 'Вы отдали ей <<StefanGem>> гем.'
 'Отношение матери к вам <<StefanMother>>'
 else
 'Симпатичная женщина уставшая от вечных забот.'
 end
 clr
-gs'stat'
+gs 'stat'
 
 
-act 'Уйти':gt $locFight,$metkaFight
+act 'Уйти': gt $locFight,$metkaFight
 
-if toiletJerkQW=2:
-     act 'Спросить могут ли у нее поселится приезжие':
+if toiletJerkQW = 2: 
+     act 'Спросить могут ли у нее поселится приезжие': 
 	 cla
-	 minut+=15
-	 gs'stat'
+	 minut+= 15
+	 gs 'stat'
 	 'У нас у самих места мало.'
-	 act 'Уйти':gt $locFight,$metkaFight
+	 act 'Уйти': gt $locFight,$metkaFight
 	 end
 end
 
-act 'Болтать':
+act 'Болтать': 
 cla
-minut+=15
-gs'stat'
-     if StefanQW>=1:
+minut+= 15
+gs 'stat'
+     if StefanQW>= 1: 
      'Привет сын.'
-         if shahtWork=0:
+         if shahtWork = 0: 
          'Ты уже достаточно взрослый, что бы работать в шахте.'
          else
          'Молодец, что работаешь в шахте. Будешь отдавать мне деньги, а когда накопится приличная сумма, то мы тебя оженим и построим дом.'
-             if gem>50:
+             if gem>50: 
              'Кажется у тебя есть деньги, давай мне их.'
-                 act 'Отдать деньги':
+                 act 'Отдать деньги': 
                  cla
-                 StefanMother+=5
-                 StefanFather+=5
-                 StefanGemKar+=gem-50
-                 StefanGem+=StefanGemKar
-                 gem-=StefanGemKar
+                 StefanMother+= 5
+                 StefanFather+= 5
+                 StefanGemKar+= gem-50
+                 StefanGem+= StefanGemKar
+                 gem- = StefanGemKar
                  'Вы отдали матери <<StefanGemKar>> гем заработанных вами.'
-                 StefanGemKar=0
-                 act 'Уйти':gt $locFight,$metkaFight
+                 StefanGemKar = 0
+                 act 'Уйти': gt $locFight,$metkaFight
                  end
                  
-                 act 'Не дам':
+                 act 'Не дам': 
                  cla
-                 StefanMother-=10
-                 StefanFather-=10
+                 StefanMother- = 10
+                 StefanFather- = 10
                  'Вы отказались дать деньги маме. Она огорчилась и сказала вам "Сынок, мы тебя столько лет кормили, поили одевали, а ты вот так вот значит нам за добро отплачиваешь?"'
-                 act 'Уйти':gt $locFight,$metkaFight
+                 act 'Уйти': gt $locFight,$metkaFight
                  end
                   
              else
              'Как будут деньги, приходи ко мне и отдавай.'
-             act 'Уйти':gt $locFight,$metkaFight
-                 if gem>0:
-                     act 'У меня есть немного денег, забирай все.':
+             act 'Уйти': gt $locFight,$metkaFight
+                 if gem>0: 
+                     act 'У меня есть немного денег, забирай все.': 
 					 cla
-					 StefanMother+=5
-					 StefanFather+=5
-					 StefanGemKar+=gem
-					 StefanGem+=StefanGemKar
-					 gem-=StefanGemKar
+					 StefanMother+= 5
+					 StefanFather+= 5
+					 StefanGemKar+= gem
+					 StefanGem+= StefanGemKar
+					 gem- = StefanGemKar
 					 'Вы отдали матери <<StefanGemKar>> гем заработанных вами.'
-					 StefanGemKar=0
-					 act 'Уйти':gt $locFight,$metkaFight
+					 StefanGemKar = 0
+					 act 'Уйти': gt $locFight,$metkaFight
 					 end
                  end
              end
          exit
          end
      else
-     	 if femin>200:
+     	 if femin>200: 
 		 'Привет путница, откуда путь держишь?'
 		 end
-		 if femin<=200:
+		 if femin<= 200: 
 		 'Привет путник, откуда путь держишь?'
 		 end
      end
      ''
-act 'Уйти':gt $locFight,$metkaFight
+act 'Уйти': gt $locFight,$metkaFight
 end
 --- AdeleBrightmoore ---------------------------------
 

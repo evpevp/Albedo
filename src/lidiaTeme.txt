@@ -1,35 +1,35 @@
 # lidiaTeme
 
-if lidiaQW>0:
+if lidiaQW>0: 
 cla
 *clr
-'<center><img src="pic/EvedonNarod\lidia.jpg" ></center>'
+'<center><img src = "pic/EvedonNarod\lidia.jpg" ></center>'
 'Войдя в столовую, вы видите Лидию и садитесь к ней. Лидия улыбается вам'
-act 'Есть':
+act 'Есть': 
 cla
 *clr
-'<center><img src="pic/EvedonNarod\lidia.jpg" ></center>'
+'<center><img src = "pic/EvedonNarod\lidia.jpg" ></center>'
 'Кушая, вы развлекаете Лидию разговорами. Девушка слушает вас, периодически бросая на вас влюбленный взгляд и при этом улыбается.'
-act 'Встать':gt'OrdenKuh'
+act 'Встать': gt 'OrdenKuh'
 exit
 end
 end
 
-if lidiaQW=0:
+if lidiaQW = 0: 
 cla
 *clr
-'<center><img src="pic/EvedonNarod\lidia.jpg" ></center>'
+'<center><img src = "pic/EvedonNarod\lidia.jpg" ></center>'
 'Войдя в столовую, вы видите что все столы заняты. Вы уже собираетесь уйти, но замечаете молодую послушницу, сидящую одну.'
 'Вы подходите к столику и просите разрешения присесть рядом. Девушка улыбается и разрешает вам сесть.'
-act 'Есть':
+act 'Есть': 
 cla
 *clr
-'<center><img src="pic/EvedonNarod\lidia.jpg" ></center>'
-lidiaQW=1
+'<center><img src = "pic/EvedonNarod\lidia.jpg" ></center>'
+lidiaQW = 1
 'Вы едите, попутно общаясь с девушкой. Она представилась как Лидия.В ответ вы говорите, что вас зовут <<$name>> и вам очень приятно познакомится'
 'Лидия в ответ немного смущается, а вы продолжаете развлекать ее разговорами. У девушки в глазах загорается огонек.'
 'Вы поели и уже собираетесь уходить, но Лидия хватает вас за руку и притагивает свои губы к вашим. После непродолжительного, но яркого поцелуя девушка говорит, что вы можете приходить в ее комнату в любое время.'
-act 'Встать':gt'OrdenKuh'
+act 'Встать': gt 'OrdenKuh'
 exit
 end
 end

@@ -8,57 +8,57 @@ $metkaP = $ARGS[0]
 $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-minut=minut+5
+minut += 5
 mag = 1
 '<center><H4>Филиал Гильдии Караванщиков Эведона</H4></center>'
-'<center><img src="pic/Evedon/foKarGuild.jpg" ></center>'
+'<center><img src = "pic/Evedon/foKarGuild.jpg" ></center>'
 'Гильдия представляет из себя просторное здание с множеством комнат где проживают члены гильдии. У стен стоят доспехи и сложено оружие.'
 'На стене весит прейскурант услуг.'
 'Билет на корабль до Эведона 3000 гем (4 суток) еда и уютная каюта включены.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
-act 'Уйти':
-minut=minut+5
-gt'monduval'
+act 'Уйти': 
+minut += 5
+ gt 'monduval'
 end
 
 
-if gem>=3000:
-     act 'Заплатить 3000 гемов и отправится в Эведон':
-     gem=gem-3000
-	 minut=minut+1440
-	 gs'stat'
-	 minut=minut+1440
-	 gs'stat'
-	 minut=minut+1440
-	 gs'stat'
-	 minut=minut+1440
-	 gs'stat'
-	 golod=15
-	 son=20
-	 horny=0
+if gem>= 3000: 
+     act 'Заплатить 3000 гемов и отправится в Эведон': 
+     gem = gem-3000
+	 minut += 1440
+	 gs 'stat'
+	 minut += 1440
+	 gs 'stat'
+	 minut += 1440
+	 gs 'stat'
+	 minut += 1440
+	 gs 'stat'
+	 golod = 15
+	 son = 20
+	 horny = 0
 	 cla
 	 *clr
-	 '<center><img src="pic/evedon/shipk.jpg" ></center>'
+	 '<center><img src = "pic/evedon/shipk.jpg" ></center>'
 	 'Вы сели на борт корабля. Почти все 4 дня вы провели в своей каюте. Вы выспались и хорошо если, хотя качка в море вас порядком вымотала.'
 	 
-	 act 'Уйти':gt'portW'
+	 act 'Уйти': gt 'portW'
 	 end
 end
 
 
-if GRkraska>0 or GRtkan>0:
-     act 'Продать груз':
-     gruzMark=4
-     torgTip=1
-     gruzphoto=1
-     Noiron=1
-     gt'GRUZ'
+if GRkraska>0 or GRtkan>0: 
+     act 'Продать груз': 
+     gruzMark = 4
+     tor gt ip = 1
+     gruzphoto = 1
+     Noiron = 1
+     gt 'GRUZ'
      end
 end
 --- monTorg ---------------------------------

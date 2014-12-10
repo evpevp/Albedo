@@ -1,27 +1,27 @@
 # robberWin
-manmob=0
+manmob = 0
 
-robgem=RAND(lvlv,lvlv*3)
-gem=gem+robgem
+robgem = RAND(lvlv,lvlv*3)
+gem = gem+robgem
 '<<$namev>> пал и вы получили <<robgem>> гемов'
 
-lootrand=RAND(0,8)
-if lootrand=0:zelhel=zelhel+1&'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
-if lootrand=1:zelhel2=zelhel2+1&'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
-if lootrand=2:zelhel3=zelhel3+1&'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
-if lootrand=3:zelhel4=zelhel4+1&'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
-if lootrand=4:zelman=zelman+1&'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
-if lootrand=5:zelwil=zelwil+1&'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
-if lootrand=6:edaw=edaw+1&'Покопавшись в вещах негодяя вы обнаружили ломоть вяленого мяса'
-if lootrand=7:efsleep=efsleep+1&'Покопавшись в вещах негодяя вы обнаружили нектар совы'
-if lootrand=8:efhorn=efhorn+1&'Покопавшись в вещах негодяя вы обнаружили зелье монаха'
+lootrand = RAND(0,8)
+if lootrand = 0: zelhel = zelhel+1 & 'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
+if lootrand = 1: zelhel2 = zelhel2+1 & 'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
+if lootrand = 2: zelhel3 = zelhel3+1 & 'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
+if lootrand = 3: zelhel4 = zelhel4+1 & 'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
+if lootrand = 4: zelman = zelman+1 & 'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
+if lootrand = 5: zelwil = zelwil+1 & 'Покопавшись в вещах негодяя вы обнаружили целительное снадобье'
+if lootrand = 6: edaw = edaw+1 & 'Покопавшись в вещах негодяя вы обнаружили ломоть вяленого мяса'
+if lootrand = 7: efsleep = efsleep+1 & 'Покопавшись в вещах негодяя вы обнаружили нектар совы'
+if lootrand = 8: efhorn = efhorn+1 & 'Покопавшись в вещах негодяя вы обнаружили зелье монаха'
 
-act 'ВЫЙТИ':GOTO $locFight, $metkaFight
+act 'ВЫЙТИ': GOTO $locFight, $metkaFight
 
-if vampireMorf>0:
-     act 'Пить кровь':
+if vampireMorf>0: 
+     act 'Пить кровь': 
      cla
-     vampireMorf+=1
+     vampireMorf+= 1
      GOTO $locFight, $metkaFight
      end
 end

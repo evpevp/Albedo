@@ -1,54 +1,54 @@
 # demonGenW
 *clr
-'<center><img src="pic/EvedonMonsters/deamon.jpg"></center>'
+'<center><img src = "pic/EvedonMonsters/deamon.jpg"></center>'
 
-monster=8
-bronikv=500
-demrand=RAND(0,2)
+monster = 8
+bronikv = 500
+demrand = RAND(0,2)
 
-if demrand=0:
-$nameV='Младший демон'
-lvlv=90
-strenV=20
-speedV=20
-agilV=20
-vitalV=200
-intelv=200
-willv=10
-program=16
-healthV=vitalV*10
-mannaV=intelV*10
-wipoV=willV*10
+if demrand = 0: 
+$nameV = 'Младший демон'
+lvlv = 90
+strenV = 20
+speedV = 20
+agilV = 20
+vitalV = 200
+intelv = 200
+willv = 10
+program = 16
+healthV = vitalV*10
+mannaV = intelV*10
+wipoV = willV*10
 end
 
-if demrand=1:
-$nameV='Пустынный демон'
-lvlv=120
-strenV=20
-speedV=70
-agilV=20
-vitalV=250
-intelv=250
-willv=10
-program=17
-healthV=vitalV*10
-mannaV=intelV*10
-wipoV=willV*10
+if demrand = 1: 
+$nameV = 'Пустынный демон'
+lvlv = 120
+strenV = 20
+speedV = 70
+agilV = 20
+vitalV = 250
+intelv = 250
+willv = 10
+program = 17
+healthV = vitalV*10
+mannaV = intelV*10
+wipoV = willV*10
 end
 
-if demrand=2:
-$nameV='Пламенный демон'
-lvlv=150
-strenV=120
-speedV=100
-agilV=20
-vitalV=250
-intelv=250
-willv=10
-program=18
-healthV=vitalV*10
-mannaV=intelV*10
-wipoV=willV*10
+if demrand = 2: 
+$nameV = 'Пламенный демон'
+lvlv = 150
+strenV = 120
+speedV = 100
+agilV = 20
+vitalV = 250
+intelv = 250
+willv = 10
+program = 18
+healthV = vitalV*10
+mannaV = intelV*10
+wipoV = willV*10
 end
 
 --- demonGenW ---------------------------------

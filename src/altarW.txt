@@ -7,16 +7,16 @@ $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Каменный алтарь</H4></center>'
-'<center><img src="pic/Evedon/df23.jpg" ></center>'
+'<center><img src = "pic/Evedon/df23.jpg" ></center>'
 'С виду обыкновенный кусок камня с вырезанными на нем какими-то знаками.'
 clr
-gs'stat'
-gs'time'
+gs 'stat'
+gs 'time'
 
 
-act 'Выйти':
-minut=minut+5
-gt'df2_3'
+act 'Выйти': 
+minut += 5
+ gt 'df2_3'
 end
 
 

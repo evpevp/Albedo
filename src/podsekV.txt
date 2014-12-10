@@ -1,15 +1,15 @@
 # podsekV
-koefspeed=speedv*20/100
-koefagil=agil*20/100
-pop=RAND(speedv-koefspeed,speedv+koefspeed)
-uvo=RAND((agil-Kar)-koefagil,(agil-Kar)+koefagil)
+koefspeed = speedv*20/100
+koefagil = agil*20/100
+pop = RAND(speedv-koefspeed,speedv+koefspeed)
+uvo = RAND((agil-Kar)-koefagil,(agil-Kar)+koefagil)
 
-if pop>=uvo:
-stun=1
-'<B><font color=red><<$nameV>> СБИЛ ВАС С НОГ</font></B>'
+if pop>= uvo: 
+stun = 1
+'<B><font color = red><<$nameV>> СБИЛ ВАС С НОГ</font></B>'
 end
-if pop<uvo:
-'<B><font color=green>ВЫ УВЕРНУЛИСЬ ОТ ПОДСЕЧКИ</font></B>'
+if pop<uvo: 
+'<B><font color = green>ВЫ УВЕРНУЛИСЬ ОТ ПОДСЕЧКИ</font></B>'
 end
 --- podsekV ---------------------------------
 

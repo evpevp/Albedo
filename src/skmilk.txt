@@ -1,42 +1,42 @@
 # skmilk
 clr
-gs'stat'
+gs 'stat'
 !молоко суккуба
-horny=100
-sucmilk=sucmilk-1
-penis=penis-1
-gs'polChange'
-fat=fat+5
-skverna=skverna+10
-if vidage>14 and filosofkam=0:vidage=vidage-1
-tit=tit+RAND(5,10)
-     chanrand=RAND(0,5)
+horny = 100
+sucmilk = sucmilk-1
+penis = penis-1
+gs 'polChange'
+fat = fat+5
+skverna = skverna+10
+if vidage>14 and filosofkam = 0: vidage = vidage-1
+tit = tit+RAND(5,10)
+     chanrand = RAND(0,5)
      'Вы открыли флакон и выпили сладкого молока.'
-		 if chanrand = 0:
-		 leg=leg+RAND(5,10)
-		 $subef='какое-то странное жжение в ногах.'
+		 if chanrand = 0: 
+		 leg = leg+RAND(5,10)
+		 $subef = 'какое-то странное жжение в ногах.'
 		 end
-		 if chanrand = 1:
-		 thight=thight+RAND(5,10)
-		 $subef='какое-то странное жжение в бедрах.'
+		 if chanrand = 1: 
+		 thight = thight+RAND(5,10)
+		 $subef = 'какое-то странное жжение в бедрах.'
 		 end
-		 if chanrand = 2:
-		 ass=ass+RAND(5,10)
-		 $subef='какое-то странное жжение в ягодицах.'
+		 if chanrand = 2: 
+		 ass = ass+RAND(5,10)
+		 $subef = 'какое-то странное жжение в ягодицах.'
 		 end
-		 if chanrand = 3:
-		 brist=brist+RAND(5,10)
-		 $subef='какое-то странное жжение в теле.'
+		 if chanrand = 3: 
+		 brist = brist+RAND(5,10)
+		 $subef = 'какое-то странное жжение в теле.'
 		 end
-		 if chanrand = 4:
-		 hand=hand+RAND(5,10)
-		 $subef='какое-то странное жжение в руках.'
+		 if chanrand = 4: 
+		 hand = hand+RAND(5,10)
+		 $subef = 'какое-то странное жжение в руках.'
 		 end
-		 if chanrand = 5:
-		 face=face+RAND(5,10)
-		 $subef='какое-то странное жжение в лице.'
+		 if chanrand = 5: 
+		 face = face+RAND(5,10)
+		 $subef = 'какое-то странное жжение в лице.'
 		 end
-gs'polChange'
+gs 'polChange'
 
 'Вы чувствуете как уменьшается член. Зудит грудь и <<$subef>>'
 --- skmilk ---------------------------------

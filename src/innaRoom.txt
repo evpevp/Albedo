@@ -1,31 +1,31 @@
 # innaRoom
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
-'<center><B><font color=maroon>Квартира Инны</font></B></center>'
-'<center><img src="pic\room\Innaroom.jpg" ></center>'
+ minut = minut + 5
+'<center><B><font color = maroon>Квартира Инны</font></B></center>'
+'<center><img src = "pic\room\Innaroom.jpg" ></center>'
 'Инна бывает дома только после 16 часов.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
-     act 'Зайти к Инне':
-     gt'InnaKor','start'
+     act 'Зайти к Инне': 
+     gt 'InnaKor','start'
      end
 
 
-     act 'ВЫЙТИ':
+     act 'ВЫЙТИ': 
      cla
-     set minut = minut + 5
-     gt'down'
+      minut = minut + 5
+     gt 'down'
      end
      
-     if mansard!1 and InnaBDSM=1 and hour>=18 and hour<=23:
+     if mansard!1 and InnaBDSM = 1 and hour>= 18 and hour<= 23: 
 		 act 'Зайти к владельцу дома': gt 'innasex','owner'
      end
      

@@ -9,48 +9,48 @@ $locP = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Монастырь</H4></center>'
-'<center><img src="pic/Evedon/monastIn.jpg" ></center>'
+'<center><img src = "pic/Evedon/monastIn.jpg" ></center>'
 'Просторный зал, с алтарем и деревянными лавочками.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 *nl
-if hour>=6 and hour<12:'((У алтаря молится настоятельница|nastoyat|minut=minut+5))'
+if hour>= 6 and hour<12: '((У алтаря молится настоятельница|nastoyat|minut += 5))'
 
-     if skverna>0 and skverday!day:
-         act 'Молиться 1 час':
+     if skverna>0 and skverday!day: 
+         act 'Молиться 1 час': 
          cla
          *clr
-         skverday=day
-         skverna=skverna-5
-         if skverna<0:skverna=0
-		 minut=minut+60
+         skverday = day
+         skverna = skverna-5
+         if skverna<0: skverna = 0
+		 minut += 60
 		 'Вы молитесь перед алтарем Мары очищаясь от скверны.'
 		 'После часового моления у вас осталось <<skverna>> скверны.'
-		 act 'Уйти':gt $CURLOC
+		 act 'Уйти': gt $CURLOC
 		 end
      end
 
-	 act 'Идти в свою келью':
-	 minut=minut+5
-	 gt'monastKel'
+	 act 'Идти в свою келью': 
+	 minut += 5
+	 gt 'monastKel'
 	 end
 	 
-	 act 'Идти в комнату магии':
-	 minut=minut+5
-	 gt'monastMag'
+	 act 'Идти в комнату магии': 
+	 minut += 5
+	 gt 'monastMag'
 	 end
 	 
-	 act 'Идти на кухню':
-	 minut=minut+5
-	 gt'monastKuh'
+	 act 'Идти на кухню': 
+	 minut += 5
+	 gt 'monastKuh'
 	 end
 	 
-	 act 'Идти в библиотеку':
-	 minut=minut+5
-	 gt'monastBib'
+	 act 'Идти в библиотеку': 
+	 minut += 5
+	 gt 'monastBib'
 	 end
 
 

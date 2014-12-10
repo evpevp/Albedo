@@ -1,7 +1,7 @@
 # GAMEOVER
 '<center><H1>КОНЕЦ ИГРЫ</H1></center>'
 '<center><H1>Вы умерли.</H1></center>'
-'<center><img src="pic\pic\gameover.jpg" ></center>'
+'<center><img src = "pic\pic\gameover.jpg" ></center>'
 
 --- GAMEOVER ---------------------------------
 

@@ -1,131 +1,131 @@
 # autotraid
-if $ARGS[0]='start':
+if $ARGS[0] = 'start': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><B>Авторынок</B></center>'
-'<center><img src="pic\pic\autotraid.jpg" ></center>'
+'<center><img src = "pic\pic\autotraid.jpg" ></center>'
 'Часы работы авторынка с 9 до 17, выходной Понедельник.'
-if car > 0 and cardrive = 9:
-set cardrive = 9
-'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
+if car > 0 and cardrive = 9: 
+ cardrive = 9
+'На парковке стоит <a href = "exec: gs ''car'',''start''">ваш <<$car>></a>.'
 end
-     if hour >= 9 and hour <= 17 and week > 1:
-     act 'Идти на авторынок':gt'autotraid','manager'
+     if hour >= 9 and hour <= 17 and week > 1: 
+     act 'Идти на авторынок': gt 'autotraid','manager'
      end
 
-act 'Уйти':gt 'nord'
+act 'Уйти': gt 'nord'
 end
 
 
-if $ARGS[0]='manager':
+if $ARGS[0] = 'manager': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
+gs 'stat'
 '<center><B>Авторынок</B></center>'
-'<center><img src="pic\pic\autotraid.jpg" ></center>'
+'<center><img src = "pic\pic\autotraid.jpg" ></center>'
 'Машину можно купить только при наличии прав. И две машины иметь нельзя.'
-     if hour <= 17:
-         if car > 0:
-         act 'Подойти к скупщику':gt'autotraid','manager1'
+     if hour <= 17: 
+         if car > 0: 
+         act 'Подойти к скупщику': gt 'autotraid','manager1'
          end
          
-         act 'Посмотреть машины, выставленные на продажу':gt'autotraid','car'
+         act 'Посмотреть машины, выставленные на продажу': gt 'autotraid','car'
      
      
      
      end
 
-act 'Уйти':gt 'nord'
+act 'Уйти': gt 'nord'
 end
 
-if $ARGS[0]='manager1':
+if $ARGS[0] = 'manager1': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
+gs 'stat'
 '<center><B>Авторынок</B></center>'
-'<center><img src="pic\pic\autotraid.jpg" ></center>'
-gs'avb'
-	 if cardrive = 9 and car > 0:
+'<center><img src = "pic\pic\autotraid.jpg" ></center>'
+gs 'avb'
+	 if cardrive = 9 and car > 0: 
 	 'Скупщик походил вокруг машины и предложил вам за нее <<bupay>> рублей'
-         act 'Продать за <<bupay>> (1 час)':
+         act 'Продать за <<bupay>> (1 час)': 
          cla
-         set minut = minut + 60
-         money=money+bupay
-         car=0
+          minut = minut + 60
+         money = money+bupay
+         car = 0
          'Вы продали свою машину.'
-         act 'Уйти':gt'autotraid','manager1'
+         act 'Уйти': gt 'autotraid','manager1'
          end
 	 end
-	 if cardrive ! 9:
+	 if cardrive ! 9: 
 	 'Скупщик говорит, что ему нужно посмотреть на машину, прежде чем назначить цену, и если вы хотите, он вызовет эвакуатор за 2500, что бы доставить вашу машину к рынку.'
-	     if money >= 2500:
-			 act 'Эвакуатор до рынка 2500руб (1 час)':
+	     if money >= 2500: 
+			 act 'Эвакуатор до рынка 2500руб (1 час)': 
 			 cla
-			 set minut = minut + 60
-			 set cardrive = 9
-			 set money = money - 2500
+			  minut = minut + 60
+			  cardrive = 9
+			  money = money - 2500
 			 'Вы отдали деньги и целый час ждали когда же вам привезут машину, наконец вы увидели как ее выгрузил эвакуатор около рынка.'
-			 act 'Уйти':gt'autotraid','manager1'
+			 act 'Уйти': gt 'autotraid','manager1'
 			 end
          end
 	 end
 
-act 'Уйти':gt'autotraid','manager'
+act 'Уйти': gt 'autotraid','manager'
 end
 
-if $ARGS[0]='car':
+if $ARGS[0] = 'car': 
 $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+ minut = minut + 5
 clr
-gs'stat'
+gs 'stat'
 '<center><B>Авторынок</B></center>'
-'<center><img src="pic\pic\autotraid.jpg" ></center>'
+'<center><img src = "pic\pic\autotraid.jpg" ></center>'
 'Машин на стоянке так много, что можно потратить всю жизнь и никогда не осмотришь все. Если с машинами на ходу еще можно понять их техническое состояние, то неисправные машины это кот в мешке, может быть выгодной покупкой, а может - пустой тратой денег. И не забывайте, вам ее еще доставить в сервис нужно будет.'
-set carT = 0
-     if hour <= 17:
-		 act 'Осмотреть ВАЗ 2107 (на ходу)':
+ carT = 0
+     if hour <= 17: 
+		 act 'Осмотреть ВАЗ 2107 (на ходу)': 
 		 cla
 		 *clr
 		 '<center><B>ВАЗ 2107 (на ходу)</B></center>'
-		 '<center><img src="pic\picar\car.jpg" ></center>'
-		 set tehNT = 200
-		 set tehT = RAND (10,tehNT)
-		 set carT = 1
-		 gs'avt' 
+		 '<center><img src = "pic\picar\car.jpg" ></center>'
+		  tehNT = 200
+		  tehT = RAND (10,tehNT)
+		  carT = 1
+		 gs 'avt' 
 		 '<<$tehT>> Торговец хочет <<bupay>> рублей'
-		 act 'Уйти':gt'autotraid','car'
-		     if car = 0 and prava = 1 and money >= bupay:
-		         act 'Купить за <<bupay>> рублей':
+		 act 'Уйти': gt 'autotraid','car'
+		     if car = 0 and prava = 1 and money >= bupay: 
+		         act 'Купить за <<bupay>> рублей': 
 		         cla
-		         set money = money - bupay
-		         set $car = 'ВАЗ 2107'
-				 set car = 1
-				 set benz = 3
-				 set cardrive = 9
-				 set teh = tehT
-				 set tehcar = 200
-				 set wrek = 0
+		          money = money - bupay
+		          $car = 'ВАЗ 2107'
+				  car = 1
+				  benz = 3
+				  cardrive = 9
+				  teh = tehT
+				  tehcar = 200
+				  wrek = 0
 				 'Вы заплатили <<bupay>> рублей и купили машину. Торговец поставил ее около рынка и предупредил, что там мало бензина.'
-		         act 'Уйти':gt'autotraid','car'
+		         act 'Уйти': gt 'autotraid','car'
 		         end
 		     
 		     end
@@ -134,82 +134,82 @@ set carT = 0
 		 act 'Осмотреть ВАЗ 2107 (не на ходу)': 
 		 cla
 		 *clr
-		 set tehNT = 200
-		 set tehT = RAND (10,tehNT)
-		 set bupay = RAND (10000,50000) 
+		  tehNT = 200
+		  tehT = RAND (10,tehNT)
+		  bupay = RAND (10000,50000) 
 		 'Машина не на ходу. Торговец хочет <<bupay>> рублей'
-		 	 if car = 0 and prava = 1 and money >= bupay:
-		         act 'Купить за <<bupay>> рублей':
+		 	 if car = 0 and prava = 1 and money >= bupay: 
+		         act 'Купить за <<bupay>> рублей': 
 		         cla
-		         set money = money - bupay
-		         set $car = 'ВАЗ 2107'
-				 set car = 1
-				 set benz = 3
-				 set cardrive = 9
-				 set teh = tehT
-				 set tehcar = 200
-				 set wrek = 1
+		          money = money - bupay
+		          $car = 'ВАЗ 2107'
+				  car = 1
+				  benz = 3
+				  cardrive = 9
+				  teh = tehT
+				  tehcar = 200
+				  wrek = 1
 				 'Вы заплатили <<bupay>> рублей и купили машину. Торговец поставил ее около рынка.'
-		         act 'Уйти':gt'autotraid','car'
+		         act 'Уйти': gt 'autotraid','car'
 		         end
 		     
 		     end
-		  act 'Уйти':gt'autotraid','car'
+		  act 'Уйти': gt 'autotraid','car'
 		 end
 		 
-		 act 'Осмотреть ГАЗ 3102 (на ходу)':
+		 act 'Осмотреть ГАЗ 3102 (на ходу)': 
 		 cla
 		 *clr
 		 '<center><B>ГАЗ 3102 (на ходу)</B></center>'
-		 '<center><img src="pic\picar\car11.jpg" ></center>'
-		 set tehNT = 1000
-		 set tehT = RAND (10,tehNT)
-		 set carT = 2
-		 gs'avt' 
+		 '<center><img src = "pic\picar\car11.jpg" ></center>'
+		  tehNT = 1000
+		  tehT = RAND (10,tehNT)
+		  carT = 2
+		 gs 'avt' 
 		 '<<$tehT>> Торговец хочет <<bupay>> рублей'
-		 act 'Уйти':gt'autotraid','car'
-		     if car = 0 and prava = 1 and money >= bupay:
-		         act 'Купить за <<bupay>> рублей':
+		 act 'Уйти': gt 'autotraid','car'
+		     if car = 0 and prava = 1 and money >= bupay: 
+		         act 'Купить за <<bupay>> рублей': 
 		         cla
-		         set money = money - bupay
-		         set $car = 'ГАЗ 3102'
-				 set car = 11
-				 set benz = 5
-				 set cardrive = 9
-				 set teh = tehT
-				 set tehcar = 1000
-				 set wrek = 0
+		          money = money - bupay
+		          $car = 'ГАЗ 3102'
+				  car = 11
+				  benz = 5
+				  cardrive = 9
+				  teh = tehT
+				  tehcar = 1000
+				  wrek = 0
 				 'Вы заплатили <<bupay>> рублей и купили машину. Торговец поставил ее около рынка и предупредил, что там мало бензина.'
-		         act 'Уйти':gt'autotraid','car'
+		         act 'Уйти': gt 'autotraid','car'
 		         end
 		     
 		     end
 		 end
 		 
-		 act 'Осмотреть ГАЗ 3110 (на ходу)':
+		 act 'Осмотреть ГАЗ 3110 (на ходу)': 
 		 cla
 		 *clr
 		 '<center><B>ГАЗ 3110 (на ходу)</B></center>'
-		 '<center><img src="pic\picar\car12.jpg" ></center>'
-		 set tehNT = 800
-		 set tehT = RAND (10,tehNT)
-		 set carT = 2
-		 gs'avt' 
+		 '<center><img src = "pic\picar\car12.jpg" ></center>'
+		  tehNT = 800
+		  tehT = RAND (10,tehNT)
+		  carT = 2
+		 gs 'avt' 
 		 '<<$tehT>> Торговец хочет <<bupay>> рублей'
-		 act 'Уйти':gt'autotraid','car'
-		     if car = 0 and prava = 1 and money >= bupay:
-		         act 'Купить за <<bupay>> рублей':
+		 act 'Уйти': gt 'autotraid','car'
+		     if car = 0 and prava = 1 and money >= bupay: 
+		         act 'Купить за <<bupay>> рублей': 
 		         cla
-		         set money = money - bupay
-		         set $car = 'ГАЗ 3110'
-				 set car = 12
-				 set benz = 5
-				 set cardrive = 9
-				 set teh = tehT
-				 set tehcar = 800
-				 set wrek = 0
+		          money = money - bupay
+		          $car = 'ГАЗ 3110'
+				  car = 12
+				  benz = 5
+				  cardrive = 9
+				  teh = tehT
+				  tehcar = 800
+				  wrek = 0
 				 'Вы заплатили <<bupay>> рублей и купили машину. Торговец поставил ее около рынка и предупредил, что там мало бензина.'
-		         act 'Уйти':gt'autotraid','car'
+		         act 'Уйти': gt 'autotraid','car'
 		         end
 		     
 		     end
@@ -220,7 +220,7 @@ set carT = 0
 
 
 
-act 'Уйти':gt'autotraid','manager'
+act 'Уйти': gt 'autotraid','manager'
 end
 
 

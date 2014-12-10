@@ -1,121 +1,121 @@
 # spELECTRO
 dynamic $battlemain
 clr
-gs'stat'
+gs 'stat'
 
 
-if round>=2: 
-	 if spShok>=100 and manna>=50:
-		 act 'Разряд 50 маны':
+if round>= 2: 
+	 if spShok>= 100 and manna>= 50: 
+		 act 'Разряд 50 маны': 
 		 cla
-		 spShokExp=spShokExp+1
-		 manna=manna-50
-		 '<font color=green>Вы собрали энергию в руку и ударили электроразрядом</font>'
-		 shokdam=RAND(50,60)
-		 damage=RAND(800,1000+spShokExp)
-		 gs'defenceV'
-		 xgt'fight','1'
+		 spShokExp = spShokExp+1
+		 manna = manna-50
+		 '<font color = green>Вы собрали энергию в руку и ударили электроразрядом</font>'
+		 shokdam = RAND(50,60)
+		 damage = RAND(800,1000+spShokExp)
+		 gs 'defenceV'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=3: 
-	 if spShokTri>=100 and manna>=100:
-		 act 'Тройной разряд 100 маны':
+if round>= 3: 
+	 if spShokTri>= 100 and manna>= 100: 
+		 act 'Тройной разряд 100 маны': 
 		 cla
-		 spShokTriExp=spShokTriExp+1
-		 manna=manna-100
-		 '<font color=green>Вы собрали энергию в руку и ударили тремя молниями</font>'
-		 shokdam=RAND(30,40)
-		 damage=RAND(600,800+spShoktriExp)
-		 gs'defenceV'
-		 shokdam=RAND(30,40)
-		 damage=RAND(600,800+spShoktriExp)
-		 gs'defenceV'
-		 shokdam=RAND(30,40)
-		 damage=RAND(600,800+spShoktriExp)
-		 gs'defenceV'
-		 xgt'fight','1'
+		 spShokTriExp = spShokTriExp+1
+		 manna = manna-100
+		 '<font color = green>Вы собрали энергию в руку и ударили тремя молниями</font>'
+		 shokdam = RAND(30,40)
+		 damage = RAND(600,800+spShoktriExp)
+		 gs 'defenceV'
+		 shokdam = RAND(30,40)
+		 damage = RAND(600,800+spShoktriExp)
+		 gs 'defenceV'
+		 shokdam = RAND(30,40)
+		 damage = RAND(600,800+spShoktriExp)
+		 gs 'defenceV'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=4: 
-	 if spShokSh>=100 and manna>=150:
-		 act 'Разрядный щит 150 маны':
+if round>= 4: 
+	 if spShokSh>= 100 and manna>= 150: 
+		 act 'Разрядный щит 150 маны': 
 		 cla
-		 spShokShExp=spShokShExp+1
-		 manna=manna-150
-		 '<font color=green>Вы собрали энергию в руку и закрыли себя щитом молний</font>'
-		 defence=defence+3500+spShokShExp
-		 shokDef=6
-		 xgt'fight','1'
+		 spShokShExp = spShokShExp+1
+		 manna = manna-150
+		 '<font color = green>Вы собрали энергию в руку и закрыли себя щитом молний</font>'
+		 defence = defence+3500+spShokShExp
+		 shokDef = 6
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=4: 
-	 if spWillSh>=100 and manna>=150:
-		 act 'Волевой щит 150 маны':
+if round>= 4: 
+	 if spWillSh>= 100 and manna>= 150: 
+		 act 'Волевой щит 150 маны': 
 		 cla
-		 spWillShExp=spWillShExp+1
-		 manna=manna-150
-		 '<font color=green>Вы собрали энергию в руку и закрыли свой разум от воздействий</font>'
-		 defenceH=defenceH+1500+spWillShExp
-		 xgt'fight','1'
+		 spWillShExp = spWillShExp+1
+		 manna = manna-150
+		 '<font color = green>Вы собрали энергию в руку и закрыли свой разум от воздействий</font>'
+		 defenceH = defenceH+1500+spWillShExp
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=5: 
-	 if spElPole>=100 and manna>=150:
-	     if zerkalov>0 or fintv>0 or tumanv>0:
-			 act 'Ионизирующее поле 200 маны':
+if round>= 5: 
+	 if spElPole>= 100 and manna>= 150: 
+	     if zerkalov>0 or fintv>0 or tumanv>0: 
+			 act 'Ионизирующее поле 200 маны': 
 			 cla
-			 manna=manna-200
-			 '<font color=green>Вы создали поле вокруг себя которое ионизирует воздух</font>'
-			 if zerkalov>0:zerkalov=0&'<B><font color=green>От ионного поля все зеркала противника разлетаются.</font></B>'
-			 if fintv>0:fintv=0&'<B><font color=green>Из за ионного поля противник не может применить смещение.</font></B>'
-			 if tumanv>0:tumanv=0&'<B><font color=green>Ионное поле воздействует на туман противника уничтожая его.</font></B>'
-			 xgt'fight','1'
+			 manna = manna-200
+			 '<font color = green>Вы создали поле вокруг себя которое ионизирует воздух</font>'
+			 if zerkalov>0: zerkalov = 0 & '<B><font color = green>От ионного поля все зеркала противника разлетаются.</font></B>'
+			 if fintv>0: fintv = 0 & '<B><font color = green>Из за ионного поля противник не может применить смещение.</font></B>'
+			 if tumanv>0: tumanv = 0 & '<B><font color = green>Ионное поле воздействует на туман противника уничтожая его.</font></B>'
+			 xgt 'fight','1'
 			 end
 		 end
 	 end
 end 
 
-if round>=5: 
-	 if spBigShok>=100 and manna>=200 and cooldownSpell<=0:
-		 act 'Молния 200 маны':
+if round>= 5: 
+	 if spBigs hok>= 100 and manna>= 200 and cooldownSpell<= 0: 
+		 act 'Молния 200 маны': 
 		 cla
-		 cooldownSpell=2
-		 spBigShokExp=spBigShokExp+1
-		 manna=manna-200
-		 '<font color=green>Вы собрали энергию в руку и выстрелили мощной молнией</font>'
-		 shokdam=RAND(100,300)
-		 damage=RAND(3000+spBigShokExp,4000+spBigShokExp*10)
-		 gs'defenceV'
-		 xgt'fight','1'
+		 cooldownSpell = 2
+		 spBigs hokExp = spBigs hokExp+1
+		 manna = manna-200
+		 '<font color = green>Вы собрали энергию в руку и выстрелили мощной молнией</font>'
+		 shokdam = RAND(100,300)
+		 damage = RAND(3000+spBigs hokExp,4000+spBigs hokExp*10)
+		 gs 'defenceV'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
-if round>=6: 
-	 if spElProboy>=100 and manna>=250 and defencev>0 and levitationV=0 and ghostbodyv=0:
-		 act 'Пробой 250 маны':
+if round>= 6: 
+	 if spElProboy>= 100 and manna>= 250 and defencev>0 and levitationV = 0 and ghostbodyv = 0: 
+		 act 'Пробой 250 маны': 
 		 cla
-		 spElProboyExp=spElProboyExp+1
-		 manna=manna-250
-		 tipatk=1
-		 defencev=0
-         '<font color=green>Вы собрали электричество в руку и нанесли удар пробивающий защиту противника насквозь.</font>'
-		 gs'udar','0'
-		 gs'popad'
-		 xgt'fight','1'
+		 spElProboyExp = spElProboyExp+1
+		 manna = manna-250
+		 tipatk = 1
+		 defencev = 0
+         '<font color = green>Вы собрали электричество в руку и нанесли удар пробивающий защиту противника насквозь.</font>'
+		 gs 'udar','0'
+		 gs 'popad'
+		 xgt 'fight','1'
 		 end
 	 end
 end 
 
 
-     act 'Пропустить ход':xgt'fight','1'
+     act 'Пропустить ход': xgt 'fight','1'
 --- spELECTRO ---------------------------------
 

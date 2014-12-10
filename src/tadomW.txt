@@ -2,48 +2,48 @@
 $metka = $ARGS[0]
 $loc = $CURLOC
 *clr
-'<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
+'<center><img src = "pic/EvedonNarod/dominika.jpg"></center>'
 
-if dominicaDed=100:
+if dominicaDed = 100: 
 'Доминика посмотрела на вас с гневом. "Убирайся отсюда."'
-act 'Уйти':GOTO $locP, $metkaP
+act 'Уйти': GOTO $locP, $metkaP
 exit
 end
-if dominicaDed=200:
-if pol=0:$domapos=''
-if pol>0:$domapos='а'
+if dominicaDed = 200: 
+if pol = 0: $domapos = ''
+if pol>0: $domapos = 'а'
 'Доминика посмотрела на вас с благодарностью. "Спасибо что не убил<<$domapos>> меня."'
 end
 
-if missionData=200:
+if missionData = 200: 
 'Доминика посмотрела в ваши глаза и все поняла. "Тебя послали убить меня."'
 	 act 'Да и я убью тебя': 
 	 cla
-	 $nameV='Доминика'
-	 lvlv=110
-	 strenV=100
-	 speedV=100
-	 agilV=25
-	 vitalV=80
-	 intelv=260
-	 willv=65
-	 program=23
-	 healthV=vitalV*10
-	 mannaV=intelV*10+intelV*8
-	 wipoV=willV*10
-	 BATpotionV=5
-	 monster=22
+	 $nameV = 'Доминика'
+	 lvlv = 110
+	 strenV = 100
+	 speedV = 100
+	 agilV = 25
+	 vitalV = 80
+	 intelv = 260
+	 willv = 65
+	 program = 23
+	 healthV = vitalV*10
+	 mannaV = intelV*10+intelV*8
+	 wipoV = willV*10
+	 BATpotionV = 5
+	 monster = 22
 	 'Доминика встала со своего места. "Я тоже, кое-что могу."'
-	 act 'Драться':gs'before'
+	 act 'Драться': gs 'before'
 	 end
 	 
 	 act 'Да пошел к черту этот орден. Я не стану тебя убивать.': 
 	 cla
-	 missionData=0
-	 OrdenRang=-1
-	 dominicaDed=200
+	 missionData = 0
+	 OrdenRang = -1
+	 dominicaDed = 200
 	 'Доминика встала и вышла из трактира.'
-	 act 'Уйти':GOTO $locP, $metkaP
+	 act 'Уйти': GOTO $locP, $metkaP
 	 end
 exit
 end
@@ -51,7 +51,7 @@ end
 
 
 
-if DominiQW=0:
+if DominiQW = 0: 
 'Загадочная женщина пригласила вас присесть за ее стол.'
 '(Доминика) - Ты не отсюда, не из этого мира. Я чувствую это.'
 '(Вы) - Как ты можешь это чувствовать? Ты тоже не отсюда?'
@@ -62,45 +62,45 @@ if DominiQW=0:
 '(Доминика) - Это сложный и долгий процесс. А мне нужно постоянно искать себе еду. Я трачу на это много времени.'
 '(Вы) - Чем ты питаешься?'
 '(Доминика) - Хмм, даже как-то не удобно говорить, я в общем попала в лапы суккубу, стала с ней сражаться и проиграла. Она наложила на меня проклятье. Я не могу ничего есть, мне станет плохо от обыкновенной еды. Только поедание спермы спасает меня от голодной смерти.'
-     if penis>0:
-         act 'Не проблема, я могу кормить тебя.':
+     if penis>0: 
+         act 'Не проблема, я могу кормить тебя.': 
          cla
          *clr
-         '<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
-         DominiQW=1
+         '<center><img src = "pic/EvedonNarod/dominika.jpg"></center>'
+         DominiQW = 1
          '(Вы) - Не проблема, я могу кормить тебя.'
          '(Доминика) - Тогда замечательно, я буду тебя учить по вечерам, встречаемся в этом баре, только вот есть один нюанс, сперма должна быть насыщенной, то есть ты должен быть хоть немного возбужден уже к нашему контакту. Ты будешь оплачивать мои услуги спермой.'
-         act 'Уйти':GOTO $locP, $metkaP
+         act 'Уйти': GOTO $locP, $metkaP
          end
      end
      
-     if penis=0:
-         act 'Вот тут-то у нас и есть маленькая проблема, у меня нет члена.':
+     if penis = 0: 
+         act 'Вот тут-то у нас и есть маленькая проблема, у меня нет члена.': 
          cla
          *clr
-         '<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
-         DominiQW=1
+         '<center><img src = "pic/EvedonNarod/dominika.jpg"></center>'
+         DominiQW = 1
          '(Вы) - Вот тут-то у нас и есть маленькая проблема, у меня нет члена.'
          '(Доминика) - Есть выход, ты должна приносить мне сперму. После секса не мойся и приходи ко мне вечером сюда, я слижу ее и этим насыщусь. Ты будешь оплачивать мои услуги спермой.'
-         act 'Уйти':GOTO $locP, $metkaP
+         act 'Уйти': GOTO $locP, $metkaP
          end
      end
 
 end
 
-if DominiQW>0:
-     if penis>0 and horny>=50:
+if DominiQW>0: 
+     if penis>0 and horny>= 50: 
      'Я вижу ты готов заплатить за обучение. Пойдем ко мне.'
-         act 'Идти с Доминикой':gt'dominiW','bj'
-     elseif penis=0 and cum>0:
+         act 'Идти с Доминикой': gt 'dominiW','bj'
+     elseif penis = 0 and cum>0: 
      'О, я чувствую на тебе <<cum>> замечательных порций вкусного семени. Пойдем ко мне.'
-         act 'Идти с Доминикой':gt'dominiW','cum'
+         act 'Идти с Доминикой': gt 'dominiW','cum'
      else
      'Ты не можешь заплатить за обучение. Мне нужна сперма.'
      
      end
 
-act 'Уйти':GOTO $locP, $metkaP
+act 'Уйти': GOTO $locP, $metkaP
 end
 --- tadomW ---------------------------------
 

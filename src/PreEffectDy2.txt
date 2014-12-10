@@ -1,78 +1,78 @@
 # PreEffectDy2
-$obnulDamG={
- if damage>0:
- mannaV+=damage
- damage=0
- shokdam=0
- waterdam=0
- GakidoSelfV+=1
- '<font color=red><<$name>> поглотил энергию вашего физического удара.</font>'
+$obnulDamG = {
+ if damage>0: 
+ mannaV+= damage
+ damage = 0
+ shokdam = 0
+ waterdam = 0
+ GakidoSelfV+= 1
+ '<font color = red><<$name>> поглотил энергию вашего физического удара.</font>'
  end
- if damageT>0:
- mannaV+=damageT
- damageT=0
- GakidoSelfV+=1
- '<font color=red><<$name>> поглотил энергию вашего температурного удара.</font>'
+ if damageT>0: 
+ mannaV+= damageT
+ damageT = 0
+ GakidoSelfV+= 1
+ '<font color = red><<$name>> поглотил энергию вашего температурного удара.</font>'
  end
- if damageW>0:
- mannaV+=damageW
- damageW=0
- Perepad=0
- soundMag=0
- gribspore=0
- GakidoSelfV+=1
- '<font color=red><<$name>> поглотил энергию вашего воздушного удара.</font>'
+ if damageW>0: 
+ mannaV+= damageW
+ damageW = 0
+ Perepad = 0
+ soundMag = 0
+ gribspore = 0
+ GakidoSelfV+= 1
+ '<font color = red><<$name>> поглотил энергию вашего воздушного удара.</font>'
  end
- if damageH>0:
- mannaV+=damageH
- damageH=0
- GakidoSelfV+=1
- '<font color=red><<$name>> поглотил энергию вашего ментального удара.</font>'
+ if damageH>0: 
+ mannaV+= damageH
+ damageH = 0
+ GakidoSelfV+= 1
+ '<font color = red><<$name>> поглотил энергию вашего ментального удара.</font>'
  end
- if damageM>0:
- mannaV+=damageM
- damageM=0
- mannaStump=0
- GakidoSelfV+=1
- '<font color=red><<$name>> поглотил энергию вашего удара по мане.</font>'
+ if damageM>0: 
+ mannaV+= damageM
+ damageM = 0
+ mannaStump = 0
+ GakidoSelfV+= 1
+ '<font color = red><<$name>> поглотил энергию вашего удара по мане.</font>'
  end
 }
-$obnulDamGV={
- if damageV>0:
- manna+=damageV
- damageV=0
- shokdamV=0
- waterdamV=0
- GakidoSelf+=1
- '<font color=green>Вы поглотили энергию физического удара противника.</font>'
+$obnulDamGV = {
+ if damageV>0: 
+ manna+= damageV
+ damageV = 0
+ shokdamV = 0
+ waterdamV = 0
+ GakidoSelf+= 1
+ '<font color = green>Вы поглотили энергию физического удара противника.</font>'
  end
- if damageTV>0:
- manna+=damageTV
- damageTV=0
- GakidoSelf+=1
- '<font color=green>Вы поглотили энергию температурного удара противника.</font>'
+ if damageTV>0: 
+ manna+= damageTV
+ damageTV = 0
+ GakidoSelf+= 1
+ '<font color = green>Вы поглотили энергию температурного удара противника.</font>'
  end
- if damageWV>0:
- manna+=damageWV
- damageWV=0
- PerepadV=0
- soundMagV=0
- gribsporev=0
- GakidoSelf+=1
- '<font color=green>Вы поглотили энергию воздушного удара противника.</font>'
+ if damageWV>0: 
+ manna+= damageWV
+ damageWV = 0
+ PerepadV = 0
+ soundMagV = 0
+ gribsporev = 0
+ GakidoSelf+= 1
+ '<font color = green>Вы поглотили энергию воздушного удара противника.</font>'
  end
- if damageHV>0:
- manna+=damageHV
- damageHV=0
- GakidoSelf+=1
- '<font color=green>Вы поглотили энергию ментального удара противника.</font>'
+ if damageHV>0: 
+ manna+= damageHV
+ damageHV = 0
+ GakidoSelf+= 1
+ '<font color = green>Вы поглотили энергию ментального удара противника.</font>'
  end
- if damageMV>0:
- manna+=damageMV
- damageMV=0
- mannaStumpV=0
- GakidoSelf+=1
- '<font color=green>Вы поглотили энергию удара по магии противника.</font>'
+ if damageMV>0: 
+ manna+= damageMV
+ damageMV = 0
+ mannaStumpV = 0
+ GakidoSelf+= 1
+ '<font color = green>Вы поглотили энергию удара по магии противника.</font>'
  end
 }
 --- PreEffectDy2 ---------------------------------

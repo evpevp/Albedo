@@ -6,116 +6,116 @@ $metkaMag = $ARGS[0]
 $locMag = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
-tan=tan+1
+tan = tan+1
 '<center><H4>Город Тель Адре</H4></center>'
-'<center><img src="pic/Evedon/teladare.jpg" ></center>'
+'<center><img src = "pic/Evedon/teladare.jpg" ></center>'
 'Маленький пустынный городок застроен неказистыми приземистыми домиками многие из которых давно покинуты и полуразрушены.'
-'((Бар мокрая сука|tabarW|minut=minut+5))'
-'((Скупщик|tamagW|minut=minut+5))'
-'((Спортзал|tasportW|minut=minut+5))'
-'((Съемные комнаты|taRoomW|minut=minut+5))'
-'((Дом торговца|taShopW|minut=minut+5))'
-'((Дом алхимика|taAlhW|minut=minut+5))'
-'((Ткацкая мастерская|taTkaW|minut=minut+5))'
-'((Пекарня|taPekarW|minut=minut+5))'
-'((Усадьба наместника|taNamestnikW|minut=minut+5))'
-if karavanday>=12 and karavanday<=20:'Возле дома в котором проживают караванщики привязана пара дюжин осликов которые используют караванщики для доставки грузов.'
-if hour>=21 or hour<6:
-     if horny>=50 and penis>0 and cerafQW<10 and roomWT>0 and vapulaFight=0:'((На улице вы видите наблюдающую за вами девушку стоящую в одиночестве|cerafW|minut=minut+5))'
-     if horny>=50 and penis>0 and cerafQW=10 and roomWT>0 and vapulaFight=0:'((На улице вы видите Сераф|cerafW|minut=minut+5))'
+'((Бар мокрая сука|tabarW|minut += 5))'
+'((Скупщик|tamagW|minut += 5))'
+'((Спортзал|tasportW|minut += 5))'
+'((Съемные комнаты|taRoomW|minut += 5))'
+'((Дом торговца|taShopW|minut += 5))'
+'((Дом алхимика|taAlhW|minut += 5))'
+'((Ткацкая мастерская|taTkaW|minut += 5))'
+'((Пекарня|taPekarW|minut += 5))'
+'((Усадьба наместника|taNamestnikW|minut += 5))'
+if karavanday>= 12 and karavanday<= 20: 'Возле дома в котором проживают караванщики привязана пара дюжин осликов которые используют караванщики для доставки грузов.'
+if hour>= 21 or hour<6: 
+     if horny>= 50 and penis>0 and cerafQW<10 and roomWT>0 and vapulaFight = 0: '((На улице вы видите наблюдающую за вами девушку стоящую в одиночестве|cerafW|minut += 5))'
+     if horny>= 50 and penis>0 and cerafQW = 10 and roomWT>0 and vapulaFight = 0: '((На улице вы видите Сераф|cerafW|minut += 5))'
 end
 
-if otkritTA<2:otkritTA=2
+if otkritTA<2: otkritTA = 2
 
 clr
-gs'stat'
-gs'time'
-$tabrodA={
- eventrand=RAND(0,1)
-	 if eventrand=0:
-		 if karavanday>=12 and karavanday<=20:
+gs 'stat'
+gs 'time'
+$tabrodA = {
+ eventrand = RAND(0,1)
+	 if eventrand = 0: 
+		 if karavanday>= 12 and karavanday<= 20: 
 		 'По улице мотается пьяный в лоскуты охранник Эведонского каравана.'
-			 if whore>=10:
+			 if whore>= 10: 
 			 'Увидев вас он заорал, эй шлюха, даю 100 гемов, отсоси у меня.'
-			 act 'Пойти с забулдыгой':gt'TAcityEvent','whore'
+			 act 'Пойти с забулдыгой': gt 'TAcityEvent','whore'
 			 end
 		 else
 		 'Вы видите как у входа в город на посту скучает капитан стражи Эдрин.'
 		 end
-	 act 'уйти':gt $CURLOC
+	 act 'уйти': gt $CURLOC
 	 end
-	 if eventrand=1:
-		 if dominicaDed=0:
-		 horny=horny+10
+	 if eventrand = 1: 
+		 if dominicaDed = 0: 
+		 horny = horny+10
 		 'Вы слышите за углом какие-то чавкающие звуки, завернув за угол вы видите спину Хекель которая задрала голову и тихо постанывает от удовольствия, приглядевшись вы увидели сидящую перед ней на корточках Доминику которая закрыв глаза от блаженства, сосет член у Хекель.'
-		 act 'Подойти к ним':gt'TAcityEvent','domini'
+		 act 'Подойти к ним': gt 'TAcityEvent','domini'
 		 else
 		 'По улице идет Руби'
 		 end
-	 act 'уйти':gt $CURLOC
+	 act 'уйти': gt $CURLOC
 	 end
 }
-$tabrodB={
+$tabrodB = {
  'Вы видите как Урта прохаживается у входа в город и грозно покрикивает на других стражников.'
- act 'уйти':gt $CURLOC
+ act 'уйти': gt $CURLOC
 }
-$tabrodC={
- eventrand=RAND(0,2)
-	 if eventrand=0:
-	 horny=horny+5
+$tabrodC = {
+ eventrand = RAND(0,2)
+	 if eventrand = 0: 
+	 horny = horny+5
 	 'Вы слышите какие-то звуки в подворотне, подкравшись вы слышите как караванщица Эби говорит, "слушай Хекель, я понимаю, тебя стояк мучает, но почему здесь? Пойдем ко мне домой!" Низкий но женский голос Хекель ей отвечает "Тогда давай пошевеливай задницей, а то я не сдержусь и прямо на улице тебя выдеру и слушать не стану!" вы слышите как шаги удаляются.'
 	 end
-	 if eventrand=1:
-	 horny=horny+30
+	 if eventrand = 1: 
+	 horny = horny+30
 	 'Странно думаете вы. Уже поздно а в одном из окон спортзала горит свет. Вы подкрадываетесь и не заметно подглядываете. В окне видно как на какой то кушетке раком стоит Коттон, ее в зад трахает Инури, а с другой стороны, в рот ей вставила Хекель свое полено и грубо удерживая Коттон за волосы натягивает ее рот на свою елду до яиц. Сама же Коттон несмотря на текущие слезы из глаз и размазанную косметику яростно дрочит свой член и вы видите что под ее членом стоит тарелка. Коттон со стоном кончает в тарелку, наполняя ее своей спермой. Тут же Хелель спускает в похотливо распахнутый рот Коттон и с довольной миной Хекель вытирает свой член о волосы Коттон, Хекель отходит в сторону и Инури вытаскивает член из Коттон подходит к ее лицу и кончает на нее, заливая ей лицо спермой. Коттон сидит на коленях и снимая пальцами сперму с лица слизывает ее. После чего наклоняется и начинает пить содержимое тарелки.'
-		 if horny>75:
-		 act 'Мастурбировать, подглядывая':gt'TAcityEvent','gang'
+		 if horny>75: 
+		 act 'Мастурбировать, подглядывая': gt 'TAcityEvent','gang'
 		 end
 	 end
-	 if eventrand=2:
-		 if karavanday>=12 and karavanday<=20:
-		 horny=horny+5
+	 if eventrand = 2: 
+		 if karavanday>= 12 and karavanday<= 20: 
+		 horny = horny+5
 		 'Вы видите как из дома где проживают караванщики выходит Эдрин вся взъерошенная и перемазанная белесой жидкостью. Она не заметив вас, быстро уходит, оставляя после себя густой и тяжелый запах спермы.'
 		 else
 		 'Вы видите как у входа в город на посту скучает капитан стражи Урта.'
 		 end
 	 end
- act 'уйти':gt $CURLOC
+ act 'уйти': gt $CURLOC
 }
-$tabrodD={
- eventrand=RAND(0,3)
-	 if eventrand=0:
+$tabrodD = {
+ eventrand = RAND(0,3)
+	 if eventrand = 0: 
 	 'Вы видите как из дома торговки Гессы выходит скупщица Малия и идет к себе домой по дороге поправляя юбку.'
 	 end
-	 if eventrand=1:
+	 if eventrand = 1: 
 	 'По улице идет на работу в ткацкую мастерскую Китти.'
 	 end
-	 if eventrand=2:
+	 if eventrand = 2: 
 	 'По улице идет Коттон задумчиво разглядывая дома.'
 	 end
-	 if eventrand=3:
+	 if eventrand = 3: 
 	 'Сержантка стражи Али Мэй сидя на пороге своего домика чистит оружие.'
 	 end
- act 'уйти':gt $CURLOC
+ act 'уйти': gt $CURLOC
 }
-     act 'Бродить по окрестностям(15 мин)':
+     act 'Бродить по окрестностям(15 мин)': 
      cla
      *clr
-     evrand=RAND(0,100)
-     minut=minut+15
-         if evrand <90:gt $CURLOC
+     evrand = RAND(0,100)
+     minut += 15
+         if evrand <90: gt $CURLOC
 		 
-		 if evrand>=90:
-		     if hour > 8 and hour<12:dynamic $tabrodA
-		     if hour>=12 and hour<21:dynamic $tabrodB
-		     if hour>=21:dynamic $tabrodC
-		     if hour <=8:dynamic $tabrodD
+		 if evrand>= 90: 
+		     if hour > 8 and hour<12: dynamic $tabrodA
+		     if hour>= 12 and hour<21: dynamic $tabrodB
+		     if hour>= 21: dynamic $tabrodC
+		     if hour <= 8: dynamic $tabrodD
 		 end
      end
      
-	 act 'Идти в пустыню (1 час)':
-	 minut=minut+60
-	 gt'telaW'
+	 act 'Идти в пустыню (1 час)': 
+	 minut += 60
+	 gt 'telaW'
 	 end
 
 
@@ -132,437 +132,437 @@ $tabrodD={
 
 
 
-	 !'act 'Тестовый бой':
+	 !'act 'Тестовый бой': 
 	 cla
 	 *clr
 	 	 act 'Отряд стражников': 
 	     cla
-		 OtradStraga=1
-		 mortalv=5
-		 gs'stragaW'
-		 act 'Драться':gs'before'
+		 OtradStraga = 1
+		 mortalv = 5
+		 gs 'stragaW'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Тентакль': 
 	     cla
-		 gs'tentakleW'
-		 act 'Драться':gs'before'
+		 gs 'tentakleW'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Паук': 
 	     cla
-		 gs'spiderW'
-		 act 'Драться':gs'before'
+		 gs 'spiderW'
+		 act 'Драться': gs 'before'
 		 end
 		 
 	 	 act 'Сераф': 
 	     cla
-		 $nameV='Сераф'
-		 lvlv=350
-		 strenV=500
-		 speedV=250
-		 agilV=250
-		 vitalV=1000
-		 intelv=2000
-		 willv=1000
-		 program=38
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*25
-		 wipoV=willV*10
-		 CerafSlaveBat=10
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Сераф'
+		 lvlv = 350
+		 strenV = 500
+		 speedV = 250
+		 agilV = 250
+		 vitalV = 1000
+		 intelv = 2000
+		 willv = 1000
+		 program = 38
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*25
+		 wipoV = willV*10
+		 CerafSlaveBat = 10
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 	     act 'Эльф': 
 	     cla
-		 $nameV='Эльф'
-		 lvlv=150
-		 strenV=500
-		 speedV=200
-		 agilV=200
-		 vitalV=50
-		 intelv=300
-		 willv=100
-		 program=31
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*12
-		 wipoV=willV*10
-		 BATpotionV=5
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Эльф'
+		 lvlv = 150
+		 strenV = 500
+		 speedV = 200
+		 agilV = 200
+		 vitalV = 50
+		 intelv = 300
+		 willv = 100
+		 program = 31
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*12
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Старший магистр ордена четырехлистника (воздух)': 
 	     cla
-		 $nameV='Старший магистр ордена четырехлистника'
-		 lvlv=186
-		 strenV=100
-		 speedV=150
-		 agilV=150
-		 vitalV=400
-		 intelv=500
-		 willv=110
-		 program=37
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
-		 BATpotionV=5
-		 armorDefV=300
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Старший магистр ордена четырехлистника'
+		 lvlv = 186
+		 strenV = 100
+		 speedV = 150
+		 agilV = 150
+		 vitalV = 400
+		 intelv = 500
+		 willv = 110
+		 program = 37
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*15
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 armorDefV = 300
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Старший магистр ордена четырехлистника (земля)': 
 	     cla
-		 $nameV='Старший магистр ордена четырехлистника'
-		 lvlv=186
-		 strenV=300
-		 speedV=150
-		 agilV=150
-		 vitalV=300
-		 intelv=400
-		 willv=110
-		 program=36
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
-		 BATpotionV=5
-		 klonv=1
-		 armorDefV=300
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Старший магистр ордена четырехлистника'
+		 lvlv = 186
+		 strenV = 300
+		 speedV = 150
+		 agilV = 150
+		 vitalV = 300
+		 intelv = 400
+		 willv = 110
+		 program = 36
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*15
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 klonv = 1
+		 armorDefV = 300
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Старший магистр ордена четырехлистника (электричество)': 
 	     cla
-		 $nameV='Старший магистр ордена четырехлистника'
-		 lvlv=186
-		 strenV=300
-		 speedV=150
-		 agilV=150
-		 vitalV=300
-		 intelv=400
-		 willv=110
-		 program=34
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
-		 BATpotionV=5
-		 klonv=1
-		 armorDefV=300
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Старший магистр ордена четырехлистника'
+		 lvlv = 186
+		 strenV = 300
+		 speedV = 150
+		 agilV = 150
+		 vitalV = 300
+		 intelv = 400
+		 willv = 110
+		 program = 34
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*15
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 klonv = 1
+		 armorDefV = 300
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Старший магистр ордена четырехлистника (вода)': 
 	     cla
-		 $nameV='Старший магистр ордена четырехлистника'
-		 lvlv=186
-		 strenV=300
-		 speedV=150
-		 agilV=150
-		 vitalV=300
-		 intelv=400
-		 willv=110
-		 program=35
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
-		 BATpotionV=5
-		 klonv=1
-		 armorDefV=300
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Старший магистр ордена четырехлистника'
+		 lvlv = 186
+		 strenV = 300
+		 speedV = 150
+		 agilV = 150
+		 vitalV = 300
+		 intelv = 400
+		 willv = 110
+		 program = 35
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*15
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 klonv = 1
+		 armorDefV = 300
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Младший магистр ордена четырехлистника (воздух)': 
 	     cla
-		 $nameV='Младший магистр ордена четырехлистника'
-		 lvlv=100
-		 strenV=60
-		 speedV=150
-		 agilV=150
-		 vitalV=100
-		 intelv=220
-		 willv=100
-		 program=33
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*8
-		 wipoV=willV*10
-		 BATpotionV=5
-		 klonv=1
-		 armorDefV=200
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Младший магистр ордена четырехлистника'
+		 lvlv = 100
+		 strenV = 60
+		 speedV = 150
+		 agilV = 150
+		 vitalV = 100
+		 intelv = 220
+		 willv = 100
+		 program = 33
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*8
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 klonv = 1
+		 armorDefV = 200
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Младший магистр ордена четырехлистника (земля)': 
 	     cla
-		 $nameV='Младший магистр ордена четырехлистника'
-		 lvlv=100
-		 strenV=60
-		 speedV=150
-		 agilV=150
-		 vitalV=100
-		 intelv=220
-		 willv=100
-		 program=32
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*8
-		 wipoV=willV*10
-		 BATpotionV=5
-		 armorDefV=200
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Младший магистр ордена четырехлистника'
+		 lvlv = 100
+		 strenV = 60
+		 speedV = 150
+		 agilV = 150
+		 vitalV = 100
+		 intelv = 220
+		 willv = 100
+		 program = 32
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*8
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 armorDefV = 200
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 	     act 'Младший магистр ордена четырехлистника (вода)': 
 	     cla
-		 $nameV='Младший магистр ордена четырехлистника'
-		 lvlv=100
-		 strenV=60
-		 speedV=160
-		 agilV=160
-		 vitalV=100
-		 intelv=200
-		 willv=100
-		 program=30
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*8
-		 wipoV=willV*10
-		 BATpotionV=5
-		 armorDefV=200
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Младший магистр ордена четырехлистника'
+		 lvlv = 100
+		 strenV = 60
+		 speedV = 160
+		 agilV = 160
+		 vitalV = 100
+		 intelv = 200
+		 willv = 100
+		 program = 30
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*8
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 armorDefV = 200
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 	     
 	     
 	     act 'Младший магистр ордена четырехлистника (электро)': 
 	     cla
-		 $nameV='Младший магистр ордена четырехлистника'
-		 lvlv=100
-		 strenV=60
-		 speedV=160
-		 agilV=160
-		 vitalV=100
-		 intelv=200
-		 willv=100
-		 program=29
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*8
-		 wipoV=willV*10
-		 BATpotionV=5
-		 armorDefV=200
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Младший магистр ордена четырехлистника'
+		 lvlv = 100
+		 strenV = 60
+		 speedV = 160
+		 agilV = 160
+		 vitalV = 100
+		 intelv = 200
+		 willv = 100
+		 program = 29
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*8
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 armorDefV = 200
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 	     
 	     
 	     act 'Насекомое 10 штук': 
 	     cla
-		 $nameV='Оскверненное насекомое'
-		 lvlv=100
-		 strenV=100
-		 speedV=200
-		 agilV=200
-		 vitalV=100
-		 intelv=10
-		 willv=10
-		 program=28
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*5
-		 wipoV=willV*10
-		 mortalv=10
-		 !monster=100
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Оскверненное насекомое'
+		 lvlv = 100
+		 strenV = 100
+		 speedV = 200
+		 agilV = 200
+		 vitalV = 100
+		 intelv = 10
+		 willv = 10
+		 program = 28
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*5
+		 wipoV = willV*10
+		 mortalv = 10
+		 !monster = 100
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 	     
 	     act 'Туманная ведьма': 
 	     cla
-		 $nameV='Туманная ведьма'
-		 lvlv=100
-		 strenV=10
-		 speedV=10
-		 agilV=10
-		 vitalV=150
-		 intelv=450
-		 willv=100
-		 program=27
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*5
-		 wipoV=willV*10
-		 BATpotionV=5
-		 !monster=100
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Туманная ведьма'
+		 lvlv = 100
+		 strenV = 10
+		 speedV = 10
+		 agilV = 10
+		 vitalV = 150
+		 intelv = 450
+		 willv = 100
+		 program = 27
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*5
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 !monster = 100
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 	     
 	     
 	     act 'Песчаный демон': 
 	     cla
-		 $nameV='Песчаный демон'
-		 lvlv=100
-		 strenV=10
-		 speedV=100
-		 agilV=100
-		 vitalV=200
-		 intelv=350
-		 willv=100
-		 program=26
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*10
-		 wipoV=willV*10
-		 !monster=100
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Песчаный демон'
+		 lvlv = 100
+		 strenV = 10
+		 speedV = 100
+		 agilV = 100
+		 vitalV = 200
+		 intelv = 350
+		 willv = 100
+		 program = 26
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*10
+		 wipoV = willV*10
+		 !monster = 100
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 
 	 	 act 'Акбал': 
 	     cla
-		 $nameV='Акбал'
-		 lvlv=150
-		 strenV=600
-		 speedV=150
-		 agilV=150
-		 vitalV=650
-		 intelv=150
-		 willv=150
-		 program=25
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*10
-		 wipoV=willV*10
-		 !monster=100
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Акбал'
+		 lvlv = 150
+		 strenV = 600
+		 speedV = 150
+		 agilV = 150
+		 vitalV = 650
+		 intelv = 150
+		 willv = 150
+		 program = 25
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*10
+		 wipoV = willV*10
+		 !monster = 100
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 	 
 	 	 act 'Полиморф': 
 	     cla
-		 $nameV='Полиморф'
-		 lvlv=lvl
-		 strenV=stren
-		 speedV=speed
-		 agilV=agil
-		 vitalV=vital
-		 intelv=intel
-		 willv=will
-		 program=24
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*magika
-		 wipoV=willV*10
-		 fintv=1
-		 !monster=12
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Полиморф'
+		 lvlv = lvl
+		 strenV = stren
+		 speedV = speed
+		 agilV = agil
+		 vitalV = vital
+		 intelv = intel
+		 willv = will
+		 program = 24
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*magika
+		 wipoV = willV*10
+		 fintv = 1
+		 !monster = 12
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 	     act 'Доминика': 
 	     cla
-		 $nameV='Доминика'
-		 lvlv=110
-		 strenV=100
-		 speedV=100
-		 agilV=25
-		 vitalV=80
-		 intelv=260
-		 willv=65
-		 program=23
-		 healthV=vitalV*10
-		 mannaV=intelV*10+intelV*8
-		 wipoV=willV*10
-		 BATpotionV=5
-		 !monster=12
-		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
+		 $nameV = 'Доминика'
+		 lvlv = 110
+		 strenV = 100
+		 speedV = 100
+		 agilV = 25
+		 vitalV = 80
+		 intelv = 260
+		 willv = 65
+		 program = 23
+		 healthV = vitalV*10
+		 mannaV = intelV*10+intelV*8
+		 wipoV = willV*10
+		 BATpotionV = 5
+		 !monster = 12
+		 !'<center><img src = "Evedon\demonrealm.jpg" ></center>'
 		 '.'
-		 act 'Драться':gs'before'
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Вапула': 
 		 cla
-		 $nameV='Суккуб Вапула'
-		 lvlv=150
-		 strenV=10
-		 speedV=20
-		 agilV=20
-		 vitalV=210
-		 intelv=280
-		 willv=230
-		 program=22
-		 healthV=vitalV*10
-		 mannaV=intelV*10
-		 wipoV=willV*10
-		 act 'Драться':gs'before'
+		 $nameV = 'Суккуб Вапула'
+		 lvlv = 150
+		 strenV = 10
+		 speedV = 20
+		 agilV = 20
+		 vitalV = 210
+		 intelv = 280
+		 willv = 230
+		 program = 22
+		 healthV = vitalV*10
+		 mannaV = intelV*10
+		 wipoV = willV*10
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Песчаная Ведьма': 
 		 cla
-		 $nameV='Старшая пустынная ведьма'
-		 lvlv=90
-		 strenV=30
-		 speedV=65
-		 agilV=65
-		 vitalV=100
-		 intelv=180
-		 willv=30
-		 program=15
-		 healthV=vitalV*10
-		 mannaV=intelV*10
-		 wipoV=willV*10
-		 act 'Драться':gs'before'
+		 $nameV = 'Старшая пустынная ведьма'
+		 lvlv = 90
+		 strenV = 30
+		 speedV = 65
+		 agilV = 65
+		 vitalV = 100
+		 intelv = 180
+		 willv = 30
+		 program = 15
+		 healthV = vitalV*10
+		 mannaV = intelV*10
+		 wipoV = willV*10
+		 act 'Драться': gs 'before'
 		 end
 		 
 		 act 'Аука': 
 		 cla
-		 $nameV='Аука'
-		 lvlv=100
-		 strenV=30
-		 speedV=65
-		 agilV=65
-		 vitalV=100
-		 intelv=230
-		 willv=30
-		 program=20
-		 healthV=vitalV*10
-		 mannaV=intelV*10
-		 wipoV=willV*10
-		 act 'Драться':gs'before'
+		 $nameV = 'Аука'
+		 lvlv = 100
+		 strenV = 30
+		 speedV = 65
+		 agilV = 65
+		 vitalV = 100
+		 intelv = 230
+		 willv = 30
+		 program = 20
+		 healthV = vitalV*10
+		 mannaV = intelV*10
+		 wipoV = willV*10
+		 act 'Драться': gs 'before'
 		 end
 		 
-		 act 'Пламенный демон':
+		 act 'Пламенный демон': 
 		 cla 
-		 bronikv=500
-		 $nameV='Пламенный демон'
-		 lvlv=150
-		 strenV=120
-		 speedV=100
-		 agilV=20
-		 vitalV=250
-		 intelv=250
-		 willv=10
-		 program=18
-		 healthV=vitalV*10
-		 mannaV=intelV*10
-		 wipoV=willV*10
-		 act 'Драться':gs'before'
+		 bronikv = 500
+		 $nameV = 'Пламенный демон'
+		 lvlv = 150
+		 strenV = 120
+		 speedV = 100
+		 agilV = 20
+		 vitalV = 250
+		 intelv = 250
+		 willv = 10
+		 program = 18
+		 healthV = vitalV*10
+		 mannaV = intelV*10
+		 wipoV = willV*10
+		 act 'Драться': gs 'before'
 		 end
 	 end'
 

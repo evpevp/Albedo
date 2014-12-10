@@ -5,56 +5,56 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Смотритель лесопилки</H4></center>'
-'<center><img src="pic/EvedonNarod/smotritel.jpg"></center>'
+'<center><img src = "pic/EvedonNarod/smotritel.jpg"></center>'
 'Слушаю вас внимательно.'
 clr
-gs'stat'
+gs 'stat'
 
-	 act 'Уйти':minut=minut+3&gt'lesopilka'
+	 act 'Уйти': minut += 3 & gt 'lesopilka'
 
-if lesopwork=0:
-	 act 'Спросить работу':
+if lesopwork = 0: 
+	 act 'Спросить работу': 
 	 cla
-	 minut+=10
+	 minut+= 10
 	 'Вы спросили у смотрителя работу'
-	     if pol>0:
+	     if pol>0: 
 	     '(Смотритель лесопилки) - Это работа для суровых мужиков, а не для девчонок.'
 	     else
 	     '(Смотритель лесопилки) - Это тяжелая работа. Не всякий сдюжит. Но можешь попробовать. Час работы 10 гем и талончик на общежитие.'
-	     	 act 'Договорились':lesopwork=1&minut=minut+3&gt'lesopilka'
+	     	 act 'Договорились': lesopwork = 1 & minut += 3 & gt 'lesopilka'
 	     end
-	 act 'Уйти':gt'lesopilka'
+	 act 'Уйти': gt 'lesopilka'
 	 end
 end
 
-if lesworkTimes>=20 and lesopwork<2:
-	 act 'Попросить работу плотника':
+if lesworkTimes>= 20 and lesopwork<2: 
+	 act 'Попросить работу плотника': 
 	 cla
-	 minut+=10
-	 lesopwork=2
+	 minut+= 10
+	 lesopwork = 2
 	 'Вы спросили у смотрителя работу плотника'
 	 '(Смотритель лесопилки) - Ладно. Переведу тебя к плотникам. Учись их ремеслу.'
-	 act 'Уйти':gt'lesopilka'
+	 act 'Уйти': gt 'lesopilka'
 	 end
 end
 
 
-if barnMY=0 and farmland=1:
-	 act 'Спросить плотников для постройки хлева':
+if barnMY = 0 and farmland = 1: 
+	 act 'Спросить плотников для постройки хлева': 
 	 cla
-	 minut+=10
+	 minut+= 10
 	 'Вы спросили у смотрителя плотников для строительства хлева'
      '(Смотритель лесопилки) - Покупай сотню бревен, платишь мне штуку гемов и этим болванам 100 в час. Только гоняй этих бездельников, если на них не наорать они и пальцем не пошевелят.'
-         if gem>=1000:
-             act 'Заплатить 1000 гем':
+         if gem>= 1000: 
+             act 'Заплатить 1000 гем': 
              cla
-             gem-=1000
-             barnMY=1
+             gem- = 1000
+             barnMY = 1
              'Вы заплатили 1000 гемов и смотритель пошел в дом и вывел 4х мужиков весьма унылого вида. Он приказал им явится на вашу ферму и строить хлев.'
-             act 'Уйти':gt'lesopilka'
+             act 'Уйти': gt 'lesopilka'
              end
          end
-	 act 'Уйти':gt'lesopilka'
+	 act 'Уйти': gt 'lesopilka'
 	 end
 end
 --- lesopilkaboss ---------------------------------

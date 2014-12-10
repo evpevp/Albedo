@@ -5,33 +5,33 @@ $loc = $CURLOC
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 '<center><H4>Театр</H4></center>'
-'<center><img src="pic/Evedon/teatr.jpg" ></center>'
+'<center><img src = "pic/Evedon/teatr.jpg" ></center>'
 'Большой и роскошный театр.'
 clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
+gs 'stat'
+fcolor = rgb(0,0,0)
+bcolor = rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 
 
 
-	 act 'Уйти (5 мин)':
-	 minut=minut+5
-	 gt'reachW'
+	 act 'Уйти (5 мин)': 
+	 minut += 5
+	 gt 'reachW'
 	 end
 	 
-	 if hour>=20 and hour<23:
+	 if hour>= 20 and hour<23: 
 	 'По холлу театра ходят джентльмены под ручку с дамами и ведут светские беседы.'
-	     if gem>=500:
-			 act 'Купить билет в театр 500 гем':
+	     if gem>= 500: 
+			 act 'Купить билет в театр 500 гем': 
 			 cla
 			 *clr
-			 '<center><img src="pic/Evedon/spektakl.jpg" ></center>'
-			 gem-=500
-			 minut=minut+120
-			 noble+=1
+			 '<center><img src = "pic/Evedon/spektakl.jpg" ></center>'
+			 gem- = 500
+			 minut += 120
+			 noble+= 1
 			 'Вы купили билет в театр и сели в ложу. На сцену вышли актеры и начали играть спектакль.'
-			 act 'Уйти (5 мин)':gt'reachW'
+			 act 'Уйти (5 мин)': gt 'reachW'
 			 end
 		 end
 	 

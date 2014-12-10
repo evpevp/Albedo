@@ -1,50 +1,50 @@
 # zowar
-!zoneWar=11
+!zoneWar = 11
 $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 
 
-if zwaronce=0:
-zwaronce=1
-zWin=win
-zLoss=Loss
+if zwaronce = 0: 
+zwaronce = 1
+zWin = win
+zLoss = Loss
 
 
-	 $nameV='Мразь'
-	 lvlv=70
-	 strenV=100
-	 speedV=80
-	 agilV=90
-	 vitalV=120
-	 intelv=10
-	 willv=10
-	 program=1
-	 healthV=vitalV*10
-	 mannaV=intelV*10
-	 wipoV=willV*10
+	 $nameV = 'Мразь'
+	 lvlv = 70
+	 strenV = 100
+	 speedV = 80
+	 agilV = 90
+	 vitalV = 120
+	 intelv = 10
+	 willv = 10
+	 program = 1
+	 healthV = vitalV*10
+	 mannaV = intelV*10
+	 wipoV = willV*10
 	 
 'Могол вызвал через мужика Мразь в каптерку где его уже ожидали вы.'
 '(Мразь) - А, я гляжу ты меня уже ждешь Машенька, сейчас я твое целенькое очечко разработаю. Ты не переживай будет совсем чуть-чуть больно, а потом тебе понравится.'
 
-	 act 'Отмудохать Мразь.':gt'before'
+	 act 'Отмудохать Мразь.': gt 'before'
 exit
 end
 
-if zwaronce=1:
-     if Win>zwin:
-     zoneWar=11
+if zwaronce = 1: 
+     if Win>zwin: 
+     zoneWar = 11
      'Вы достали член и обоссали Мразь, тем самым опустив его. После чего открыли двери и громко объявили всем об этом. Мразь со смешками пинками отправили в петушатник.'
-     act 'Выйти на построение.':gt 'itk'
+     act 'Выйти на построение.': gt 'itk'
      end
-     if Loss>zloss:
-     zoneWar=0
-      петух=петух+1
-	 sweat=sweat+1
-	 analm=analm+1
-	 '<center><img src="pic/jail/petuh2.jpg" ></center>'
+     if Loss>zloss: 
+     zoneWar = 0
+      петух = петух+1
+	 sweat = sweat+1
+	 analm = analm+1
+	 '<center><img src = "pic/jail/petuh2.jpg" ></center>'
 	 'Мразь избил вас и содрав штаны вогнал вам в зад свой член навсегда опустив вас.'
-	 barak=3 
-	 act 'Выйти на построение.':gt 'itk'
+	 barak = 3 
+	 act 'Выйти на построение.': gt 'itk'
      end
 
 end
