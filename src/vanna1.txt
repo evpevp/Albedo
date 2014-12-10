@@ -10,7 +10,14 @@ bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 '<center><H4>ВАННАЯ КОМНАТА</H4></center>'
 '<center><img src="pic/room/vanA.jpg" ></center>'
-'В ванной все стандартно ((умывальник|umiv)) над которым висит ((зеркало|mirror)) и большая ((ванная|van))'
+'В ванной все стандартно. ((Умывальник|umiv)), над которым висит ((зеркало|mirror)), и большая ((ванная|van)).'
+if stanok <= 0:set $stanok = ''
+if stanok > 0:set $stanok = 'бритвенный станок, которого хватит на <<stanok>> раз'
+if milo <= 0:set $milo = ''
+if milo > 0 and stanok <= 0:set $and = ''
+if milo > 0 and stanok > 0:set $and = 'и'
+if milo > 0:set $milo = '<<$and>> мыло, которого хватит на <<milo>> раз'
+'На полочке около умывальника лежит <<$stanok>> <<$milo>>.'
 clr
 gs'stat'
 
@@ -18,9 +25,10 @@ if shampoo <= 1:shampoo = 10
 if stanok <= 1:stanok = 10
 if milo <= 1:milo = 10
 
-
-
-
 act 'Коридор':gt'koridor1'
+dynamic $act_DoHair
+dynamic $act_GetShaved
+dynamic $act_Wash
+dynamic $act_GetNaked
 --- vanna1 ---------------------------------
 

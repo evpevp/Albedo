@@ -8,24 +8,9 @@ if pol = 0:
 	 if berd >= 5:'<center><img src="pic\body\face3.jpg" ></center>'
 'В зеркале вы видите <<$berd>>'
 end
-
-
 if hapri > 0:'У вас аккуратная прическа.'
-if hapri = 0:
-'Ваши волосы растрепанные.'
-     act 'Причесатся 15 мин':
-     cla
-     *clr
-     minut=minut+15
-     hapri=1
-     'Вы причесались, глядя в зеркало.'
-     act 'Положить расческу':gt'mirror'
-     end
-end
-
-
-
-
+if hapri = 0: 'Ваши волосы растрепанные.'
+dynamic $act_DoHair
 act 'Отойти от зеркала':GOTO $locM, $metkaM
 --- mirror ---------------------------------
 

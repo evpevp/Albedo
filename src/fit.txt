@@ -1,143 +1,101 @@
 # fit
 if $ARGS[0]='start':
-$metka = $ARGS[0]
-$loc = $CURLOC
-cla
-*clr
-set minut = minut + 5
-'<center><B><font color=maroon>Фитнес центр</font></B></center>'
-'<center><img src="pic\pic\fit.jpg" ></center>'
-clr
-gs'stat'
-fcolor=rgb(0,0,0)
-bcolor=rgb(255,255,255)
-LCOLOR = rgb(106,90,205)
-'Рабочее время с 9 до 21.'
-'Абонемент действителен еще на <<abonement>> посещений.'
-'Стоимость абонемента на 30 посещений 3000 рублей'
-     act 'ВЫЙТИ':
-     cla
-     set minut = minut + 5
-     gt'down'
-     end
-     
-     if money >= 3000:
-          act 'Купить абонемент на 30 посещений за 3000 руб':
-          abonement=abonement+30
-          money=money-3000
-          gt'fit','start'
-          end
-     end
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	cla
+	*clr
+	set minut = minut + 5
+	'<center><B><font color=maroon>Фитнес центр</font></B></center>'
+	'<center><img src="pic\pic\fit.jpg" ></center>'
+	clr
+	gs'stat'
+	fcolor=rgb(0,0,0)
+	bcolor=rgb(255,255,255)
+	LCOLOR = rgb(106,90,205)
+	'Рабочее время с 9 до 21.'
+	'Абонемент действителен еще на <<abonement>> посещений.'
+	'Стоимость абонемента на 30 посещений 3000 рублей'
 
-     if hour >= 9 and hour <= 21 and abonement > 0:
-          act 'Идти в раздевалку':
-          abonement=abonement-1
-          gt'fit','1'
-          end
-     end
+	act 'ВЫЙТИ':
+		cla
+		set minut = minut + 5
+		gt'down'
+	end
+	if hour >= 9 and hour <= 21 and abonement > 0:
+		act 'Идти в раздевалку':
+			abonement=abonement-1
+			minut += 2
+			gt 'LockerRoom'
+		end
+	end
+	if money >= 3000:
+		act 'Купить абонемент на 30 посещений за 3000 руб':
+			abonement=abonement+30
+			money=money-3000
+			minut += 5
+			gs 'stat'
+			gt'fit','start'
+		end
+	end
 end
 
-if $ARGS[0]='1':
-$metka = $ARGS[0]
-$loc = $CURLOC
-$metkaM = $ARGS[0]
-$locM = $CURLOC
-$metkaBed = $ARGS[0]
-$locBed = $CURLOC
-cla
-*clr
-set minut = minut + 5
-'<center><B><font color=maroon>Раздевалка</font></B></center>'
-'<center><img src="pic\pic\razd.jpg" ></center>'
-clr
-gs'stat'
-'Простая, но чистая и прилизанная раздевалка с ((зеркалами|mirror)), и синими ((шкафчиками|loker))'
 
-     act 'ВЫЙТИ':
-     cla
-     set minut = minut + 5
-     gt'fit','start'
-     end
-     
-     act 'Идти в душ (15 мин)':
-     cla
-     *clr
-     minut=minut+15
-     hapri=0
-     if pol = 0:set sweat= -3
-     'Вы моетесь под душем.'
-     act 'Вытерется и выйти из душа':gt'fit','1'
-     end
-     
-     if slot = 3 and fitday ! day:
-     act 'Идти в спорт зал':gt'fit','2'
-     end
-
-end
 
 if $ARGS[0]='2':
-$metka = $ARGS[0]
-$loc = $CURLOC
-fitday = day
-cla
-*clr
-set minut = minut + 5
-'<center><B><font color=maroon>Спорт зал</font></B></center>'
-'<center><img src="pic\pic\fit1.jpg" ></center>'
-clr
-gs'stat'
-
-     act 'Закончить тренировку и идти в раздевалку':
-     cla
-     set minut = minut + 5
-     gt'fit','1'
-     end
-     
-     act 'Заниматся самостоятельно 2 час':
-     cla
-     *clr
-     set minut = minut + 120
-     sweat=sweat+10
-     set exp=exp+RAND(1,3)
-     fat=fat-1
-     manna=manna-15
-     'Вы два часа занимались спортом самостоятельно'
-     act 'Идти в раздевалку':gt'fit','1'
-     end
-     
-     if money >= 1000:
-         act 'Заплатить тренеру 1 тыс и заниматся по его программе 2 час':
-		 cla
-		 *clr
-		 money=money-1000
-		 set minut = minut + 120
-		 sweat=sweat+10
-		 set exp=exp+RAND(3,6)
-		 fat=fat-2
-		  manna=manna-10
-		 'Вы два часа занимались спортом по программе тренера'
-		 act 'Идти в раздевалку':gt'fit','1'
-		 end
-     
-     end
-     
-     if money >= 3000:
-         act 'Заплатить тренеру 3 тыс и заниматся под его контролем 2 час':
-		 cla
-		 *clr
-		 money=money-3000
-		 set minut = minut + 120
-		 sweat=sweat+10
-		 set exp=exp+RAND(6,10)
-		 fat=fat-3
-		  manna=manna-5
-		 'Вы два часа занимались спортом под контролем тренера'
-		 act 'Идти в раздевалку':gt'fit','1'
-		 end
-     
-     end
-
-
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	fitday = day
+	cla
+	*clr
+	set minut = minut + 5
+	'<center><B><font color=maroon>Спорт зал</font></B></center>'
+	'<center><img src="pic\pic\fit1.jpg" ></center>'
+	clr
+	gs'stat'
+	act 'Закончить тренировку и идти в раздевалку':
+		cla
+		set minut = minut + 5
+		gt 'LockerRoom'
+	end
+	act 'Заниматся самостоятельно 2 час':
+		cla
+		*clr
+		set minut = minut + 120
+		sweat=sweat+10
+		set exp=exp+RAND(1,3)
+		fat=fat-1
+		manna=manna-15
+		'Вы два часа занимались спортом самостоятельно'
+		act 'Идти в раздевалку': gt 'LockerRoom'
+	end
+	if money >= 1000:
+		act 'Заплатить тренеру 1 тыс и заниматся по его программе 2 час':
+			cla
+			*clr
+			money=money-1000
+			set minut = minut + 120
+			sweat=sweat+10
+			set exp=exp+RAND(4,6)
+			fat=fat-2
+			manna=manna-10
+			'Вы два часа занимались спортом по программе тренера'
+			act 'Идти в раздевалку': gt 'LockerRoom'
+		end
+	end
+	if money >= 3000:
+		act 'Заплатить тренеру 3 тыс и заниматся под его контролем 2 час':
+			cla
+			*clr
+			money=money-3000
+			set minut = minut + 120
+			sweat=sweat+10
+			set exp=exp+RAND(7,10)
+			fat=fat-3
+			manna=manna-5
+			'Вы два часа занимались спортом под контролем тренера'
+			act 'Идти в раздевалку': gt 'LockerRoom'
+		end
+	end
 end
 --- fit ---------------------------------
 

@@ -16,7 +16,7 @@ if music_on=1 and $music_theme <> '':
   		track[$music_theme] = track[$music_theme]+1
   		if ARRSIZE('cur_theme')<=track[$music_theme]:track[$music_theme]=0
   	end
-  	play $cur_theme[track[$music_theme]],volume
+  	!play $cur_theme[track[$music_theme]],volume
 end
 
 !гонка 

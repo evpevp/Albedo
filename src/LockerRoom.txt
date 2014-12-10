@@ -1,0 +1,30 @@
+# LockerRoom
+cla
+*clr
+'<center><B><font color=maroon>Раздевалка</font></B></center>'
+'<center><img src="pic\pic\razd.jpg" ></center>'
+clr
+gs'stat'
+'Простая, но чистая и прилизанная раздевалка с ((зеркалами|mirror)), и синими ((шкафчиками|loker))'
+act 'ВЫЙТИ':
+	cla
+	set minut = minut + 5
+	gt'fit','start'
+end
+dynamic $act_DoHair
+act 'Идти в душ (15 мин)':
+	cla
+	*clr
+	minut=minut+15
+	hapri=0
+	if pol = 0:set sweat= -3
+	'Вы моетесь под душем.'
+	act 'Вытерется и выйти из душа':gt $CURLOC
+end
+
+if slot = 3 and fitday ! day:
+	act 'Идти в спортзал':gt'fit','2'
+end
+
+--- LockerRoom ---------------------------------
+

@@ -29,5 +29,6 @@ if hour>=18 and hour<=20 and innapodstava=1 and innaporka!1:
 end
 
 act 'Коридор':gt'koridor1'
+dynamic $act_GetNaked
 --- bedroom1 ---------------------------------
 

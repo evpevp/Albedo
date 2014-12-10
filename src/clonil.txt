@@ -17,10 +17,6 @@ if cumfrot > 0:set cumfrot = 0
 if odetero>0:odetero=0
 set nude = 1
 
-
-
-if NewCloMarker=0:gs'clonil2'
-
 !другой мир
 if roba = 2:roba=1
 if pesantclo = 2:pesantclo = 1

@@ -178,7 +178,7 @@ if vampireDust>0:pl'Прах вампира <<vampireDust>> шт'
 if blackAmulet=1:pl'Амулет черной книги.'
 if blackBuben=1:pl'Бубен из кожи демона для совершения обряда на кладбище.'
 
-if toiletBook=1:pl'Не пристойная книга найденная в туалете. <a href="exec:dynamic $ToiletBookDin ">Посмотреть</a>'
+if toiletBook=1:pl'Непристойная книга найденная в туалете. <a href="exec:dynamic $ToiletBookDin ">Посмотреть</a>'
 
 if gruz>0:pl'<center>Груза на продажу <<gruz>> единиц.</center>'
 if Licens>0:pl'<center>Торговая лицензия действительна еще <<Licens>> дней</center>'

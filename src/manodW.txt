@@ -244,7 +244,7 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 	 elseif mag = 0:
 			 act 'Надеть':
 			 cla
-			 gs'clonil'
+			 gs'dynamic $act_GetNaked'
 			 set slot = 500
 			 set bodysuit = 2
 			 armorDef=500

@@ -17,6 +17,7 @@ end
 
 
 
-act 'Закрыть шкаф':GOTO $locBed, $metkaBed
+act 'Закрыть шкаф': gt $prevHLoc
+!$locBed, $metkaBed
 --- loker ---------------------------------
 

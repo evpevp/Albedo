@@ -21,6 +21,8 @@ fcolor=rgb(0,0,0)
 bcolor=rgb(250,238,221)
 LCOLOR = rgb(106,90,205)
 
+gs 'Dynamics'
+
 '<center>http://albedo.fludilka.su/ и DeGross представляет</center>'
 *nl
 '<hr align="left" color="red" size="3" width="1000">'

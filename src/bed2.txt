@@ -45,6 +45,7 @@ set manna = manna - 10
      if sizo=0:
          act 'Встать с кровати и привести себя в порядок 15мин':
          NowSleep=0
+         hapri = 1
          minut=minut+15
          farmstam=stren/10
 		 GOTO $locBed, $metkaBed
@@ -66,7 +67,7 @@ elseif son > 23:
      end
      
      if sizo=0:
-         act 'Встать с кровати и привести себя в порядок 15мин':
+         act 'Встать с кровати и привести себя в порядок (15 мин)':
          NowSleep=0
          minut=minut+15
          farmstam=stren/10
