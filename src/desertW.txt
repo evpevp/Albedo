@@ -58,7 +58,7 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песо�
 			 program=18
 			 healthV=vitalV*10
 			 mannaV=intelV*10
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 mortalv=5
 			 *clr
 			 '<center><img src="pic/EvedonMonsters/deamon.jpg"></center>'
@@ -79,7 +79,7 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песо�
 			 program=26
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*10
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 mortalv=4
 			 *clr
 			 '<center><img src="pic/EvedonMonsters/sanddemon.jpg"></center>'
@@ -105,7 +105,7 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песо�
 			 program=28
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*5
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 mortalv=RAND(15,25)
 			 *clr
              '<center><img src="pic/EvedonMonsters/bee.jpg"></center>'			 
@@ -125,7 +125,7 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песо�
 			 program=27
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*5
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 BATpotionV=RAND(8,10)
 			 mortalv=5
 			 *clr
@@ -169,7 +169,7 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песо�
 			 program=30
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*8
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 BATpotionV=5
 			 armorDefV=200
 			 *clr
@@ -189,7 +189,7 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песо�
 			 program=32
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*8
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 BATpotionV=5
 			 armorDefV=200
 			 *clr
@@ -209,7 +209,7 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песо�
 			 program=33
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*8
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 BATpotionV=5
 			 klonv=1
 			 armorDefV=200
@@ -230,7 +230,7 @@ if vampireMorf>=1:'Зарыться в <a href="exec: gt''vampGrave''">песо�
 			 program=29
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*8
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 BATpotionV=5
 			 armorDefV=200
 			 *clr

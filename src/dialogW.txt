@@ -157,7 +157,7 @@ if mangem=1 and ranpol=1 and penis>0 and horny>=40:
                  act 'Заплатить за секс':
                  gem-=tempshop
 				 $namev=$frendname
-				 girl+=1
+				 count['girl'] += 1
 				 pointSS=0
 				 gt'sexsisteman','vibor'
 				 end

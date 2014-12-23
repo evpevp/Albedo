@@ -105,7 +105,7 @@ gs'time'
 '<B><font color=red>Вы тоните в трясине.</font></B>'
      act 'Пытаться выбраться':
      cla
-     wipo=wipo-10
+     WillPower=WillPower-10
      'Вы изо всех сил пытаетесь добраться до сухого места.'
      trasrand=RAND(0,80)
          if trasrand>knwmarsh+10:trasina=trasina+1&'Черт, кажется вы еще глубже погружаетесь! Мама! Караул! Люди! ПОМОГИТЕ!'

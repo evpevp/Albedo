@@ -57,7 +57,7 @@ if vapulaFight=0:
 				 program=22
 				 healthV=vitalV*10
 				 mannaV=intelV*10+intel*20
-				 wipoV=willV*10
+				 WillPowerV=willV*10
 				 monster=12
 				 NORUN=1
 			     gt'before'
@@ -105,7 +105,7 @@ vapulabain=1
 				 cla
 				 *clr
 				 vapulaFight=3
-				 girl=girl+1
+				 count['girl']=count['girl']+1
 				 sexm=sexm+1
 				 DOM=DOM+1
 				 '<center><img src="pic/EvedonTA/vapulaOver.jpg" ></center>'

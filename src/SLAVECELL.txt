@@ -7,10 +7,10 @@ $locFight = $CURLOC
 $metkaBed = $ARGS[0]
 $locBed = $CURLOC
 
-if wipo<=0:SUB=SUB+1&wipo+=10
+if WillPower<=0:SUB=SUB+1&WillPower+=10
 if SCrest>13:SCrest=13
 if SCrest<0:SCrest=0
-wipo-=SCrest
+WillPower-=SCrest
 
 '<center><H4>Камера раба</H4></center>'
 if SCrest=0:'<center><img src="pic/Evedon/dungeon.jpg" ></center>'
@@ -121,7 +121,7 @@ if hour>=7 and hour<23:
 	 *clr
 	 minut=minut+60
 	 manna=manna+50
-	 wipo+=50	
+	 WillPower+=50	
 	 horny=horny-5 
 	 ''	 
 	 act '.....':GT $CURLOC

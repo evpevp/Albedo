@@ -42,7 +42,7 @@ willV=10
 program=12
 healthV=vitalV*25
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 --- hellhoundW ---------------------------------

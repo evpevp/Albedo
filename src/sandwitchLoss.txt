@@ -58,7 +58,7 @@ monster=0
      *clr
      SUB=SUB+1
      minut=minut+15
-     girl=girl+1
+     count['girl'] += 1
      sexm=sexm+1
      horny=horny+SUB
      clr

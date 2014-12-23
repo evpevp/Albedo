@@ -52,7 +52,7 @@ gs'time'
              ''
                  act 'Секс':
                  $namev='Блондинка'
-                 girl+=1
+                 count['girl'] += 1
                  zaertQW=1
                  pointSS=0
                  gt'sexsisteman','vibor'

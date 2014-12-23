@@ -23,10 +23,10 @@ if ruchday!day:
      cla
      minut=minut+5
      golod=14
-     son=20
+     freshness=20
      health=vital*10
-     manna=intel*10+intel*magika&wipo=wipo+5
-     wipo=will*10
+     manna=intel*10+intel*magika&WillPower=WillPower+5
+     WillPower=will*10
      ruchday=day
      if vidage>16 and filosofkam=0:vidage=vidage-1
      'Вы глотнули чистой воды и почувствовали моментальный прилив сил и возникло ощущение, что вы даже немного помолодели.'

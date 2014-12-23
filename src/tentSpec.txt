@@ -10,7 +10,7 @@ if pop>=uvo or poparand>=8:
 '<B><font color=red><<$nameV>> ПОПАЛ В ВАС</font></B>'
 skveratk=skverna+5
 if skveratk>25:skveratk=25
-wipo=wipo-skveratk
+WillPower=WillPower-skveratk
 horny=horny+skveratk
 end
 if pop<uvo and poparand<8:

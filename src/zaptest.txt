@@ -57,7 +57,7 @@
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -145,7 +145,7 @@
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -229,7 +229,7 @@
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -333,7 +333,7 @@
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit

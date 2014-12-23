@@ -10,7 +10,7 @@
 'Воля <<will>>'
 'Здоровье <<health>>'
 'Мана <<manna>>'
-'Сила воли <<wipo>>'
+'Сила воли <<WillPower>>'
 
 act 'ВЫЙТИ':GOTO $loc, $metka
 

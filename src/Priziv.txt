@@ -11,15 +11,15 @@ pagil=0
 pvital=0
 pwill=0
 pmanna=0
-pwipo=0
+pWillPower=0
 prizivProgram=0
 '<font color=#cd00cd><<$pname>> исчезает в облаке дыма</font>'
 }
 
 if priziv>0:
-'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> Мана:<<pmanna>> Воля:<<pwipo>> Осталось ходов:<<prizivTimes>></font>'
+'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> Мана:<<pmanna>> Воля:<<pWillPower>> Осталось ходов:<<prizivTimes>></font>'
 !prizivTimes-=1
-     if Phealth>0 and prizivTimes>0 and pmanna>0 and pwipo>0:
+     if Phealth>0 and prizivTimes>0 and pmanna>0 and pWillPower>0:
          if prizivProgram=0:
          !программа действий призванного существа
          !стена, просто стоит

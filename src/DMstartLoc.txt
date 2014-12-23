@@ -25,7 +25,7 @@ $name = 'Эйрик'
 $surname = ''
 fat = 200
 salo=200
-son = 18
+freshness = 18
 golod = 3
 rost = 178
 lvl=30
@@ -39,7 +39,7 @@ will=10
 magika=1
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 
 hcol = 1
 glacol = 1
@@ -93,7 +93,7 @@ $name = 'Эйрин'
 $surname = ''
 fat = 200
 salo=200
-son = 18
+freshness = 18
 golod = 3
 rost = 168
 lvl=20
@@ -107,7 +107,7 @@ will=10
 magika=1
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 
 vidageday = 360
 age = 18
@@ -167,7 +167,7 @@ $name = 'Алгебрус'
 $surname = ''
 fat = 100
 salo=100
-son = 18
+freshness = 18
 golod = 3
 rost = 182
 lvl=150
@@ -181,7 +181,7 @@ intel=200
 will=100
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 
 
 
@@ -256,7 +256,7 @@ $name = 'Лине'
 $surname = ''
 fat = 240
 salo=240
-son = 18
+freshness = 18
 golod = 3
 rost = 172
 lvl=25
@@ -270,7 +270,7 @@ will=10
 magika=1
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 
 vidageday = 360
 age = 16
@@ -334,7 +334,7 @@ $name = 'Дирк'
 $surname = ''
 fat = 150
 salo=150
-son = 18
+freshness = 18
 golod = 3
 rost = 193
 
@@ -350,7 +350,7 @@ magika=1
 farmstam=stren/10
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 
 hcol = 3
 glacol = 3
@@ -407,7 +407,7 @@ $name = 'Леон'
 $surname = ''
 fat = 250
 salo=250
-son = 18
+freshness = 18
 golod = 3
 rost = 182
 
@@ -423,7 +423,7 @@ magika=1
 farmstam=stren/10
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 
 hcol = 0
 glacol = 0
@@ -487,7 +487,7 @@ $name = 'Стефан'
 $surname = 'Брайтмур'
 fat = 50
 salo=50
-son = 21
+freshness = 21
 golod = 3
 rost = 168
 
@@ -503,7 +503,7 @@ magika=1
 farmstam=stren/10
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 
 hcol = 1
 glacol = 1
@@ -556,7 +556,7 @@ $name = 'Альтотрон'
 $surname = ''
 fat = 10
 salo=10
-son = 18
+freshness = 18
 golod = 3
 rost = 197
 lvl=2000
@@ -570,7 +570,7 @@ intel=3000
 will=1000
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 
 
 

@@ -200,7 +200,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 				 money=money+500
 				 petuhday = day
 				 manna=manna-5
-				 wipo=wipo-5
+				 WillPower=WillPower-5
 				 sweat=sweat+1
 				 analm=analm+1
 				 '<center><img src="pic/jail/petuh2.jpg" ></center>'
@@ -257,14 +257,14 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
                  end
              end
              
-             if wipo<10:
+             if WillPower<10:
                  act 'Плакать':
                  cla
                  вор=0
                  мужик=мужик+1
                  minut=minut+15
                  manna=manna+10
-                 wipo=wipo+30
+                 WillPower=WillPower+30
                  'Вы не выдержали и начали плакать.'
                  act 'Умытся.':gt 'sizo','3'
                  end
@@ -333,7 +333,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
              if week = 6 and dejur = 0 and dejurstop = 0:
 			 cla
 			 health=health/2
-			 wipo=wipo/2
+			 WillPower=WillPower/2
 			 manna=0
 			 dejurstop=1
 			 вор=вор+1
@@ -537,7 +537,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 				 money=money+500
 				 petuhday = day
 				 manna=manna-5
-				 wipo=wipo-5
+				 WillPower=WillPower-5
 				 sweat=sweat+1
 				 analm=analm+1
 				 '<center><img src="jail\petuh2.jpg" ></center>'
@@ -580,14 +580,14 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
                  end
              end
              
-             if wipo<10:
+             if WillPower<10:
                  act 'Плакать':
                  cla
                  вор=0
                  мужик=мужик+1
                  minut=minut+15
                  manna=manna+10
-                 wipo=wipo+30
+                 WillPower=WillPower+30
                  'Вы не выдержали и начали плакать.'
                  act 'Умытся.':gt 'sizo','4'
                  end
@@ -631,7 +631,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			 if week = 6 and dejur = 0 and dejurstop = 0:
 			 cla
 			 health=health/2
-			 wipo=wipo/2
+			 WillPower=WillPower/2
 			 manna=0
 			 dejurstop=1
 			 вор=вор+1
@@ -652,7 +652,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			     *clr
 			     minut=minut+60
 			     health=health/2
-				 wipo=wipo/2
+				 WillPower=WillPower/2
 				 manna=0
 				 dejurstop=1
 				 петух=петух+1
@@ -668,7 +668,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			 exit
 			 end
 			 
-			 if wipo<=1 and петух=0:
+			 if WillPower<=1 and петух=0:
 			 cla
 			 'К вам подошел один из зеков и предложил сделать ему минет, за бабки, обещая, что заживешь ты после этого как королева. Вы слишком ослабли морально, чтобы сопротивлятся этому.'
 			 	 act 'Сосать член за 500руб 1 час.':
@@ -690,7 +690,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			 if money>=5000:
 			 cla
 			 health=health/2
-			 wipo=wipo/2
+			 WillPower=WillPower/2
 			 manna=0
 			 dejurstop=1
 			 вор=вор+1

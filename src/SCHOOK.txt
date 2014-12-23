@@ -1,5 +1,5 @@
 # SCHOOK
-if wipo<0:wipo=0&sub+=1
+if WillPower<0:WillPower=0&sub+=1
 anus+=1
 clr
 gs'stat'
@@ -12,7 +12,7 @@ if picrand=3:'<center><img src="pic/EvedonSC/hook3.jpg" ></center>'
 
 	 act 'Терпеть':
 	 cls
-	 wipo-=10
+	 WillPower-=10
 	 minut+=60
 	 gt $curloc
 	 end

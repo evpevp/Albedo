@@ -174,7 +174,7 @@ if karverQW>0 and karverWantBeer=0:
 	 program=40
 	 healthV=vitalV*10
 	 mannaV=intelV*10+intelV*15
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 monster=21
 	 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
 	 act 'Драться':gs'before'
@@ -205,7 +205,7 @@ if karverQW>0 and karverWantBeer=3:
 	 program=40
 	 healthV=vitalV*10
 	 mannaV=intelV*10+intelV*15
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 monster=21
 	 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
 	 act 'Драться':gs'before'
@@ -238,7 +238,7 @@ karverWantBeer=3
 	 program=40
 	 healthV=vitalV*10
 	 mannaV=intelV*10+intelV*15
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 monster=21
 	 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
 	 act 'Драться':gs'before'
@@ -263,7 +263,7 @@ if karverQW>0 and karverWantBeer=1:
 	 program=40
 	 healthV=vitalV*10
 	 mannaV=intelV*10+intelV*15
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 monster=21
 	 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
 	 act 'Драться':gs'before'
@@ -303,7 +303,7 @@ if karverQW=0:
 		 program=40
 		 healthV=vitalV*10
 		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 monster=21
 		 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
 		 act 'Драться':gs'before'
@@ -324,7 +324,7 @@ if karverQW=0:
 		 program=40
 		 healthV=vitalV*10
 		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 monster=21
 		 'Старичок встал с пенька и оперевшись на клюшку начал что-то распевать.'
 		 act 'Драться':gs'before'

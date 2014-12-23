@@ -41,14 +41,14 @@ if hour>= 19 and hour<22:
 	 gt'blackjack','0'
 	 end
 	 
-	 if wipo<10:
+	 if WillPower<10:
          act 'Плакать':
          cla
          вор=0
          мужик=мужик+1
          minut=minut+15
          manna=manna+10
-         wipo=wipo+30
+         WillPower=WillPower+30
          'Вы не выдержали и начали плакать.'
           act 'Умытся.':gt $CURLOC
          end

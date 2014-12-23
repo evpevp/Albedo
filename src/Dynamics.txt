@@ -10,7 +10,7 @@ $act_GetNaked = {
 	end
 }
 
-$act_GetShaved ={
+$act_GetShaved = {
 	if pol = 0:
 		if stanok > 0 and berd > 0:
 			act 'Брить щетину':
@@ -26,7 +26,7 @@ $act_GetShaved ={
 	end
 }
 
-$act_Wash ={
+$act_Wash = {
 	if milo > 0 and sweat>0:
 		act 'Умываться (5 мин)':
 			cla
@@ -41,7 +41,7 @@ $act_Wash ={
 	end
 }
 
-$act_DoHair={
+$act_DoHair = {
 	if hapri = 0:
 		act 'Причесаться (5 мин)':
 			cla
@@ -60,5 +60,77 @@ $act_DoHair={
 		end
 	end
 }
+
+$NimfaSexStat = {
+	if (FNsex.cock<20): $BarColor = "#4682B4" & *nl 'Вы спокойны. Ваш член какой-то вялый.'
+	if (FNsex.cock>=20 and FNsex.cock<40): $BarColor = "#FF8C00" & *nl 'Вы возбуждены. У вас хороший стояк.'
+	if (FNsex.cock>=40 and FNsex.cock<65): $BarColor = "#FF4500" & *nl 'Вы сильно возбуждены. У вас мощный стояк.'
+	if (FNsex.cock>=65 and FNsex.cock<85): $BarColor = "#B22222" & *nl 'Вы очень близки к оргазму. Ваш член так и норовит выдать струю спермы.'
+	if (FNsex.cock>=85 and FNsex.cock<100): $BarColor = "#FF0000" & *nl 'Вы на грани оргазма. Вы еле-еле сдерживаете рвущийся наружу поток семени.'
+	if (FNsex.cock>=100): $BarColor = "#FF1493" & *nl 'Вы достигли оргазма!'
+	*nl func('ProgressBar', FNsex.cock, 100, 60, $BarColor)
+	if (FNsex.pussy<20): $BarColor = '#4682B4' & *nl 'Киска нимфы суха и зажата. Проникновение не доставит ей удовольствия.'
+	if (FNsex.pussy>=20 and FNsex.pussy<40): $BarColor = '#FF8C00' & *nl 'Нимфа возбуждена. Её влагалище увлажнилось.'
+	if (FNsex.pussy>=40 and FNsex.pussy<65): $BarColor = '#FF4500' & *nl 'Нимфа хорошо возбуждена. Её киска обильно смазана собственным "соком"'
+	if (FNsex.pussy>=65 and FNsex.pussy<85): $BarColor = '#B22222' & *nl 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
+	if (FNsex.pussy>=85 and FNsex.pussy<100): $BarColor = '#FF0000' & *nl 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
+	if (FNsex.pussy>=100): $BarColor = '#FF1493' & *nl 'Нимфа во власти оргазма!'
+	*nl func('ProgressBar', FNsex.pussy, 100, 60, $BarColor)
+}
+
+$act_NimfaSex = {
+	act 'Попросить нимфу продолжать сосать ваш член': gt 'FNsex','blowjob'
+	act 'Ублажать нимфу языком': gt 'FNsex','cunni'
+	if (FNsex.cock>=20):
+		act 'Поза "CowGirl"': gt 'FNsex','CowGirl'
+		act 'Поза "Reverse CowGirl"': gt 'FNsex','ReverseCowGirl'
+		act 'Трахать нимфу раком': gt 'FNsex','69'
+		act 'Поза "На боку"': gt 'FNsex','hip'
+	end
+}
+
+$GaussDistrib = {
+	!'
+		y=sqrt(3)*(2*summ(Xn)/sqrt(n)-sqrt(n))*sigma+M
+		y=(sqrt(3)*2*summ(Xn)/sqrt(n)-sqrt(3)*sqrt(n))*sigma+M
+		y=(sqrt(3)*2*summ(Xn)/sqrt(n)-sqrt(3)*sqrt(n)*sqrt(n)/sqrt(n))*sigma+M
+		y=(sqrt(3)*2*summ(Xn)/sqrt(n)-sqrt(3)*n/sqrt(n))*sigma+M
+		Преобразуем отрезок [0,1] в [0,100], тогда summ(Xn)=summ(XXn)/100 
+		y=(sqrt(3)*2*summ(XXn)/100*sqrt(n)-sqrt(3)*n/sqrt(n))*sigma+M
+		sqrt(3)=100*sqrt(3)/100
+		y=(sqrt(3)*100*2*summ(XXn)/100*100*sqrt(n)-sqrt(3)*100*n/100*sqrt(n))*sigma+M
+		y=(sqrt(3)*100*2*summ(XXn)/100*100*sqrt(n)-sqrt(3)*100*100*n/100*100*sqrt(n))*sigma+M
+		y=((sqrt(3)*100*2*summ(XXn)-sqrt(3)*100*100*n)/100*100*sqrt(n))*sigma+M
+		sqrt(3)*100=173
+		y=((173*2*summ(XXn)-173*100*n)/100*100*sqrt(n))*sigma+M
+		sigmaX10=10*sigma
+		y=((173*2*summ(XXn)-173*100*n)/100*100*sqrt(n))*sigmaX10/10+M
+		y=((173*2*summ(XXn)-173*100*n)*sigmaX10/100*100*10*sqrt(n))+M
+		summ(Xn) - сумма случайных чисел, равномерно распределённых на отрезке [0,1]
+		summ(XXn) - сумма случайных чисел, равномерно распределённых на отрезке [0,100]
+		sigma - среднеквадратичное отклонение
+		M - математическое ожидание
+	'
+	!Среднее значение (математическое ожидание, M)
+	gaussMathExpectation = ARGS[0]
+	! Среднеквадратичное отклонение x10 (sigma*10 или sigmaX10)
+	gauss10xStdDeviation = iif (ARGS[1] < 1, 10, ARGS[1])
+	gauss10xStdDeviation = iif (ARGS[1] > 490, 490, ARGS[1])
+	! summ(XXn)=gaussEvent
+	gaussEvent = 0
+	! n=gaussCounter 
+	gaussCounter = 1
+	:nextXXn
+		gaussEvent += RAND(0, 100)
+	if gaussCounter < 25: gaussCounter +=1 & jump 'nextXXn'
+	! y=gaussEvent
+	if gaussEvent-1250 >= 0:
+		gaussEvent = (346*gaussEvent-432500)*gauss10xStdDeviation/500000 + ARGS[0] + iif(((346*gaussEvent-432500)*gauss10xStdDeviation/50000) MOD 10 < 5, 0, 1)
+	else
+		gaussEvent = (346*gaussEvent-432500)*gauss10xStdDeviation/500000 + ARGS[0] + iif(((346*gaussEvent-432500)*gauss10xStdDeviation/50000) MOD 10 > -5, 0, -1)
+	end
+	!gaussEvent = (173*2*gaussEvent-173*25*100)*gauss10xStdDeviation/500000 + ARGS[0]
+}
+
 --- Dynamics ---------------------------------
 

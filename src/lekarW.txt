@@ -22,7 +22,7 @@ if gem>=100:
 	 gem=gem-100
 	 health=vital*10
 	 manna=intel*10+intel*magika
-	 wipo=will*10
+	 WillPower=will*10
 	 'Лекарь наложил на вас заклинание и вы почувствовали себя просто замечательно.'
 	 act 'Уйти':gt'rinokW'
 	 end

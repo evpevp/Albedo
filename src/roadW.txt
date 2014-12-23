@@ -74,7 +74,7 @@ end
 			 program=10
 			 healthV=vitalV*10
 			 mannaV=intelV*10
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 ShilDefv=30
 			 weaponv=1
 			 armorDefv=600

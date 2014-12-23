@@ -207,7 +207,7 @@ gs'stat'
 									mashaQW=15
 									bankfond=bankfond-200000
 									minut=minut+30
-									girl=girl+1
+									count['girl']=count['girl']+1
 									sexm=sexm+1
 									horny=0
 									manna=manna+50
@@ -223,7 +223,7 @@ gs'stat'
 									mashaQW=15
 									bankfond=bankfond-200000
 									minut=minut+30
-									girl=girl+1
+									count['girl']=count['girl']+1
 									sexm=sexm+1
 									horny=0
 									manna=manna+50
@@ -265,7 +265,7 @@ gs'stat'
 										'Почувствовав, как киска девушки начинает сокращаться, вы наращиваете темп. Каждым ударом вы выплескиваете сперму внутрь Маши.'
 										'Тяжело дыша, Маша продолжает лежать на спине. Довольный, вы смотрите, как из её киски медленно вытекает ваша сперма.'
 										minut=minut+30
-										girl=girl+1
+										count['girl']=count['girl']+1
 										sexm=sexm+1
 										horny=0
 										manna=manna+50
@@ -287,7 +287,7 @@ gs'stat'
 										'Почувствовав, как киска девушки начинает сокращаться, вы наращиваете темп, каждым ударом выплескиваясь внутри Маши.'
 										'Довольный, вы смотрите, как из её киски медленно вытекает ваша сперма.'
 										minut=minut+30
-										girl=girl+1
+										count['girl']=count['girl']+1
 										sexm=sexm+1
 										horny=0
 										manna=manna+50

@@ -33,7 +33,7 @@ if $ARGS[0]='bj1':
 		 set minut=minut+15
 		 horny=0
 		 manna=manna+25
-         wipo=wipo+25
+         WillPower=WillPower+25
 		 act 'Отойти': gt 'HouseRoom1'
 	 end
 end

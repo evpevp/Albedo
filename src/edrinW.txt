@@ -51,7 +51,7 @@ if karavanday<12 or karavanday>20:
 						 if penis>=6: 
 						 gem=gem-100
 						 horny=0
-						 if edrinSex=0:edrinSex=1&girl=girl+1
+						 if edrinSex=0:edrinSex=1&count['girl']=count['girl']+1
 						 sexm=sexm+1
 						 if penis>18:edrinLove=edrinLove+1
 						 dom=dom+1
@@ -63,7 +63,7 @@ if karavanday<12 or karavanday>20:
 						 if penis<6:
 						 gem=gem-100
 						 horny=0
-						 if edrinSex=0:edrinSex=1&girl=girl+1
+						 if edrinSex=0:edrinSex=1&count['girl']=count['girl']+1
 						 sexm=sexm+1
 						 if penis>18:edrinLove=edrinLove+1
 						 '<center><img src="pic/EvedonTA/edrin3.jpg" ></center>'

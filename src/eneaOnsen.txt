@@ -5,7 +5,7 @@
 minut=minut+60
 sweat=-5
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 gs'stat'
 
 'Вы зашли в отдельный номер с парной вместе с Энеей. Она намылила мочалку и начала вам тереть спинку.'
@@ -83,7 +83,7 @@ $moneyenea={
 	 intel+=RAND(0,1)
 	 dom+=1
 	 gem-=tempshop
-	 if eneaSex=0:eneaSex=1&girl+=1
+	 if eneaSex=0: eneaSex=1 & count['girl'] += 1
 	 gt'sexsisteman','vibor'
 	 else
 	 'Убирайся отсюда!'

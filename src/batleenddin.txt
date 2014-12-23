@@ -14,7 +14,7 @@
  program=50
  healthV=vitalV*10
  mannaV=intelV*10+intelV*15
- wipoV=willV*10
+ WillPowerV=willV*10
  klonv=1
  armorDefV=600
  monster=29
@@ -48,7 +48,7 @@
  program=49
  healthV=vitalV*10
  mannaV=intelV*10+intelV*15
- wipoV=willV*10
+ WillPowerV=willV*10
  klonv=1
  armorDefV=600
  monster=29
@@ -82,7 +82,7 @@
  program=48
  healthV=vitalV*10
  mannaV=intelV*10+intelV*15
- wipoV=willV*10
+ WillPowerV=willV*10
  klonv=1
  armorDefV=600
  monster=29
@@ -116,7 +116,7 @@
  program=47
  healthV=vitalV*10
  mannaV=intelV*10+intelV*15
- wipoV=willV*10
+ WillPowerV=willV*10
  klonv=1
  armorDefV=600
  monster=29
@@ -150,7 +150,7 @@
  program=46
  healthV=vitalV*10
  mannaV=intelV*10+intelV*15
- wipoV=willV*10
+ WillPowerV=willV*10
  klonv=1
  armorDefV=600
  monster=29
@@ -185,7 +185,7 @@
  program=45
  healthV=vitalV*10
  mannaV=intelV*10+intelV*15
- wipoV=willV*10
+ WillPowerV=willV*10
  klonv=1
  armorDefV=600
  monster=29
@@ -220,7 +220,7 @@
  program=10
  healthV=vitalV*10
  mannaV=intelV*10
- wipoV=willV*10
+ WillPowerV=willV*10
  ShilDefv=80
  weaponv=1
  armorDefv=600
@@ -244,7 +244,7 @@ $progseraf={
 	 '<B><<$namev>> падает и улыбается вам. Внезапно ее тело начинает превращатся в стаю воронов которые разлетаются в разные стороны.</B>'
 	 vitalV=700
 	 healthV=vitalV*10
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 klonv=2
 	 defenceV=defenceV+7000
 	 defenceTV=defenceTV+7000
@@ -258,7 +258,7 @@ $progseraf={
 	 '<B><<$namev>> падает и показывает пальцем вам за спину. Ее тело начинает превращатся в стаю воронов которые разлетаются в разные стороны.</B>'
 	 vitalV=900
 	 healthV=vitalV*10
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 klonv=2
 	 defenceV=defenceV+7000
 	 defenceTV=defenceTV+7000
@@ -273,7 +273,7 @@ $progseraf={
 	 '<B><<$namev>> поднимает руки в стороны и ее тело начинает превращатся в стаю воронов которые разлетаются в разные стороны.</B>'
 	 vitalV=1500
 	 healthV=vitalV*10
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 klonv=2
 	 defenceV=defenceV+7000
 	 defenceTV=defenceTV+7000

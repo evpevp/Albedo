@@ -53,7 +53,7 @@ if Mpol=1:
 		 *clr
 		 minut=minut+5
 		 manna=manna+20
-		 wipo=wipo+20
+		 WillPower=WillPower+20
 		 gs'eda'
 		 'Вы сели за стол, любезно сервированный женой и вы приступили к трапезе.'
 		 gs'eat'
@@ -64,7 +64,7 @@ if Mpol=1:
 		 cla
 		 minut=minut+15
 		 sweat=-6
-		 wipo=wipo+5
+		 WillPower=WillPower+5
 		 manna=manna+20
 		 'Вы за пятнадцать минут вымылись в кадушке.'
 		 	 if anus >1 and anus<=30:anus=anus-1&'Вода со щелоком щиплет в попе, но кажется анус немного уменьшается.'

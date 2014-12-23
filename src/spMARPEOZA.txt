@@ -118,13 +118,13 @@ gs'stat'
          end
      end
      
-     if wipo>=100 and round>=8 and magika>=12:
+     if WillPower>=100 and round>=8 and magika>=12:
      
          if cooldownSpell<=0:
 			 act 'Молитва Марпеозе (100 воли 5 благословения)':
 			 cla
 			 manna+=RAND(1000,3000)
-			 wipo-=100
+			 WillPower-=100
 			 spMarpeozaBuff-=5
 			 '<font color=green>Вы воззвали к матери Марпеозе и она дала вам силы.</font>'
 			 cooldown=3

@@ -50,7 +50,7 @@ if akbalQW>0 and akbalQW<1000:
 			 skverna=skverna+5
 			  health=vital*10
 			 manna=intel*10+intel*magika
-			 wipo=will*10
+			 WillPower=will*10
 			 exp=exp+RAND(lvl/4,lvl/2)
 		     magikExp=magikExp+RAND(magika*2,magika*4)
 		     $namev='Рабыня'
@@ -98,7 +98,7 @@ if akbalQW=0:
 			 program=25
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*20
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 monster=17
 			 NORUN=1
 			 '<center><img src="pic/EvedonMonsters/akbal.jpg"></center>'

@@ -129,7 +129,7 @@ end
 act 'Гулять по поляне 15 мин':
 minut=minut+15
 manna+=20
-wipo+=20
+WillPower+=20
 dynamic $eventraikaro
 gt $CURLOC
 end

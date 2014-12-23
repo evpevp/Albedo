@@ -58,7 +58,7 @@ if kadkawater>0:
 		 kadkawater=0
 		 shelok=shelok-1
 		 sweat=-6
-		 wipo=wipo+5
+		 WillPower=WillPower+5
 		 manna=manna+20
 		 'Вы за полчаса вымылись в кадушке.'
 		 	 if anus >1 and anus<=30:anus=anus-1&'Вода со щелоком щиплет в попе, но кажется анус немного уменьшается.'

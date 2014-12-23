@@ -38,7 +38,7 @@ gs'time'
 	 
 	 
 	 act 'Переодеться':
-	 gt'lokerW'
+	 gt'lockerW'
 	 end
 
 

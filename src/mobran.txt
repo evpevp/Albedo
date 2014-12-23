@@ -36,7 +36,7 @@ if evrand>=80:
 			 program=28
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*5
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 mortalv=RAND(5,25)
 			 '<center><img src="pic/EvedonMonsters/bee.jpg"></center>'
 			 'Из кустов выползло насекомое похожее на муху, только величиной с теленка, оно потерло лапками и уставилось на вас своими фасетчатыми глазами. Следом выползло еще одно, и еще, вскоре вы насчитали <<mortalv>> насекомых, которые устремились к вам.'
@@ -59,7 +59,7 @@ if evrand>=80:
 			 program=27
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*5
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 BATpotionV=RAND(3,10)
 			 '<center><img src="pic/EvedonMonsters/tumanvedma.jpg"></center>'
 			 'Перед вами показалась симпатичная девушка. Она усмехнулась увидев вас.'
@@ -83,7 +83,7 @@ if evrand>=80:
 			 program=31
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*12
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 BATpotionV=5
 			     if skverna>0:
 				 'Из-за кустов вышел эльф, он выругался на эльфийском языке сильным и звонким голосом и сказал на человеческом: "Я тебя научу как шляться по эльфийским лесам, оскверненная тварь."'
@@ -114,7 +114,7 @@ if evrand>=80:
 			 program=24
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*magika
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 fintv=5
 			 !monster=12
 			 '<center><img src="pic/EvedonMonsters/polimorf.jpg"></center>'
@@ -173,7 +173,7 @@ if evrand>=80:
 		 program=24
 		 healthV=vitalV*10
 		 mannaV=intelV*10+intelV*magika
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 fintv=5
 		 !monster=12
 		 '<center><img src="pic/EvedonMonsters/polimorf.jpg"></center>'

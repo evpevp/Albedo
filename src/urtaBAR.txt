@@ -44,7 +44,7 @@ cla
 *clr
 alko=alko+10
 manna=manna+20
-wipo=wipo+20
+WillPower=WillPower+20
 set minut = minut + 15
 clr
 gs'stat'

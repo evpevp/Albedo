@@ -5,7 +5,7 @@ if minut >= 60:
 set hour = hour + 1
 set minut = minut - 60
 if DemonMorf<=0 and vampireMorf<=0:set golod = golod - 1
-if DemonMorf<=0 and vampireMorf<=0:set son = son - 1
+if DemonMorf<=0 and vampireMorf<=0:set freshness = freshness - 1
      if sweat>0:manna=manna-sweat
      if GraveDog>=100:
          if GraveDogPowerM>GraveDogPower:
@@ -21,7 +21,7 @@ if DemonMorf<=0 and vampireMorf<=0:set son = son - 1
      
      if narkota<10 and narkoman=1:
      manna=manna-50
-     wipo=wipo-25
+     WillPower=WillPower-25
      health=health-1
      if filosofkam=0:vidage=vidage+1
      '<B><font color=red>ВАМ КАЖЕТСЯ ЧТО У ВАС ЛОМАЮТСЯ КОСТИ. ВАМ ОЧЕНЬ БОЛЬНО И ХОЧЕТСЯ ОПЯТЬ НАРКОТЫ.</font></B>'
@@ -45,7 +45,7 @@ if DemonMorf<=0 and vampireMorf<=0:set son = son - 1
      end
      
      if lakt>0:horny=horny+3
-     if fertileAnal>0 and FertAnMark=1:fertileAnal=fertileAnal-1&horny=horny+(SUB+skverna)&pl'В вашей попе шевелится яйцо чудовища, возбуждая вас и ожидая времени когда оно вылупиться.'
+     if fertileAnal>0 and FertAnMark=1:fertileAnal=fertileAnal-1&horny=horny+(SUB+skverna)&pl'В вашей попе шевелится яйцо чудовища, возбуждая вас и ожидая времени когда оно вылупится.'
      if fertileAnal<=0 and FertAnMark=1:
      fertileAnal=0
      FertAnMark=0
@@ -54,7 +54,7 @@ if DemonMorf<=0 and vampireMorf<=0:set son = son - 1
      !'Вы застонали от возбуждения и из вашей задницы стало вылупляться отложенное там яйцо. Наконец маленькое чудовище вылезло из вас и сбежало.'
      end
      
-     if fertileVag>0 and FertVagMark=1:fertileVag=fertileVag-1&horny=horny+(SUB+skverna)&pl'В вашей матке шевелится яйцо чудовища возбуждая вас и ожидая времени когда оно вылупиться.'
+     if fertileVag>0 and FertVagMark=1:fertileVag=fertileVag-1&horny=horny+(SUB+skverna)&pl'В вашей матке шевелится яйцо чудовища возбуждая вас и ожидая времени когда оно вылупится.'
      if fertileVag<=0 and FertVagMark=1:
      fertileVag=0
      FertVagMark=0
@@ -99,7 +99,7 @@ if AltotronAmulet=1:vidageMag=1000
      intel=intel-1
          if filosofkam=0:vidage=vidage+5
          if intel<0:intel=0
-     '<B><font color=red>ВЫ ИЗЛЕЧИЛИСЬ ОТ ЗАВИСИМОСТИ НО КАЖЕТСЯ ЗА ЭТО ВЫ ЗАПЛАТИЛИ ПОТЕРЕЙ ИНТЕЛЕКТА.</font></B>'
+     '<B><font color=red>ВЫ ИЗЛЕЧИЛИСЬ ОТ ЗАВИСИМОСТИ НО КАЖЕТСЯ ЗА ЭТО ВЫ ЗАПЛАТИЛИ ПОТЕРЕЙ ИНТЕЛЛЕКТА.</font></B>'
      end
      if narkota>=20 and narkoman=0:narkoman=1
      if narkota>0:narkota=narkota-1
@@ -127,7 +127,9 @@ if AltotronAmulet=1:vidageMag=1000
          if leg>0:leg=leg-1
          if tit>0:tit=tit-1
      end
-     
+    if rost>185 and penis>0:rost=rost-1
+    if rost>175 and penis=0:rost=rost-1
+ 
      if vagina=1:
          if face<40:face=face+RAND(1,5)&'<B><font color=red>Страшно чешется лицо.</font></B>'
          if hand<40:hand=hand+RAND(1,5)&'<B><font color=red>Какой-то непонятный зуд в руках.</font></B>'
@@ -136,8 +138,6 @@ if AltotronAmulet=1:vidageMag=1000
          if thight<40:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
          if leg<40:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
          if tit<40:tit=tit+1&'<B><font color=red>Тупая боль в сосках.</font></B>'
-         if rost>185 and penis>0:rost=rost-1
-         if rost>175 and penis=0:rost=rost-1
      end
      
      if vagina=2:
@@ -148,8 +148,6 @@ if AltotronAmulet=1:vidageMag=1000
          if thight<50:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
          if leg<50:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
          if tit<60:tit=tit+1&'<B><font color=red>Тупая боль в сосках.</font></B>'
-         if rost>185 and penis>0:rost=rost-1
-         if rost>175 and penis=0:rost=rost-1
      end
      
      if vagina=3:
@@ -160,8 +158,6 @@ if AltotronAmulet=1:vidageMag=1000
          if thight<60:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
          if leg<60:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
          if tit<80:tit=tit+1&'<B><font color=red>Тупая боль в сосках.</font></B>'
-         if rost>185 and penis>0:rost=rost-1
-         if rost>175 and penis=0:rost=rost-1
      end
      
      if vagina=4:
@@ -172,8 +168,6 @@ if AltotronAmulet=1:vidageMag=1000
          if thight<70:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
          if leg<70:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
          if tit<100:tit=tit+1&'<B><font color=red>Тупая боль в сосках.</font></B>'
-         if rost>185 and penis>0:rost=rost-1
-         if rost>175 and penis=0:rost=rost-1
      end
      
      if vagina=5:
@@ -183,8 +177,6 @@ if AltotronAmulet=1:vidageMag=1000
          if ass<80:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
          if thight<80:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
          if leg<80:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
-         if rost>185 and penis>0:rost=rost-1
-         if rost>175 and penis=0:rost=rost-1
      end
      
      if vagina=6:
@@ -194,8 +186,6 @@ if AltotronAmulet=1:vidageMag=1000
          if ass<90:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
          if thight<90:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
          if leg<90:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
-         if rost>185 and penis>0:rost=rost-1
-         if rost>175 and penis=0:rost=rost-1
      end
      
      if vagina=7:
@@ -205,8 +195,6 @@ if AltotronAmulet=1:vidageMag=1000
          if ass<90:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
          if thight<90:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
          if leg<90:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
-         if rost>185 and penis>0:rost=rost-1
-         if rost>175 and penis=0:rost=rost-1
      end
      
      if vagina>=8:
@@ -216,8 +204,6 @@ if AltotronAmulet=1:vidageMag=1000
          if ass<100:ass=ass+RAND(1,5)&'<B><font color=red>Есть ощущение что как будто растет зад.</font></B>'
          if thight<100:thight=thight+RAND(1,5)&'<B><font color=red>Бедра ноют.</font></B>'
          if leg<100:leg=leg+RAND(1,5)&'<B><font color=red>Ломит ноги.</font></B>'
-         if rost>185 and penis>0:rost=rost-1
-         if rost>175 and penis=0:rost=rost-1
      end
      
      lobok=lobok+1
@@ -244,7 +230,7 @@ if AltotronAmulet=1:vidageMag=1000
      cerafQW=30
      if vidage>=16 and filosofkam=0::vidage=vidage-2
      rost=rost-4
-     '<B><font color=red>Между ног такой страшный зуд, что кажется там сейчас пламя полыхнет. Вы не выдерживаете зуда и засовываете руку в штаны. Нет! Ничего нет в штанах. Проверив еще раз вы нащупали какие-то складки у себя между ног, господи, да это же влагалище поняли вы! Я стал женщиной!</font></B>'
+     '<B><font color=red>Между ног такой страшный зуд, что кажется там сейчас пламя полыхнет. Вы не выдерживаете зуда и засовываете руку в штаны. Нет! Ничего нет в штанах. Проверив еще раз вы нащупали какие-то складки у себя между ног. Господи, да это же влагалище поняли вы! Я стал женщиной!</font></B>'
      end
      if cerafcurs=0 and penis<8 and vagina=0:
      penis=penis+1

@@ -8,7 +8,7 @@ $loc = $CURLOC
 set minut = minut + 5
 clr
 gs'stat'
-if albinasex=0:set albinasex=1&set girl = girl + 1
+if albinasex=0:set albinasex=1&set count['girl'] = count['girl'] + 1
 set sexm=sexm+1
 '<center><img src="pic\fam\albinasex.jpg" ></center>'
 '(Альбина) - Ну что, развлечемся?'

@@ -66,7 +66,7 @@ IF turn = 0:
   ACT 'Поставить 10 Руб':
    deal = 10
    manna=manna+1
-   wipo=wipo+1
+   WillPower=WillPower+1
    money = money - deal
    turn = 1
    gt'blackjack','1'
@@ -76,7 +76,7 @@ IF turn = 0:
   ACT 'Поставить 25 Руб':
    deal = 25
    manna=manna+2
-   wipo=wipo+2
+   WillPower=WillPower+2
    money = money - deal
    turn = 1
    gt'blackjack','1'
@@ -86,7 +86,7 @@ IF turn = 0:
   ACT 'Поставить 50 Руб':
    deal = 50
    manna=manna+5
-   wipo=wipo+5
+   WillPower=WillPower+5
    money = money - deal
    turn = 1
    gt'blackjack','1'
@@ -96,7 +96,7 @@ IF turn = 0:
   ACT 'Поставить 100 Руб':
    deal = 100
    manna=manna+10
-   wipo=wipo+10
+   WillPower=WillPower+10
    money = money - deal
    turn = 1
    gt'blackjack','1'
@@ -106,7 +106,7 @@ IF turn = 0:
   ACT 'Поставить 500 Руб':
    deal = 500
    manna=manna+50
-   wipo=wipo+50
+   WillPower=WillPower+50
    money = money - deal
    turn = 1
    gt'blackjack','1'
@@ -116,7 +116,7 @@ IF turn = 0:
   ACT 'Поставить 1000 Руб':
    deal = 1000
    manna=manna+100
-   wipo=wipo+100
+   WillPower=WillPower+100
    money = money - deal
    turn = 1
    gt'blackjack','1'

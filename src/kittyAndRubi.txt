@@ -17,7 +17,7 @@ cla
 *clr
 minut=minut+60
      if rubiSex=0:rubiSex=1&guy=guy+1
-     if kittySex=0:kittySex=1&girl=girl+1
+     if kittySex=0:kittySex=1&count['girl']=count['girl']+1
      
      if penis>0:
 	 aktman=aktman+1

@@ -162,7 +162,7 @@ act 'Выйти':gt'club','inside'
 			 cla
 			 *clr
 			 set minut = minut + 60
-			 wipo = wipo + 10
+			 WillPower = WillPower + 10
 			 manna=manna+10
 			 money=money-5000
 			 '<center><img src="pic\pic\clubvip.jpg" ></center>'
@@ -174,7 +174,7 @@ act 'Выйти':gt'club','inside'
 			         *clr
 			         money=money-5000
 			         minut = minut + 60
-					 wipo = wipo + 10
+					 WillPower = WillPower + 10
 					 manna=manna+10
 					 horny=horny+10
 					 picrand=RAND(0,6)
@@ -193,10 +193,10 @@ act 'Выйти':gt'club','inside'
 							 *clr
 							 money=money-5000
 							 minut = minut + 60
-							 wipo = wipo + 10
+							 WillPower = WillPower + 10
 							 manna=manna+10
 							 horny=horny+10
-							 girl=girl+2
+							 count['girl']=count['girl']+2
 							 sexm=sexm+1
 							 '<center><img src="pic\club\foreplay.gif" ></center>'
 							 'Вы приобняли двух блондинок и стали лапать их, пока они ласкали ваш член своими ручками.'
@@ -289,7 +289,7 @@ act 'Выйти':gt'club','inside'
 		 set minut = minut + 30
 		 set fat = fat + 1
 		 set manna = manna + 10
-		 set wipo = wipo + 10
+		 set WillPower = WillPower + 10
 		 set money = money - 300
 		 alko=alko+3
 		 '<center><img src="pic\pic\club6.jpg" ></center>'

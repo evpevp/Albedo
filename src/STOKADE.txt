@@ -1,5 +1,5 @@
 # STOKADE
-if wipo<0:wipo=0&sub+=1
+if WillPower<0:WillPower=0&sub+=1
 clr
 gs'stat'
 picrand=RAND(0,2)
@@ -10,7 +10,7 @@ if picrand=2:'<center><img src="pic/EvedonSC/stok2.jpg" ></center>'
 
 	 act 'Терпеть':
 	 cls
-	 wipo-=20
+	 WillPower-=20
 	 minut+=60
 	 gt $curloc
 	 end

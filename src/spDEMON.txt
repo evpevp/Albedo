@@ -105,7 +105,7 @@ if DMrab>0:
      DMrab-=1
 	 health=vital*10
 	 manna=intel*10+intel*magika
-	 wipo=will*10
+	 WillPower=will*10
 	 xgt'fight','1'
 	 exit
      end

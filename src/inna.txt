@@ -111,7 +111,7 @@ if innaQW > 30 and innaQW < 100 and innaday ! day:
 							 InnaOrgasmQW=rand(10,21)
 							 sexm=sexm+1
 							 manna=manna+25
-                             wipo=wipo+25
+                             WillPower=WillPower+25
 							 horny=0
 							 innaday = day
 							 InnaLastFuckDay=day
@@ -134,7 +134,7 @@ if innaQW > 30 and innaQW < 100 and innaday ! day:
 							 'Не в силах больше терпеть вы извергаете своё семя в киску дочки'
 							 sexm=sexm+1
 							 manna=manna+25
-                             wipo=wipo+25
+                             WillPower=WillPower+25
 							 innavag=1
 							 set minut = minut + 30
 							 horny=0
@@ -157,7 +157,7 @@ if innaQW > 30 and innaQW < 100 and innaday ! day:
 							 'Не в силах больше терпеть вы извергаете своё семя в киску дочки'
 							 sexm=sexm+1
 							 manna=manna+25
-                             wipo=wipo+25
+                             WillPower=WillPower+25
 							 innavag=1
 							 set minut = minut + 30
 							 horny=0
@@ -262,7 +262,7 @@ if innaQW = 100 and innaday ! day:
 			 horny=0
 			 set sexm=sexm+1
 			 manna=manna+25
-             wipo=wipo+25
+             WillPower=WillPower+25
 			 set minut = minut + 15
 			 InnaLastFuckDay=day
 			 '<center><img src="pic\fam\Bdota.jpg" ></center>'
@@ -386,7 +386,7 @@ if innaQW=200 and (innaMinDay=day or hour>8):
 											 set sweat= +2
 											 InnaAS=1
 											 manna=manna+25
-                                             wipo=wipo+25
+                                             WillPower=WillPower+25
 											 horny=0
 											 CheckInnaShower=1
 											 InnaLastFuckDay=day

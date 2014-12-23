@@ -25,7 +25,7 @@ LCOLOR = rgb(106,90,205)
 		 kredit=kredit-10
 		 health=vital*10
 		 manna=intel*10+intel*magika
-		 wipo=will*10
+		 WillPower=will*10
 		 'Лекарь осмотрел вас и наложил заклинание, которое вдохнуло в вас силы.'
 		 act 'Уйти':gt $CURLOC
 		 end

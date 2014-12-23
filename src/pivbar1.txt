@@ -51,7 +51,7 @@ act 'Отойти от барной стойки.':gt'pivbar1','start'
 			 minut=minut+15
 			 golod=golod+3
 			 manna=manna+10
-			 wipo=wipo+10
+			 WillPower=WillPower+10
 			 alko=alko+3
 			 horny=horny+10
 			 'Вы не спеша потягиваете прохладное пиво из кружки, минут за пятнадцать вы опустошили кружку пива.'
@@ -90,7 +90,7 @@ gs'stat'
          minut=minut+15
          golod=golod+3
          manna=manna+10
-		 wipo=wipo+10
+		 WillPower=WillPower+10
 		 alko=alko+3
 		 horny=horny+10
          'Вы не спеша потягиваете прохладное пиво из кружки, минут за пятнадцать вы опустошили кружку пива.'

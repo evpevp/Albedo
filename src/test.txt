@@ -15,12 +15,12 @@ gs'level'
 'Воля <<will>>'
 'Здоровье <<health>>'
 'Мана <<manna>>'
-'Сила воли <<wipo>>'
+'Сила воли <<WillPower>>'
 
 act 'Лечится':
 health=vital*10
 manna=intel*10
-wipo=will*10
+WillPower=will*10
 gt'test'
 end
 

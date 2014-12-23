@@ -10,7 +10,7 @@ set $name = 'Игорь'
 set $surname = 'Харитонов'
 
 set fat = 100
-set son = 18
+set freshness = 18
 set golod = 3
 tarelka=1
 fairy=5
@@ -32,7 +32,7 @@ intel=10
 will=10
 health=vital*10
 manna=intel*10
-wipo=will*10
+WillPower=will*10
 stamina=health
 chin=will
 !set chin = 500

@@ -14,7 +14,7 @@ if GraveDog=1:'Около дивана вьется милый щеночек.'
 	 act 'Валяться на диване 1 час':
 	 cla
 	 manna=manna+10
-	 wipo=wipo+10
+	 WillPower=WillPower+10
 	 minut=minut+60
 	 'Вы праздно валяетесь на диване и бездельничаете.'
 	 act 'Потянуться':gt'divanW'
@@ -69,7 +69,7 @@ if GraveDog=1:'Около дивана вьется милый щеночек.'
 		 *clr
          '<center><img src="pic/EvedonOd/book4.jpg" ></center>'
 		 minut=minut+60
-		 son-=1
+		 freshness-=1
 		 horny=0
 		 willbook-=1
 		 will+=1

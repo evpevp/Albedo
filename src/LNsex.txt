@@ -89,9 +89,9 @@ if $ARGS[0]='start':
 	 *clr
 	 if LakeNimfaSex!1:
 		 LakeNimfaSex=1
-		 set girl = girl + 1
+		 count['girl'] += 1
 	 end
-	 check=0
+	 
 	 picrand=rand(0,2)
 	 if picrand=0:'<center><img src="pic\forestevent\LakeNimf\start1.jpg" ></center>'
 	 if picrand=1:'<center><img src="pic\forestevent\LakeNimf\start2.jpg" ></center>'
@@ -146,7 +146,7 @@ if $ARGS[0]='End':
 	 set health = vital*10
 	 set minut = minut + 60
 	 manna=manna+50
-     wipo=wipo+rand(25,50)
+     WillPower=WillPower+rand(25,50)
      sexm=sexm+1
 	 nark=0
 	 horny=0
@@ -157,8 +157,8 @@ if $ARGS[0]='End':
 end
 
 if $ARGS[0]='blowjob':
-	 check=0
-	 if NLcock<100 and check=0:
+	 
+	 if NLcock<100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -176,7 +176,7 @@ if $ARGS[0]='blowjob':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 if NLcock<=65:NLcock=NLcock+5
 		 if NLcock>65:NLcock=NLcock+10
 		 if NLpussy<=65:NLpussy=NLpussy-2
@@ -216,12 +216,12 @@ if $ARGS[0]='blowjob':
 			 end
 		 end
 	 end
-	 if NLcock>=100 and check=0:
+	 if NLcock>=100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
-		 check=1
+		 
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
 		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
@@ -244,8 +244,8 @@ if $ARGS[0]='blowjob':
 end
 
 if $ARGS[0]='cunni':
-	 check=0
-	 if NLpussy<100 and check=0:
+	 
+	 if NLpussy<100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -263,7 +263,7 @@ if $ARGS[0]='cunni':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 if NLcock<=65:NLcock=NLcock-2
 		 if NLcock>65:NLcock=NLcock-5
 		 if NLpussy<=70: NLpussy=NLpussy+10
@@ -302,12 +302,12 @@ if $ARGS[0]='cunni':
 			 end
 		 end
 	 end
-	 if NLpussy>=100 and LOmassage=0 and check=0:
+	 if NLpussy>=100 and LOmassage=0:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
 		 *clr
-		 check=1
+		 
 		 CLR
 		 if (NLcock<20): PL 'Вы спокойны. Ваш член какой-то вялый.'
 		 if (NLcock>=20 and NLcock<40): PL 'Вы возбуждены. У вас хороший стояк.'
@@ -344,7 +344,7 @@ if $ARGS[0]='cunni':
 			 end
 		 end
 	 end
-	  if NLpussy>=100 and LOmassage=1 and check=0:
+	  if NLpussy>=100 and LOmassage=1:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -362,7 +362,7 @@ if $ARGS[0]='cunni':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 if NLcock<=65:NLcock=NLcock-2
 		 if NLcock>65:NLcock=NLcock-5
 		 NLpussy=NLpussy+2
@@ -402,8 +402,8 @@ if $ARGS[0]='cunni':
 end
 
 if $ARGS[0]='ReverseCowGirl':
-	 check=0
-	 if NLcock<100 and NLpussy<100 and check=0:
+	 
+	 if NLcock<100 and NLpussy<100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -421,7 +421,7 @@ if $ARGS[0]='ReverseCowGirl':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
 		 if NLpussy>=20: 'Усевшись на ваш член, спиной к вам, - нимфа начинает ритмично "скакать". С каждой минутой всё быстрее и быстрее.'
 		 if NLpussy<20: 'Усадив нимфу на свой член, вы подталкиваете её то вверх - то вниз, ваши проникновения доставляют ей неприятные ощущения.'
@@ -460,7 +460,7 @@ if $ARGS[0]='ReverseCowGirl':
 			 end
 		 end
 	 end
-	 if NLcock<100 and NLpussy>=100 and LOmassage=0 and check=0:
+	 if NLcock<100 and NLpussy>=100 and LOmassage=0:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -478,7 +478,7 @@ if $ARGS[0]='ReverseCowGirl':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 LOmassage=1
 		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
 		 'Нимфа кричит и скачет как сумасшедшая на вашем члене. Волна оргазма "накрыла её с головй"!'
@@ -502,7 +502,7 @@ if $ARGS[0]='ReverseCowGirl':
 			 end
 		 end
 	 end
-	 if NLcock<100 and LOmassage=1 and check=0:
+	 if NLcock<100 and LOmassage=1:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -520,7 +520,7 @@ if $ARGS[0]='ReverseCowGirl':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirl.jpg" ></center>'
 		 'Нимфа неторопливо прыгает на вашем члене и тихо стонет.'
 		 NLpussy=NLpussy+5
@@ -556,7 +556,7 @@ if $ARGS[0]='ReverseCowGirl':
 			 end
 		 end
 	 end
-	 if NLcock>=100 and NLpussy>=100 and LOmassage=0 and check=0:
+	 if NLcock>=100 and NLpussy>=100 and LOmassage=0:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -574,7 +574,7 @@ if $ARGS[0]='ReverseCowGirl':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 LOmassage=1
 		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
 		 'Вы достигаете обоюдного оргазма и отправляете поток своего семени в вагину партнерши. Спустя мгновение вы любуетесь смесью "вагинального сока" и спермы вытекающей из киски нимфочки.'
@@ -582,7 +582,7 @@ if $ARGS[0]='ReverseCowGirl':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>=100 and LOmassage=1 and check=0:
+	 if NLcock>=100 and LOmassage=1:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -600,14 +600,14 @@ if $ARGS[0]='ReverseCowGirl':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
 		 'Вы достигаете оргазма и отправляете поток своего семени в вагину партнерши.'
 		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>=100 and NLpussy<100 and check=0:
+	 if NLcock>=100 and NLpussy<100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -625,7 +625,7 @@ if $ARGS[0]='ReverseCowGirl':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 '<center><img src="pic\forestevent\LakeNimf\LNReverseCowGirlORG.jpg" ></center>'
 		 'Не в состоянии больше противиться оргазму, вы кончаете прямо в киску нимфы!'
 		 act '...':
@@ -635,8 +635,8 @@ if $ARGS[0]='ReverseCowGirl':
 end
 
 if $ARGS[0]='69':
-	 check=0
-	 if NLcock<100 and NLpussy<100 and check=0:
+	 
+	 if NLcock<100 and NLpussy<100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -654,7 +654,7 @@ if $ARGS[0]='69':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 picrand=Rand(0,3)
 		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LN691.jpg" ></center>'
 		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LN692.jpg" ></center>'
@@ -698,7 +698,7 @@ if $ARGS[0]='69':
 			 end
 		 end
 	 end
-	 if NLcock<100 and NLpussy>=100 and LOmassage=0 and check=0:
+	 if NLcock<100 and NLpussy>=100 and LOmassage=0:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -716,7 +716,7 @@ if $ARGS[0]='69':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 LOmassage=1
 		 picrand=Rand(0,3)
 		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LN691.jpg" ></center>'
@@ -759,7 +759,7 @@ if $ARGS[0]='69':
 			 end
 		 end
 	 end
-	 if NLcock<100 and LOmassage=1 and check=0:
+	 if NLcock<100 and LOmassage=1:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -777,7 +777,7 @@ if $ARGS[0]='69':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 picrand=Rand(0,3)
 		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LN691.jpg" ></center>'
 		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LN692.jpg" ></center>'
@@ -818,7 +818,7 @@ if $ARGS[0]='69':
 			 end
 		 end
 	 end
-	 if NLcock>=100 and NLpussy>=100 and LOmassage=0 and check=0:
+	 if NLcock>=100 and NLpussy>=100 and LOmassage=0:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -836,7 +836,7 @@ if $ARGS[0]='69':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 LOmassage=1
 		 '<center><img src="pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
 		 'Вы достигаете обоюдного оргазма и отправляете поток своего семени на попку партнерши.'
@@ -844,7 +844,7 @@ if $ARGS[0]='69':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>=100 and LOmassage=1 and check=0:
+	 if NLcock>=100 and LOmassage=1:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -862,14 +862,14 @@ if $ARGS[0]='69':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 '<center><img src="pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
 		 'Вы достигаете оргазма и отправляете поток своего семени на попку партнерши.'
 		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>=100 and NLpussy<100 and check=0:
+	 if NLcock>=100 and NLpussy<100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -887,7 +887,7 @@ if $ARGS[0]='69':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 '<center><img src="pic\forestevent\LakeNimf\LN69ORG.jpg" ></center>'
 		 'Не в состоянии больше противиться оргазму, вы кончаете на попку нимфы!'
 		 act '...':
@@ -897,8 +897,8 @@ if $ARGS[0]='69':
 end
 
 if $ARGS[0]='Missionary':
-	 check=0
-	 if NLcock<100 and NLpussy<100 and check=0:
+	 
+	 if NLcock<100 and NLpussy<100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -916,7 +916,7 @@ if $ARGS[0]='Missionary':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 picrand=Rand(0,3)
 		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
 		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LNMissionary2.jpg" ></center>'
@@ -960,7 +960,7 @@ if $ARGS[0]='Missionary':
 			 end
 		 end
 	 end
-	 if NLcock<100 and NLpussy>=100 and LOmassage=0 and check=0:
+	 if NLcock<100 and NLpussy>=100 and LOmassage=0:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -978,7 +978,7 @@ if $ARGS[0]='Missionary':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 LOmassage=1
 		 picrand=Rand(0,3)
 		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
@@ -1020,7 +1020,7 @@ if $ARGS[0]='Missionary':
 			 end
 		 end
 	 end
-	 if NLcock<100 and LOmassage=1 and check=0:
+	 if NLcock<100 and LOmassage=1:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -1038,7 +1038,7 @@ if $ARGS[0]='Missionary':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 picrand=Rand(0,3)
 		 if picrand=0: '<center><img src="pic\forestevent\LakeNimf\LNMissionary1.jpg" ></center>'
 		 if picrand=1: '<center><img src="pic\forestevent\LakeNimf\LNMissionary2.jpg" ></center>'
@@ -1079,7 +1079,7 @@ if $ARGS[0]='Missionary':
 			 end
 		 end
 	 end
-	 if NLcock>=100 and NLpussy>=100 and LOmassage=0 and check=0:
+	 if NLcock>=100 and NLpussy>=100 and LOmassage=0:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -1097,7 +1097,7 @@ if $ARGS[0]='Missionary':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 LOmassage=1
 		 '<center><img src="pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
 		 'Вы достигаете обоюдного оргазма и отправляете поток своего семени в вагину партнерши. Спустя мгновение вы любуетесь смесью "вагинального сока" и спермы вытекающей из киски нимфочки.'
@@ -1105,7 +1105,7 @@ if $ARGS[0]='Missionary':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>=100 and LOmassage=1 and check=0:
+	 if NLcock>=100 and LOmassage=1:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -1123,14 +1123,14 @@ if $ARGS[0]='Missionary':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 '<center><img src="pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
 		 'Вы достигаете оргазма и отправляете поток своего семени в вагину партнерши.'
 		 act '...':
 			 gt 'LNsex','End'
 		 end
 	 end
-	 if NLcock>=100 and NLpussy<100 and check=0:
+	 if NLcock>=100 and NLpussy<100:
 		 if NLcock<0:NLcock=0
 		 if NLpussy<0:NLpussy=0
 		 cla
@@ -1148,7 +1148,7 @@ if $ARGS[0]='Missionary':
 		 if (NLpussy>=65 and NLpussy<85): PL 'Нимфа близка к оргазму. Её стоны становятся всё чаще и чаще.'
 		 if (NLpussy>=85 and NLpussy<100): PL 'Нимфа на грани оргазма. Каждая клеточка её киски ритмично пульсирует, а на теле местами появляются красные пятна.'
 		 if (NLpussy>=100): PL 'Нимфа во власти оргазма!'
-		 check=1
+		 
 		 '<center><img src="pic\forestevent\LakeNimf\LNMissionaryORG.jpg" ></center>'
 		 'Не в состоянии больше противиться оргазму, вы кончаете прямо в глубь киски нимфы!'
 		 act '...':

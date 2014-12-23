@@ -196,7 +196,7 @@ act 'Идти в свой кабинет':gt 'smu','smuDirektor'
 									 '<center><img src="pic\fam\sek5.jpg" ></center>'
 									 'Вы легли на пол и Люда запрыгнув на ваш член начала бойко скакать на нем, через несколько минут вы не выдержали и кончили.'
 									 ludasex = 1
-									 girl=girl+1
+									 count['girl']=count['girl']+1
 									 sexm=sexm+1
 									 horny=0
 									 smuzpfull=smuzpfull+100000

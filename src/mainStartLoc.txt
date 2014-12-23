@@ -22,12 +22,16 @@ bcolor=rgb(250,238,221)
 LCOLOR = rgb(106,90,205)
 
 gs 'Dynamics'
+gs '$nimfs.txt'
+true = -1
+false = no true
+nimfs.known = false
 
 '<center>http://albedo.fludilka.su/ и DeGross представляет</center>'
 *nl
-'<hr align="left" color="red" size="3" width="1000">'
+'<hr color="red" size="3">'
 '<center><h2>Альбедо</h2></center>'
-'<hr align="left" color="red" size="3" width="1000">'
+'<hr color="red" size="3">'
 *nl
 '<center>Версия 0.8</center>'
 '<b>Основной сюжет завершен.</b>'

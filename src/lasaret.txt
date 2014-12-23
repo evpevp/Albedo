@@ -9,7 +9,7 @@ $metkaFight = $ARGS[0]
 $locFight = $CURLOC
 health=vital*10
 manna=intel*10
-wipo=will*10
+WillPower=will*10
 cla
 *clr
 clr

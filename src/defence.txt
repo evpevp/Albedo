@@ -22,7 +22,7 @@
          '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damagev>></font>'
          damagev=0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<=0 or PWillPower<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end
@@ -80,7 +80,7 @@ dynamic $rascheturona
 '<font color=red>Вам нанесли <B><<damagev>></B> едениц урона</font>'
 damagev=0
      if shokdamV>0 and damageV>0:
-     wipo=wipo-shokdamV
+     WillPower=WillPower-shokdamV
      '<font color=red>Электроудар нанес вашей воле <B><<shokdamV>></B> едениц урона</font>'
      shokdamV=0
      end
@@ -109,7 +109,7 @@ if defence>0:
 		 '<font color=red>ВАША ЗАЩИТА УНИЧТОЖЕНА</font>'
 		 '<font color=red>Вам нанесли <B><<damagev>></B> едениц урона</font>'
 			 if shokdamV>0 and damageV>0:
-			 wipo=wipo-shokdamV
+			 WillPower=WillPower-shokdamV
 			 '<font color=red>Электроудар нанес вашей воле <B><<shokdamV>></B> едениц урона</font>'
 			 shokdamV=0
 			 end

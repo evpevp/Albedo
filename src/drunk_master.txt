@@ -23,7 +23,7 @@ if drunkMasterW=1 and alko!100 and drunkMaster!day:
 	 minut=minut+15
 	 alko=100
 	 manna=manna+20
-	 wipo=wipo+20
+	 WillPower=WillPower+20
 	 horny=100
 	 ''
 	 act 'далее': GOTO $CURLOC

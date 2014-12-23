@@ -174,7 +174,7 @@ gs'time'
 								 'Продолжая играть роль Хозяина вы сказали ...'
 									 act '- Проглоти всю сперму и вылижи унитаз ...':
 									 set horny = 0
-									 set girl = girl + 1
+									 set count['girl'] = count['girl'] + 1
 									 set minut = minut + 30
 									 sexm=sexm+1
 									 manna=manna+25
@@ -311,7 +311,7 @@ gs'time'
 								 'Вы: - Ну ка сучка проведи у себя между ног рукой и покажи мне ...'
 									 act '....':
 									 set horny = 0
-									 set girl = girl + 1
+									 set count['girl'] = count['girl'] + 1
 									 set minut = minut + 30
 									 sexm=sexm+1
 									 manna=manna+25

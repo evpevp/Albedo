@@ -27,7 +27,7 @@ if gem>=10 and slot!11:
      gem=gem-10
      sweat=-3
      manna=manna+50
-     wipo=wipo+50
+     WillPower=WillPower+50
      fat=fat-5
      '<center><img src="pic/Evedon/onsen2.jpg" ></center>'
      'Вы залезли в бассейн с горячей водой и нежились там пока не кончилось оплаченное время.'
@@ -43,7 +43,7 @@ if gem>=10 and slot!11:
 		     *clr
 		     horny=0
 		     sexm=sexm+1
-		     girl=girl+1
+		     count['girl'] += 1
 		     gem=gem-50
 		     onsensexy=RAND(0,2)
 		     if onsensexy=0:'<center><img src="pic/Evedonsex/onsenSex.jpg" ></center>'

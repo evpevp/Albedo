@@ -74,7 +74,7 @@ end
 'Порт Мондюваля находится на 0 паралели, 25 меридиан'
 
 if ribabarkas>0:'На баркасе <<ribabarkas>> кг рыбы. <<$barkasperegruz>>'
-'На лавке можно <a href="exec:GT ''bed''">спать</a>, под ней <a href="exec:GT ''lokerW''">сундук для вещей</a>.'
+'На лавке можно <a href="exec:GT ''bed''">спать</a>, под ней <a href="exec:GT ''lockerW''">сундук для вещей</a>.'
 !!!дома
 ''
 

@@ -19,16 +19,16 @@ crime=0
 end
 
 if pogonarand>0:
-'Ваша воля <<wipo>>'
+'Ваша воля <<WillPower>>'
 !beg=beg+1
 
-     if wipo>=10:
+     if WillPower>=10:
      
 		 act 'Стараться оторваться от преследователей по прямой за счет скорости (10 воли).':
 		 cla
 		 *clr
 		 minut=minut+15
-		 wipo=wipo-10
+		 WillPower=WillPower-10
 		 beg=beg+1
 		 porand=RAND(0,speed+beg-(fat/10))
 		     if porand>=60:pogonarand=pogonarand-1
@@ -40,7 +40,7 @@ if pogonarand>0:
 		 cla
 		 *clr
 		 minut=minut+15
-		 wipo=wipo-10
+		 WillPower=WillPower-10
 		 akrobat=akrobat+1
 		 porand=RAND(0,agil+akrobat-(fat/10))
 		     if porand>=60:pogonarand=pogonarand-1

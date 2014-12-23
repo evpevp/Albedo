@@ -43,7 +43,7 @@ willV=10
 program=14
 healthV=vitalV*20
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 

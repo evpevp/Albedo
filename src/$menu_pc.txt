@@ -1,9 +1,9 @@
 # $menu_pc
 if $selobj='Персонаж':
 clr
-pl'<center>Статистики</center>'
-if girl>0 and girlRealWorld<=0:pl'У вас было <<girl>> девушек'
-if girl>0 and girlRealWorld>0:pl'В другом мире у вас было <<girl-girlRealWorld>> девушек, всего <<girl>> девушек'
+pl'<center>Статистика</center>'
+if count['girl']>0 and girlRealWorld<=0:pl'У вас было <<count[''girl'']>> девушек'
+if count['girl']>0 and girlRealWorld>0:pl'В другом мире у вас было <<count[''girl'']-girlRealWorld>> девушек, всего <<count[''girl'']>> девушек'
 if guy > 0:pl'У вас было <<guy>> парней.'
 if futa > 0:pl'У вас было <<futa>> футанари.'
 if monst > 0:pl'Вас трахало <<monst>> чудовищ.'

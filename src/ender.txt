@@ -65,7 +65,7 @@ if VoronKlon>0:
 VoronKlon-=1
 horny=0
  health=vital*10
- wipo=will*10
+ WillPower=will*10
 '<b>Ваша магия вороньего клона сработала и ваше тело разлетелось воронами, вы же сами восстали как будто с вами ничего и не было.</b>'
 act 'Восстать':gt'fight','0'
 exit

@@ -33,7 +33,7 @@ LCOLOR = rgb(106,90,205)
          exp=exp+RAND(20,30)
          kredit=kredit+5
          lektion=lektion+1
-         son=son-1
+         freshness=freshness-1
          golod=golod-1
          'Вы сели за парту и стали слушать учителя.'
          gs'lekteme'
@@ -48,7 +48,7 @@ LCOLOR = rgb(106,90,205)
          cla
          hour=hour+1
          minut=0
-         son=son-1
+         freshness=freshness-1
          golod=golod-1
          ilrand=RAND(0,1)
              if penis>0 or ilrand=0:

@@ -149,7 +149,7 @@ tentakNumber=0
 
 if health>vital*10:health=vital*10
 if manna>intel*10+intel*magika:manna=intel*10+intel*magika
-if wipo>will*10:wipo=will*10
+if WillPower>will*10:WillPower=will*10
 
 akbalRealFight=0
 AkbalNoManna=0
@@ -217,7 +217,7 @@ pagil=0
 pvital=0
 pwill=0
 pmanna=0
-pwipo=0
+pWillPower=0
 prizivProgram=0
 
 Phealthv=0
@@ -229,7 +229,7 @@ pagilv=0
 pvitalv=0
 pwillv=0
 pmannav=0
-pwipov=0
+pWillPowerv=0
 prizivProgramv=0
 
 elvenmeditation=0

@@ -9,7 +9,7 @@ if $selobj='Меню боевки':
 		DMrab-=1
 		health=vital*10
 		manna=intel*10+intel*magika
-		wipo=will*10
+		WillPower=will*10
 		skverna=skverna+30
 		gs'stat'
 	}
@@ -18,7 +18,7 @@ if $selobj='Меню боевки':
 			skverna+=1
 			akbalpowerday=day
 			health=vital*10
-			wipo=will*10
+			WillPower=will*10
 			manna=intel*10+intel*magika
 			gs'stat'
 		end

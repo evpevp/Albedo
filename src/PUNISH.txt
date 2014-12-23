@@ -14,21 +14,21 @@ if punrand=0:
 end
 
 if punrand=1:
-wipo=wipo-50
+WillPower=WillPower-50
 manna=manna-50
 horny=horny+50
 '<center><img src="pic/EvedonSC/fist.jpg" ></center>'
 'Вапула кладет вас к себе на колени и после небольшой порки ладонью начинает засовывать вам в анус руку.'
 gs'analslut'
 anus=anus+5
-if vapulasex=0:vapulasex=1&girl+=1
+if vapulasex=0:vapulasex=1&count['girl']+=1
      act '.....':
 	 GT 'SLAVECELL'
 	 end
 end
 
 if punrand=2:
-wipo=wipo-50
+WillPower=WillPower-50
 manna=manna-50
 'Вапула в гневе усадила вас на деревянного коня с острой кромкой вместо сидения и закрепив цепями ушла.'
      act '.....':
@@ -38,7 +38,7 @@ manna=manna-50
 end
 
 if punrand=3:
-wipo=wipo-50
+WillPower=WillPower-50
 manna=manna-50
 'Вапула в гневе связала вас и засунув голову в деревянную колодку затолкала вам в анус крюк, который привязан к потолку и не дает опуститься вам на корточки.'
      act '.....':

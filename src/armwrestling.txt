@@ -8,7 +8,7 @@ clr
 gs'stat'
 strenARM=stren
 vitalARM=vital
-staminaARM=wipo
+staminaARM=WillPower
 'Вы записались в участники соревнований.'
 'У вас <<armwin>> побед и <<armloss>> поражений'
 if armRazrad=0:$armRazrad='У вас нет разряда по армрестлингу'&'У вас нет разряда по армрестлингу'
@@ -30,13 +30,13 @@ if armRazrad=6:$armRazrad='Вы мастер спорта международн
 		 newFight=1
 		 strenV=RAND(100,200)
 		 vitalV=RAND(100,200)
-		 wipoV=RAND(500,1000)
+		 WillPowerV=RAND(500,1000)
 		 strenV1=RAND(150,250)
 		 vitalV1=RAND(150,250)
-		 wipoV1=RAND(500,1000)
+		 WillPowerV1=RAND(500,1000)
 		 strenV2=RAND(200,300)
 		 vitalV2=RAND(200,300)
-		 wipoV2=RAND(500,1000)
+		 WillPowerV2=RAND(500,1000)
 		 gt'armwrestling','0'
 		 end
      end
@@ -48,13 +48,13 @@ if armRazrad=6:$armRazrad='Вы мастер спорта международн
 		 newFight=1
 		 strenV=RAND(250,300)
 		 vitalV=RAND(250,300)
-		 wipoV=RAND(500,1000)
+		 WillPowerV=RAND(500,1000)
 		 strenV1=RAND(300,350)
 		 vitalV1=RAND(300,350)
-		 wipoV1=RAND(500,1000)
+		 WillPowerV1=RAND(500,1000)
 		 strenV2=RAND(350,400)
 		 vitalV2=RAND(350,400)
-		 wipoV2=RAND(500,1000)
+		 WillPowerV2=RAND(500,1000)
 		 gt'armwrestling','0'
 		 end
      end
@@ -66,13 +66,13 @@ if armRazrad=6:$armRazrad='Вы мастер спорта международн
 		 newFight=1
 		 strenV=RAND(400,450)
 		 vitalV=RAND(400,450)
-		 wipoV=RAND(500,1000)
+		 WillPowerV=RAND(500,1000)
 		 strenV1=RAND(450,500)
 		 vitalV1=RAND(450,500)
-		 wipoV1=RAND(500,1000)
+		 WillPowerV1=RAND(500,1000)
 		 strenV2=RAND(500,550)
 		 vitalV2=RAND(500,550)
-		 wipoV2=RAND(500,1000)
+		 WillPowerV2=RAND(500,1000)
 		 gt'armwrestling','0'
 		 end
      end
@@ -84,13 +84,13 @@ if armRazrad=6:$armRazrad='Вы мастер спорта международн
 		 newFight=1
 		 strenV=RAND(550,600)
 		 vitalV=RAND(550,600)
-		 wipoV=RAND(500,1000)
+		 WillPowerV=RAND(500,1000)
 		 strenV1=RAND(600,650)
 		 vitalV1=RAND(600,650)
-		 wipoV1=RAND(500,1000)
+		 WillPowerV1=RAND(500,1000)
 		 strenV2=RAND(650,700)
 		 vitalV2=RAND(650,700)
-		 wipoV2=RAND(500,1000)
+		 WillPowerV2=RAND(500,1000)
 		 gt'armwrestling','0'
 		 end
      end
@@ -102,13 +102,13 @@ if armRazrad=6:$armRazrad='Вы мастер спорта международн
 		 newFight=1
 		 strenV=RAND(700,750)
 		 vitalV=RAND(700,750)
-		 wipoV=RAND(500,1000)
+		 WillPowerV=RAND(500,1000)
 		 strenV1=RAND(750,800)
 		 vitalV1=RAND(750,800)
-		 wipoV1=RAND(500,1000)
+		 WillPowerV1=RAND(500,1000)
 		 strenV2=RAND(800,900)
 		 vitalV2=RAND(800,900)
-		 wipoV2=RAND(500,1000)
+		 WillPowerV2=RAND(500,1000)
 		 gt'armwrestling','0'
 		 end
      end
@@ -120,13 +120,13 @@ if armRazrad=6:$armRazrad='Вы мастер спорта международн
 		 newFight=1
 		 strenV=RAND(900,1000)
 		 vitalV=RAND(900,1000)
-		 wipoV=RAND(500,1000)
+		 WillPowerV=RAND(500,1000)
 		 strenV1=RAND(1000,1100)
 		 vitalV1=RAND(1000,1100)
-		 wipoV1=RAND(500,1000)
+		 WillPowerV1=RAND(500,1000)
 		 strenV2=RAND(1100,1200)
 		 vitalV2=RAND(1100,1200)
-		 wipoV2=RAND(500,1000)
+		 WillPowerV2=RAND(500,1000)
 		 gt'armwrestling','0'
 		 end
      end
@@ -138,13 +138,13 @@ if armRazrad=6:$armRazrad='Вы мастер спорта международн
 		 newFight=1
 		 strenV=RAND(1200,1400)
 		 vitalV=RAND(1200,1400)
-		 wipoV=RAND(500,1000)
+		 WillPowerV=RAND(500,1000)
 		 strenV1=RAND(1400,1600)
 		 vitalV1=RAND(1400,1600)
-		 wipoV1=RAND(500,1000)
+		 WillPowerV1=RAND(500,1000)
 		 strenV2=RAND(1600,2000)
 		 vitalV2=RAND(1600,2000)
-		 wipoV2=RAND(500,1000)
+		 WillPowerV2=RAND(500,1000)
 		 gt'armwrestling','0'
 		 end
      end
@@ -163,17 +163,17 @@ armWres=1
          if armEnemy=3:
          strenEn=strenV
          vitalEn=vitalV
-         staminaEn=wipoV
+         staminaEn=WillPowerV
          end
          if armEnemy=2:
          strenEn=strenV1
          vitalEn=vitalV1
-         staminaEn=wipoV1
+         staminaEn=WillPowerV1
          end
          if armEnemy=1:
          strenEn=strenV2
          vitalEn=vitalV2
-         staminaEn=wipoV2
+         staminaEn=WillPowerV2
          end
      
      gt'armwrestling','1'

@@ -73,7 +73,7 @@ if kfday ! day:
 		 program=2
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 'Младший ученик Чань вышел в центр зала, готовясь к бою с вами.'
 		 act 'Дратся':gt'before'
 		 end
@@ -98,7 +98,7 @@ if kfday ! day:
 		 program=3
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 'Ученик Линь вышел в центр зала, готовясь к бою с вами.'
 		 act 'Дратся':gt'before'
 		 end
@@ -123,7 +123,7 @@ if kfday ! day:
 		 program=4
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 'Ученик Ли вышел в центр зала, готовясь к бою с вами.'
 		 act 'Дратся':gt'before'
 		 end
@@ -148,7 +148,7 @@ if kfday ! day:
 		 program=4
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 'Ученик Ли вышел в центр зала, готовясь к бою с вами.'
 		 act 'Дратся':gt'before'
 		 end
@@ -173,7 +173,7 @@ if kfday ! day:
 		 program=4
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 'Мастер Чоу вышел в центр зала, готовясь к бою с вами.'
 		 act 'Дратся':gt'before'
 		 end

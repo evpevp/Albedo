@@ -5,10 +5,10 @@ gs'stat'
 if spsyriken>0:pl'<<spsyriken>> шт. отравленных метательных кинжалов.'
 
 
-if tai>=100 and wipo>10:
+if tai>=100 and WillPower>10:
      act 'Нанести болезненный удар (10 воли)':
      '<B><font color=green>Вы нанесли БОЛЕЗНЕННЫЙ УДАР</font></B>'
-	 wipo=wipo-10
+	 WillPower=WillPower-10
 	 stren=stren+40
 	 stunMark=1
 	 tipatk=1
@@ -18,10 +18,10 @@ if tai>=100 and wipo>10:
 	 end
 end
 
-if syriken>=100 and wipo>50 and spsyriken>0:
+if syriken>=100 and WillPower>50 and spsyriken>0:
      act 'Броcить кинжал в противника (50 воли)':
      spsyriken=spsyriken-1
-     wipo=wipo-50
+     WillPower=WillPower-50
      '<font color=green>Вы достаете кинжал и швыряете его в противника</font>'
      damage=100
      gs'defenceV'
@@ -29,11 +29,11 @@ if syriken>=100 and wipo>50 and spsyriken>0:
      end
 end
 
-if takasuge>=100 and wipo>50:
+if takasuge>=100 and WillPower>50:
 	 act 'Полная концентрация (50 воли)':
 	 manna=manna+100
 	 health=health+100
-	 wipo=wipo-50
+	 WillPower=WillPower-50
 	 '<B><font color=green>Вы концентрируетесь и восстанавливаете ману и здоровье</font></B>'
 	 xgt'fight','1'
 	 end

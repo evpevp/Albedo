@@ -10,7 +10,7 @@ gem=0
      SUB=SUB+1
      minut=minut+15
          if vagina>0:
-		 girl=girl+1
+		 count['girl'] += 1
 		 sexm=sexm+1
 		 horny=100
 		 clr
@@ -23,7 +23,7 @@ gem=0
          end
          
          if vagina=0:
-		 girl=girl+1
+		 count['girl'] += 1
 		 sexm=sexm+1
 		 horny=100
 		 clr

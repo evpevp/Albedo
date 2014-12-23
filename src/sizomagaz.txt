@@ -28,7 +28,7 @@
 	 if money>= 500 and петух=0:
 		 act 'Выпить водки 500руб.':
          money=money-500
-         wipo=wipo+20
+         WillPower=WillPower+20
          manna=manna+20
          alko=alko+5
 		 GOTO $locM, $metkaM

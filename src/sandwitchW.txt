@@ -19,7 +19,7 @@ willv=10
 program=15
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if wirand=1:
@@ -34,7 +34,7 @@ willv=10
 program=15
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if wirand=2:
@@ -49,7 +49,7 @@ willv=30
 program=15
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 --- sandwitchW ---------------------------------
 

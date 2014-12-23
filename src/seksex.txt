@@ -47,7 +47,7 @@ $loc = $CURLOC
 set minut = minut + 5
 horny=0
 manna=manna+25
-wipo=wipo+25
+WillPower=WillPower+25
 clr
 gs'stat'
 '<center><img src="pic\fam\seksex3.jpg" ></center>'
@@ -61,7 +61,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 set minut = minut + 5
 horny=0
-wipo=wipo+50
+WillPower=WillPower+50
 clr
 gs'stat'
 '<center><img src="pic\fam\seksex4.jpg" ></center>'

@@ -54,7 +54,7 @@ if gem>=3000:
 	 minut=minut+1440
 	 gs'stat'
 	 golod=15
-	 son=20
+	 freshness=20
 	 horny=0
 	 cla
 	 *clr
@@ -180,7 +180,7 @@ if darkmanQW=10 and kervolQW=0:
 										 program=34
 										 healthV=vitalV*10
 										 mannaV=intelV*10+intelV*15
-										 wipoV=willV*10
+										 WillPowerV=willV*10
 										 BATpotionV=10
 										 klonv=10
 										 armorDefV=500

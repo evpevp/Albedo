@@ -24,7 +24,7 @@
          '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damageWv>></font>'
          damageWv=0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<=0 or PWillPower<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end
@@ -93,7 +93,7 @@ dynamic $rascheturonaW
      
      if soundMagV>0 and damagewv>0:
      manna=manna-soundMagV
-     wipo=wipo-soundMagV
+     WillPower=WillPower-soundMagV
      soundMagV=0
      '<font color=red><<$tipuronaW>> ударил по вашей мане и воле</font>'
      end
@@ -128,7 +128,7 @@ if defencew>0 and damagewv>0:
 			 end
 			 if soundMagV>0 and damagewv>0:
 			 manna=manna-soundMagV
-			 wipo=wipo-soundMagV
+			 WillPower=WillPower-soundMagV
 			 soundMagV=0
 			 '<font color=red><<$tipuronaW>> ударил по вашей мане и воле</font>'
 			 end

@@ -43,10 +43,10 @@ if hour>=6 and hour<= 22:
 		 rubiQW=rubiQW+1
 		 minut=minut+15
 		 gem=gem-8
-		 wipo=wipo+100
+		 WillPower=WillPower+100
 		 golod=golod+1
 		 fat=fat+2
-		 son=son+3
+		 freshness=freshness+3
 		 'Вы попросили кофе, Руби кивнула и тут же принесла вам стакан чашечку кофе. Вы с удовольствием выпили кофе и почувствовали бодрость в теле и свежесть разума.'
 		 act 'Отойти от стойки':gt $CURLOC
 		 end

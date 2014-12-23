@@ -21,7 +21,7 @@ if $ARGS[0]='finish':
 	set benz = benz - 4
 	set teh = teh - RAND(2,6)
 	set manna = manna + 20
-	wipo=wipo+10
+	WillPower=WillPower+10
 	'Вы вписались в поворот <<race_count>> раз'
 	'Вы не справились с управлением <<race_miss>> раз'
 	act 'Вернуться в город':

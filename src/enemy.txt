@@ -214,9 +214,9 @@ end
 
 if $ARGS[0]='6':
 !боксер
-     if wipov > 10 and stilev = 0:
+     if WillPowerv > 10 and stilev = 0:
      '<B><font color=red><<$namev>> встает в БОКСЕРСКУЮ СТОЙКУ</font></B>'
-     wipov=wipov-10
+     WillPowerv=WillPowerv-10
      stilevMark=2
      stilev=3
      !strenV=strenV+40
@@ -227,9 +227,9 @@ if $ARGS[0]='6':
      gs'popadv'
      xgt'fight','2'
      else
-         if stilevMark=2 and wipov>50 and stun=0 and fintv>0 and fint = 0:
+         if stilevMark=2 and WillPowerv>50 and stun=0 and fintv>0 and fint = 0:
          '<B><font color=red><<$namev>> атакует СИЛОВЫМ УДАРОМ</font></B>'
-         wipov=wipov-50
+         WillPowerv=WillPowerv-50
          strenV=strenV+40
          stunMarkV=1
          tipatkv=1
@@ -238,9 +238,9 @@ if $ARGS[0]='6':
 		 xgt'fight','2'
          end
          
-         if stilevMark=2 and wipov>50 and stun>0 or stilevMark=2 and wipov>50 and fint>0:
+         if stilevMark=2 and WillPowerv>50 and stun>0 or stilevMark=2 and WillPowerv>50 and fint>0:
          '<B><font color=red><<$namev>> атакует СЕРИЕЙ УДАРОВ</font></B>'
-         wipov=wipov-50
+         WillPowerv=WillPowerv-50
          !strenV=strenV+40
          !stunMarkV=1
          tipatkv=1
@@ -255,7 +255,7 @@ if $ARGS[0]='6':
 		 xgt'fight','2'
          end
          
-         if stilevMark=2 and wipov>50 and fintv<=0:
+         if stilevMark=2 and WillPowerv>50 and fintv<=0:
          '<B><font color=red><<$namev>> применяет ФИНТЫ</font></B>'
          fintv=fintv+3
 		 tipatkv=1
@@ -264,7 +264,7 @@ if $ARGS[0]='6':
 		 xgt'fight','2'
          end
          
-         if stilevMark=2 or wipov<50:
+         if stilevMark=2 or WillPowerv<50:
          tipatkv=1
 		 gs'udarv','0'
 		 gs'popadv'
@@ -488,9 +488,9 @@ if windGranadV>0:
      end
 end
 
-     if ShilDefv>0 and stilev>0 or ShilDefv<=0 or wipov<10:
+     if ShilDefv>0 and stilev>0 or ShilDefv<=0 or WillPowerv<10:
      randatk=RAND(0,1)
-     if weaponv=2 or wipov<50:randatk=0
+     if weaponv=2 or WillPowerv<50:randatk=0
          if randatk=0:
 		 tipatkv=1
 		 conterBatV=2
@@ -505,7 +505,7 @@ end
 		 end
 		 
 		 if randatk=1:
-		 wipov=wipov-50
+		 WillPowerv=WillPowerv-50
 		 tipatkv=1
 		 conterBatV=2
 		 countBatRoundV=round
@@ -524,8 +524,8 @@ end
 		 end
      end
      
-	 if ShilDefv>0 and stilev=0 and wipov>=10:
-	 wipov=wipov-10
+	 if ShilDefv>0 and stilev=0 and WillPowerv>=10:
+	 WillPowerv=WillPowerv-10
 	 stileVMark=6
 	 stilev=3
 	 bronikv=armorDefv+ShilDefv
@@ -657,8 +657,8 @@ if $ARGS[0]='15':
      exit
      end
      
-     if mannav<50 and wipov>50:
-     wipov=wipov-50
+     if mannav<50 and WillPowerv>50:
+     WillPowerv=WillPowerv-50
      mannav=mannav+300
      '<B><font color=red><<$namev>> медитирует и восстанавливает часть маны.</font></B>'
      xgt'fight','2'
@@ -957,11 +957,11 @@ sharinganV=1
 	 exit
 	 end
 
-     if mannav<50 and wipov>=100:
+     if mannav<50 and WillPowerv>=100:
      '<B><font color=red><<$namev>> оглушительно смеется "Ты будешь наказан за это". Вы видите как восстанавливается ее энергия и здоровье</font></B>'
      mannav=mannav+5000
      healthv=healthv+1000
-     wipov=wipov-100
+     WillPowerv=WillPowerv-100
      xgt'fight','2'
      exit
      end
@@ -1120,7 +1120,7 @@ sharinganV=1
 							 act 'Осмотреться':
 							 cla
 							 defenceH=0
-							 damageHV=wipo
+							 damageHV=WillPower
 							 pohot=25
 							 mannav=mannav-50
 							 $tipuronaH='Иллюзии насланные Вапулой'
@@ -1170,7 +1170,7 @@ sharinganV=1
 	 end
 	 
      
-     if wipov<100:
+     if WillPowerv<100:
      '<B><font color=red><<$namev>> падает на колени. "Умоляю, сжалься, не убивай!"</font></B>'
      healthv=0
      xgt'fight','2'
@@ -1202,12 +1202,12 @@ if $ARGS[0]='23':
 !зеркальный маг
      if round=1:klonv=3
      
-     if mannaV<50 and wipov<50:
+     if mannaV<50 and WillPowerv<50:
          if BATpotionV>0:
          BATpotionV=BATpotionV-1
          '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 		 mannav=mannav+500
-		 wipov=wipov+500
+		 WillPowerv=WillPowerv+500
 		 healthv=vitalv*10
          xgt'fight','2'
          exit
@@ -1223,10 +1223,10 @@ if $ARGS[0]='23':
          end
      end
      
-     if mannaV<100 and wipov>=50:
+     if mannaV<100 and WillPowerv>=50:
      '<B><font color=red><<$namev>> бормочет заклинание и вы чувствуете как его магическая сила востанавливается.</font></B>'
       mannav=mannav+500
-	 wipov=wipov-50
+	 WillPowerv=WillPowerv-50
 	 xgt'fight','2'
 	 exit
      end
@@ -1552,7 +1552,7 @@ if AkbalKlon>0:AkbalKlon=AkbalKlon-1
      end
      
      '<B><font color=red><<$namev>> Ты силен маленький смертный, но это еще не конец.</font></B>'
-     wipov=wipow+5000
+     WillPowerv=WillPowerw+5000
      mannav=mannav+5000
      healthv=healthv+5000
 	 tipatkv=1
@@ -1658,7 +1658,7 @@ if $ARGS[0]='27':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -1760,7 +1760,7 @@ if $ARGS[0]='29':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -1836,7 +1836,7 @@ if $ARGS[0]='30':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -1905,7 +1905,7 @@ if $ARGS[0]='31':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -1981,7 +1981,7 @@ if $ARGS[0]='32':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -2037,7 +2037,7 @@ if $ARGS[0]='33':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -2115,7 +2115,7 @@ if $ARGS[0]='34':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -2212,7 +2212,7 @@ if $ARGS[0]='35':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -2300,7 +2300,7 @@ if $ARGS[0]='36':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -2404,7 +2404,7 @@ if $ARGS[0]='37':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+500
-	 wipov=wipov+500
+	 WillPowerv=WillPowerv+500
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -3104,7 +3104,7 @@ if $ARGS[0]='42':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+1000
-	 wipov=wipov+1000
+	 WillPowerv=WillPowerv+1000
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -3156,7 +3156,7 @@ if $ARGS[0]='44':
 !вампир
 defencev=10000
 sharinganV=1
-	 if wipo>0:
+	 if WillPower>0:
 	 '<B><font color=red><<$namev>> пристально смотрит на вас, вы чувствуете шепот в своей голове.</font></B>'
 	 damageHV=RAND(500,1000)
 	 $tipuronaH='Вампирский шопот'
@@ -3165,7 +3165,7 @@ sharinganV=1
 	 exit
 	 end
 	 
-	 if wipo=0:
+	 if WillPower=0:
 	 '<B><font color=red><<$namev>> шепчет вам "Не сопротивляйся, подойди ко мне.".</font></B>'
 	 if defence>0:defence=0&'<B><font color=red>Вы снимаете физ защиту.</font></B>'
 	 if defenceT>0:defenceT=0&'<B><font color=red>Вы снимаете температурную защиту.</font></B>'
@@ -3318,7 +3318,7 @@ if $ARGS[0]='45':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+1000
-	 wipov=wipov+1000
+	 WillPowerv=WillPowerv+1000
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -3414,7 +3414,7 @@ if $ARGS[0]='46':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+1000
-	 wipov=wipov+1000
+	 WillPowerv=WillPowerv+1000
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -3538,7 +3538,7 @@ if $ARGS[0]='47':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+1000
-	 wipov=wipov+1000
+	 WillPowerv=WillPowerv+1000
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -3623,7 +3623,7 @@ if $ARGS[0]='48':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+1000
-	 wipov=wipov+1000
+	 WillPowerv=WillPowerv+1000
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -3681,7 +3681,7 @@ if $ARGS[0]='49':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+1000
-	 wipov=wipov+1000
+	 WillPowerv=WillPowerv+1000
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -3746,7 +3746,7 @@ if $ARGS[0]='50':
 	 BATpotionV=BATpotionV-1
 	 '<B><font color=red><<$namev>> открывает бутылку и пьет из нее</font></B>'
 	 mannav=mannav+1000
-	 wipov=wipov+1000
+	 WillPowerv=WillPowerv+1000
 	 healthv=vitalv*10
 	 xgt'fight','2'
 	 exit
@@ -3867,7 +3867,7 @@ mannav-=RAND(1000,5000)
          NeedSolundorTimes+=5
          solundorStun=0
          mannaV+=RAND(400000,500000)
-         wipoV=willv*10
+         WillPowerV=willv*10
          damageHV=RAND(1000,2000)
 	     $tipuronaH='Гнев Солюндора'
 	     gs'defenceH'
@@ -4006,7 +4006,7 @@ if $ARGS[0]='54':
 		 intelv=1000
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
          '<B><font color=red>Джуго зарычал "Смерть!" его тело покрылось черными узорами которые полностью покрыли кожу. Джуго стал изменяться и превратился в демона.</font></B>'
          end
          
@@ -4016,7 +4016,7 @@ if $ARGS[0]='54':
 		 intelv=500
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
          '<B><font color=red>По телу Джуго побежали огненные полосы становящиеся черными. Джуго утробно зарычал.</font></B>'
          end
      end

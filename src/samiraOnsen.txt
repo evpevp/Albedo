@@ -5,7 +5,7 @@
 minut=minut+60
 sweat=-5
 manna+=500
-wipo+=500
+WillPower+=500
 gs'stat'
 
 'Вы зашли в отдельный номер с парной вместе с Самирой. Она намылила мочалку и начала вам тереть спинку.'
@@ -18,7 +18,7 @@ act 'Уйти':gt'onsenW'
 	 $namev='Самира'
 	 dom+=1
 	 gem-=tempshop
-	 if samiraSex=0:samiraSex=1&girl+=1
+	 if samiraSex=0: samiraSex = 1 & count['girl'] += 1
 	 gt'sexsisteman','vibor'
 	 end
 --- samiraOnsen ---------------------------------

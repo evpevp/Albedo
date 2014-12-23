@@ -211,7 +211,7 @@ if $ARGS[0]='porka':
 					 'Вы: Впредь никаких пьянок!'
 					 'Инна: (потирая свой зад) Да-да-да...Я ПОНЯЛА...только не надо меня больше пороть...'
 					 manna=manna+25
-                     wipo=wipo+25
+                     WillPower=WillPower+25
 					 horny=0
 					 InnaLastFuckDay=day
 					 act 'Одеться и уйти': gt 'koridor1'
@@ -249,7 +249,7 @@ if $ARGS[0]='sleep':
 		 innaMinDay=day
 		 horny=0
 		 manna=manna+25
-         wipo=wipo+25
+         WillPower=WillPower+25
          InnaLastFuckDay=day
 	 end
 end
@@ -310,7 +310,7 @@ if $ARGS[0]='innaclub':
 									 'Наконец вы достигаете оргазма и кончаете в рот Инны. На удивление Инна не старается вытащить изо рта ваш член и покорно принимает сперму в свой рот.'
 									 set sexm=sexm+1
 								     manna=manna+25
-                                     wipo=wipo+25
+                                     WillPower=WillPower+25
                                      horny=0
                                      InnaLastFuckDay=day
 									 act 'Одеться':
@@ -345,7 +345,7 @@ if $ARGS[0]='innaclub':
 								 set minut=minut+50
 								 set sexm=sexm+1
 								 manna=manna+25
-                                 wipo=wipo+25
+                                 WillPower=WillPower+25
                                  horny=0
 								 DayInnaClubMeet=day
 								 InnaLastFuckDay=day
@@ -378,7 +378,7 @@ if $ARGS[0]='innaclub':
 									 horny=0
 									 set sexm=sexm+1
 									 manna=manna+25
-                                     wipo=wipo+25
+                                     WillPower=WillPower+25
 									 DayInnaClubMeet=day
 									 InnaLastFuckDay=day
 									 act 'Одеться и незаметно покинуть клуб':gt'down'
@@ -416,7 +416,7 @@ if $ARGS[0]='FullSexStart':
 	 Ass1=0
 	 horny=0
 	 InnaOrgasmMessage=0
-	 wipo=wipo+rand(25,50)
+	 WillPower=WillPower+rand(25,50)
 	 manna=manna+rand(25,50)
 	 set hour=hour+rand(1,2)
 	 act 'Потанцуй для меня':
@@ -4187,7 +4187,7 @@ if $ARGS[0]='innaoffice':
 						 'После этих слов Инна уходит.'
 						 InnaLastFuckDay=day
 						 set minut=minut+25
-						 wipo=wipo+25
+						 WillPower=WillPower+25
 						 manna=manna+25
 						 horny=0
 						 sexm=sexm+1
@@ -4328,7 +4328,7 @@ if $ARGS[0]='innaoffice':
 											 if InnaOrgasmMessage!1: 'Спасибо за внимание! Было приятно, но жаль что я так и не кончила...надеюсь в следующий раз все будет лучше!'
 											 'Инна уходит.'
 											 set minut=minut+55
-											 wipo=wipo+50
+											 WillPower=WillPower+50
 											 manna=manna+25
 											 horny=0
 											 sexm=sexm+1
@@ -4353,7 +4353,7 @@ if $ARGS[0]='innaoffice':
 											 if InnaOrgasmMessage!1: 'Спасибо за внимание! Было приятно, но жаль что я так и не кончила...надеюсь в следующий раз все будет лучше!'
 											 'Инна уходит.'
 											 set minut=minut+55
-											 wipo=wipo+50
+											 WillPower=WillPower+50
 											 manna=manna+25
 											 horny=0
 											 sexm=sexm+1

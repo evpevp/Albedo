@@ -113,7 +113,7 @@ LCOLOR = rgb(0,0,0)
 	 program=52
 	 healthV=vitalV*10
 	 mannaV=intelV*10+intelV*10
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 NORUN=1
 	 monster=31
 	 'Демон не обращая внимания на людей ударами кулаков разносит дома в клочья.'
@@ -149,7 +149,7 @@ if DemonMorf>=10:
 	 program=34
 	 healthV=vitalV*10
 	 mannaV=intelV*10+intelV*18
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 BATpotionV=10
 	 mortalv=4
 	 NORUN=1

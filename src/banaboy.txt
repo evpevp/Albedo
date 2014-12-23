@@ -6,7 +6,7 @@ banaboyMark=banaboyMark+1
 if health<=10:
 'Ну че, допрыгался? Сейчас мы тебя петушнем.'
  health=health/2
- wipo=wipo/2
+ WillPower=WillPower/2
  manna=0
  петух=петух+1
  sweat=sweat+1
@@ -32,7 +32,7 @@ if health>10:
 	 program=0
 	 healthV=vitalV*10
 	 mannaV=intelV*10
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 gt'before'
 	 exit
 	 end
@@ -49,7 +49,7 @@ if health>10:
 	 program=0
 	 healthV=vitalV*10
 	 mannaV=intelV*10
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 gt'before'
 	 exit
 	 end
@@ -66,7 +66,7 @@ if health>10:
 	 program=1
 	 healthV=vitalV*10
 	 mannaV=intelV*10
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 gt'before'
 	 exit
 	 end

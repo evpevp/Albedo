@@ -1,0 +1,22 @@
+# locker
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaP = $ARGS[0]
+$locP = $CURLOC
+mag = 0
+clr
+gs'stat'
+$LockerWindow_txt =''
+
+$LockerWindow_txt += '<br><table><tr>'
+if kostum = 1: $LockerWindow_txt += '<td> <center><a href = "exec: gt ''МОДЕЖДА'',''1''"><img height=200 src="pic\manOd\kostum.jpg"</img></a> <br> <font size=3>Деловой костюм.</font><font size=3><br>Прочность: </font><font size=3 color="red"><<kostumE>></font> </center></td>'
+if manjeans = 1: $LockerWindow_txt += '<td> <center><a href = "exec: gt ''МОДЕЖДА'', ''2''"><img height=200 src="pic\manOd\manjeans.jpg"</img></a> <br> <font size=3>Джинсы с рубашкой.<font size=3><br>Прочность: </font><font size=3 color="red"><<manjeansE>></font> </center></td>'
+if sport = 1: $LockerWindow_txt += '<td> <center><a href = "exec: gt ''МОДЕЖДА'', ''3''"><img height=200 src="pic\manOd\sport.jpg"</img></a> <br> <font size=3>Спортивный костюм.</font><font size=3><br>Прочность: </font><font size=3 color="red"><<sportE>></font> </center></td>'
+$LockerWindow_txt += '</tr>'
+$LockerWindow_txt += '</table>'
+*nl $LockerWindow_txt
+
+act 'Закрыть шкаф': gt $prevHLoc
+!$locBed, $metkaBed
+--- locker ---------------------------------
+

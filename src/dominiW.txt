@@ -13,7 +13,7 @@ set minut = minut + 5
      cla
      *clr
      minut = minut + 15
-     if dominiSex=0:dominiSex=1&girl=girl+1
+     if dominiSex=0: dominiSex = 1 & count['girl'] += 1
      sexm=sexm+1
      domcum=domcum+1
      horny=0
@@ -38,7 +38,7 @@ set minut = minut + 5
      cla
      *clr
      minut = minut + 15
-     if dominiSex=0:dominiSex=1&girl=girl+1
+     if dominiSex=0: dominiSex=1 & count['girl'] += 1
      lesb=lesb+1
      domcum=domcum+cum
      horny=0

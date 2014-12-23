@@ -18,7 +18,7 @@ willv=10
 program=0
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if tentrand=1:
@@ -33,7 +33,7 @@ willv=10
 program=0
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if tentrand=2:
@@ -48,7 +48,7 @@ willv=10
 program=0
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if tentrand=3:
@@ -63,7 +63,7 @@ willv=10
 program=0
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 --- gruzchikW ---------------------------------
 

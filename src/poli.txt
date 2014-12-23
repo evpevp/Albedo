@@ -31,12 +31,12 @@ LCOLOR = rgb(106,90,205)
 			 end
 		 end
 		 
-		 if wipo < will*10 and money >= 1000:
+		 if WillPower < will*10 and money >= 1000:
 			 act 'Прием у психотерапевта 1 тыр':
 			 cla
 			 set money = money - 1000
 			 set minut = minut + 60
-			 wipo=will*10
+			 WillPower=will*10
 			 set manna = intel*10
 			 'Вы полежали на кушетке у психотерапевта и рассказали ему о своих невзгодах и вам сразу же стало гораздо легче на душе.'
 			 act 'ВЫЙТИ':gt'poli','start'

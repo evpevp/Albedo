@@ -1,7 +1,7 @@
 # tuman
 health=vital*10
 manna=intel*10+intel*magika
-wipo=will*10
+WillPower=will*10
 slot=0
 kostum = 1
 manjeans = 1
@@ -12,7 +12,7 @@ slot=11
 roba=2
 winRealWorld=Win
 lossRealWorld=Loss
-girlRealWorld=girl
+girlRealWorld=count['girl']
 sexmRealWorld=sexm
 jerkRealWorld=jerk
 clr

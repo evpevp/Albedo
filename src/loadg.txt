@@ -1,5 +1,7 @@
 # loadg
+gs '$nimfs.txt'
 gs 'Dynamics'
+
 
 --- loadg ---------------------------------
 

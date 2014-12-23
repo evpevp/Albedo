@@ -8,7 +8,7 @@ charand=RAND(0,2)
      
      if cumslut>=10:
      health=health+10
-     wipo=wipo+30
+     WillPower=WillPower+30
      manna=manna+30
      'Сперма, это так вкусно!'
      end
@@ -18,7 +18,7 @@ if cumface>0:
 face=face+RAND(1,5)
      if cumslut>=10:
      horny=horny+(cumslut/2)
-     wipo=wipo+30
+     WillPower=WillPower+30
      manna=manna+30
      'Сперма на лице, это так возбуждающе!'
      end
@@ -47,7 +47,7 @@ charand=RAND(0,2)
      
      if analslut>=10:
      health=health+10
-     wipo=wipo+30
+     WillPower=WillPower+30
      manna=manna+30
      'О да, мне так нравится тепленькая сперма в моей попке!'
      end

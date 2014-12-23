@@ -98,7 +98,7 @@ if innaday=day and innaQW>=200 and CheckInnaShower=1:
 													 '<center><img src="pic\fam\InnaAfterShCream.jpg" ></center>'
 													 'Лишь после того, как волны оргазма накрывшие Инну стихли - вы позволили себе кончить в её лоно и полюбоваться своим деянием.'
 													 manna=manna+25
-                                                     wipo=wipo+25
+                                                     WillPower=WillPower+25
 											         horny=0
 											         sexm=sexm+1
 											         InnaLastFuckDay=day
@@ -163,7 +163,7 @@ if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
 					 set minut = minut + 20
 					 sexm=sexm+1
 					 manna=manna+25
-                     wipo=wipo+25
+                     WillPower=WillPower+25
                      InnaLastFuckDay=day
 					 horny=0
 					 act 'Привести себя в порядок и выйти из ванной':GOTO $locM, $metkaM
@@ -184,7 +184,7 @@ if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
 						 set minut = minut + 25
 						 sexm=sexm+1
 						 manna=manna+25
-                         wipo=wipo+25
+                         WillPower=WillPower+25
                          InnaLastFuckDay=day
 						 horny=0
 						 GOTO $locM, $metkaM
@@ -198,7 +198,7 @@ if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
 				 set minut = minut + 25	
 				 set sexm=sexm+1
 				 manna=manna+25
-                 wipo=wipo+25
+                 WillPower=WillPower+25
                  InnaLastFuckDay=day
 				 horny=0
 				 act 'Привести себя в порядок и выйти из ванной':GOTO $locM, $metkaM
@@ -221,7 +221,7 @@ if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
 						 set minut = minut + 30
 						 sexm=sexm+1
 						 manna=manna+25
-                         wipo=wipo+25
+                         WillPower=WillPower+25
                          InnaLastFuckDay=day
 						 horny=0
 						 act 'Привести себя в порядок и выйти из ванной':GOTO $locM, $metkaM

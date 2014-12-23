@@ -180,7 +180,7 @@ act 'Выйти из кабинки':gt'sexshop','podval'
 					 '<center><img src="pic\picV\ghaktS.jpg" ></center>'
 					 set horny = 0
 					 money=money-300
-					 set girl = girl + 1
+					 set count['girl'] = count['girl'] + 1
 					 set minut = minut + 5
 					 sexm=sexm+1
 					 manna=manna+25
@@ -200,7 +200,7 @@ act 'Выйти из кабинки':gt'sexshop','podval'
 					 '<center><img src="pic\picV\ghaktS.jpg" ></center>'
 					 set horny = 0
 					 money=money-300
-					 set girl = girl + 1
+					 set count['girl'] = count['girl'] + 1
 					 set minut = minut + 5
 					 sexm=sexm+1
 					 manna=manna+25

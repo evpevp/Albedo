@@ -14,56 +14,50 @@ if strageRang=5:$stragaZvanie='капитан'
 if strageRang=6:$stragaZvanie='майор'
 if strageRang=7:$stragaZvanie='полковник'
 
-if dvoranRang=0 and strageRang>=4:
-dvoranRang=1
-end
-
+if dvoranRang=0 and strageRang>=4: dvoranRang=1
 
 if zodayEffect>0:
-horny=100
-son=20
-golod=20
+	horny=100
+	freshness=20
+	golod=20
 end
 
 if skverna<0:skverna=0
 if vidage>=60:horny=0
 
-if GraveDog>0:
-if GraveDogPowerM>lvl*1000:GraveDogPowerM=lvl*1000
-end
-
-if ordenRang>0 and GraveDog>0:GraveDog=0&GraveDogPowerM=0&GraveDogPower=0
-if marpeozaQW=100 and GraveDog>0:GraveDog=0&GraveDogPowerM=0&GraveDogPower=0
+if GraveDog>0 and GraveDogPowerM>lvl*1000: GraveDogPowerM=lvl*1000
+if ordenRang>0 and GraveDog>0: GraveDog=0 & GraveDogPowerM=0 & GraveDogPower=0
+if marpeozaQW=100 and GraveDog>0: GraveDog=0 & GraveDogPowerM=0 & GraveDogPower=0
 
 if DemonWish>0 and DemonWishday+12>=daystart and V_Roziske=0:
-V_Roziske=1
-DemonWishday=daystart
+	V_Roziske=1
+	DemonWishday=daystart
 end
 
 if vampireMorf>=1:
-if GraveDog>0:GraveDog=0&GraveDogPowerM=0&GraveDogPower=0
-     if vampireMorf=vampirePower*10 and INFIGHT=0:health=vital*10&wipo=will*10&manna=intel*10+intel*magika
-     if vampireMorf<vampireStat:vampireStat+=1&stren+=10&speed+=10&vital+=10&agil+=10
-sweat=-5
-golod=15
-son=20
+	if GraveDog>0:	GraveDog=0 & GraveDogPowerM=0 & GraveDogPower=0
+     if vampireMorf=vampirePower*10 and INFIGHT=0: health=vital*10 & WillPower=will*10 & manna=intel*10+intel*magika
+     if vampireMorf<vampireStat: vampireStat+=1 & stren+=10 & speed+=10 & vital+=10 & agil+=10
+	sweat=-5
+	golod=15
+	freshness=20
 end
 
 if DemonMorf>=1 and NowSleep=0:
-if GraveDog>0:GraveDog=0&GraveDogPowerM=0&GraveDogPower=0
-sweat=-5
-golod=15
-son=20
-if vagina=0:vagina=1
-if DemonMorf<10:penis=0
-if DemonMorf>=10:penis=25
-if tit<100:tit=100
-if face<100:face=100
-if hand<100:hand=100
-if brist<100:brist=100
-if ass<100:ass=100
-if thight<100:thight=100
-if leg<100:leg=100
+	if GraveDog>0: GraveDog=0 & GraveDogPowerM=0 & GraveDogPower=0
+	sweat=-5
+	golod=15
+	freshness=20
+	if vagina=0:vagina=1
+	if DemonMorf<10:penis=0
+	if DemonMorf>=10:penis=25
+	if tit<100:tit=100
+	if face<100:face=100
+	if hand<100:hand=100
+	if brist<100:brist=100
+	if ass<100:ass=100
+	if thight<100:thight=100
+	if leg<100:leg=100
 end
 
 if salo=0:salo=fat
@@ -78,59 +72,49 @@ if cursedExp>100:cursedExp=100
 if plotnikskill>100:plotnikskill=100
 
 if penis<=0 and pirsingDick>0:
-	 if pirsingDickN=1:pirsingDickN=0&stren=stren-5
-	 if pirsingDickN=2:pirsingDickN=0&speed=speed-5
-	 if pirsingDickN=3:pirsingDickN=0&agil=agil-5
-	 if pirsingDickN=4:pirsingDickN=0&vital=vital-5
-	 if pirsingDickN=5:pirsingDickN=0&intel=intel-5
-	 if pirsingDickN=6:pirsingDickN=0&will=will-5
-	 if pirsingDickN=7:pirsingDickN=0&magika=magika-1
-pirsingDick=0
+	if pirsingDickN=1: pirsingDickN=0 & stren=stren-5
+	if pirsingDickN=2: pirsingDickN=0 & speed=speed-5
+	if pirsingDickN=3: pirsingDickN=0 & agil=agil-5
+	if pirsingDickN=4: pirsingDickN=0 & vital=vital-5
+	if pirsingDickN=5: pirsingDickN=0 & intel=intel-5
+	if pirsingDickN=6: pirsingDickN=0 & will=will-5
+	if pirsingDickN=7: pirsingDickN=0 & magika=magika-1
+	pirsingDick=0
 end
 
 if vagina<=0 and pirsingPussy>0:
-	 if pirsingPussyN=1:pirsingPussyN=0&stren=stren-5
-	 if pirsingPussyN=2:pirsingPussyN=0&speed=speed-5
-	 if pirsingPussyN=3:pirsingPussyN=0&agil=agil-5
-	 if pirsingPussyN=4:pirsingPussyN=0&vital=vital-5
-	 if pirsingPussyN=5:pirsingPussyN=0&intel=intel-5
-	 if pirsingPussyN=6:pirsingPussyN=0&will=will-5
-	 if pirsingPussyN=7:pirsingPussyN=0&magika=magika-1
-pirsingPussy=0
+	if pirsingPussyN=1: pirsingPussyN=0 & stren=stren-5
+	if pirsingPussyN=2: pirsingPussyN=0 & speed=speed-5
+	if pirsingPussyN=3: pirsingPussyN=0 & agil=agil-5
+	if pirsingPussyN=4: pirsingPussyN=0 & vital=vital-5
+	if pirsingPussyN=5: pirsingPussyN=0 & intel=intel-5
+	if pirsingPussyN=6: pirsingPussyN=0 & will=will-5
+	if pirsingPussyN=7: pirsingPussyN=0 & magika=magika-1
+	pirsingPussy=0
 end
 
-
 cum=cumbelly+cumpussy+cumass+cumanus+cumlip+cumface
-
 
 !if world=1:gs'MagikRas'
 gs'MagikRas'
 if world=1 and magika=0 and NoHaritonov=0:magika=1
 
-
-
-
 if penis<0:penis=0
 if vagina<0:vagina=0
 
-
-
 if penis=0 and vagina=0:
-     if femin<200:penis=1
-     if femin>=200:vagina=1
+    if femin<200:penis=1
+    if femin>=200:vagina=1
 end
 
-
-
 if vagina>0:
-     !if magika*10<=orgasm:magika=magika+1
-     if vagina*10<=vag:vag=0&vagina=vagina+1
+    !if magika*10<=orgasm:magika=magika+1
+    if vagina*10<=vag:vag=0&vagina=vagina+1
 end
 
 if pol>0 and berd>=0 or vidage<18:berd=-1
 
 if cerafNip=1 and DOM>0:DOM=0&SUB=1
-
 
 !'if pol>0 and world=0:
 clr
@@ -139,42 +123,52 @@ exit
 end'
 
 if vidage > 100:
-cls
-'Вы умираете от старости.'
-xgt'GAMEOVER'
-exit
+	cls
+	'Вы умираете от старости.'
+	xgt'GAMEOVER'
+	exit
 end
 
 if demonMorf>0 and skverna<=0:
-cls
-'Вы умираете от отсутствия скверны.'
-xgt'GAMEOVER'
-exit
+	cls
+	'Вы умираете от отсутствия скверны.'
+	xgt'GAMEOVER'
+	exit
 end
 
 VIEW
 if fat<0:fat=0
 
 if INFIGHT=0:
-if health>vital*10:health=vital*10
-if manna>intel*10+intel*magika:manna=intel*10+intel*magika&wipo=wipo+5
-if wipo>will*10:wipo=will*10
+	if health>vital*10: health=vital*10
+	if manna>intel*10+intel*magika: manna=intel*10+intel*magika & WillPower=WillPower+5
+	if WillPower>will*10: WillPower=will*10
 end
 
 stamina=health
 chin=will
+if pol = 0: smurashod=smupro+smuteh+smuzpfull+smuzemla+smukredit+smukredit2
+
 if horny>100:horny=100
-if pol = 0:smurashod=smupro+smuteh+smuzpfull+smuzemla+smukredit+smukredit2
+if golod>20: golod=20 &	fat +=5
+if golod < 0:
+	golod=1
+	if fat > 0: fat -=1
+	if fat <= 0: manna -=5
+end
+if freshness < 0: freshness=1 & manna -=1 
+if manna < 0: manna=1 & WillPower -=5
+if WillPower < 0: WillPower=1 & health -=1
 
-if son >= 20:set $son = '<font color=green>Вы выспались и больше не хотите спать.</font>'
-if son < 20 and son >= 10:set $son = '<font color=blue>Вы не хотите спать.</font>'
-if son < 10 and son >= 2:set $son = '<font color=brown>Вы хотите спать.</font>'
-if son < 2:set $son = '<B><font color=red>Вы засыпаете на ходу.</font></B>'
+$son = '<font color=green>Вы выспались и больше не хотите спать.</font>'
+if freshness < 20: $son = '<font color=blue>Вы не хотите спать.</font>'
+if freshness < 10: $son = '<font color=brown>Вы хотите спать.</font>'
+if freshness < 2: $son = '<B><font color=red>Вы засыпаете на ходу.</font></B>'
 
-if golod >= 15:set $golod = '<font color=green>Кажется вы переели.</font>'
-if golod < 15 and golod >= 5:set $golod = '<font color=blue>Вы сыты.</font>'
-if golod < 5 and golod > 1:set $golod = '<font color=brown>Вы хотите есть.</font>'
-if golod <= 1:set $golod = '<B><font color=red>Вы страшно голодны.</font></B>'
+$golod = '<font color=green>Кажется вы переели.</font>'
+if golod < 15: $golod = '<font color=blue>Вы сыты.</font>'
+if golod < 5: $golod = '<font color=brown>Вы хотите есть.</font>'
+if golod <= 1: $golod = '<B><font color=red>Вы страшно голодны.</font></B>'
 !<B><font color=red>Ваш живот перемазан в сперме.</font></B>
 if sweat <= 0:set $sweat = ''
 if sweat = 1:set $sweat = '<font color=#0bda51>Вы вспотели.</font>'
@@ -183,51 +177,23 @@ if sweat = 3:set $sweat = '<font color=#7ba05b>От вас разит потом
 if sweat > 3:set $sweat = '<font color=#adff2f>От вас воняет потом так, что у окружающих слезятся глаза.</font>'
 
 
-if golod>20:
-golod=20
-fat=fat+5
-end
-
-if golod < 0:
-golod=1
-     if fat > 0:
-     fat=fat-1
-     end
-     if fat <= 0:
-     manna=manna-5
-     end
-end
-if son < 0:
-manna=manna-1
-son=1
-end
-if manna < 0:
-wipo=wipo-5
-manna=1
-end
-if wipo < 0:
-health=health-1
-wipo=1
-end
-
-
 if health < 0:
-gt'GAMEOVER'
-exit
+	gt'GAMEOVER'
+	exit
 end
 
-gs'время'
-gs'тело'
-gs'описания'
+gs 'время'
+gs 'тело'
+gs 'описания'
 
 
 gs'level'
 if sizo>0:gs'масть'
 
 if sud = 1 and sudtimer <= 0 and hour>=9 and world=0 and pol=0:
-sud=2
-gt'sud','1'
-exit
+	sud=2
+	gt'sud','1'
+	exit
 end
 
 if alko > 0 and alko <= 10:$alko='<font color=#ff8800>Вы слегка выпивши.</font>'
@@ -242,43 +208,48 @@ if world=1:$dayworld='<<dayworld>> дней как вы попали в друг
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!НАЧАЛО ОПИСАНИЯ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-pl'Время <B><<hour>></B> часов <B><<$nilmin>><<minut>></B> минут'
-if world=0:pl 'Сейчас <<day>> <<$month>> <<year>>года, <<$week>>.' 
-pl'Прошло <<daystart>> дней от начала игры. <<$dayworld>>'
-if world=0:pl'В кошельке у вас <<money>> рублей'
-if world=1 and SCslave=0:pl'В кошельке у вас <<gem>> гемов'
-if OrdenRang>0:pl'В кошельке у вас <<kredit>> орденских кредитов'
+nl'Время <B><<hour>></B> часов <B><<$nilmin>><<minut>></B> минут'
+if world=0:nl '<<day>> <<$month>> <<year>> года, <<$week>>.' 
+nl'Прошло <<daystart>> дней от начала игры. <<$dayworld>>'
+p '<hr>'
+if world=0:nl'В кошельке у вас <<money>> рублей'
+if world=1 and SCslave=0:nl'В кошельке у вас <<gem>> гемов'
+if OrdenRang>0:nl'В кошельке у вас <<kredit>> орденских кредитов'
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+healthMax = vital*10
+if health<healthMax*25/100:$fcolor='red'
+if health<healthMax*50/100:$fcolor='#991199'
+if health<healthMax*75/100:$fcolor='blue'
+if health>=healthMax*75/100:$fcolor='#1c6b72'
+if health>=healthMax: $fcolor = 'green'
+$healthvis='<font color=<<$fcolor>>><<health>>/<<vital*10>></font>'
 
-if health>=vital*10:$healthvis='<font color=green><<health>></font>'
-if health>=(vital*10)*75/100 and health<(vital*10):$healthvis='<font color=#1c6b72><<health>></font>'
-if health>=(vital*10)*50/100 and health<(vital*10)*75/100:$healthvis='<font color=blue><<health>></font>'
-if health>=(vital*10)*25/100 and health<(vital*10)*50/100:$healthvis='<font color=#991199><<health>></font>'
-if health<(vital*10)*25/100:$healthvis='<font color=red><<health>></font>'
-
-if wipo>=will*10:$wipovis='<font color=green><<wipo>></font>'
-if wipo>=(will*10)*75/100 and wipo<(will*10):$wipovis='<font color=#1c6b72><<wipo>></font>'
-if wipo>=(will*10)*50/100 and wipo<(will*10)*75/100:$wipovis='<font color=blue><<wipo>></font>'
-if wipo>=(will*10)*25/100 and wipo<(will*10)*50/100:$wipovis='<font color=#991199><<wipo>></font>'
-if wipo<(will*10)*25/100:$wipovis='<font color=red><<wipo>></font>'
+if WillPower>=will*10:$WillPowervis='<font color=green><<WillPower>></font>'
+if WillPower>=(will*10)*75/100 and WillPower<(will*10):$WillPowervis='<font color=#1c6b72><<WillPower>></font>'
+if WillPower>=(will*10)*50/100 and WillPower<(will*10)*75/100:$WillPowervis='<font color=blue><<WillPower>></font>'
+if WillPower>=(will*10)*25/100 and WillPower<(will*10)*50/100:$WillPowervis='<font color=#991199><<WillPower>></font>'
+if WillPower<(will*10)*25/100:$WillPowervis='<font color=red><<WillPower>></font>'
 
 if manna>=intel*10+intel*magika:$mannavis='<font color=green><<manna>></font>'
 if manna>=(intel*10+intel*magika)*75/100 and manna<(intel*10+intel*magika):$mannavis='<font color=#1c6b72><<manna>></font>'
 if manna>=(intel*10+intel*magika)*50/100 and manna<(intel*10+intel*magika)*75/100:$mannavis='<font color=blue><<manna>></font>'
 if manna>=(intel*10+intel*magika)*25/100 and manna<(intel*10+intel*magika)*50/100:$mannavis='<font color=#991199><<manna>></font>'
 if manna<(intel*10+intel*magika)*25/100:$mannavis='<font color=red><<manna>></font>'
-
-pl'Жизнь <<$healthvis>>'
-pl'Разум <<$wipovis>>'
-pl'Настроение <<$mannavis>>'
-pl'<<$son>>'
-pl'<<$golod>>'
-pl'<<$sweat>>'
+p '<hr>'
+nl'Жизнь <<$healthvis>>'
+nl func('ProgressBar', health, healthMax,100,$fcolor, 5)
+nl'Сила воли <<$WillPowervis>>'
+nl'Настроение <<$mannavis>>'
+p '<hr>'
+nl'<<$son>>'
+nl'<<$golod>>'
+nl'<<$sweat>>'
+if horny >= 50 and horny < 100:pl'<font color=#DB7093>Вы возбуждены</font>'
+if horny >= 100:pl'<font color=#FF1493>Вы не можете ни о чем думать кроме секса.</font>'
+p '<hr>'
 if hapri > 0:pl'У вас аккуратная прическа.'
 if hapri = 0:pl'<B>Ваши волосы растрепанные.</B>'
-if slot = 0 and sizo=0:pl'Вы не одеты.'
-if horny >= 50 and horny < 100:pl'<font color=#DB7093>Вы возбужденны</font>'
-if horny >= 100:pl'<font color=#FF1493>Вы не можете ни о чем думать кроме секса.</font>'
+if slot = 0 and sizo=0: pl'Вы не одеты.'
 if sud=1 and world=0:pl'До суда осталось <<sudtimer>> дней.'
 if sizo>0:pl'Вы сидите уже <<srok>> дней.'
 if sizo>0:pl'<<$mast>>'

@@ -1,202 +1,171 @@
 # park
 if $ARGS[0]='start':
-$metka = $ARGS[0]
-$loc = $CURLOC
-cla
-*clr
-set minut = minut + 30
-'<center><B><font color=maroon>Парк</font></B></center>'
-'<center><img src="pic\pic\park.jpg" ></center>'
-clr
-gs'stat'
-gs'time'
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	cla
+	*clr
+	'<center><B><font color=maroon>Парк</font></B></center>'
+	'<center><img src="pic\pic\park.jpg" ></center>'
+	clr
+	gs'stat'
+	gs'time'
+	if car > 0 and cardrive = 5: 'Около парка стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
 
-if car > 0 and cardrive = 5:
-set cardrive = 5
-'Около парка стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
-end
-
-
-     act 'ВЫЙТИ ИЗ ПАРКА':
-	 cla
-	 set minut = minut + 30
-	 gt'street'
-     end
-     
-     act 'Гулять по парку 1 час':
-	 cla
-	 set minut = minut + 30
-	 set manna = manna + 10
-		 !Наркоман!
-		 narkmeet=RAND(0,1)
-		 !Нимфа!
-		 !fairymeet=RAND(0,15)
-		 if nark=0 and pol=0 and money>=500 and narkmeet=1:
-			 gt 'nimfs','Narik'
-		 end
-		 !Лесная нимфа!
-		 if nark=1 and pol=0 and FNtr!1:
-			 gt 'nimfs','ParkNimfa'
-		 end
-         if nark=0 or money<500: 
-		 'Вы неспеша прогуливаетесь по парку. Дыша свежим воздухом, размышляя о превратностях судьбы.'
-		 act 'Завершить прогулку':gt'park','start'
-		 end
-     end
-     
-     
-     
-     if slot = 3 and parkrunday ! day:
-         act 'Пробежка по парку 1 час':
-		 cla
-		 *clr
-		 set parkrunday = day
-		 set minut = minut + 30
-		 set manna = manna - 10
-		 set wipo = wipo - 10
-		 set beg = beg + 5
-		 set fat = fat - 10
-		 set sweat = sweat + 3
-		 'Вы сделали несколько кругов вокруг парка, запыхались вспотели и устали.'
-		 act 'Завершить пробежку':gt'park','start'
-		 end
-     
-     end
-     
-     act 'Идти к автомобильной дороге возле парка':gt'park','whore'
-     
-     act 'Идти к атракционам':gt'park','luna'
-
+	act 'ВЫЙТИ ИЗ ПАРКА':
+		minut = minut + 30
+		gt 'street'
+	end
+	act 'Гулять по парку 1 час':
+		cla
+		minut = minut + 30
+		manna = manna + 10
+		gs 'stat'
+		gs 'time'
+		!Наркоман!
+		narkmeet=RAND(0,1)
+		!Нимфа!
+		!fairymeet=RAND(0,15)
+		if nark=0 and money>=500 and narkmeet=1: gt 'nimfs','Narik'
+		!Лесная нимфа!
+		if nark=1 and FNtr!1: gt 'nimfs','ParkNimfa'
+		if nark=0 or money < 500: 
+			'Вы не спеша прогуливаетесь по парку. Дыша свежим воздухом, размышляя о превратностях судьбы.'
+			act 'Завершить прогулку': minut +=30 & gt'park','start'
+		end
+	end
+    if slot = 3 and parkrunday ! day:
+        act 'Пробежка по парку 1 час':
+			cla
+			*clr
+			parkrunday = day
+			minut = minut + 60
+			manna = manna - 10
+			WillPower = WillPower - 10
+			beg = beg + 5
+			fat = fat - 10
+			sweat = sweat + 3
+			'Вы сделали несколько кругов вокруг парка, запыхались вспотели и устали.'
+			act 'Завершить пробежку':gt'park','start'
+		end
+    end
+    act 'Идти к автомобильной дороге возле парка': minut +=15 & gt'park','whore'
+    act 'Идти к атракционам': minut +=5 & gt'park','luna'
 end
 
 if $ARGS[0]='luna':
-$metka = $ARGS[0]
-$loc = $CURLOC
-cla
-*clr
-set minut = minut + 5
-'<center><B><font color=maroon>Атракционы</font></B></center>'
-'<center><img src="pic\pic\luna.jpg" ></center>'
-clr
-gs'stat'
-gs'time'
-
-     if hour >= 9 and hour <= 20 and money >= 50:
-         act 'Съесть шаурму 50 руб':
-         cla
-         *clr
-         '<center><img src="pic\pic\luna1.jpg" ></center>'
-         set minut = minut + 30
-		 set health = health + 10
-		 set money = money - 50
-		 set manna = manna + 5
-		 set wipo = wipo + 5
-         golod=golod+5
-         fat=fat+5
-         'Шаурма вроде бы даже очень ничего, съедобная, только очень жирная.'
-         act 'Отойти':gt'park','luna'
-         end
-     end
-     
-     
-     if hour >= 9 and hour <= 20 and money >= 100:
-         act 'Стрелять в тире 100 руб':
-         cla
-         *clr
-         '<center><img src="pic\pic\tir.jpg" ></center>'
-         set minut = minut + 30
-         set money = money - 100
-         'Вы заплатили 100 рублей за десять пулек. Если вам удасться попасть все 10 раз, то вы выиграете плюшевого мишку.'
-             act 'Стрелять':
-             cla
-             set tirkoef = agil + shoot
-             set tirmin = tirkoef*20/100
-             set tirand = RAND (tirkoef - tirmin,tirkoef + tirmin)
-                 if tirand >= 80:
-                 set mishka = mishka + 1
-                 set manna = manna + 5
-                 'Вы точно положили все 10 пуль в цели и выиграли плюшевого мишку'
-                 end
-                 if tirand < 80 and tirand >= 70:
-                 'Эх, вы промазали всего лишь один раз.'
-                 end
-                 if tirand < 70 and tirand >= 60:
-                 'Вы 8мь раз попали в цель и 2 раза промазали.'
-                 end 
-                 if tirand < 60 and tirand >= 50:
-                 'Вы 7мь раз попали в цель и 3 раза промазали.'
-                 end 
-                 if tirand < 50 and tirand >= 40:
-                 'Вы 6ть раз попали в цель и 4 раза промазали.'
-                 end 
-                 if tirand < 40 and tirand >= 30:
-                 'Вы 5ть раз попали в цель и 5ть раз промазали.'
-                 end
-                 if tirand < 30 and tirand >= 25:
-                 'Вы 4 раза попали в цель и 6ть раз промазали.'
-                 end
-                 if tirand < 25 and tirand >= 20:
-                 'Вы 3 раза попали в цель и 7мь раз промазали.'
-                 end
-                 if tirand < 20 and tirand >= 15:
-                 'Вы 2а раза попали в цель и 8мь раз промазали.'
-                 end
-                 if tirand < 15 and tirand >= 10:
-                 'Вы 1 раз попали в цель и 9ть раз промазали.'
-                 end
-                  if tirand < 10:
-                 'Вы не разу не попали в цель.'
-                 end
-             set shoot = shoot + 1
-             act 'Отойти':gt'park','luna'
-             end
-         end
-     end
-     
-     if hour >= 9 and hour <= 20 and money >= 20:
-         act 'Ударить по силомеру 20 руб':
-         cla
-         *clr
-         '<center><img src="pic\pic\silomer.jpg" ></center>'
-         'Вы заплатили 20 рублей за удар по силомеру.'
-             act 'Ударить':
-             cla
-			 set minut = minut + 5
-			 set money = money - 20
-			 set stKo = stren*20/100
-			 set damage = RAND(stren-stKo,stren+stKo)
-			 !if stren < 30:set stren = stren + 1
-			 !if stren >= 30:set stren = stren + RAND (0,1)
-			 stren += 1
-			 'Вы, что есть силы ударили по силомеру и на экране зажглась цифра <<damage>>'
-			 if damage > maxdamage:set maxdamage = damage&'Хмм, новый рекорд.'
-			 gs 'stat'
-			 act 'Отойти':gt'park','luna'
-			 end
-         end
-     end
-     
-     if hour >= 9 and hour <= 20 and money >= 50:
-         act 'Кататься на карусели 50 руб':
-         cla
-         *clr
-         '<center><img src="pic\pic\karusel.jpg" ></center>'
-         'Вы заплатили 50 рублей и сели в карусель.'
-		 set minut = minut + 30
-		 set money = money - 50
-		 set wipo = wipo + 10
-		 set manna = manna + 10
-		 'Вы отлично прокатились, аж дух захватило.'
-		 act 'Отойти':gt'park','luna'
-         end
-     end
-     
-     
-     if hour >= 9 and hour <= 20:
-         act 'Однорукий бандит':gt'park','avtomat'
-     end
-   
-act 'Уйти':gt'park','start'
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	cla
+	*clr
+	clr
+	'<center><B><font color=maroon>Атракционы</font></B></center>'
+	'<center><img src="pic\pic\luna.jpg" ></center>'
+	gs 'stat'
+	gs 'time'
+    if hour >= 9 and hour <= 20 and money >= 50:
+        act 'Съесть шаурму 50 руб':
+			*clr
+			'<center><img src="pic\pic\luna1.jpg" ></center>'
+			set minut = minut + 30
+			set health = health + 10
+			set money = money - 50
+			set manna = manna + 5
+			set WillPower = WillPower + 5
+			golod=golod+5
+			fat=fat+5
+			'Шаурма вроде бы даже очень ничего, съедобная, только очень жирная.'
+			gs 'stat'
+        end
+    end
+    if hour >= 9 or hour <= 20 and money >= 100:
+        act 'Стрелять в тире 100 руб':
+			*clr
+			'<center><img src="pic\pic\tir.jpg" ></center>'
+			minut +=10
+			money = money - 100
+			'Вы заплатили 100 рублей за десять пулек. Если вам удастся попасть все 10 раз, то вы выиграете плюшевого мишку.'
+			tirkoef = agil + tirAttempt
+			tirmin = tirkoef*20/100
+			tirand = RAND (tirkoef - tirmin,tirkoef + tirmin)
+            if tirand >= 80:
+				teddyBear +=1
+				manna +=5
+				'Вы точно положили все 10 пуль в цели и выиграли плюшевого мишку'
+            end
+            if tirand < 80 and tirand >= 70: 'Эх, вы промазали всего лишь один раз.'
+            if tirand < 70 and tirand >= 60: 'Вы 8 раз попали в цель и 2 раза промазали.'
+            if tirand < 60 and tirand >= 50: 'Вы 7 раз попали в цель и 3 раза промазали.'
+            if tirand < 50 and tirand >= 40: 'Вы 6 раз попали в цель и 4 раза промазали.'
+            if tirand < 40 and tirand >= 30: 'Вы 5 раз попали в цель и 5 раз промазали.'
+            if tirand < 30 and tirand >= 25: 'Вы 4 раза попали в цель и 6 раз промазали.'
+            if tirand < 25 and tirand >= 20: 'Вы 3 раза попали в цель и 7 раз промазали.'
+            if tirand < 20 and tirand >= 15: 'Вы 2 раза попали в цель и 8 раз промазали.'
+            if tirand < 15 and tirand >= 10: 'Вы 1 раз попали в цель и 9 раз промазали.'
+            if tirand < 10: 'Вы не разу не попали в цель.'
+			tirAttempt +=1
+			tirTarget = 0
+			tirDeviation = 20000/((agil + tirAttempt)*(agil + tirAttempt))
+			tirTime = msecscount
+			overshoot = 0
+			tirShot = 1
+			:nextShot
+				dynamic $GaussDistrib,tirTarget,tirDeviation
+				if gaussEvent < 0:
+					jump 'nextShot'
+				elseif gaussEvent > 10:
+					overshoot +=1
+				else
+					gaussEvent += 10 - 2*gaussEvent
+					tirEvent[gaussEvent] +=1
+				end
+			if tirShot < 10: tirShot +=1 & jump 'nextShot'
+			tirTime = msecscount - tirTime
+			'Цель: <<tirTarget>>. Разброс: <<tirDeviation>>.'
+			'Произведено выстрелов: <<tirShot>>. Время обработки: <<tirTime>> мс.'
+			tirResult = 0
+			:nextTirResult
+				if tirEvent[tirResult] ! 0: 'Попаданий в <<tirResult>>:  <<tirEvent[tirResult]>>'
+			if tirResult < arrsize('tirEvent') - 1: tirResult +=1	& jump 'nextTirResult'
+			if overshoot > 0: 'Выстрелов не попавших в мишень: <<overshoot>>'
+			killvar 'tirEvent'
+			gs 'stat'
+        end
+    end
+    if hour >= 9 and hour <= 20 and money >= 20:
+		act 'Ударить по силомеру 20 руб':
+        *clr
+        '<center><img src="pic\pic\silomer.jpg" ></center>'
+        'Вы заплатили 20 рублей за удар по силомеру.'
+            act 'Ударить':
+				cla
+				set minut = minut + 5
+				set money = money - 20
+				set stKo = stren*20/100
+				set damage = RAND(stren-stKo,stren+stKo)
+				!if stren < 30:set stren = stren + 1
+				!if stren >= 30:set stren = stren + RAND (0,1)
+				stren += 1
+				'Вы, что есть силы ударили по силомеру и на экране зажглась цифра <<damage>>'
+				if damage > maxdamage:set maxdamage = damage&'Хмм, новый рекорд.'
+				gs 'stat'
+			end
+        end
+    end
+    if hour >= 9 and hour <= 20 and money >= 50:
+        act 'Кататься на карусели 50 руб':
+			*clr
+			'<center><img src="pic\pic\karusel.jpg" ></center>'
+			'Вы заплатили 50 рублей и сели в карусель.'
+			set minut = minut + 30
+			set money = money - 50
+			set WillPower = WillPower + 10
+			set manna = manna + 10
+			'Вы отлично прокатились, аж дух захватило.'
+			gs 'stat'
+        end
+    end
+    if hour >= 9 and hour <= 20: act 'Однорукий бандит': gt 'park','avtomat'
+	act 'Уйти':gt'park','start'
 end
 
 if $ARGS[0]='avtomat':
@@ -288,9 +257,9 @@ gs'time'
          *clr
          money=money-500
          horny=0
-         girl=girl+1
+         count['girl']=count['girl']+1
          sexm=sexm+1
-         set wipo = wipo + 10
+         set WillPower = WillPower + 10
 		 set manna = manna + 10
          picrand=RAND(0,10)
          if picrand=0:'<center><img src="pic\picVA\pcbj.jpg" ></center>'

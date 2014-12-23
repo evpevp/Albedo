@@ -42,7 +42,7 @@ if robrand>=80:
 		 program=24
 		 healthV=vitalV*10
 		 mannaV=intelV*10+intelV*magika
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 fintv=5
 		 act 'Драться':gt'before'
 		 exit

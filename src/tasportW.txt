@@ -120,7 +120,7 @@ if hour>=7 and hour<= 12:
 										 sexm=sexm+1
 										 horny=0
 										 manna=manna+15
-										 wipo=wipo+15
+										 WillPower=WillPower+15
 										 '<center><img src="pic/EvedonTA/cottonSex.jpg" ></center>'
 										 'Вы поставили Коттон на четвереньки и раздвинули ее булки, между анусом и членом красовалось истекающее соками розовое влагалище. Вы не долго думая всадили туда член и начали трахать Коттон, через некоторое время вы не выдержали и достав член из блондинки кончили ей на попку.'
 										 act 'Уйти':gt $CURLOC
@@ -136,7 +136,7 @@ if hour>=7 and hour<= 12:
 										 if cottonSex=0:cottonSex=1&futa=futa+1
 										 sexm=sexm+1
 										 horny=0
-										 wipo=wipo+30
+										 WillPower=WillPower+30
 										 '<center><img src="pic/EvedonTA/cottonAnal.jpg" ></center>'
 										 'Вы положили Коттон на спину и раздвинули ей ноги, нащупав ее маленькое, тугое очко, вы стали засовывать туда свой стоячий член, наконец вам удалось затолкать в тугое очко Коттон свой член и начать ее трахать, Коттон стонала и закатывала глаза, вы не могли больше сдерживаться и кончили ей в попку.'
 										 act 'Уйти':gt $CURLOC
@@ -357,7 +357,7 @@ if hkdefeat!1:'Качает мускулы полуголая <a href="exec:GT '
 		 program=7
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
 		 'Вы видите Хэкель, судя по ее взгляду, драться сегодня она будет до последнего.'
 		 act 'Драться':gt'before'

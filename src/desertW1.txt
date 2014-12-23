@@ -95,7 +95,7 @@ tiprand=RAND(0,6)
 		 program=26
 		 healthV=vitalV*10
 		 mannaV=intelV*10+intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 '<center><img src="pic/EvedonMonsters/sanddemon.jpg"></center>'
 		 'Песок стал расступаться и из него показалась огромная тварь. Тварь вылезла из песка и направилась к вам.'
 		 act 'Драться':gs'before'
@@ -130,7 +130,7 @@ tiprand=RAND(0,6)
 		 program=28
 		 healthV=vitalV*10
 		 mannaV=intelV*10+intelV*5
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 mortalv=RAND(5,25)
 		 '<center><img src="pic/EvedonMonsters/bee.jpg"></center>'
 		 'На бархан заползло насекомое похожее на муху, только величиной с теленка, оно потерло лапками у уставилось на вас своими фасетчатыми глазами. Следом выползло еще одно, и еще, вскоре вы насчитали <<mortalv>> насекомых, которые устремились к вам.'
@@ -154,7 +154,7 @@ tiprand=RAND(0,6)
 		 program=27
 		 healthV=vitalV*10
 		 mannaV=intelV*10+intelV*5
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 BATpotionV=RAND(3,10)
 		 '<center><img src="pic/EvedonMonsters/tumanvedma.jpg"></center>'
 		 'Перед вами показалась симпатичная девушка. Она усмехнулась увидев вас.'

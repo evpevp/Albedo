@@ -35,7 +35,7 @@ grrand=RAND(0,100)
 		 program=43
 		 healthV=vitalV*50
 		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 monster=25
 		 !'<center><img src="Evedon\demonrealm.jpg" ></center>'
 		 '.'
@@ -55,7 +55,7 @@ grrand=RAND(0,100)
 		 program=44
 		 healthV=vitalV*50
 		 mannaV=intelV*10+intelV*15
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 monster=28
 		 *clr
 		 '<center><img src="pic/EvedonMonsters/vampire.jpg"></center>'

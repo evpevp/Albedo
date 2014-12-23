@@ -21,7 +21,7 @@ gs'stat'
 
 
 
-     if vampireMorf>0 and vampirePower>0 and wipov<=0:
+     if vampireMorf>0 and vampirePower>0 and WillPowerv<=0:
          act 'Укусить':
          cla
          vampirePower-=1

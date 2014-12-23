@@ -58,7 +58,7 @@ act 'Отойти от стойки':gt'DemonologLogovo'
 		 alko=alko+2
 		 golod=golod+3
 		 manna=manna+10
-		 wipo=wipo+10
+		 WillPower=WillPower+10
 		 horny=horny+5
 	     *clr
          '<center><img src="pic/EvedonOd/beer.jpg"></center>'
@@ -80,7 +80,7 @@ act 'Отойти от стойки':gt'DemonologLogovo'
 		 gem=gem-10
 		 alko=alko+5
 		 manna=manna+20
-		 wipo=wipo+20
+		 WillPower=WillPower+20
 		 horny=horny+10
 	     *clr
          '<center><img src="pic/EvedonOd/wiskey.jpg"></center>'

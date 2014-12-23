@@ -18,7 +18,7 @@ willv=10
 program=16
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if demrand=1:
@@ -33,7 +33,7 @@ willv=10
 program=17
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if demrand=2:
@@ -48,7 +48,7 @@ willv=10
 program=18
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 --- demonGenW ---------------------------------

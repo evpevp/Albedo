@@ -2,7 +2,7 @@
 if serafLip=1:
  health=vital*10
  manna=intel*10+intel*magika
- wipo=will*10
+ WillPower=will*10
 'Ваши губы как пылесос обсасывают член на всю длину и все ваше тело охватывает истома, ваши силы тут же восстанавливаются.'
 end
 

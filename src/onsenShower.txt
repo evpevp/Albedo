@@ -42,7 +42,7 @@ end
  cla
  minut=minut+30
  sweat=-6
- wipo=wipo+10
+ WillPower=WillPower+10
  manna=manna+40
  gs'stat'
  'Вы за полчаса вымылись в кадушке.'

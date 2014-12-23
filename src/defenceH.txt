@@ -14,17 +14,17 @@
              if PdefenceH<damageHv and damageHv>0:
              damageHv-=PdefenceH
              PdefenceH=0
-             PWIPO-=damageHv
+             PWillPower-=damageHv
              '<font color=#cd00cd><<$namev>> уничтожил ментальную защиту вашего помощника и нанес урон его воле <<damagehv>></font>'
              damageHv=0
              end
          end
          if PdefenceH<=0 and damageHv>0:
-         PWIPO-=damageHv
+         PWillPower-=damageHv
          '<font color=#cd00cd><<$namev>> нанес урон воле помощника <<damagehv>></font>'
          damageHv=0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<=0 or PWillPower<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end

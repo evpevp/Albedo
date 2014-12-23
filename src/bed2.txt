@@ -22,7 +22,7 @@ if slep = 1:set $slep = 'ничего не снится'
 
 set minut = minut + 1
 set stime = stime + 1
-if stime = 60:set stime = 0&set son = son + 3
+if stime = 60:set stime = 0&set freshness = freshness + 3
 clr
 gs'stat'
 if hour = timer and minut = timerM and budilnikOn = 1:
@@ -38,8 +38,8 @@ set manna = manna - 10
 	 farmstam=stren/10
 	 set hapri = 0
          if world=0 and sizo>0:GOTO $locBed, $metkaBed
-         if world=0 and sizo=0:gt'loker'
-         if world=1:gt'lokerW'
+         if world=0 and sizo=0:gt'locker'
+         if world=1:gt'lockerW'
      end
      
      if sizo=0:
@@ -51,7 +51,7 @@ set manna = manna - 10
 		 GOTO $locBed, $metkaBed
 		 end
      end
-elseif son > 23:
+elseif freshness > 23:
 'Вы выспались'
      act 'Встать с кровати':
      NowSleep=0
@@ -62,8 +62,8 @@ elseif son > 23:
 	 set hapri = 0
 	 farmstam=stren/10
          if world=0 and sizo>0:GOTO $locBed, $metkaBed
-         if world=0 and sizo=0:gt'loker'
-         if world=1:gt'lokerW'
+         if world=0 and sizo=0:gt'locker'
+         if world=1:gt'lockerW'
      end
      
      if sizo=0:

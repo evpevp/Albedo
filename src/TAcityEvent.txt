@@ -19,7 +19,7 @@ act 'уйти':gt'teladareW'
          sexm=sexm+1
          horny=horny+10
          manna=manna+50
-         if dominiSex=0:dominiSex=1&girl=girl+1
+         if dominiSex=0:dominiSex=1&count['girl']=count['girl']+1
          '<center><img src="pic/EvedonTA/domEv.jpg" ></center>'
          'Вы достали член и подставили его ко рту Доминики в котором уже был член Хекель. Местная волшебница Доминика принялась обрабатывать своим ртом сразу две волшебных палочки. Наконец Хекель не выдержала и спустила в открытый рот Доминики. Следом присоединились и вы украсив лицо волшебницы своим чудодейственным нектаром.'
          act 'уйти':gt'teladareW'

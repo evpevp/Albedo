@@ -220,7 +220,7 @@ act 'Уйти':gt'sauna','1'
 		 cla
 		 *clr
 		 minut=minut+60
-		 girl=girl+1
+		 count['girl']=count['girl']+1
 		 sexm=sexm+1
 		 money=money-2000
 		 horny=0
@@ -293,7 +293,7 @@ act 'Уйти':gt'sauna','1'
 							 *clr
 							 health = 0
 							 horny = 0
-							 son = 0
+							 freshness = 0
 							 manna = 0
 							 otporrand=RAND(1,2)
 							 if otporrand = 1:'<center><img src="pic\sauna\otpor1.gif" ></center>''Массажистка ударила вас обеими ногами ... ОЙ!ОЙ!ОЙ!'
@@ -308,7 +308,7 @@ act 'Уйти':gt'sauna','1'
 								 *clr
 								 money = money-10000
 								 horny = 0
-								 girl=girl+1
+								 count['girl']=count['girl']+1
 								 sexm=sexm+1
 								 sexmasrand=RAND(1,6)
 								 if sexmasrand = 1:'<center><img src="pic\sauna\conchil1.gif" ></center>''От секса массажистка отказалась, но подрочив благоухающий хуй позволила кончить себе на лицо.'

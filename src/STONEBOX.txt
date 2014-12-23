@@ -18,14 +18,14 @@ if SCdick<20:
 	 act 'Встать':
 	 cla
 	 *clr
-	 wipo-=10
-	     if wipo>0:
+	 WillPower-=10
+	     if WillPower>0:
          SCdick=SCdick-5
-         wipo=wipo+10
+         WillPower=WillPower+10
          manna=manna-10
 	     'Вам удается устоять на согнутых ногах в течение часа.'
 	     end
-	     if wipo<=0:
+	     if WillPower<=0:
          SCdick=SCdick+RAND(1,5)
          anus=anus+5
          manna=manna-50
@@ -40,7 +40,7 @@ if SCdick<20:
 	 act 'Дать ногам отдохнуть':
 	 cla
 	 *clr
-	 wipo+=5
+	 WillPower+=5
 	 SCdick=SCdick+RAND(1,5)
 	 anus=anus+5
      manna=manna-50

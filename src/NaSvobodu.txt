@@ -15,7 +15,7 @@ gs'time'
 !Для теста
 !health=vital*10
 !manna=intel*10
-!wipo=will*10
+!WillPower=will*10
 
 !mast=7
 !petrqw=10
@@ -69,7 +69,7 @@ if mast=10:
 		program=6
 		healthV=vitalV*10
 		mannaV=intelV*10
-		wipoV=willV*10	
+		WillPowerV=willV*10	
 		act 'Драться':XGT'before'
 	end 
 
@@ -85,7 +85,7 @@ if mast=10:
 		program=8
 		healthV=vitalV*10
 		mannaV=intelV*10
-		wipoV=willV*10
+		WillPowerV=willV*10
 		act 'Драться':XGT'before'
 	end
 
@@ -101,7 +101,7 @@ if mast=10:
 		program=7
 		healthV=vitalV*10
 		mannaV=intelV*10
-		wipoV=willV*10
+		WillPowerV=willV*10
 		act 'Драться':XGT'before'
     end
 end

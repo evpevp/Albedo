@@ -19,7 +19,7 @@ if hour>=8 and hour<=21:
 	 minut=minut+60
 	 sweat=-3
 	 manna=manna+50
-	 wipo=wipo+50
+	 WillPower=WillPower+50
 	 exp=exp+1
 	 'Вы весело резвились, плавая в море.'
 	 gs'bassW'

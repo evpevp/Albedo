@@ -69,7 +69,7 @@ if hour>=7 and hour<= 21:
 		 gem=gem-150
 		 health=vital*10
          manna=intel*10+intel*magika
-         wipo=will*10
+         WillPower=will*10
          '<center><img src="pic/EvedonNarod/belinda.jpg"></center>'
 		 'Вы отдали 50 гемов Белинде и она дала вам какую то микстуру с отвратительным запахом. Но после того как вы ее выпили, вам стало хорошо.'
 		 act 'Уйти':gt $CURLOC
@@ -354,7 +354,7 @@ if hour>=7 and hour<= 21:
                      act 'Попросить ее поработать грудью':
                      cla
                      *clr
-                     if BelindaSex=0:belindaSex=1&girl=girl+1
+                     if BelindaSex=0:belindaSex=1&count['girl']=count['girl']+1
                      sexm=sexm+1
                      manna=manna+30
                      horny=0
@@ -367,7 +367,7 @@ if hour>=7 and hour<= 21:
                          act 'Попросить ее сделать минет':
 						 cla
 						 *clr
-						 if BelindaSex=0:belindaSex=1&girl=girl+1
+						 if BelindaSex=0:belindaSex=1&count['girl']=count['girl']+1
 						 sexm=sexm+1
 						 manna=manna+30
 						 horny=0
@@ -382,10 +382,10 @@ if hour>=7 and hour<= 21:
                          act 'Заняться с Белиндой сексом':
 						 cla
 						 *clr
-						 if BelindaSex=0:belindaSex=1&girl=girl+1
+						 if BelindaSex=0:belindaSex=1&count['girl']=count['girl']+1
 						 sexm=sexm+1
 						 manna=manna+15
-						 wipo=wipo+15
+						 WillPower=WillPower+15
 						 horny=0
 						 '<center><img src="pic/EvedonTA/BellSex.jpg" ></center>'
 						 'Вы посадили Белинду на стол и раздвинули ей ноги, она обняла вас своими нежными руками и вы вошли в нее. Через некоторое время вы кончили в Белинду.'
@@ -398,9 +398,9 @@ if hour>=7 and hour<= 21:
                          act 'Заняться с Белиндой анальным сексом':
 						 cla
 						 *clr
-						 if BelindaSex=0:belindaSex=1&girl=girl+1
+						 if BelindaSex=0:belindaSex=1&count['girl']=count['girl']+1
 						 sexm=sexm+1
-						 wipo=wipo+30
+						 WillPower=WillPower+30
 						 horny=0
 						 '<center><img src="pic/EvedonTA/BellAnal.jpg" ></center>'
 						 'Вы нагнули Белинду и начали пальцами разрабатывать ее попку, после чего вы вошли в ее тугую дырочку и начали ее трахать слушая стоны Белинды. Через некоторое время вы кончили в Белинду наполнив ее анус своей спермой.'

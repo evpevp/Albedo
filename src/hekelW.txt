@@ -277,7 +277,7 @@ if hour<10 and hekelQW=0 or hour> 19 and hekelQW=0:
 		 program=7
 		 healthV=vitalV*10
 		 mannaV=intelV*10
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 'Хекель отшвырнула стол в сторону как пушинку и встала на ноги сверкая взглядом. "Ну все, карачун тебе!"'
 		 act 'Драться':gt'before'
 		 end

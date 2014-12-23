@@ -44,7 +44,7 @@ if stepSlave>=40 and stepSlave<50:
 	 act 'Пить мочу':
 	 cla
 	 *clr
-	 wipo=wipo-25
+	 WillPower=WillPower-25
 	 minut=minut+60
 	 SCUMbrot=SCUMbrot+1
 	 stepSlave+=1
@@ -60,7 +60,7 @@ if stepSlave>=40 and stepSlave<50:
 		 act 'С энтузиазмом пить мочу':
 		 cla
 		 *clr
-		 wipo=wipo-50
+		 WillPower=WillPower-50
 		 SUB=SUB+5
 		 minut=minut+60
 		 stepSlave+=5
@@ -107,7 +107,7 @@ if stepSlave>=30 and stepSlave<40:
 	 act 'Встать раком':
 	 cla
 	 *clr
-	 wipo=wipo-25
+	 WillPower=WillPower-25
 	 minut=minut+60
 	 SCUMbrot=SCUMbrot+1
 	 stepSlave+=1
@@ -127,7 +127,7 @@ if stepSlave>=30 and stepSlave<40:
 		 act 'Встать раком и подмахивать с энтузиазмом':
 		 cla
 		 *clr
-		 wipo=wipo-50
+		 WillPower=WillPower-50
 		 SUB=SUB+5
 		 minut=minut+60
 		 stepSlave+=5
@@ -177,12 +177,12 @@ if stepSlave>=20 and stepSlave<30:
 	 act 'Сосать у нее':
 	 cla
 	 *clr
-	 wipo=wipo-25
+	 WillPower=WillPower-25
 	 minut=minut+60
 	 SCUMbrot=SCUMbrot+1
 	 stepSlave+=1
 	 sub+=1
-	 if vapulasex=0:vapulasex=1&girl+=1
+	 if vapulasex=0:vapulasex=1&count['girl']+=1
 	 '<center><img src="pic/EvedonSC/bj.jpg" ></center>'
 	 'Вы встали на колени и начали отсасывать ее член.'
 	 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
@@ -196,12 +196,12 @@ if stepSlave>=20 and stepSlave<30:
 		 act 'Страстно отсасывать, стараться во всем угодить госпоже':
 		 cla
 		 *clr
-		 wipo=wipo-50
+		 WillPower=WillPower-50
 		 SUB=SUB+5
 		 minut=minut+60
 		 stepSlave+=5
 		 SCbrot=SCbrot+1
-		 if vapulasex=0:vapulasex=1&girl+=1
+		 if vapulasex=0:vapulasex=1&count['girl']+=1
 		 '<center><img src="pic/EvedonSC/bj.jpg" ></center>'
 		 'Вы ползаете на четвереньках перед Вапулой выгибая спинку и стараясь принимать сексуальные позы. После чего берете в рот и начинаете сосать у нее, стараясь изо всех сил.'
 		 if SCrest=0:SCrest-=1&'Вапула ослабляет ваши путы.'
@@ -246,7 +246,7 @@ if stepSlave>=10 and stepSlave<20:
 	 act 'Ползать на четвереньках перед госпожой':
 	 cla
 	 *clr
-	 wipo=wipo-25
+	 WillPower=WillPower-25
 	 minut=minut+60
 	 SCUMbrot=SCUMbrot+1
 	 stepSlave+=1
@@ -262,7 +262,7 @@ if stepSlave>=10 and stepSlave<20:
 		 act 'Стараться во всем угодить госпоже':
 		 cla
 		 *clr
-		 wipo=wipo-50
+		 WillPower=WillPower-50
 		 SUB=SUB+5
 		 minut=minut+60
 		 stepSlave+=5
@@ -313,7 +313,7 @@ if stepSlave<10:
 	 act 'Здравствуйте госпожа, чем я могу служить вам сегодня?':
 	 cla
 	 *clr
-	 wipo=wipo-25
+	 WillPower=WillPower-25
 	 minut=minut+60
 	 SCUMbrot=SCUMbrot+1
 	 stepSlave+=1
@@ -331,7 +331,7 @@ if stepSlave<10:
 		 act 'Стараться во всем угодить госпоже':
 		 cla
 		 *clr
-		 wipo=wipo-50
+		 WillPower=WillPower-50
 		 SUB=SUB+5
 		 minut=minut+60
 		 stepSlave+=5

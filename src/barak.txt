@@ -22,7 +22,7 @@ LCOLOR = rgb(106,90,205)
 if zoneWar=13:
 !health=vital*10
 !manna=intel*10+intel*magika
-!wipo=will*10
+!WillPower=will*10
 'Открылась дверь, в отряд через порог шагнул огромный, бритый на лысо атлет. Следом за ним вошли высокий худощавый парень и небольшой азиат'
 'Атлет огляделся и сказал "Эй смотрящий, твоя хата зафоршмачена." и смачно харкнул на пол.'
      act 'Ты у меня сейчас кровью смоешь свою харчу!':gt'barakFight'
@@ -39,7 +39,7 @@ end
 
 if hour>= 19 and hour<22:
 
-     if health < vital*10 or wipo<will*10:
+     if health < vital*10 or WillPower<will*10:
          act 'Идти в лазарет.':
          cla
          set minut = minut + 60
@@ -51,7 +51,7 @@ if hour>= 19 and hour<22:
                  money=money-100
                  health = vital*10
 				 manna=intel*10+intel*magika
-				 wipo=will*10
+				 WillPower=will*10
 				 'Врачиха проворно забрала сотню и дала вам таблеток, от которых вы сразу почувствовали себя лучше.'
 				 act 'Уйти.':gt $CURLOC
 				 end
@@ -90,14 +90,14 @@ if hour>= 19 and hour<22:
 	 gt'blackjack','0'
 	 end
 	 
-	 if wipo<10:
+	 if WillPower<10:
          act 'Плакать':
          cla
          вор=0
          мужик=мужик+1
          minut=minut+15
          manna=manna+10
-         wipo=wipo+30
+         WillPower=WillPower+30
          'Вы не выдержали и начали плакать.'
           act 'Умытся.':gt $CURLOC
          end

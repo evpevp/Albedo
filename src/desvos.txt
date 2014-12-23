@@ -7,13 +7,13 @@ if golod < 1:
      manna=manna-10
      end
 end
-if son < 1:
+if freshness < 1:
 manna=manna-10
 end
 if manna < 1:
-wipo=wipo-10
+WillPower=WillPower-10
 end
-if wipo < 1:
+if WillPower < 1:
 health=health-10
 end
 'Эта страшная жара просто убивает.'

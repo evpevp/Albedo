@@ -41,12 +41,12 @@ if GraveDogPower>=5:
 	 end
 end
 
-if GraveDogPower<GraveDogPowerM and manna>=10 and wipo>=100:
+if GraveDogPower<GraveDogPowerM and manna>=10 and WillPower>=100:
      act 'Дать свои силы псу (1еденица силы 10 маны, требует 100 воли)':
      cla
      horny=0
      GDraznica=GraveDogPowerM-GraveDogPower
-     wipo-=100
+     WillPower-=100
      tempshop = input ("У вас <<manna>> маны. 10 маны = 1 еденица силы собаки. Cколько сил вы желаете восстановить собаке?")
          if tempshop*10>manna or tempshop<=0:
          '<font color=green>Вам не удалось передать силы собаке.</font>'
@@ -69,17 +69,17 @@ if GraveDogPower<GraveDogPowerM and manna>=10 and wipo>=100:
      end
 end
 
-if manna>=1000 and wipo>=0:
+if manna>=1000 and WillPower>=0:
      act 'Камлать временно повышая верхнюю границу силы пса (1еденица силы 1 воли, требует 1000 маны)':
      cla
      horny=0
      manna-=1000
-     tempshop = input ("У вас <<wipo>> воли. 1 воли = 1 еденица к потолку силы собаки.")
-         if tempshop>wipo or tempshop<=0:
+     tempshop = input ("У вас <<WillPower>> воли. 1 воли = 1 еденица к потолку силы собаки.")
+         if tempshop>WillPower or tempshop<=0:
          '<font color=green>Вам не удалось камлание.</font>'
          else
          GraveDogPowerM+=tempshop
-         wipo-=tempshop
+         WillPower-=tempshop
          '<font color=green>Вы камлали с бубном повышая верхнюю границу сил пса за счет своей воли.</font>'
          end
           
@@ -116,7 +116,7 @@ end
 
 
 if round>=3:
-	if wipov<=0 and mannav>0 and manna>=1000 and GraveDogPower>=100:
+	if WillPowerv<=0 and mannav>0 and manna>=1000 and GraveDogPower>=100:
 		 act 'Камлать сжигая ману у безвольного противника (1000 маны и 100 силы собаки)':
 		 cla
 		 horny=0
@@ -130,7 +130,7 @@ if round>=3:
 		 end
 	end
 
-	if wipov<=0 and mannav<=0 and manna>=1000 and GraveDogPower>=100:
+	if WillPowerv<=0 and mannav<=0 and manna>=1000 and GraveDogPower>=100:
 		 act 'Камлать сжигая жизнь у обессиленного противника (1000 маны и 100 силы собаки)':
 		 cla
 		 horny=0
@@ -196,7 +196,7 @@ if round>=6:
 		 pwill=200
 		 Phealth=pvital*10
 		 pmanna=pintel*10
-		 pwipo=pwill*10
+		 pWillPower=pwill*10
 		 prizivProgram=0
 		 '<font color=green>Собрав свои силы и силы собаки вы призвали на поле боя живую стену.</font>'
 		 xgt'fight','1'
@@ -222,7 +222,7 @@ if round>=6:
 		 pwill=100
 		 Phealth=pvital*10
 		 pmanna=pintel*10
-		 pwipo=pwill*10
+		 pWillPower=pwill*10
 		 prizivProgram=1
 		 '<font color=green>Собрав свои силы и силы собаки вы призвали на поле боя скелет.</font>'
 		 xgt'fight','1'

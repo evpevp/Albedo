@@ -75,7 +75,7 @@ if shampoo > 0:
 				 set mastr = mastr + 1
 				 set orgasm = orgasm + 1
 				 set manna = manna + 15
-				 set wipo += 15
+				 set WillPower += 15
 				 '<center><img src="pics\pics\wash2.jpg" ></center>'
 				 'Вы направили душ на киску и тугие струи теплой воды начали ласкать вас. Вскоре вы почувствовали как теплая волна охватывает весь ваш организм и вы начали содрогаться в оргазме.'
 				 act 'Выйти из ванной и одеться':gt'vann'
@@ -88,7 +88,7 @@ if shampoo > 0:
 				 set horny = horny + 5
 				 set minut = minut + 30
 				 set manna = manna + 10
-				 set wipo += 10
+				 set WillPower += 10
 				 '<center><img src="pics\pics\wash2.jpg" ></center>'
 				 'Вы направили душ на киску и тугие струи теплой воды начали ласкать вас. Сначала вам было очень приятно, но через некоторое время стало даже как то больно. Возбуждение спало и вы прекратили маструбировать.'
 				 act 'Выйти из ванной и одеться':gt'vann'
@@ -119,7 +119,7 @@ if shampoo > 0:
 				 set mastr = mastr + 1
 				 set orgasm = orgasm + 1
 				 set manna = manna + 15
-				 set wipo += 15
+				 set WillPower += 15
 				 '<center><img src="pics\pics\wash7.jpg" ></center>'
 				 'Вы направили кран с водой на киску и тугая струя теплой воды начали ласкать вас. Вскоре вы почувствовали как теплая волна охватывает весь ваш организм и вы начали содрогаться в оргазме.'
 				 act 'Выйти из ванной и одеться':gt'vann'
@@ -132,7 +132,7 @@ if shampoo > 0:
 				 set horny = horny + 5
 				 set minut = minut + 30
 				 set manna = manna + 10
-				 set wipo += 10
+				 set WillPower += 10
 				 '<center><img src="pics\pics\wash7.jpg" ></center>'
 				 'Вы направили кран с водой на киску и тугая струя теплой воды начали ласкать вас. Сначала было очень даже не плохо, но потом возбуждение спало и стало даже как то не приятно. Поэтому вы прекратили маструбировать.'
 				 act 'Выйти из ванной и одеться':gt'vann'

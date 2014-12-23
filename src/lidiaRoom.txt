@@ -55,7 +55,7 @@ clr
 set minut=minut+10
 lidiasex=lidiasex+1
 sexm+=1
-girl=girl+1
+count['girl'] += 1
 horny=horny+20
 gs'stat'
 'Девушка лежит перед вами и смотрит на вас'

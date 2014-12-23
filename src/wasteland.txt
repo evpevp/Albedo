@@ -48,7 +48,7 @@ act 'Подойти ближе и узнать, что происходит.':
 			 program=1
 			 healthV=vitalV*10
 			 mannaV=intelV*10+intelV*magika
-			 wipoV=willV*10
+			 WillPowerV=willV*10
 			 act 'Защищаться':gs'before'
 		 end
 	 end
@@ -93,7 +93,7 @@ if $ARGS[0]='DNfightend':
 			 cla
 			 if DarkNimfaSex!1:
 				 DarkNimfaSex=1
-				 set girl = girl + 1
+				 count['girl'] += 1
 			 end
 			 '<center><img src="pic\forestevent\spin.jpg" ></center>'
 			 'Ваше сознание начинает мутнеть, неведомая сила несет вас в неизвестность.'
@@ -118,7 +118,7 @@ if $ARGS[0]='DNfightend':
 			 cla
 			 if DarkNimfaSex!1:
 				 DarkNimfaSex=1
-				 set girl = girl + 1
+				 count['girl'] += 1
 			 stren=stren+8
 			 vital=vital+8
 			 DELOBJ 'Камень c силой лесной нимфы'
@@ -242,7 +242,7 @@ if $ARGS[0]='DNend':
 			 vital=vital+2
 			 set health = vital*10
 			 manna=manna+50
-             wipo=wipo+rand(25,50)
+             WillPower=WillPower+rand(25,50)
 			 nark=0
 			 set minut = minut + 180
 			 act '...': gt 'wasteland'

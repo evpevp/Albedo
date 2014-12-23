@@ -4,10 +4,10 @@ if potop>0:'<font color=blue>Вы затопили местность вокру
 if mortalv>0:'<font color=red>У вас <<mortalv>> противников</font>'
 if notHere>0:'<font color=green><B><<$namev>> вас не видит</B></font>'
 if priziv>0:
-'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> мана:<<pmanna>> Воля:<<pwipo>> Осталось ходов:<<prizivTimes>></font>'
+'<font color=#cd00cd><<$pname>> охраняет вас Жизнь:<<Phealth>> мана:<<pmanna>> Воля:<<pWillPower>> Осталось ходов:<<prizivTimes>></font>'
 if pdefence>0 or pdefenceT>0 or pdefenceW>0 or pdefenceH>0:'<font color=#cd00cd>Физзащита:<<pdefence>> Температурная защита:<<pdefenceT>> Воздушная защита:<<pdefenceW>> Защита разума:<<pdefenceH>></font>'
 end
-'Ваш уровень <<lvl>> Здоровье <font color=red><B><<health>></B></font> мана <font color=blue><B><<manna>></B></font> сила воли <font color=green><B><<wipo>></B></font>'
+'Ваш уровень <<lvl>> Здоровье <font color=red><B><<health>></B></font> мана <font color=blue><B><<manna>></B></font> сила воли <font color=green><B><<WillPower>></B></font>'
 if sonar>0:'<font color=green>Ваш сонар будет отслеживать истинное местанахождение противника еще <<sonar>> раундов</font>'
 if GraveDog=100:'<font color=green>Энергия могильной собаки <<GraveDogPower>>, максимально возможная энергия <<GraveDogPowerM>></font>'
 if defence>0:'<font color=green>Физическая защита <<defence>> едениц</font>'
@@ -42,7 +42,7 @@ if VoronKlon>0:'У вас задействована сила вороньего
 if round>=5 and cooldowngostbody>0 and spGhostBodyMal>=100 and cooldowngostbody>=round:'<font color=red>Скилл призрачного тела еще не восстановился</font>'
 if cooldownSpell>0:'<font color=red>Вы не можете применять высшие заклинания еще <<cooldownSpell>> ходов</font>'
 
-'<<$namev>> уровень <<lvlv>> здоровье <font color=red><B><<healthV>></B></font> мана <font color=blue><B><<mannaV>></B></font> сила воли <font color=green><B><<wipoV>></B></font>'
+'<<$namev>> уровень <<lvlv>> здоровье <font color=red><B><<healthV>></B></font> мана <font color=blue><B><<mannaV>></B></font> сила воли <font color=green><B><<WillPowerV>></B></font>'
 if levitationV>0:'<font color=red><<$namev>> летает над вами</font>'
 if tentakNumber>0:'<font color=red>У чудовища <<tentakNumber>> действующих щупалец</font>'
 if defenceV>0:'<font color=red>Физическая защита <<defencev>> едениц</font>'
@@ -87,7 +87,7 @@ if gribspordead>0:
      gribspordead+=1
      health=-1000
      manna=-1000
-     wipo=-1000
+     WillPower=-1000
      realDead=1
      '<font color=red>Грибные споры прогрызли ваш череп и разрывают ваш мозг в клочья.</font>'
          act 'Корчится в агонии':
@@ -100,7 +100,7 @@ if gribspordead>0:
      gribspordead+=1
      health-=1500
      manna-=1500
-     wipo-=1500
+     WillPower-=1500
      blood+=100
      '<font color=red>Вы просто комок кровоточащей боли, на вас нет живого места, грибные споры начинают пробивать ваши кости прорастая сквозь них.</font>'
      end
@@ -108,7 +108,7 @@ if gribspordead>0:
      gribspordead+=1
      health-=1000
      manna-=1000
-     wipo-=1000
+     WillPower-=1000
      blood+=50
      '<font color=red>Грибные споры буквально разрывают вас из нутри, из открытых, кровоточащих рваных ран торчат нитевидные споры разрастающиеся прямо на глазах</font>'
      end
@@ -116,7 +116,7 @@ if gribspordead>0:
      gribspordead+=1
      health-=800
      manna-=800
-     wipo-=800
+     WillPower-=800
      blood+=10
      '<font color=red>Ваша кожа начинает лопаться и из кровоточащих ран видны нитевидные белые отростки</font>'
      end
@@ -124,14 +124,14 @@ if gribspordead>0:
      gribspordead+=1
      health-=500
      manna-=500
-     wipo-=500
+     WillPower-=500
      '<font color=red>Страшная боль раздирает вас</font>'
      end
      if gribspordead=4:
      gribspordead+=1
      health-=300
      manna-=300
-     wipo-=300
+     WillPower-=300
      '<font color=red>Боль распросраняется по всему телу</font>'
      end
      if gribspordead=3:
@@ -304,8 +304,8 @@ end
 
 
 
-if wipo<=0:wipo=0&manna=manna/2&'<font color=red>Из-за потери воли вы не можете удержать магическую энергию и половина ее просто исчезает.</font>'
-if wipov<=0:wipov=0&mannav=mannav/2&'<font color=green><<$namev>> из-за потери воли не может удержать магическую энергию и половина ее просто исчезает.</font>'
+if WillPower<=0:WillPower=0&manna=manna/2&'<font color=red>Из-за потери воли вы не можете удержать магическую энергию и половина ее просто исчезает.</font>'
+if WillPowerv<=0:WillPowerv=0&mannav=mannav/2&'<font color=green><<$namev>> из-за потери воли не может удержать магическую энергию и половина ее просто исчезает.</font>'
 
 if defence>manna*10:defence=defence-100&health=health-10&'<font color=red>Физическая защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
 if defenceT>manna*10:defenceT=defenceT-100&health=health-10&'<font color=red>Температурная защита слишком велика для вашей энергии, вы не в состоянии ее удержать и защита разламывается нанося урон здоровью.</font>'
@@ -451,7 +451,7 @@ $rascheturona={
          '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damagev>></font>'
          damagev=0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<=0 or PWillPower<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end
@@ -503,7 +503,7 @@ $rascheturonaT={
          '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damagetv>></font>'
          damageTv=0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<=0 or PWillPower<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end
@@ -542,7 +542,7 @@ $rascheturonaTV={
          '<font color=#cd00cd>Вы нанесли урон здоровью помощника противника <<damaget>></font>'
          damageT=0
          end
-         if Phealthv<=0 or Pwipov<=0 or pmannav<=0:
+         if Phealthv<=0 or PWillPowerv<=0 or pmannav<=0:
          dynamic $prizivNillv
          end
      end
@@ -581,7 +581,7 @@ $rascheturonaW={
          '<font color=#cd00cd><<$namev>> нанес урон здоровью помощника <<damageWv>></font>'
          damageWv=0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<=0 or PWillPower<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end
@@ -623,17 +623,17 @@ $rascheturonaH={
              if PdefenceH<damageHv and damageHv>0:
              damageHv-=PdefenceH
              PdefenceH=0
-             PWIPO-=damageHv
+             PWillPower-=damageHv
              '<font color=#cd00cd><<$namev>> уничтожил ментальную защиту вашего помощника и нанес урон его воле <<damagehv>></font>'
              damageHv=0
              end
          end
          if PdefenceH<=0 and damageHv>0:
-         PWIPO-=damageHv
+         PWillPower-=damageHv
          '<font color=#cd00cd><<$namev>> нанес урон воле помощника <<damagehv>></font>'
          damageHv=0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<=0 or PWillPower<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end
@@ -645,10 +645,10 @@ $rascheturonaH={
          else
          damageHV-=GraveDogPower
          GraveDogPower=0
-         WIPO=WIPO-damageHV
+         WillPower=WillPower-damageHV
          end
      else
-     WIPO=WIPO-damageHV
+     WillPower=WillPower-damageHV
      end
 }
 $rascheturonaHV={
@@ -659,10 +659,10 @@ $rascheturonaHV={
          else
          damageH-=GraveDogPowerv
          GraveDogPowerv=0
-         WIPOV=WIPOV-damageH
+         WillPowerV=WillPowerV-damageH
          end
      else
-     WIPOV=WIPOV-damageH
+     WillPowerV=WillPowerV-damageH
      end
 }
 $rascheturonaM={
@@ -686,7 +686,7 @@ $rascheturonaM={
          '<font color=#cd00cd><<$namev>> нанес урон мане помощника <<damageMv>></font>'
          damageMv=0
          end
-         if Phealth<=0 or Pwipo<=0 or pmanna<=0:
+         if Phealth<=0 or PWillPower<=0 or pmanna<=0:
          dynamic $prizivNill
          end
      end

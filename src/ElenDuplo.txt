@@ -70,7 +70,7 @@ cla
 clr
 gs'stat'
 gem-=25
-if ElenDuploSex=0:ElenDuploSex=1&girl+=1
+if ElenDuploSex=0: ElenDuploSex = 1 & count['girl'] += 1
 sexm+=1
 horny=0
 '<center><img src="pic/EvedonKD/hand.jpg" ></center>'
@@ -90,7 +90,7 @@ cla
 clr
 gs'stat'
 gem-=50
-if ElenDuploSex=0:ElenDuploSex=1&girl+=1
+if ElenDuploSex=0: ElenDuploSex = 1 & count['girl'] += 1
 sexm+=1
 horny=0
 manna+=500
@@ -111,11 +111,11 @@ cla
 clr
 gs'stat'
 gem-=100
-if ElenDuploSex=0:ElenDuploSex=1&girl+=1
+if ElenDuploSex=0: ElenDuploSex = 1 & count['girl'] += 1
 sexm+=1
 horny=0
 manna+=500
-wipo+=500
+WillPower+=500
 '<center><img src="pic/EvedonKD/sex.jpg" ></center>'
 'Вы зашли в переулок и Элен показала вам матрас куда лечь, вы легли на него и она сняв юбку и достав ваш член уселась на вас введя в себя ваш <<penis>> сантиметровый член. Она начала прыгать и елозить на вас и вскоре вы не выдержали и кончили.'
 

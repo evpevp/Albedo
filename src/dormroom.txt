@@ -22,7 +22,7 @@ LCOLOR = rgb(106,90,205)
 
 'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
 'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
-'Резной <a href="exec:GT ''lokerW''">шкаф</a>.'
+'Резной <a href="exec:GT ''lockerW''">шкаф</a>.'
 'Уютный <a href="exec:GT ''divanW''">диван</a>.'
 if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
 if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'

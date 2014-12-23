@@ -14,7 +14,7 @@ $locBed = $CURLOC
 clr
 gs'stat'
 'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
-'Резной <a href="exec:GT ''lokerW''">шкаф</a> из красного дерева.'
+'Резной <a href="exec:GT ''lockerW''">шкаф</a> из красного дерева.'
 'Уютный <a href="exec:GT ''divanW''">диван</a> обитый дорогой тканью.'
 if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
 

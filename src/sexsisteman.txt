@@ -17,7 +17,7 @@ act 'Пожалуй я воздержусь':GOTO $locFuck, $metkaFuck
 		 act 'Оплатить 200 гемов':
 		 gem-=200
 		 neymanQW+=1
-		 if ShlendraSex=0:ShlendraSex=1&girl+=1
+		 if ShlendraSex=0: ShlendraSex = 1 & count['girl'] += 1
 		 gt'sexsisteman','vibor'
 		 end
      end

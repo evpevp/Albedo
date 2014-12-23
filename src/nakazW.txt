@@ -41,7 +41,7 @@ vorknife=0
      pilloryG=1
      pillhour=24
      health=health/2
-     wipo=wipo/2
+     WillPower=WillPower/2
      manna=0
      V_Roziske=0
      if OrdenRang>0:OrdenRang=-1
@@ -72,7 +72,7 @@ if crime=1 and pilloryG=1 and pillhour>0:
          if pilaktrand >=50:
          tipnakran=RAND(0,femin+100)
              if tipnakran<femin:
-             wipo=wipo-5
+             WillPower=WillPower-5
              tipsexrand=RAND(0,2)
                  if vagina>0:
                      if tipsexrand=0:

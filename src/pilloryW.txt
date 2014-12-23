@@ -103,7 +103,7 @@ if horny>=50 and penis>0 and pillman=4:
          cla
          *clr
          sexm+=1
-         girl=girl+1
+         count['girl'] += 1
          DOM=DOM+1
          horny=0
          'Вы вставлете в рот <<$pillnames>> свой <<penis>> сантиметровый член. Вы со всей силы трахаете рот <<$pillnames>>, пока не кончили ей в рот.'
@@ -114,7 +114,7 @@ if horny>=50 and penis>0 and pillman=4:
          cla
          *clr
          sexm+=1
-         girl=girl+1
+         count['girl'] += 1
          DOM=DOM+1
          horny=0
          'Вы вставляете свой <<penis>> сантиметровый член в анус <<$pillnames>>. Вы стали неспеша сношать анус <<$pillnames>>, пока не кончили внутрь.'
@@ -125,7 +125,7 @@ if horny>=50 and penis>0 and pillman=4:
          cla
          *clr
          sexm+=1
-         girl=girl+1
+         count['girl'] += 1
          DOM=DOM+1
          horny=0
          'Вы вставляете в <<$pillnamess>> свой <<penis>> сантиметровый член. Вы начинаете сношать <<$pillnamess>>, пока не кончаете ей внутрь.'

@@ -13,7 +13,7 @@ willv=10
 program=0
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if numrand=1:
@@ -28,7 +28,7 @@ willv=10
 program=1
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if numrand=2:
@@ -43,7 +43,7 @@ willv=10
 program=0
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if numrand=3:
@@ -58,7 +58,7 @@ willv=10
 program=0
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if numrand=4:
@@ -73,7 +73,7 @@ willv=10
 program=0
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 if numrand=5:
@@ -88,7 +88,7 @@ willv=70
 program=6
 healthV=vitalV*10
 mannaV=intelV*10
-wipoV=willV*10
+WillPowerV=willV*10
 end
 
 !Могол, Калач, Пистон, Поп, Окунь шестерка

@@ -36,7 +36,7 @@ if hour>=6 and hour<=23:
 		 gem=gem-50
 		 health=vital*10
          manna=intel*10+intel*magika
-         wipo=will*10
+         WillPower=will*10
          '<center><img src="pic/EvedonNarod/gilbertus.jpg" ></center>'
 		 'Вы отдали 50 гемов Гилбертусу и он дал вам какую-то микстуру с отвратительным запахом. Но после того как вы ее выпили, вам стало хорошо.'
 		 act 'Уйти':gt $CURLOC

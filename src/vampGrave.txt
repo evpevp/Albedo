@@ -19,7 +19,7 @@ LCOLOR = rgb(106,90,205)
 *nl
 
 '<a href="exec:GT ''bed''">спать</a>.'
-'<a href="exec:GT ''lokerW''">одежда</a>.'
+'<a href="exec:GT ''lockerW''">одежда</a>.'
 
 
 if slot=0:

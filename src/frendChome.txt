@@ -14,7 +14,7 @@ $manitogiC={
 		 frendC+=10
 			 act 'Идти к ней домой':
 			 $namev=$namefrendC
-			 if Csex=0:Csex=1&girl+=1
+			 if Csex=0: Csex=1 & count['girl'] += 1
 			 pointSS=0
 			 SexStatC=1
 			 gt'sexsisteman','vibor'
@@ -36,7 +36,7 @@ $manitogiC={
 		 frendC+=10
 			 act 'Идти к ней домой':
 			 $namev=$namefrendC
-			 if Csex=0:Csex=1&girl+=1
+			 if Csex=0: Csex=1 & count['girl'] += 1
 			 pointSS=0
 			 SexStatC=1
 			 gt'sexsisteman','vibor'
@@ -171,7 +171,7 @@ act 'Уйти (5 мин)':frendC-=1&minut=minut+5&gt'slumsW'
 				 '<<$namefrendC>> воодушевлена и тянет вас в койку.'
 					 act 'Секс':
 					 $namev=$namefrendC
-					 if Csex=0:Csex=1&girl+=1
+					 if Csex=0: Csex = 1 & count['girl'] += 1
 					 pointSS=0
 					 SexStatC=1
 					 gt'sexsisteman','vibor'

@@ -348,7 +348,7 @@ $loc = $CURLOC
 		 set benz = benz - 4
 		 set teh = teh - RAND(2,6)
 		 set manna = manna + 20
-		 wipo=wipo+10
+		 WillPower=WillPower+10
 		 'Вы выезжаете на трассу и лихачите, развлекаясь, потом поворачиваете обратно.'
 		 xgt'car','salon'
 		 end

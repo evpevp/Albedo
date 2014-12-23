@@ -69,7 +69,7 @@ act 'Отойти от стойки':gt'foTraktir'
 		 alko=alko+2
 		 golod=golod+3
 		 manna=manna+10
-		 wipo=wipo+10
+		 WillPower=WillPower+10
 		 horny=horny+5
 		 'Трактирщик достал вам глиняную кружку наполненную пенящимся пивом и вы быстренько ее выпили.'
 		 act 'Отойти от стойки':gt $CURLOC
@@ -83,7 +83,7 @@ act 'Отойти от стойки':gt'foTraktir'
 		 gem=gem-10
 		 alko=alko+5
 		 manna=manna+20
-		 wipo=wipo+20
+		 WillPower=WillPower+20
 		 horny=horny+10
 		 'Трактирщик достал вам глиняный стакан наполненный вонючим пойлом, вы залпом его выпили.'
 		 act 'Отойти от стойки':gt $CURLOC

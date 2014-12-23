@@ -64,11 +64,11 @@ if spElfDefManna<100:spElfDefManna=100
      
      end
      
-     if elvenmeditation<=0 and wipo>=100 and spellElf3>=100:
+     if elvenmeditation<=0 and WillPower>=100 and spellElf3>=100:
          act 'Призыв сил природы (100 воли)':
          cla
          elvenmeditation=1
-         wipo-=100
+         WillPower-=100
          cooldown+=5
          '<font color=green>Вы начали медитацию стараясь соединится с силами природы и увеличить свою ману.</font>'
          xgt'fight','1'
@@ -95,7 +95,7 @@ if spElfDefManna<100:spElfDefManna=100
 			 pwill=1000
 			 Phealth=pvital*10
 			 pmanna=pintel*10
-			 pwipo=pwill*10
+			 pWillPower=pwill*10
 			 prizivProgram=2
 			 xgt'fight','1'
 			 end
@@ -141,7 +141,7 @@ if spElfDefManna<100:spElfDefManna=100
          cla
          manna-=5000
          horny=0
-         wipo=will*10
+         WillPower=will*10
          '<font color=green>Вы собираете энергию и восстанавливаете волю.</font>'
          xgt'fight','1'
          end

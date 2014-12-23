@@ -56,7 +56,7 @@ dynamic $rascheturonav
 '<font color=green>Вы нанесли <B><<damage>></B> едениц урона противнику</font>'
 damage=0
      if shokdam>0 and damage>0:
-     wipov=wipov-shokdam
+     WillPowerv=WillPowerv-shokdam
      '<font color=green>Электроудар нанес воле противника <B><<shokdam>></B> едениц урона</font>'
      shokdam=0
      end
@@ -83,7 +83,7 @@ if defencev>0 and damage>0:
 		 '<font color=green>ЗАЩИТА ПРОТИВНИКА УНИЧТОЖЕНА</font>'
 		 '<font color=green>Вы нанесли <B><<damage>></B> едениц урона</font>'
 			 if shokdam>0 and damage>0:
-			 wipov=wipov-shokdam
+			 WillPowerv=WillPowerv-shokdam
 			 '<font color=green>Электроудар нанес воле противника <B><<shokdam>></B> едениц урона</font>'
 			 shokdam=0
 			 end

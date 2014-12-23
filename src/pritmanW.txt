@@ -30,7 +30,7 @@ if gem>=1:
      alko=alko+2
      golod=golod+2
      manna=manna+5
-     wipo=wipo+5
+     WillPower=WillPower+5
      horny=horny+5
      *clr
      '<center><img src="pic/EvedonOd/beer.jpg"></center>'
@@ -46,7 +46,7 @@ if gem>=3:
      gem=gem-3
      alko=alko+5
      manna=manna+10
-     wipo=wipo+10
+     WillPower=WillPower+10
      horny=horny+10
      *clr
      '<center><img src="pic/EvedonOd/wiskey.jpg"></center>'

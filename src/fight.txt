@@ -15,7 +15,7 @@ VibroTravma=VibroTravma*VibroTravma
 '<B><font color=red>Внутри все горит и страшная боль не дает вам двигатся.</font></B>'
 health-=VibroTravma*VibroTravma
 manna-=(VibroTravma*VibroTravma)*2
-wipo-=VibroTravma*VibroTravma
+WillPower-=VibroTravma*VibroTravma
 '<B><font color=red>Боль наносит урон вашему здоровью в <<VibroTravma*VibroTravma>> едениц.</font></B>'
 end
 
@@ -26,7 +26,7 @@ VibroTravmaV=VibroTravmaV*VibroTravmaV
 '<B><font color=green><<$namev>> скрючился от боли. Кажется у него разорваны внутренности</font></B>'
 healthv-=VibroTravmav*VibroTravmav
 mannav-=(VibroTravmav*VibroTravmav)*2
-wipov-=VibroTravmav*VibroTravmav
+WillPowerv-=VibroTravmav*VibroTravmav
 end
 
 if elektroluza>0:
@@ -147,10 +147,10 @@ dynamic $battlemain
 				 xgt'fight','1'
 				 end
 			 end
-			 if wipo>=50:
+			 if WillPower>=50:
 			 	 act 'Молитва в тени МАРПЕОЗЫ (50 воли)':
 				 cla
-				 wipo-=50
+				 WillPower-=50
 				 manna+=1000
 				 xgt'fight','1'
 				 end
@@ -180,10 +180,10 @@ dynamic $battlemain
          end
          
          if elvenmeditation>0:
-             if wipo>=500:
+             if WillPower>=500:
 				 act 'Призывать силу природы (500 воли)':
 				 cla
-				 wipo-=500
+				 WillPower-=500
 				 elvenmeditation+=1
 					 if elvenmeditation>=3:
 					 manna=manna*2
@@ -230,7 +230,7 @@ dynamic $battlemain
 				 act 'Поток управления существом (1000 вашей маны даст 1000 воли существу)':
 				 cla
 				 manna-=1000
-				 pwipo+=1000
+				 pWillPower+=1000
 				 '<B><font color=green>Вы передали энергию своему помощнику</font></B>'
 				 xgt'fight','1'
 				 end
@@ -310,7 +310,7 @@ dynamic $battlemain
 				 act 'ШКОЛА ДОМИНИКИ':gt'spDominik'
 			 end
 			 
-			 if tai>=100 and wipo>=10:
+			 if tai>=100 and WillPower>=10:
 			     act 'ШКОЛА МИМИКО':gt'spMimiko'
 			 end
 			 
@@ -383,9 +383,9 @@ dynamic $battlemain
 			 xgt'fight','1'
 			 end
 			 
-			 if stileMark=7 and weapon=1 and wipo>=50 and spSwordDancer>=100:
+			 if stileMark=7 and weapon=1 and WillPower>=50 and spSwordDancer>=100:
 			     act 'Танец мечей (50 воли)':
-			     wipo=wipo-50
+			     WillPower=WillPower-50
 			     conterBat=2
 				 countBatRound=round
 				 conterBatTime=3
@@ -406,7 +406,7 @@ dynamic $battlemain
 			 
 			 if shild>0 and stileMark=7:
 			     act 'Закрыватся щитом (10 воли)':
-			     wipo=wipo-10
+			     WillPower=WillPower-10
 				 stileMark=6
 				 stile=3
 				 bronik=armorDef+ShilDef
@@ -423,7 +423,7 @@ dynamic $battlemain
              cursedTime=1
              health=vital*10
 			 manna=intel*10+intel*magika
-			 wipo=will*10
+			 WillPower=will*10
 			 horny=0
 			 
 			 'Вы активировали печать Оротимару на шее и почувствовали как чужая сила полностью восстанавливает организм.'
@@ -437,7 +437,7 @@ dynamic $battlemain
              cursedTime=2
              health=(vital*10)*2
 			 manna=(intel*10+intel*magika)*2
-			 wipo=(will*10)*2
+			 WillPower=(will*10)*2
 			 horny=0
 			 if filosofkam=0:vidage = vidage + 1
 			 'Вы активировали печать Оротимару на шее и почувствовали как чужая сила полностью восстанавливает организм и укрепляет его.'
@@ -460,7 +460,7 @@ dynamic $battlemain
 			 will=will+cursedExp
 			 health=(vital*10)*2
 			 manna=(intel*10+intel*magika)*2
-			 wipo=(will*10)*2
+			 WillPower=(will*10)*2
 			 if filosofkam=0:vidage = vidage + 2
 			 'Вы активировали печать Оротимару на шее и почувствовали как чужая сила охватывает тело придавая ему не бывалую мощь.'
 			 xgt'fight','1'
@@ -623,10 +623,10 @@ dynamic $battlemain
              end
          end
          
-         if boxingStile >= 100 and stileMark = 0 and wipo>10:
+         if boxingStile >= 100 and stileMark = 0 and WillPower>10:
          	 act 'Применить стиль бокса (10 воли)':
 			 '<B><font color=green>Вы применили СТИЛЬ БОКСА</font></B>'
-			 wipo=wipo-10
+			 WillPower=WillPower-10
 			 stileMark=2
 			 stile=3
 			 agil=agil+40
@@ -639,10 +639,10 @@ dynamic $battlemain
 			 end
          end
          
-         if stileMark = 2 and wipo>=50 and boxingFint>=100:
+         if stileMark = 2 and WillPower>=50 and boxingFint>=100:
              act 'Применять финты (50 воли)':
 			 '<B><font color=green>Вы применили ФИНТЫ</font></B>'
-			 wipo=wipo-50
+			 WillPower=WillPower-50
 			 fint=fint+3
 			 tipatk=1
 			 '<font color=green>Вы бьете джеб</font>'
@@ -652,10 +652,10 @@ dynamic $battlemain
 			 end
          end
          
-         if stileMark = 2 and wipo>=50 and boxingPow>=100:
+         if stileMark = 2 and WillPower>=50 and boxingPow>=100:
              act 'Нанести силовой удар (50 воли)':
 			 '<B><font color=green>Вы нанесли СИЛОВОЙ УДАР</font></B>'
-			 wipo=wipo-50
+			 WillPower=WillPower-50
 			 stren=stren+40
 			 stunMark=1
 			 tipatk=1
@@ -665,10 +665,10 @@ dynamic $battlemain
 			 end
          end
          
-         if stileMark = 2 and wipo>=50 and boxingSeria>=100:
+         if stileMark = 2 and WillPower>=50 and boxingSeria>=100:
              act 'Нанести серию ударов (50 воли)':
 			 '<B><font color=green>Вы нанесли СЕРИЮ УДАРОВ</font></B>'
-			 wipo=wipo-50
+			 WillPower=WillPower-50
 			 !stren=stren+40
 			 !stunMark=1
 			 tipatk=1
@@ -725,11 +725,11 @@ dynamic $battlemain
 			 xgt'fight','1'
 			 end
 		 end
-		 if tigerWill >= 100 and wipo>=50 and stileMark=1:
+		 if tigerWill >= 100 and WillPower>=50 and stileMark=1:
 		 	 act 'Воля тигра регенирирует ману и здоровье(50 воли)':
 			 manna=manna+100
 			 health=health+100
-			 wipo=wipo-50
+			 WillPower=WillPower-50
 			 '<B><font color=green>Вы применили ВОЛЮ ТИГРА</font></B>'
 			 xgt'fight','1'
 			 end
@@ -766,10 +766,10 @@ dynamic $battlemain
          end
      end
      
-     if world=1 and wipo>=10 and NORUN=0 and stun=0 and stupor=0:
+     if world=1 and WillPower>=10 and NORUN=0 and stun=0 and stupor=0:
          act 'Попытаться сбежать (10 воли)':
          cla
-         wipo=wipo-10
+         WillPower=WillPower-10
          beg=beg+1
              if speed<speedv:
              'Бесполезно, <<$namev>> слишком быстрый для вас.'
@@ -867,7 +867,7 @@ wepAtkV=0
 		 if OtradStraga=0:
 		 healthV=vitalV*10
 		 mannaV=intelV*10+intelV*5
-		 wipoV=willV*10
+		 WillPowerV=willV*10
 		 blood=0
 		 end
 		 if OtradStraga=1:
@@ -964,7 +964,7 @@ wepAtkV=0
      tentakNumber=tentakNumber-1
      healthV=vitalV*10
 	 mannaV=intelV*10+intelV*5
-	 wipoV=willV*10
+	 WillPowerV=willV*10
 	 blood=0
 	 'Чудовище страшно завопило потеряв щупальце.'
      act 'Далее':gt'fight','0'

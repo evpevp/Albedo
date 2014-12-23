@@ -22,7 +22,7 @@ bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
 'Застеленная, чистая <a href="exec:GT ''bed''">кровать</a>.'
 'Большая деревянная кадушка <a href="exec:GT ''kadka''">для мытья</a>.'
-'Резной <a href="exec:GT ''lokerW''">шкаф</a> из красного дерева.'
+'Резной <a href="exec:GT ''lockerW''">шкаф</a> из красного дерева.'
 'Уютный <a href="exec:GT ''divanW''">диван</a> обитый дорогой тканью.'
 if mirr>0:'<a href="exec:GT ''mirrW''">Зеркало</a>'
 if brakW>0:'<a href="exec:GT ''marryWorld''"><<$namefrendM>></a>'
@@ -47,7 +47,7 @@ if edaWF>0 and drova>0:
 	 edaWF=edaWF-1
 	 drova=drova-1
 	 manna=manna+20
-	 wipo=wipo+20
+	 WillPower=WillPower+20
 	 gs'eda'
 	 'Вы истопили очаг дровами и поставили еду на огонь, через полчаса все было готово и вы приступили к трапезе.'
 	 gs'eat'

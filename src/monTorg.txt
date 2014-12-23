@@ -40,7 +40,7 @@ if gem>=3000:
 	 minut=minut+1440
 	 gs'stat'
 	 golod=15
-	 son=20
+	 freshness=20
 	 horny=0
 	 cla
 	 *clr
