@@ -1,9 +1,9 @@
 # игркарт1
-!by Master Set (blakarchont@gmail.com)
+!by Master (blakarchont@gmail.com)
 !НАЧАЛО ИГРЫ 
 clr
 gs'stat'
-set minut=minut + 5
+minut=minut + 5
 IF turn = 0:
  CLA
  '<right><img src="pic/casino/stavkabd.jpg" ></right>'
@@ -22,7 +22,7 @@ ACT 'Сделать ставку':
 	 msg 'Максимальная ставка 1000 рублей.'
 	 gt 'игркарт1'
    end
-   set money = money - deal
+   money = money - deal
    turn = 1
    GT 'игркарт1'
 END
@@ -78,7 +78,7 @@ IF turn = 1:
   'БЛЭК ДЖЕК!!!'
   prise = deal*3
   ACT 'Забрать выигрыш <<prise>> руб.':
-   set money = money + prise
+   money = money + prise
    turn = 0
    GT 'игркарт1'  
   END
@@ -246,7 +246,7 @@ IF turn = 3:
   IF d_points = p_points:
    'Ничья'
    ACT 'Забрать ставку':
-    set money = money + deal
+    money = money + deal
     turn = 0
     GT 'игркарт1'
    END      
@@ -255,7 +255,7 @@ IF turn = 3:
    'Игрок выиграл'
    prise = deal*2   
    ACT 'Забрать выигрыш <<prise>> руб.':
-    set money = money + prise
+    money = money + prise
     turn = 0
     GT 'игркарт1'
    END      
@@ -285,7 +285,7 @@ IF turn = 3:
    IF d_points = p_points:
     'Ничья'
     ACT 'Забрать ставку':
-     set money = money + deal
+     money = money + deal
      turn = 0
      GT 'игркарт1'
     END      
@@ -294,7 +294,7 @@ IF turn = 3:
     'Игрок выиграл'
     prise = deal*2   
     ACT 'Забрать выигрыш <<prise>> руб.':
-     set money = money + prise
+     money = money + prise
      turn = 0
      GT 'игркарт1'
     END      
@@ -311,7 +311,7 @@ IF turn = 3:
    'Игрок выиграл'
    prise = deal*2   
    ACT 'Забрать выигрыш <<prise>> руб.':
-    set money = money + prise
+    money = money + prise
     turn = 0
     GT 'игркарт1'
    END      

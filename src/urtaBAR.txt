@@ -5,7 +5,7 @@ $loc = $CURLOC
 cla
 *clr
 '<center><img src="pic/EvedonNarod/urta.jpg"></center>'
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 'Вы сели за стол к Урте. И она предложила вам выпить.'
@@ -18,7 +18,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 !уже пил с Уртой
@@ -30,7 +30,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 !Урта в стельку
@@ -45,7 +45,7 @@ cla
 alko=alko+10
 manna=manna+20
 WillPower=WillPower+20
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 !пить с уртой
@@ -75,7 +75,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 'Урта бросила монету трактирщице и повела вас к себе домой. Идти оказалось недалеко. Оглядев ее комнату вы заметили как у нее грязно и захламлено. Вероятно у нее редко бывают гости, да и она не склонна к уборке.'
@@ -96,7 +96,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 '<center><img src="pic/EvedonNarod/urta.jpg"></center>'
@@ -111,7 +111,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
  under_table=under_table+1
@@ -135,7 +135,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
  utrand=RAND(0,100)
@@ -158,7 +158,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 
@@ -170,7 +170,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 
@@ -182,7 +182,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 

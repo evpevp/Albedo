@@ -5,11 +5,11 @@
 if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
-if albinasex=0:set albinasex=1&set count['girl'] = count['girl'] + 1
-set sexm=sexm+1
+if albinasex=0:albinasex=1&count['girl'] = count['girl'] + 1
+sexm=sexm+1
 '<center><img src="pic\fam\albinasex.jpg" ></center>'
 '(Альбина) - Ну что, развлечемся?'
      act 'Предоставить инициативу':gt'albinasex','1'
@@ -19,7 +19,7 @@ end
 if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\Albina_lick_1.gif" ></center>'
@@ -31,7 +31,7 @@ end
 if $ARGS[0]='11':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\albpass1.jpg" ></center>'
@@ -43,7 +43,7 @@ end
 if $ARGS[0]='12':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\Albina_bj_2.gif" ></center>'
@@ -55,7 +55,7 @@ end
 if $ARGS[0]='13':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -68,7 +68,7 @@ end
 if $ARGS[0]='14':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 sweat=sweat+5
 horny=0
 manna=manna+50
@@ -84,7 +84,7 @@ end
 if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\Albina_bj_1.gif" ></center>'
@@ -105,7 +105,7 @@ end
 if $ARGS[0]='3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 sweat=sweat+5
 horny=0
 manna=manna+50
@@ -119,7 +119,7 @@ end
 if $ARGS[0]='4':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -132,7 +132,7 @@ end
 if $ARGS[0]='40':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\Albina_fingering_1.gif" ></center>'
@@ -143,7 +143,7 @@ end
 if $ARGS[0]='41':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -156,7 +156,7 @@ end
 if $ARGS[0]='42':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -169,7 +169,7 @@ end
 if $ARGS[0]='43':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -182,7 +182,7 @@ end
 if $ARGS[0]='44':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 sweat=sweat+5
 horny=0
 manna=manna+50
@@ -198,7 +198,7 @@ end
 if $ARGS[0]='5':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\albpass1.jpg" ></center>'
@@ -220,7 +220,7 @@ end
 if $ARGS[0]='6':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\Albinafuck_11.gif" ></center>'
@@ -231,7 +231,7 @@ end
 if $ARGS[0]='60':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\Albina_anal.gif" ></center>'
@@ -242,7 +242,7 @@ end
 if $ARGS[0]='61':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\Albina_anal_1.gif" ></center>'
@@ -253,7 +253,7 @@ end
 if $ARGS[0]='62':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\Albina_anal_3.gif" ></center>'
@@ -264,7 +264,7 @@ end
 if $ARGS[0]='63':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 sweat=sweat+5
 horny=0
 manna=manna+150

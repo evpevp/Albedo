@@ -2,7 +2,7 @@
 *P '<right><img src="pic/casino/resul.jpg" ></right>'
 clr
 gs'stat'
-set minut=minut + 5
+minut=minut + 5
 
 x_rul=100
 x_rul=rand(0,36)
@@ -22,7 +22,7 @@ if кч!0:
 		'1'
 		if x_rul=1 or x_rul=3 or x_rul=5 or x_rul=7 or x_rul=9 or x_rul=12 or x_rul=14 or x_rul=16 or x_rul=18 or x_rul=19 or x_rul=21 or x_rul=23 or x_rul=25 or x_rul=27 or x_rul=30 or x_rul=32 or x_rul=34 or x_rul=36:
 			act 'Вы выиграли <<2*st_1>>':
-				set money=money+2*st_1
+				money=money+2*st_1
 				gt 'амрул'
 			end
 		else
@@ -35,7 +35,7 @@ if кч!0:
 		if x_rul=2 or x_rul=4 or x_rul=6 or x_rul=8 or x_rul=10 or x_rul=11 or x_rul=13 or x_rul=15 or x_rul=17 or x_rul=20 or x_rul=22 or x_rul=24 or x_rul=26 or x_rul=28 or x_rul=29 or x_rul=31 or x_rul=33 or x_rul=35:
 			cla
 			act 'Вы выиграли <<2*st_1>>':
-				set money=money+2*st_1
+				money=money+2*st_1
 				gt 'амрул'
 			end
 		else
@@ -52,7 +52,7 @@ if чнч!0:
 		if x_rul mod 2=0:
 			cla
 			act 'Вы выиграли <<2*st_1>>':
-				set money=money+2*st_1
+				money=money+2*st_1
 				gt 'амрул'
 			end
 		else
@@ -67,7 +67,7 @@ if чнч!0:
 		if x_rul mod 2=1:
 			cla
 			act 'Вы выиграли <<2*st_1>>':
-				set money=money+2*st_1
+				money=money+2*st_1
 				gt 'амрул'
 			end
 		else
@@ -85,7 +85,7 @@ if мб!0:
 		if x_rul>0 and x_rul<19:
 			cla
 			act 'Вы выиграли <<2*st_1>>':
-				set money=money+2*st_1
+				money=money+2*st_1
 				gt 'амрул'
 			end
 		else
@@ -100,7 +100,7 @@ if мб!0:
 		if x_rul>18 and x_rul<37:
 			cla
 			act 'Вы выиграли <<2*st_1>>':
-				set money=money+2*st_1
+				money=money+2*st_1
 				gt 'амрул'
 			end
 		else
@@ -117,7 +117,7 @@ if дю!0:
 		if x_rul>0 and x_rul<13:
 			cla
 			act 'Вы выиграли <<3*st_1>>':
-				set money=money+3*st_1
+				money=money+3*st_1
 				gt 'амрул'
 			end
 		else
@@ -132,7 +132,7 @@ if дю!0:
 		if x_rul>12 and x_rul<25:
 			cla
 			act 'Вы выиграли <<3*st_1>>':
-				set money=money+3*st_1
+				money=money+3*st_1
 				gt 'амрул'
 			end
 		else
@@ -147,7 +147,7 @@ if дю!0:
 		if x_rul>24 and x_rul<37:
 			cla
 			act 'Вы выиграли <<3*st_1>>':
-				set money=money+3*st_1
+				money=money+3*st_1
 				gt 'амрул'
 			end
 		else
@@ -164,7 +164,7 @@ if ряд!0:
 		if x_rul=1 or x_rul=4 or x_rul=7 or x_rul=10 or x_rul=13 or x_rul=16 or x_rul=19 or x_rul=22 or x_rul=25 or x_rul=28 or x_rul=31 or x_rul=34:
 			cla
 			act 'Вы выиграли <<3*st_1>>':
-				set money=money+3*st_1
+				money=money+3*st_1
 				gt 'амрул'
 			end
 		else
@@ -179,7 +179,7 @@ if ряд!0:
 		if x_rul=2 or x_rul=3 or x_rul=8 or x_rul=11 or x_rul=14 or x_rul=17 or x_rul=20 or x_rul=23 or x_rul=26 or x_rul=29 or x_rul=32 or x_rul=35:
 			cla
 			act 'Вы выиграли <<3*st_1>>':
-				set money=money+3*st_1
+				money=money+3*st_1
 				gt 'амрул'
 			end
 		else
@@ -194,7 +194,7 @@ if ряд!0:
 		if x_rul=3 or x_rul=4 or x_rul=9 or x_rul=12 or x_rul=15 or x_rul=18 or x_rul=21 or x_rul=24 or x_rul=27 or x_rul=30 or x_rul=33 or x_rul=36:
 			cla
 			act 'Вы выиграли <<3*st_1>>':
-				set money=money+3*st_1
+				money=money+3*st_1
 				gt 'амрул'
 			end
 		else
@@ -209,7 +209,7 @@ if чи!100:
 	if чи=x_rul:
 		cla
 		act 'Вы выиграли <<37*st_1>>':
-			set money=money+37*st_1
+			money=money+37*st_1
 			gt 'амрул'
 		end
 	else

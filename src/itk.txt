@@ -47,7 +47,7 @@ gs'stat'
          minut = minut + 60
          hour=7
          minut=0
-         set exp=exp+RAND(1,3)
+         exp=exp+RAND(1,3)
          clr
          gs'stat'
          'Вы выполняете зарядку вместе со всем отрядом под команды вертухая. После зарядки контролер приказал построиться.'
@@ -101,7 +101,7 @@ gs'stat'
 	 'Контролер построил отряды и начал перекличку.'
          act 'Перекличка.':
          cla
-         set minut = minut + 60
+         minut = minut + 60
          hour=18
          minut=0
          clr

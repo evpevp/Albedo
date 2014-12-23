@@ -12,6 +12,6 @@ ACT 'Вернуться в холл':
 END
 clr
 gs'stat'
-set minut=minut + 10
+minut=minut + 10
 --- рулетка ---------------------------------
 

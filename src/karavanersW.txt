@@ -5,7 +5,7 @@ $loc = $CURLOC
 cla
 *clr
 '<center><img src="pic/EvedonNarod/karavanchiki1.jpg"></center>'
-set minut = minut + 15
+minut = minut + 15
 alko=alko+10
 horny=horny+10
 clr
@@ -59,7 +59,7 @@ $loc = $CURLOC
 cla
 *clr
 '<center><img src="pic/EvedonNarod/karavanchiki1.jpg"></center>'
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 '(Караванщик) - Подожди малышка. Даю двести гемов, это последнее предложение!'
@@ -105,7 +105,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 horny=horny+tit
 clr
 gs'stat'
@@ -124,7 +124,7 @@ gs'stat'
          act 'Дальше':
          cla
          *clr
-         set minut = minut + 15
+         minut = minut + 15
          tiprand=RAND(0,2)
              if tiprand=0:
              anal=anal+1
@@ -157,7 +157,7 @@ gs'stat'
              act 'Почистить язычком':
              cla
              *clr
-             set minut = minut + 15
+             minut = minut + 15
              cumlip=cumlip+1
              '<center><img src="pic/EvedonTA/karsex3.jpg" ></center>'
              'Вы взяли начинающий ложится член в рот и стали слизывать сперму.'
@@ -174,7 +174,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 horny=horny+(whore*2)
@@ -255,7 +255,7 @@ gs'stat'
 	 act 'Работать ртом':
 	 cla
 	 *clr
-	 set minut = minut + 15
+	 minut = minut + 15
 	 cumlip=cumlip+4
 	 swallow=swallow+4
 	 bj=bj+4

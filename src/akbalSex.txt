@@ -2,7 +2,7 @@
 if akbalSex=0:akbalSex=1&monst+=1
 skverna=skverna+10
 $namev='Акбал'
-set minut = minut + 15
+minut = minut + 15
 anal+=1
 clr
 gs'stat'

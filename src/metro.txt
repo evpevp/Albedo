@@ -11,19 +11,19 @@ gs'stat'
 fcolor=rgb(0,0,0)
 bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set minut = minut + 15
+minut = minut + 15
      if money >= 16 and hour >= 5 and hour <= 23:
          act 'Оплатить 16 рублей':
          cla
-         set money = money - 16
-         set minut = minut + 15
+         money = money - 16
+         minut = minut + 15
          gt'metro','m1'
          end
      end
      
      act 'Выйти из метро':
      cla
-     set minut = minut + 15
+     minut = minut + 15
      gt'street'
      end
 end
@@ -40,19 +40,19 @@ gs'stat'
 fcolor=rgb(0,0,0)
 bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set minut = minut + 15
+minut = minut + 15
      if money >= 16 and hour >= 5 and hour <= 23:
          act 'Оплатить 16 рублей':
          cla
-         set money = money - 16
-         set minut = minut + 15
+         money = money - 16
+         minut = minut + 15
          gt'metro','m2'
          end
      end
      
      act 'Выйти из метро':
      cla
-     set minut = minut + 15
+     minut = minut + 15
      gt'down'
      end
 end
@@ -69,19 +69,19 @@ gs'stat'
 fcolor=rgb(0,0,0)
 bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set minut = minut + 15
+minut = minut + 15
      if money >= 16 and hour >= 5 and hour <= 23:
          act 'Оплатить 16 рублей':
          cla
-         set money = money - 16
-         set minut = minut + 15
+         money = money - 16
+         minut = minut + 15
          gt'metro','m3'
          end
      end
      
      act 'Выйти из метро':
      cla
-     set minut = minut + 15
+     minut = minut + 15
      gt'nord'
      end
 end
@@ -98,26 +98,26 @@ gs'stat'
 fcolor=rgb(0,0,0)
 bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set metro = 2
+metro = 2
 
      act 'Ехать в центр':
      cla
-     set train = 2
-     set minut = minut + 15
+     train = 2
+     minut = minut + 15
      gt'metro','vagon'
      end
      
      act 'Ехать в северный район':
      cla
-     set train = 3
-     set minut = minut + 15
+     train = 3
+     minut = minut + 15
      gt'metro','vagon'
      end
 
 
      act 'Выйти из метро':
      cla
-     set minut = minut + 15
+     minut = minut + 15
      gt'street'
      end
 end
@@ -164,24 +164,24 @@ gs'stat'
 fcolor=rgb(0,0,0)
 bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set metro = 1
+metro = 1
      act 'Ехать в спальный район':
      cla
-     set train = 1
-     set minut = minut + 15
+     train = 1
+     minut = minut + 15
      gt'metro','vagon'
      end
      
      act 'Ехать в северный район':
      cla
-     set train = 3
-     set minut = minut + 15
+     train = 3
+     minut = minut + 15
      gt'metro','vagon'
      end
 
      act 'Выйти из метро':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'down'
      end
 end
@@ -200,24 +200,24 @@ gs'stat'
 fcolor=rgb(0,0,0)
 bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-set metro = 1
+metro = 1
      act 'Ехать в центр':
      cla
-     set train = 2
-     set minut = minut + 15
+     train = 2
+     minut = minut + 15
      gt'metro','vagon'
      end
      
      act 'Ехать в спальный район':
      cla
-     set train = 1
-     set minut = minut + 15
+     train = 1
+     minut = minut + 15
      gt'metro','vagon'
      end
 
      act 'Выйти из метро':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'nord'
      end
 end

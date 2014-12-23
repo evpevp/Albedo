@@ -1,7 +1,7 @@
 # игркарт2
 clr
 gs'stat'
-set minut=minut + 5
+minut=minut + 5
 
 if turn1 = 0:
 	CLA
@@ -21,7 +21,7 @@ if turn1 = 0:
 			msg 'Максимальная ставка 1000 рублей.'
 			gt 'игркарт1'
 		end
-		set money = money - deal
+		money = money - deal
 		turn1 = 1
 		GT 'игркарт2'
 	END
@@ -41,7 +41,7 @@ if turn1=1:
 			nich=0
 			gt 'игркарт2'
 		end
-		set money=money-deal
+		money=money-deal
 		turn1=2
 		nich=1
 		gt 'игркарт2'
@@ -86,7 +86,7 @@ if turn1=2:
 		' '
 		'Вы выиграли'
 		act 'Вы выиграли <<2*deal>> руб.':
-			set money=money+2*deal
+			money=money+2*deal
 			turn1=0
 			gt 'игркарт2'
 		end
@@ -96,7 +96,7 @@ if turn1=2:
 			' '
 			'Вы выиграли'
 			act 'Вы выиграли <<11*deal>> руб.':
-				set money=money+11*deal
+				money=money+11*deal
 				turn1=0
 				gt 'игркарт2'
 			end
@@ -113,7 +113,7 @@ if turn1=3:
 			msg 'У вас недостаточно денег'
 			gt 'игркарт2'
 		end
-		set money=money-deal
+		money=money-deal
 		CLA
 		'<right><img src="pic/casino/cartcw.jpg" ></right>'
 		' Крупье сдает карты:'
@@ -148,7 +148,7 @@ if turn1=3:
 			' '
 			'Вы выиграли'
 			act 'Вы выиграли <<4*deal>> руб.':
-				set money=money+4*deal
+				money=money+4*deal
 				turn1=0
 				gt 'игркарт2'
 			end
@@ -157,7 +157,7 @@ if turn1=3:
 			' '
 			'Снова ничья'
 			act 'Забрать <<3*deal>> руб.':
-				set money=money+3*deal
+				money=money+3*deal
 				turn1=0
 				gt 'игркарт2'
 			end
@@ -167,7 +167,7 @@ if turn1=3:
 		if deal mod 2=1
 			deal=deal+1
 		end
-		set money=money+deal/2
+		money=money+deal/2
 		gt 'игркарт2'
 	end
 end

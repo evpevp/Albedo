@@ -105,7 +105,7 @@ if innaQW > 30 and innaQW < 100 and innaday ! day:
 							 *clr
 							 '<center><img src="pic\fam\s5dota.jpg" ></center>'
 							 'Не в силах больше терпеть вы вынимаете свой член из киски Инны и извергаете своё семя на попку дочки'
-							 set minut = minut + 45
+							 minut = minut + 45
 							 innavag=1
 							 InnaOrgasmCounter=0
 							 InnaOrgasmQW=rand(10,21)
@@ -136,7 +136,7 @@ if innaQW > 30 and innaQW < 100 and innaday ! day:
 							 manna=manna+25
                              WillPower=WillPower+25
 							 innavag=1
-							 set minut = minut + 30
+							 minut = minut + 30
 							 horny=0
 							 innaday = day
 							 InnaLastFuckDay=day
@@ -159,7 +159,7 @@ if innaQW > 30 and innaQW < 100 and innaday ! day:
 							 manna=manna+25
                              WillPower=WillPower+25
 							 innavag=1
-							 set minut = minut + 30
+							 minut = minut + 30
 							 horny=0
 							 innaday = day
 							 InnaLastFuckDay=day
@@ -170,7 +170,7 @@ if innaQW > 30 and innaQW < 100 and innaday ! day:
 								 picrand=RAND(0,1)
 								 if picrand=0:'<center><img src="pic\fam\innaS1m.jpg" ></center>'
 								 if picrand=1:'<center><img src="pic\fam\innaS2m.jpg" ></center>'
-								 set minut = minut + 10
+								 minut = minut + 10
 								 'Вы: А теперь как следут оближи его'
 								 'Инна: Ну он же грязный...весь в сперме'
 								 'Вы: Ты тоже не очень "чистая", не строй из себя целочку!'
@@ -260,10 +260,10 @@ if innaQW = 100 and innaday ! day:
 			 cla
 			 *clr
 			 horny=0
-			 set sexm=sexm+1
+			 sexm=sexm+1
 			 manna=manna+25
              WillPower=WillPower+25
-			 set minut = minut + 15
+			 minut = minut + 15
 			 InnaLastFuckDay=day
 			 '<center><img src="pic\fam\Bdota.jpg" ></center>'
 			 'Вы предоставили дочке свой член и она незамедлительно взяла его в рот. Опасаясь, что вас могут застукать - вы, не сдерживая себя, быстро кончили ей в ротик.'
@@ -358,7 +358,7 @@ if innaQW=200 and (innaMinDay=day or hour>8):
 							 if InnaAS>0:'...готовь свою попку Инка, папка хочет позабавиться!'
 							 'Инна: хорошо, я поняла...дай мне 20 минут на подготовку'
 							 sexm=sexm+1
-							 set minut = minut+20
+							 minut = minut+20
 							 'Инна ушла в ванну и закрыла дверь. Вы тем временем разделись.'
 							 '<center><img src="pic\fam\DA1.jpg" ></center>'
 							 'Вернувшись - Инна стала на колени и довела ваш член своим ротиком до каменного стояка'
@@ -382,8 +382,8 @@ if innaQW=200 and (innaMinDay=day or hour>8):
 											 *clr
 											 '<center><img src="pic\fam\DAC.jpg" ></center>'
 											 'Достигнув пика наслаждения - вы отправляете поток спермы Инне прямо в попку.'
-											 set minut = minut+25
-											 set sweat= +2
+											 minut = minut+25
+											 sweat= +2
 											 InnaAS=1
 											 manna=manna+25
                                              WillPower=WillPower+25

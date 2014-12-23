@@ -11,7 +11,7 @@ USEHTML = 1
 
 clr
 gs'stat'
-set minut=minut + 10
+minut=minut + 10
 
 !ТЕСТ
 

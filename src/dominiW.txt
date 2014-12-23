@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
 'Вы пришли домой к Доминике, она указала вам на свою кровать.'
 'Доминика получила <<domcum>> порций спермы от вас.'
@@ -30,7 +30,7 @@ $loc = $CURLOC
 cla
 *clr
 '<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
-set minut = minut + 5
+minut = minut + 5
 'Вы пришли домой к Доминике, она указала вам на свою кровать.'
 'Доминика получила <<domcum>> порций спермы от вас.'
 
@@ -57,7 +57,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><img src="pic/EvedonNarod/dominika.jpg"></center>'
 'Доминика разделась обнажив свое тело покрытое замысловатыми татуировками.'
 'Я могу обучать базовой школе магии которая требует только личной силы, да и то не очень большой.'

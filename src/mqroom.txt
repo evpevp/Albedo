@@ -1,7 +1,7 @@
 # mqroom
 clr
 gs'stat'
-set minut=minut + 5
+minut=minut + 5
 
 '<center><img src="pic/casino/oldman1.jpg" ></center>'
 'Вы прошли с Платоном Аристарховичем в его номер, он сел за стол и вы, достав из кармана свиток, положили его перед ним.'

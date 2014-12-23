@@ -4,7 +4,7 @@ cla
 $metka = $ARGS[0]
 $loc = $CURLOC
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><img src="pic\toilet\cabin.jpg" ></center>'
 'Вы слышите какие-то шорохи в одной из кабин ...'
 clr
@@ -15,7 +15,7 @@ LCOLOR = rgb(106,90,205)
 
 	 act 'Выйти с туалета':
 	 cla
-	 set minut = minut + 5
+	 minut = minut + 5
 	 gt'sexshop','podval'
 	 end
 
@@ -29,7 +29,7 @@ LCOLOR = rgb(106,90,205)
 	 'Вы заглянули во все кабинки и  ....'
 		 if toisexrand < 66 :
 			 act 'И никого не нашли ...':
-			 set minut = minut + 10
+			 minut = minut + 10
 			 cla
 			 *clr 
 			 clr
@@ -42,9 +42,9 @@ LCOLOR = rgb(106,90,205)
 	     
 		 if toisexrand >= 66 :
 		     act 'Увидели мастурбирующую голую девушку ....':
-		     set toigirlrand = RAND (1,2)
+		     toigirlrand = RAND (1,2)
 			     if toigirlrand = 1:
-				 set minut = minut + 10
+				 minut = minut + 10
 				 cla
 				 *clr 
 				 clr
@@ -58,7 +58,7 @@ LCOLOR = rgb(106,90,205)
 				 end
 				 
 			     if toigirlrand = 2:
-				 set minut = minut + 10
+				 minut = minut + 10
 				 cla
 				 *clr 
 				 clr
@@ -80,7 +80,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 10
+minut = minut + 10
 horny=horny+50
 '<center><img src="pic\toilet\pornjrolik.jpg" ></center>'
 'Найдя и просмотрев ролик в телефоне, вы сильно возбудились ...' 
@@ -173,9 +173,9 @@ gs'time'
 								 'Вы разрядились спермой ей в рот, а несколько капелек упало на ободок унитаза ...'
 								 'Продолжая играть роль Хозяина вы сказали ...'
 									 act '- Проглоти всю сперму и вылижи унитаз ...':
-									 set horny = 0
-									 set count['girl'] = count['girl'] + 1
-									 set minut = minut + 30
+									 horny = 0
+									 count['girl'] = count['girl'] + 1
+									 minut = minut + 30
 									 sexm=sexm+1
 									 manna=manna+25
 									 cla
@@ -189,7 +189,7 @@ gs'time'
 									 'Эти фильмы стоят дороже обычных, а актрис такого жанра маловато ...'
 									 'Вы: - Слушай дорогуша! Ты великолепна! У меня к тебе предложение ... '
 										 act 'Мне нужна актриса в жанре БДСМ':
-										 set BDSMactressrand = RAND (1,2)
+										 BDSMactressrand = RAND (1,2)
 											 if BDSMactressrand = 1:
 											 cla
 											 *clr
@@ -310,9 +310,9 @@ gs'time'
 								 'Вы проверили - она правда сглотнула всё до последней капли ...'
 								 'Вы: - Ну ка сучка проведи у себя между ног рукой и покажи мне ...'
 									 act '....':
-									 set horny = 0
-									 set count['girl'] = count['girl'] + 1
-									 set minut = minut + 30
+									 horny = 0
+									 count['girl'] = count['girl'] + 1
+									 minut = minut + 30
 									 sexm=sexm+1
 									 manna=manna+25
 									 cla
@@ -327,7 +327,7 @@ gs'time'
 									 'Эти фильмы стоят дороже обычных, а актрис такого жанра маловато ...'
 									 'Вы: - Слушай дорогуша! Ты великолепна! У меня к тебе предложение ... '
 										 act 'Мне нужна актриса в жанре БДСМ':
-										 set BDSMactressrand = RAND (1,2)
+										 BDSMactressrand = RAND (1,2)
 											 if BDSMactressrand = 1:
 											 cla
 											 *clr

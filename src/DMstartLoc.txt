@@ -381,8 +381,8 @@ demonQW=1
 horny=0
 
 gem=100
-set slot = 12
-set pesantclo = 2
+slot = 12
+pesantclo = 2
  lesotalon=5
  lesworkTimes=19
  plotnikskill=0
@@ -454,8 +454,8 @@ demonQW=1
 horny=0
 
 gem=150
-set slot = 12
-set pesantclo = 2
+slot = 12
+pesantclo = 2
 fishhouse=1
 HomeLord=1
 fishbarkas=100
@@ -534,8 +534,8 @@ demonQW=1
 horny=0
 
 gem=3
-set slot = 12
-set pesantclo = 2
+slot = 12
+pesantclo = 2
 
 music_on=0
 

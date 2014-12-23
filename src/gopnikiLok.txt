@@ -2,7 +2,7 @@
 if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 'Кампашка пацанов завидев вас здоровается, "привет Харя. Как жизня?"'
@@ -16,7 +16,7 @@ end
 if $ARGS[0]='0':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 15
+minut = minut + 15
 money-=100
 alko+=5
 clr

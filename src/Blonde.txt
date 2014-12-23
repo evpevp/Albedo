@@ -49,7 +49,7 @@ cla
 							 '<center><img src="pic\studiа\Blonde_9.jpg" ></center>'
 							 'Ребята постарались на славу и обкончали ей всё лицо и грудь ...'
 								 act 'Закончить съёмку фильма':
-								 set minut = minut + 600
+								 minut = minut + 600
 								 film=film+1
 								 filmpart=filmpart+1
 								 castig = 0 

@@ -38,7 +38,7 @@ $loc = $CURLOC
 cla
 *clr
 clr
-set minut=minut+5
+minut=minut+5
 horny=horny+25
 gs'stat'
 'Ильран начал вас раздевать'
@@ -69,7 +69,7 @@ cla
 *clr
 clr
 '<center><img src="pic/Evedon\1\ilranpred1.jpg" ></center>'
-set minut=minut+10
+minut=minut+10
 ilransex=ilransex+1
 guy+=1
 horny=horny+20
@@ -144,7 +144,7 @@ cla
 *clr
 clr
 '<center><img src="pic/Evedon\1\ilranpred1.jpg" ></center>'
-set minut=minut+10
+minut=minut+10
 ilransexfuta=ilransexfuta+1
 guy+=1
 horny=horny+20

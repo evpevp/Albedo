@@ -19,7 +19,7 @@ gs'stat'
 		 minut=minut+15
 		 shampoo=shampoo-1
 		 hapri=0
-		 if pol = 0:set sweat= -3
+		 if pol = 0:sweat= -3
 		 'Вы моетесь под душем.'
 		 act 'Вытерется и выйти из душа': gt 'InnaKor'
 		 end
@@ -30,7 +30,7 @@ gs'stat'
 			 hapri=0
 			 minut=minut+60
 			 shampoo=shampoo-1
-			 if pol = 0:set sweat= -3
+			 if pol = 0:sweat= -3
 			 'Вы моетесь в ванной.'
 			 act 'Вытерется и выйти из ванной': gt 'InnaKor'
 		 end

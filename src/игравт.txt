@@ -7,7 +7,7 @@
 *PL 'Там самая большая необходимая ставка, но и джекпот соответствующий - 10 млн. рублей.'
 *P '<right><img src="pic/casino/zaligravt.jpg" ></right>'
 ACT 'К автоматам за 10р':
-	set minut=minut+10
+	minut=minut+10
 	gt 'авт1'
 END
 ACT 'К автоматам за 100р':
@@ -23,7 +23,7 @@ USEHTML = 1
 
 clr
 gs'stat'
-set minut=minut + 10
+minut=minut + 10
 
 --- игравт ---------------------------------
 

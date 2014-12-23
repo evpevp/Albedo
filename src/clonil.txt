@@ -7,15 +7,15 @@ if kostum = 2:kostum = 1
 if manjeans = 2:manjeans = 1
 if sport = 2:sport = 1
 
-set odevnesh = 0
-set glamur = 0
-set ski = 0
-set hook = 0
-set ofclo = 0
+odevnesh = 0
+glamur = 0
+ski = 0
+hook = 0
+ofclo = 0
 sexual = 0
-if cumfrot > 0:set cumfrot = 0
+if cumfrot > 0:cumfrot = 0
 if odetero>0:odetero=0
-set nude = 1
+nude = 1
 
 !другой мир
 if roba = 2:roba=1

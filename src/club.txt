@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Ночной клуб</font></B></center>'
 '<center><img src="pic\pic\club.jpg" ></center>'
 'Время работы ночного клуба с 16 до 3х, выходной понедельник. Входной билет 500 руб'
@@ -18,7 +18,7 @@ LCOLOR = rgb(106,90,205)
 
      act 'ВЫЙТИ ИЗ КЛУБА':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'down'
      end
 
@@ -29,8 +29,8 @@ LCOLOR = rgb(106,90,205)
 				 if money >= 500:
 					 act 'Войти в клуб (500 руб)':
 					 cla
-					 set minut = minut + 5
-					 set money = money - 500
+					 minut = minut + 5
+					 money = money - 500
 					 gt'club','inside'
 					 end
 				 end
@@ -47,7 +47,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Ночной клуб</font></B></center>'
 '<center><img src="pic\pic\club2.jpg" ></center>'
 'Грохот музыки заглушает даже мысли, в полумраке разрезаемом вспышками стробоскопов и лазеров танцует толпа народу.'
@@ -77,9 +77,9 @@ volume = 50
 
      act 'УЙТИ ИЗ КЛУБА':
      cla
-     set drunk = 0
+     drunk = 0
      music_on=0
-     set minut = minut + 5
+     minut = minut + 5
      gt'down'
      end
 
@@ -93,7 +93,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Туалет</font></B></center>'
 '<center><img src="pic\pic\club3.jpg" ></center>'
 ''
@@ -109,8 +109,8 @@ act 'Выйти из туалета':gt'club','inside'
      if hapri = 0:
          act 'Причесаться':
          cla
-         set minut = minut + 3
-         set hapri = 1
+         minut = minut + 3
+         hapri = 1
          act 'Посмотреть результат':gt'club','toi'
          end
      end
@@ -137,7 +137,7 @@ act 'Выйти':gt'club','inside'
          act 'Танцевать 30 мин':
          cla
          *clr
-         set minut = minut + 30
+         minut = minut + 30
          horny=horny+10
          '<center><img src="pic\pic\club4.jpg" ></center>'
          'Вы танцуете на танцплощадке.'
@@ -161,7 +161,7 @@ act 'Выйти':gt'club','inside'
              act 'Заказать столик в VIP зоне 5 тыр':
 			 cla
 			 *clr
-			 set minut = minut + 60
+			 minut = minut + 60
 			 WillPower = WillPower + 10
 			 manna=manna+10
 			 money=money-5000
@@ -273,7 +273,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Бар</font></B></center>'
 '<center><img src="pic\pic\club5.jpg" ></center>'
 clr
@@ -286,11 +286,11 @@ act 'Выйти':gt'club','inside'
 		 act 'Купить выпивку 300 руб':
 		 cla
 		 *clr
-		 set minut = minut + 30
-		 set fat = fat + 1
-		 set manna = manna + 10
-		 set WillPower = WillPower + 10
-		 set money = money - 300
+		 minut = minut + 30
+		 fat = fat + 1
+		 manna = manna + 10
+		 WillPower = WillPower + 10
+		 money = money - 300
 		 alko=alko+3
 		 '<center><img src="pic\pic\club6.jpg" ></center>'
 		 'Вы нашли свободное место возле бара и сели на него, заказали коктейль и бармен быстро его смешав подала вам.'

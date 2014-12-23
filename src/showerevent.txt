@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
      if inurishower>=0:
      '<center><img src="pic/EvedonNarod/inuri.jpg"></center>'
      'В вашу душевую заглянула Инури. Ой <<$name>> можно я с тобой помоюсь, а то все кабинки заняты.'
@@ -31,7 +31,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 horny=horny+30
 clr
 gs'stat'
@@ -67,7 +67,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 horny=horny+10
 inurishower=inurishower+1
 inurishowerday=day
@@ -88,7 +88,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 horny=horny+10
 clr
 gs'stat'
@@ -102,7 +102,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 horny=horny+10
 bj=bj+1
 if inurisex=0:inurisex=1&futa=futa+1
@@ -137,7 +137,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 horny=horny+10
 vag=vag+3
 sex=sex+1
@@ -175,7 +175,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
      if inurishower>=0:
      '<center><img src="pic/EvedonNarod/hekel.jpg"></center>'
      'В вашу душевую вошла Хекель. "Хм <<$name>> у тебя красивое тело." Она начала вас разглядывать и вы заметили как у нее начал вставать член.'

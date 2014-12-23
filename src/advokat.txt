@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Адвокатская контора</font></B></center>'
 '<center><img src="pic\pic\advokat.jpg" ></center>'
 'Время работы с 9 до 21, выходной суббота воскресенье'
@@ -22,7 +22,7 @@ LCOLOR = rgb(106,90,205)
 
      act 'ВЫЙТИ':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'down'
      end
      
@@ -33,7 +33,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Адвокатская контора</font></B></center>'
 '<center><img src="pic\pic\advokat1.jpg" ></center>'
 'Нанять адвоката стоит 1 млн'

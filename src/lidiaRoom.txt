@@ -37,7 +37,7 @@ $loc = $CURLOC
 cla
 *clr
 clr
-set minut=minut+5
+minut=minut+5
 horny=horny+25
 gs'stat'
 '<center><img src="pic/Evedon\1\lidiastrip.jpg" ></center>'
@@ -52,7 +52,7 @@ cla
 *clr
 clr
 '<center><img src="pic/Evedon\1\lidiapred.jpg" ></center>'
-set minut=minut+10
+minut=minut+10
 lidiasex=lidiasex+1
 sexm+=1
 count['girl'] += 1

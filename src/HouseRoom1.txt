@@ -1,6 +1,6 @@
 # HouseRoom1
 *clr
-set minut=minut+1
+minut=minut+1
 $metka = $ARGS[0]
 $loc = $CURLOC
 $metkaM = $ARGS[0]

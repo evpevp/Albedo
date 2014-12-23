@@ -15,7 +15,7 @@ ACT 'Сделать ставку':
 		msg 'Максимальная ставка 1000 рублей'
 		gt 'амрул'
 	end
-	set money=money-st_1
+	money=money-st_1
 	gt 'ставка'
 END
 ACT 'отойти от стола':
@@ -31,6 +31,6 @@ x_rul=100
 
 clr
 gs'stat'
-set minut=minut + 5
+minut=minut + 5
 --- амрул ---------------------------------
 

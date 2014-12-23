@@ -6,12 +6,12 @@
 act '<center><b>По умолчанию Игорь Харитонов с самого начала</b></center>':
 SHOWOBJS 1
 SHOWSTAT 1
-set $name = 'Игорь'
-set $surname = 'Харитонов'
+$name = 'Игорь'
+$surname = 'Харитонов'
 
-set fat = 100
-set freshness = 18
-set golod = 3
+fat = 100
+freshness = 18
+golod = 3
 tarelka=1
 fairy=5
 milo=3
@@ -21,7 +21,7 @@ shampoo=5
 prava = 1
 
 
-set rost = 192
+rost = 192
 lvl=1
 exp=0
 stren=10
@@ -35,12 +35,12 @@ manna=intel*10
 WillPower=will*10
 stamina=health
 chin=will
-!set chin = 500
-!set stamina = 1500
-!set jab = 100
-!set punch = 100
-!set kik = 100
-!set defence = 100
+!chin = 500
+!stamina = 1500
+!jab = 100
+!punch = 100
+!kik = 100
+!defence = 100
 !safemoney = 5000
 !kvartira = 1
 money=50000
@@ -66,9 +66,9 @@ BDSMtoilet=0
 kostum = 1
 manjeans = 1
 sport = 1
-set kostumE = 5000
-set manjeansE = 5000
-set sportE = 5000
+kostumE = 5000
+manjeansE = 5000
+sportE = 5000
 
 car=100
 benz=40
@@ -77,16 +77,16 @@ tehcar=1000
 cardrive = 2
 $car='Mercedes-Benz S 600'
 
-set vidageday = 360
-set age = 42
-set vidage = 42
-set year = 2010
-set month = 3
-set week = 6
-set hour = 10
-set day = 1
-set pol = 0
-set penis = 18
+vidageday = 360
+age = 42
+vidage = 42
+year = 2010
+month = 3
+week = 6
+hour = 10
+day = 1
+pol = 0
+penis = 18
 gt'begin'
 end
 

@@ -14,8 +14,8 @@ if safemoney > 0:
          'Недопустимая операция'
          end 
          if safemon <= money:
-         set safemoney = safemoney + safemon
-         set money = money - safemon
+         safemoney = safemoney + safemon
+         money = money - safemon
          'Вы положили в коробку <<safemon>> рублей.'
          end
      act 'Закрыть коробку':GOTO $loc, $metka
@@ -28,8 +28,8 @@ if safemoney > 0:
          'Недопустимая операция'
          end 
          if safemon <= safemoney:
-         set safemoney = safemoney - safemon
-         set money = money + safemon
+         safemoney = safemoney - safemon
+         money = money + safemon
          'Вы взяли из коробки <<safemon>> рублей.'
          end
      act 'Закрыть коробку':GOTO $loc, $metka
@@ -44,8 +44,8 @@ if safemoney = 0:
          'Недопустимая операция'
          end 
          if safemon <= money:
-         set safemoney = safemoney + safemon
-         set money = money - safemon
+         safemoney = safemoney + safemon
+         money = money - safemon
          'Вы положили в коробку <<safemon>> рублей.'
          end
      act 'Закрыть коробку':GOTO $loc, $metka

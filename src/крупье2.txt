@@ -16,6 +16,6 @@ ACT 'Отойти от крупье':
 END
 clr
 gs'stat'
-set minut=minut + 5
+minut=minut + 5
 --- крупье2 ---------------------------------
 

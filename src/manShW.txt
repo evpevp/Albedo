@@ -12,9 +12,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set dershi = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 dershi = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end

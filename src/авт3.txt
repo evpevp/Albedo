@@ -6,15 +6,15 @@ ACT 'Дернуть рычаг':
 			 x_10=rand(1,1000)
 			 money=money-1000
 			 if x_10=1000:
-				set money=money+10000000
+				money=money+10000000
 				msg 'Вы выиграли джекпот! Поздравляем!'
 			 end
 			 if x_10<1000 and x_10>=990:
-				set money=money+2000
+				money=money+2000
 				msg 'Поздравляем, вы выиграли 2000 рублей'
 			 end
 			 if x_10>=850 and x_10<990:
-				set money=money+1000
+				money=money+1000
 				msg 'поздравляем, вы выиграли 1000 рублей'
 			 end
 			 if x_10<850:
@@ -36,6 +36,6 @@ ACT 'Вернуться в зал':
 END
 clr
 gs'stat'
-set minut=minut + 10
+minut=minut + 10
 --- авт3 ---------------------------------
 

@@ -51,7 +51,7 @@ gs'stat'
 					 gs'ShildNill'
 					 gs'clostar'
 					 farmstam=stren/10
-					 set hapri = 0
+					 hapri = 0
 						 if world=0 and sizo>0:GOTO $locBed, $metkaBed
 						 if world=0 and sizo=0:gt'locker'
 						 if world=1:gt'lockerW'
@@ -72,7 +72,7 @@ gs'stat'
 					 gs'ShildNill'
 					 gs'clostar'
 					 farmstam=stren/10
-					 set hapri = 0
+					 hapri = 0
 						 if world=0 and sizo>0:GOTO $locBed, $metkaBed
 						 if world=0 and sizo=0:gt'locker'
 						 if world=1:gt'lockerW'

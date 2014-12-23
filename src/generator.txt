@@ -5,10 +5,10 @@ agilV=9
 vitalV=8
 
 
-set lvlg = RAND (lvl-1,lvl+1)
-if lvlg < 1:set lvlg = 1
+lvlg = RAND (lvl-1,lvl+1)
+if lvlg < 1:lvlg = 1
 lvlv=lvlg
-set spg=lvlv*5
+spg=lvlv*5
 
 nameV=RAND (1,5)
 gs'namer'

@@ -40,17 +40,17 @@ if $ARGS[0]='journey2':
 	 if stun < stunV:
 	 '<font color=red><<$nameV>> нарезает круги по рингу, удирая от ваших атак.</font>'
 	 staminaV = staminaV - 10
-	 set agilBonusV = 2
-     set agilV = (agilMAX*2)
+	 agilBonusV = 2
+     agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
 	 end
 	 if stam < stamV:
 	 '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 !set agilBonusV = 2
-     !set agilV = (agilMAX*2)
+	 stamina = stamina + 5
+	 !agilBonusV = 2
+     !agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
 	 end
@@ -65,17 +65,17 @@ if $ARGS[0]='journey':
 	 if stun < stunV:
 	 '<font color=red><<$nameV>> нарезает круги по рингу, удирая от ваших атак.</font>'
 	 staminaV = staminaV - 10
-	 set agilBonusV = 2
-     set agilV = (agilMAX*2)
+	 agilBonusV = 2
+     agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
 	 end
 	 if stam < stamV:
 	 '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 !set agilBonusV = 2
-     !set agilV = (agilMAX*2)
+	 stamina = stamina + 5
+	 !agilBonusV = 2
+     !agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
 	 end
@@ -90,9 +90,9 @@ if $ARGS[0]='sissy':
 	 if pointV > point + 5:
 	 '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 !set agilBonusV = 2
-     !set agilV = (agilMAX*2)
+	 stamina = stamina + 5
+	 !agilBonusV = 2
+     !agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
 	 end
@@ -103,8 +103,8 @@ if $ARGS[0]='klassik':
 	 if stunV > 1:
 	 '<font color=red><<$nameV>> нарезает круги по рингу, удирая от ваших атак.</font>'
 	 staminaV = staminaV - 10
-	 set agilBonusV = 2
-     set agilV = (agilMAX*2)
+	 agilBonusV = 2
+     agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
 	 end
@@ -124,9 +124,9 @@ if $ARGS[0]='klassik':
      if pointV > point and stamV >= 2:
      '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 !set agilBonusV = 2
-     !set agilV = (agilMAX*2)
+	 stamina = stamina + 5
+	 !agilBonusV = 2
+     !agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
      end
@@ -137,8 +137,8 @@ if $ARGS[0]='slugger':
 	 if stunV > 1:
 	 '<font color=red><<$nameV>> нарезает круги по рингу, удирая от ваших атак.</font>'
 	 staminaV = staminaV - 10
-	 set agilBonusV = 2
-     set agilV = (agilMAX*2)
+	 agilBonusV = 2
+     agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
 	 end
@@ -157,9 +157,9 @@ if $ARGS[0]='slugger':
      if stamV > stam:
      '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 !set agilBonusV = 2
-     !set agilV = (agilMAX*2)
+	 stamina = stamina + 5
+	 !agilBonusV = 2
+     !agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
      end
@@ -177,8 +177,8 @@ if $ARGS[0]='puncher':
 	 if stunV > 1:
 	 '<font color=red><<$nameV>> нарезает круги по рингу, удирая от ваших атак.</font>'
 	 staminaV = staminaV - 10
-	 set agilBonusV = 2
-     set agilV = (agilMAX*2)
+	 agilBonusV = 2
+     agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
 	 end
@@ -191,9 +191,9 @@ if $ARGS[0]='puncher':
      if stamV > stam:
      '<font color=red><<$nameV>> передвигается по рингу без атаки.</font>'
 	 staminaV = staminaV + 15
-	 set stamina = stamina + 5
-	 !set agilBonusV = 2
-     !set agilV = (agilMAX*2)
+	 stamina = stamina + 5
+	 !agilBonusV = 2
+     !agilV = (agilMAX*2)
 	 xgt'boxing','sta' 
 	 exit
      end

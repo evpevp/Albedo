@@ -5,7 +5,7 @@ $loc = $CURLOC
 cla
 *clr
 hour=19
-set minut = 0
+minut = 0
 clr
 gs'stat'
 fcolor=rgb(0,0,0)

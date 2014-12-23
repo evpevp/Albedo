@@ -30,7 +30,7 @@ if $ARGS[0]='bj1':
 		 *clr
 		 '<center><img src="pic\Linel\Lbj2.jpg" ></center>'
 		 'Не сдерживаясь - вы быстро кончаете, умывая лицо Линель своей спермой.'
-		 set minut=minut+15
+		 minut=minut+15
 		 horny=0
 		 manna=manna+25
          WillPower=WillPower+25
@@ -117,7 +117,7 @@ if $ARGS[0]='strip1':
 	 '<center><img src="pic\Linel\Strip1\Lstrip19.jpg" ></center>'
 	 WAIT 4000
 	 horny=horny+50
-	 set minut=minut+15
+	 minut=minut+15
 	 gt 'Linel'
 end
 --- Linel ---------------------------------

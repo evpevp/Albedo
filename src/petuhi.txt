@@ -7,7 +7,7 @@ $metkaM = $ARGS[0]
 $locM = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 fcolor=rgb(0,0,0)
@@ -30,7 +30,7 @@ end
 if hour>= 19 and hour<22:
         
      act 'Отдыхать час.':
-     set minut = minut + 60
+     minut = minut + 60
      gt $CURLOC
      end
      
@@ -59,9 +59,9 @@ if hour>= 19 and hour<22:
 	     cla
 		 *clr
 		 jailfitday = day
-		 set minut = minut + 60
+		 minut = minut + 60
 		 sweat=sweat+3
-		 set exp=exp+RAND(1,3)
+		 exp=exp+RAND(1,3)
 		 fat=fat-1
 		 manna=manna-15
 		 'Вы в течении часа выполняли разнообразные физические упражнения.'
@@ -83,7 +83,7 @@ if hour>= 19 and hour<22:
      
      if shnirday ! day:
 	     act 'Шнырять за 100руб 1 час.':
-		 set minut = minut + 60
+		 minut = minut + 60
 		 шнырь=шнырь+1
 		 money=money+100
 		 shnirday = day
@@ -92,13 +92,13 @@ if hour>= 19 and hour<22:
 	 end
 	 
 	 act 'Покупать 1 час.':
-	 set minut = minut + 60
+	 minut = minut + 60
 	 gt 'sizomagaz'
 	 end
 	 
 	 if money>0:
          act 'Заныкать деньги.':
-		 set minut = minut + 60
+		 minut = minut + 60
 		 moneyNik=moneyNik+money
 		 money=0
 		 gt $CURLOC
@@ -107,7 +107,7 @@ if hour>= 19 and hour<22:
      
      if moneyNik > 0:
          act 'Забрать деньги из нычки.':
-		 set minut = minut + 60
+		 minut = minut + 60
 		 money=money+moneyNik
 		 moneyNik=0
 		 gt $CURLOC

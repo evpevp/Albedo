@@ -26,7 +26,7 @@ if race_start=1:
 		REFINT
 		*clr
 		if race_hit=0:
-			set race_miss=race_miss+1
+			race_miss=race_miss+1
 			race_hit=1
 		end
 		
@@ -39,13 +39,13 @@ if race_start=1:
 		*P $race1[race_row]
 		
 		if $race1[race_row]='<center>-------ФИНИШ--------</center>':
-			set race_start=0
+			race_start=0
 			!возвращаем таймер
 			SETTIMER 500
 			WAIT 2000
 			!точка возврата
-			set $metka='finish'
-			set $loc='RACE_COUNT'
+			$metka='finish'
+			$loc='RACE_COUNT'
 			GOTO $loc, $metka
 		end
 		

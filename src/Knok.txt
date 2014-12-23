@@ -3,7 +3,7 @@
 
 if powerPunch >= (chinV*40/100) and powerPunch < (chinV*70/100):
 point = point + 1
-if amature = 1:set pointProfV = pointProfV - 1
+if amature = 1:pointProfV = pointProfV - 1
 '<B><font color=green>НОКДАУН</font></B>'
 '<<$nameV>> с трудом встает на ноги.'
 end
@@ -14,18 +14,18 @@ if powerPunch >= (chinV*70/100):
      !
      end
      if FightTip = 1:
-         if amature = 0:set BOXKO = BOXKO + 1
-         if amature = 1:set BOXKOp = BOXKOp + 1
+         if amature = 0:BOXKO = BOXKO + 1
+         if amature = 1:BOXKOp = BOXKOp + 1
      end
      if FightTip = 2:
-         if amature = 0:set KIKKO = KIKKO + 1
-         if amature = 1:set KIKKOp = KIKKOp + 1
+         if amature = 0:KIKKO = KIKKO + 1
+         if amature = 1:KIKKOp = KIKKOp + 1
      end
      if FightTip = 3:
      !
      end
      if FightTip = 4:
-     set MMAKO = MMAKO + 1
+     MMAKO = MMAKO + 1
      end
 xgt'ender','win'
 exit 

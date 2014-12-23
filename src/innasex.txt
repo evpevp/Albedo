@@ -12,7 +12,7 @@ if $ARGS[0]='BF':
 		 '<center><img src="pic\room\korA.jpg" ></center>'
 		 'Тихонько прикрыв дверь в комнату дочери, вы на на цыпочках вернулись в коридор и нарочито громко хлопнули входной дверью квартиры.'
 		 'Вы: Я дома!!! Я поработаю в кабинете!'
-		 set minut = minut + 10
+		 minut = minut + 10
 		 innaEVENT = 0
 		 innaday=day
 		 act 'Пройти в кабинет громко топая':GT 'kabroom'
@@ -47,7 +47,7 @@ if $ARGS[0]='BF':
 					 '<center><img src="pic\room\korA.jpg" ></center>'
 					 'Тихонько прикрыв дверь в комнату дочери, вы на на цыпочках вернулись в коридор и нарочито громко хлопнули входной дверью квартиры.'
 					 'Вы: Я дома!!! Я поработаю в кабинете!'
-					 set minut = minut + 15
+					 minut = minut + 15
 					 innaBoyFriend = 0
 					 innaday=day
 					 act 'Пройти в кабинет громко топая':GT 'kabroom'
@@ -73,7 +73,7 @@ if $ARGS[0]='BF':
 					 'Ваши слова  падают на Инну как камни, с каждой фразой она все больше сжимается. До неё вдруг дохоит что стоит перед вами полуголая ,и она начинает судорожно прикрываться.'
 					 'Инна: А тебе всё ровно, всхлипывая говорит дочка,ты все время на работе...'
 					 'Вы: Нет, не всё равно.'
-					 set minut = minut + 15
+					 minut = minut + 15
 					 innaday=day
 					 act 'Развернутся и уйти':gt 'koridor1'
 					 act 'Наказать':
@@ -90,7 +90,7 @@ if $ARGS[0]='BF':
 						 'Закончив вы с невозмутимым видом говорите: Думаю теперь я займусь твоим воспитанием. Ты всё поняла?'
 						 'Инна: Да...папочка'
 						 horny=horny+20
-						 set minut = minut + 20
+						 minut = minut + 20
 						 innaday=day
 						 act 'Вы еще пару секунд глядите на Инну, а затем уходите.':gt 'koridor1'
 					 end
@@ -116,7 +116,7 @@ if $ARGS[0]='BF':
 							 'Сделав еще несколько поступательных движений, парень вытащил свой член и кончил Инне на попку'
 							 'Не похоже, чтоб Инна кончила!'
 							 innavirgin=1
-							 set minut = minut + 30
+							 minut = minut + 30
 							 innaday=day
 							 act 'Вы аккуратно прикрываете дверь ':gt 'koridor1'
 						 end
@@ -132,7 +132,7 @@ if $ARGS[0]='podstava':
 	 *clr
 	 money=money+30000
 	 innapodstava=1
-	 set minut = minut + 120
+	 minut = minut + 120
 	 '<center><img src="pic\fam\sumka1.jpg" ></center>'
 	 'Сумка Альбины от Gucci, полторы тысячи евро, угадайте КТО платил?'
 	 'Внезапно в голове у вас созрел коварный похотливый план касающийся средств в сумочке и Инны.'
@@ -142,7 +142,7 @@ if $ARGS[0]='podstava':
 		 '<center><img src="pic\room\childA.jpg" ></center>'
 		 'Чтож , пора вернуть часть инвестиций. Вы вытаскиваете из сумочки 60000 рублей, и идёте в комнату Инны.' 
 		 'Похоже Инна куда-то вышла.' 
-		 set minut = minut +10
+		 minut = minut +10
 		 act 'Положить 30 тысяч на тумбочку Инны и выйти.':gt 'koridor1'
 	 end
 	 act 'Не стоит воплощать план...':gt 'koridor1'
@@ -152,7 +152,7 @@ end
 if $ARGS[0]='razgovoralbina':	
 	 cla
 	 *clr
-	 set minut = minut + 10
+	 minut = minut + 10
 	 '<center><img src="pic\fam\albina.jpg" ></center>'
      'Альбина: ИГОРЬ!!!Ты знаешь ЧТО учинила эта маленькая стерва?!'
      'Вы: Это ты про Инну? Что такое?' 
@@ -245,7 +245,7 @@ if $ARGS[0]='sleep':
 		 'Hе сдерживая себя, быстро кончили ей в ротик.'
 		 '"Умница!", - сказали вы, похлопав её по попке.'
 		 act 'Выйти из комнаты.':gt'InnaKor'
-		 set minut = minut +10
+		 minut = minut +10
 		 innaMinDay=day
 		 horny=0
 		 manna=manna+25
@@ -308,7 +308,7 @@ if $ARGS[0]='innaclub':
 									 *clr
 									 '<center><img src="pic\fam\Innaclub8.jpg" ></center>'
 									 'Наконец вы достигаете оргазма и кончаете в рот Инны. На удивление Инна не старается вытащить изо рта ваш член и покорно принимает сперму в свой рот.'
-									 set sexm=sexm+1
+									 sexm=sexm+1
 								     manna=manna+25
                                      WillPower=WillPower+25
                                      horny=0
@@ -318,7 +318,7 @@ if $ARGS[0]='innaclub':
 										 *clr
 										 '<center><img src="pic\fam\InnaClubFaceCum.jpg" ></center>'
 										 'Пока вы одеваетесь, Инна еще некоторое время играется с вашей спермой во рту - доставляя вам эстетическое наслаждение.'
-										 set minut=minut+50
+										 minut=minut+50
 										 DayInnaClubMeet=day
 										 InnaLastFuckDay=day
 										 act 'Незаметно покинуть клуб':gt'down'
@@ -342,8 +342,8 @@ if $ARGS[0]='innaclub':
 								 *clr
 								 '<center><img src="pic\fam\ClubCreamCowGirl.jpg" ></center>'
 								 'В самый последний момент, перед семяизвержением, наездница успевает соскочить с вашего органа и вы обдаете попку вашей дочки горячей спермой'
-								 set minut=minut+50
-								 set sexm=sexm+1
+								 minut=minut+50
+								 sexm=sexm+1
 								 manna=manna+25
                                  WillPower=WillPower+25
                                  horny=0
@@ -374,9 +374,9 @@ if $ARGS[0]='innaclub':
 									 *clr
 									 '<center><img src="pic\fam\ClubCream69.jpg" ></center>'
 									 'Вы кончаете прямо в киску Инны, наблюдая после за белыми ручейками струящимися из её дырочки'
-									 set minut=minut+50
+									 minut=minut+50
 									 horny=0
-									 set sexm=sexm+1
+									 sexm=sexm+1
 									 manna=manna+25
                                      WillPower=WillPower+25
 									 DayInnaClubMeet=day
@@ -418,7 +418,7 @@ if $ARGS[0]='FullSexStart':
 	 InnaOrgasmMessage=0
 	 WillPower=WillPower+rand(25,50)
 	 manna=manna+rand(25,50)
-	 set hour=hour+rand(1,2)
+	 hour=hour+rand(1,2)
 	 act 'Потанцуй для меня':
 		 strip=rand(0,2)
 		 if strip=0: gt 'innasex','strip1'
@@ -4186,7 +4186,7 @@ if $ARGS[0]='innaoffice':
 						 'Инна: (не очень веселым тоном) Ну хоть какое-то внимание...ты заходи почаще...'
 						 'После этих слов Инна уходит.'
 						 InnaLastFuckDay=day
-						 set minut=minut+25
+						 minut=minut+25
 						 WillPower=WillPower+25
 						 manna=manna+25
 						 horny=0
@@ -4327,7 +4327,7 @@ if $ARGS[0]='innaoffice':
 											 if InnaOrgasmMessage=1: 'Спасибо за чудный секс! Ты настоящий мужчина!'
 											 if InnaOrgasmMessage!1: 'Спасибо за внимание! Было приятно, но жаль что я так и не кончила...надеюсь в следующий раз все будет лучше!'
 											 'Инна уходит.'
-											 set minut=minut+55
+											 minut=minut+55
 											 WillPower=WillPower+50
 											 manna=manna+25
 											 horny=0
@@ -4352,7 +4352,7 @@ if $ARGS[0]='innaoffice':
 											 if InnaOrgasmMessage=1: 'Спасибо за чудный секс! Ты настоящий мужчина!'
 											 if InnaOrgasmMessage!1: 'Спасибо за внимание! Было приятно, но жаль что я так и не кончила...надеюсь в следующий раз все будет лучше!'
 											 'Инна уходит.'
-											 set minut=minut+55
+											 minut=minut+55
 											 WillPower=WillPower+50
 											 manna=manna+25
 											 horny=0
@@ -4374,7 +4374,7 @@ if $ARGS[0]='innaoffice':
 		 cla
 		 *clr
 		 InnaLastFuckDay=day
-		 set minut=minut+5
+		 minut=minut+5
 		 '<center><img src="pic\fam\InnaFullSex\innaoffice2.jpg" ></center>'
 		 'Инна: (обиженно) Ну и не очень-то и хотелось.'
 		 'Инна уходит.'

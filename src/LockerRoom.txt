@@ -8,7 +8,7 @@ gs'stat'
 'Простая, но чистая и прилизанная раздевалка с ((зеркалами|mirror)), и синими ((шкафчиками|locker))'
 act 'ВЫЙТИ':
 	cla
-	set minut = minut + 5
+	minut = minut + 5
 	gt'fit','start'
 end
 dynamic $act_DoHair
@@ -17,7 +17,7 @@ act 'Идти в душ (15 мин)':
 	*clr
 	minut=minut+15
 	hapri=0
-	if pol = 0:set sweat= -3
+	if pol = 0:sweat= -3
 	'Вы моетесь под душем.'
 	act 'Вытерется и выйти из душа':gt $CURLOC
 end

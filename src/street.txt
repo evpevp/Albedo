@@ -16,16 +16,16 @@ gs'time'
 
 
 if car > 0 and cardrive = 1:
-set cardrive = 1
+cardrive = 1
 'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
 end
 
 if kvartira = 1:
 
-set $kvartira = 'В пяти минутах ходьбы находится ваша ((квартира|koridor|minut=minut+5))'
+$kvartira = 'В пяти минутах ходьбы находится ваша ((квартира|koridor|minut=minut+5))'
 end
 if kvartira = 0:
-set $kvartira = ''
+$kvartira = ''
 end
 !Нимфа тьмы
 !fairymeet=RAND(0,15)
@@ -57,10 +57,10 @@ if kachalka>0:'<a href="exec:GT ''kachalka''">Качалка</a>.'
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
          if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         minut = minut + 15
          end
          if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         minut = minut + waiting
          end
      act 'Посмотреть на часы':gt curloc
      end
@@ -71,13 +71,13 @@ if kachalka>0:'<a href="exec:GT ''kachalka''">Качалка</a>.'
      *clr
      '<center><img src="pic/pic/taxi1.jpg" ></center>'
      'Вы поймали проезжавшую мимо таксишку.'
-     set minut = minut + 15
+     minut = minut + 15
          act 'В центр 250 руб':
 		 cla
 		 *clr
          'Вы сели в такси и за 15 минут доехали до центра города'
 			 if money >= 250:
-			 set money = money - 250
+			 money = money - 250
 			 'Заплатили таксисту 250 рублей и вышли из машины.'
 			 act 'Уйти':gt 'down'
 			 exit
@@ -95,7 +95,7 @@ if kachalka>0:'<a href="exec:GT ''kachalka''">Качалка</a>.'
 		 *clr
          'Вы сели в такси и за 15 минут доехали до северного района'
 			 if money >= 250:
-			 set money = money - 250
+			 money = money - 250
 			 'Заплатили таксисту 250 рублей и вышли из машины.'
 			 act 'Уйти':gt 'nord'
 			 exit

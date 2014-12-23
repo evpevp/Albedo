@@ -2,7 +2,7 @@
 if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 1
+minut = minut + 1
 cla
 clr
 gs'stat'
@@ -24,7 +24,7 @@ end
 if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 cla
 clr
 gs'stat'
@@ -38,14 +38,14 @@ bcolor=rgb(255,255,255)
 		 act 'Купить еды':
 		 cla
 		 *clr
-		 set minut = minut + 15
+		 minut = minut + 15
 		 portion = input ("Сколько порций вы хотите купить?")
 			 if portion*50 > money:
 			 'У вас не хватает денег.'
 			 end
 			 if portion*50 <= money:
-			 set eda = eda + portion
-			 set money = money - portion*50
+			 eda = eda + portion
+			 money = money - portion*50
 			 '<center><img src="pic\kassa.jpg" ></center>'
 			 'Вы купили еду и заплатили деньги в кассу.'
 			 end
@@ -57,14 +57,14 @@ bcolor=rgb(255,255,255)
 		 act 'Купить пиццу':
 		 cla
 		 *clr
-		 set minut = minut + 15
+		 minut = minut + 15
 		 portion = input ("Сколько порций вы хотите купить?")
 			 if portion*250 > money:
 			 'У вас не хватает денег.'
 			 end
 			 if portion*250 <= money:
-			 set pizza = pizza + portion
-			 set money = money - portion*250
+			 pizza = pizza + portion
+			 money = money - portion*250
 			 '<center><img src="pic\kassa.jpg" ></center>'
 			 'Вы купили еду и заплатили деньги в кассу.'
 			 end

@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Поликлиника</font></B></center>'
 '<center><img src="pic\pic\poli.jpg" ></center>'
 'Время работы с 6 до 21, без выходных.'
@@ -23,9 +23,9 @@ LCOLOR = rgb(106,90,205)
 		 if health < vital*10 and money >= 1000:
 			 act 'Лечить здоровье 1 тыр':
 			 cla
-			 set money = money - 1000
-			 set minut = minut + 60
-			 set health = vital*10
+			 money = money - 1000
+			 minut = minut + 60
+			 health = vital*10
 			 'Врач сделал вам укол и вам сразу же стало гораздо лучше'
 			 act 'ВЫЙТИ':gt'poli','start'
 			 end
@@ -34,10 +34,10 @@ LCOLOR = rgb(106,90,205)
 		 if WillPower < will*10 and money >= 1000:
 			 act 'Прием у психотерапевта 1 тыр':
 			 cla
-			 set money = money - 1000
-			 set minut = minut + 60
+			 money = money - 1000
+			 minut = minut + 60
 			 WillPower=will*10
-			 set manna = intel*10
+			 manna = intel*10
 			 'Вы полежали на кушетке у психотерапевта и рассказали ему о своих невзгодах и вам сразу же стало гораздо легче на душе.'
 			 act 'ВЫЙТИ':gt'poli','start'
 			 end
@@ -55,7 +55,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 fcolor=rgb(0,0,0)
@@ -73,8 +73,8 @@ LCOLOR = rgb(106,90,205)
          act'Оплатить лечение и поехать домой (3 тыр)': 
          cla
 		 *clr
-		 Set money = money - 3000
-		 set health = vital*10
+		 money = money - 3000
+		 health = vital*10
 		 '<center><img src="pic\poli\urolog_2.jpg" ></center>'
 		 'Пороботав ручками с вашим членом он привёл его в полный порядок'
 		 'Можно ехать отдыхать домой'

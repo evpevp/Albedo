@@ -2,28 +2,28 @@
 
 
 if $ARGS[0]='start':
-set stamina = stamina - 1
-set staminaV = staminaV - 1
-set speedKoef = speed*25/100
-set agilKoef = agilV*25/100
-set initKoef = init*10
-set initKoefV = initV*10
+stamina = stamina - 1
+staminaV = staminaV - 1
+speedKoef = speed*25/100
+agilKoef = agilV*25/100
+initKoef = init*10
+initKoefV = initV*10
      if init = 0:
-     set baseSpeed = 0
+     baseSpeed = 0
      end
      if init > 0:
-     set baseSpeed = speed*initKoef/100
+     baseSpeed = speed*initKoef/100
      end
      if initV = 0:
-     set baseAgil = 0
+     baseAgil = 0
      end
      if initV > 0:
-     set baseAgil = agilV*initKoefV/100
+     baseAgil = agilV*initKoefV/100
      end
-set pop = speed + jab + RAND (150,250)
-set popad = RAND ((pop-baseSpeed)- speedKoef,(pop-baseSpeed)+ speedKoef)
-set def = agilV + defenceV + RAND (100,200)
-set uvorot = RAND ((def-baseAgil)- agilKoef,(def-baseAgil)+ agilKoef)
+pop = speed + jab + RAND (150,250)
+popad = RAND ((pop-baseSpeed)- speedKoef,(pop-baseSpeed)+ speedKoef)
+def = agilV + defenceV + RAND (100,200)
+uvorot = RAND ((def-baseAgil)- agilKoef,(def-baseAgil)+ agilKoef)
      if popad >= uvorot*2:
      '<B><font color=green>МОЩНОЕ ПОПАДАНИЕ</font></B>'
      gs'jab','krit'
@@ -33,21 +33,21 @@ set uvorot = RAND ((def-baseAgil)- agilKoef,(def-baseAgil)+ agilKoef)
      gs'jab','udar'
      end 
      if popad < uvorot:
-     set stamina = stamina - 1
+     stamina = stamina - 1
      '<B><font color=red>ПРОМАХ</font></B>'
      end 
 end
 
 if $ARGS[0]='krit':
 point = point + 1
-set staminaV = staminaV - RAND (1,5)
-set chinV = chinV - RAND (1,5)
+staminaV = staminaV - RAND (1,5)
+chinV = chinV - RAND (1,5)
 end
 
 if $ARGS[0]='udar':
 point = point + 1
-set staminaV = staminaV - RAND (1,2)
-set chinV = chinV - RAND (1,2)
+staminaV = staminaV - RAND (1,2)
+chinV = chinV - RAND (1,2)
 end
 
 

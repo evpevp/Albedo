@@ -21,7 +21,7 @@ if besrand=5:lvlg = 65&$nameV='Демонический бык'
 if besrand=6:lvlg = 70&$nameV='Огромный демонический бык'
 
 lvlv=lvlg
-set spg=lvlv*5
+spg=lvlv*5
 
 
 

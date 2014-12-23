@@ -13,9 +13,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set armor = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 armor = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -24,8 +24,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 100
-			 set armor = 2
+			 slot = 100
+			 armor = 2
 			 armorDef=50
 			 GOTO $locP, $metkaP
 			 end
@@ -47,9 +47,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set armor2 = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 armor2 = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -58,8 +58,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 101
-			 set armor2 = 2
+			 slot = 101
+			 armor2 = 2
 			 armorDef=100
 			 GOTO $locP, $metkaP
 			 end
@@ -81,9 +81,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set armor3 = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 armor3 = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -92,8 +92,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 102
-			 set armor3 = 2
+			 slot = 102
+			 armor3 = 2
 			 armorDef=200
 			 GOTO $locP, $metkaP
 			 end
@@ -115,9 +115,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set armor4 = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 armor4 = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -126,8 +126,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 101
-			 set armor4 = 2
+			 slot = 101
+			 armor4 = 2
 			 armorDef=110
 			 GOTO $locP, $metkaP
 			 end
@@ -148,9 +148,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set robe = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 robe = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -159,8 +159,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 200
-			 set robe = 2
+			 slot = 200
+			 robe = 2
 			 armorDef=100
 			 GOTO $locP, $metkaP
 			 end
@@ -181,9 +181,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set robe2 = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 robe2 = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -192,8 +192,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 200
-			 set robe2 = 2
+			 slot = 200
+			 robe2 = 2
 			 armorDef=200
 			 GOTO $locP, $metkaP
 			 end
@@ -215,9 +215,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set robe3 = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 robe3 = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -226,8 +226,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 200
-			 set robe3 = 2
+			 slot = 200
+			 robe3 = 2
 			 armorDef=300
 			 GOTO $locP, $metkaP
 			 end
@@ -248,9 +248,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set robeGrand = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 robeGrand = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -259,8 +259,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 200
-			 set robeGrand = 2
+			 slot = 200
+			 robeGrand = 2
 			 armorDef=800
 			 GOTO $locP, $metkaP
 			 end
@@ -281,9 +281,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set armor5 = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 armor5 = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -292,8 +292,8 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
 			 act 'Надеть':
 			 cla
 			 gs'clonil'
-			 set slot = 103
-			 set armor5 = 2
+			 slot = 103
+			 armor5 = 2
 			 armorDef=200
 			 GOTO $locP, $metkaP
 			 end

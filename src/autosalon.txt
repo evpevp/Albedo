@@ -2,7 +2,7 @@
 if $ARGS[0]='start':
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 fcolor=rgb(0,0,0)
@@ -14,7 +14,7 @@ $loc = $CURLOC
 '<center><img src="pic\pic\autosalon.jpg" ></center>'
 'Часы работы автосалона с 9 до 17, выходной Понедельник.'
 if car > 0 and cardrive = 8:
-set cardrive = 8
+cardrive = 8
 'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
 end
      if hour >= 9 and hour <= 17 and week > 1:
@@ -29,8 +29,8 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
-set cartraid = 1
+minut = minut + 5
+cartraid = 1
 clr
 gs'stat'
 '<center><B>Автосалон</B></center>'
@@ -62,7 +62,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><B>Автосалон</B></center>'
@@ -78,14 +78,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить ВАЗ 2107 (200 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 200000
-             set $car = 'ВАЗ 2107'
-             set car = 1
-             set benz = 3
-             set cardrive = 8
-             set teh = 200
-             set tehcar = 200
-             set wrek = 0
+             bankfond = bankfond - 200000
+             $car = 'ВАЗ 2107'
+             car = 1
+             benz = 3
+             cardrive = 8
+             teh = 200
+             tehcar = 200
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -96,14 +96,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить ВАЗ 2115 (310 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 310000
-             set $car = 'ВАЗ 2115'
-             set car = 2
-             set benz = 3
-             set cardrive = 8
-             set teh = 300
-             set tehcar = 300
-             set wrek = 0
+             bankfond = bankfond - 310000
+             $car = 'ВАЗ 2115'
+             car = 2
+             benz = 3
+             cardrive = 8
+             teh = 300
+             tehcar = 300
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -113,14 +113,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить ВАЗ 2113 (290 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 290000
-             set $car = 'ВАЗ 2113'
-             set car = 3
-             set benz = 3
-             set cardrive = 8
-             set teh = 290
-             set tehcar = 290
-             set wrek = 0
+             bankfond = bankfond - 290000
+             $car = 'ВАЗ 2113'
+             car = 3
+             benz = 3
+             cardrive = 8
+             teh = 290
+             tehcar = 290
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -130,14 +130,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить ВАЗ 2114 (300 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 300000
-             set $car = 'ВАЗ 2114'
-             set car = 4
-             set benz = 3
-             set cardrive = 8
-             set teh = 300
-             set tehcar = 300
-             set wrek = 0
+             bankfond = bankfond - 300000
+             $car = 'ВАЗ 2114'
+             car = 4
+             benz = 3
+             cardrive = 8
+             teh = 300
+             tehcar = 300
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -147,14 +147,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить ВАЗ 2110 (350 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 350000
-             set $car = 'ВАЗ 2110'
-             set car = 5
-             set benz = 3
-             set cardrive = 8
-             set teh = 350
-             set tehcar = 350
-             set wrek = 0
+             bankfond = bankfond - 350000
+             $car = 'ВАЗ 2110'
+             car = 5
+             benz = 3
+             cardrive = 8
+             teh = 350
+             tehcar = 350
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -165,14 +165,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить ВАЗ Калина (400 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 400000
-             set $car = 'ВАЗ КАЛИНА'
-             set car = 6
-             set benz = 3
-             set cardrive = 8
-             set teh = 400
-             set tehcar = 400
-             set wrek = 0
+             bankfond = bankfond - 400000
+             $car = 'ВАЗ КАЛИНА'
+             car = 6
+             benz = 3
+             cardrive = 8
+             teh = 400
+             tehcar = 400
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -183,14 +183,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить ВАЗ Приора (450 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 450000
-             set $car = 'ВАЗ ПРИОРА'
-             set car = 7
-             set benz = 3
-             set cardrive = 8
-             set teh = 450
-             set tehcar = 450
-             set wrek = 0
+             bankfond = bankfond - 450000
+             $car = 'ВАЗ ПРИОРА'
+             car = 7
+             benz = 3
+             cardrive = 8
+             teh = 450
+             tehcar = 450
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -201,14 +201,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить Нива Шевроле (500 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 500000
-             set $car = 'НИВА ШЕВРОЛЕ'
-             set car = 8
-             set benz = 3
-             set cardrive = 8
-             set teh = 500
-             set tehcar = 500
-             set wrek = 0
+             bankfond = bankfond - 500000
+             $car = 'НИВА ШЕВРОЛЕ'
+             car = 8
+             benz = 3
+             cardrive = 8
+             teh = 500
+             tehcar = 500
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -219,14 +219,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить УАЗ Хантер (500 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 500000
-             set $car = 'УАЗ ХАНТЕР'
-             set car = 9
-             set benz = 3
-             set cardrive = 8
-             set teh = 300
-             set tehcar = 300
-             set wrek = 0
+             bankfond = bankfond - 500000
+             $car = 'УАЗ ХАНТЕР'
+             car = 9
+             benz = 3
+             cardrive = 8
+             teh = 300
+             tehcar = 300
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -237,14 +237,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить УАЗ Патриот (600 тыр)':
              cla
              *clr
-             set bankfond = bankfond - 600000
-             set $car = 'УАЗ ПАТРИОТ'
-             set car = 10
-             set benz = 3
-             set cardrive = 8
-             set teh = 400
-             set tehcar = 400
-             set wrek = 0
+             bankfond = bankfond - 600000
+             $car = 'УАЗ ПАТРИОТ'
+             car = 10
+             benz = 3
+             cardrive = 8
+             teh = 400
+             tehcar = 400
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -255,14 +255,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить Mitsubishi l200 (1 млн)':
              cla
              *clr
-             set bankfond = bankfond - 1000000
-             set $car = 'Mitsubishi l200'
-             set car = 95
-             set benz = 3
-             set cardrive = 8
-             set teh = 2000
-             set tehcar = 2000
-             set wrek = 0
+             bankfond = bankfond - 1000000
+             $car = 'Mitsubishi l200'
+             car = 95
+             benz = 3
+             cardrive = 8
+             teh = 2000
+             tehcar = 2000
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -273,14 +273,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить Audi Q7 (5 млн)':
              cla
              *clr
-             set bankfond = bankfond - 5000000
-             set $car = 'Audi Q7'
-             set car = 96
-             set benz = 3
-             set cardrive = 8
-             set teh = 5000
-             set tehcar = 5000
-             set wrek = 0
+             bankfond = bankfond - 5000000
+             $car = 'Audi Q7'
+             car = 96
+             benz = 3
+             cardrive = 8
+             teh = 5000
+             tehcar = 5000
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -291,14 +291,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить Cadillac Escalade (2 млн)':
              cla
              *clr
-             set bankfond = bankfond - 2000000
-             set $car = 'Cadillac Escalade'
-             set car = 97
-             set benz = 3
-             set cardrive = 8
-             set teh = 4000
-             set tehcar = 4000
-             set wrek = 0
+             bankfond = bankfond - 2000000
+             $car = 'Cadillac Escalade'
+             car = 97
+             benz = 3
+             cardrive = 8
+             teh = 4000
+             tehcar = 4000
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -309,14 +309,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить Porsche Cayenne (5 млн)':
              cla
              *clr
-             set bankfond = bankfond - 5000000
-             set $car = 'Porsche Cayenne'
-             set car = 98
-             set benz = 3
-             set cardrive = 8
-             set teh = 3000
-             set tehcar = 3000
-             set wrek = 0
+             bankfond = bankfond - 5000000
+             $car = 'Porsche Cayenne'
+             car = 98
+             benz = 3
+             cardrive = 8
+             teh = 3000
+             tehcar = 3000
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -327,14 +327,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить BMW X6 (4,5 млн)':
              cla
              *clr
-             set bankfond = bankfond - 4500000
-             set $car = 'BMW X6'
-             set car = 99
-             set benz = 3
-             set cardrive = 8
-             set teh = 4000
-             set tehcar = 4000
-             set wrek = 0
+             bankfond = bankfond - 4500000
+             $car = 'BMW X6'
+             car = 99
+             benz = 3
+             cardrive = 8
+             teh = 4000
+             tehcar = 4000
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end
@@ -345,14 +345,14 @@ act 'Уйти':gt'autosalon','manager'
              act 'Купить Mercedes-Benz S 600 (8 млн)':
              cla
              *clr
-             set bankfond = bankfond - 8000000
-             set $car = 'Mercedes-Benz S 600'
-             set car = 100
-             set benz = 3
-             set cardrive = 8
-             set teh = 8000
-             set tehcar = 8000
-             set wrek = 0
+             bankfond = bankfond - 8000000
+             $car = 'Mercedes-Benz S 600'
+             car = 100
+             benz = 3
+             cardrive = 8
+             teh = 8000
+             tehcar = 8000
+             wrek = 0
              'Вы перечислили деньги и менеджер вам выдала ключи. Она уточнила, что ваша машина уже стоит на улице. Бензина мало и она рекомендует вам заправиться.'
              act 'Уйти':gt'autosalon','manager'
              end

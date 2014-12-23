@@ -17,7 +17,7 @@ if hour >= 6 and hour <= 18:'На кухне что то готовит ваша
      act 'Есть (15 мин)':
      cla
      *clr
-     set minut = minut + 15
+     minut = minut + 15
      '<center><img src="pic/pic\food.jpg" ></center>'
      'Вы поставили еду на стол.'
      gs'eat'

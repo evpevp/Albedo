@@ -91,10 +91,10 @@ end
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
          if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         minut = minut + 15
          end
          if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         minut = minut + waiting
          end
      act 'Посмотреть на часы':gt curloc
      end

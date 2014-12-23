@@ -2,7 +2,7 @@
 if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 1
+minut = minut + 1
 cla
 clr
 gs'stat'
@@ -21,7 +21,7 @@ end
 if $ARGS[0]='fam':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 1
+minut = minut + 1
 cla
 clr
 gs'stat'
@@ -55,7 +55,7 @@ end
 if $ARGS[0]='work':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 1
+minut = minut + 1
 cla
 clr
 gs'stat'

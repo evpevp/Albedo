@@ -11,7 +11,7 @@ if lezvie>0:
          act 'Брить щетину':
          cla
          minut=minut+15
-         set berd = -1
+         berd = -1
          'Вы сбрили щетину.'
          act 'Отложить бритву':gt'kadka'
          end
@@ -21,7 +21,7 @@ if lezvie>0:
          act 'Брить лобок':
          cla
          minut=minut+15
-         set lobok = -10
+         lobok = -10
          'Вы побрили лобок.'
          act 'Отложить бритву':gt'kadka'
          end
@@ -31,7 +31,7 @@ if lezvie>0:
          act 'Брить волосы на ногах':
          cla
          minut=minut+15
-         set leghair = -10
+         leghair = -10
          'Вы побрили ноги.'
          act 'Отложить бритву':gt'kadka'
          end

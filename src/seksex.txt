@@ -2,10 +2,10 @@
 if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
-set sexm=sexm+1
+sexm=sexm+1
 '<center><img src="pic\fam\seksex.jpg" ></center>'
 'В ваш кабинет вошла секретарша Люда, плавно покачивая бедрами.'
 
@@ -15,7 +15,7 @@ end
 if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\seksex1.jpg" ></center>'
@@ -30,7 +30,7 @@ end
 if $ARGS[0]='2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 manna=manna+50
 clr
@@ -44,7 +44,7 @@ end
 if $ARGS[0]='3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 manna=manna+25
 WillPower=WillPower+25
@@ -59,7 +59,7 @@ end
 if $ARGS[0]='4':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 WillPower=WillPower+50
 clr

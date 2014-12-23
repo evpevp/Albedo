@@ -170,11 +170,11 @@ if golod < 15: $golod = '<font color=blue>Вы сыты.</font>'
 if golod < 5: $golod = '<font color=brown>Вы хотите есть.</font>'
 if golod <= 1: $golod = '<B><font color=red>Вы страшно голодны.</font></B>'
 !<B><font color=red>Ваш живот перемазан в сперме.</font></B>
-if sweat <= 0:set $sweat = ''
-if sweat = 1:set $sweat = '<font color=#0bda51>Вы вспотели.</font>'
-if sweat = 2:set $sweat = '<font color=#50c878>От вас немного пахнет.</font>'
-if sweat = 3:set $sweat = '<font color=#7ba05b>От вас разит потом.</font>'
-if sweat > 3:set $sweat = '<font color=#adff2f>От вас воняет потом так, что у окружающих слезятся глаза.</font>'
+if sweat <= 0:$sweat = ''
+if sweat = 1:$sweat = '<font color=#0bda51>Вы вспотели.</font>'
+if sweat = 2:$sweat = '<font color=#50c878>От вас немного пахнет.</font>'
+if sweat = 3:$sweat = '<font color=#7ba05b>От вас разит потом.</font>'
+if sweat > 3:$sweat = '<font color=#adff2f>От вас воняет потом так, что у окружающих слезятся глаза.</font>'
 
 
 if health < 0:

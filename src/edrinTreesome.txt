@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 'Мужчина обнимает одной рукой Эдрин, а другой хочет обнять вас.'
 act 'Уйти':gt'teladareW'
      act 'Позволить себя обнять.':
@@ -30,7 +30,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 bj=bj+1
 guy=guy+1
 gang=gang+1

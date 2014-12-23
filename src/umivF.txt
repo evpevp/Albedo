@@ -4,12 +4,12 @@ $loc = $CURLOC
 clr
 gs'stat'
 '<center><H4>Умывальник</H4></center>'
-if stanok <= 0:set $stanok = ''
-if stanok > 0:set $stanok = 'бритвенный станок, которого хватит на <<stanok>> раз'
-if milo <= 0:set $milo = ''
-if milo > 0 and stanok <= 0:set $and = ''
-if milo > 0 and stanok > 0:set $and = 'и'
-if milo > 0:set $milo = '<<$and>> мыло, которого хватит на <<milo>> раз'
+if stanok <= 0:$stanok = ''
+if stanok > 0:$stanok = 'бритвенный станок, которого хватит на <<stanok>> раз'
+if milo <= 0:$milo = ''
+if milo > 0 and stanok <= 0:$and = ''
+if milo > 0 and stanok > 0:$and = 'и'
+if milo > 0:$milo = '<<$and>> мыло, которого хватит на <<milo>> раз'
 'На полочке около умывальника лежит <<$stanok>> <<$milo>>.'
 'Вы включили воду в раковине.'
      

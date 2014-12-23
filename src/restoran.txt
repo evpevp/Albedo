@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Ресторан Метрополь</font></B></center>'
 '<center><img src="pic\pic\restoranfasad.jpg" ></center>'
 'Время работы с 10 до 22 без выходных'
@@ -21,7 +21,7 @@ LCOLOR = rgb(106,90,205)
 
      act 'ВЫЙТИ ИЗ РЕСТОРАНА':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'down'
      end
      
@@ -32,7 +32,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Ресторан</font></B></center>'
 '<center><img src="pic\pic\restoran.jpg" ></center>'
 clr
@@ -45,7 +45,7 @@ LCOLOR = rgb(106,90,205)
          if money >= 5000:
              act 'VIP зал 5000 руб':
              cla
-             set money = money - 5000
+             money = money - 5000
              gt'restoran','vip'
              end
          end
@@ -56,7 +56,7 @@ LCOLOR = rgb(106,90,205)
 
      act 'ВЫЙТИ ИЗ РЕСТОРАНА':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'restoran','start'
      end
      
@@ -68,7 +68,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Ресторан, общий зал</font></B></center>'
 '<center><img src="pic\pic\restoran2.jpg" ></center>'
 'Общий зал ресторана набит народом, всюду шум, снуют официанты.'
@@ -80,14 +80,14 @@ LCOLOR = rgb(106,90,205)
 
      act 'Уйти':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'restoran','start'
      end
      
      if money>= 5000:
          act 'Поесть 5 тыр':
 		 cla
-		 set minut = minut + 60
+		 minut = minut + 60
 		 golod=golod+20
 		 fat=fat+1
 		 WillPower=WillPower+5
@@ -105,7 +105,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Ресторан, VIP зал</font></B></center>'
 '<center><img src="pic\pic\restoran3.jpg" ></center>'
 'В вип зале столы расположенны в отдельных кабинетах.'
@@ -117,14 +117,14 @@ LCOLOR = rgb(106,90,205)
 
      act 'Уйти':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'restoran','start'
      end
      
      if money>= 5000:
          act 'Поесть 5 тыр':
 		 cla
-		 set minut = minut + 60
+		 minut = minut + 60
 		 golod=golod+20
 		 fat=fat+5
 		 WillPower=WillPower+15
@@ -138,7 +138,7 @@ LCOLOR = rgb(106,90,205)
 		 if pol = 0 and restordeloday ! day:
 			 act 'Деловая встреча с Олегом 5 тыр':
 			 cla
-			 set minut = minut + 60
+			 minut = minut + 60
 			 golod=golod+20
 			 fat=fat+5
 			 WillPower=WillPower+15
@@ -169,7 +169,7 @@ LCOLOR = rgb(106,90,205)
 			 if olegQW >= 3 and prava=0:
 			 	 act 'Деловая встреча с полковником 5 тыр':
 				 cla
-				 set minut = minut + 60
+				 minut = minut + 60
 				 golod=golod+20
 				 fat=fat+5
 				 WillPower=WillPower+15
@@ -198,7 +198,7 @@ LCOLOR = rgb(106,90,205)
 			 if olegQW >= 2 and brak<3 and sud=0:
 			 	 act 'Деловая встреча с Владимиром Викторовичем (директор проектной фирмы) 5 тыр':
 				 cla
-				 set minut = minut + 60
+				 minut = minut + 60
 				 golod=golod+20
 				 fat=fat+5
 				 WillPower=WillPower+15
@@ -229,7 +229,7 @@ LCOLOR = rgb(106,90,205)
 			     act 'Встреча с Ириной 10 тыр':
 			     cla
 			     *clr
-			     set minut = minut + 60
+			     minut = minut + 60
 				 golod=golod+20
 				 fat=fat+5
 				 WillPower=WillPower+15
@@ -288,7 +288,7 @@ LCOLOR = rgb(106,90,205)
 							     act 'Достать член':
 								 cla
 								 *clr
-								 set minut = minut + 5
+								 minut = minut + 5
 								 picrand=RAND(0,1)
 								 if picrand=0:'<center><img src="pic\fam\irina\restoran\irina_bj_15.gif" ></center>'
 								 if picrand=1:'<center><img src="pic\fam\irina\restoran\irinablow_1.gif" ></center>'				                 
@@ -297,20 +297,20 @@ LCOLOR = rgb(106,90,205)
 									 act 'Трахать Ирину':
 									 cla
 									 *clr
-									 set minut = minut + 5
+									 minut = minut + 5
 									 '<center><img src="pic\fam\irina\restoran\irina_restoran_1.gif" ></center>'
 									 'Затем вы посадили Иру на себя, и придерживая за ноги стали быстро насаживать на член.'
 										 act 'Продолжить':
 										 cla
 										 *clr
-										 set minut = minut + 5
+										 minut = minut + 5
 										 '<center><img src="pic\fam\irina\restoran\irina_restoran_3.gif" ></center>'
 										 'Чувствуя что близки к финалу, вы положили Ирину на стол и стали трахать её между сисек.'
 										 'Ира сжимала их, охватывая ваш член и просила кончить ей в рот.'	 
 											 act 'Кончить':
 											 cla
 											 *clr
-											 set minut = minut + 5
+											 minut = minut + 5
 											 picrand=RAND(0,2)
 											 if picrand=0:'<center><img src="pic\fam\irina\restoran\irina_cum_3.gif" ></center>'
 											 if picrand=1:'<center><img src="pic\fam\irina\restoran\irina_restoran_2.gif" ></center>'
@@ -345,7 +345,7 @@ LCOLOR = rgb(106,90,205)
 			 if olegQW >= 1 and albertQW = 0 and brak<3 and sud=0:
 			 	 act 'Деловая встреча с Альбертом (директор охранного предприятия) 5 тыр':
 				 cla
-				 set minut = minut + 60
+				 minut = minut + 60
 				 golod=golod+20
 				 fat=fat+5
 				 WillPower=WillPower+15

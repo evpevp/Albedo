@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 bj=bj+1
 horny=horny+20
 clr
@@ -32,7 +32,7 @@ if penis=0:'<center><img src="pic/EvedonTA/ubjf.jpg" ></center>'
              act 'Теперь твоя очередь поработать':
              cla
              *clr
-             set minut = minut + 15
+             minut = minut + 15
              sexm=sexm+1
              if penis>0:'<center><img src="pic/EvedonTA/ubj3.jpg" ></center>'
              'Урта села на корточки и начала сосать ваш член. Ее губки умело ласкают ваш член и язычок обрабатывает головку.'
@@ -44,7 +44,7 @@ if penis=0:'<center><img src="pic/EvedonTA/ubjf.jpg" ></center>'
                      act 'Встань раком':
                      cla
                      *clr
-                     set minut = minut + 15
+                     minut = minut + 15
                      DOM=DOM+1
                      horny=0
                      '<center><img src="pic/EvedonTA/ubj4.jpg" ></center>'
@@ -60,7 +60,7 @@ if penis=0:'<center><img src="pic/EvedonTA/ubjf.jpg" ></center>'
          act 'Встань раком':
          cla
          *clr
-         set minut = minut + 15
+         minut = minut + 15
          DOM=DOM+1
          horny=0
          sexm=sexm+1
@@ -73,7 +73,7 @@ if penis=0:'<center><img src="pic/EvedonTA/ubjf.jpg" ></center>'
      act 'Прекратить сосать':
      cla
      *clr
-     set minut = minut + 15
+     minut = minut + 15
      if penis=0:tiprand=RAND(0,1)
      if penis>0:tiprand=0
          if tiprand=0:
@@ -122,7 +122,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 urtaQW=urtaQW+1
 destrand=RAND(0,2)
      if penis>0:
@@ -140,7 +140,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 bj=bj+1
 SUB=SUB+1
 horny=horny+20
@@ -197,7 +197,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 horny=horny+50
 clr
 gs'stat'
@@ -270,7 +270,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 bj=bj+1
 SUB=SUB+1
 horny=horny+20
@@ -381,7 +381,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 bj=bj+1
 SUB=SUB+1
 horny=horny+20
@@ -477,7 +477,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 sexm=sexm+1
 '<center><img src="pic/EvedonTA/urtaSub.jpg" ></center>'
 'Вы поставили Урту раком и вошли ей в влагалище. Урта застонала от удовольствия и пока вы ее трахали в киску, она ловко согнулась и обхватив губами головку своего напряженного члена начала ее сосать одновременно с вашими фрикциями. Наконец вы не выдержали и кончили ей в киску, тут же Урта застонала и сперма из ее члена наполнила ее рот.'
@@ -491,7 +491,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 !urtaSub
 ''
 act 'Уйти':gt'teladareW'

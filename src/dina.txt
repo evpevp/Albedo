@@ -49,13 +49,13 @@ $spermBut={
 }
 $spermEat={
 	if golod >= 10:
-		set golod = golod + 5
+		golod = golod + 5
 		health=health+5
-		set fat = fat + 1
+		fat = fat + 1
 		'Вы объелись спермой.'
 	end
 	if golod < 10:
-		set golod = golod + 10
+		golod = golod + 10
 		health=health+5
 		manna=manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
@@ -73,13 +73,13 @@ $spermBut1={
 }
 $spermEat1={
 	if golod >= 10:
-		set golod = golod + 5
+		golod = golod + 5
 		health=health+5
-		set fat = fat + 1
+		fat = fat + 1
 		'Вы объелись спермой.'
 	end
 	if golod < 10:
-		set golod = golod + 10
+		golod = golod + 10
 		health=health+5
 		manna=manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
@@ -97,13 +97,13 @@ $spermBut2={
 }
 $spermEat2={
 	if golod >= 10:
-		set golod = golod + 5
+		golod = golod + 5
 		health=health+5
-		set fat = fat + 1
+		fat = fat + 1
 		'Вы объелись спермой.'
 	end
 	if golod < 10:
-		set golod = golod + 10
+		golod = golod + 10
 		health=health+5
 		manna=manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
@@ -121,13 +121,13 @@ $spermBut3={
 }
 $spermEat3={
 	if golod >= 10:
-		set golod = golod + 5
+		golod = golod + 5
 		health=health+5
-		set fat = fat + 1
+		fat = fat + 1
 		'Вы объелись спермой.'
 	end
 	if golod < 10:
-		set golod = golod + 10
+		golod = golod + 10
 		health=health+5
 		manna=manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
@@ -145,13 +145,13 @@ $spermBut4={
 }
 $spermEat4={
 	if golod >= 10:
-		set golod = golod + 5
+		golod = golod + 5
 		health=health+5
-		set fat = fat + 1
+		fat = fat + 1
 		'Вы объелись спермой.'
 	end
 	if golod < 10:
-		set golod = golod + 10
+		golod = golod + 10
 		health=health+5
 		manna=manna+5
 	'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'
@@ -169,13 +169,13 @@ $spermBut5={
 }
 $spermEat5={
 	if golod >= 10:
-		set golod = golod + 5
+		golod = golod + 5
 		health=health+5
-		set fat = fat + 1
+		fat = fat + 1
 		'Вы объелись спермой.'
 	end
 	if golod < 10:
-		set golod = golod + 10
+		golod = golod + 10
 		health=health+5
 		manna=manna+5
 		'Вы собрали сперму руками и присосались к своим перемазанным ладоням огромными мокрыми черными губами, втягивая сперму.'

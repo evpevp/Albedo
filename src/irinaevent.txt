@@ -3,7 +3,7 @@
 if $ARGS[0]='lake':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 horny=horny+100
 clr
 gs'stat'
@@ -16,7 +16,7 @@ end
 if $ARGS[0]='lake1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\park\irina_park_10.gif" ></center>'
@@ -27,7 +27,7 @@ end
 if $ARGS[0]='lake2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\park\Irina_park13.gif" ></center>'
@@ -38,7 +38,7 @@ end
 if $ARGS[0]='lake3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\park\irina_park_1.gif" ></center>'
@@ -50,7 +50,7 @@ end
 if $ARGS[0]='lake4':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\park\irina_park_8.gif" ></center>'
@@ -61,7 +61,7 @@ end
 if $ARGS[0]='lake5':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\park\irina_park_2.gif" ></center>'
@@ -72,7 +72,7 @@ end
 if $ARGS[0]='lake6':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\park\irina_park_11.gif" ></center>'
@@ -84,7 +84,7 @@ end
 if $ARGS[0]='lake7':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -97,7 +97,7 @@ end
 if $ARGS[0]='lake8':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\park\irina_park_4.gif" ></center>'
@@ -108,7 +108,7 @@ end
 if $ARGS[0]='lake9':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\park\irina_park_12.gif" ></center>'
@@ -119,7 +119,7 @@ end
 if $ARGS[0]='lake10':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 sweat=sweat+5
 horny=0
 manna=manna+25
@@ -138,7 +138,7 @@ end
 if $ARGS[0]='poli':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 horny=horny+100
 clr
 gs'stat'
@@ -154,7 +154,7 @@ end
 if $ARGS[0]='poli1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\poli\irina_nurse_9.gif" ></center>'
@@ -166,7 +166,7 @@ end
 if $ARGS[0]='politity':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\poli\irina_nurse_1.gif" ></center>'
@@ -178,7 +178,7 @@ end
 if $ARGS[0]='poli2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\poli\irina_nurse_10.gif" ></center>'
@@ -189,7 +189,7 @@ end
 if $ARGS[0]='poli3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -203,7 +203,7 @@ end
 if $ARGS[0]='poli4':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\poli\irina_nurse_2.gif" ></center>'
@@ -215,7 +215,7 @@ end
 if $ARGS[0]='poli5':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 picrand=RAND(0,2)
@@ -230,7 +230,7 @@ end
 if $ARGS[0]='poli6':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\poli\irina_nurse_12.gif" ></center>'
@@ -242,7 +242,7 @@ end
 if $ARGS[0]='poli7':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 manna=manna+25
 WillPower=WillPower+25
 sexm=sexm+1
@@ -258,7 +258,7 @@ end
 if $ARGS[0]='poli8':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 10
+minut = minut + 10
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\poli\poli_vihod.jpg" ></center>'

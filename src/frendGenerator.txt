@@ -152,15 +152,15 @@ fves=ftalia
 
 ftitk=fgrud-fpodgrud
      if ftitK=0:$ftitsw='нет груди'
-	 if ftitK>0 and ftitK < 5:set ftits = 0&$ftitsw='немного увеличенные груди но не тянут даже на самый маленький размер'
-	 if ftitK >= 5 and ftitK <= 10:set ftits = 1&$ftitsw='груди размера AA'  
-	 if ftitK > 10 and ftitK <= 15:set ftits = 2&$ftitsw='груди размера A' 
-	 if ftitK > 15 and ftitK <= 20:set ftits = 3&$ftitsw='груди размера B' 
-	 if ftitK > 20 and ftitK <= 30:set ftits = 4&$ftitsw='груди размера C' 
-	 if ftitK > 30 and ftitK <= 40:set ftits = 5&$ftitsw='груди размера D' 
-	 if ftitK > 40 and ftitK <= 50:set ftits = 6&$ftitsw='груди размера DD' 
-	 if ftitK > 50 and ftitK <= 60:set ftits = 7&$ftitsw='груди размера E'
-	 if ftitK > 60:set ftits = 8&$ftitsw='груди размера F' 
+	 if ftitK>0 and ftitK < 5:ftits = 0&$ftitsw='немного увеличенные груди но не тянут даже на самый маленький размер'
+	 if ftitK >= 5 and ftitK <= 10:ftits = 1&$ftitsw='груди размера AA'  
+	 if ftitK > 10 and ftitK <= 15:ftits = 2&$ftitsw='груди размера A' 
+	 if ftitK > 15 and ftitK <= 20:ftits = 3&$ftitsw='груди размера B' 
+	 if ftitK > 20 and ftitK <= 30:ftits = 4&$ftitsw='груди размера C' 
+	 if ftitK > 30 and ftitK <= 40:ftits = 5&$ftitsw='груди размера D' 
+	 if ftitK > 40 and ftitK <= 50:ftits = 6&$ftitsw='груди размера DD' 
+	 if ftitK > 50 and ftitK <= 60:ftits = 7&$ftitsw='груди размера E'
+	 if ftitK > 60:ftits = 8&$ftitsw='груди размера F' 
 
 
 
@@ -198,21 +198,21 @@ if fhlong>=90:$fhlong='ниспадающие до попы'
 
 
 
-if ftan <= 0:set $ftan = ''
-if ftan > 0:set $ftan = 'загорелое'
+if ftan <= 0:$ftan = ''
+if ftan > 0:$ftan = 'загорелое'
 
-if fhcol = 0:set $fhair = 'У <<$fpristext>> <<$fhlong>>, черные волосы,'
-if fhcol = 1:set $fhair = 'У <<$fpristext>> <<$fhlong>>, русые волосы,'
-if fhcol = 2:set $fhair = 'У <<$fpristext>> <<$fhlong>>, рыжие волосы,'
-if fhcol = 3:set $fhair = 'У <<$fpristext>> <<$fhlong>>, светлые волосы,'
+if fhcol = 0:$fhair = 'У <<$fpristext>> <<$fhlong>>, черные волосы,'
+if fhcol = 1:$fhair = 'У <<$fpristext>> <<$fhlong>>, русые волосы,'
+if fhcol = 2:$fhair = 'У <<$fpristext>> <<$fhlong>>, рыжие волосы,'
+if fhcol = 3:$fhair = 'У <<$fpristext>> <<$fhlong>>, светлые волосы,'
 
-if fglacol = 0:set $fglacol = 'карие глаза'
-if fglacol = 1:set $fglacol = 'серые глаза'
-if fglacol = 2:set $fglacol = 'зеленые глаза'
-if fglacol = 3:set $fglacol = 'голубые глаза'
+if fglacol = 0:$fglacol = 'карие глаза'
+if fglacol = 1:$fglacol = 'серые глаза'
+if fglacol = 2:$fglacol = 'зеленые глаза'
+if fglacol = 3:$fglacol = 'голубые глаза'
 
 
-set $ffacem = '<<$fhair>> и <<$fglacol>>.'
+$ffacem = '<<$fhair>> и <<$fglacol>>.'
 
 
 if fface < 10:$fface='У <<$fpristext>> грубое <<$ftan>> мужское лицо, с резкими чертами. <<$ffacem>>. На внешний вид можно дать <<fage>> лет'

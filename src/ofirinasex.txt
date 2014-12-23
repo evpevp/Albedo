@@ -2,11 +2,11 @@
 if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 60
+minut = minut + 60
 clr
 gs'stat'
 if ofirinaQW=1:count['girl']=count['girl']+1&ofirinaQW=2
-set sexm=sexm+1
+sexm=sexm+1
 '<center><img src="pic\fam\irina\kv\irina_22.jpg" ></center>'
 'Вы приехали на такси к дому Иры. Зашли в ее квартиру. Она сходила переодеться и пришла к вам.'
 	 act 'Предоставить инициативу':gt'ofirinasex','ona1'
@@ -16,7 +16,7 @@ end
 if $ARGS[0]='ona1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kv\irina_beforsex_2.gif" ></center>'
@@ -28,7 +28,7 @@ end
 if $ARGS[0]='ona2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kv\irina_bj_10.gif" ></center>'
@@ -39,7 +39,7 @@ end
 if $ARGS[0]='ona3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -52,7 +52,7 @@ end
 if $ARGS[0]='ona4':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,6)
@@ -71,7 +71,7 @@ end
 if $ARGS[0]='konec1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 manna=manna+50
 clr
@@ -84,7 +84,7 @@ end
 if $ARGS[0]='ona5':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,5)
@@ -101,7 +101,7 @@ end
 if $ARGS[0]='ona6':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 manna=manna+25
 WillPower=WillPower+25
@@ -115,7 +115,7 @@ end
 if $ARGS[0]='konec2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kv\irina_21.jpg" ></center>'
@@ -126,7 +126,7 @@ end
 if $ARGS[0]='on1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kv\irina_beforsex_6.gif" ></center>'
@@ -137,7 +137,7 @@ end
 if $ARGS[0]='on2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -152,7 +152,7 @@ end
 if $ARGS[0]='on3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,12)
@@ -177,7 +177,7 @@ end
 if $ARGS[0]='on4':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,3)
@@ -194,7 +194,7 @@ end
 if $ARGS[0]='on5':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,5)
@@ -213,7 +213,7 @@ end
 if $ARGS[0]='onsidya6':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,5)
@@ -231,7 +231,7 @@ end
 if $ARGS[0]='onsidya7':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kv\irina_bj_32.gif" ></center>'
@@ -242,7 +242,7 @@ end
 if $ARGS[0]='onsidya8':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 WillPower=WillPower+50
 clr
@@ -262,7 +262,7 @@ end
 if $ARGS[0]='konec3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kv\irina_21_1.jpg" ></center>'
@@ -273,7 +273,7 @@ end
 if $ARGS[0]='onlega6':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,1)
@@ -288,7 +288,7 @@ end
 if $ARGS[0]='onlega7':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kv\irinafuck_55.gif" ></center>'
@@ -302,7 +302,7 @@ end
 if $ARGS[0]='creampie1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 WillPower=WillPower+50
 clr
@@ -315,7 +315,7 @@ end
 if $ARGS[0]='bellycum1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 WillPower=WillPower+50
 clr
@@ -332,7 +332,7 @@ end
 if $ARGS[0]='facecum1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 horny=0
 WillPower=WillPower+50
 clr
@@ -345,7 +345,7 @@ end
 if $ARGS[0]='kuni':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 manna=manna+5
 clr
 gs'stat'
@@ -362,7 +362,7 @@ end
 if $ARGS[0]='anal':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kv\Irina_ass_fingering_1.gif" ></center>'

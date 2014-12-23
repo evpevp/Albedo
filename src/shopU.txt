@@ -2,7 +2,7 @@
 if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 1
+minut = minut + 1
 cla
 clr
 gs'stat'
@@ -24,7 +24,7 @@ end
 if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 cla
 clr
 gs'stat'
@@ -41,8 +41,8 @@ bcolor=rgb(255,255,255)
          act 'Купить мыло 50 руб':
          cla
          *clr
-         set money = money - 50
-         set milo = milo + 10
+         money = money - 50
+         milo = milo + 10
          '<center><img src="pic\pic\kassa.jpg" ></center>'
          'Вы заплатили в кассу и забрали покупку.'
          act 'Отойти от прилавка':GOTO $loc, $metka
@@ -52,8 +52,8 @@ bcolor=rgb(255,255,255)
          act 'Купить моющее средство для посуды 250 руб':
          cla
          *clr
-         set money = money - 250
-         set fairy = fairy + 20
+         money = money - 250
+         fairy = fairy + 20
          '<center><img src="pic\pic\kassa.jpg" ></center>'
          'Вы заплатили в кассу и забрали покупку.'
          act 'Отойти от прилавка':GOTO $loc, $metka
@@ -63,8 +63,8 @@ bcolor=rgb(255,255,255)
          act 'Купить набор тарелок 500 руб':
          cla
          *clr
-         set money = money - 500
-         set tarelka = tarelka + 5
+         money = money - 500
+         tarelka = tarelka + 5
          '<center><img src="pic\pic\kassa.jpg" ></center>'
          'Вы заплатили в кассу и забрали покупку.'
          act 'Отойти от прилавка':GOTO $loc, $metka
@@ -74,8 +74,8 @@ bcolor=rgb(255,255,255)
          act 'Купить шампунь 200 руб':
          cla
          *clr
-         set money = money - 500
-         set shampoo = shampoo + 20
+         money = money - 500
+         shampoo = shampoo + 20
          '<center><img src="pic\pic\kassa.jpg" ></center>'
          'Вы заплатили в кассу и забрали покупку.'
          act 'Отойти от прилавка':GOTO $loc, $metka
@@ -85,8 +85,8 @@ bcolor=rgb(255,255,255)
          act 'Купить бритвенный станок 300 руб':
          cla
          *clr
-         set money = money - 500
-         set stanok = stanok + 20
+         money = money - 500
+         stanok = stanok + 20
          '<center><img src="pic\pic\kassa.jpg" ></center>'
          'Вы заплатили в кассу и забрали покупку.'
          act 'Отойти от прилавка':GOTO $loc, $metka

@@ -16,7 +16,7 @@ $act_GetShaved = {
 			act 'Брить щетину':
 				cla
 				stanok=stanok-1
-				set berd = -1
+				berd = -1
 				'Вы сбрили щетину.'
 				minut += 5
 				gs 'stat'

@@ -42,7 +42,7 @@ if hour>= 19 and hour<22:
      if health < vital*10 or WillPower<will*10:
          act 'Идти в лазарет.':
          cla
-         set minut = minut + 60
+         minut = minut + 60
          'Врачиха нехотя осмотрела вас и обозвала симулянтом.'
          act 'Уйти.':gt $CURLOC
              if money>=100:
@@ -60,14 +60,14 @@ if hour>= 19 and hour<22:
      end
         
      act 'Отдыхать час.':
-     set minut = minut + 60
+     minut = minut + 60
      manna=manna+will
      gt $CURLOC
      end
      
      if money>0:
          act 'Заныкать деньги.':
-		 set minut = minut + 60
+		 minut = minut + 60
 		 moneyNik=moneyNik+money
 		 money=0
 		 gt $CURLOC
@@ -76,7 +76,7 @@ if hour>= 19 and hour<22:
      
      if moneyNik > 0:
          act 'Забрать деньги из нычки.':
-		 set minut = minut + 60
+		 minut = minut + 60
 		 money=money+moneyNik
 		 moneyNik=0
 		 gt $CURLOC
@@ -108,9 +108,9 @@ if hour>= 19 and hour<22:
 	     cla
 		 *clr
 		 jailfitday = day
-		 set minut = minut + 60
+		 minut = minut + 60
 		 sweat=sweat+3
-		 set exp=exp+RAND(1,3)
+		 exp=exp+RAND(1,3)
 		 fat=fat-1
 		 manna=manna-15
 		 'Вы в течении часа выполняли разнообразные физические упражнения.'
@@ -132,7 +132,7 @@ if hour>= 19 and hour<22:
      
      if shnirday ! day and mast<10:
 	     act 'Шнырять за 100руб 1 час.':
-		 set minut = minut + 60
+		 minut = minut + 60
 		 шнырь=шнырь+1
 		 money=money+100
 		 shnirday = day
@@ -141,7 +141,7 @@ if hour>= 19 and hour<22:
 	 end
 	 
 	 act 'Покупать 1 час.':
-	 set minut = minut + 60
+	 minut = minut + 60
 	 gt 'sizomagaz'
 	 end
 	 

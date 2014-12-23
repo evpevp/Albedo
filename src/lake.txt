@@ -1,7 +1,7 @@
 # lake
 cla
 *clr
-if lakeonce = 0:set lakeonce = 1&set minut = minut + 60
+if lakeonce = 0:lakeonce = 1&minut = minut + 60
 '<center><B><font color=maroon>Озеро</font></B></center>'
 clr
 gs'stat'
@@ -21,17 +21,17 @@ if car > 0 and cardrive = 4: 'У озера стоит <a href="exec:GS ''car'',
 act 'Купаться 1 час':
     cla
     *clr
-    set cumpussy = 0
-	set cumbelly = 0
-	set cumass = 0
-	set cumlip = 0
-	set cumface = 0
-	set cumfrot = 0
-    set minut = minut + 60
-    set sweat = -3
-    set manna = manna + 5
-    set willpower = willpower + 5
-    if stren < 30:set stren = stren + 1
+    cumpussy = 0
+	cumbelly = 0
+	cumass = 0
+	cumlip = 0
+	cumface = 0
+	cumfrot = 0
+    minut = minut + 60
+    sweat = -3
+    manna = manna + 5
+    willpower = willpower + 5
+    if stren < 30:stren = stren + 1
     !НИМФА ОЗЕРА!
 	!fairymeet=RAND(0,15)
 	if nark!1:
@@ -52,9 +52,9 @@ act 'Купаться 1 час':
          act 'Загорать 1 час':
          cla
          *clr
-         set minut = minut + 60
-         set sweat = sweat + 1
-         set manna = manna + 5
+         minut = minut + 60
+         sweat = sweat + 1
+         manna = manna + 5
              act 'Встать с пляжа':gt'lake','start'
          end
      end    
@@ -62,8 +62,8 @@ act 'Купаться 1 час':
 
      act 'ВЫЙТИ':
      cla
-     set lakeonce = 0
-     set minut = minut + 60
+     lakeonce = 0
+     minut = minut + 60
      gt'street'
      end
 

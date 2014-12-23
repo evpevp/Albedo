@@ -19,7 +19,7 @@ if club=1:club=0
 
 
 if car > 0 and cardrive = 2:
-set cardrive = 2
+cardrive = 2
 'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
 end
 
@@ -43,10 +43,10 @@ if pornstudio=1:'Ваша <a href="exec:GT ''pornstudio'',''start''">Кинос�
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
          if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         minut = minut + 15
          end
          if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         minut = minut + waiting
          end
      act 'Посмотреть на часы':gt curloc
      end
@@ -56,13 +56,13 @@ if pornstudio=1:'Ваша <a href="exec:GT ''pornstudio'',''start''">Кинос�
      *clr
      '<center><img src="pic\pic\taxi1.jpg" ></center>'
      'Вы поймали проезжавшую мимо таксишку.'
-     set minut = minut + 15
+     minut = minut + 15
          act 'В спальный район 250 руб':
 		 cla
 		 *clr
          'Вы сели в такси и за 15 минут доехали до спального района'
 			 if money >= 250:
-			 set money = money - 250
+			 money = money - 250
 			 'Заплатили таксисту 250 рублей и вышли из машины.'
 			 act 'Уйти':gt 'street'
 			 exit
@@ -80,7 +80,7 @@ if pornstudio=1:'Ваша <a href="exec:GT ''pornstudio'',''start''">Кинос�
 		 *clr
          'Вы сели в такси и за 15 минут доехали до северного района'
 			 if money >= 250:
-			 set money = money - 250
+			 money = money - 250
 			 'Заплатили таксисту 250 рублей и вышли из машины.'
 			 act 'Уйти':gt 'nord'
 			 exit

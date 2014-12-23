@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Стрип клуб</font></B></center>'
 '<center><img src="pic\pic\stripclub.jpg" ></center>'
 'Время работы с 16 до 3 без выходных.'
@@ -13,20 +13,20 @@ gs'stat'
 fcolor=rgb(0,0,0)
 bcolor=rgb(255,255,255)
 LCOLOR = rgb(106,90,205)
-Set scrand = RAND (1,100)
+scrand = RAND (1,100)
 if scrand <= 1 and stripday ! day:
-set stripday = day
-Set cfnm = 1
+stripday = day
+cfnm = 1
 end
 if scrand > 1 and stripday ! day:
-set stripday = day
-Set cfnm = 0
+stripday = day
+cfnm = 0
 end
 if cfnm = 1:'Сегодня в программе, мужской стриптиз, входной билет 500 руб.'
 if cfnm = 0:'Сегодня в программе, стриптиз, входной билет 500 руб.'
      act 'ВЫЙТИ':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'down'
      end
      
@@ -34,8 +34,8 @@ if cfnm = 0:'Сегодня в программе, стриптиз, входн�
 		 if cfnm = 0 and money >= 500:
 			 act 'Заплатить 500 рублей и войти':
 			 cla
-			 set money = money - 500
-			 set minut = minut + 5
+			 money = money - 500
+			 minut = minut + 5
 			 gt'stripclub','forman'
 			 end
 		 end
@@ -48,7 +48,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Стрип клуб</font></B></center>'
 '<center><img src="pic\pic\stripclub1.jpg" ></center>'
 clr
@@ -57,7 +57,7 @@ gs'stat'
 
      act 'ВЫЙТИ':
      cla
-     set minut = minut + 5
+     minut = minut + 5
      gt'stripclub','start'
      end
      
@@ -78,11 +78,11 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set money = money - 1000
-set minut = minut + 60
-set horny = horny + 25
+money = money - 1000
+minut = minut + 60
+horny = horny + 25
 manna=manna+15
-set DOM = DOM + 1
+DOM = DOM + 1
 clr
 gs'stat'
 if pol = 0:'<center><img src="pic\pic\privat2.jpg" ></center>'
@@ -106,17 +106,17 @@ gs'stat'
      *clr
 	 clr
 	 gs'stat'
-	 set minut = minut + 15
+	 minut = minut + 15
      '<center><img src="pic\pic\stripclub4.jpg" ></center>'
      'Около вас танцует девушка явно расчитывая на чаевые.'
          if money >= 50:
              act 'Сунуть ей 50 рублей':
 			 cla
 			 *clr
-			 set horny = horny + 5
-			 set minut = minut + 15
+			 horny = horny + 5
+			 minut = minut + 15
 			 manna=manna+5
-			 set money = money - 50
+			 money = money - 50
 			 '<center><img src="pic\pic\stripclub6.jpg" ></center>'
 			 'Вы сунули 50 рублей стриптизерше в трусики и она призывно начала вилять бедрами и трясти титьками перед вами, вы чувствуете как вы плавно начинаете возбуждаться.'
 			 act 'Далее':gt'stripclub','stol'
@@ -125,8 +125,8 @@ gs'stat'
          
          act 'Потупить взор':
          cla
-         set horny = horny - 5
-         set minut = minut + 15
+         horny = horny - 5
+         minut = minut + 15
          manna=manna-5
          'Вы решили не давать денег стриптизерше и отвели от нее взгляд, вам немного стыдно и возбуждение уменьшается.'
          act 'Далее':gt'stripclub','stol'

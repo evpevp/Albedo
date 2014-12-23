@@ -12,6 +12,6 @@ ACT 'Отойти от стола':
 END
 clr
 gs'stat'
-set minut=minut + 10
+minut=minut + 10
 --- казвар ---------------------------------
 

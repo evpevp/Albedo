@@ -22,7 +22,7 @@ if besrand=6:lvlg = 60&$nameV='Огромная демоническая гон�
 
 
 lvlv=lvlg
-set spg=lvlv*5
+spg=lvlv*5
 
 
 

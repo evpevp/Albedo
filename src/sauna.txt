@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Сауна</font></B></center>'
 '<center><img src="pic\pic\sauna.jpg" ></center>'
 'Время работы с 8 до 23, каждый день.' 
@@ -14,14 +14,14 @@ gs'stat'
 gs'time'
 
 	 if car > 0 and cardrive = 10:
-	 set cardrive = 10
+	 cardrive = 10
 	 'Около сауны стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
 	 end
 
 
      act 'ВЫЙТИ':
      cla
-     set minut = minut + 30
+     minut = minut + 30
      gt'street'
      end
      
@@ -36,7 +36,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Сауна</font></B></center>'
 '<center><img src="pic\pic\sauna1.jpg" ></center>'
 'Снять номер на час стоит 2000 руб.'
@@ -173,7 +173,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Сауна</font></B></center>'
 '<center><img src="pic\pic\sauna2.jpg" ></center>'
 'Снять номер на час стоит 2000 руб.'
@@ -333,7 +333,7 @@ end
 if $ARGS[0]='3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 60
+minut = minut + 60
 *clr
 gs'stat'
 '<center><img src="pic\sauna\banshik.jpg" ></center>'
@@ -459,7 +459,7 @@ gs'stat'
 '- Игорёк! У меня тут мысли как можно увеличить прибыль с продаж порно!'
 
 	 act 'Ну раскажи поподробнее ...':
-	 set minut = minut + 5
+	 minut = minut + 5
 	 cla
 	 *clr 
 	 clr
@@ -578,7 +578,7 @@ gs'stat'
 '- Игорёк! Тут такое дело: подъехала ко мне тюремная братва!'
 
 	 act 'Ну и что они хотели?':
-	 set minut = minut + 5
+	 minut = minut + 5
 	 cla
 	 *clr 
 	 clr

@@ -112,13 +112,13 @@ if INFIGHT=0:
 clr
 SPbut-=1
 	 if golod >= 10:
-	 set golod = golod + 5
+	 golod = golod + 5
 	 health=health+5
-	 set fat = fat + 1
+	 fat = fat + 1
 	 'Вы объелись спермой.'
 	 end
 	 if golod < 10:
-	 set golod = golod + 10
+	 golod = golod + 10
 	 health=health+5
 	 manna=manna+5
 	 'Вы присосались к бутылочке со спермой своими огромными мокрыми черными губами и начали втягивать сперму.'

@@ -10,7 +10,7 @@ USEHTML = 1
 
 clr
 gs'stat'
-set minut=minut + 5
+minut=minut + 5
 
 picrand=RAND(0,2)
 if picrand=0:'<right><img src="pic/casino/hcasino1.jpg" ></right>'

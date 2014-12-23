@@ -31,15 +31,15 @@ ves=talia
 
 titk=grud-podgrud
      if titK=0:$titsw='нет груди'
-	 if titK>0 and titK < 5:set tits = 0&$titsw='немного увеличенные но не тянут даже на самый маленький размер'
-	 if titK >= 5 and titK <= 10:set tits = 1&$titsw='размера AA'  
-	 if titK > 10 and titK <= 15:set tits = 2&$titsw='размера A' 
-	 if titK > 15 and titK <= 20:set tits = 3&$titsw='размера B' 
-	 if titK > 20 and titK <= 30:set tits = 4&$titsw='размера C' 
-	 if titK > 30 and titK <= 40:set tits = 5&$titsw='размера D' 
-	 if titK > 40 and titK <= 50:set tits = 6&$titsw='размера DD' 
-	 if titK > 50 and titK <= 60:set tits = 7&$titsw='размера E'
-	 if titK > 60:set tits = 8&$titsw='размера F'  
+	 if titK>0 and titK < 5:tits = 0&$titsw='немного увеличенные но не тянут даже на самый маленький размер'
+	 if titK >= 5 and titK <= 10:tits = 1&$titsw='размера AA'  
+	 if titK > 10 and titK <= 15:tits = 2&$titsw='размера A' 
+	 if titK > 15 and titK <= 20:tits = 3&$titsw='размера B' 
+	 if titK > 20 and titK <= 30:tits = 4&$titsw='размера C' 
+	 if titK > 30 and titK <= 40:tits = 5&$titsw='размера D' 
+	 if titK > 40 and titK <= 50:tits = 6&$titsw='размера DD' 
+	 if titK > 50 and titK <= 60:tits = 7&$titsw='размера E'
+	 if titK > 60:tits = 8&$titsw='размера F'  
 	 
 	 
 	 
@@ -110,15 +110,15 @@ ves=talia+vesKoef
 
 titk=grud-podgrud
      if titK=0:$titsw=''
-	 if titK>0 and titK < 10:set tits = 0&$titsw='немного увеличенные но не тянут даже на самый маленький размер'
-	 if titK >= 10 and titK <= 15:set tits = 1&$titsw='размера AA'  
-	 if titK > 15 and titK <= 20:set tits = 2&$titsw='размера A' 
-	 if titK > 20 and titK <= 25:set tits = 3&$titsw='размера B' 
-	 if titK > 25 and titK <= 30:set tits = 4&$titsw='размера C' 
-	 if titK > 30 and titK <= 35:set tits = 5&$titsw='размера D' 
-	 if titK > 35 and titK <= 40:set tits = 6&$titsw='размера DD' 
-	 if titK > 40 and titK <= 45:set tits = 7&$titsw='размера E'
-	 if titK > 45:set tits = 8&$tits='размера F''  
+	 if titK>0 and titK < 10:tits = 0&$titsw='немного увеличенные но не тянут даже на самый маленький размер'
+	 if titK >= 10 and titK <= 15:tits = 1&$titsw='размера AA'  
+	 if titK > 15 and titK <= 20:tits = 2&$titsw='размера A' 
+	 if titK > 20 and titK <= 25:tits = 3&$titsw='размера B' 
+	 if titK > 25 and titK <= 30:tits = 4&$titsw='размера C' 
+	 if titK > 30 and titK <= 35:tits = 5&$titsw='размера D' 
+	 if titK > 35 and titK <= 40:tits = 6&$titsw='размера DD' 
+	 if titK > 40 and titK <= 45:tits = 7&$titsw='размера E'
+	 if titK > 45:tits = 8&$tits='размера F''  
 
 
 
@@ -156,13 +156,13 @@ talia=ves
 bedra=talia+fatKoef+musleKoef
 grud=talia+5+fatKoef+(tit/5)
 titk=grud-talia
-	 if titK <= 10:set tits = 0
-	 if titK > 10 and titK <= 15:set tits = 1  
-	 if titK > 15 and titK <= 20:set tits = 2
-	 if titK > 20 and titK <= 25:set tits = 3
-	 if titK > 25 and titK <= 30:set tits = 4
-	 if titK > 30 and titK <= 35:set tits = 5
-	 if titK > 35:set tits = 6'
+	 if titK <= 10:tits = 0
+	 if titK > 10 and titK <= 15:tits = 1  
+	 if titK > 15 and titK <= 20:tits = 2
+	 if titK > 20 and titK <= 25:tits = 3
+	 if titK > 25 and titK <= 30:tits = 4
+	 if titK > 30 and titK <= 35:tits = 5
+	 if titK > 35:tits = 6'
 
 
 
@@ -173,7 +173,7 @@ musleKoef = (vital + stren)/10
 fatKoef = fat/10
 agilKoef = agil/10
 
-set ves = rost + fatKoef + musleKoef - (100 + agilKoef)
+ves = rost + fatKoef + musleKoef - (100 + agilKoef)
 end
 
 if femin>=200:
@@ -201,13 +201,13 @@ end
 bedra=talia+fatKoef+musleKoef+(ass+thight)/20
 grud=talia+5+fatKoef+(tit/5)
 titk=grud-talia
-	 if titK <= 10:set tits = 0
-	 if titK > 10 and titK <= 15:set tits = 1  
-	 if titK > 15 and titK <= 20:set tits = 2
-	 if titK > 20 and titK <= 25:set tits = 3
-	 if titK > 25 and titK <= 30:set tits = 4
-	 if titK > 30 and titK <= 35:set tits = 5
-	 if titK > 35:set tits = 6
+	 if titK <= 10:tits = 0
+	 if titK > 10 and titK <= 15:tits = 1  
+	 if titK > 15 and titK <= 20:tits = 2
+	 if titK > 20 and titK <= 25:tits = 3
+	 if titK > 25 and titK <= 30:tits = 4
+	 if titK > 30 and titK <= 35:tits = 5
+	 if titK > 35:tits = 6
 end'
 
 musle=stren+vital

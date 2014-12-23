@@ -2,7 +2,7 @@
 if $ARGS[0]='kafe1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kafe\irina_kafe_2.gif" ></center>'
@@ -13,7 +13,7 @@ end
 if $ARGS[0]='kafe2':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 picrand=RAND(0,2)
@@ -28,7 +28,7 @@ end
 if $ARGS[0]='kafe3':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\fam\irina\kafe\irina_kafe_10.gif" ></center>'

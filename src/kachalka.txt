@@ -3,7 +3,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Качалка</font></B></center>'
 '<center><img src="pic\pic\kachalka.jpg" ></center>'
 clr

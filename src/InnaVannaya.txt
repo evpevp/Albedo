@@ -102,7 +102,7 @@ if innaday=day and innaQW>=200 and CheckInnaShower=1:
 											         horny=0
 											         sexm=sexm+1
 											         InnaLastFuckDay=day
-													 set minut=minut+45
+													 minut=minut+45
 													 act 'Привести себя в порядок':gt'InnaKor'
 												 end
 											 end
@@ -160,7 +160,7 @@ if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
 					 *clr
 					 '<center><img src="pic\fam\Dbs5.jpg" ></center>'
 					 'Инна смотрит на вас счастливыми глазами. Да уж...новый уровень отношений с дочерью вам явно нравится! Да и ей он к лицу :)'
-					 set minut = minut + 20
+					 minut = minut + 20
 					 sexm=sexm+1
 					 manna=manna+25
                      WillPower=WillPower+25
@@ -181,7 +181,7 @@ if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
 					 '<center><img src="pic\fam\Dbs7.jpg" ></center>'
 					 'Предчувствуя оргазм, вы высовываете член из киски и отправляете струйки семени на нежное тело дочки'
 					 act 'Привести себя в порядок и выйти из ванной':
-						 set minut = minut + 25
+						 minut = minut + 25
 						 sexm=sexm+1
 						 manna=manna+25
                          WillPower=WillPower+25
@@ -195,8 +195,8 @@ if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
 				 *clr
 				 '<center><img src="pic\fam\Dbs5.jpg" ></center>'
 				 'Инна смотрит на вас счастливыми глазами. Да уж...новый уровень отношений с дочерью вам явно нравится! Да и ей он к лицу :)'
-				 set minut = minut + 25	
-				 set sexm=sexm+1
+				 minut = minut + 25	
+				 sexm=sexm+1
 				 manna=manna+25
                  WillPower=WillPower+25
                  InnaLastFuckDay=day
@@ -218,7 +218,7 @@ if innavag=1 and case=7 and CheckInnaShower!1 and (hour>=16 or hour<=8):
 						*clr
 						 '<center><img src="pic\fam\Dbs10.jpg" ></center>'
 						 'В последний момент вы успеваете вынуть свой агрегат из лона дочки и обдать ёё попку и киску спермой...некоторое время вы стоите и любуетесь как ручейки спермы стекают вдоль тела Инны'
-						 set minut = minut + 30
+						 minut = minut + 30
 						 sexm=sexm+1
 						 manna=manna+25
                          WillPower=WillPower+25

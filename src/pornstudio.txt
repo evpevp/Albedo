@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 
 	 if pornstudio=1 and mentmoney! month:
 	 cla
@@ -46,7 +46,7 @@ set minut = minut + 5
 	 'Вы приехали на студию и вас встретил режиссер-постановщик'
 		 if week=6 and castig = 0 :
 			 act 'Провести кастинг':
-			 set minut = minut + 480
+			 minut = minut + 480
 			 gt'pornstudio','2'
 			 end
 		 end
@@ -72,7 +72,7 @@ end
 if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><img src="pic\studiа\Pierre_1.jpg" ></center>'

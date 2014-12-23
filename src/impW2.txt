@@ -19,7 +19,7 @@ if besrand=5:lvlg = 45&$nameV='Крупный бес'
 if besrand=6:lvlg = 50&$nameV='Жирный бес'
 
 lvlv=lvlg
-set spg=lvlv*5
+spg=lvlv*5
 
 
 :loopgeni

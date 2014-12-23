@@ -12,9 +12,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set vorknife = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 vorknife = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -49,9 +49,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set vordubina = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 vordubina = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -86,9 +86,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set mech = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 mech = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -123,9 +123,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set mech2 = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 mech2 = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -160,9 +160,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set mech3 = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 mech3 = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end
@@ -197,9 +197,9 @@ act 'Убрать вещь.':GOTO $locP, $metkaP
          if gem >= payclo:
 			 act 'Купить':
 			 cla
-			 set gem = gem - payclo
-			 set desertSword = 1
-			 !set kostumB = bedra
+			 gem = gem - payclo
+			 desertSword = 1
+			 !kostumB = bedra
 			 'Вы заплатили <<payclo>> гемов и забрали покупку'
 			 act 'Уйти.':GOTO $locP, $metkaP
 			 end

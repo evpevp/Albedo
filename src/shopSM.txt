@@ -2,7 +2,7 @@
 if $ARGS[0]='start':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 1
+minut = minut + 1
 cla
 clr
 gs'stat'
@@ -24,7 +24,7 @@ end
 if $ARGS[0]='1':
 $metka = $ARGS[0]
 $loc = $CURLOC
-set minut = minut + 5
+minut = minut + 5
 cla
 clr
 gs'stat'
@@ -38,8 +38,8 @@ bcolor=rgb(255,255,255)
          act 'Купить телевизор 5тыр':
          cla
          *clr
-         set money = money - 5000
-         set TV = 1
+         money = money - 5000
+         TV = 1
          '<center><img src="pic\pic\kassa.jpg" ></center>'
          'Вы заплатили в кассу и купили телевизор.'
          act 'Отойти от прилавка':GOTO $loc, $metka

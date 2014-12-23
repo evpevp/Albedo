@@ -1,7 +1,7 @@
 # $menu_Pouch
 if $selobj='Инвентарь':
 	 msg '<center>Вы вдохнули запах трав и в голове помутнело на пару минут</center>'
-	 set minut = minut + 2
+	 minut = minut + 2
 	 nark=1
 end
 unselect

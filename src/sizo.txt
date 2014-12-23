@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 fcolor=rgb(0,0,0)
@@ -31,7 +31,7 @@ $metkaBed = $ARGS[0]
 $locBed = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><B>Карантин</B></center>'
@@ -40,7 +40,7 @@ gs'stat'
      if srok < 2 and jailprivet=0:
 		 act 'Поздороватся с сидельцем.':
 		 cla
-		 set minut = minut + 60
+		 minut = minut + 60
 		 jailprivet=1
 		 'Вы подошли к бритому мужчине бывалого вида и протянули руку: "Игорь"'
 		 'Он посмотрел на вас неожиданно злобными глазами, руки не подал и спросил: "Ты первоход что ли?"'
@@ -53,7 +53,7 @@ gs'stat'
      
      if jailprivet=1:
 		 act 'Сидеть на нарах 1 час.':
-		 set minut = minut + 60
+		 minut = minut + 60
 		 gt 'sizo','2'
 		 end
 		 
@@ -78,7 +78,7 @@ $metkaM = $ARGS[0]
 $locM = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><B>Камера 310</B></center>'
@@ -132,18 +132,18 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
          if hour < 22 and hour>=6:
          
              act 'Сидеть на нарах 1 час.':
-			 set minut = minut + 60
+			 minut = minut + 60
 			 gt 'sizo','3'
 			 end
 			 
 			 act 'Покупать 1 час.':
-			 set minut = minut + 60
+			 minut = minut + 60
 			 gt 'sizomagaz'
 			 end
 			 
 			 if shnirday ! day and петух = 0:
 			     act 'Шнырять за 100руб 1 час.':
-				 set minut = minut + 60
+				 minut = minut + 60
 				 шнырь=шнырь+1
 				 money=money+100
 				 shnirday = day
@@ -158,7 +158,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			 	 act 'Сосать член за 500руб 1 час.':
 			 	 cla
 			 	 *clr
-				 set minut = minut + 60
+				 minut = minut + 60
 				 петух=петух+1
 				 money=money+500
 				 petuhday = day
@@ -180,7 +180,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			 	 act 'Сосать член за 300руб 1 час.':
 			 	 cla
 			 	 *clr
-				 set minut = minut + 60
+				 minut = minut + 60
 				 петух=петух+1
 				 money=money+300
 				 petuhday = day
@@ -195,7 +195,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 				 act 'Работать жопой за 500руб 1 час.':
 			 	 cla
 			 	 *clr
-				 set minut = minut + 60
+				 minut = minut + 60
 				 петух=петух+1
 				 money=money+500
 				 petuhday = day
@@ -275,9 +275,9 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 				 cla
 				 *clr
 				 jailfitday = day
-				 set minut = minut + 60
+				 minut = minut + 60
 				 sweat=sweat+3
-				 set exp=exp+RAND(1,3)
+				 exp=exp+RAND(1,3)
 				 fat=fat-1
 				 manna=manna-15
 				 'Вы в течении часа выполняли разнообразные физические упражнения.'
@@ -368,7 +368,7 @@ $metkaM = $ARGS[0]
 $locM = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 clr
 gs'stat'
 '<center><B>Камера 267</B></center>'
@@ -447,20 +447,20 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
          
              if петух=0:
 				 act 'Сидеть на нарах 1 час.':
-				 set minut = minut + 60
+				 minut = minut + 60
 				 gt 'sizo','4'
 				 end
 			 end
 			 if петух>0:
 				 act 'Сидеть возле параши 1 час.':
 				 sweat=sweat+1
-				 set minut = minut + 60
+				 minut = minut + 60
 				 gt 'sizo','4'
 				 end
 			 end
 			 
 			 act 'Покупать 1 час.':
-			 set minut = minut + 60
+			 minut = minut + 60
 			 gt 'sizomagaz'
 			 end
 			 
@@ -480,7 +480,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
              
              if shnirday ! day and петух = 0:
 			     act 'Шнырять за 100руб 1 час.':
-				 set minut = minut + 60
+				 minut = minut + 60
 				 шнырь=шнырь+1
 				 money=money+100
 				 shnirday = day
@@ -495,7 +495,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			 	 act 'Сосать член за 500руб 1 час.':
 			 	 cla
 			 	 *clr
-				 set minut = minut + 60
+				 minut = minut + 60
 				 петух=петух+1
 				 money=money+500
 				 petuhday = day
@@ -517,7 +517,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			 	 act 'Сосать член за 300руб 1 час.':
 			 	 cla
 			 	 *clr
-				 set minut = minut + 60
+				 minut = minut + 60
 				 петух=петух+1
 				 money=money+300
 				 petuhday = day
@@ -532,7 +532,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 				 act 'Работать жопой за 500руб 1 час.':
 			 	 cla
 			 	 *clr
-				 set minut = minut + 60
+				 minut = minut + 60
 				 петух=петух+1
 				 money=money+500
 				 petuhday = day
@@ -598,9 +598,9 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 				 cla
 				 *clr
 				 jailfitday = day
-				 set minut = minut + 60
+				 minut = minut + 60
 				 sweat=sweat+3
-				 set exp=exp+RAND(1,3)
+				 exp=exp+RAND(1,3)
 				 fat=fat-1
 				 manna=manna-15
 				 'Вы в течении часа выполняли разнообразные физические упражнения.'
@@ -674,7 +674,7 @@ if week = 6 and dejur = 1 and dejurstop = 0:dejur=0&dejurstop = 1
 			 	 act 'Сосать член за 500руб 1 час.':
 			 	 cla
 			 	 *clr
-				 set minut = minut + 60
+				 minut = minut + 60
 				 петух=петух+1
 				 money=money+500
 				 petuhday = day

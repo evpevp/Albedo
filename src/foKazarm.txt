@@ -58,8 +58,8 @@ end
          if strageRang>7:strageRang=7
           gs'clonil'
              if strageRang>7:
-			 set slot = 103
-			 set armor5 = 2
+			 slot = 103
+			 armor5 = 2
 			 armorDef=200
 			 else
 			 

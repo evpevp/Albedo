@@ -54,7 +54,7 @@ if $selobj='Меню боевки':
 	 pl'<a href="exec:dynamic $demonpogldy ">Поглотить силу раба полностью восстановив себя</a>'
 	 end
 
-		if akbalQW=1000:pl'Сила восстановления Акбала доступна раз в день <a href="exec:dynamic $akbalreset ">ИСПОЛЬЗОВАТЬ</a>'
+		if akbalQW=1000:pl'Сила восстановления Акбала доступна раз в день <a href="exec:dynamic $akbalre">ИСПОЛЬЗОВАТЬ</a>'
 		if AltotronAmulet=1:pl'<a href="exec:dynamic $AltAmulet ">Амулет четырехлистника</a> может телепортировать владельца в некоторые локации. Стоимость 100 тысяч маны.' 
 	end
 

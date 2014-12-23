@@ -40,7 +40,7 @@ end
 
 if hour>=6 and hour<22 and shizosrok < 15:
      act 'Сидеть на лавке час.':
-     set minut = minut + 60
+     minut = minut + 60
      manna=manna+will
      gt $CURLOC
      end

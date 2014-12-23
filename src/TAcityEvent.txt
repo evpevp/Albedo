@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 horny=horny+20
 clr
 gs'stat'
@@ -48,7 +48,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 horny=horny+20
 clr
 gs'stat'
@@ -146,7 +146,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 horny=horny+10
 clr
 gs'stat'

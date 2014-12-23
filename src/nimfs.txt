@@ -78,7 +78,7 @@ if $ARGS[0]='LNfightend':
 		 *clr
 		 '<center><img src="pic\forestevent\spin.jpg" ></center>'
 		 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
-		 set minut = minut + 240
+		 minut = minut + 240
 		 vital=vital-1
 		 agil=agil-1
 		 stren=stren-1
@@ -414,7 +414,7 @@ if $ARGS[0]='LakeNimfa':
 							 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
 							 health=5
 							 nark=0
-							 set minut = minut + 240
+							 minut = minut + 240
 							 end
 							 if ver=1:
 							 cla
@@ -424,7 +424,7 @@ if $ARGS[0]='LakeNimfa':
 							 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
 							 money=0
 							 nark=0
-							 set minut = minut + 240
+							 minut = minut + 240
 							 end
 						 end
 					 end
@@ -445,7 +445,7 @@ if $ARGS[0]='LakeNimfa':
 							 'Нимфа: Как пожелаешь.'
 							 money=money+1000000
 							 'Вы чувствуете как свободного пространства в вашем кармане стало меньше.'
-							 set minut = minut + 60
+							 minut = minut + 60
 							 nark=0
 							 act '...':gt'lake','start'
 						 end

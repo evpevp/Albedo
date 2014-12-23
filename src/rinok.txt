@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Рынок</font></B></center>'
 '<center><img src="pic\pic\rinok.jpg" ></center>'
 'Время работы с 10 до 16, выходной понедельник.'
@@ -27,7 +27,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 5
+minut = minut + 5
 '<center><B><font color=maroon>Рынок</font></B></center>'
 '<center><img src="pic\pic\rinok1.jpg" ></center>'
 'Шумный рынок, с мерно прохаживающимися покупателями, торговцами с жуликоватым взглядом, снующими грузчиками.'

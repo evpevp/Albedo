@@ -4,7 +4,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 horny=horny+15
 $namev='Ставрос'
 clr
@@ -23,7 +23,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 horny=horny+15
 $namev='Ставрос'
 pointSS=1
@@ -43,7 +43,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 horny=horny+15
 $namev='Вернон'
 pointSS=2
@@ -63,7 +63,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 horny=horny+15
 $namev='Ней'
 clr
@@ -82,7 +82,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 dom+=1
 if SexStatA=1:frendA-=15
 if SexStatB=1:frendB-=15
@@ -100,7 +100,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 clr
 gs'stat'
 tiprand=RAND(0,100)
@@ -160,7 +160,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 sex+=1
 clr
 gs'stat'
@@ -189,7 +189,7 @@ $metka = $ARGS[0]
 $loc = $CURLOC
 cla
 *clr
-set minut = minut + 15
+minut = minut + 15
 anal+=1
 if SexStatA=1:frendA+=10
 if SexStatB=1:frendB+=10

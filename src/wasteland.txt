@@ -8,7 +8,7 @@ clr
 
 gs'stat'
 act 'Уйти':
-	 set minut = minut + 5
+	 minut = minut + 5
 	 gt 'street'
 end
 
@@ -84,7 +84,7 @@ if $ARGS[0]='DNfightend':
 				 $menu_inv[8]='Мешочек с травами:$menu_Pouch'
 				 msg 'Мешочек с травами добавлен в инвентарь'
 				 gs 'stat'
-				 set minut = minut + 35
+				 minut = minut + 35
 				 act 'Уйти':gt 'street'
 			 end
 		 end
@@ -147,7 +147,7 @@ if $ARGS[0]='DNfightend':
 				 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
 				 vital=vital-2
 				 nark=0
-				 set minut = minut + 240
+				 minut = minut + 240
 				 act '...':gt 'sexshop','start'
 			 end
 			 if ver=1:
@@ -157,7 +157,7 @@ if $ARGS[0]='DNfightend':
 				 'Ваше сознание начинает мутнеть, а ноги, словно ведомые чужой волей, ведут вас неизвестно куда'
 				 stren=stren-2
 				 nark=0
-				 set minut = minut + 240
+				 minut = minut + 240
 				 act '...':gt 'sexshop','start'
 			 end
 		 end
@@ -240,11 +240,11 @@ if $ARGS[0]='DNend':
 			 sexm=sexm+1
 			 stren=stren+2
 			 vital=vital+2
-			 set health = vital*10
+			 health = vital*10
 			 manna=manna+50
              WillPower=WillPower+rand(25,50)
 			 nark=0
-			 set minut = minut + 180
+			 minut = minut + 180
 			 act '...': gt 'wasteland'
 		 end
 	 end

@@ -15,7 +15,7 @@ gs'time'
 
 
 if car > 0 and cardrive = 3:
-set cardrive = 3
+cardrive = 3
 'На парковке стоит <a href="exec:GS ''car'',''start''">ваш <<$car>></a>.'
 end
 
@@ -31,10 +31,10 @@ end
      cla
      waiting = input ("Сколько минут ждать? (Не больше 120 минут)")
          if waiting <= 0 or waiting > 120:
-         set minut = minut + 15
+         minut = minut + 15
          end
          if waiting > 0 and waiting <= 120:
-         set minut = minut + waiting
+         minut = minut + waiting
          end
      act 'Посмотреть на часы':gt curloc
      end
@@ -44,13 +44,13 @@ end
      *clr
      '<center><img src="pic\pic\taxi1.jpg" ></center>'
      'Вы поймали проезжавшую мимо таксишку.'
-     set minut = minut + 15
+     minut = minut + 15
          act 'В спальный район 250 руб':
 		 cla
 		 *clr
          'Вы сели в такси и за 15 минут доехали до спального района'
 			 if money >= 250:
-			 set money = money - 250
+			 money = money - 250
 			 'Заплатили таксисту 250 рублей и вышли из машины.'
 			 act 'Уйти':gt 'street'
 			 exit
@@ -68,7 +68,7 @@ end
 		 *clr
          'Вы сели в такси и за 15 минут доехали до центра'
 			 if money >= 250:
-			 set money = money - 250
+			 money = money - 250
 			 'Заплатили таксисту 250 рублей и вышли из машины.'
 			 act 'Уйти':gt 'down'
 			 exit
